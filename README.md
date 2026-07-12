@@ -44,6 +44,59 @@ this table is the summary of the stack that produced them.
 - Crucible campaigns: `tau2-telecom-gpt54-train-<date>-r<N>` (r1–r28,
   2026-07-11/12) plus `crucible-rowcache-live-*` cache-priming runs.
 
+## Quantitative summary
+
+Counted directly from the files in this repository on 2026-07-13; recompute
+any of it with `python3 scripts/stats.py`. Token figures are what the
+artifacts record — the subscription route reports usage per call, but there
+is no billing meaning behind `cost_usd`-style fields.
+
+**MCPMark** (all task attempts across the 24 result directories, including
+retries and superseded first attempts):
+
+| Metric | Value |
+|---|---:|
+| Task attempts with results | 89 |
+| Verifier PASS | 68 |
+| Input tokens | 19,505,273 |
+| Output tokens | 917,208 |
+| Agent execution time | 38,253s (~10.6h) |
+
+**tau2** (`tau2/simulations/`, GEODE-owned runs):
+
+| Metric | Value |
+|---|---:|
+| Runs with `results.json` | 379 (+2 dirs without results) |
+| Episodes simulated | 2,691 |
+| Episodes with reward recorded | 2,364 — reward 1.0: 1,492 · below 1.0: 872 |
+| Episodes without reward | 327 (aborted/diagnostic probes) |
+| Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
+
+**Crucible** (`crucible/runs/campaigns/`, the SIL measurement harness):
+
+| Metric | Value |
+|---|---:|
+| Campaigns | 31 (train r1–r28 + 3 row-cache priming) |
+| Mutation attempts | 35 |
+| Attempts reaching a verdict | 15 (the rest aborted before judgment) |
+| Verdict-attributed usage | 4,730 calls · 41,095,655 tokens · 30,974s wall |
+
+**SIL** (promotion outcomes read from the same 15 verdicts — the
+self-improving loop's selection record):
+
+| Metric | Value |
+|---|---:|
+| KEEP | 1 |
+| REJECT | 8 |
+| INVALID | 6 |
+| Promoted to core (`promotion_authority`) | 0 — every verdict carries `promotion_authority: none` |
+| Rejection/invalidation reasons | `infrastructure_contamination` 6 · `improvement_below_materiality` 4 · `confidence_bound_not_positive` 4 · `promotion_unreachable_from_baseline` 4 (an attempt can carry several) |
+
+The SIL numbers are the point of the store: 35 mutation attempts produced one
+KEEP and zero core promotions, with every rejection reason machine-recorded.
+The loop's value here is the verifier discipline — noisy or immaterial
+improvements do not survive the gates.
+
 ## MCPMark run index
 
 Pass counts are per result directory, counted from `meta.json`
