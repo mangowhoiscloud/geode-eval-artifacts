@@ -1,0 +1,28 @@
+{
+  "task_name": "mcpmark-cicd__issue_management_workflow",
+  "model_name": "geode-gpt-5.5",
+  "litellm_run_model_name": "geode/gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "mcp": "github",
+  "timeout": 1500,
+  "time": {
+    "start": "2026-07-04T19:53:00.536911",
+    "end": "2026-07-04T20:15:29.836450"
+  },
+  "agent_execution_time": 1332.986209154129,
+  "task_execution_time": 1349.299535036087,
+  "execution_result": {
+    "success": true,
+    "error_message": null,
+    "verification_error": null,
+    "verification_output": "🔍 Starting Issue Management Workflow Verification\n============================================================\n⏳ Waiting for GitHub Actions workflows to complete...\n   Status: 3 completed, 0 running/queued\n✅ All workflows completed. Found 3 completed runs.\n⏳ Additional wait for issue processing to complete...\n\n🐛 Verifying Bug Issue...\n   Found bug issue #2\n   ✅ Labels verified: ['bug', 'priority-high', 'needs-review', 'first-time-contributor']\n   ✅ Milestone verified: v1.0.0\n   ✅ Bug Report Guidelines comment found\n✅ Bug Issue Verification Passed\n\n🚀 Verifying Epic Issue...\n   Found epic issue #3\n   ✅ Labels verified: ['epic', 'priority-high', 'needs-review']\n   ✅ Milestone verified: v1.0.0\n   ✅ Feature Request Process comment found\n   ✅ Found 4 sub-issues\n   ✅ All 4 sub-tasks created with correct labels and parent references\n   ✅ Epic Tasks checklist verified with correct issue references: [4, 5, 6, 7]\n✅ Epic Issue Verification Passed\n\n🔧 Verifying Maintenance Issue...\n   Found maintenance issue #8\n   ✅ Labels verified: ['maintenance', 'priority-medium', 'needs-review']\n   ✅ No milestone assigned (correct for maintenance issue)\n   ✅ Maintenance Guidelines comment found\n✅ Maintenance Issue Verification Passed\n\n============================================================\n🎉 All Issue Management Workflow verifications PASSED!\n\n📋 Summary:\n   ✅ Bug issue: labels (including first-time-contributor), milestone, and auto-response verified\n   ✅ Epic issue: labels, milestone, 4 sub-issues with checklist, and correct issue references verified\n   ✅ Maintenance issue: labels, no milestone, and auto-response verified\n\n🤖 The GitHub Actions workflow automation is working correctly!\n"
+  },
+  "token_usage": {
+    "model": "gpt-5.5",
+    "input_tokens": 215978,
+    "output_tokens": 33366,
+    "cost_usd": 1.7606140000000001,
+    "cache_read_tokens": 71168
+  },
+  "turn_count": 12
+}

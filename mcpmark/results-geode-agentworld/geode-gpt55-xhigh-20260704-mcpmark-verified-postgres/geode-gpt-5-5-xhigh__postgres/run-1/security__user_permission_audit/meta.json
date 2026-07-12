@@ -1,0 +1,28 @@
+{
+  "task_name": "security__user_permission_audit",
+  "model_name": "geode-gpt-5.5",
+  "litellm_run_model_name": "geode/gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "mcp": "postgres",
+  "timeout": 1200,
+  "time": {
+    "start": "2026-07-04T06:20:25.852901",
+    "end": "2026-07-04T06:28:27.861465"
+  },
+  "agent_execution_time": 481.69699597358704,
+  "task_execution_time": 482.0085566043854,
+  "execution_result": {
+    "success": true,
+    "error_message": null,
+    "verification_error": null,
+    "verification_output": "| Verifying security audit findings...\n| Found 29 audit findings\n| ✓ structure is valid\n| Expected dangling users: {'temp_contractor', 'old_employee', 'test_account'} Found: {'temp_contractor', 'old_employee', 'test_account'}\n| Expected missing permissions: 13 Found: 13 Not reported: 0 Extra: 0\n| Expected excessive permissions: 13 Found: 13 Not reported: 0 Extra: 0\n| Summary result: [DANGLING_USERS] 3 issues, 3 users affected, 0 tables affected\n| ✓ DANGLING_USERS summary matches expected values\n| Summary result: [EXCESSIVE_PERMISSIONS] 13 issues, 10 users affected, 7 tables affected\n| ✓ EXCESSIVE_PERMISSIONS summary matches expected values\n| Summary result: [MISSING_PERMISSIONS] 13 issues, 8 users affected, 7 tables affected\n| ✓ MISSING_PERMISSIONS summary matches expected values\n| ✓ All checks passed\n"
+  },
+  "token_usage": {
+    "model": "gpt-5.5",
+    "input_tokens": 62335,
+    "output_tokens": 12730,
+    "cost_usd": 0.652103,
+    "cache_read_tokens": 9216
+  },
+  "turn_count": 4
+}

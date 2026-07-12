@@ -1,0 +1,28 @@
+{
+  "task_name": "sports__participant_report_optimization",
+  "model_name": "geode-gpt-5.5",
+  "litellm_run_model_name": "geode/gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "mcp": "postgres",
+  "timeout": 1200,
+  "time": {
+    "start": "2026-07-04T06:39:20.474705",
+    "end": "2026-07-04T06:44:28.851717"
+  },
+  "agent_execution_time": 308.0759491920471,
+  "task_execution_time": 308.3770020008087,
+  "execution_result": {
+    "success": true,
+    "error_message": null,
+    "verification_error": null,
+    "verification_output": "==================================================\nVerifying Sports Task 3: Query Performance Optimization\n==================================================\n✅ Report data is correct (50 records)\n\n🔍 Checking for critical performance indexes...\n✅ Found participant filtering index on participants_events.participant_id\n✅ Found subquery optimization index on stats table\n\n✅ Performance optimization: PASS (2/2 critical indexes found)\n\n🎉 Task verification: PASS\n"
+  },
+  "token_usage": {
+    "model": "gpt-5.5",
+    "input_tokens": 63172,
+    "output_tokens": 7128,
+    "cost_usd": 0.416804,
+    "cache_read_tokens": 25088
+  },
+  "turn_count": 8
+}
