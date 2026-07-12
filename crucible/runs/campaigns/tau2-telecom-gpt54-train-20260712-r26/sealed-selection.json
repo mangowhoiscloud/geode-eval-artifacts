@@ -1,0 +1,87 @@
+{
+  "domain": "telecom",
+  "eligible_families": 15,
+  "eligible_tasks": 15,
+  "purpose": "test",
+  "rule": {
+    "distinct_family_id": true,
+    "execution_order": "upstream_tasks_file",
+    "fault_tokens": 3,
+    "maximum_per_intent": 3,
+    "maximum_per_persona": 3,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "split_membership": true,
+    "take": 6
+  },
+  "salt": "crucible-telecom-three-fault-test-r26-v2",
+  "schema": "crucible.tau2-selection.v1",
+  "selected": [
+    {
+      "content_sha256": "80c925507aa911591a4ec3c33e2e73f3a82e88ca112b4d2d1b3fda20e3ba8edb",
+      "family_id": "c0858083be15f7077e289f08bd2d8ea2172829b86937d2c4187c62fc0474b8fa",
+      "intent": "mobile_data_issue",
+      "persona": "Easy",
+      "rank": "62393fa5d093d18bcbe7877871b1487139aaadd3b2029ad15ee3e48ca2b1f0b5",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "a52a921e77af8f36156b34a58608ad428dd591ffd11829fca94b2b74aade6f35",
+      "family_id": "62562256e47d6ef1a59d059428938eeaa7352052fa8de2060692c87117374483",
+      "intent": "mobile_data_issue",
+      "persona": "None",
+      "rank": "1d61a3757b20c4af1952045a5bf8e2de652b503805183822971508318af7397a",
+      "task_id": "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]"
+    },
+    {
+      "content_sha256": "816fb759b87f63f2c7bf551d48ae25b5633f4d84d310395ee1a333be620a5b03",
+      "family_id": "efcbe0c3d9f771cce9afdb6b3d0c3b83679b7de828614f6be6ead7c54f25c553",
+      "intent": "service_issue",
+      "persona": "Hard",
+      "rank": "363e5cccdbd47fb75c1b19d6e725214ed0f2649d7f412d63230ce0ecebb65599",
+      "task_id": "[service_issue]break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:Hard]"
+    },
+    {
+      "content_sha256": "2840cb7611997868acdbbf9c8947464ef5fed5630e4de6c69848da6311a1a6ca",
+      "family_id": "23388288310a2208f0a2f6b1644b30df9e69ecff2aa12c1117e4f76f963d879e",
+      "intent": "mms_issue",
+      "persona": "None",
+      "rank": "08b092a736d68cd3119bb836c9d2eb0e397e9e610f559b48b2d663a8b452ff2d",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded[PERSONA:None]"
+    },
+    {
+      "content_sha256": "e8820f51ba43ecbdf7e275c35995b09dc3334d7888f663bc13555f2cb6b76328",
+      "family_id": "e4e206b558fb524be8a5535a109a688d70f25ade3e9ed12ce5a39684d757b441",
+      "intent": "mms_issue",
+      "persona": "Easy",
+      "rank": "1bada6015f423ee17edd9fe157aa6d685318260fd1c8cd94ad3da234a362003d",
+      "task_id": "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "7b9244fc7b35db58831deaa1df3e1a2895cc31378dafa2a78b1f34ffb65108be",
+      "family_id": "2f5c6ecf337798f465baec0d315e0514a8fec28e09d08ec9c652fcf1e4b197a0",
+      "intent": "mms_issue",
+      "persona": "None",
+      "rank": "139fc296f372f0a0e747190fa6946ba46a6de718b74ccb52c8d5e53857e7d81d",
+      "task_id": "[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]"
+    }
+  ],
+  "sources": {
+    "excluded_packs": [
+      {
+        "artifact_sha256": "b0b06994884c50719de68fdef2645ff057167ca04e0433a349f4637cf78eeb9f",
+        "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669"
+      },
+      {
+        "artifact_sha256": "6311ca3ca043582b5bc835c6a8f6fddf65385de6316589ba711eb36dc075a017",
+        "task_pack_sha256": "423b03c3e8a50089861915ed5a251697291844874ef2d4fa7e78b83d309c47f9"
+      },
+      {
+        "artifact_sha256": "fc541b546c7c1276cb3fafb20ce6f94bbfc9efb601a05a65de4808b37b534959",
+        "task_pack_sha256": "79968339c58af3f143a7fbb854db11d419951f15922ac72ebe8ed5eadffaf796"
+      }
+    ],
+    "split_sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec",
+    "tasks_sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+  },
+  "task_split_name": "base"
+}

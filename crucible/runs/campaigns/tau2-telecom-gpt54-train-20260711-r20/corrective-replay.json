@@ -1,0 +1,37 @@
+{
+  "candidate_policy_blob_sha": "ef534364996e5aa9971438140534dc42020ce880",
+  "candidate_sha": "bc4ecdd24e4d97454fe21c88bc4f6c49d2fad6e9",
+  "current_baseline_policy_blob_sha": "4be84c792c57381f1148cb2e3c3859884ba109f1",
+  "source_artifacts": {
+    "candidate": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r19/state/attempts/0001-064f2a59fa14/candidate.json",
+      "sha256": "5414d8960a7c9535e384eca333587f0c20d1b8152351638048d3d1041349b1de"
+    },
+    "contract": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r19/state/attempts/0001-064f2a59fa14/contract.json",
+      "sha256": "47b8ca105489d04632c4e375439396a30fe281e65ec53a93540d53e3b62de49f"
+    },
+    "record": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r19/state/attempts/0001-064f2a59fa14/record.json",
+      "sha256": "389df08251527bd36ae2c3660fe0e4c0652fbaec282534fb40ce3fd4256ae1cd"
+    },
+    "verdict": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r19/state/attempts/0001-064f2a59fa14/verdict.json",
+      "sha256": "9286b1b7f221807f95305791f328e38f20f73c74abb4293e4293333be3ae0f8f"
+    }
+  },
+  "source_attempt_id": "0001-064f2a59fa14",
+  "source_campaign_id": "tau2-telecom-gpt54-train-20260711-r19",
+  "source_evaluator_sha256": "11ae65911b3a11765085bc42ca90306d536a6fb84511e5a07ae0cd78d7ba3c12",
+  "target_evaluator_sha256": "4ee2e4fd4672c7272344bd98d5e8eaaa4b4f21756f6a17c1e184cf5e362161ff",
+  "reason": "r19 candidate task 2 recovered an APITimeoutError through an identical-request retry, but the frozen evaluator did not persist that retry identity and scored the resulting deadline as semantic failure",
+  "replay_rule": {
+    "candidate_generation_calls": 0,
+    "candidate_surface_must_match_source_parent_blob": true,
+    "current_evaluator_must_differ_from_source_contract": true,
+    "recovered_pre_execution_retry_closes_arm_as_invalid": true,
+    "same_train_pack": true,
+    "sealed_pack_access": false
+  },
+  "schema": "crucible.corrective-replay.v1"
+}

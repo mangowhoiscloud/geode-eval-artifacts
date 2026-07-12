@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "schema": "crucible_telecom_workflow_gate.v1",
+    "purpose": "reject-only deterministic telecom G2 surrogate",
+    "budget_profile": {
+      "name": "cheaploop_v1",
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "source": "tmp/crucible_gate_calibration.json",
+      "method": "calibrated from compact accept anchors and over-budget reject anchors; see scripts/eval/calibrate_gate_thresholds.py",
+      "rationale": "Reject trajectories that are already too expensive for the subscription-only cheap loop while preserving room for compact multi-action MMS repairs. This budget is reject-only and has no promotion authority."
+    },
+    "config": {
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "require_action_before_manual_checklist": true
+    }
+  },
+  "results": [
+    {
+      "source": "tmp/crucible_native_latecompression_b_repair_only.synthetic_results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "user_stop",
+      "message_count": 24,
+      "tool_call_count": 13,
+      "multi_tool_user_turns": 1,
+      "tool_counts": {
+        "can_send_mms": 1,
+        "check_apn_settings": 1,
+        "enable_roaming": 1,
+        "get_customer_by_phone": 1,
+        "get_details_by_id": 2,
+        "reboot_device": 1,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 1,
+        "set_network_mode_preference": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1,
+        "toggle_roaming": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": true,
+        "apn_valid": true,
+        "account_roaming_enabled": true,
+        "mms_verified": true,
+        "first_seen": {
+          "account_roaming_observed": 4,
+          "account_roaming_repaired": 8,
+          "airplane_off": 11,
+          "sim_active": 11,
+          "mobile_data_on": 11,
+          "non_2g_network": 11,
+          "apn_valid": 11,
+          "mms_verified": 21
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": 20
+      },
+      "verdict": "PASS_SURROGATE",
+      "reasons": []
+    }
+  ]
+}

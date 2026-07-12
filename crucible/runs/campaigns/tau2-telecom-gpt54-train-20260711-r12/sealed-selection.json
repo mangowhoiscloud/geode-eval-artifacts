@@ -1,0 +1,85 @@
+{
+  "domain": "telecom",
+  "eligible_families": 15,
+  "eligible_tasks": 15,
+  "rule": {
+    "distinct_family_id": true,
+    "exclude_train_families": true,
+    "exclude_train_tasks": true,
+    "execution_order": "upstream_tasks_file",
+    "fault_tokens": 2,
+    "maximum_per_intent": 2,
+    "maximum_per_persona": 2,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "split_membership": true,
+    "take": 6
+  },
+  "salt": "crucible-telecom-two-fault-test-r12-v1",
+  "schema": "crucible.test-selection.v1",
+  "selected": [
+    {
+      "content_sha256": "9534c8ab41df0245cacf1f84a2d3a219f2c4d410d8fdb3e191510a1480802567",
+      "family_id": "5eeb144397d9b3fea0f5d3d6e77eb15d8a37fd5f503a9b55bae24ce05298d1b9",
+      "intent": "mobile_data_issue",
+      "persona": "Hard",
+      "rank": "aed39d1fda82e6cb51102b127d5c1ccadf296a89bdb3cb2808151a8ad68a22f1",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]"
+    },
+    {
+      "content_sha256": "34bc3e0f22b76c555e0177d9a190548a9f5f86d46e375e5a5a818571f140690c",
+      "family_id": "773904ae956ff8132626589fde7cc52fe8cad775b72be1479a35cf7fa5589002",
+      "intent": "mobile_data_issue",
+      "persona": "Easy",
+      "rank": "2cd6cf863f57c2c514b4f7ecbc5e7ef1e4bf7887e4920883cb0ae0319b893d55",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "0c5cb9fdc8fb948f59e996dbbb3ebf6025695381d20ddef16508b70413e43c64",
+      "family_id": "38e613d511478dba9fe180020342d59a532eaa29fd414abdede1d6f32ff9b326",
+      "intent": "service_issue",
+      "persona": "Hard",
+      "rank": "e3c864c7dfe78d8f9da69acb9cfa9b89a641c3a802f7f29ca0aa2bfb0c443391",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings[PERSONA:Hard]"
+    },
+    {
+      "content_sha256": "ff6afebcc734ce25218e75c8ebe93606173160d701a723a0fdf69f3a14242e8f",
+      "family_id": "509c37877035248bc96f549a8269c5219dc877084039db36821709eb943d9f00",
+      "intent": "service_issue",
+      "persona": "None",
+      "rank": "4851c6ba11deef3c11a9a094907eb9a2650295a5a3562a5142dc48ad37fe5c6d",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]"
+    },
+    {
+      "content_sha256": "bc40c735ad597cc83e35b758a292121bbb282e30561faab79229f79eb62f0149",
+      "family_id": "2486fe23368a1307b284473b634286e23ef146a7004d96b63eb4520d3e7f7147",
+      "intent": "mms_issue",
+      "persona": "Easy",
+      "rank": "02284c7aecfe85de7eab40520a4829f9506975f0f8bfadc196bc6163282f83c9",
+      "task_id": "[mms_issue]break_app_storage_permission|data_usage_exceeded[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "cb9dd9154d0aa849ca490d6f5eddc90a4405373b35f5d05455e6d5be1bb3e04c",
+      "family_id": "a7c25217b1a1ca56aad48be501ade0e88637029a61e3af53708bb6c2207ab521",
+      "intent": "mms_issue",
+      "persona": "None",
+      "rank": "005f5bd5e7eba0d3972a4127269a6eba77aeada900d4009939a037ea62189aac",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]"
+    }
+  ],
+  "sources": {
+    "split": {
+      "path": "data/tau2/domains/telecom/split_tasks.json",
+      "sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec"
+    },
+    "tasks": {
+      "path": "data/tau2/domains/telecom/tasks.json",
+      "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+    },
+    "train_pack": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r8/train.pack.json",
+      "sha256": "e89782f2c1be16a77ce5c655bdd32466df832f34ca97ec6eb3a6d6744460f856",
+      "task_pack_sha256": "54b43fcd91306df4eb2eb33b8e0ccde1af19d9f3a9556985a1495249b1d4e103"
+    }
+  },
+  "task_split_name": "base"
+}

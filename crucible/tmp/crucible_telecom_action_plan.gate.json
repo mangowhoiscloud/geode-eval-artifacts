@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "schema": "crucible_telecom_workflow_gate.v1",
+    "purpose": "reject-only deterministic telecom G2 surrogate",
+    "config": {
+      "max_messages": 34,
+      "max_user_tool_turns": 8,
+      "max_tool_calls": 18
+    }
+  },
+  "results": [
+    {
+      "source": "tmp/crucible_telecom_action_plan.synthetic_results.json",
+      "task_id": "[mms_issue]synthetic_planner_success",
+      "termination_reason": "user_stop",
+      "message_count": 14,
+      "tool_call_count": 8,
+      "multi_tool_user_turns": 1,
+      "tool_counts": {
+        "can_send_mms": 1,
+        "check_apn_settings": 1,
+        "reboot_device": 1,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 1,
+        "set_network_mode_preference": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": true,
+        "apn_valid": true,
+        "mms_verified": true,
+        "first_seen": {
+          "airplane_off": 3,
+          "sim_active": 3,
+          "mobile_data_on": 3,
+          "non_2g_network": 3,
+          "apn_valid": 3,
+          "mms_verified": 12
+        }
+      },
+      "verdict": "PASS_SURROGATE",
+      "reasons": []
+    }
+  ]
+}

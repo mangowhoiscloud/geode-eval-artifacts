@@ -1,0 +1,70 @@
+{
+  "schema": "crucible.failure-driven-preregistration.v1",
+  "campaign_id": "tau2-telecom-gpt54-train-20260712-r25",
+  "config_id": "6286f3de8a6649bac5f9c5f03cbfb26065894f78efd1dccdd19e8b09f696e62b",
+  "config_sha256": "81a0e887da2589f76aaf5179df47db6387b340b5dee420518d0f47bf69cbc05b",
+  "baseline": {
+    "search_head_sha": "9804f36d88e971ff4f1ddff065edbc00d31a4976",
+    "candidate_surface": "plugins/benchmark_harness/tau2_agent_policy.md",
+    "candidate_surface_blob_sha": "4be84c792c57381f1148cb2e3c3859884ba109f1"
+  },
+  "source_reject": {
+    "campaign_id": "tau2-telecom-gpt54-train-20260712-r24",
+    "verdict": "REJECT",
+    "verdict_id": "97f21538e229fc98ed02f55de79b9acd2061e5d84aca3f379ca9fa1dd87203be",
+    "baseline_mean": 0.5833333333333334,
+    "candidate_mean": 0.5,
+    "paired_improvement": -0.08333333333333333,
+    "improvement_lower_bound": -0.16666666666666666,
+    "config_sha256": "a7f92312b6987ce41005ce4f505731a1b930192fc59ca513393cbd1c351967e9",
+    "verdict_sha256": "49cf9d7fd74320358edaf191e301d4d501b1a7eb959ceee16b2e8d9b7a565bbc",
+    "record_sha256": "7d5a62f5b1499772d3431e600b33799fe1522ddbba18e5940c8bee73ff607048",
+    "feedback_sha256": "b5cdb09578352ecc220c3c12934d0dc54da62ac02ba4a821c7d9634862995732",
+    "baseline_evidence_sha256": "8ce8d9776726d5792aa0bd8a17890a5c0653f147c426584ada25e5470664cd07",
+    "candidate_evidence_sha256": "6a7fbd48ec32102efbc8f4787d8a0cc841fb4cd431c02d1bfd35a2d9070d41fc"
+  },
+  "optimizer": {
+    "producer": "plugins.crucible.producers.codex_kg",
+    "model": "gpt-5.4",
+    "effort": "high",
+    "objective": "Keep every multi-step tool workflow monotone: maintain the unresolved policy-required actions and terminal checks, consume them one at a time, reuse confirmed successes without repeating them, and stop only when none remain.",
+    "candidate_selection": "first_contract_valid_candidate",
+    "allowed_surfaces": [
+      "plugins/benchmark_harness/tau2_agent_policy.md"
+    ],
+    "clause_grammar": [
+      "CAN",
+      "CANNOT"
+    ]
+  },
+  "fixed_assay": {
+    "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669",
+    "task_units": 12,
+    "trials_per_task": 1,
+    "seed": 300,
+    "max_concurrency": 1,
+    "max_retries": 0,
+    "agent_route": "openai-subscription-gpt-5.4-high",
+    "user_route": "evaluator-openai-subscription-gpt-5.4-high",
+    "evaluator_sha256": "43073aa043e4fd7ac7a65a887d95b5c811b0b871624d1ea0eacfe4f95d24f261",
+    "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d"
+  },
+  "promotion": {
+    "minimum_candidate_mean": 0.5,
+    "materiality_pp": 0.25,
+    "confidence_level": 0.885,
+    "bootstrap_samples": 10000,
+    "required_vetoes": [
+      "budget",
+      "infra_clean",
+      "safety",
+      "task_coverage",
+      "tool_contract"
+    ]
+  },
+  "sealed_test": {
+    "eligible_only_after_train_keep": true,
+    "task_pack_sha256": "79968339d7659d5549141c39f84e855f859ddbb2a8db5767d870990f78a18195"
+  }
+}
+

@@ -1,0 +1,3152 @@
+{
+  "metadata": {
+    "schema": "crucible_g3a_task_selection.v1",
+    "surface": "telecom-mms-harness-compression-v2",
+    "purpose": "A-arm expanded pre-G3/G3a task list; excludes account-side data refuel until assistant projector v3 exists",
+    "n_failures": 4,
+    "n_controls": 12,
+    "supported_write_allowlist": [
+      "enable_roaming",
+      "grant_app_permission",
+      "reboot_device",
+      "reseat_sim_card",
+      "reset_apn_settings",
+      "set_network_mode_preference",
+      "toggle_airplane_mode",
+      "toggle_data",
+      "toggle_roaming",
+      "toggle_wifi_calling"
+    ],
+    "exclusion": "Tasks requiring refuel_data, payment, VPN, or non-MMS branches are excluded from v2; full MMS G3a needs refuel_data support."
+  },
+  "task_ids": [
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+    "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+    "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+    "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+    "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+    "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mms_issue]break_app_both_permissions|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]",
+    "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+  ],
+  "failures": [
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "is_failure": true,
+      "reward": 0.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {},
+          "action_id": "toggle_airplane_mode_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {},
+          "action_id": "reset_apn_settings_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {},
+          "action_id": "reboot_device_3",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {},
+          "action_id": "toggle_data_4",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {},
+          "action_id": "reseat_sim_card_5",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_6",
+          "action_match": false,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_7",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_6",
+          "action_match": false,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_7",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 27,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 35,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 39,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 57,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 59,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 62,
+          "requestor": "assistant",
+          "name": "transfer_to_human_agents",
+          "arguments": {
+            "summary": "Customer C1001 (line 555-123-2002, L1002) cannot send MMS for past few hours. Line status Active; plan P1002 Premium (15GB), data used 8.7GB. Troubleshooting completed: airplane mode off; reseated SIM; network mode changed from 2G-only to 4G/5G preferred; now strong 5G signal; mobile data enabled; APN reset/reboot; MMSC now populated; Wi‑Fi Calling off; Data Saver off; VPN off; messaging app has SMS+Storage permissions. Still receives 'cannot send MMS' error."
+          }
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "enable_roaming_6",
+          "name": "enable_roaming",
+          "requestor": "assistant",
+          "matched_call_present": false,
+          "different_keys": [
+            "customer_id",
+            "line_id"
+          ],
+          "missing_keys": [
+            "customer_id",
+            "line_id"
+          ],
+          "extra_keys": [],
+          "expected": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "actual": {}
+        },
+        {
+          "action_id": "toggle_roaming_7",
+          "name": "toggle_roaming",
+          "requestor": "user",
+          "matched_call_present": false,
+          "different_keys": [],
+          "missing_keys": [],
+          "extra_keys": [],
+          "expected": {},
+          "actual": {}
+        }
+      ],
+      "unmet_env_assertions": [
+        {
+          "func_name": "assert_can_send_mms",
+          "arguments": {
+            "expected_status": true
+          },
+          "message": null
+        }
+      ],
+      "intervention_turn": 11,
+      "false_positive_risk": "medium: terminal verifier may over-continue if policy requires transfer"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "is_failure": true,
+      "reward": 0.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently at home in the United States.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {},
+          "action_id": "toggle_airplane_mode_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": false,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 24,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 30,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 32,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 34,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "assistant",
+          "name": "transfer_to_human_agents",
+          "arguments": {
+            "summary": "Customer C1001 (line 555-123-2002 / L1002) cannot send MMS for several hours. Line is Active, data usage 8.7/15GB (cycle ends 2025-02-28). Airplane mode was initially ON; turned OFF and now has 5G signal and mobile data works for web browsing. User rebooted device, reset APN to default + rebooted, Wi‑Fi Calling OFF, VPN OFF, Data Saver OFF, granted messaging app storage/photos permission. MMS still will not send and no error message. Likely requires network-side/MMS provisioning check."
+          }
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "grant_app_permission_1",
+          "name": "grant_app_permission",
+          "requestor": "user",
+          "matched_call_present": true,
+          "different_keys": [
+            "permission"
+          ],
+          "missing_keys": [],
+          "extra_keys": [],
+          "expected": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "actual": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        }
+      ],
+      "unmet_env_assertions": [
+        {
+          "func_name": "assert_can_send_mms",
+          "arguments": {
+            "expected_status": true
+          },
+          "message": null
+        }
+      ],
+      "intervention_turn": 10,
+      "false_positive_risk": "medium: terminal verifier may over-continue if policy requires transfer"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "is_failure": true,
+      "reward": 0.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": false,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 12,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 14,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 20,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 24,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 26,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 32,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 34,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 36,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "assistant",
+          "name": "transfer_to_human_agents",
+          "arguments": {
+            "summary": "Customer C1001 (John Smith), line L1002 / 555-123-2002. Traveling abroad in France. Roaming was enabled on the line successfully. Phone now shows 5G excellent signal; mobile data browsing works. MMS still fails after APN reset + reboot. Wi‑Fi Calling OFF, VPN OFF, Data Saver OFF, messaging app has storage/phone permissions. User requesting further help / human agent."
+          }
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "grant_app_permission_1",
+          "name": "grant_app_permission",
+          "requestor": "user",
+          "matched_call_present": false,
+          "different_keys": [
+            "app_name",
+            "permission"
+          ],
+          "missing_keys": [
+            "app_name",
+            "permission"
+          ],
+          "extra_keys": [],
+          "expected": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "actual": {}
+        }
+      ],
+      "unmet_env_assertions": [
+        {
+          "func_name": "assert_can_send_mms",
+          "arguments": {
+            "expected_status": true
+          },
+          "message": null
+        }
+      ],
+      "intervention_turn": 10,
+      "false_positive_risk": "medium: terminal verifier may over-continue if policy requires transfer"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "is_failure": true,
+      "reward": 0.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {},
+          "action_id": "reset_apn_settings_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {},
+          "action_id": "reboot_device_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {},
+          "action_id": "toggle_data_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_3",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_3",
+          "action_match": false,
+          "tool_type": "write"
+        }
+      ],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_wifi_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 13,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 27,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 42,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 44,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 46,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 48,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 52,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 54,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 56,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 58,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 61,
+          "requestor": "assistant",
+          "name": "transfer_to_human_agents",
+          "arguments": {
+            "summary": "Customer John Smith (C1001), line 555-123-2002 (L1002) Active, 5G excellent signal, mobile data enabled and within limit (8.7/15GB). MMS not sending for several hours. APN reset done; APN 'internet', MMSC URL now set (http://mms.carrier.com/mms/wapenc). Wi‑Fi Calling OFF, VPN OFF, Data Saver OFF, messaging app permissions SMS/storage/phone granted. Airplane mode refresh tried. SIM status active. can_send_mms reports cannot send MMS. Needs deeper network-side MMS provisioning/route investigation."
+          }
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "enable_roaming_3",
+          "name": "enable_roaming",
+          "requestor": "assistant",
+          "matched_call_present": false,
+          "different_keys": [
+            "customer_id",
+            "line_id"
+          ],
+          "missing_keys": [
+            "customer_id",
+            "line_id"
+          ],
+          "extra_keys": [],
+          "expected": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "actual": {}
+        }
+      ],
+      "unmet_env_assertions": [
+        {
+          "func_name": "assert_can_send_mms",
+          "arguments": {
+            "expected_status": true
+          },
+          "message": null
+        }
+      ],
+      "intervention_turn": 11,
+      "false_positive_risk": "medium: terminal verifier may over-continue if policy requires transfer"
+    }
+  ],
+  "controls": [
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently at home in the United States.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {},
+          "action_id": "toggle_data_1",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 20,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 26,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 30,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 32,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 34,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 34,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          }
+        },
+        {
+          "turn_idx": 49,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 11,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {},
+          "action_id": "reset_apn_settings_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {},
+          "action_id": "reboot_device_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_wifi_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 13,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 35,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_1",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "toggle_wifi",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 27,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 30,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 35,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 39,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently at home in the United States.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 13,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 15,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 46,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          }
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 55,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "grant_app_permission_2",
+          "name": "grant_app_permission",
+          "requestor": "user",
+          "matched_call_present": true,
+          "different_keys": [
+            "permission"
+          ],
+          "missing_keys": [],
+          "extra_keys": [],
+          "expected": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "actual": {
+            "app_name": "messaging",
+            "permission": "sms"
+          }
+        }
+      ],
+      "unmet_env_assertions": [],
+      "intervention_turn": 11,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {},
+          "action_id": "toggle_airplane_mode_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_wifi_calling",
+          "arguments": {},
+          "action_id": "toggle_wifi_calling_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 9,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 9,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 14,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 27,
+          "requestor": "user",
+          "name": "toggle_wifi_calling",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 33,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 35,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 39,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 45,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 55,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 57,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 9,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {},
+          "action_id": "reseat_sim_card_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 27,
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 29,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 31,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 39,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 49,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 53,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 55,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {},
+          "action_id": "toggle_data_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_2",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_wifi_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 19,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 21,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 23,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 25,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 11,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_both_permissions|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "action_id": "grant_app_permission_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {},
+          "action_id": "reseat_sim_card_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          },
+          "action_id": "enable_roaming_3",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 15,
+          "requestor": "assistant",
+          "name": "enable_roaming",
+          "arguments": {
+            "customer_id": "C1001",
+            "line_id": "L1002"
+          }
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 24,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 26,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 30,
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 32,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 36,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 42,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 44,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 48,
+          "requestor": "user",
+          "name": "toggle_wifi",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "user",
+          "name": "toggle_wifi",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 52,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 54,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 56,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 66,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 70,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 72,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "sms"
+          }
+        },
+        {
+          "turn_idx": 74,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [
+        {
+          "action_id": "grant_app_permission_0",
+          "name": "grant_app_permission",
+          "requestor": "user",
+          "matched_call_present": true,
+          "different_keys": [
+            "permission"
+          ],
+          "missing_keys": [],
+          "extra_keys": [],
+          "expected": {
+            "app_name": "messaging",
+            "permission": "sms"
+          },
+          "actual": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        }
+      ],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently at home in the United States.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {},
+          "action_id": "toggle_airplane_mode_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {},
+          "action_id": "reset_apn_settings_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {},
+          "action_id": "reboot_device_3",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_4",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 9,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 9,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 14,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 20,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 35,
+          "requestor": "user",
+          "name": "check_network_mode_preference",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 37,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 39,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 41,
+          "requestor": "user",
+          "name": "check_network_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 43,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 47,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 54,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 56,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 58,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 9,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_wifi_calling",
+          "arguments": {},
+          "action_id": "toggle_wifi_calling_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {},
+          "action_id": "reset_apn_settings_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {},
+          "action_id": "reboot_device_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {},
+          "action_id": "reseat_sim_card_3",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_4",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 11,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 16,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 18,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 20,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 26,
+          "requestor": "user",
+          "name": "reseat_sim_card",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "check_sim_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 32,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 36,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 44,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 46,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 48,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 52,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 54,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 58,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 60,
+          "requestor": "user",
+          "name": "toggle_wifi_calling",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 62,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 64,
+          "requestor": "user",
+          "name": "check_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 68,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 70,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 72,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 76,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 11,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    },
+    {
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "is_failure": false,
+      "reward": 1.0,
+      "termination_reason": "user_stop",
+      "cluster": "mms_workflow_completion",
+      "candidate_guard": "T1",
+      "scenario": {
+        "reason_for_call": "You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.",
+        "known_info": "You are John Smith with phone number 555-123-2002. You are currently abroad in France.",
+        "task_instructions": "If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\n"
+      },
+      "expected_writes": [
+        {
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {},
+          "action_id": "toggle_airplane_mode_0",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          },
+          "action_id": "set_network_mode_preference_1",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          },
+          "action_id": "grant_app_permission_2",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {},
+          "action_id": "toggle_data_3",
+          "action_match": true,
+          "tool_type": "write"
+        },
+        {
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {},
+          "action_id": "toggle_roaming_4",
+          "action_match": true,
+          "tool_type": "write"
+        }
+      ],
+      "failed_expected_writes": [],
+      "actual_write_like_calls": [
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_wifi_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 10,
+          "requestor": "user",
+          "name": "check_status_bar",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 15,
+          "requestor": "user",
+          "name": "toggle_airplane_mode",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 17,
+          "requestor": "user",
+          "name": "toggle_roaming",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 20,
+          "requestor": "user",
+          "name": "run_speed_test",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 22,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 26,
+          "requestor": "user",
+          "name": "set_network_mode_preference",
+          "arguments": {
+            "mode": "4g_5g_preferred"
+          }
+        },
+        {
+          "turn_idx": 28,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 30,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 34,
+          "requestor": "user",
+          "name": "check_wifi_calling_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 36,
+          "requestor": "user",
+          "name": "reset_apn_settings",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 38,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 40,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 44,
+          "requestor": "user",
+          "name": "check_installed_apps",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 46,
+          "requestor": "user",
+          "name": "check_app_permissions",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 48,
+          "requestor": "user",
+          "name": "check_app_status",
+          "arguments": {
+            "app_name": "messaging"
+          }
+        },
+        {
+          "turn_idx": 50,
+          "requestor": "user",
+          "name": "check_data_restriction_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 52,
+          "requestor": "user",
+          "name": "check_vpn_status",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 54,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 56,
+          "requestor": "user",
+          "name": "toggle_data",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 58,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 62,
+          "requestor": "user",
+          "name": "grant_app_permission",
+          "arguments": {
+            "app_name": "messaging",
+            "permission": "storage"
+          }
+        },
+        {
+          "turn_idx": 64,
+          "requestor": "user",
+          "name": "reboot_device",
+          "arguments": {}
+        },
+        {
+          "turn_idx": 66,
+          "requestor": "user",
+          "name": "can_send_mms",
+          "arguments": {}
+        }
+      ],
+      "argument_diffs": [],
+      "unmet_env_assertions": [],
+      "intervention_turn": 10,
+      "false_positive_risk": "control: guard must not add extra write confirmation on already-passing trace"
+    }
+  ]
+}

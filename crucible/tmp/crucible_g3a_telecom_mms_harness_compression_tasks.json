@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "schema": "crucible_g3a_task_selection.v1",
+    "surface": "telecom-mms-harness-compression-v1",
+    "purpose": "G3a targeted mini candidate list for harness-compression arm; no live calls",
+    "failure_selection": "all telecom MMS baseline failures from tmp/crucible_failure_manifest.json",
+    "control_selection": "top 12 telecom MMS pass controls matched by task-id condition overlap",
+    "notes": [
+      "A arm measures agent + deterministic user-action projector harness, not pure native agent performance.",
+      "Promotion claims must keep this route label explicit."
+    ],
+    "n_failures": 11,
+    "n_controls": 12
+  },
+  "failures": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission",
+        "grant_app_permission",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission",
+        "grant_app_permission",
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "failed_expected_writes": [
+        "grant_app_permission",
+        "refuel_data",
+        "enable_roaming"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "grant_app_permission",
+        "reseat_sim_card",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "cluster": "mms_workflow_completion",
+      "expected_writes": [
+        "set_network_mode_preference",
+        "toggle_wifi_calling",
+        "reset_apn_settings",
+        "reboot_device",
+        "grant_app_permission",
+        "toggle_data",
+        "refuel_data",
+        "reseat_sim_card"
+      ]
+    }
+  ]
+}

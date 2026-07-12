@@ -1,0 +1,147 @@
+{
+  "allowed_surfaces": [
+    "plugins/benchmark_harness/tau2_agent_policy.md"
+  ],
+  "campaign_id": "tau2-telecom-gpt54-train-20260711-r3",
+  "config_id": "4b95989e987833b9e63737e92311a59f4cb6e00c6154b31ba65765c9f2bc7ff2",
+  "evaluator_entrypoint": "scripts/eval/crucible_tau2_evaluator.py",
+  "evaluator_environment": [
+    "CODEX_HOME",
+    "CRUCIBLE_TAU2_HARNESS_ROOT"
+  ],
+  "harness_root": "/Users/mango/workspace/geode/artifacts/eval/harnesses/tau2-bench",
+  "initial_search_head_sha": "b1bf03ee31564fe29645bf32dcfdf7a0ffffc99f",
+  "limits": {
+    "max_attempts": 2,
+    "max_calls": 1250,
+    "max_consecutive_invalid": 2,
+    "max_cost_usd": 34.0,
+    "max_tokens": 21000000,
+    "max_wall_seconds": 16000.0
+  },
+  "producer_command": [
+    "uv",
+    "run",
+    "--frozen",
+    "--no-dev",
+    "python",
+    "-m",
+    "plugins.crucible.producers.codex_kg"
+  ],
+  "producer_environment": [
+    "CODEX_HOME"
+  ],
+  "repository": "/Users/mango/workspace/geode/.claude/worktrees/crucible-supervisor-hardening",
+  "schema": "crucible.supervisor.v4",
+  "state_dir": "/Users/mango/workspace/geode/artifacts/eval/runs/crucible/campaigns/tau2-telecom-gpt54-train-20260711-r3/state",
+  "train_plan": {
+    "agent_route": "openai-subscription-gpt-5.4-high",
+    "assay_config": {
+      "agent": {
+        "codex_output_replay": true,
+        "cognitive_reflection": false,
+        "effort": "high",
+        "implementation": "geode_agent",
+        "max_rounds": 0,
+        "max_tokens": 32768,
+        "model": "gpt-5.4",
+        "provider": "openai",
+        "route": "openai-subscription-gpt-5.4-high",
+        "source": "subscription",
+        "time_budget_s": 180.0,
+        "tool_search_defer": true
+      },
+      "domain": "telecom",
+      "max_concurrency": 1,
+      "max_errors": 1,
+      "max_retries": 0,
+      "max_steps": 100,
+      "num_trials": 1,
+      "retrieval": {
+        "config": null,
+        "kwargs": {}
+      },
+      "schema": "crucible.tau2-assay.v1",
+      "seed": 300,
+      "task_set_name": null,
+      "task_split_name": "base",
+      "timeout": null,
+      "user": {
+        "effort": "high",
+        "implementation": "crucible_user",
+        "llm": "gpt-5.4",
+        "llm_args": {
+          "temperature": 0.0
+        },
+        "max_rounds": 0,
+        "max_tokens": 8192,
+        "provider": "openai",
+        "route": "evaluator-openai-subscription-gpt-5.4-high",
+        "runtime_owner": "evaluator",
+        "source": "subscription",
+        "time_budget_s": 120.0
+      }
+    },
+    "budget": {
+      "max_calls": 600,
+      "max_changed_lines": 40,
+      "max_cost_usd": 16.0,
+      "max_tokens": 10000000,
+      "max_wall_seconds": 7200.0
+    },
+    "evaluator_paths": [
+      "scripts/eval/crucible_tau2_evaluator.py",
+      "plugins/benchmark_harness/tau2_geode_agent.py",
+      "plugins/crucible",
+      "core",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "evaluator_sha256": "0247cb771891976d51c1d39cdcde15241fe6bf6bf4a6b082c6c96ac2e2bf59ef",
+    "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d",
+    "name": "tau2-telecom-gpt54-train-20260711-r3",
+    "promotion": {
+      "bootstrap_samples": 10000,
+      "confidence_level": 0.885,
+      "materiality_pp": 0.25,
+      "method": "paired_bootstrap.v2",
+      "minimum_candidate_mean": 0.5,
+      "minimum_families": 4,
+      "minimum_tasks": 4,
+      "primary_metric": "reward"
+    },
+    "schema": "crucible.train-plan.v3",
+    "task_pack_sha256": "c47d31435b265ea7eff64123d3cdb0cdd6a72489696018784609d6329172004d",
+    "tasks": [
+      {
+        "content_sha256": "1e19372060a130b7563a1173968523b0de0fe406075efb181100797647bc7187",
+        "family_id": "804b8bbab5ce6c8c24ef5822834ec485c3f1f647d34c0a6a4156bbf4b61a2ef0",
+        "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]"
+      },
+      {
+        "content_sha256": "816fb759b87f63f2c7bf551d48ae25b5633f4d84d310395ee1a333be620a5b03",
+        "family_id": "efcbe0c3d9f771cce9afdb6b3d0c3b83679b7de828614f6be6ead7c54f25c553",
+        "task_id": "[service_issue]break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:Hard]"
+      },
+      {
+        "content_sha256": "80230baade530b9efbf81b507723b61d1c586d89f6f6b5b9d03cfb871cc7c787",
+        "family_id": "e605230fce77a9c5e89ec4fc7e5a0bd66e2d82c29d11e5162859d80bf7c78f2e",
+        "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]"
+      },
+      {
+        "content_sha256": "9f176423cf7746a1e1d01b06f4a7facd2c61d29c9174955c85268bc6dbe6b64f",
+        "family_id": "9898368f3c46a35c810ff49eea441551ffc3848b2a8c0eaaed231c309ae047fa",
+        "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]"
+      }
+    ],
+    "trials_per_task": 1,
+    "user_route": "evaluator-openai-subscription-gpt-5.4-high",
+    "vetoes": [
+      "budget",
+      "infra_clean",
+      "safety",
+      "task_coverage",
+      "tool_contract"
+    ]
+  }
+}

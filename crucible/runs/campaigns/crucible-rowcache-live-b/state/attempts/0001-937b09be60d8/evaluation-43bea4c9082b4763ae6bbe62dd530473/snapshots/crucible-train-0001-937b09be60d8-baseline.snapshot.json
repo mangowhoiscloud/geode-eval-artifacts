@@ -1,0 +1,62 @@
+{
+  "arm": "baseline",
+  "assay_config": {
+    "agent": {
+      "codex_output_replay": true,
+      "cognitive_reflection": false,
+      "effort": "high",
+      "implementation": "geode_agent",
+      "max_rounds": 0,
+      "max_tokens": 32768,
+      "model": "gpt-5.4",
+      "provider": "openai",
+      "route": "openai-subscription-gpt-5.4-high",
+      "source": "subscription",
+      "time_budget_s": 180.0,
+      "tool_search_defer": true
+    },
+    "domain": "telecom",
+    "max_concurrency": 1,
+    "max_errors": 1,
+    "max_retries": 0,
+    "max_steps": 100,
+    "num_trials": 1,
+    "retrieval": {
+      "config": null,
+      "kwargs": {}
+    },
+    "schema": "crucible.tau2-assay.v1",
+    "seed": 300,
+    "task_set_name": null,
+    "task_split_name": "base",
+    "timeout": 600.0,
+    "user": {
+      "effort": "high",
+      "implementation": "crucible_user",
+      "llm": "gpt-5.4",
+      "llm_args": {
+        "temperature": 0.0
+      },
+      "max_rounds": 0,
+      "max_tokens": 8192,
+      "provider": "openai",
+      "route": "evaluator-openai-subscription-gpt-5.4-high",
+      "runtime_owner": "evaluator",
+      "source": "subscription",
+      "time_budget_s": 120.0
+    }
+  },
+  "assay_config_sha256": "1e2074575381e8d98a27735fa595b2c16e370d954aad07979e63fda5cbb2affb",
+  "baseline_sha": "ba98a03832e86a232dae6eb6cacc240d1ea0501c",
+  "evaluator_sha256": "ffe096d252ccc6772d94549640818fb6d823ceaebae568341e08e89722b6bfa3",
+  "execution_status": "complete",
+  "experiment_contract_id": "358795166bfd1147ec0312eb17ecc48b804d33d6be49b920c0dc0b07918b1815",
+  "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d",
+  "raw_artifact_sha256": "a331c20d000163de38a85cb1f3d9f2f73d5b5f3ddca7b056b13107175bdf16f1",
+  "row_cache": {
+    "schema": "crucible.cached-row.v1",
+    "synthesized": true
+  },
+  "schema": "crucible_tau2_trajectory_snapshot.v3",
+  "task_pack_sha256": "24eb26a464736eed875ab7688ef94625029fb42aaf43c16eeb3377c5232fd6df"
+}

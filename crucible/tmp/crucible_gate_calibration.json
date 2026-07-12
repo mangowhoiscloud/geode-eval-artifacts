@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "schema": "crucible_gate_calibration.v1",
+    "purpose": "derive reject-only cheap-loop budget thresholds from labeled trajectory anchors",
+    "method": "For each metric, use the midpoint between the largest budget-fit anchor and smallest reject anchor. If anchors overlap, use the largest budget-fit value and require a new calibration set."
+  },
+  "recommended_budget_profile": {
+    "name": "cheaploop_v1_calibrated",
+    "max_messages": 30,
+    "max_tool_calls": 15,
+    "max_user_tool_turns": 2
+  },
+  "diagnostics": {
+    "fit_count": 2,
+    "reject_count": 2,
+    "fit_max": {
+      "message_count": 24,
+      "tool_call_count": 10,
+      "multi_tool_user_turns": 1
+    },
+    "reject_min": {
+      "message_count": 36,
+      "tool_call_count": 21,
+      "multi_tool_user_turns": 3
+    },
+    "overlap": {
+      "message_count": false,
+      "tool_call_count": false,
+      "multi_tool_user_turns": false
+    }
+  },
+  "anchors": [
+    {
+      "label": "budget_fit_anchor",
+      "source": "telecom_action_planner.demo_mms_success_results",
+      "task_id": "[mms_issue]synthetic_planner_success",
+      "message_count": 14,
+      "tool_call_count": 8,
+      "multi_tool_user_turns": 1,
+      "termination_reason": "user_stop"
+    },
+    {
+      "label": "budget_fit_anchor",
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-roaminghardgate-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-c/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "message_count": 24,
+      "tool_call_count": 10,
+      "multi_tool_user_turns": 1,
+      "termination_reason": "max_steps"
+    },
+    {
+      "label": "reject_anchor",
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-stepeconomy-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "message_count": 36,
+      "tool_call_count": 21,
+      "multi_tool_user_turns": 3,
+      "termination_reason": "max_steps"
+    },
+    {
+      "label": "reject_anchor",
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-roaminghardgate-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-b/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "message_count": 40,
+      "tool_call_count": 21,
+      "multi_tool_user_turns": 3,
+      "termination_reason": "max_steps"
+    }
+  ]
+}

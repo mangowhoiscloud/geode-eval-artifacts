@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "candidate_surface": "plugins/benchmark_harness/tau2_agent_policy.md",
+    "candidate_surface_blob_sha": "4be84c792c57381f1148cb2e3c3859884ba109f1",
+    "search_head_sha": "b20059fcee4d1e922cbed68ec84a214bc0df84ef"
+  },
+  "campaign_id": "tau2-telecom-gpt54-train-20260712-r28",
+  "config_id": "562cf0ff4a91505ab4cd2f8a304343d587f859170eb550cd5e535de1833d3c75",
+  "config_sha256": "9202af227c56dbeaf65a1ba18ff5da8b06da8f44ce66ba6af2108f28279d2007",
+  "fixed_assay": {
+    "agent_route": "openai-subscription-gpt-5.4-high",
+    "evaluator_sha256": "a7adf213ce71fe72ffc6fc6149d981bd26443224444d940277767de519292dd2",
+    "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d",
+    "max_concurrency": 1,
+    "max_retries": 0,
+    "seed": 300,
+    "task_pack_sha256": "06f7321b6e2e0c51a64e8a38e961c0c6b8930324afae485bbd816b6ae4d8aa45",
+    "task_units": 9,
+    "train_curation_receipt_sha256": "9c0f3f4af0eb4333afc33c9d12720fca3511b647de2980515e10657a97ddb8c6",
+    "trials_per_task": 2,
+    "user_route": "evaluator-openai-subscription-gpt-5.4-high"
+  },
+  "optimizer": {
+    "allowed_surfaces": [
+      "plugins/benchmark_harness/tau2_agent_policy.md"
+    ],
+    "candidate_selection": "first_contract_valid_candidate",
+    "clause_grammar": [
+      "CAN",
+      "CANNOT"
+    ],
+    "closed_failure_codes": [
+      "required_user_action",
+      "termination",
+      "workflow_completion"
+    ],
+    "context_graph_sha256": "76672842e94f46064762155a3e8c4bddf477f2eb028c58a905a31576b1f6db0d",
+    "effort": "high",
+    "environment_objective_override": false,
+    "model": "gpt-5.4",
+    "objective": "Keep every multi-step tool workflow monotone: maintain the unresolved policy-required actions and terminal checks, consume them one at a time, reuse confirmed successes without repeating them, and stop only when none remain.",
+    "producer": "plugins.crucible.producers.codex_kg",
+    "producer_source_sha256": "1836723aa1fe283d247321684042e108520d48d9b192ec053d715b7ee0446562"
+  },
+  "predecessor_invalid": {
+    "attempt_id": "0001-2863a202dd2b",
+    "calls": 0,
+    "campaign_id": "tau2-telecom-gpt54-train-20260712-r26",
+    "candidate_created": false,
+    "contract_created": false,
+    "error_sha256": "05e69e454084b53607fa8a8c4b66d1415f25de7e8b49fd21098317e7e4baf0db",
+    "record_sha256": "f9f9393294d7c3e8b152194a7af2e80a8e709bdf1af397eeb68183fccd241043",
+    "summary_sha256": "8c8ecea2f2d8e1593e61d5ca0ba1f887c70b086df20de713c63f6a1e52b5693f"
+  },
+  "promotion": {
+    "bootstrap_samples": 10000,
+    "confidence_level": 0.885,
+    "materiality_pp": 0.25,
+    "minimum_candidate_mean": 0.5,
+    "required_vetoes": [
+      "budget",
+      "infra_clean",
+      "safety",
+      "task_coverage",
+      "tool_contract"
+    ],
+    "resampling_unit": "workflow_family"
+  },
+  "schema": "crucible.failure-driven-preregistration.v1",
+  "sealed_test": {
+    "eligible_only_after_train_keep": true,
+    "receipt_sha256": "2d3ddebb88a056a04100a5e3aa50c9fb033aa5aaa34468db10c6cc96a7ee00ed",
+    "selected_rows_visible_to_optimizer": false,
+    "task_pack_artifact_sha256": "d6c80617a73e17b6e92b3cd449677ce9070f5007cae808cbb3016b23971f7b39",
+    "task_pack_sha256": "6c4ceb0f8ddc82b18cbd9e760f0cedd1d9417ee861580d51e6dde38b56317808"
+  },
+  "source_reject": {
+    "baseline_evidence_sha256": "8ce8d9776726d5792aa0bd8a17890a5c0653f147c426584ada25e5470664cd07",
+    "baseline_mean": 0.5833333333333334,
+    "campaign_id": "tau2-telecom-gpt54-train-20260712-r24",
+    "candidate_evidence_sha256": "6a7fbd48ec32102efbc8f4787d8a0cc841fb4cd431c02d1bfd35a2d9070d41fc",
+    "candidate_mean": 0.5,
+    "config_sha256": "a7f92312b6987ce41005ce4f505731a1b930192fc59ca513393cbd1c351967e9",
+    "feedback_sha256": "b5cdb09578352ecc220c3c12934d0dc54da62ac02ba4a821c7d9634862995732",
+    "improvement_lower_bound": -0.16666666666666666,
+    "paired_improvement": -0.08333333333333333,
+    "record_sha256": "7d5a62f5b1499772d3431e600b33799fe1522ddbba18e5940c8bee73ff607048",
+    "verdict": "REJECT",
+    "verdict_id": "97f21538e229fc98ed02f55de79b9acd2061e5d84aca3f379ca9fa1dd87203be",
+    "verdict_sha256": "49cf9d7fd74320358edaf191e301d4d501b1a7eb959ceee16b2e8d9b7a565bbc"
+  },
+  "superseded_preregistration": {
+    "campaign_id": "tau2-telecom-gpt54-train-20260712-r27",
+    "candidate_created": false,
+    "state_created": false,
+    "supersession_receipt_sha256": "5e09071f4858b0683dd7fea3a98e05a3ba04246f0666b3d77b7e660ce1454ad6"
+  }
+}

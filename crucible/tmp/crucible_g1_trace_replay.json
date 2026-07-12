@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "schema": "crucible_g1_trace_replay.v1",
+    "source_manifest": "/Users/mango/workspace/geode/tmp/crucible_failure_manifest.json",
+    "purpose": "reject-only G1 screen before subscription micro-sim"
+  },
+  "verdicts": [
+    {
+      "guard": "R1",
+      "verdict": "PASS_TO_G2_WITH_CONTROLS",
+      "failures_total": 27,
+      "failures_supported": 24,
+      "support_rate": 0.8889,
+      "controls_total": 87,
+      "controls_blocked": 4,
+      "control_block_rate": 0.046,
+      "notes": [
+        "G1 is reject-only and uses evaluator gold traces; it cannot prove live improvement.",
+        "support_threshold=0.80 observed=0.889",
+        "strict_control_block_threshold=0.00 observed=0.046",
+        "control_block_with_canaries_threshold=0.05 observed=0.046",
+        "blocked_control_task_ids=2,46,64,73",
+        "include blocked controls in G2 micro-sim before any targeted mini run"
+      ]
+    },
+    {
+      "guard": "T1",
+      "verdict": "PASS_TO_G2",
+      "failures_total": 14,
+      "failures_supported": 14,
+      "support_rate": 1.0,
+      "controls_total": 100,
+      "controls_blocked": 0,
+      "control_block_rate": 0.0,
+      "notes": [
+        "G1 is reject-only and uses evaluator gold traces; it cannot prove live improvement.",
+        "support_threshold=0.80 observed=1.000",
+        "strict_control_block_threshold=0.00 observed=0.000",
+        "control_block_with_canaries_threshold=0.05 observed=0.000"
+      ]
+    }
+  ],
+  "failure_clusters": {
+    "address_mutation_completeness": 10,
+    "cancel_pending_order_subset": 3,
+    "exchange_delivered_item_selection": 5,
+    "mms_workflow_completion": 11,
+    "mobile_data_terminal_verifier": 1,
+    "pending_item_modification_variant_choice": 2,
+    "return_delivered_item_selection_refund": 6,
+    "service_terminal_verifier": 2,
+    "tool_schema_runtime_error": 1
+  }
+}

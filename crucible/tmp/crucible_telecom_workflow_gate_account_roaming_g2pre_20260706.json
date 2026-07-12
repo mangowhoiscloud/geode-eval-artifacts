@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "schema": "crucible_telecom_workflow_gate.v1",
+    "purpose": "reject-only deterministic telecom G2 surrogate",
+    "budget_profile": {
+      "name": "cheaploop_v1",
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "source": "tmp/crucible_gate_calibration.json",
+      "method": "calibrated from compact accept anchors and over-budget reject anchors; see scripts/eval/calibrate_gate_thresholds.py",
+      "rationale": "Reject trajectories that are already too expensive for the subscription-only cheap loop while preserving room for compact multi-action MMS repairs. This budget is reject-only and has no promotion authority."
+    },
+    "config": {
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "require_action_before_manual_checklist": true
+    }
+  },
+  "results": [
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-candidate-boundedbundle-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 24,
+      "tool_call_count": 7,
+      "multi_tool_user_turns": 2,
+      "tool_counts": {
+        "check_network_status": 2,
+        "check_sim_status": 1,
+        "get_customer_by_phone": 1,
+        "reseat_sim_card": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": false,
+        "apn_valid": false,
+        "account_roaming_enabled": null,
+        "mms_verified": false,
+        "first_seen": {
+          "airplane_off": 9,
+          "sim_active": 15,
+          "mobile_data_on": 20
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": 8
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "missing_terminal_can_send_mms_true"
+      ]
+    },
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-candidate-roamingrecovery-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 24,
+      "tool_call_count": 7,
+      "multi_tool_user_turns": 1,
+      "tool_counts": {
+        "check_apn_settings": 1,
+        "get_customer_by_phone": 1,
+        "get_details_by_id": 2,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 1,
+        "toggle_airplane_mode": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": false,
+        "non_2g_network": false,
+        "apn_valid": false,
+        "account_roaming_enabled": false,
+        "mms_verified": false,
+        "first_seen": {
+          "account_roaming_observed": 4,
+          "airplane_off": 16,
+          "sim_active": 20
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": 15
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "missing_terminal_can_send_mms_true"
+      ]
+    },
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-candidate-phasedrecovery-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 21,
+      "tool_call_count": 4,
+      "multi_tool_user_turns": 0,
+      "tool_counts": {
+        "check_network_status": 1,
+        "get_customer_by_phone": 1,
+        "reseat_sim_card": 1,
+        "toggle_airplane_mode": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": false,
+        "non_2g_network": false,
+        "apn_valid": false,
+        "account_roaming_enabled": null,
+        "mms_verified": false,
+        "first_seen": {
+          "airplane_off": 13,
+          "sim_active": 17
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": null
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "missing_terminal_can_send_mms_true"
+      ]
+    },
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-roaminghardgate-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 28,
+      "tool_call_count": 11,
+      "multi_tool_user_turns": 1,
+      "tool_counts": {
+        "check_apn_settings": 1,
+        "check_network_status": 1,
+        "get_customer_by_phone": 1,
+        "get_details_by_id": 2,
+        "reboot_device": 1,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 1,
+        "set_network_mode_preference": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": true,
+        "apn_valid": true,
+        "account_roaming_enabled": false,
+        "mms_verified": false,
+        "first_seen": {
+          "account_roaming_observed": 4,
+          "airplane_off": 9,
+          "sim_active": 9,
+          "non_2g_network": 9,
+          "mobile_data_on": 9,
+          "apn_valid": 24
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": 23
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "missing_terminal_can_send_mms_true"
+      ]
+    },
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-roaminghardgate-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-b/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 40,
+      "tool_call_count": 21,
+      "multi_tool_user_turns": 3,
+      "tool_counts": {
+        "can_send_mms": 1,
+        "check_apn_settings": 3,
+        "check_network_mode_preference": 1,
+        "check_network_status": 3,
+        "check_sim_status": 2,
+        "check_wifi_calling_status": 1,
+        "get_customer_by_phone": 1,
+        "get_details_by_id": 2,
+        "reboot_device": 1,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 2,
+        "set_network_mode_preference": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": true,
+        "apn_valid": true,
+        "account_roaming_enabled": false,
+        "mms_verified": false,
+        "first_seen": {
+          "account_roaming_observed": 4,
+          "airplane_off": 9,
+          "sim_active": 9,
+          "non_2g_network": 9,
+          "mobile_data_on": 21,
+          "apn_valid": 26
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": 31
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "missing_account_roaming_repair_before_terminal",
+        "max_steps",
+        "message_budget_exceeded:40>30",
+        "user_tool_turn_budget_exceeded:3>2",
+        "tool_call_budget_exceeded:21>15",
+        "mms_failed_after_blockers_clear",
+        "missing_terminal_can_send_mms_true"
+      ]
+    },
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-roaminghardgate-userguard-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-c/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 24,
+      "tool_call_count": 10,
+      "multi_tool_user_turns": 1,
+      "tool_counts": {
+        "check_network_status": 1,
+        "get_customer_by_phone": 1,
+        "get_details_by_id": 2,
+        "reboot_device": 1,
+        "reseat_sim_card": 1,
+        "reset_apn_settings": 1,
+        "set_network_mode_preference": 1,
+        "toggle_airplane_mode": 1,
+        "toggle_data": 1
+      },
+      "checkpoints": {
+        "airplane_off": true,
+        "sim_active": true,
+        "mobile_data_on": true,
+        "non_2g_network": true,
+        "apn_valid": false,
+        "account_roaming_enabled": false,
+        "mms_verified": false,
+        "first_seen": {
+          "account_roaming_observed": 4,
+          "airplane_off": 9,
+          "sim_active": 12,
+          "mobile_data_on": 14,
+          "non_2g_network": 16
+        },
+        "first_tool_call_index": 4,
+        "first_manual_checklist_index": null
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "missing_terminal_can_send_mms_true"
+      ]
+    }
+  ]
+}

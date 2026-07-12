@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-07-12T08:54:45+09:00",
+  "exclusions": [
+    {
+      "artifact_sha256": "b0b06994884c50719de68fdef2645ff057167ca04e0433a349f4637cf78eeb9f",
+      "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669"
+    },
+    {
+      "artifact_sha256": "6311ca3ca043582b5bc835c6a8f6fddf65385de6316589ba711eb36dc075a017",
+      "task_pack_sha256": "423b03c3e8a50089861915ed5a251697291844874ef2d4fa7e78b83d309c47f9"
+    },
+    {
+      "artifact_sha256": "fc541b546c7c1276cb3fafb20ce6f94bbfc9efb601a05a65de4808b37b534959",
+      "task_pack_sha256": "79968339c58af3f143a7fbb854db11d419951f15922ac72ebe8ed5eadffaf796"
+    },
+    {
+      "artifact_sha256": "d6c80617a73e17b6e92b3cd449677ce9070f5007cae808cbb3016b23971f7b39",
+      "task_pack_sha256": "6c4ceb0f8ddc82b18cbd9e760f0cedd1d9417ee861580d51e6dde38b56317808"
+    }
+  ],
+  "preregistration": {
+    "path": "train-curation-preregistration.json",
+    "sha256": "69bb3d5cdf6befe00540c978ef0905b5dae1d248e801c3ac85d9653b7ce8847b"
+  },
+  "rule": {
+    "domain": "telecom",
+    "execution_order": "upstream_tasks_file",
+    "fault_tokens": 3,
+    "maximum_per_intent": 9,
+    "maximum_per_persona": 9,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "salt": "crucible-telecom-three-fault-train-r26-v1",
+    "split": "base",
+    "take": 9,
+    "trials_per_task": 2
+  },
+  "schema": "crucible.train-curation-receipt.v1",
+  "selection": {
+    "artifact_sha256": "562caa3c4f3d9648338ebb52d9c0d72dc50429a0dff73e3294ffa4605857ad29",
+    "eligible_families": 9,
+    "eligible_tasks": 9,
+    "family_count": 9,
+    "path": "train-selection.json",
+    "task_count": 9
+  },
+  "task_pack": {
+    "artifact_sha256": "27249d1959bbd71fa2654c926945aa8f087e56ae019f4a1b769f6162f09f52a4",
+    "family_count": 9,
+    "path": "train.pack.json",
+    "task_count": 9,
+    "task_pack_sha256": "06f7321b6e2e0c51a64e8a38e961c0c6b8930324afae485bbd816b6ae4d8aa45"
+  }
+}

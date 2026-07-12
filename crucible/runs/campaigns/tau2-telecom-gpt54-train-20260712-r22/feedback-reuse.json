@@ -1,0 +1,46 @@
+{
+  "derived_feedback": {
+    "failure_codes": [
+      "required_user_action",
+      "termination",
+      "workflow_completion"
+    ],
+    "failed_task_count": 3,
+    "schema": "crucible.failure-feedback.v3"
+  },
+  "derivation": {
+    "candidate_checks_only": true,
+    "closed_code_projection": true,
+    "task_or_tool_cases": false,
+    "uses_unmatched_action_owner": true,
+    "uses_termination_reason": true
+  },
+  "reason": "carry the r21 clean candidate failure structure into a fresh optimizer call without exposing task IDs, trajectories, tool names, scores, or free text to the producer",
+  "schema": "crucible.feedback-reuse.v1",
+  "source_artifacts": {
+    "candidate_evidence": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r21/state/attempts/0001-2719cea93f47/evaluation-fa9a3874f53d4c5bb077c3e91f5f7d41/candidate.evidence.json",
+      "sha256": "af05e61d67e5e5a57c0a77bc3dfa71abc0d8b5d4afa73d5f189990fb1c557b08"
+    },
+    "candidate_raw": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r21/state/attempts/0001-2719cea93f47/evaluation-fa9a3874f53d4c5bb077c3e91f5f7d41/candidate.raw.json",
+      "sha256": "4e60828af1584dd05c06a13fc1ea432eb078ce293acaabdf0aa269ba460acaba"
+    },
+    "contract": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r21/state/attempts/0001-2719cea93f47/contract.json",
+      "sha256": "a70995a94f7776c8c7357286f33d0fa8f5e62b15904c58d674c80ce8d4589c5d"
+    },
+    "record": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r21/state/attempts/0001-2719cea93f47/record.json",
+      "sha256": "8a9e8ce4fa5ae5e12eb2bf032922e9c9ebd2a643c92aa4f6119747826cc4e21f"
+    },
+    "verdict": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r21/state/attempts/0001-2719cea93f47/verdict.json",
+      "sha256": "6d9b0aa8e65837589bc2984851e433e45a895a6f73de2edc9cc41ad56d2d281c",
+      "verdict": "REJECT",
+      "verdict_id": "307a9b10a295cbebac2a071aeed99136bfa6cc24b47cd16b9924ea9ccedea317"
+    }
+  },
+  "source_attempt_id": "0001-2719cea93f47",
+  "source_campaign_id": "tau2-telecom-gpt54-train-20260711-r21"
+}

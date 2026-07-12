@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-07-12T03:06:31+09:00",
+  "result": {
+    "artifact_sha256": "b0b06994884c50719de68fdef2645ff057167ca04e0433a349f4637cf78eeb9f",
+    "family_count": 12,
+    "path": "train.pack.json",
+    "task_count": 12,
+    "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669"
+  },
+  "rule": {
+    "execution_order": "upstream_tasks_file",
+    "outcome_filtering": false,
+    "source_operation": "complete_union",
+    "task_family_content_overlap": false
+  },
+  "schema": "crucible.train-pack-lineage.v1",
+  "sources": [
+    {
+      "artifact_sha256": "e89782f2c1be16a77ce5c655bdd32466df832f34ca97ec6eb3a6d6744460f856",
+      "classification": "exposed_train",
+      "path": "../tau2-telecom-gpt54-train-20260711-r8/train.pack.json",
+      "task_pack_sha256": "54b43fcd91306df4eb2eb33b8e0ccde1af19d9f3a9556985a1495249b1d4e103"
+    },
+    {
+      "artifact_sha256": "67486a411e10c0b1e42ad1221ca4a87a419df2e356d6c8d2beaecd8f8f45e010",
+      "classification": "consumed_sealed_now_train",
+      "decision": {
+        "artifact_sha256": "ddd8eb7d1f9e3fa413820e329b1dadd1630196bfb45f3492661f30416e41f7c7",
+        "decision_id": "d3cb91bc5abe03e87779ccb442649b2b0e2695e5bf97cc738a6e408205c3461d",
+        "verdict": "REJECT"
+      },
+      "path": "../tau2-telecom-gpt54-train-20260711-r14/test.pack.json",
+      "task_pack_sha256": "7302fc2a5e0b2ca046127cc0145d75ca7cb61c09f146c3973769e779b31648ce"
+    }
+  ]
+}

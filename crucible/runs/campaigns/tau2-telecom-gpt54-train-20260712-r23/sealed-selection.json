@@ -1,0 +1,83 @@
+{
+  "domain": "telecom",
+  "eligible_families": 21,
+  "eligible_tasks": 21,
+  "purpose": "test",
+  "rule": {
+    "distinct_family_id": true,
+    "execution_order": "upstream_tasks_file",
+    "fault_tokens": 3,
+    "maximum_per_intent": 2,
+    "maximum_per_persona": 2,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "split_membership": true,
+    "take": 6
+  },
+  "salt": "crucible-telecom-three-fault-test-r23-v1",
+  "schema": "crucible.tau2-selection.v1",
+  "selected": [
+    {
+      "content_sha256": "1c64f8f01c3cae632df7d7a22c805416ff8e06c4461615d028a954fd3fbaeaa5",
+      "family_id": "8243948b18387ceff8f0892535d85259d1109387d6a9814bd69044277e459957",
+      "intent": "mobile_data_issue",
+      "persona": "Easy",
+      "rank": "cf6ba0cd6c685d2cae4da9ab348e626225f85da622fb5ad4070ce2ed2ed50414",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "36149255422e5de93865f7b19d91f29c2496a251bc96fc69c63fc37fd3ceb21e",
+      "family_id": "7bba6c52c244eba6e3030e31f2f8faa423e598187a8560e15aade699a5ceb6b8",
+      "intent": "mobile_data_issue",
+      "persona": "Hard",
+      "rank": "1ca55c0e29e7dc7f39e075a1e78c013b563435bbfa26983eb8c5471dfeba08a3",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+    },
+    {
+      "content_sha256": "64f38407cfb0a2ad2319617ca48688f0b48d08aeeb88ae72998972d805c9fdf6",
+      "family_id": "c123e68168ac2050f1b0c4d23635d81611e6acb34c60e8de52a824b66eca72df",
+      "intent": "service_issue",
+      "persona": "None",
+      "rank": "0eba5b024dbd352fb42a898f78baf99c605f186b846bb3b26323653d4efc5642",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|unseat_sim_card[PERSONA:None]"
+    },
+    {
+      "content_sha256": "fc54d95fdb5de5ba7c8b3ccd3fa10ef55299fee42174417a4ccf13c235cb93cb",
+      "family_id": "ad9408bf2c2324ad077d05ce98cbc32b97b401e98156dca134e59b7f0121ac58",
+      "intent": "service_issue",
+      "persona": "Easy",
+      "rank": "6806e4c1c56c291e8b77c03709c4e6b29a1f474eb9d8307bd175169c4c707412",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+    },
+    {
+      "content_sha256": "e60823e280c3b6ce74e24e88f142a7a7f6c0bbb48e3837b179f70fda8c91caff",
+      "family_id": "ab7169780ef3f1a74735a13f7c28917c33586c9c26ea540d9924d3f2fbee56d2",
+      "intent": "mms_issue",
+      "persona": "None",
+      "rank": "0618b3bb660044d18a47b4fca7842352edfb207f752bec0297eb4fe018491d94",
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]"
+    },
+    {
+      "content_sha256": "595d9b264b62a3a4fccb6dc4a6cef940a5e0200e62c47e547af6002e44c3b965",
+      "family_id": "29a60e00dbb50371f1ed4c42737f82b3cb00bdf74471852c315cc5dd3904ebff",
+      "intent": "mms_issue",
+      "persona": "Hard",
+      "rank": "43b6d1a0c5397267a9af0ec48d0368fb311294325b41e0c943cd92af9dfc4ffd",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]"
+    }
+  ],
+  "sources": {
+    "excluded_packs": [
+      {
+        "artifact_sha256": "b0b06994884c50719de68fdef2645ff057167ca04e0433a349f4637cf78eeb9f",
+        "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669"
+      },
+      {
+        "artifact_sha256": "6311ca3ca043582b5bc835c6a8f6fddf65385de6316589ba711eb36dc075a017",
+        "task_pack_sha256": "423b03c3e8a50089861915ed5a251697291844874ef2d4fa7e78b83d309c47f9"
+      }
+    ],
+    "split_sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec",
+    "tasks_sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+  },
+  "task_split_name": "base"
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "crucible.test-selection.v1",
+  "domain": "telecom",
+  "task_split_name": "base",
+  "rule": {
+    "split_membership": true,
+    "fault_tokens": 2,
+    "exclude_train_tasks": true,
+    "exclude_train_families": true,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "distinct_family_id": true,
+    "maximum_per_intent": 2,
+    "maximum_per_persona": 2,
+    "take": 6,
+    "execution_order": "upstream_tasks_file"
+  },
+  "salt": "crucible-telecom-two-fault-test-v1",
+  "sources": {
+    "tasks": {
+      "path": "data/tau2/domains/telecom/tasks.json",
+      "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+    },
+    "split": {
+      "path": "data/tau2/domains/telecom/split_tasks.json",
+      "sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec"
+    },
+    "train_pack": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r8/train.pack.json",
+      "sha256": "e89782f2c1be16a77ce5c655bdd32466df832f34ca97ec6eb3a6d6744460f856",
+      "task_pack_sha256": "54b43fcd91306df4eb2eb33b8e0ccde1af19d9f3a9556985a1495249b1d4e103"
+    }
+  },
+  "eligible_tasks": 15,
+  "eligible_families": 15,
+  "selected": [
+    {
+      "rank": "731b3ad0e81b86cbfbcae55e175b62bf4d8edd9d257c36978b1886bdfaf76bcd",
+      "intent": "mobile_data_issue",
+      "persona": "Hard",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]",
+      "family_id": "5eeb144397d9b3fea0f5d3d6e77eb15d8a37fd5f503a9b55bae24ce05298d1b9",
+      "content_sha256": "9534c8ab41df0245cacf1f84a2d3a219f2c4d410d8fdb3e191510a1480802567"
+    },
+    {
+      "rank": "a493a0677422a6a55cd5c3d26887a22f6cab92aaf360b35f9757806e979feb44",
+      "intent": "mobile_data_issue",
+      "persona": "Easy",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "family_id": "773904ae956ff8132626589fde7cc52fe8cad775b72be1479a35cf7fa5589002",
+      "content_sha256": "34bc3e0f22b76c555e0177d9a190548a9f5f86d46e375e5a5a818571f140690c"
+    },
+    {
+      "rank": "dc7b322347d4ae4deafa945449ad7cc95ea7ad05a0c7aa59a038d9400074dec0",
+      "intent": "service_issue",
+      "persona": "Hard",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings[PERSONA:Hard]",
+      "family_id": "38e613d511478dba9fe180020342d59a532eaa29fd414abdede1d6f32ff9b326",
+      "content_sha256": "0c5cb9fdc8fb948f59e996dbbb3ebf6025695381d20ddef16508b70413e43c64"
+    },
+    {
+      "rank": "85c786f3c7a3ff56c570ce7a8a2d8c3a8f97d72ddb0bd17c2226b9222ba0e58c",
+      "intent": "service_issue",
+      "persona": "Easy",
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "family_id": "b6a8af08984615e95f9ba44bb70d9ab9f3591a59c80f199277a44d4076b018dc",
+      "content_sha256": "f7dace0f575b79a200fe9565286ad03da5fcd1f5788922297973b50287b3179d"
+    },
+    {
+      "rank": "1dbd2e87cd72ddb981e92ec1ea1883f92468d7be7ccdac5d7fea749427e48f79",
+      "intent": "mms_issue",
+      "persona": "None",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "family_id": "a7c25217b1a1ca56aad48be501ade0e88637029a61e3af53708bb6c2207ab521",
+      "content_sha256": "cb9dd9154d0aa849ca490d6f5eddc90a4405373b35f5d05455e6d5be1bb3e04c"
+    },
+    {
+      "rank": "64a70316905f1d0b3ec546935933b6321b25a1d6de88d6a905aa0ea5626ead3d",
+      "intent": "mms_issue",
+      "persona": "None",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "family_id": "0d0cde52db2f71b7b9558b5ab74e88ce2bda9edb7bc7de38fc76b157be1b9e28",
+      "content_sha256": "ab16179542812de0a1c9d3084cc696193e8b3ab93dd83abbf54b04c147365831"
+    }
+  ]
+}

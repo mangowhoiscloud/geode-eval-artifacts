@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "schema": "crucible_telecom_action_plan.v1",
+    "purpose": "zero-live deterministic planner scaffold"
+  },
+  "input_state": {
+    "airplane_mode_on": true,
+    "sim_active": false,
+    "mobile_data_on": false,
+    "network_type": "2G",
+    "apn_mmsc_configured": false,
+    "can_send_mms": null
+  },
+  "planned_actions": [
+    {
+      "name": "toggle_airplane_mode",
+      "arguments": {}
+    },
+    {
+      "name": "reseat_sim_card",
+      "arguments": {}
+    },
+    {
+      "name": "toggle_data",
+      "arguments": {}
+    },
+    {
+      "name": "set_network_mode_preference",
+      "arguments": {
+        "mode": "4g_5g_preferred"
+      }
+    },
+    {
+      "name": "reset_apn_settings",
+      "arguments": {}
+    },
+    {
+      "name": "reboot_device",
+      "arguments": {}
+    },
+    {
+      "name": "check_apn_settings",
+      "arguments": {}
+    }
+  ],
+  "synthetic_success_results": {
+    "simulations": [
+      {
+        "task_id": "[mms_issue]synthetic_planner_success",
+        "termination_reason": "user_stop",
+        "messages": [
+          {
+            "role": "assistant",
+            "content": "Hi! How can I help you today?",
+            "tool_calls": null
+          },
+          {
+            "role": "user",
+            "content": "MMS is not working.",
+            "tool_calls": null
+          },
+          {
+            "role": "assistant",
+            "content": "I found multiple blockers. Please apply the bundled fixes.",
+            "tool_calls": null
+          },
+          {
+            "role": "user",
+            "content": "",
+            "tool_calls": [
+              {
+                "name": "toggle_airplane_mode",
+                "arguments": {},
+                "requestor": "user"
+              },
+              {
+                "name": "reseat_sim_card",
+                "arguments": {},
+                "requestor": "user"
+              },
+              {
+                "name": "toggle_data",
+                "arguments": {},
+                "requestor": "user"
+              },
+              {
+                "name": "set_network_mode_preference",
+                "arguments": {
+                  "mode": "4g_5g_preferred"
+                },
+                "requestor": "user"
+              },
+              {
+                "name": "reset_apn_settings",
+                "arguments": {},
+                "requestor": "user"
+              },
+              {
+                "name": "reboot_device",
+                "arguments": {},
+                "requestor": "user"
+              },
+              {
+                "name": "check_apn_settings",
+                "arguments": {},
+                "requestor": "user"
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "content": "Airplane Mode is now OFF.",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "SIM card re-seated successfully.",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "Mobile Data is now ON.",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "Preferred Network Mode set to: 4g_5g_preferred | 5G | Data Enabled",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "APN settings will reset at reboot.",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "Resetting APN settings...\nRestarting network services...",
+            "tool_calls": null
+          },
+          {
+            "role": "tool",
+            "content": "Current APN Name: internet\nMMSC URL: http://mms.carrier.com/mms/wapenc",
+            "tool_calls": null
+          },
+          {
+            "role": "assistant",
+            "content": "Now verify MMS send status.",
+            "tool_calls": null
+          },
+          {
+            "role": "user",
+            "content": "",
+            "tool_calls": [
+              {
+                "name": "can_send_mms",
+                "arguments": {},
+                "requestor": "user"
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "content": "Your messaging app can send MMS messages.",
+            "tool_calls": null
+          }
+        ]
+      }
+    ]
+  }
+}

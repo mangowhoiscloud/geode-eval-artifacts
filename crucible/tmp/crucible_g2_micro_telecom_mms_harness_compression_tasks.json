@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "schema": "crucible_g2_micro_task_selection.v1",
+    "surface": "telecom-mms-harness-compression-v1",
+    "purpose": "A-arm G2 micro-sim task list; supported account/phone prerequisite MMS tasks only",
+    "n_failures": 2,
+    "n_controls": 4,
+    "supported_write_allowlist": [
+      "check_apn_settings",
+      "enable_roaming",
+      "reboot_device",
+      "reseat_sim_card",
+      "reset_apn_settings",
+      "set_network_mode_preference",
+      "toggle_airplane_mode",
+      "toggle_data",
+      "toggle_roaming"
+    ],
+    "exclusion": "MMS tasks requiring app permission, data refuel, billing, Wi-Fi calling, or other unsupported branches are excluded from this A-arm micro-sim."
+  },
+  "task_ids": [
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+    "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+    "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+    "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]"
+  ],
+  "failures": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "expected_writes": [
+        "toggle_airplane_mode",
+        "set_network_mode_preference",
+        "reset_apn_settings",
+        "reboot_device",
+        "toggle_data",
+        "reseat_sim_card",
+        "enable_roaming",
+        "toggle_roaming"
+      ],
+      "failed_expected_writes": [
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "expected_writes": [
+        "reset_apn_settings",
+        "reboot_device",
+        "toggle_data",
+        "enable_roaming"
+      ],
+      "failed_expected_writes": [
+        "enable_roaming"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "expected_writes": [
+        "reset_apn_settings",
+        "reboot_device",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "expected_writes": [
+        "set_network_mode_preference",
+        "enable_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "expected_writes": [
+        "set_network_mode_preference",
+        "enable_roaming",
+        "toggle_roaming"
+      ]
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "expected_writes": [
+        "set_network_mode_preference",
+        "toggle_data",
+        "enable_roaming"
+      ]
+    }
+  ]
+}

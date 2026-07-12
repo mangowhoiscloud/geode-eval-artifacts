@@ -13,6 +13,9 @@ to the verifier output and full message transcript that produced it.
 | `mcpmark/results-geode-agentworld/` | MCPMark run directories. Per task: `meta.json` (route, timing, tokens, verifier result), `messages.json` (full agent transcript), `summary.json` per run | `eval-sys/mcpmark@cd45b7f` + GEODE `BaseMCPAgent` adapter |
 | `mcpmark/logs/`, `mcpmark/logs-cycle/` | Pipeline stdout logs (state duplication, verification, cleanup stages) | same |
 | `tau2/simulations/` | tau2-bench simulation JSONs for GEODE-owned runs (`geode-*`, `crucible-*`, smoke variants) | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`) + GEODE participant adapter |
+| `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
+| `crucible/runs/{gates,row-cache,trajectory-snapshots}/` | Gate verdicts, row cache, trajectory snapshots backing the campaign store | same |
+| `crucible/tmp/` | Gate provenance artifacts from the repo `tmp/`: failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay, G2/G3a task sets | same |
 
 ## Provenance contract
 
@@ -25,16 +28,21 @@ to the verifier output and full message transcript that produced it.
   protocol), and the published run-record pages under
   `/docs/benchmarks/` on the docs site.
 - Directories are append-only snapshots of local
-  `artifacts/eval/harnesses/**` at publish time. Nothing is rewritten after
+  `artifacts/eval/harnesses/**` and `artifacts/eval/runs/crucible/**`
+  (mapped to `crucible/runs/**`; repo-root `tmp/crucible_*.json` maps to
+  `crucible/tmp/`) at publish time. Nothing is rewritten after
   upload; corrections happen as new run directories.
 
 ## What is excluded
 
 - Upstream tau2-bench reference results (`data/tau2/results/final`, 576M):
   shipped by the benchmark authors, not GEODE output.
-- Crucible internal SIL run store (`artifacts/eval/runs/crucible`, ~4GB):
-  internal self-improving-loop experiment logs, out of scope for benchmark
-  evidence. Available on request as a release tarball.
+- Inside the Crucible campaign store, `evaluator-tmp/` (baseline repo
+  checkouts, ~630M) and `evaluator-home/` (uv package caches, ~3.3G) are
+  excluded: they are byte-reproducible from the pinned commits and package
+  versions recorded in the run state, and contain no evaluation output. All
+  actual run data (attempts, evaluations, gate outcomes, trajectories) is
+  included.
 - Secrets: all files were scanned before upload for token/credential patterns
   (GitHub PAT, Notion keys, OpenAI keys, DB URIs, auth headers). Environment
   files (`.mcp_env`, `notion_state.json`) are never included.

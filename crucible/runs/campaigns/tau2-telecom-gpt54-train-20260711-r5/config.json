@@ -1,0 +1,146 @@
+{
+  "schema": "crucible.supervisor.v4",
+  "campaign_id": "tau2-telecom-gpt54-train-20260711-r5",
+  "initial_search_head_sha": "4cd49fc226cca54155aaf56cf88f514b03517016",
+  "repository": "/Users/mango/workspace/geode/.claude/worktrees/crucible-supervisor-hardening",
+  "harness_root": "/Users/mango/workspace/geode/artifacts/eval/harnesses/tau2-bench",
+  "state_dir": "/Users/mango/workspace/geode/artifacts/eval/runs/crucible/campaigns/tau2-telecom-gpt54-train-20260711-r5/state",
+  "allowed_surfaces": [
+    "plugins/benchmark_harness/tau2_agent_policy.md"
+  ],
+  "producer_command": [
+    "uv",
+    "run",
+    "--frozen",
+    "--no-dev",
+    "python",
+    "-m",
+    "plugins.crucible.producers.codex_kg"
+  ],
+  "evaluator_entrypoint": "scripts/eval/crucible_tau2_evaluator.py",
+  "producer_environment": [
+    "CODEX_HOME"
+  ],
+  "evaluator_environment": [
+    "CODEX_HOME",
+    "CRUCIBLE_TAU2_HARNESS_ROOT"
+  ],
+  "train_plan": {
+    "schema": "crucible.train-plan.v3",
+    "name": "tau2-telecom-gpt54-train-20260711-r5",
+    "evaluator_sha256": "02fdaf3db2b1ad4476291335e1a809c80235868bcde43ddd42a67c226aff69cd",
+    "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d",
+    "task_pack_sha256": "1f55de8ce1b006ca3259736d832b341eaf83b506cb3cebd74a85a2dac527e198",
+    "agent_route": "openai-subscription-gpt-5.4-high",
+    "user_route": "evaluator-openai-subscription-gpt-5.4-high",
+    "tasks": [
+      {
+        "content_sha256": "dbbfa8b3e213f787495287befc182a5072b82aa7eb61d19d8f24a64819cfe8fd",
+        "family_id": "a737d8eadf3cd4dc969f45c8524d2a8303ada5a479ed147fa2d7f680314975e9",
+        "task_id": "[mms_issue]break_app_both_permissions|data_usage_exceeded[PERSONA:Hard]"
+      },
+      {
+        "content_sha256": "49db77fb6e8efa68fa433b117e8bd22c777e6f000c64c49d62a2a5c22db36dc4",
+        "family_id": "d5a9f269c80221c00115f47c15b81ec8a38e68dbd00c70461f930b57010de5f6",
+        "task_id": "[mms_issue]break_apn_mms_setting|break_app_both_permissions[PERSONA:Hard]"
+      },
+      {
+        "content_sha256": "55d463800c968332446c5cb959c0e07d22f0d82654220422489a79a6d00b33a6",
+        "family_id": "ef43c36143ea0263d5534004b39327b7e47c08f7fe5221d30ccab5705732cc9f",
+        "task_id": "[mobile_data_issue]bad_vpn|user_abroad_roaming_disabled_on[PERSONA:None]"
+      },
+      {
+        "content_sha256": "c3ee588346124982b1dae865d4de52df35f134245348f31367e26e28c5130f14",
+        "family_id": "b733d84dda43f234da63a458b319b2560bc1937f2ea666bd62200ebfc2356275",
+        "task_id": "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+      }
+    ],
+    "trials_per_task": 1,
+    "assay_config": {
+      "schema": "crucible.tau2-assay.v1",
+      "domain": "telecom",
+      "task_set_name": null,
+      "task_split_name": "base",
+      "num_trials": 1,
+      "max_concurrency": 1,
+      "max_steps": 100,
+      "max_errors": 1,
+      "max_retries": 0,
+      "timeout": null,
+      "seed": 300,
+      "agent": {
+        "implementation": "geode_agent",
+        "route": "openai-subscription-gpt-5.4-high",
+        "model": "gpt-5.4",
+        "provider": "openai",
+        "source": "subscription",
+        "effort": "high",
+        "time_budget_s": 180.0,
+        "max_tokens": 32768,
+        "max_rounds": 0,
+        "cognitive_reflection": false,
+        "codex_output_replay": true,
+        "tool_search_defer": true
+      },
+      "user": {
+        "implementation": "crucible_user",
+        "runtime_owner": "evaluator",
+        "route": "evaluator-openai-subscription-gpt-5.4-high",
+        "llm": "gpt-5.4",
+        "llm_args": {
+          "temperature": 0.0
+        },
+        "provider": "openai",
+        "source": "subscription",
+        "effort": "high",
+        "time_budget_s": 120.0,
+        "max_tokens": 8192,
+        "max_rounds": 0
+      },
+      "retrieval": {
+        "config": null,
+        "kwargs": {}
+      }
+    },
+    "evaluator_paths": [
+      "scripts/eval/crucible_tau2_evaluator.py",
+      "plugins/benchmark_harness/tau2_geode_agent.py",
+      "plugins/crucible",
+      "core",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "promotion": {
+      "method": "paired_bootstrap.v2",
+      "primary_metric": "reward",
+      "materiality_pp": 0.25,
+      "minimum_candidate_mean": 0.5,
+      "minimum_tasks": 4,
+      "minimum_families": 4,
+      "confidence_level": 0.885,
+      "bootstrap_samples": 10000
+    },
+    "budget": {
+      "max_wall_seconds": 10800.0,
+      "max_calls": 600,
+      "max_tokens": 10000000,
+      "max_cost_usd": 16.0,
+      "max_changed_lines": 40
+    },
+    "vetoes": [
+      "budget",
+      "infra_clean",
+      "safety",
+      "task_coverage",
+      "tool_contract"
+    ]
+  },
+  "limits": {
+    "max_attempts": 2,
+    "max_consecutive_invalid": 2,
+    "max_wall_seconds": 23000.0,
+    "max_calls": 1250,
+    "max_tokens": 21000000,
+    "max_cost_usd": 34.0
+  }
+}

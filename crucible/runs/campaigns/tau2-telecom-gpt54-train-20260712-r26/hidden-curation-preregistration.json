@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-07-12T08:52:36+09:00",
+  "exclusions": [
+    {
+      "artifact_sha256": "b0b06994884c50719de68fdef2645ff057167ca04e0433a349f4637cf78eeb9f",
+      "path": "../tau2-telecom-gpt54-train-20260712-r23/train.pack.json",
+      "task_pack_sha256": "5ba0e9f11ebe3250f8b2e1075b5dacb6f4fb191c53bbb036eeaadd131b08b669"
+    },
+    {
+      "artifact_sha256": "6311ca3ca043582b5bc835c6a8f6fddf65385de6316589ba711eb36dc075a017",
+      "path": "../tau2-telecom-gpt54-train-20260711-r15/test.pack.json",
+      "task_pack_sha256": "423b03c3e8a50089861915ed5a251697291844874ef2d4fa7e78b83d309c47f9"
+    },
+    {
+      "artifact_sha256": "fc541b546c7c1276cb3fafb20ce6f94bbfc9efb601a05a65de4808b37b534959",
+      "path": "../tau2-telecom-gpt54-train-20260712-r23/test.pack.json",
+      "task_pack_sha256": "79968339c58af3f143a7fbb854db11d419951f15922ac72ebe8ed5eadffaf796"
+    }
+  ],
+  "output": {
+    "pack": "test.pack.json",
+    "selection": "sealed-selection.json"
+  },
+  "rule": {
+    "domain": "telecom",
+    "execution_order": "upstream_tasks_file",
+    "fault_tokens": 3,
+    "maximum_per_intent": 2,
+    "maximum_per_persona": 2,
+    "rank": "sha256(utf8(salt) || 0x00 || utf8(content_sha256))",
+    "salt": "crucible-telecom-three-fault-test-r26-v1",
+    "split": "base",
+    "take": 6,
+    "trials_per_task": 1
+  },
+  "schema": "crucible.sealed-curation-preregistration.v1"
+}

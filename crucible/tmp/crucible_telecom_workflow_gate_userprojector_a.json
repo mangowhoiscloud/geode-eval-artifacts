@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "schema": "crucible_telecom_workflow_gate.v1",
+    "purpose": "reject-only deterministic telecom G2 surrogate",
+    "budget_profile": {
+      "name": "cheaploop_v1",
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "source": "tmp/crucible_gate_calibration.json",
+      "method": "calibrated from compact accept anchors and over-budget reject anchors; see scripts/eval/calibrate_gate_thresholds.py",
+      "rationale": "Reject trajectories that are already too expensive for the subscription-only cheap loop while preserving room for compact multi-action MMS repairs. This budget is reject-only and has no promotion authority."
+    },
+    "config": {
+      "max_messages": 30,
+      "max_user_tool_turns": 2,
+      "max_tool_calls": 15,
+      "require_action_before_manual_checklist": true
+    }
+  },
+  "results": [
+    {
+      "source": "artifacts/eval/harnesses/tau2-bench/data/simulations/crucible-tau2-cheaploop-telecom-diagnostic-userprojector-latecompression-openai-sub-gpt55-high-openai-sub-gpt55-high-n1k1-20260706-a/results.json",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "termination_reason": "max_steps",
+      "message_count": 31,
+      "tool_call_count": 15,
+      "multi_tool_user_turns": 0,
+      "tool_counts": {
+        "check_network_status": 15
+      },
+      "checkpoints": {
+        "airplane_off": false,
+        "sim_active": false,
+        "mobile_data_on": false,
+        "non_2g_network": false,
+        "apn_valid": false,
+        "account_roaming_enabled": null,
+        "mms_verified": false,
+        "first_seen": {},
+        "first_tool_call_index": 1,
+        "first_manual_checklist_index": null
+      },
+      "verdict": "REJECT_SURROGATE",
+      "reasons": [
+        "max_steps",
+        "message_budget_exceeded:31>30",
+        "missing_terminal_can_send_mms_true"
+      ]
+    }
+  ]
+}

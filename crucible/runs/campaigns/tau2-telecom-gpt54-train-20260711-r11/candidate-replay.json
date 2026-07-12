@@ -1,0 +1,44 @@
+{
+  "schema": "crucible.candidate-replay.v1",
+  "source_campaign_id": "tau2-telecom-gpt54-train-20260711-r10",
+  "source_attempt_id": "0001-97bb4455dfd4",
+  "source_parent_sha": "97f5fd7ae803c9d8a583a31f3616319d07cbc986",
+  "source_candidate_sha": "12d74070e4c2c2195395fa487a53cd7f024f1c4d",
+  "source_proposal_id": "6bcd438ec97b208bb2fae6d3fc1c50194e4e64554b28cd1899a48a81686511fb",
+  "target_parent_sha": "07999456d3a6f7389cb1be21abf869107f9ea679",
+  "eligibility": {
+    "outcome": "INVALID",
+    "reasons": [
+      "infrastructure_contamination"
+    ],
+    "paired_rows": 0,
+    "search_head_changed": false
+  },
+  "mutation": {
+    "surface": "plugins/benchmark_harness/tau2_agent_policy.md",
+    "hypothesis": "Complete multi-step tool workflows with the fewest non-redundant calls: batch causally ready work, request only unavailable user actions or required confirmation, and verify the real terminal state once while preserving safety.",
+    "source_changed_paths": [
+      "plugins/benchmark_harness/tau2_agent_policy.md"
+    ],
+    "source_changed_lines": 1
+  },
+  "artifacts": {
+    "candidate": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r10/state/attempts/0001-97bb4455dfd4/candidate.json",
+      "sha256": "e88dddd9a1c43198f896c6d2aebe9f013f517b120f7218c069cdc3f8ea5c0bc9"
+    },
+    "verdict": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r10/state/attempts/0001-97bb4455dfd4/verdict.json",
+      "sha256": "59b85b76a1c8a388e701e746cdce72684a8262147b3e9bf3b0e3b9ebbcaa43b4"
+    },
+    "record": {
+      "path": "../tau2-telecom-gpt54-train-20260711-r10/state/attempts/0001-97bb4455dfd4/record.json",
+      "sha256": "2994d1cb60a68f38ec591f1acf101488c87055e1a7dc743c15a4bda5ddc7fc32"
+    }
+  },
+  "provider_cooldown": {
+    "error_type": "usage_limit_reached",
+    "resets_at_epoch": 1783740981,
+    "resets_at_local": "2026-07-11T12:36:21+09:00"
+  }
+}
