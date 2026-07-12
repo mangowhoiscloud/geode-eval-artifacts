@@ -14,7 +14,7 @@ to the verifier output and full message transcript that produced it.
 | `mcpmark/logs/`, `mcpmark/logs-cycle/` | Pipeline stdout logs (state duplication, verification, cleanup stages) | same |
 | `tau2/simulations/` | tau2-bench simulation JSONs for GEODE-owned runs (`geode-*`, `crucible-*`, smoke variants) | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`) + GEODE participant adapter |
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
-| `crucible/runs/{gates,row-cache,trajectory-snapshots}/` | Gate verdicts, row cache, trajectory snapshots backing the campaign store | same |
+| `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/tmp/` | Gate provenance artifacts from the repo `tmp/`: failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay, G2/G3a task sets | same |
 
 ## Provenance contract
