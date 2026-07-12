@@ -15,7 +15,7 @@ to the verifier output and full message transcript that produced it.
 | `tau2/simulations/` | tau2-bench simulation JSONs for GEODE-owned runs (`geode-*`, `crucible-*`, smoke variants) | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`) + GEODE participant adapter |
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
-| `crucible/tmp/` | Gate provenance artifacts from the repo `tmp/`: failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay, G2/G3a task sets | same |
+| `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
 
 ## What was used
 
@@ -94,7 +94,7 @@ comparator runs by name alone.
 **Crucible**, per campaign (`crucible/runs/campaigns/<campaign>/state/`):
 `attempts/<seq>-<hash>/` holds one mutation attempt — its candidate,
 `evaluation-<id>/` result payloads, and the gate outcome recorded in the
-attempt state. `crucible/tmp/` holds the cross-campaign provenance:
+attempt state. `crucible/gate-provenance/` holds the cross-campaign provenance:
 `crucible_failure_manifest.json` (the frozen 114-row telecom failure set),
 `crucible_gate_calibration.json` (where the `cheaploop_v1` budget numbers come
 from), the G1 trace-replay report, and the G2/G3a task sets.
@@ -110,8 +110,9 @@ from), the G1 trace-replay report, and the G2/G3a task sets.
   `/docs/benchmarks/` on the docs site.
 - Directories are append-only snapshots of local
   `artifacts/eval/harnesses/**` and `artifacts/eval/runs/crucible/**`
-  (mapped to `crucible/runs/**`; repo-root `tmp/crucible_*.json` maps to
-  `crucible/tmp/`) at publish time. Nothing is rewritten after
+  (mapped to `crucible/runs/**`; the gate provenance files are generated
+  into the GEODE repo's transient `tmp/crucible_*.json` and published here
+  under the durable name `crucible/gate-provenance/`) at publish time. Nothing is rewritten after
   upload; corrections happen as new run directories.
 - Rate-limit (429) failures are never counted as task failures: the affected
   task directory is deleted and the task rerun, because the harness resume
