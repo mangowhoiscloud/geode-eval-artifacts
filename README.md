@@ -18,6 +18,9 @@ to the verifier output and full message transcript that produced it.
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
 | `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, full auditor/target/judge transcripts): the SIL fitness measurements. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
+| `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`), delta charts (`.png`), and per-run `eval-logs/*.summary.yaml` | GEODE `plugins/petri_audit` over Inspect |
+| `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
+| `crucible/gate-provenance/crucible-power-admission-2026-07-13.md` | Family-power admission design record (Monte Carlo power audit of the frozen promotion rule; no provider calls) | GEODE Crucible harness |
 
 ## What was used
 
