@@ -1,0 +1,50 @@
+Using CPython 3.12.13 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12
+Creating virtual environment at: .venv
+   Building geode-agent @ file:///private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/producer-checkout
+Downloading pydantic-core (1.9MiB)
+Downloading pygments (1.2MiB)
+Downloading sympy (6.0MiB)
+Downloading cryptography (6.8MiB)
+Downloading openai (1.1MiB)
+   Building antlr4-python3-runtime==4.7.2
+   Building pylatexenc==2.10
+ Downloaded openai
+      Built geode-agent @ file:///private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/producer-checkout
+ Downloaded pygments
+ Downloaded pydantic-core
+      Built pylatexenc==2.10
+      Built antlr4-python3-runtime==4.7.2
+ Downloaded sympy
+ Downloaded cryptography
+Installed 65 packages in 110ms
+Using CPython 3.12.13 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12
+Creating virtual environment at: .venv
+   Building geode-agent @ file:///private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/measurement-0f1f23a72837488ab2b7827e2bb6b828
+Downloading pydantic-core (1.9MiB)
+Downloading sympy (6.0MiB)
+Downloading cryptography (6.8MiB)
+Downloading pygments (1.2MiB)
+Downloading openai (1.1MiB)
+   Building antlr4-python3-runtime==4.7.2
+   Building pylatexenc==2.10
+      Built geode-agent @ file:///private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/measurement-0f1f23a72837488ab2b7827e2bb6b828
+ Downloaded openai
+ Downloaded pygments
+ Downloaded pydantic-core
+      Built pylatexenc==2.10
+      Built antlr4-python3-runtime==4.7.2
+ Downloaded sympy
+ Downloaded cryptography
+Installed 65 packages in 119ms
+invalid Crucible experiment contract: resolved tau2 assay config does not match the frozen contract
+Traceback (most recent call last):
+  File "/private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/measurement-0f1f23a72837488ab2b7827e2bb6b828/scripts/eval/crucible_tau2_evaluator.py", line 7, in <module>
+    raise SystemExit(run_command_evaluator())
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/measurement-0f1f23a72837488ab2b7827e2bb6b828/plugins/crucible/tau2_live.py", line 867, in run_command_evaluator
+    baseline, baseline_raw, baseline_marginal = _run_arm(
+                                                ^^^^^^^^^
+  File "/private/var/folders/87/xrylhnl16vd6bdmcdzl07xzr0000gn/T/crucible-0001-e4ed2066ad5d-596uvoob/measurement-0f1f23a72837488ab2b7827e2bb6b828/plugins/crucible/tau2_live.py", line 453, in _run_arm
+    raise Tau2InfrastructureError(
+plugins.crucible.tau2_live.Tau2InfrastructureError: tau2 baseline arm exited with status 1
+{"attempts": 1, "campaign_id": "tau2-telecom-gpt54-train-20260713-r30", "elapsed_seconds": 79.98840824997751, "evidence_usage": {"calls": 1, "cost_usd": 0.0, "tokens": 99680, "wall_seconds": 63.696300707990304}, "final_search_head_sha": "88d4d4582b8cdc8c06ab7d418a988743269990c5", "initial_search_head_sha": "88d4d4582b8cdc8c06ab7d418a988743269990c5", "invalids": 1, "keeps": 0, "rejects": 0, "schema": "crucible.loop-summary.v2", "search_ref": "refs/crucible/search/tau2-telecom-gpt54-train-20260713-r30", "state_dir": "/Users/REDACTED/workspace/geode/artifacts/eval/runs/crucible/campaigns/tau2-telecom-gpt54-train-20260713-r30/state", "stop_reason": "max_attempts", "usage": {"calls": 1, "cost_usd": 0.0, "tokens": 99680, "wall_seconds": 63.696300707990304}}
