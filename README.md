@@ -17,6 +17,7 @@ to the verifier output and full message transcript that produced it.
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
+| `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, full auditor/target/judge transcripts): the SIL fitness measurements. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
 
 ## What was used
 
@@ -82,8 +83,13 @@ retries and superseded first attempts):
 | Attempts reaching a verdict | 15 (the rest aborted before judgment) |
 | Verdict-attributed usage | 4,730 calls · 41,095,655 tokens · 30,974s wall |
 
-**SIL** (promotion outcomes read from the same 15 verdicts: the
-self-improving loop's selection record):
+**SIL** (`sil/petri-audits/` plus promotion outcomes read from the same 15
+verdicts: the self-improving loop's measurement and selection record):
+
+| Metric | Value |
+|---|---:|
+| Petri audit logs published | 408 (`.eval`, 2026-05-15 to 2026-06-11) |
+| Served in the self-improving hub | 29 (curated subset with rendered views) |
 
 | Metric | Value |
 |---|---:|

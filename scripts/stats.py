@@ -63,7 +63,14 @@ def crucible() -> None:
     print("crucible verdict-attributed usage:", dict(usage))
 
 
+def sil() -> None:
+    evals = sorted(glob.glob("sil/petri-audits/*.eval"))
+    span = (evals[0].split("/")[-1][:10], evals[-1].split("/")[-1][:10]) if evals else None
+    print("sil petri audit logs:", len(evals), "date span:", span)
+
+
 if __name__ == "__main__":
     mcpmark()
     tau2()
     crucible()
+    sil()
