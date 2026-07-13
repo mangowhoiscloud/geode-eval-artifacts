@@ -20,6 +20,7 @@ to the verifier output and full message transcript that produced it.
 | `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, full auditor/target/judge transcripts): the SIL fitness measurements. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
 | `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`) and delta charts (`.png`). The live `eval-logs/` manifest ledger and code-referenced docs stay in the main repo | GEODE `plugins/petri_audit` over Inspect |
 | `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
+| `crucible/campaign-records/` | The G0-G7 era campaign record (EN/KO, formerly `docs/architecture/crucible.md` in the main repo): telecom v1-v72 measurement narrative, weakness band, S5 trial runs. Superseded as an architecture contract by `docs/architecture/crucible-kernel.md`; preserved here as the historical run record | GEODE Crucible harness over tau2-bench |
 | `crucible/gate-provenance/crucible-power-admission-2026-07-13.md` | Family-power admission design record (Monte Carlo power audit of the frozen promotion rule; no provider calls) | GEODE Crucible harness |
 
 ## What was used
