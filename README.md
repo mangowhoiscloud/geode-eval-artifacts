@@ -1,7 +1,8 @@
 # GEODE Evaluation Artifacts
 
-Raw run logs behind the benchmark numbers published in the
-[GEODE docs](https://mangowhoiscloud.github.io/geode/docs/benchmarks/results).
+Raw run logs behind the benchmark numbers published in the GEODE docs
+([Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2) ·
+[MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark)).
 Every score GEODE publishes cites a result directory; this repository is where
 those directories live, unmodified, so any reported number can be traced back
 to the verifier output and full message transcript that produced it.
