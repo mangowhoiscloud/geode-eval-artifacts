@@ -34,7 +34,7 @@ this table is the summary of the stack that produced them.
 | GEODE entry point | `plugins/benchmark_harness/run_mcpmark.py` in the GEODE repo: registers the `geode` agent (a `BaseMCPAgent` wrapping GEODE's `AgenticLoop`) before `pipeline.main()` |
 | MCP servers (MCPMark) | GitHub: `ghcr.io/github/github-mcp-server:v0.15.0` (Docker stdio) · Postgres: `postgres-mcp==0.3.0` via pipx · Playwright: `@playwright/mcp@0.0.68` (headless chromium) · Notion: `@notionhq/notion-mcp-server` (stdio) · Filesystem: upstream MCPMark default |
 | tau2 harness | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`), GEODE agent + GEODE user-simulator adapters; native `user_simulator` comparator runs labeled separately |
-| Model routes | Primary: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11/12: `gpt-5.4`. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
+| Model routes | Primary: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13: `gpt-5.4`. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
 | Verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks. No GEODE-authored judges |
 
 ## Run naming
@@ -47,17 +47,26 @@ this table is the summary of the stack that produced them.
   `crucible-tau2-<gate>-<domain>-<candidate>-<agent route>-<user route>-n{N}k{K}[-suffix]`
   for Crucible probes (gate ∈ readiness/cheaploop/g2/g3a/g4), and
   `geode-<model>-<domain>-<scope>-<date>` for native GEODE runs.
-- Crucible campaigns: `tau2-telecom-gpt54-train-<date>-r<N>` (r1-r28,
-  2026-07-11/12) plus `crucible-rowcache-live-*` cache-priming runs.
+- Crucible campaigns: `tau2-telecom-gpt54-train-<date>-r<N>` (r1-r35,
+  2026-07-11 through 2026-07-13) plus `crucible-rowcache-live-*`
+  cache-priming runs.
+
+### Crucible 2026-07-13 operations-hardening cases
+
+| Runs | Outcome | Evidence value |
+|---|---|---|
+| r29-r33 | Five pre-verdict operational failures | Producer auth, frozen-assay drift, budget-trajectory termination, unsupported concurrency, and session reaping were caught before a score could be claimed. |
+| r34 | `INVALID`, no verdict | Power and runtime admission passed, but the evaluator subprocess exited before judgment. The run records one producer call and no score. |
+| r35 | `INVALID` verdict | A verdict-bearing measured attempt was vetoed for `task_coverage_incomplete` and `infrastructure_contamination`; `promotion_authority` remained `none`. |
 
 ## Quantitative summary
 
-Counted directly from the files in this repository on 2026-07-13; recompute
+Counted directly from the files in this repository on 2026-07-15; recompute
 any of it with `python3 scripts/stats.py`. Token figures are what the
 artifacts record: the subscription route reports usage per call, but there
 is no billing meaning behind `cost_usd`-style fields.
 
-**MCPMark** (all task attempts across the 24 result directories, including
+**MCPMark** (all task attempts across the 25 result directories, including
 retries and superseded first attempts):
 
 | Metric | Value |
@@ -72,7 +81,7 @@ retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Runs with `results.json` | 379 (+2 dirs without results) |
+| Runs with `results.json` | 379 |
 | Episodes simulated | 2,691 |
 | Episodes with reward recorded | 2,364 (reward 1.0: 1,492 · below 1.0: 872) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
@@ -82,12 +91,12 @@ retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Campaigns | 31 (train r1-r28 + 3 row-cache priming) |
-| Mutation attempts | 35 |
-| Attempts reaching a verdict | 15 (the rest aborted before judgment) |
-| Verdict-attributed usage | 4,730 calls · 41,095,655 tokens · 30,974s wall |
+| Campaigns | 38 (train r1-r35 + 3 row-cache priming) |
+| Mutation attempts | 42 |
+| Attempts reaching a verdict | 16 (the rest aborted before judgment) |
+| Verdict-attributed usage | 5,115 calls · 44,216,109 tokens · 34,373s wall |
 
-**SIL** (`sil/petri-audits/` plus promotion outcomes read from the same 15
+**SIL** (`sil/petri-audits/` plus promotion outcomes read from the same 16
 verdicts: the self-improving loop's measurement and selection record):
 
 | Metric | Value |
@@ -99,11 +108,11 @@ verdicts: the self-improving loop's measurement and selection record):
 |---|---:|
 | KEEP | 1 |
 | REJECT | 8 |
-| INVALID | 6 |
+| INVALID | 7 |
 | Promoted to core (`promotion_authority`) | 0; every verdict carries `promotion_authority: none` |
-| Rejection/invalidation reasons | `infrastructure_contamination` 6 · `improvement_below_materiality` 4 · `confidence_bound_not_positive` 4 · `promotion_unreachable_from_baseline` 4 (an attempt can carry several) |
+| Rejection/invalidation reasons | `infrastructure_contamination` 7 · `improvement_below_materiality` 4 · `confidence_bound_not_positive` 4 · `promotion_unreachable_from_baseline` 4 · `task_coverage_incomplete` 1 (an attempt can carry several) |
 
-The SIL numbers are the point of the store: 35 mutation attempts produced one
+The SIL numbers are the point of the store: 42 mutation attempts produced one
 KEEP and zero core promotions, with every rejection reason machine-recorded.
 The loop's value here is the verifier discipline: noisy or immaterial
 improvements do not survive the gates.
@@ -161,7 +170,10 @@ comparator runs by name alone.
 attempt state. `crucible/gate-provenance/` holds the cross-campaign provenance:
 `crucible_failure_manifest.json` (the frozen 114-row telecom failure set),
 `crucible_gate_calibration.json` (where the `cheaploop_v1` budget numbers come
-from), the G1 trace-replay report, and the G2/G3a task sets.
+from), the G1 trace-replay report, and the G2/G3a task sets. Hardened campaigns
+also carry identifier-free `prepare/power.json` and `prepare/runtime.json`
+admission reports. When judgment is reached, `verdict.json` is the canonical
+machine-readable outcome.
 
 ## Provenance contract
 
@@ -189,9 +201,12 @@ from), the G1 trace-replay report, and the G2/G3a task sets.
 - Inside the Crucible campaign store, `evaluator-tmp/` (baseline repo
   checkouts, ~630M) and `evaluator-home/` (uv package caches, ~3.3G) are
   excluded: they are byte-reproducible from the pinned commits and package
-  versions recorded in the run state, and contain no evaluation output. All
-  actual run data (attempts, evaluations, gate outcomes, trajectories) is
-  included.
+  versions recorded in the run state. The r1-r28 scoring series retains its
+  evaluation outputs; the invalid r29-r35 operations-hardening series uses a
+  narrower public receipt set and omits evaluator scratch and transcripts.
+  The final verdict is retained whenever one was produced.
+- Unopened sealed packs, selection manifests, salts, and attested row lists
+  remain private. Identifier-free power/runtime reports may be published.
 - Secrets: all files were scanned before upload for token/credential patterns
   (GitHub PAT, Notion keys, OpenAI keys, DB URIs, auth headers) and credential
   file names. Environment files (`.mcp_env`, `notion_state.json`) are never

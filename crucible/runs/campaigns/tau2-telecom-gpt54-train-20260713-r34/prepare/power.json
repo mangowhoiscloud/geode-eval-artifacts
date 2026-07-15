@@ -1,0 +1,88 @@
+{
+  "design": {
+    "family_count": 9,
+    "family_task_counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "task_count": 9,
+    "trials_per_task": 3
+  },
+  "method": "paired-bernoulli-monte-carlo.v1",
+  "minimum_power": 0.8,
+  "monte_carlo_confidence_level": 0.95,
+  "passes": true,
+  "power_audit_id": "3e01fd16aef29869ca9a159866cd63fb1e68183a9d76da94038f893722d87eb2",
+  "promotion": {
+    "bootstrap_samples": 10000,
+    "confidence_level": 0.885,
+    "materiality_pp": 0.25,
+    "method": "paired_bootstrap.v2",
+    "minimum_candidate_mean": 0.5,
+    "minimum_families": 6,
+    "minimum_tasks": 6,
+    "primary_metric": "reward"
+  },
+  "scenarios": [
+    {
+      "baseline_pass_probability": 0.5,
+      "basis_sha256": "96e8e585b9fd4d585f219731f44527e2a91ea717930fac47d3eb6e0047830275",
+      "derived_candidate_pass_probability": 0.8333333333333333,
+      "derived_gain_probability_on_baseline_failure": 0.6666666666666666,
+      "minimum_power": 0.8,
+      "name": "r14-observed-effect-sensitivity",
+      "passes": true,
+      "regression_probability_on_baseline_success": 0.0,
+      "results": {
+        "candidate_below_floor_probability": 0.0001,
+        "confidence_bound_not_positive_probability": 0.0004,
+        "improvement_below_materiality_probability": 0.15195,
+        "keep_count": 16909,
+        "keep_probability": 0.84545,
+        "keep_probability_95pct_lower_bound": 0.8403740047480837,
+        "keep_probability_given_reachable": 0.8476539001403649,
+        "monte_carlo_standard_error": 0.0025560154293352766,
+        "reachable_count": 19948,
+        "reachable_probability": 0.9974
+      },
+      "source": "r14 train KEEP metric; planning sensitivity only, not an approval claim",
+      "target_improvement_pp": 0.3333333333333333
+    },
+    {
+      "baseline_pass_probability": 0.5833333333333334,
+      "basis_sha256": "96e8e585b9fd4d585f219731f44527e2a91ea717930fac47d3eb6e0047830275",
+      "derived_candidate_pass_probability": 0.9166666666666667,
+      "derived_gain_probability_on_baseline_failure": 0.8,
+      "minimum_power": 0.8,
+      "name": "r24-baseline-with-r14-effect-sensitivity",
+      "passes": true,
+      "regression_probability_on_baseline_success": 0.0,
+      "results": {
+        "candidate_below_floor_probability": 0.0,
+        "confidence_bound_not_positive_probability": 0.0001,
+        "improvement_below_materiality_probability": 0.1287,
+        "keep_count": 16837,
+        "keep_probability": 0.84185,
+        "keep_probability_95pct_lower_bound": 0.8367275039560108,
+        "keep_probability_given_reachable": 0.8673947761578487,
+        "monte_carlo_standard_error": 0.0025801024931192173,
+        "reachable_count": 19411,
+        "reachable_probability": 0.97055
+      },
+      "source": "r24 frozen baseline evidence plus r14 observed effect; planning sensitivity only",
+      "target_improvement_pp": 0.3333333333333333
+    }
+  ],
+  "schema": "crucible.family-power-report.v1",
+  "scope": "statistical_gate_conditional_on_all_nonstatistical_vetoes_passing",
+  "seed": 20260713,
+  "simulations": 20000,
+  "task_pack_sha256": "e8abc61405cbb8b9d3979f96511dcaca030199e0786d4187313dbda4d84cec98"
+}
