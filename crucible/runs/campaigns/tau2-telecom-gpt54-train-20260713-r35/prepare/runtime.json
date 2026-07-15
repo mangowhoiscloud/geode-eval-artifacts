@@ -1,0 +1,47 @@
+{
+  "admission": {
+    "campaign_passes": true,
+    "configured_campaign_wall_seconds": 34000.0,
+    "configured_experiment_wall_seconds": 33000.0,
+    "experiment_passes": true,
+    "required_campaign_wall_seconds": 34000,
+    "required_experiment_wall_seconds": 33000
+  },
+  "bindings": {
+    "agent_route": "openai-subscription-gpt-5.4-high",
+    "assay_config_sha256": "97bcbe2713b110d778b5fa218500d311893892466861e4783f9813174b741ef3",
+    "evaluator_sha256": "83ed654cce3ccb4c5c239e0e3f2d1938bec1f3394e11b217e46027f59e273871",
+    "harness_sha256": "e4596eb05b9917fa098db094448f731028f5a5762ac13dc5c0ff2622c2c0697d",
+    "user_route": "evaluator-openai-subscription-gpt-5.4-high"
+  },
+  "ceiling": {
+    "campaign_overhead_seconds": 1000.0,
+    "experiment_overhead_seconds": 600.0,
+    "headroom_ratio": 0.0,
+    "paired_row_ceiling_seconds": 32400.0,
+    "timeout_seconds_per_row": 600.0
+  },
+  "design": {
+    "family_count": 9,
+    "family_task_counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "paired_row_count": 54,
+    "task_count": 9,
+    "trials_per_task": 3
+  },
+  "method": "contract-timeout-ceiling.v1",
+  "passes": true,
+  "runtime_audit_id": "fd6b1193a514baf31409eb92e1b3cc47a0749f52087ba119bbb5f6a33a67bb7d",
+  "schema": "crucible.runtime-budget-report.v1",
+  "scope": "paired_baseline_candidate_wall_envelope",
+  "source": "9x3 paired train contract: 54 rows at the frozen 600-second semantic timeout"
+}
