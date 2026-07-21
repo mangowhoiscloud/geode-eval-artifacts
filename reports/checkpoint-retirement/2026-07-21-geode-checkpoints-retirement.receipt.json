@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "legacy_checkpoint_retirement_receipt",
+  "recorded_at": "2026-07-21",
+  "source": {
+    "filename": "geode_checkpoints.db",
+    "size_bytes": 2015629312,
+    "sha256": "6130fd7158c890beee9db7c41e54f563c2c0453a3ca6fe720a1150189735bee1",
+    "last_database_write_utc": "2026-05-15T05:38:43Z"
+  },
+  "integrity": {
+    "quick_check": "ok",
+    "integrity_check": "ok"
+  },
+  "database": {
+    "page_size": 4096,
+    "page_count": 492097,
+    "freelist_count": 0,
+    "checkpoint_rows": 2461,
+    "checkpoint_payload_bytes": 1274924228,
+    "checkpoint_metadata_bytes": 232183,
+    "write_rows": 20271,
+    "write_payload_bytes": 727593131,
+    "thread_count": 7,
+    "checkpoint_namespace_count": 1,
+    "write_channel_count": 42,
+    "serialization": "msgpack"
+  },
+  "threads": [
+    {
+      "thread_id": "ip:cowboy_bebop:analysis",
+      "checkpoint_rows": 2313,
+      "checkpoint_payload_bytes": 1266294304,
+      "write_rows": 19064,
+      "write_payload_bytes": 722727835
+    },
+    {
+      "thread_id": "ip:hollow_knight:analysis",
+      "checkpoint_rows": 42,
+      "checkpoint_payload_bytes": 3285855,
+      "write_rows": 333,
+      "write_payload_bytes": 1738824
+    },
+    {
+      "thread_id": "ip:berserk:analysis",
+      "checkpoint_rows": 45,
+      "checkpoint_payload_bytes": 2092485,
+      "write_rows": 384,
+      "write_payload_bytes": 1258073
+    },
+    {
+      "thread_id": "ip:dead_cells:analysis",
+      "checkpoint_rows": 19,
+      "checkpoint_payload_bytes": 1251962,
+      "write_rows": 159,
+      "write_payload_bytes": 744164
+    },
+    {
+      "thread_id": "ip:hades:analysis",
+      "checkpoint_rows": 22,
+      "checkpoint_payload_bytes": 1189572,
+      "write_rows": 169,
+      "write_payload_bytes": 623711
+    },
+    {
+      "thread_id": "ip:repo:analysis",
+      "checkpoint_rows": 11,
+      "checkpoint_payload_bytes": 549960,
+      "write_rows": 85,
+      "write_payload_bytes": 325044
+    },
+    {
+      "thread_id": "ip:ghost_in_the_shell:analysis",
+      "checkpoint_rows": 9,
+      "checkpoint_payload_bytes": 260090,
+      "write_rows": 77,
+      "write_payload_bytes": 175480
+    }
+  ],
+  "runtime_consumer_audit": {
+    "geode_origin_main": "94b6b87c0710ac2ae5c40fc25cc8838466ff75ed",
+    "current_reader_found": false,
+    "setting_removal_commit": "c4deb54848e39ff4615d3f856d75286ed864955e",
+    "setting_removal_reason": "vestigial configuration with no runtime reader"
+  },
+  "retention": {
+    "raw_database_published": false,
+    "policy": "receipt_only_retirement",
+    "reason_codes": [
+      "no_current_runtime_reader",
+      "not_evaluation_provenance",
+      "opaque_state_not_public_redaction_safe",
+      "disproportionate_repository_cost"
+    ],
+    "local_disposition": "delete_after_receipt_is_pushed_to_remote_branch"
+  },
+  "related_cleanup": {
+    "local_petri_logs": 408,
+    "exact_remote_matches": 408,
+    "matched_bytes": 95372693,
+    "canonical_path": "sil/petri-audits"
+  }
+}
