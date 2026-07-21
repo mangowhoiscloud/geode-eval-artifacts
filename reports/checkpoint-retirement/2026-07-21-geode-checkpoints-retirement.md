@@ -6,10 +6,10 @@ Disposition: retain a sanitized receipt; do not publish the raw database
 
 ## Decision
 
-The local `geode_checkpoints.db` file is a retired runtime state store, not an
+The audited `geode_checkpoints.db` file was a retired runtime state store, not an
 evaluation result. The raw SQLite database is therefore excluded from this
 public repository. This receipt preserves the evidence needed to identify and
-reason about the store before its local copy is removed:
+reason about the store before the audited copy was retired:
 
 - a SHA-256 identity and source timestamp;
 - SQLite integrity results, schema shape, row counts, and payload sizes;
@@ -97,6 +97,28 @@ The agent-engineering review applied four tests:
 The selected policy is therefore **receipt-only retirement**. If a separately
 retained private copy is encountered later, its SHA-256 can be matched against
 this receipt; this public repository does not need the payload itself.
+
+## Trajectory consequence
+
+This receipt is not a trajectory dataset or a replayable backup. It records
+identity, aggregate shape, integrity, and disposition, but no row-level
+checkpoint transitions.
+
+A current source scan did not locate the audited 2,015,629,312-byte payload
+with SHA-256
+`6130fd7158c890beee9db7c41e54f563c2c0453a3ca6fe720a1150189735bee1`.
+A same-named 692,224-byte local SQLite file is not a surviving copy: its
+SHA-256 is
+`b96d1660b37d33986eb2bc3c9d1c2c2d002e607a8db75e7e7ac57665ebf551ea`,
+and `PRAGMA quick_check` reports malformed B-tree pages.
+
+The historical `cowboy_bebop` process is only partially reconstructable from
+separate telemetry, snapshot metadata, result variants, and one related
+session. Those surviving sources and their non-additive counts are catalogued
+in the
+[2026-07-21 trajectory inventory](../trajectory-inventory/2026-07-21.md#legacy-cowboy-bebop-checkpoint-trace).
+Any derived trajectory must mark missing checkpoint transitions rather than
+imply exact replay.
 
 ## Related local cleanup
 

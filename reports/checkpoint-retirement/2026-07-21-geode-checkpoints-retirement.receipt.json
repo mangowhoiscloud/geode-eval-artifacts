@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
+  "schema_id": "geode.checkpoint-retirement-receipt@2026-07-21",
   "artifact_kind": "legacy_checkpoint_retirement_receipt",
-  "recorded_at": "2026-07-21",
+  "recorded_on": "2026-07-21",
   "source": {
     "filename": "geode_checkpoints.db",
     "size_bytes": 2015629312,
@@ -92,7 +92,18 @@
       "opaque_state_not_public_redaction_safe",
       "disproportionate_repository_cost"
     ],
-    "local_disposition": "delete_after_receipt_is_pushed_to_remote_branch"
+    "local_disposition": "audited_copy_not_present_in_current_source_scan"
+  },
+  "trajectory": {
+    "is_trajectory": false,
+    "exact_replay_available": false,
+    "inventory": "../trajectory-inventory/2026-07-21.json",
+    "same_named_nonmatching_file": {
+      "size_bytes": 692224,
+      "sha256": "b96d1660b37d33986eb2bc3c9d1c2c2d002e607a8db75e7e7ac57665ebf551ea",
+      "sqlite_quick_check": "malformed_btree_pages",
+      "matches_receipt_source": false
+    }
   },
   "related_cleanup": {
     "local_petri_logs": 408,

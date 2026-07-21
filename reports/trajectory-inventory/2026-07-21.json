@@ -1,0 +1,415 @@
+{
+  "schema_id": "geode.trajectory-inventory@2026-07-21",
+  "observed_on": "2026-07-21",
+  "time_basis": "UTC",
+  "policy": "repo://TRAJECTORIES.md",
+  "counting_notes": [
+    "Counts describe the audited source representations and are not additive across overlapping sources.",
+    "Canonical-unique counts use content hashes or normalized event hashes where available.",
+    "Logical URIs intentionally omit workstation usernames and absolute source paths."
+  ],
+  "availability_labels": {
+    "published": "Present in the public repository and usable within the stated trajectory class.",
+    "review_required": "Potentially useful local candidate requiring redaction, normalization, licensing, or join validation.",
+    "restricted": "Eligible only for an allowlisted private or redacted export.",
+    "excluded": "Not eligible for trajectory publication."
+  },
+  "sources": [
+    {
+      "id": "tau2-public",
+      "location": "repo://tau2/simulations",
+      "trajectory_class": [
+        "dialogue",
+        "tool"
+      ],
+      "availability": "published",
+      "counts": {
+        "episodes_total": 2691,
+        "episodes_with_messages_and_reward": 2364,
+        "canonical_unique_scored_trajectories": 2363,
+        "tool_using_trajectories": 1909,
+        "canonical_unique_tool_trajectories": 1909,
+        "messages": 159199,
+        "tool_calls": 27585,
+        "unscored_or_infra_error_episodes": 327,
+        "reward_1": 1492,
+        "reward_below_1": 872
+      },
+      "limitations": [
+        "Retries and campaign descendants must remain in the same data split.",
+        "Unscored or infrastructure-error episodes are not positive or negative labels."
+      ]
+    },
+    {
+      "id": "petri-public",
+      "location": "repo://sil/petri-audits",
+      "trajectory_class": [
+        "dialogue",
+        "tool",
+        "decision"
+      ],
+      "availability": "published",
+      "counts": {
+        "content_unique_eval_logs": 408,
+        "samples": 1938,
+        "messages": 33478,
+        "tool_events": 21455,
+        "scored_samples": 1832
+      },
+      "limitations": [
+        "Inspect log decoding is required.",
+        "Judge outputs must remain distinguishable from target-agent messages."
+      ]
+    },
+    {
+      "id": "mcpmark-public",
+      "location": "repo://mcpmark/results-geode-agentworld",
+      "trajectory_class": [
+        "tool"
+      ],
+      "availability": "published",
+      "counts": {
+        "task_artifacts_with_meta": 89,
+        "verifier_success": 68,
+        "verifier_failure": 21,
+        "task_artifacts_with_execution_log": 78,
+        "mcp_action_result_records": 1202,
+        "messages_json_final_answer_strings": 78,
+        "messages_json_empty_lists": 11,
+        "final_answer_characters": 37872
+      },
+      "limitations": [
+        "messages.json is a final-answer value, not a full model transcript.",
+        "execution.log contains ordered MCP actions and results but cannot reconstruct hidden model turns."
+      ]
+    },
+    {
+      "id": "crucible-public",
+      "location": "repo://crucible/runs",
+      "trajectory_class": [
+        "search",
+        "decision"
+      ],
+      "availability": "published",
+      "counts": {
+        "campaigns": 38,
+        "mutation_attempts": 42,
+        "attempts_reaching_verdict": 16,
+        "raw_evaluation_or_trajectory_json_files": 71,
+        "content_unique_raw_payload_hashes": 42,
+        "unique_hashes_overlapping_tau2": 34,
+        "unique_raw_hashes_beyond_tau2": 8
+      },
+      "limitations": [
+        "Raw evaluation payloads overlap tau2 and must be de-duplicated by content hash.",
+        "The primary independent value is candidate, evaluation, gate, and promotion lineage."
+      ]
+    },
+    {
+      "id": "petri-local-extra",
+      "location": "geode-home://petri/logs",
+      "trajectory_class": [
+        "dialogue",
+        "tool",
+        "decision"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "physical_files_beyond_public_content": 180,
+        "content_unique_logs_beyond_public_content": 152,
+        "samples": 602,
+        "messages": 10346,
+        "tool_events": 6793,
+        "scored_samples": 532
+      },
+      "combined_with_public": {
+        "content_unique_logs": 560,
+        "samples": 2540,
+        "messages": 43824,
+        "tool_events": 28248,
+        "scored_samples": 2364
+      },
+      "requirements": [
+        "Payload redaction review",
+        "License review",
+        "Content-hash de-duplication against public logs"
+      ]
+    },
+    {
+      "id": "mcpmark-local-compact",
+      "location": "local-eval://mcpmark/compact-transcripts",
+      "trajectory_class": [
+        "tool"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "files": 86,
+        "complete": 79,
+        "incomplete": 7,
+        "tool_call_result_pairs": 1284
+      },
+      "requirements": [
+        "Deterministic join to public task metadata",
+        "Payload-level secret review",
+        "Explicit completeness flags"
+      ]
+    },
+    {
+      "id": "mcpmark-local-rich",
+      "location": "local-eval://mcpmark/rich-sessions",
+      "trajectory_class": [
+        "dialogue",
+        "tool"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "session_directories": 81,
+        "messages": 1247,
+        "tool_use_blocks": 1222,
+        "tool_result_blocks": 1222
+      },
+      "requirements": [
+        "Deterministic join to public verifier results",
+        "Payload-level redaction",
+        "Outcome and completeness validation"
+      ]
+    },
+    {
+      "id": "runtime-session-json",
+      "location": "geode-home://projects/**/sessions/messages.json",
+      "trajectory_class": [
+        "dialogue",
+        "tool"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "message_files": 20652,
+        "message_records": 164745,
+        "tool_use_blocks": 16946,
+        "tool_result_blocks": 16951,
+        "complete_session_instances": 16694,
+        "normalized_unique_complete_sessions": 15009,
+        "normalized_unique_complete_tool_trajectories": 4841
+      },
+      "requirements": [
+        "Evaluation-task allowlist",
+        "Message and tool-payload redaction",
+        "No bulk public export"
+      ]
+    },
+    {
+      "id": "runtime-compact-transcripts",
+      "location": "geode-home://transcripts/**/*.jsonl",
+      "trajectory_class": [
+        "dialogue",
+        "tool"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "jsonl_files": 14957,
+        "segments": 195001,
+        "complete_segments": 193716,
+        "canonical_unique_complete_segments": 38175,
+        "complete_tool_segments": 9163,
+        "canonical_unique_complete_tool_segments": 9135,
+        "strings_with_local_home_path_marker": 2093,
+        "strings_with_at_sign": 2995
+      },
+      "fidelity": {
+        "assistant_user_body_character_cap": 100000,
+        "tool_input_result_character_cap": 300,
+        "lossy": true
+      },
+      "requirements": [
+        "Allowlisted task scope",
+        "Review every path-marker and at-sign redaction signal",
+        "Declare truncation in every derived release"
+      ]
+    },
+    {
+      "id": "runtime-session-indexes",
+      "location": "geode-home://projects/**/sessions/sessions.db",
+      "trajectory_class": [
+        "decision"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "sqlite_files": 449,
+        "bytes": 815587328,
+        "indexed_sessions": 20550,
+        "indexed_messages": 158981,
+        "db_only_session_ids": 0,
+        "json_only_session_ids": 87,
+        "cognitive_events": 3434,
+        "cognitive_states": 5771,
+        "hook_events": 8096,
+        "context_artifacts": 72
+      },
+      "requirements": [
+        "Use only for metadata joins",
+        "Export conversation bodies from JSON",
+        "Do not publish databases wholesale"
+      ]
+    },
+    {
+      "id": "runtime-evidence-ledgers",
+      "location": "geode-home://evidence/*.jsonl",
+      "trajectory_class": [
+        "decision"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "jsonl_files": 9519,
+        "records": 560713,
+        "task_preflight": 189348,
+        "final_result": 188411,
+        "evidence_check": 182332,
+        "hitl_approval": 534,
+        "other": 88
+      },
+      "requirements": [
+        "Join by task and run identifiers",
+        "Redact source snippets and private evidence"
+      ]
+    },
+    {
+      "id": "runtime-run-telemetry",
+      "location": "geode-home://runs/**/*.jsonl",
+      "trajectory_class": [
+        "search",
+        "decision"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "jsonl_files": 927,
+        "records": 76743,
+        "run_ids": 1705
+      },
+      "requirements": [
+        "Join validation",
+        "Payload redaction",
+        "Missing-event accounting"
+      ]
+    },
+    {
+      "id": "runtime-memory-episodes",
+      "location": "geode-home://memory/episodes",
+      "trajectory_class": [
+        "tool",
+        "decision"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "rows": 1250,
+        "rows_with_error_string": 156
+      },
+      "limitations": [
+        "Tool inputs are head excerpts rather than full payloads."
+      ]
+    },
+    {
+      "id": "runtime-approval-history",
+      "location": "geode-home://approval_history.jsonl",
+      "trajectory_class": [
+        "decision"
+      ],
+      "availability": "restricted",
+      "counts": {
+        "decisions": 2392,
+        "approved": 1237,
+        "denied": 1154,
+        "blank": 1
+      },
+      "requirements": [
+        "Join to the policy request and action",
+        "Redact user and tool payloads"
+      ]
+    },
+    {
+      "id": "autoresearch-search-traces",
+      "location": "geode-home://autoresearch/**/transcript.jsonl",
+      "trajectory_class": [
+        "search",
+        "decision"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "jsonl_files_total": 1641,
+        "transcript_files": 1612,
+        "events": 26080,
+        "baseline_decisions": 1603,
+        "per_dimension_scores": 1598,
+        "audit_finished_events": 1591
+      },
+      "requirements": [
+        "Campaign-lineage splits",
+        "Payload redaction",
+        "License and model-output review"
+      ]
+    },
+    {
+      "id": "cowboy-bebop-surviving-process-data",
+      "location": "logical://session/ip:cowboy_bebop:analysis",
+      "trajectory_class": [
+        "search",
+        "decision"
+      ],
+      "availability": "review_required",
+      "counts": {
+        "run_ids": 71,
+        "pipeline_starts": 69,
+        "pipeline_ends": 70,
+        "analyst_completions": 276,
+        "evaluator_completions": 828,
+        "snapshot_metadata_found": 62,
+        "snapshot_metadata_expected": 70,
+        "directly_related_complete_sessions": 1,
+        "directly_related_messages": 6,
+        "directly_related_high_level_calls": 4,
+        "result_variants": 53,
+        "independent_result_labels": 1
+      },
+      "overlaps": [
+        "runtime-run-telemetry",
+        "runtime-session-json"
+      ],
+      "limitations": [
+        "The checkpoint payload identified by the retirement receipt is unavailable.",
+        "Missing checkpoint transitions must be explicit.",
+        "The 53 result variants share one session and final score."
+      ]
+    },
+    {
+      "id": "legacy-checkpoint-nonmatching-corrupt-copy",
+      "location": "local://legacy-checkpoint/same-name-nonmatching-copy",
+      "trajectory_class": [],
+      "availability": "excluded",
+      "counts": {
+        "bytes": 692224
+      },
+      "integrity": {
+        "sha256": "b96d1660b37d33986eb2bc3c9d1c2c2d002e607a8db75e7e7ac57665ebf551ea",
+        "sqlite_quick_check": "malformed b-tree pages",
+        "matches_retirement_receipt": false
+      }
+    }
+  ],
+  "excluded_source_classes": [
+    {
+      "id": "raw-reasoning-diagnostics",
+      "reason": "Hidden reasoning is unnecessary for reproducibility and may contain sensitive model internals."
+    },
+    {
+      "id": "general-private-mcp-stores",
+      "reason": "Contains account and third-party data outside a bounded evaluation scope."
+    },
+    {
+      "id": "opaque-checkpoint-payloads",
+      "reason": "Not publishable without a field-aware decoder and payload-level redaction."
+    },
+    {
+      "id": "retirement-receipts-as-training-data",
+      "reason": "A receipt records aggregate identity and disposition; it is not a row-level trajectory or backup."
+    }
+  ]
+}

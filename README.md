@@ -4,14 +4,20 @@ Raw run logs behind the benchmark numbers published in the GEODE docs
 ([Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2) ·
 [MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark)).
 Every score GEODE publishes cites a result directory; this repository is where
-those directories live, unmodified, so any reported number can be traced back
-to the verifier output and full message transcript that produced it.
+those directories live, so any reported number can be traced back to verifier
+output and the trace material retained by the producing harness. Trace fidelity
+varies: tau2 and Petri retain full message sequences, while the public MCPMark
+copy retains final answers and ordered MCP execution logs, not full model
+dialogue. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the dated publication,
+redaction, and retirement contract.
 
 ## Layout
 
 | Path | Content | Producing harness |
 |---|---|---|
-| `mcpmark/results-geode-agentworld/` | MCPMark run directories. Per task: `meta.json` (route, timing, tokens, verifier result), `messages.json` (full agent transcript), `summary.json` per run | `eval-sys/mcpmark@cd45b7f` + GEODE `BaseMCPAgent` adapter |
+| `TRAJECTORIES.md` | Stable trajectory publication contract: date-based identifiers, schema envelope, redaction, validation, and deletion gates | repository policy |
+| `reports/trajectory-inventory/` | Dated human- and machine-readable source inventories; current snapshot: [2026-07-21](reports/trajectory-inventory/2026-07-21.md) | cross-source audit |
+| `mcpmark/results-geode-agentworld/` | MCPMark run directories. Per task: `meta.json` (route, timing, tokens, verifier result), `messages.json` (final answer or empty placeholder), `execution.log` when produced (ordered MCP actions/results), `summary.json` per run | `eval-sys/mcpmark@cd45b7f` + GEODE `BaseMCPAgent` adapter |
 | `mcpmark/logs/`, `mcpmark/logs-cycle/` | Pipeline stdout logs (state duplication, verification, cleanup stages) | same |
 | `tau2/simulations/` | tau2-bench simulation JSONs for GEODE-owned runs (`geode-*`, `crucible-*`, smoke variants) | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`) + GEODE participant adapter |
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
@@ -150,9 +156,13 @@ github 19/23 as of 2026-07-04).
   `agent_execution_time` / `task_execution_time`, `turn_count` (GEODE rounds),
   `token_usage` (input/output/cache-read; `cost_usd` is a LiteLLM-style
   estimate, not subscription billing), `reasoning_effort`, `mcp`.
-- `messages.json` holds the full transcript: every model turn and MCP tool
-  call/result the agent saw. This is the file to audit *why* a task passed or
-  failed.
+- `messages.json` is not a full transcript. In this public snapshot, 78 files
+  contain the serialized final-answer string and 11 aborted/no-output artifacts
+  contain an empty list.
+- `execution.log` exists for 78 task artifacts and holds the ordered MCP
+  action/result trace (1,202 records in aggregate). Join it with `meta.json` to
+  analyze tool behavior and verifier outcome; hidden model turns cannot be
+  reconstructed from the public files.
 - `run-<k>/summary.json` is the per-run aggregate the pipeline prints at the
   end.
 - `mcpmark/logs*/` holds pipeline stdout including Stage 1 (state duplication),
