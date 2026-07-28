@@ -1,0 +1,194 @@
+{
+  "captured_at": "2026-07-28T19:57:52Z",
+  "events": [
+    {
+      "actor": "system",
+      "kind": "task_preflight",
+      "payload": {
+        "action": "agent.preflight",
+        "component": "agentic_loop",
+        "entity_id": "e2e-mcp-20260729",
+        "entity_type": "session",
+        "gen_tag": "",
+        "level": "info",
+        "payload": {
+          "capability_graph": {
+            "context_window_tokens": 1000000,
+            "model": "gpt-5.5",
+            "provider": "openai",
+            "schema_version": 1,
+            "source": "subscription",
+            "supported": [
+              "emulated_computer_use",
+              "evidence_ledger",
+              "function_calling",
+              "pdf_direct",
+              "trajectory_eval"
+            ],
+            "warnings": []
+          },
+          "preflight": {
+            "recommended_tools": [],
+            "required_evidence": [
+              "final_answer",
+              "preflight"
+            ],
+            "route_notes": [],
+            "schema_version": 1,
+            "task_kinds": [
+              "general"
+            ],
+            "warnings": []
+          }
+        },
+        "session_id": "e2e-mcp-20260729"
+      },
+      "sequence": 1,
+      "ts": "2026-07-28T19:57:52Z"
+    },
+    {
+      "actor": "system",
+      "kind": "session_start",
+      "payload": {
+        "model": "gpt-5.5",
+        "provider": "openai",
+        "session_id": "e2e-mcp-20260729"
+      },
+      "sequence": 2,
+      "ts": "2026-07-28T19:57:59Z"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "text": "Using only the MCP tools available to you: first call get_health and report the runtime status in one sentence; then call query_memory with query 'MCP' and state how many entries it returned."
+      },
+      "sequence": 3,
+      "ts": "2026-07-28T19:57:59Z"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "input": "{}",
+        "tool": "get_health"
+      },
+      "sequence": 4,
+      "ts": "2026-07-28T19:58:02Z"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "status": "ok",
+        "summary": "",
+        "tool": "get_health"
+      },
+      "sequence": 5,
+      "ts": "2026-07-28T19:58:02Z"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "input": "{\"query\": \"MCP\"}",
+        "tool": "query_memory"
+      },
+      "sequence": 6,
+      "ts": "2026-07-28T19:58:08Z"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "status": "ok",
+        "summary": "",
+        "tool": "query_memory"
+      },
+      "sequence": 7,
+      "ts": "2026-07-28T19:58:08Z"
+    },
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "text": "Runtime is healthy: `get_health` reports version `1.0.2`, model `gpt-5.6-sol`, single ensemble mode, and both Anthropic/OpenAI configured.\n\n`query_memory(\"MCP\")` returned 1 memory context entry."
+      },
+      "sequence": 8,
+      "ts": "2026-07-28T19:58:20Z"
+    },
+    {
+      "actor": "system",
+      "kind": "session_end",
+      "payload": {
+        "completion_tokens": 721,
+        "duration_s": 0,
+        "prompt_tokens": 19913,
+        "rounds": 3,
+        "total_cost": 0.1005
+      },
+      "sequence": 9,
+      "ts": "2026-07-28T19:58:20Z"
+    }
+  ],
+  "integrity": {
+    "canonicalization": "UTF-8, LF, json.dumps(ensure_ascii=False, sort_keys=True, indent=2)",
+    "fidelity": "lossy tool trajectory: SessionTranscript truncates tool inputs at 300 chars and reduces tool results to status+summary; full get_health payload is quoted in the companion e2e-validation report",
+    "pairing_rule": "tool_result at sequence n+1 pairs with tool_call at sequence n (strict adjacency; verified monotone)",
+    "record_count": 9
+  },
+  "observed_on": "2026-07-28",
+  "outcome": {
+    "result": "pass",
+    "rounds": 3,
+    "scored": false,
+    "terminal_state": "natural",
+    "tool_calls": 2,
+    "unscored_reason": "validation probe, not a benchmark task; no reward function",
+    "verifier": "probe assertions (phase A wire checks + phase B run completion)"
+  },
+  "privacy": {
+    "license": "GEODE-owned run; no third-party dataset content",
+    "redactions": [
+      {
+        "applied_by": "scripts/eval/publish_crucible_artifacts.py mask",
+        "rule": "/Users/<user> -> /Users/REDACTED",
+        "type": "home_path_mask"
+      }
+    ],
+    "review_state": "reviewed"
+  },
+  "provenance": {
+    "adapters": {
+      "llm": "codex-oauth (source=subscription)",
+      "mcp_server": "geode-mcp stdio"
+    },
+    "extraction_transform": "SessionTranscript JSONL rows mapped 1:1 to envelope events; ts epoch->RFC3339",
+    "geode_revision": "dd53971f0 (v1.0.2, main)",
+    "mcp_python_sdk": "1.29.0",
+    "model_route": {
+      "endpoint": "chatgpt.com/backend-api/codex",
+      "model": "gpt-5.5",
+      "provider": "openai"
+    },
+    "wire_observations": {
+      "client_declared_protocol": "2025-06-18",
+      "server_negotiated_protocol": "2025-06-18",
+      "stateless_only_server_answering_2026_07_28": "rejected, connection closed (fail-loud)"
+    }
+  },
+  "published_at": "2026-07-28T20:23:49Z",
+  "schema_id": "geode.trajectory@2026-07-29",
+  "source": {
+    "harness": "geode AgenticLoop in-process probe (probe_mcp_e2e.py phase B)",
+    "parents": null,
+    "run": "mcp-2026-07-28-spec-e2e",
+    "session": "e2e-mcp-20260729",
+    "task": "validate v1.0.2 MCP client negotiation + MCP tool dispatch on the ChatGPT-subscription backend"
+  },
+  "trajectory_class": [
+    "dialogue",
+    "tool"
+  ],
+  "trajectory_id": "geode-agenticloop-mcp-2026-07-28-spec-e2e-session-e2e-mcp-20260729"
+}
