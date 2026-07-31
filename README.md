@@ -42,7 +42,7 @@ this table is the summary of the stack that produced them.
 | GEODE entry point | `plugins/benchmark_harness/run_mcpmark.py` in the GEODE repo: registers the `geode` agent (a `BaseMCPAgent` wrapping GEODE's `AgenticLoop`) before `pipeline.main()` |
 | MCP servers (MCPMark) | GitHub: `ghcr.io/github/github-mcp-server:v0.15.0` (Docker stdio) · Postgres: `postgres-mcp==0.3.0` via pipx · Playwright: `@playwright/mcp@0.0.68` (headless chromium) · Notion: `@notionhq/notion-mcp-server` (stdio) · Filesystem: upstream MCPMark default |
 | tau2 harness | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`), GEODE agent + GEODE user-simulator adapters; native `user_simulator` comparator runs labeled separately |
-| Model routes | Primary: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13: `gpt-5.4`. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
+| Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 benchmark record uses `gpt-5.6-sol` / subscription / `high` for both the agent and tau2 user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13: `gpt-5.4`. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
 | Verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks. No GEODE-authored judges |
 
 ## Run naming
@@ -59,6 +59,23 @@ this table is the summary of the stack that produced them.
   2026-07-11 through 2026-07-13) plus `crucible-rowcache-live-*`
   cache-priming runs.
 
+### 2026-07-31 GPT-5.6 subscription benchmark
+
+The [run record](reports/e2e-validation/2026-07-31-gpt56-benchmark.md)
+publishes the first `gpt-5.6-sol` / `high` benchmark batch from GEODE
+`edb74602b`: MCPMark filesystem/easy scored **9/10**, while tau2 mock and one
+Telecom-small task each scored **0/1**. The failures are retained as behavior
+evidence, not removed as infrastructure contamination.
+
+- Raw MCPMark receipts:
+  `mcpmark/results-geode-agentworld/geode-gpt56-sol-high-edb74602b-20260731-mcpmark-filesystem-easy/`
+- Raw tau2 receipts:
+  `tau2/simulations/geode-gpt56-sol-high-edb74602b-geode-user-*/`
+- Normalized MCPMark trajectories:
+  `trajectories/mcpmark-geode-gpt56-edb74602b-filesystem-easy-20260731T034305Z-b86f5071cbe0/`
+- Normalized tau2 trajectories:
+  `trajectories/tau2-geode-gpt56-edb74602b-mock-telecom-small-20260731T034305Z-4ec1c13434d1/`
+
 ### Crucible 2026-07-13 operations-hardening cases
 
 | Runs | Outcome | Evidence value |
@@ -69,7 +86,7 @@ this table is the summary of the stack that produced them.
 
 ## Quantitative summary
 
-Counted directly from the files in this repository on 2026-07-15; recompute
+Counted directly from the files in this repository on 2026-07-31; recompute
 any of it with `python3 scripts/stats.py`. Token figures are what the
 artifacts record: the subscription route reports usage per call, but there
 is no billing meaning behind `cost_usd`-style fields.
@@ -79,19 +96,19 @@ retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Task attempts with results | 89 |
-| Verifier PASS | 68 |
-| Input tokens | 19,505,273 |
-| Output tokens | 917,208 |
-| Agent execution time | 38,253s (~10.6h) |
+| Task attempts with results | 99 |
+| Verifier PASS | 77 |
+| Input tokens | 20,304,952 |
+| Output tokens | 928,184 |
+| Agent execution time | 39,042s (~10.8h) |
 
 **tau2** (`tau2/simulations/`, GEODE-owned runs):
 
 | Metric | Value |
 |---|---:|
-| Runs with `results.json` | 379 |
-| Episodes simulated | 2,691 |
-| Episodes with reward recorded | 2,364 (reward 1.0: 1,492 · below 1.0: 872) |
+| Runs with `results.json` | 381 |
+| Episodes simulated | 2,693 |
+| Episodes with reward recorded | 2,366 (reward 1.0: 1,492 · below 1.0: 874) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
 | Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
 
