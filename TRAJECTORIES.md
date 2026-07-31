@@ -110,6 +110,12 @@ for the producing system's native evidence:
 - MCPMark and tau2 retain their native result/receipt directories. A GEODE
   trajectory joins them by stable identifiers and verified digests.
 
+A public native-receipt copy may require field-aware masking. That public copy
+is a privacy-preserving projection, not a silent replacement for the restricted
+native source. The trajectory and producer snapshot retain the verified raw
+source digest; the publication record separately reports the public-copy
+digest and the applied redactions.
+
 A current public release directory contains exactly:
 
 - one or more allowlisted `geode.trajectory@1` JSON files;
@@ -194,6 +200,8 @@ A release is not complete until all applicable checks pass:
 - secret, credential, email-like, and absolute-path scans are reviewed;
 - scope completeness is true; any replay reduction is explicit and admitted;
 - every source digest is checked against actual source bytes before staging;
+- when a native receipt is publicly redacted, raw-source and public-copy
+  digests are both recorded and never presented as byte-identical;
 - the directory contains no files absent from the manifest;
 - every published file has a SHA-256 entry and the privacy review record is
   content-bound;

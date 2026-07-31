@@ -93,6 +93,29 @@ zero findings across the public secret/identity scan. Runtime SQLite, WAL,
 JSONL, checkpoints, usage and provider diagnostics remain outside this
 repository.
 
+### 2026-07-31 GEODE v1.0.11 release regression
+
+The
+[`v1.0.11` run record](reports/e2e-validation/2026-07-31-gpt56-v1011-benchmark.md)
+repeats the same GPT-5.6 subscription slices against the released package.
+MCPMark filesystem/easy improved from **9/10 to 10/10**. Tau2 mock remains
+**0/1** on the exact optional-argument comparator, while the Telecom-small
+case improved from **0/1 to 1/1**.
+
+- Native MCPMark receipts:
+  `mcpmark/results-geode-agentworld/geode-gpt56-sol-high-v1011-686ff372-20260731-mcpmark-filesystem-easy/`
+- Native tau2 receipts:
+  `tau2/simulations/geode-gpt56-sol-high-v1011-686ff372-geode-user-*/`
+- Stable MCPMark trajectories:
+  `trajectories/mcpmark-geode-gpt56-v1.0.11-686ff372-filesystem-easy-20260731T105713Z-82fe94b01a25/`
+- Stable tau2 trajectories:
+  `trajectories/tau2-geode-gpt56-v1.0.11-686ff372-mock-telecom-small-20260731T105713Z-a71155f7006c/`
+
+The stable releases contain 368 canonical events with zero missing required
+turn IDs and 87 exactly paired tool calls/results. Scope completeness is
+12/12; replay completeness is intentionally 0/12 because private bodies are
+digested rather than published.
+
 ### Crucible 2026-07-13 operations-hardening cases
 
 | Runs | Outcome | Evidence value |
@@ -108,24 +131,24 @@ any of it with `python3 scripts/stats.py`. Token figures are what the
 artifacts record: the subscription route reports usage per call, but there
 is no billing meaning behind `cost_usd`-style fields.
 
-**MCPMark** (all task attempts across the 25 result directories, including
+**MCPMark** (all task attempts across the 26 result directories, including
 retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Task attempts with results | 99 |
-| Verifier PASS | 77 |
-| Input tokens | 20,304,952 |
-| Output tokens | 928,184 |
-| Agent execution time | 39,042s (~10.8h) |
+| Task attempts with results | 109 |
+| Verifier PASS | 87 |
+| Input tokens | 21,005,671 |
+| Output tokens | 940,348 |
+| Agent execution time | 39,638s (~11.0h) |
 
 **tau2** (`tau2/simulations/`, GEODE-owned runs):
 
 | Metric | Value |
 |---|---:|
-| Runs with `results.json` | 381 |
-| Episodes simulated | 2,693 |
-| Episodes with reward recorded | 2,366 (reward 1.0: 1,492 · below 1.0: 874) |
+| Runs with `results.json` | 383 |
+| Episodes simulated | 2,695 |
+| Episodes with reward recorded | 2,368 (reward 1.0: 1,493 · below 1.0: 875) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
 | Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
 
@@ -178,6 +201,7 @@ github 19/23 as of 2026-07-04).
 | `...20260704-mcpmark-smoke-*` (filesystem/github/postgres, 7 dirs) | mixed | 3 passes | single-task easy smokes; several 0/1 while adapter argument normalization landed |
 | `...20260704-mcpmark-smoke-notion*` (9 dirs) | notion | 0 | Stage-1 state-duplication stalls (expired browser session); mostly empty dirs kept for the audit trail |
 | `...20260710-notion-smoke-unblock-r2` | notion | 1/1 | session re-login fix validated end to end |
+| `...v1011-686ff372-20260731-mcpmark-filesystem-easy` | filesystem | 10/10 | released v1.0.11 regression batch |
 | `...20260710-notion-smoke-unblock`, `...20260710-agentworld-cycle` | n/a | 0/0 | aborted starts (pre-relogin stall; 429 quota with the contaminated task removed per policy) |
 
 ## How to read a run

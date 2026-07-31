@@ -1,0 +1,349 @@
+{
+  "timestamp": "2026-07-31T19:49:52.282188",
+  "info": {
+    "git_commit": "1901a301961cbbe3fd11f3e84a2a376530c759e3",
+    "num_trials": 1,
+    "max_steps": 8,
+    "max_errors": 1,
+    "user_info": {
+      "implementation": "geode_user",
+      "llm": "gpt-5.6-sol",
+      "llm_args": {
+        "temperature": 0.0
+      },
+      "global_simulation_guidelines": "# User Simulation Guidelines\nYou are playing the role of a customer contacting a customer service representative. \nYour goal is to simulate realistic customer interactions while following specific scenario instructions.\n\n## Core Principles\n- Generate one message at a time, maintaining natural conversation flow.\n- Strictly follow the scenario instructions you have received.\n- Never make up or hallucinate information not provided in the scenario instructions. Information that is not provided in the scenario instructions should be considered unknown or unavailable.\n- Avoid repeating the exact instructions verbatim. Use paraphrasing and natural language to convey the same information\n- Disclose information progressively. Wait for the agent to ask for specific information before providing it.\n\n## Task Completion\n- The goal is to continue the conversation until the task is complete.\n- If the instruction goal is satisified, generate the '###STOP###' token to end the conversation.\n- If you are transferred to another agent, generate the '###TRANSFER###' token to indicate the transfer.\n- If you find yourself in a situation in which the scenario does not provide enough information for you to continue the conversation, generate the '###OUT-OF-SCOPE###' token to end the conversation.\nRemember: The goal is to create realistic, natural conversations while strictly adhering to the provided instructions and maintaining character consistency.\n",
+      "voice_settings": null,
+      "persona_config": null
+    },
+    "agent_info": {
+      "implementation": "geode_agent",
+      "llm": "gpt-5.6-sol",
+      "llm_args": {
+        "reasoning_effort": "high"
+      },
+      "voice_settings": null
+    },
+    "environment_info": {
+      "domain_name": "mock",
+      "policy": "# Mock Domain Policy\n\n1. Each task must have a title\n2. Task status can only be \"pending\" or \"completed\"\n3. Only existing users can create tasks \n4. You are not allowed to delete tasks. You should transfer the a human agent.\n5. If the user asks for a compliment, compliment them",
+      "tool_defs": null
+    },
+    "seed": 300,
+    "text_streaming_config": {
+      "chunk_by": "words",
+      "chunk_size": 1
+    },
+    "speech_complexity": null,
+    "audio_native_config": null,
+    "retrieval_config": null,
+    "retrieval_config_kwargs": {}
+  },
+  "tasks": [
+    {
+      "id": "create_task_1",
+      "description": {
+        "purpose": "Test the create_task functionality",
+        "relevant_policies": null,
+        "notes": "Basic task creation test with a simple title"
+      },
+      "user_scenario": {
+        "persona": "Professional and direct communicator who writes in a clear and concise style",
+        "instructions": "You are a team member who needs to create a task for an upcoming meeting. Your goal is to create a task to track this important meeting. Create a new task called 'Important Meeting' for user_1."
+      },
+      "ticket": "User needs to create a task for an upcoming meeting. Create a new task called 'Important Meeting' for user_1.",
+      "initial_state": null,
+      "evaluation_criteria": {
+        "actions": [
+          {
+            "action_id": "create_1",
+            "requestor": "assistant",
+            "name": "create_task",
+            "arguments": {
+              "user_id": "user_1",
+              "title": "Important Meeting"
+            },
+            "info": "Create a new task for the meeting",
+            "compare_args": null
+          }
+        ],
+        "env_assertions": null,
+        "communicate_info": null,
+        "nl_assertions": [
+          "The agent confirmed the task was created successfully"
+        ],
+        "reward_basis": [
+          "DB",
+          "COMMUNICATE"
+        ]
+      },
+      "issues": null,
+      "required_documents": null,
+      "user_tools": null
+    }
+  ],
+  "simulations": [
+    {
+      "id": "63f7c8ef-4675-47f2-ab43-f56aba1aaee3",
+      "task_id": "create_task_1",
+      "timestamp": "2026-07-31T19:50:01.324458",
+      "start_time": "2026-07-31T19:49:52.292347",
+      "end_time": "2026-07-31T19:50:01.324448",
+      "duration": 9.031736874952912,
+      "termination_reason": "user_stop",
+      "agent_cost": null,
+      "user_cost": null,
+      "reward_info": {
+        "reward": 0.0,
+        "db_check": {
+          "db_match": false,
+          "db_reward": 0.0
+        },
+        "env_assertions": [],
+        "action_checks": [
+          {
+            "action": {
+              "action_id": "create_1",
+              "requestor": "assistant",
+              "name": "create_task",
+              "arguments": {
+                "user_id": "user_1",
+                "title": "Important Meeting"
+              },
+              "info": "Create a new task for the meeting",
+              "compare_args": null
+            },
+            "action_match": false,
+            "action_reward": 0.0,
+            "tool_type": "write"
+          }
+        ],
+        "nl_assertions": null,
+        "communicate_checks": null,
+        "reward_basis": [
+          "DB",
+          "COMMUNICATE"
+        ],
+        "reward_breakdown": {
+          "DB": 0.0,
+          "COMMUNICATE": 1.0
+        },
+        "info": {
+          "env": null,
+          "nl": null,
+          "communicate": {
+            "note": "No communicate_info to evaluate"
+          },
+          "action": null
+        }
+      },
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "Hi! How can I help you today?",
+          "tool_calls": null,
+          "is_audio": false,
+          "turn_idx": 0,
+          "timestamp": "2026-07-31T19:49:52.449432",
+          "cost": 0.0,
+          "usage": null,
+          "raw_data": null,
+          "generation_time_seconds": null,
+          "audio_format": null,
+          "audio_path": null,
+          "audio_script_gold": null,
+          "speech_effects": null,
+          "source_effects": null,
+          "channel_effects": null,
+          "turn_taking_action": null,
+          "utterance_ids": null,
+          "chunk_id": null,
+          "is_final_chunk": true,
+          "source": null,
+          "contains_speech": true
+        },
+        {
+          "role": "user",
+          "content": "Please create a new task called \u201cImportant Meeting\u201d for user_1.",
+          "tool_calls": null,
+          "is_audio": false,
+          "turn_idx": 1,
+          "timestamp": "2026-07-31T19:49:55.172008",
+          "cost": null,
+          "usage": {
+            "model": "gpt-5.6-sol",
+            "input_tokens": 2982,
+            "output_tokens": 37,
+            "cost_usd": 0.016020000000000003
+          },
+          "raw_data": {
+            "geode_session_id": "s-2227a67318f1",
+            "geode_role": "user_simulator",
+            "geode_rounds": 1,
+            "geode_termination_reason": "natural",
+            "geode_tool_call_count": 0,
+            "geode_pre_execution_retry_count": 0,
+            "geode_pre_execution_retry_errors": []
+          },
+          "generation_time_seconds": 2.719192042015493,
+          "audio_format": null,
+          "audio_path": null,
+          "audio_script_gold": null,
+          "speech_effects": null,
+          "source_effects": null,
+          "channel_effects": null,
+          "turn_taking_action": null,
+          "utterance_ids": null,
+          "chunk_id": null,
+          "is_final_chunk": true,
+          "source": null,
+          "contains_speech": true
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "call_Cykhl62L2q1i5NW3frAARhBs",
+              "name": "create_task",
+              "arguments": {
+                "user_id": "user_1",
+                "title": "Important Meeting",
+                "description": ""
+              },
+              "requestor": "assistant"
+            }
+          ],
+          "is_audio": false,
+          "turn_idx": 2,
+          "timestamp": "2026-07-31T19:49:58.234564",
+          "cost": null,
+          "usage": {
+            "model": "gpt-5.6-sol",
+            "input_tokens": 2708,
+            "output_tokens": 44,
+            "cost_usd": 0.014860000000000002
+          },
+          "raw_data": {
+            "geode_session_id": "s-2b25252a60c9",
+            "geode_rounds": 1,
+            "geode_termination_reason": "tool_use_yield",
+            "geode_tool_call_count": 1,
+            "geode_tool_projection": "tau2_orchestrator",
+            "geode_pre_execution_retry_count": 0,
+            "geode_pre_execution_retry_errors": []
+          },
+          "generation_time_seconds": 3.0623619590187445,
+          "audio_format": null,
+          "audio_path": null,
+          "audio_script_gold": null,
+          "speech_effects": null,
+          "source_effects": null,
+          "channel_effects": null,
+          "turn_taking_action": null,
+          "utterance_ids": null,
+          "chunk_id": null,
+          "is_final_chunk": true,
+          "source": null,
+          "contains_speech": true
+        },
+        {
+          "id": "call_Cykhl62L2q1i5NW3frAARhBs",
+          "role": "tool",
+          "content": "{\"task_id\": \"task_2\", \"title\": \"Important Meeting\", \"description\": \"\", \"status\": \"pending\"}",
+          "requestor": "assistant",
+          "error": false,
+          "turn_idx": 3,
+          "timestamp": "2026-07-31T19:49:58.234831"
+        },
+        {
+          "role": "assistant",
+          "content": "Task **\u201cImportant Meeting\u201d** was created for **user_1** with status **pending**. Task ID: **task_2**.",
+          "tool_calls": null,
+          "is_audio": false,
+          "turn_idx": 4,
+          "timestamp": "2026-07-31T19:50:00.106145",
+          "cost": null,
+          "usage": {
+            "model": "gpt-5.6-sol",
+            "input_tokens": 2838,
+            "output_tokens": 34,
+            "cost_usd": 0.015210000000000001
+          },
+          "raw_data": {
+            "geode_session_id": "s-2b25252a60c9",
+            "geode_rounds": 1,
+            "geode_termination_reason": "natural",
+            "geode_tool_call_count": 0,
+            "geode_pre_execution_retry_count": 0,
+            "geode_pre_execution_retry_errors": []
+          },
+          "generation_time_seconds": 1.8711967499693856,
+          "audio_format": null,
+          "audio_path": null,
+          "audio_script_gold": null,
+          "speech_effects": null,
+          "source_effects": null,
+          "channel_effects": null,
+          "turn_taking_action": null,
+          "utterance_ids": null,
+          "chunk_id": null,
+          "is_final_chunk": true,
+          "source": null,
+          "contains_speech": true
+        },
+        {
+          "role": "user",
+          "content": "###STOP###",
+          "tool_calls": null,
+          "is_audio": false,
+          "turn_idx": 5,
+          "timestamp": "2026-07-31T19:50:01.324044",
+          "cost": null,
+          "usage": {
+            "model": "gpt-5.6-sol",
+            "input_tokens": 3062,
+            "output_tokens": 7,
+            "cost_usd": 0.01552
+          },
+          "raw_data": {
+            "geode_session_id": "s-2227a67318f1",
+            "geode_role": "user_simulator",
+            "geode_rounds": 1,
+            "geode_termination_reason": "natural",
+            "geode_tool_call_count": 0,
+            "geode_pre_execution_retry_count": 0,
+            "geode_pre_execution_retry_errors": []
+          },
+          "generation_time_seconds": 1.2176741670118645,
+          "audio_format": null,
+          "audio_path": null,
+          "audio_script_gold": null,
+          "speech_effects": null,
+          "source_effects": null,
+          "channel_effects": null,
+          "turn_taking_action": null,
+          "utterance_ids": null,
+          "chunk_id": null,
+          "is_final_chunk": true,
+          "source": null,
+          "contains_speech": true
+        }
+      ],
+      "ticks": null,
+      "trial": 0,
+      "seed": 626729,
+      "mode": "half_duplex",
+      "speech_environment": null,
+      "review": null,
+      "user_only_review": null,
+      "info": null,
+      "auth_classification": null,
+      "hallucination_retries_used": 0,
+      "hallucination_check": null,
+      "provider_session_id": null,
+      "policy": "# Mock Domain Policy\n\n1. Each task must have a title\n2. Task status can only be \"pending\" or \"completed\"\n3. Only existing users can create tasks \n4. You are not allowed to delete tasks. You should transfer the a human agent.\n5. If the user asks for a compliment, compliment them",
+      "effect_timeline": null
+    }
+  ],
+  "simulation_index": null
+}
