@@ -8,14 +8,14 @@ those directories live, so any reported number can be traced back to verifier
 output and the trace material retained by the producing harness. Trace fidelity
 varies: tau2 and Petri retain full message sequences, while the public MCPMark
 copy retains final answers and ordered MCP execution logs, not full model
-dialogue. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the dated publication,
-redaction, and retirement contract.
+dialogue. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the stable schema,
+redaction, admission, and retirement contract.
 
 ## Layout
 
 | Path | Content | Producing harness |
 |---|---|---|
-| `TRAJECTORIES.md` | Stable trajectory publication contract: date-based identifiers, schema envelope, redaction, validation, and deletion gates | repository policy |
+| `TRAJECTORIES.md` | Stable `geode.trajectory@1` / `geode.trajectory-release@1` publication contract, legacy migration, redaction, validation, and deletion gates | repository policy |
 | `reports/trajectory-inventory/` | Dated human- and machine-readable source inventories; current snapshot: [2026-07-21](reports/trajectory-inventory/2026-07-21.md) | cross-source audit |
 | `mcpmark/results-geode-agentworld/` | MCPMark run directories. Per task: `meta.json` (route, timing, tokens, verifier result), `messages.json` (final answer or empty placeholder), `execution.log` when produced (ordered MCP actions/results), `summary.json` per run | `eval-sys/mcpmark@cd45b7f` + GEODE `BaseMCPAgent` adapter |
 | `mcpmark/logs/`, `mcpmark/logs-cycle/` | Pipeline stdout logs (state duplication, verification, cleanup stages) | same |
@@ -75,6 +75,23 @@ evidence, not removed as infrastructure contamination.
   `trajectories/mcpmark-geode-gpt56-edb74602b-filesystem-easy-20260731T034305Z-b86f5071cbe0/`
 - Normalized tau2 trajectories:
   `trajectories/tau2-geode-gpt56-edb74602b-mock-telecom-small-20260731T034305Z-4ec1c13434d1/`
+
+### 2026-07-31 hook and session-record contract E2E
+
+The
+[`geode-agenticloop-hook-middleware-behavior-e2e-20260731T091808Z-d418e55ff8aa`](trajectories/geode-agenticloop-hook-middleware-behavior-e2e-20260731T091808Z-d418e55ff8aa/)
+release is the first stable `geode.trajectory@1` publication. A live
+`gpt-5.6-sol` / subscription / `high` run exercised all 13 public lifecycle
+hooks and the four trusted middleware seams. Its 27-event normalized sidecar
+has complete release scope, exact tool call/result pairing, and no missing
+required turn identifiers.
+
+The release is intentionally not byte-replay-complete: private prompt and
+result bodies are replaced by digests. Its `geode.trajectory-release@1`
+manifest records that admission, the scope-bound privacy attestation, and
+zero findings across the public secret/identity scan. Runtime SQLite, WAL,
+JSONL, checkpoints, usage and provider diagnostics remain outside this
+repository.
 
 ### Crucible 2026-07-13 operations-hardening cases
 

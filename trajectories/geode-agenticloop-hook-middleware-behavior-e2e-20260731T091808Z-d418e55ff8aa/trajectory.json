@@ -1,0 +1,590 @@
+{
+  "schema_id": "geode.trajectory@1",
+  "schema_version": 1,
+  "trajectory_id": "geode-agenticloop-hook-middleware-e2e-20260731T091748Z",
+  "captured_at": "2026-07-31T09:17:48Z",
+  "trajectory_class": [
+    "decision",
+    "tool"
+  ],
+  "source": {
+    "harness": "scripts/eval/run_hook_behavior_e2e.py",
+    "parents": null,
+    "run": "hook-middleware-e2e-20260731T091748Z",
+    "session": "hook-middleware-e2e-20260731T091748Z:suite",
+    "task": "validate GEODE public hooks and trusted middleware"
+  },
+  "events": [
+    {
+      "event_id": "fed7546c3221bf7955d207ba896b6d77",
+      "ordinal": 1,
+      "occurred_at": "2026-07-31T09:17:48Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-compact",
+      "turn_id": "compact-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "action": "rewrite",
+        "hook": "PreCompact",
+        "payload_sha256": "69141e527b1434cea34d1a631f87fd246f4805bc591502f7278e5efce3d2c10d",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-compact",
+        "turn_id": "compact-turn"
+      }
+    },
+    {
+      "event_id": "718aa74aec9f42e1a49c1bcbf2c98fd9",
+      "ordinal": 2,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-compact",
+      "turn_id": "compact-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "action": "continue",
+        "hook": "PostCompact",
+        "payload_sha256": "99fdb0ee7817689773e21e4ffed19233cb0906a73705c19afe35cb88625e31fe",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-compact",
+        "turn_id": "compact-turn"
+      }
+    },
+    {
+      "event_id": "9887bb93919346a9b8b5bb78bf9f26a4",
+      "ordinal": 3,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "compaction_result",
+      "actor": "system",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "message_count_after": 7,
+        "message_count_before": 12,
+        "persisted": true
+      }
+    },
+    {
+      "event_id": "d85b5263804875d2a7d427892f745e27",
+      "ordinal": 4,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-parent",
+      "turn_id": "subagent-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "action": "continue",
+        "hook": "SubagentStart",
+        "payload_sha256": "3f4e7db48fa06b6db1f813ebf1ea4c4923fc810fa7c4b6c9f8f11d2e04241504",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-parent",
+        "turn_id": "subagent-turn"
+      }
+    },
+    {
+      "event_id": "771948128e6805cc2635d6deeb99532f",
+      "ordinal": 5,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-parent",
+      "turn_id": "subagent-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "action": "continue",
+        "hook": "SubagentStop",
+        "payload_sha256": "27b0b8176970ba4f3aa8616f32cdac50db58455bd2ff4be5d33927f5dbb2691c",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-parent",
+        "turn_id": "subagent-turn"
+      }
+    },
+    {
+      "event_id": "16a6c14d566d8dbfde4e1924a70ec986",
+      "ordinal": 6,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "subagent_result",
+      "actor": "system",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "success": true,
+        "task_id": "behavior-e2e-child"
+      }
+    },
+    {
+      "event_id": "0fe3cc9a2e4362ea1249cc9160590e17",
+      "ordinal": 7,
+      "occurred_at": "2026-07-31T09:17:57Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "rewrite",
+        "hook": "UserPromptSubmit",
+        "payload_sha256": "f99249161375043dad54be64a3b05b43ce1a2412cd4afc6dff60e2db7bd358d2",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "b67426bcba3254137078c12ac77396c4",
+      "ordinal": 8,
+      "occurred_at": "2026-07-31T09:17:58Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "continue",
+        "hook": "SessionStart",
+        "payload_sha256": "4465c03faa7daaae49e92cbe6008e5ecb61927a778684661cf59cdca04f87171",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "4a651e37b800bb3f64061dfde80008a8",
+      "ordinal": 9,
+      "occurred_at": "2026-07-31T09:17:58Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 8192,
+        "max_tokens_before": 16384,
+        "surface": "llm_request",
+        "transformed": true
+      }
+    },
+    {
+      "event_id": "fc1074c08526f686a639b352fe99d3d4",
+      "ordinal": 10,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "bc09a7a8bbeb3eb26cad662ee3cdd941",
+      "ordinal": 11,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "surface": "tool_request",
+        "transformed": true,
+        "tool": "hook_behavior_probe"
+      }
+    },
+    {
+      "event_id": "59e2fbb880c10a29ef70c9b60557ae31",
+      "ordinal": 12,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "rewrite",
+        "hook": "PreToolUse",
+        "payload_sha256": "5090f182f797ff9221cfe9ea30d07af76afe1e9ca001910d152ed019f7eb84fc",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "2d6fd1f6da9fa2c978c62b0b2fa44444",
+      "ordinal": 13,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "request_permission",
+        "hook": "PreToolUse",
+        "payload_sha256": "6e3431ae4f79d10a7ec19de9bdaaf4b609115a37874a3fecfcbe09c5d5dafc2b",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "adfa436c4ad0633b3f81259adc8c9c58",
+      "ordinal": 14,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "allow",
+        "hook": "PermissionRequest",
+        "payload_sha256": "e38b7ea5ebfe0b6a97f76a998b71ddc7a175b17e9546b3fefde793f056e9f674",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "78e0b7d4c276585cc508bdec02605a8d",
+      "ordinal": 15,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "tool_call",
+      "actor": "assistant",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "tool-call-1",
+      "payload": {
+        "scenario": "live-agent",
+        "argument_sha256": "d528707cd23fbdce71480d5547a9059be9955a7f5062421a51ef443ff3cb0a0b",
+        "call_id": "tool-call-1",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "tool": "hook_behavior_probe",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "ca0e45adccd26f0b324652d7e73956aa",
+      "ordinal": 16,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "tool_result",
+      "actor": "environment",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "tool-call-1",
+      "payload": {
+        "scenario": "live-agent",
+        "call_id": "tool-call-1",
+        "result_sha256": "d50c85ab0b0b7cb399a740aa86f5164b2ed548d75625f456b4ffbc36068ada5b",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "status": "ok",
+        "tool": "hook_behavior_probe",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "ffeb5c5b7d6fdb7be740e998a34e64d9",
+      "ordinal": 17,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "surface": "tool_execution",
+        "status": "called_next"
+      }
+    },
+    {
+      "event_id": "247d79ccb587e5f66cfcaa832513bf46",
+      "ordinal": 18,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "add_context",
+        "hook": "PostToolUse",
+        "payload_sha256": "79aaafbaa848c2d278e7bcf51b800516eba27e1e3c4e7347e8fa208b2d01780c",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "533400a055fffa17da8c42acc3eff756",
+      "ordinal": 19,
+      "occurred_at": "2026-07-31T09:18:01Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 512,
+        "max_tokens_before": 512,
+        "surface": "llm_request",
+        "transformed": false
+      }
+    },
+    {
+      "event_id": "c29ac86fb87af5f386643cdf7a66e0a8",
+      "ordinal": 20,
+      "occurred_at": "2026-07-31T09:18:05Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "9e0ae3bab6cf8f73b9e9d3ae902d12a1",
+      "ordinal": 21,
+      "occurred_at": "2026-07-31T09:18:05Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 8192,
+        "max_tokens_before": 16384,
+        "surface": "llm_request",
+        "transformed": true
+      }
+    },
+    {
+      "event_id": "223b1dc6c56e58f7e47aa3f687e6765b",
+      "ordinal": 22,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "3f4d4b370193dcfbb522422f0d81b10e",
+      "ordinal": 23,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "strengthen",
+        "hook": "PreVerify",
+        "payload_sha256": "ea17d4b9ed886db1cf9aa4876bc0e23528983e4cefe9f4d3e72dcaf65ddb4957",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "3e3607c98372a0a54c711a2a77f4c97b",
+      "ordinal": 24,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "accept",
+        "hook": "PostVerify",
+        "payload_sha256": "05b2290032f81bd2f86f961dcc3ec6e159aae67bc3e4e4fe87903b18b5ca0874",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "d29d704026def02f1f760fffe258822f",
+      "ordinal": 25,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "finalize",
+        "hook": "Stop",
+        "payload_sha256": "fbb91c660695f82f7611eaa9b8effd8dc0c19d4de148d5309b5b0c6b916ed2b2",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "2668d46661bce0dbf95126b8bfbfabbb",
+      "ordinal": 26,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+      "turn_id": "t-55c92a2ea753",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "continue",
+        "hook": "SessionEnd",
+        "payload_sha256": "10ee6ebba38239490d41053ca43874114ce0448fb168d6e2d3fb9d3829ca3e7b",
+        "session_id": "hook-middleware-e2e-20260731T091748Z-live",
+        "turn_id": "t-55c92a2ea753"
+      }
+    },
+    {
+      "event_id": "c0ce8540abd9ff09ac90d41fe98b406b",
+      "ordinal": 27,
+      "occurred_at": "2026-07-31T09:18:08Z",
+      "kind": "final_result",
+      "actor": "assistant",
+      "session_id": "hook-middleware-e2e-20260731T091748Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "output_sha256": "6c4124c13e3601f6a6c040da30a5aff5d6010d9297c8019515c106e0caa8cbde",
+        "rounds": 2,
+        "termination_reason": "natural"
+      }
+    }
+  ],
+  "outcome": {
+    "hook_coverage": {
+      "covered": 13,
+      "expected": 13,
+      "missing": []
+    },
+    "middleware_coverage": {
+      "covered": 4,
+      "expected": 4,
+      "missing": []
+    },
+    "result": "pass",
+    "scored": false,
+    "sqlite_extension_rows": 22,
+    "terminal_state": "natural",
+    "tool_calls": 1,
+    "timeline_extension_rows": 22,
+    "unscored_reason": "release validation probe, not a benchmark task",
+    "verifier": "explicit release gates over exact hook/middleware multiplicity, exactly-once tool execution, SQLite/JSONL parity, correlation, and persisted compaction"
+  },
+  "integrity": {
+    "canonicalization": "UTF-8, LF, json.dumps(ensure_ascii=False, sort_keys=True, indent=2)",
+    "scope_complete": true,
+    "replay_complete": false,
+    "fidelity": "decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished",
+    "incompleteness": [
+      "payload digests intentionally replace private prompt and result bodies",
+      "privacy policy declares content reduction",
+      "declared fidelity limits replay: decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished"
+    ],
+    "replay_incompleteness": [
+      "payload digests intentionally replace private prompt and result bodies",
+      "privacy policy declares content reduction",
+      "declared fidelity limits replay: decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished"
+    ],
+    "pairing_rule": "tool_result.call_id equals the preceding tool_call.call_id",
+    "record_count": 27,
+    "complete": false,
+    "scope_incompleteness": [],
+    "quality": {
+      "event_id_unique": true,
+      "ordinal_contiguous": true,
+      "correlation": {
+        "session_id_present": 27,
+        "turn_id_present": 16,
+        "turn_id_required": 2,
+        "turn_id_missing": 0,
+        "tool_call_id_present": 2,
+        "event_count": 27
+      },
+      "tool_pairing": {
+        "calls": 1,
+        "results": 1,
+        "paired": 1,
+        "orphan_calls": 0,
+        "orphan_results": 0,
+        "missing_call_ids": 0
+      },
+      "payload_issue_events": 0,
+      "replay_fidelity": "full"
+    }
+  },
+  "privacy": {
+    "license": "GEODE-owned run; no third-party dataset content",
+    "redactions": [
+      {
+        "rule": "publish payload digests instead of prompts/results",
+        "type": "content_reduction"
+      },
+      {
+        "rule": "exclude runtime home, SQLite, JSONL, and checkpoints",
+        "type": "artifact_allowlist"
+      }
+    ],
+    "review_state": "reviewed"
+  },
+  "provenance": {
+    "adapters": {
+      "llm": "codex-oauth (source=subscription)"
+    },
+    "extraction_transform": "in-process hook/middleware receipts normalized to decision/tool events",
+    "geode_revision": "b3dd459d69e16d11fda9b5fe1c27bf1b8cc5788d",
+    "middleware_counts": {
+      "tool_request": 1,
+      "tool_execution": 1,
+      "llm_request": 3,
+      "llm_execution": 3
+    },
+    "model_route": {
+      "effort": "high",
+      "model": "gpt-5.6-sol",
+      "provider": "openai",
+      "source": "subscription"
+    },
+    "storage_checks": {
+      "compaction_artifacts": 1,
+      "sqlite_extension_rows": 22,
+      "timeline_extension_rows": 22
+    }
+  },
+  "runtime_event_refs": [],
+  "evidence_refs": [],
+  "artifact_digests": [],
+  "published_at": "2026-07-31T09:18:08Z",
+  "observed_on": "2026-07-31"
+}
