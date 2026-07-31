@@ -1,0 +1,175 @@
+{
+  "captured_at": "2026-07-31T12:36:21.194578",
+  "events": [
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "content": "Hi! How can I help you today?",
+        "raw_data": null
+      },
+      "sequence": 1,
+      "timestamp": "2026-07-31T12:36:21.261071"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "content": "Please create a new task called “Important Meeting” for user_1.",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_role": "user_simulator",
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 2,
+      "timestamp": "2026-07-31T12:36:25.950732"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {},
+        "call_id": "call_Pf3HMOKjYnGme73PKIpEzVSM",
+        "tool": "get_users"
+      },
+      "sequence": 3,
+      "timestamp": "2026-07-31T12:36:29.281438"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_Pf3HMOKjYnGme73PKIpEzVSM",
+        "error": false,
+        "result": "[{\"user_id\": \"user_1\", \"name\": \"Test User\", \"tasks\": [\"task_1\"]}]"
+      },
+      "sequence": 4,
+      "timestamp": "2026-07-31T12:36:29.281725"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "description": "",
+          "title": "Important Meeting",
+          "user_id": "user_1"
+        },
+        "call_id": "call_3ZIS618o2PpVZNjivPqtfA2Y",
+        "tool": "create_task"
+      },
+      "sequence": 5,
+      "timestamp": "2026-07-31T12:36:31.483813"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_3ZIS618o2PpVZNjivPqtfA2Y",
+        "error": false,
+        "result": "{\"task_id\": \"task_2\", \"title\": \"Important Meeting\", \"description\": \"\", \"status\": \"pending\"}"
+      },
+      "sequence": 6,
+      "timestamp": "2026-07-31T12:36:31.484292"
+    },
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "content": "Created task **“Important Meeting”** for **user_1**. Status: **pending**.",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 7,
+      "timestamp": "2026-07-31T12:36:33.864343"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "content": "###STOP###",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_role": "user_simulator",
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 8,
+      "timestamp": "2026-07-31T12:36:35.773135"
+    }
+  ],
+  "integrity": {
+    "canonicalization": "UTF-8, LF, json.dumps(ensure_ascii=False, sort_keys=True, indent=2)",
+    "fidelity": "full tau2 public dialogue and tool trajectory with declared redactions",
+    "pairing_rule": "tool_result.payload.call_id equals tool_call.payload.call_id",
+    "record_count": 8
+  },
+  "observed_on": "2026-07-31",
+  "outcome": {
+    "result": "fail",
+    "reward": 0.0,
+    "reward_breakdown": {
+      "COMMUNICATE": 1.0,
+      "DB": 0.0
+    },
+    "scored": true,
+    "terminal_state": "user_stop",
+    "verifier": "tau2 upstream action, DB, and environment assertions"
+  },
+  "privacy": {
+    "license": "Upstream benchmark task/result material under its repository license",
+    "redactions": [
+      {
+        "rule": "replace local username in absolute paths",
+        "type": "absolute_path"
+      },
+      {
+        "rule": "replace synthetic telecom name, phone, email, birth date, and street address",
+        "type": "synthetic_personal_data"
+      },
+      {
+        "rule": "exclude hidden reasoning, runtime SQLite, and general sessions",
+        "type": "artifact_allowlist"
+      }
+    ],
+    "review_state": "reviewed"
+  },
+  "provenance": {
+    "adapters": [
+      "plugins.benchmark_harness.tau2_geode_agent",
+      "plugins.benchmark_harness.tau2_turn_supervisor"
+    ],
+    "extraction_transform": "project tau2 messages into ordered dialogue/tool events; preserve call IDs and official reward; apply declared redactions",
+    "geode_revision": "edb74602bb2e1e4d627cb6aa1f0b94072a57da62",
+    "geode_tree": "046f5a809ce9b370fef45810ca87d4c933a8ea1f",
+    "model_route": "openai-subscription-gpt-5.6-sol-high",
+    "user_route": "openai-subscription-gpt-5.6-sol-high"
+  },
+  "published_at": "2026-07-31T03:43:05Z",
+  "schema_id": "geode.trajectory@2026-07-31",
+  "source": {
+    "harness": "sierra-research/tau2-bench",
+    "harness_revision": "1901a301961cbbe3fd11f3e84a2a376530c759e3",
+    "parent": null,
+    "run": "geode-gpt56-sol-high-edb74602b-geode-user-mock-smoke-20260731",
+    "session": null,
+    "task": "create_task_1"
+  },
+  "trajectory_class": [
+    "dialogue",
+    "tool"
+  ],
+  "trajectory_id": "tau2-geode-gpt56-sol-high-edb74602b-geode-user-mock-smoke-20260731"
+}

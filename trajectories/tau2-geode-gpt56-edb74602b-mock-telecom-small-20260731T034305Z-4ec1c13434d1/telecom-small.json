@@ -1,0 +1,280 @@
+{
+  "captured_at": "2026-07-31T12:39:37.776172",
+  "events": [
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "content": "Hi! How can I help you today?",
+        "raw_data": null
+      },
+      "sequence": 1,
+      "timestamp": "2026-07-31T12:39:37.835454"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "content": "Hi, my mobile data keeps stopping or becomes very slow. I’m currently abroad in France and don’t have access to Wi‑Fi. I need help getting an excellent internet speed on my phone.",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_role": "user_simulator",
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 2,
+      "timestamp": "2026-07-31T12:39:43.865537"
+    },
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "content": "I can help troubleshoot your mobile data and verify roaming on your line. What is the mobile phone number experiencing the issue?",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 3,
+      "timestamp": "2026-07-31T12:39:50.546374"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "content": "The number is [REDACTED_PHONE].",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_role": "user_simulator",
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 4,
+      "timestamp": "2026-07-31T12:39:52.081221"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "phone_number": "[REDACTED_PHONE]"
+        },
+        "call_id": "call_HE9jA1kTZ46NkmkYBDJjC3IT",
+        "tool": "get_customer_by_phone"
+      },
+      "sequence": 5,
+      "timestamp": "2026-07-31T12:40:00.189629"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_HE9jA1kTZ46NkmkYBDJjC3IT",
+        "error": false,
+        "result": "{\"customer_id\": \"C1001\", \"full_name\": \"[REDACTED_NAME]\", \"date_of_birth\": \"[REDACTED_DOB]\", \"email\": \"[REDACTED_EMAIL]\", \"phone_number\": \"[REDACTED_PHONE]\", \"address\": {\"street\": \"[REDACTED_ADDRESS]\", \"city\": \"Anytown\", \"state\": \"CA\", \"zip_code\": \"90210\"}, \"account_status\": \"Active\", \"payment_methods\": [{\"method_type\": \"Credit Card\", \"account_number_last_4\": \"1235\", \"expiration_date\": \"12/2026\"}], \"line_ids\": [\"L1001\", \"L1002\", \"L1003\"], \"bill_ids\": [\"B1001\", \"B1002\", \"B1003\"], \"created_at\": \"2025-01-15 10:30:00\", \"last_extension_date\": null, \"goodwill_credit_used_this_year\": 25.0}"
+      },
+      "sequence": 6,
+      "timestamp": "2026-07-31T12:40:00.189973"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "id": "L1001"
+        },
+        "call_id": "call_cQwdotExlqK27SiPTIw0bR8O",
+        "tool": "get_details_by_id"
+      },
+      "sequence": 7,
+      "timestamp": "2026-07-31T12:40:04.880096"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_cQwdotExlqK27SiPTIw0bR8O",
+        "error": false,
+        "result": "{\"line_id\": \"L1001\", \"phone_number\": \"[REDACTED_PHONE]\", \"status\": \"Active\", \"plan_id\": \"P1001\", \"device_id\": \"D1001\", \"data_used_gb\": 3.2, \"data_refueling_gb\": 0.0, \"roaming_enabled\": false, \"contract_end_date\": \"2026-12-31\", \"last_plan_change_date\": \"2025-01-10\", \"last_sim_replacement_date\": null, \"suspension_start_date\": null}"
+      },
+      "sequence": 8,
+      "timestamp": "2026-07-31T12:40:04.880573"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "id": "L1002"
+        },
+        "call_id": "call_Vg4EVqJspOdioojZA7v9pd3p",
+        "tool": "get_details_by_id"
+      },
+      "sequence": 9,
+      "timestamp": "2026-07-31T12:40:07.590644"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_Vg4EVqJspOdioojZA7v9pd3p",
+        "error": false,
+        "result": "{\"line_id\": \"L1002\", \"phone_number\": \"[REDACTED_PHONE]\", \"status\": \"Active\", \"plan_id\": \"P1002\", \"device_id\": \"D1002\", \"data_used_gb\": 8.7, \"data_refueling_gb\": 0.0, \"roaming_enabled\": true, \"contract_end_date\": \"2026-12-31\", \"last_plan_change_date\": \"2024-12-15\", \"last_sim_replacement_date\": \"2025-01-20\", \"suspension_start_date\": null}"
+      },
+      "sequence": 10,
+      "timestamp": "2026-07-31T12:40:07.591265"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "customer_id": "C1001",
+          "line_id": "L1002"
+        },
+        "call_id": "call_LGUozjxumS3sEqY6JvFjcjSt",
+        "tool": "get_data_usage"
+      },
+      "sequence": 11,
+      "timestamp": "2026-07-31T12:40:16.417291"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_LGUozjxumS3sEqY6JvFjcjSt",
+        "error": false,
+        "result": "{\"line_id\": \"L1002\", \"data_used_gb\": \"8.7\", \"data_limit_gb\": \"15.0\", \"data_refueling_gb\": \"0.0\", \"cycle_end_date\": \"2025-02-28\"}"
+      },
+      "sequence": 12,
+      "timestamp": "2026-07-31T12:40:16.417798"
+    },
+    {
+      "actor": "assistant",
+      "kind": "tool_call",
+      "payload": {
+        "arguments": {
+          "summary": "[REDACTED_NAME], customer C1001, reports mobile data repeatedly stopping or becoming very slow while abroad in France with no Wi-Fi. Affected number is [REDACTED_PHONE], line L1002. Account and line are Active; international roaming is already enabled on the line. Current-cycle usage is 8.7 GB of 15.0 GB with no refueled data, cycle ending 2025-02-28, so the allowance has not been exhausted. Device-level diagnostics are needed, but device troubleshooting tools are unavailable."
+        },
+        "call_id": "call_KXG2EcwRTsDyZWTQAvneFqCV",
+        "tool": "transfer_to_human_agents"
+      },
+      "sequence": 13,
+      "timestamp": "2026-07-31T12:40:25.602282"
+    },
+    {
+      "actor": "environment",
+      "kind": "tool_result",
+      "payload": {
+        "call_id": "call_KXG2EcwRTsDyZWTQAvneFqCV",
+        "error": false,
+        "result": "Transfer successful"
+      },
+      "sequence": 14,
+      "timestamp": "2026-07-31T12:40:25.602570"
+    },
+    {
+      "actor": "assistant",
+      "kind": "message",
+      "payload": {
+        "content": "YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 15,
+      "timestamp": "2026-07-31T12:40:27.379640"
+    },
+    {
+      "actor": "user",
+      "kind": "message",
+      "payload": {
+        "content": "###TRANSFER###",
+        "raw_data": {
+          "geode_pre_execution_retry_count": 0,
+          "geode_pre_execution_retry_errors": [],
+          "geode_role": "user_simulator",
+          "geode_rounds": 1,
+          "geode_termination_reason": "natural",
+          "geode_tool_call_count": 0
+        }
+      },
+      "sequence": 16,
+      "timestamp": "2026-07-31T12:40:29.686098"
+    }
+  ],
+  "integrity": {
+    "canonicalization": "UTF-8, LF, json.dumps(ensure_ascii=False, sort_keys=True, indent=2)",
+    "fidelity": "full tau2 public dialogue and tool trajectory with declared redactions",
+    "pairing_rule": "tool_result.payload.call_id equals tool_call.payload.call_id",
+    "record_count": 16
+  },
+  "observed_on": "2026-07-31",
+  "outcome": {
+    "result": "fail",
+    "reward": 0.0,
+    "reward_breakdown": {
+      "ENV_ASSERTION": 0.0
+    },
+    "scored": true,
+    "terminal_state": "user_stop",
+    "verifier": "tau2 upstream action, DB, and environment assertions"
+  },
+  "privacy": {
+    "license": "Upstream benchmark task/result material under its repository license",
+    "redactions": [
+      {
+        "rule": "replace local username in absolute paths",
+        "type": "absolute_path"
+      },
+      {
+        "rule": "replace synthetic telecom name, phone, email, birth date, and street address",
+        "type": "synthetic_personal_data"
+      },
+      {
+        "rule": "exclude hidden reasoning, runtime SQLite, and general sessions",
+        "type": "artifact_allowlist"
+      }
+    ],
+    "review_state": "reviewed"
+  },
+  "provenance": {
+    "adapters": [
+      "plugins.benchmark_harness.tau2_geode_agent",
+      "plugins.benchmark_harness.tau2_turn_supervisor"
+    ],
+    "extraction_transform": "project tau2 messages into ordered dialogue/tool events; preserve call IDs and official reward; apply declared redactions",
+    "geode_revision": "edb74602bb2e1e4d627cb6aa1f0b94072a57da62",
+    "geode_tree": "046f5a809ce9b370fef45810ca87d4c933a8ea1f",
+    "model_route": "openai-subscription-gpt-5.6-sol-high",
+    "user_route": "openai-subscription-gpt-5.6-sol-high"
+  },
+  "published_at": "2026-07-31T03:43:05Z",
+  "schema_id": "geode.trajectory@2026-07-31",
+  "source": {
+    "harness": "sierra-research/tau2-bench",
+    "harness_revision": "1901a301961cbbe3fd11f3e84a2a376530c759e3",
+    "parent": null,
+    "run": "geode-gpt56-sol-high-edb74602b-geode-user-telecom-small-01-20260731",
+    "session": null,
+    "task": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]"
+  },
+  "trajectory_class": [
+    "dialogue",
+    "tool"
+  ],
+  "trajectory_id": "tau2-geode-gpt56-sol-high-edb74602b-geode-user-telecom-small-01-20260731"
+}
