@@ -26,11 +26,14 @@ One source can support more than one trajectory class. For example, a tau2
 episode is both a dialogue and tool trajectory, while an autoresearch run is a
 search trajectory even when it is not conversational.
 
-## Date and identifier rules
+## Schema and identifier rules
 
-New GEODE trajectory publications use dates, UTC timestamps, and content
-digests. They do not use numbered labels such as `v1`, mutable labels such as
-`latest`, or retry suffixes as release identity.
+New GEODE trajectory publications use the stable
+`geode.trajectory@1` record contract and
+`geode.trajectory-release@1` manifest contract. Schema versions change only
+for a breaking wire-format change; publication identity remains a UTC
+timestamp plus a content digest. Mutable labels such as `latest` and retry
+suffixes are never release identity.
 
 - Calendar date: ISO 8601 `YYYY-MM-DD`.
 - Timestamp in metadata: RFC 3339 UTC `YYYY-MM-DDTHH:MM:SSZ`.
@@ -40,7 +43,8 @@ digests. They do not use numbered labels such as `v1`, mutable labels such as
   `reports/trajectory-inventory/YYYY-MM-DD.{md,json}`.
 - Release identifier:
   `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>`.
-- Schema identifier: `geode.trajectory@YYYY-MM-DD`.
+- Current trajectory schema identifier: `geode.trajectory@1`.
+- Current release manifest identifier: `geode.trajectory-release@1`.
 - Inventory schema identifier: `geode.trajectory-inventory@YYYY-MM-DD`.
 
 The digest prefix is the first 12 lowercase hexadecimal characters of the
@@ -48,10 +52,11 @@ full SHA-256 recorded in the manifest. A correction is a new immutable
 release with a later UTC timestamp, a new digest, and a `supersedes` pointer.
 The earlier release remains addressable.
 
-Source-native historical identifiers are preserved verbatim for provenance.
-This means an upstream or already-recorded name containing `v1` is not
-rewritten; the no-numbered-release rule applies to new GEODE publication
-identifiers and schema identifiers.
+Published dated schemas such as `geode.trajectory@2026-07-31` remain immutable
+legacy evidence. Readers may normalize their `sequence`/`timestamp` fields to
+`ordinal`/`occurred_at` in memory, but must never rewrite those releases.
+Source-native historical identifiers are also preserved verbatim for
+provenance.
 
 The three time fields have distinct meanings:
 
@@ -64,27 +69,61 @@ without saying so in provenance.
 
 ## Normalized envelope
 
-A normalized trajectory release must define these fields, whether the
-physical format is JSON or JSONL:
+A current normalized trajectory is JSON and defines:
 
-- `schema_id`, `trajectory_id`, `trajectory_class`;
+- `schema_id=geode.trajectory@1`, `schema_version=1`, `trajectory_id`, and
+  `trajectory_class`;
 - `source` with harness, run, task, session, and parent identifiers when
   available;
 - `captured_at`, `observed_on`, and `published_at`;
-- ordered `events`, each with `sequence`, `actor`, `kind`, optional event
-  timestamp, and payload or payload digest;
+- ordered `events`, each with a contiguous one-based `ordinal`, stable unique
+  `event_id`, `occurred_at`, `actor`, `kind`, `session_id`, `turn_id`,
+  `call_id`, and payload or payload digest;
 - `outcome` with verifier, reward, terminal state, or an explicit
   `unscored` reason;
 - `provenance` with source revision, adapters, model route, and extraction
   transform;
 - `privacy` with review state, redaction actions, and license status;
-- `integrity` with canonicalization method, byte count, record count, and
-  full SHA-256.
+- `integrity` with independently recomputable record count, correlation and
+  tool-pair quality, separate `scope_complete` and `replay_complete` states,
+  and typed incompleteness reasons;
+- optional content-bound `runtime_event_refs`, `evidence_refs`, and
+  `artifact_digests` that point to a source authority without copying its
+  private bytes.
 
-Tool trajectories additionally require stable call/result identifiers or a
-documented deterministic pairing rule. Search trajectories require parent
-candidate lineage so train, validation, and test partitions cannot contain
-descendants of the same campaign on both sides.
+Tool trajectories require stable call/result identifiers and exact pairing.
+Search trajectories require parent candidate lineage so train, validation,
+and test partitions cannot contain descendants of the same campaign on both
+sides.
+
+## Storage authority and public bundle
+
+The normalized trajectory is a portable evaluation view, not a replacement
+for the producing system's native evidence:
+
+- GEODE session history remains authoritative in
+  `sessions.db:session_events`; `events.jsonl` is a bounded run projection.
+- SIL keeps its Inspect `.eval`, mutation ledger, attribution ledger, and
+  native verifier outputs authoritative.
+- Crucible keeps `crucible.evidence.v3`, frozen assay contracts, tau2 native
+  simulations, verifier receipts, and campaign state authoritative.
+- MCPMark and tau2 retain their native result/receipt directories. A GEODE
+  trajectory joins them by stable identifiers and verified digests.
+
+A current public release directory contains exactly:
+
+- one or more allowlisted `geode.trajectory@1` JSON files;
+- one `geode.trajectory-release@1` `manifest.json`.
+
+SQLite databases and WAL files, mutable checkpoints/messages, raw run JSONL,
+provider diagnostics, usage ledgers, hidden reasoning, private prompts, and
+unreviewed tool bodies are not release members.
+
+The manifest binds file sizes, SHA-256 digests, trajectory identities, record
+counts, scope/replay completeness, privacy review, secret-scan counts, and
+source-digest verification. Its directory suffix is the first 12 characters
+of the manifest SHA-256. Remote consumers should pin the full manifest digest,
+not merely trust a self-consistent directory.
 
 ## Availability labels
 
@@ -105,7 +144,8 @@ model dialogue needed for a dialogue trajectory.
 
 1. **Inventory:** count physical records, content-unique records, outcomes,
    and known overlaps without copying private payloads.
-2. **Normalize:** convert the source into the dated schema while preserving
+2. **Normalize:** convert the source into the stable `geode.trajectory@1`
+   schema while preserving
    source identifiers and ordering.
 3. **Redact:** remove credentials, personal data, local absolute paths,
    private prompts, and unnecessary tool payloads. Redactions are typed and
@@ -114,8 +154,9 @@ model dialogue needed for a dialogue trajectory.
    outcome joins, canonical uniqueness, and parent lineage.
 5. **Split:** partition by task, session, and campaign lineage, not random
    rows, to prevent rerun and descendant leakage.
-6. **Publish:** write an immutable manifest, compute SHA-256 digests, push the
-   release, and read it back from the remote.
+6. **Publish:** require a structured scope-bound privacy attestation; write an
+   immutable manifest; compute SHA-256 digests; push the release; and read it
+   back from the remote against an independently retained manifest digest.
 7. **Retire:** delete a unique local source only after the destination,
    manifest, counts, and remote read-back are verified, or after a documented
    decision that the source is excluded and no extraction is required.
@@ -146,12 +187,18 @@ A release is not complete until all applicable checks pass:
 - all JSON or JSONL records decode;
 - declared counts equal recomputed counts;
 - trajectory identifiers are unique;
-- event sequences are monotone and tool calls pair with results;
+- event ordinals are contiguous, event identifiers are unique, required
+  session/turn/call correlation is present, and tool calls pair with results;
 - outcome joins have no unexplained orphans;
 - lineage-aware split checks pass;
 - secret, credential, email-like, and absolute-path scans are reviewed;
-- every published file has a SHA-256 entry;
-- the remote copy can be fetched and its digest matches.
+- scope completeness is true; any replay reduction is explicit and admitted;
+- every source digest is checked against actual source bytes before staging;
+- the directory contains no files absent from the manifest;
+- every published file has a SHA-256 entry and the privacy review record is
+  content-bound;
+- the remote copy can be fetched and its manifest digest matches an
+  independent anchor.
 
 The dated inventory records what exists. It does not itself authorize
 publication or deletion of any local source.
