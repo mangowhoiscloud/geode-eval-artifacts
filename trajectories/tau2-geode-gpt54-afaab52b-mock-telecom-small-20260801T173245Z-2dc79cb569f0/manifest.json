@@ -1,0 +1,72 @@
+{
+  "schema_id": "geode.trajectory-release@1",
+  "schema_version": 1,
+  "producer_schema_id": "geode.trajectory@1",
+  "release_source": "tau2-geode",
+  "release_scope": "gpt54-afaab52b-mock-telecom-small",
+  "published_at": "2026-08-01T17:32:45Z",
+  "supersedes": null,
+  "admission": {
+    "scope_complete_required": true,
+    "replay_complete_required": false,
+    "privacy_review_required": true
+  },
+  "privacy_review": {
+    "reviewer": "Codex release verification",
+    "reviewed_at": "2026-08-01T17:32:45Z",
+    "method": "Field-aware native-receipt review, synthetic-fixture redaction, digest-only payload export, correlation and pairing audit, credential/email/absolute-path scans",
+    "scope": "gpt54-afaab52b-mock-telecom-small",
+    "attestation": "The GPT-5.4 mock and Telecom-small trajectories were reviewed together with tau2 native results and Crucible diagnostic snapshots. Synthetic target phone and email values are redacted in the Telecom public native receipt; local paths are masked. Runtime SQLite, JSONL, hidden reasoning, credentials, and private prompts are excluded. All 158 exported events come from canonical session-event rows, all ten tool calls pair exactly, and public secret-scan classes are zero.",
+    "record_sha256": "9fcb3ccfb07c9a376d4d3152af3e92603fd11ebf01149914ce1512408e02e7fa"
+  },
+  "files": [
+    {
+      "path": "mock.json",
+      "bytes": 29281,
+      "sha256": "7a695f5af275f95bd4de186425cbbbf1497757f898670160063d26a98fbc37ab",
+      "records": 31,
+      "trajectory_id": "tau2-geode-afaab52b-mock",
+      "scope_complete": true,
+      "replay_complete": false,
+      "complete": false
+    },
+    {
+      "path": "telecom-small.json",
+      "bytes": 109273,
+      "sha256": "65547906c5f23aae773d9cde1cd98dcac764b169b26a3beb99838344aa1f041f",
+      "records": 127,
+      "trajectory_id": "tau2-geode-afaab52b-telecom-small",
+      "scope_complete": true,
+      "replay_complete": false,
+      "complete": false
+    }
+  ],
+  "quality": {
+    "schema_valid": true,
+    "integrity_recomputed": true,
+    "trajectory_ids_unique": true,
+    "privacy_reviewed": true,
+    "scope_complete_trajectories": 2,
+    "scope_incomplete_trajectories": 0,
+    "replay_complete_trajectories": 0,
+    "replay_incomplete_trajectories": 2,
+    "complete_trajectories": 0,
+    "incomplete_trajectories": 2,
+    "trajectory_events": 158,
+    "evidence_refs": 2,
+    "runtime_event_refs": 0,
+    "secret_scan": {
+      "absolute_home": 0,
+      "email": 0,
+      "github_token": 0,
+      "openai_key": 0,
+      "bearer": 0,
+      "aws_access_key": 0,
+      "url_query_secret": 0,
+      "known_secret": 0
+    },
+    "source_digest_refs": 2,
+    "source_digests_verified": 2,
+    "remote_readback_required": true
+  }
+}
