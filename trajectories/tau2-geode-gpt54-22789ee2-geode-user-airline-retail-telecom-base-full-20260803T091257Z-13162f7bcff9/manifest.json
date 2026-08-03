@@ -1,0 +1,82 @@
+{
+  "schema_id": "geode.trajectory-release@1",
+  "schema_version": 1,
+  "producer_schema_id": "geode.trajectory@1",
+  "release_source": "tau2-geode",
+  "release_scope": "gpt54-22789ee2-geode-user-airline-retail-telecom-base-full",
+  "published_at": "2026-08-03T09:12:57Z",
+  "supersedes": null,
+  "admission": {
+    "scope_complete_required": true,
+    "replay_complete_required": false,
+    "privacy_review_required": true
+  },
+  "privacy_review": {
+    "reviewer": "Codex release verification",
+    "reviewed_at": "2026-08-03T09:12:57Z",
+    "method": "Field-aware native-receipt review, synthetic-fixture phone/email redaction, absolute-home masking, digest-only trajectory payload review, SQLite exact join, correlation and tool-pair audit, credential and secret scans",
+    "scope": "gpt54-22789ee2-geode-user-airline-retail-telecom-base-full",
+    "attestation": "The GPT-5.4 subscription Tau2 base full-cycle trajectories were reviewed together with all three native results receipts and diagnostic snapshots. Public native copies redact synthetic phone and email values and mask local absolute paths; upstream synthetic names, identifiers, and verifier state remain because they are public benchmark fixtures. Runtime SQLite, retry-session bodies, hidden reasoning, credentials, private prompts, and mutable local state are excluded. The final-attempt release contains 51,985 canonical events from 556 exact parent sessions and 3,964 fully paired tool calls with zero orphans. Seven transport retries created 14 additional SQLite sessions outside the final trajectory parent set and are disclosed as execution-lineage evidence rather than represented as replay-complete trajectory events.",
+    "record_sha256": "eb8e4bcc5bc71957304dfb1508f3d5830da52a80cd3c0b55873a1e88c9190c7a"
+  },
+  "files": [
+    {
+      "path": "airline.json",
+      "bytes": 4093571,
+      "sha256": "5f377d432f78de00422fd6156289ec5e2fba3f69ec7e3972a7e3df2debc740e1",
+      "records": 4924,
+      "trajectory_id": "tau2-geode-gpt54-high-22789ee2-geode-user-airline-base-full-20260803",
+      "scope_complete": true,
+      "replay_complete": false,
+      "complete": false
+    },
+    {
+      "path": "retail.json",
+      "bytes": 8907255,
+      "sha256": "d830233ebdb690fb679de672743977725d4f45174f9a897ad7ba2f9f1cb1d380",
+      "records": 10718,
+      "trajectory_id": "tau2-geode-gpt54-high-22789ee2-geode-user-retail-base-full-transport-retry1-20260803",
+      "scope_complete": true,
+      "replay_complete": false,
+      "complete": false
+    },
+    {
+      "path": "telecom.json",
+      "bytes": 30308049,
+      "sha256": "d76adcdc4ea12947f934b187b623dfa8b9aa814435bdcd3409b2d2c9e32c990f",
+      "records": 36343,
+      "trajectory_id": "tau2-geode-gpt54-high-22789ee2-geode-user-telecom-base-full-transport-retry1-20260803",
+      "scope_complete": true,
+      "replay_complete": false,
+      "complete": false
+    }
+  ],
+  "quality": {
+    "schema_valid": true,
+    "integrity_recomputed": true,
+    "trajectory_ids_unique": true,
+    "privacy_reviewed": true,
+    "scope_complete_trajectories": 3,
+    "scope_incomplete_trajectories": 0,
+    "replay_complete_trajectories": 0,
+    "replay_incomplete_trajectories": 3,
+    "complete_trajectories": 0,
+    "incomplete_trajectories": 3,
+    "trajectory_events": 51985,
+    "evidence_refs": 3,
+    "runtime_event_refs": 0,
+    "secret_scan": {
+      "absolute_home": 0,
+      "email": 0,
+      "github_token": 0,
+      "openai_key": 0,
+      "bearer": 0,
+      "aws_access_key": 0,
+      "url_query_secret": 0,
+      "known_secret": 0
+    },
+    "source_digest_refs": 3,
+    "source_digests_verified": 3,
+    "remote_readback_required": true
+  }
+}
