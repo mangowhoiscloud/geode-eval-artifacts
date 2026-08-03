@@ -158,6 +158,31 @@ retries created 14 additional SQLite sessions outside the final trajectory
 parent set; that execution-lineage boundary is disclosed rather than hidden
 behind `scope_complete`.
 
+### 2026-08-03 GEODE v1.0.12 GPT-5.4 post-release regression
+
+The
+[`v1.0.12` run record](reports/e2e-validation/2026-08-03-gpt54-v1012-post-release-benchmark.md)
+pins the published release commit and repeats MCPMark filesystem/easy plus two
+Tau2 diagnostic tasks through the GPT-5.4 subscription route. MCPMark scored
+**9/10**; the Tau2 mock and Telecom-small tasks scored **0/1** with
+`USER_STOP` and `MAX_STEPS`, respectively. The failures are preserved as
+behavior evidence and do not replace the earlier **200/278** Tau2 full-cycle
+authority.
+
+- Native MCPMark receipts:
+  `mcpmark/results-geode-agentworld/geode-gpt54-high-v1.0.12-f99cea63-20260803-mcpmark-filesystem-easy/`
+- Native Tau2 receipts:
+  `tau2/simulations/geode-gpt54-high-v1.0.12-f99cea63-geode-user-*/`
+- Stable MCPMark trajectories:
+  `trajectories/mcpmark-geode-gpt54-v1.0.12-f99cea63-filesystem-easy-20260803T104819Z-9636b39c16fb/`
+- Stable Tau2 trajectories:
+  `trajectories/tau2-geode-gpt54-v1.0.12-f99cea63-geode-user-mock-telecom-small-20260803T104819Z-fd524ce7a3cb/`
+
+The two manifests contain 416 canonical events and 72 exact tool pairs with
+zero orphans. All 12 trajectories are release-scope complete and intentionally
+replay incomplete. Native/public digests are recorded independently wherever
+local paths or synthetic benchmark identities were redacted.
+
 ### Crucible 2026-07-13 operations-hardening cases
 
 | Runs | Outcome | Evidence value |
@@ -173,24 +198,24 @@ any of it with `python3 scripts/stats.py`. Token figures are what the
 artifacts record: the subscription route reports usage per call, but there
 is no billing meaning behind `cost_usd`-style fields.
 
-**MCPMark** (all task attempts across the 26 result directories, including
+**MCPMark** (all task attempts across the 27 result directories, including
 retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Task attempts with results | 109 |
-| Verifier PASS | 87 |
-| Input tokens | 21,005,671 |
-| Output tokens | 940,348 |
-| Agent execution time | 39,638s (~11.0h) |
+| Task attempts with results | 119 |
+| Verifier PASS | 96 |
+| Input tokens | 21,308,655 |
+| Output tokens | 970,586 |
+| Agent execution time | 40,440s (~11.2h) |
 
 **tau2** (`tau2/simulations/`, GEODE-owned runs):
 
 | Metric | Value |
 |---|---:|
-| Runs with `results.json` | 388 |
-| Episodes simulated | 2,975 |
-| Episodes with reward recorded | 2,648 (reward 1.0: 1,694 · below 1.0: 954) |
+| Runs with `results.json` | 390 |
+| Episodes simulated | 2,977 |
+| Episodes with reward recorded | 2,650 (reward 1.0: 1,694 · below 1.0: 956) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
 | Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
 
