@@ -42,7 +42,7 @@ this table is the summary of the stack that produced them.
 | GEODE entry point | `plugins/benchmark_harness/run_mcpmark.py` in the GEODE repo: registers the `geode` agent (a `BaseMCPAgent` wrapping GEODE's `AgenticLoop`) before `pipeline.main()` |
 | MCP servers (MCPMark) | GitHub: `ghcr.io/github/github-mcp-server:v0.15.0` (Docker stdio) · Postgres: `postgres-mcp==0.3.0` via pipx · Playwright: `@playwright/mcp@0.0.68` (headless chromium) · Notion: `@notionhq/notion-mcp-server` (stdio) · Filesystem: upstream MCPMark default |
 | tau2 harness | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`), GEODE agent + GEODE user-simulator adapters; native `user_simulator` comparator runs labeled separately |
-| Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 records use `gpt-5.6-sol` / subscription / `high`; the 2026-08-02 Tau2 cycle uses `gpt-5.4` / subscription / `high` for both the agent and GEODE user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13 also used `gpt-5.4` but remain separately contract-scoped. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
+| Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 records use `gpt-5.6-sol` / subscription / `high`; the 2026-08-02 smoke and 2026-08-03 three-domain full cycle use `gpt-5.4` / subscription / `high` for both the agent and GEODE user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13 also used `gpt-5.4` but remain separately contract-scoped. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
 | Verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks. No GEODE-authored judges |
 
 ## Run naming
@@ -137,6 +137,27 @@ The release contains 158 canonical events and 10 exact tool pairs with zero
 missing IDs or orphan pairs. The receipts are diagnostic and unfrozen;
 `promotion_authority` remains `none`.
 
+### 2026-08-03 GPT-5.4 subscription Tau2 base full cycle
+
+The [full-cycle record](reports/e2e-validation/2026-08-03-gpt54-tau2-full-cycle.md)
+publishes all 278 base tasks at GEODE `22789ee2`: Airline **42/50**,
+Retail **79/114**, and Telecom **79/114**, for **200/278 = 0.7194**.
+The route remains `geode_agent + geode_user`, so it is a GEODE behavior
+diagnostic rather than a native-user Tau2 leaderboard claim.
+
+- Native receipt copies:
+  `tau2/simulations/geode-gpt54-high-22789ee2-geode-user-*/`
+- Stable trajectory release:
+  `trajectories/tau2-geode-gpt54-22789ee2-geode-user-airline-retail-telecom-base-full-20260803T091257Z-13162f7bcff9/`
+- Manifest SHA-256:
+  `13162f7bcff9ade1194f41af06549f0b0f239847f59630d5223386e2ca6362b3`
+
+The release exact-joins 556 final parent sessions to 51,985 canonical events
+and 3,964 tool call/result pairs with zero orphans. Seven task-level transport
+retries created 14 additional SQLite sessions outside the final trajectory
+parent set; that execution-lineage boundary is disclosed rather than hidden
+behind `scope_complete`.
+
 ### Crucible 2026-07-13 operations-hardening cases
 
 | Runs | Outcome | Evidence value |
@@ -147,7 +168,7 @@ missing IDs or orphan pairs. The receipts are diagnostic and unfrozen;
 
 ## Quantitative summary
 
-Counted directly from the files in this repository on 2026-08-02; recompute
+Counted directly from the files in this repository on 2026-08-03; recompute
 any of it with `python3 scripts/stats.py`. Token figures are what the
 artifacts record: the subscription route reports usage per call, but there
 is no billing meaning behind `cost_usd`-style fields.
@@ -167,9 +188,9 @@ retries and superseded first attempts):
 
 | Metric | Value |
 |---|---:|
-| Runs with `results.json` | 385 |
-| Episodes simulated | 2,697 |
-| Episodes with reward recorded | 2,370 (reward 1.0: 1,494 · below 1.0: 876) |
+| Runs with `results.json` | 388 |
+| Episodes simulated | 2,975 |
+| Episodes with reward recorded | 2,648 (reward 1.0: 1,694 · below 1.0: 954) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
 | Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
 

@@ -1,0 +1,192 @@
+{
+  "schema": "geode.tau2-full-cycle-report.v1",
+  "measured_at": "2026-08-03",
+  "timezone": "Asia/Seoul",
+  "provenance": {
+    "geode_revision": "22789ee28e87ba03580beec3db6e919f5cef5178",
+    "tau2_revision": "1901a301961cbbe3fd11f3e84a2a376530c759e3",
+    "tau2_package": "1.0.0",
+    "agent": "geode_agent",
+    "user": "geode_user",
+    "model": "gpt-5.4",
+    "provider": "openai",
+    "source": "subscription",
+    "effort": "high",
+    "promotion_authority": "none"
+  },
+  "contract": {
+    "task_split": "base",
+    "num_trials": 1,
+    "max_concurrency": 2,
+    "max_steps": 200,
+    "max_errors": 1,
+    "timeout_seconds": 3600,
+    "agent_time_budget_seconds": 600,
+    "user_time_budget_seconds": 180,
+    "seed": 300,
+    "trajectory_stage": "benchmark",
+    "transport_retry_limit": {
+      "airline": 0,
+      "retail": 1,
+      "telecom": 1
+    }
+  },
+  "aggregate": {
+    "tasks": 278,
+    "passes": 200,
+    "reward": 0.7194244604316546
+  },
+  "domains": [
+    {
+      "domain": "airline",
+      "run_id": "geode-gpt54-high-22789ee2-geode-user-airline-base-full-20260803",
+      "tasks": 50,
+      "passes": 42,
+      "reward": 0.84,
+      "duration_seconds": {
+        "min": 16.206566250002652,
+        "mean": 126.78701772835979,
+        "p50": 92.13277083299909,
+        "p95": 248.6275765840037,
+        "max": 776.0588531250032
+      },
+      "termination": {
+        "user_stop": 50,
+        "max_steps": 0,
+        "too_many_errors": 0
+      },
+      "verifiers": {
+        "read": {"met": 85, "total": 91},
+        "write": {"met": 33, "total": 49},
+        "generic": {"met": 1, "total": 2},
+        "db": {"met": 43, "total": 50}
+      },
+      "raw_sha256": "f15dc8b6798009161e0b14fbd2a86ededf82f08980a1447475aab5ecd43c7f51",
+      "public_sha256": "1d7d37971554eca4d4202845587f60a1c1ec62b663ee80fda8109385eae8f1bf",
+      "trajectory_source_sha256": "b3f1e33b079f206f960e154d2d964469fbb75e66e167185d3fac3d20997ba504",
+      "trajectory_events": 4924,
+      "parent_sessions": 100,
+      "sqlite_messages": 1474,
+      "tool_pairs": 369,
+      "payload_issue_events": 3853
+    },
+    {
+      "domain": "retail",
+      "run_id": "geode-gpt54-high-22789ee2-geode-user-retail-base-full-transport-retry1-20260803",
+      "tasks": 114,
+      "passes": 79,
+      "reward": 0.6929824561403509,
+      "duration_seconds": {
+        "min": 13.272924041993974,
+        "mean": 93.61788967722775,
+        "p50": 85.39004037500126,
+        "p95": 182.12760125000204,
+        "max": 342.8382944999976
+      },
+      "termination": {
+        "user_stop": 96,
+        "max_steps": 0,
+        "too_many_errors": 18
+      },
+      "verifiers": {
+        "read": {"met": 265, "total": 307},
+        "write": {"met": 114, "total": 141},
+        "generic": {"met": 4, "total": 14},
+        "db": {"met": 80, "total": 96}
+      },
+      "raw_sha256": "4cbd04b3e847aabb0f96c5cf5b50318cb36d6e35c65c230cc7f044bbdbe0d97f",
+      "public_sha256": "037376bf56a953167b7864f5336a4736f0cc76594803924580f247c6f2dd5e55",
+      "trajectory_source_sha256": "6f1428ef0f7e8921621d8cecdf19a1256a8d9deb985ef864155ada15cf2d19c1",
+      "trajectory_events": 10718,
+      "parent_sessions": 228,
+      "sqlite_messages": 3299,
+      "tool_pairs": 827,
+      "payload_issue_events": 8375
+    },
+    {
+      "domain": "telecom",
+      "run_id": "geode-gpt54-high-22789ee2-geode-user-telecom-base-full-transport-retry1-20260803",
+      "tasks": 114,
+      "passes": 79,
+      "reward": 0.6929824561403509,
+      "duration_seconds": {
+        "min": 28.560007666994352,
+        "mean": 351.64665408814886,
+        "p50": 261.8441888330053,
+        "p95": 957.6520866250066,
+        "max": 995.7767415839917
+      },
+      "termination": {
+        "user_stop": 98,
+        "max_steps": 14,
+        "too_many_errors": 2
+      },
+      "verifiers": {
+        "write": {"met": 308, "total": 377},
+        "generic": {"met": 20, "total": 20},
+        "environment": {"met": 155, "total": 181},
+        "db": {"met": 22, "total": 98}
+      },
+      "issue_family": {
+        "service_issue": {"passes": 28, "tasks": 29},
+        "mobile_data_issue": {"passes": 30, "tasks": 36},
+        "mms_issue": {"passes": 21, "tasks": 49}
+      },
+      "persona": {
+        "Easy": {"passes": 29, "tasks": 38},
+        "Hard": {"passes": 21, "tasks": 36},
+        "None": {"passes": 29, "tasks": 40}
+      },
+      "no_progress_stops": {
+        "total": 7,
+        "passes": 1,
+        "failures": 6
+      },
+      "raw_sha256": "6ac4f16c4954705dc87b17cae520f9ac882f7fafd4085a54c700716bfeaea9df",
+      "public_sha256": "4fc9c8448f2484f9b9a15040057598c3533eb1e8a1846e059d3615e16d88d75e",
+      "trajectory_source_sha256": "091362be0d6a5d2de18691e266c14a553e8f4e0435a016b4450fcd081103cf54",
+      "trajectory_events": 36343,
+      "parent_sessions": 228,
+      "sqlite_messages": 4375,
+      "tool_pairs": 2768,
+      "payload_issue_events": 29292
+    }
+  ],
+  "storage_quality": {
+    "parent_sessions": 556,
+    "sqlite_session_events": 51985,
+    "sqlite_messages": 9148,
+    "normalized_events": 51985,
+    "tool_calls": 3964,
+    "tool_results": 3964,
+    "orphan_tool_calls": 0,
+    "orphan_tool_results": 0,
+    "event_ids_unique": true,
+    "ordinals_contiguous": true,
+    "scope_complete": true,
+    "replay_complete": false,
+    "payload_issue_events": 41520,
+    "hook_events": 0,
+    "project_jsonl": false
+  },
+  "retry_lineage": {
+    "task_level_transport_retries": 7,
+    "adapter_internal_retries_observed": 1,
+    "extra_sqlite_sessions": 14,
+    "included_in_final_trajectory_parents": false,
+    "note": "Each task-level retry created one agent and one user session. SQLite preserves them, while the released trajectory selects the final 114 task attempts."
+  },
+  "release": {
+    "trajectory_release": "trajectories/tau2-geode-gpt54-22789ee2-geode-user-airline-retail-telecom-base-full-20260803T091257Z-13162f7bcff9",
+    "manifest_sha256": "13162f7bcff9ade1194f41af06549f0b0f239847f59630d5223386e2ca6362b3",
+    "privacy_review": "reports/privacy-reviews/2026-08-03-geode-gpt54-tau2-full.json",
+    "secret_scan_findings": 0,
+    "remote_readback_required": true
+  },
+  "comparability": {
+    "leaderboard_comparable": false,
+    "reason": "Both agent and simulated user use the GEODE subscription route; native Tau2 user_simulator is not used.",
+    "score_authority": "Tau2 results.json",
+    "trajectory_role": "diagnostic correlation and external-loop evidence sidecar"
+  }
+}
