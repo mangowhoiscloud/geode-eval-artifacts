@@ -158,6 +158,27 @@ retries created 14 additional SQLite sessions outside the final trajectory
 parent set; that execution-lineage boundary is disclosed rather than hidden
 behind `scope_complete`.
 
+### 2026-08-04 runtime-faithful Tau2 infrastructure diagnostic
+
+The [diagnostic record](reports/e2e-validation/2026-08-04-gpt54-runtime-faithful-tau2-diagnostic.md)
+preserves the first snapshot-v4 three-domain run at GEODE `f08e7d6f`. The
+278-task schedule produced 179 reward-bearing rows and 99 infrastructure rows
+after GPT-5.4 subscription quota exhaustion, so it has no aggregate score
+authority and does not replace 200/278. Its normalized trajectories contain
+22,971 events; Airline and Retail are scope-complete, while Telecom truthfully
+retains six orphan calls and is rejected by the hardened verifier.
+
+- Diagnostic companions:
+  `crucible/runs/trajectory-snapshots/runtime-faithful-20260804/`
+- Machine-readable ruling:
+  `reports/e2e-validation/2026-08-04-gpt54-runtime-faithful-tau2-diagnostic.json`
+- Privacy review:
+  `reports/privacy-reviews/2026-08-04-geode-gpt54-runtime-faithful-tau2.json`
+
+No stable `trajectories/` release was created because stable admission requires
+`scope_complete=true`. Raw receipts and runtime stores remain private; their
+digests stay bound by the published runtime profiles and trajectories.
+
 ### 2026-08-03 GEODE v1.0.12 GPT-5.4 post-release regression
 
 The
