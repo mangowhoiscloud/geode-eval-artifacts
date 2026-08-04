@@ -1,0 +1,86 @@
+{
+  "schema": "geode.tau2-runtime-faithful-diagnostic.v1",
+  "generated_at": "2026-08-04T17:14:38Z",
+  "runtime_revision": "f08e7d6f5c785f76881ea2f9dfc2983ced8556d8",
+  "runtime_profile": "geode-dual-runtime",
+  "route": {
+    "agent": "gpt-5.4/openai/subscription/high",
+    "user": "gpt-5.4/openai/subscription/high"
+  },
+  "ruling": {
+    "execution_valid": false,
+    "aggregate_score_authority": false,
+    "reason": "subscription_quota_exhaustion",
+    "scheduled_rows": 278,
+    "reward_rows": 179,
+    "passes": 148,
+    "infrastructure_rows": 99
+  },
+  "domains": [
+    {
+      "domain": "airline",
+      "scheduled": 50,
+      "reward_rows": 48,
+      "passes": 42,
+      "infrastructure_rows": 2,
+      "attempts": 52,
+      "selected_attempts": 48,
+      "no_success": 2,
+      "parent_sessions": 96,
+      "events": 5378,
+      "tool_calls": 415,
+      "tool_results": 415,
+      "orphan_calls": 0,
+      "scope_complete": true,
+      "hardened_admission": "accepted"
+    },
+    {
+      "domain": "retail",
+      "scheduled": 114,
+      "reward_rows": 98,
+      "passes": 76,
+      "infrastructure_rows": 16,
+      "attempts": 130,
+      "selected_attempts": 98,
+      "no_success": 16,
+      "parent_sessions": 196,
+      "events": 9522,
+      "tool_calls": 674,
+      "tool_results": 674,
+      "orphan_calls": 0,
+      "scope_complete": true,
+      "hardened_admission": "accepted"
+    },
+    {
+      "domain": "telecom",
+      "scheduled": 114,
+      "reward_rows": 33,
+      "passes": 30,
+      "infrastructure_rows": 81,
+      "attempts": 196,
+      "selected_attempts": 33,
+      "no_success": 81,
+      "parent_sessions": 66,
+      "events": 8071,
+      "tool_calls": 614,
+      "tool_results": 608,
+      "orphan_calls": 6,
+      "scope_complete": false,
+      "hardened_admission": "rejected_scope_incomplete"
+    }
+  ],
+  "runtime_surfaces": {
+    "public_hooks_registered": 13,
+    "middleware_registered": 4,
+    "middleware_exercised": [
+      "tool_request",
+      "tool_execution",
+      "llm_request",
+      "llm_execution"
+    ]
+  },
+  "artifact_directory": "crucible/runs/trajectory-snapshots/runtime-faithful-20260804",
+  "artifact_manifest_sha256": "40206ed181f69bd15bc4dd4b986ec99b921ba1afd9b15b14c2d9b64a637af317",
+  "stable_trajectory_release": null,
+  "remediation_pr": "https://github.com/mangowhoiscloud/geode/pull/2869"
+}

@@ -1,0 +1,4634 @@
+{
+  "schema": "geode.tau2-runtime-profile.v1",
+  "run_id": "geode-gpt54-high-f08e7d6f-runtime-v4-airline-base-full-r2-20260804",
+  "runtime_revision": "f08e7d6f5c785f76881ea2f9dfc2983ced8556d8",
+  "runtime_version": "1.0.12",
+  "runtime_profile": "geode-dual-runtime",
+  "routes": {
+    "agent": {
+      "model": "gpt-5.4",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "high"
+    },
+    "user": {
+      "implementation": "geode_user",
+      "model": "gpt-5.4",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "high"
+    }
+  },
+  "assembled_requests": [
+    {
+      "session_id": "s-01a436e6f595",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "1df8b9b2223446300625e1e466114d218297cb5c7917bf014593e50225e1b64e",
+      "assembled_prompt_bytes": 12270,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-04b46cab80fc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-04b46cab80fc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-070dcbc32a1e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 11
+    },
+    {
+      "session_id": "s-070dcbc32a1e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-070dcbc32a1e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ff24ce367cc2d018c6505fef81710ecc3e401d8c3f6dc0e10691a1d9b97ee4a1",
+      "assembled_prompt_bytes": 18424,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-07950628d121",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "72bd55df38435ff8f72d2d920398f76e57017382d2d2a0795fe0d92abef3f578",
+      "assembled_prompt_bytes": 12599,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-07950628d121",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "83ec57c37b88974de27a75dc6fe77ce41212d77b91345b7bbe8ce5be63124d76",
+      "assembled_prompt_bytes": 12798,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-084b8e7cf339",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "3658b13190855d6f9bede94249e97b1d59daa40d64928ae833be95ecd38d121e",
+      "assembled_prompt_bytes": 11840,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-0931c6b43268",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "84ba981f5e891269a8391ec731a8e98c128cb203c3a786b9bf6ea6233ed927de",
+      "assembled_prompt_bytes": 12688,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-094c40f047fb",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "1d217fbbfc56e128c210b1fb20957d3019721df40478214706dfce34e6fafc81",
+      "assembled_prompt_bytes": 12440,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-094c40f047fb",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "3dd515fd474f5dd986ef2bd39c068a324924a8f0e240d9b6ea640ae3933c3d74",
+      "assembled_prompt_bytes": 12639,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-0dca0b81339f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-13b566d4a88c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 17
+    },
+    {
+      "session_id": "s-13b566d4a88c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-158441bfad53",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4ff8a265a66505b396a96de138f64aab243eae9cb76129818dc92da0dffc284d",
+      "assembled_prompt_bytes": 12374,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-1af6c745e27c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "8466d8e94427703617208a944c68632a52f3a270e8e091cef7f5383201e84063",
+      "assembled_prompt_bytes": 11987,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-20ebc6c6499d",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-20ebc6c6499d",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-26a79fd3beeb",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "564ca8a1b7f2bd7d6cfe690f5de81919e6cb440a2b755ca4be43f164e6359ce8",
+      "assembled_prompt_bytes": 12149,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-26f1404f0c9a",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "a044a5114a12b3bea3b4ee64df5f9b33c368318af67f70d8664a9f5e4494b80d",
+      "assembled_prompt_bytes": 12332,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-2d69407a3bf6",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-2d69407a3bf6",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-2d69c84e55b7",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "7fd0b7ba55adfcc715c6e0697847d5d750bc8cb2a21106e35793902e295093e7",
+      "assembled_prompt_bytes": 12180,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-2fae8a0c4e5a",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "7949f8a42a1d91c487de4d5a32e93b8dbe36e60732534ed22030f4845d9d5089",
+      "assembled_prompt_bytes": 12233,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-37b7f6b9b1e0",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "00c2e7ca72a3cbe073948f88cdc63a6acbd7977ad38d62474233fd49b213c427",
+      "assembled_prompt_bytes": 12584,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-37b7f6b9b1e0",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "bfe819fd0d86e86abf65b1748dcceb36367a63b978a9e591f790673d5307afe1",
+      "assembled_prompt_bytes": 12793,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-3a548ffa8635",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-3e22a1e21c7e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ffcb1aaf8f4aa48ad41b637a929eb17a9a3249b6fa6ff862f6e61b32eeb81fc2",
+      "assembled_prompt_bytes": 12142,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-3f75b257bb35",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "322b3b412fc38e72a98e4e066ca7917b8dcef0028a8a29a0c6a576c076dd7fc6",
+      "assembled_prompt_bytes": 13283,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-3f75b257bb35",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "41d92559c992cac3550954f5f58055162ac0aee74770a91b3ab2e2f692723035",
+      "assembled_prompt_bytes": 13084,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 13
+    },
+    {
+      "session_id": "s-42bc3ca14eb7",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-4663c8dac782",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-4663c8dac782",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-4a6e274f6840",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-50d2b714327b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "d70f026e949a659c687a8231f01d9d0c722237075f657df89fa4ded0e036cde7",
+      "assembled_prompt_bytes": 12081,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-50eab83ec4ff",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-50eab83ec4ff",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-5af9b0d6c181",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "71bfc4b91122cf94ed5e72fc5ef830450947639c118bc6c7ee58a9c46bff3a1b",
+      "assembled_prompt_bytes": 11999,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-5b289b586b30",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "93d8e77f2beaeeac7a0b3efdf8f3f57148a7cbb553eb52dead5fb4f7a88773be",
+      "assembled_prompt_bytes": 12230,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-5b289b586b30",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "f9d9714d3c52994216ded203ebdcd663c11be02b5270df969921d2fece962ff6",
+      "assembled_prompt_bytes": 12429,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-5b8996b8c0b5",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 14
+    },
+    {
+      "session_id": "s-5b8996b8c0b5",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-5eca2bba2c89",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "b64dc7d47c91339cc3ba43f43a3b8758e583820526e987214bb645012a00bf53",
+      "assembled_prompt_bytes": 12477,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 13
+    },
+    {
+      "session_id": "s-60a287ea37d7",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-6a35375ab1b4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 16
+    },
+    {
+      "session_id": "s-6a35375ab1b4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-6a35375ab1b4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "7a3362320d6a64ef45a9b630a141a44e4438ac22e7ed3f7a0aacc7052f4c1786",
+      "assembled_prompt_bytes": 18521,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-6a39265a81f0",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "df3db5036485e6d9c428a181001ae48111b8d5fe3369fec9c7f80023fb2776f8",
+      "assembled_prompt_bytes": 12380,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-6b420f92e116",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ab302bad05fb0d31fce0a221d6b438b4dc2a73b898595fa27c42c742ec9d7437",
+      "assembled_prompt_bytes": 12137,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-6ca2831b8969",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 11
+    },
+    {
+      "session_id": "s-6ca2831b8969",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-6d0f2561a065",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 18
+    },
+    {
+      "session_id": "s-6d0f2561a065",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-6f770ad22a2f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "2e70d461d378cb01f87e62c06f14dd0eda9cd2c0ac42b728128bd1406fcfde7a",
+      "assembled_prompt_bytes": 12082,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-6f770ad22a2f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "d8fa5ee5c5e75709215d6e26ba084ea2574b7df438aecfc2f8d5a62bcf705bb7",
+      "assembled_prompt_bytes": 12281,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-70e982c41145",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "2437b0c0aba88367ec7682c1cbd547b0aff5aba31282023ada00d27255836660",
+      "assembled_prompt_bytes": 12580,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-70e982c41145",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "8ec836c685a7a820fddc6df59cdd0d3d3c26b59253b0b32af0d60bafabcf4b23",
+      "assembled_prompt_bytes": 12381,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-7716e8527468",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 64
+    },
+    {
+      "session_id": "s-7716e8527468",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-7748038485c6",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-7748038485c6",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-79c7203eabbd",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "3b5905e58efcc1156a06ee16de7b88b0ac4e2f0ba6dd1141cfc3051e2d81d0f7",
+      "assembled_prompt_bytes": 12067,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-7eac216ba5a8",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "752a6eb01974b5ec78c698fa2391b41c49e20482b4410bce412b6de34758bd02",
+      "assembled_prompt_bytes": 12174,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-808c51cecf9e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "1bdb21fb5020cb109cc6310867e604bc8e07c3bea613c5019272739ed9c94009",
+      "assembled_prompt_bytes": 12061,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-819e98319cbe",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "41057d113c1daa89ac463632765df68d9f088dea0a56e108e832cb04f9a9a326",
+      "assembled_prompt_bytes": 12385,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-841b247bb686",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "1d217fbbfc56e128c210b1fb20957d3019721df40478214706dfce34e6fafc81",
+      "assembled_prompt_bytes": 12440,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-86e8df2fd7bc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 25
+    },
+    {
+      "session_id": "s-86e8df2fd7bc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-8c2cfc85335d",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-960a364c2791",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-960a364c2791",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-975aecde8b97",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 9
+    },
+    {
+      "session_id": "s-975aecde8b97",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-97f3a17523ec",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "04120c68e953f4896e941f2d5f682a1c599dcc570e0e6ad59c7215888e207c2e",
+      "assembled_prompt_bytes": 12130,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-98ce24242269",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 19
+    },
+    {
+      "session_id": "s-98ce24242269",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-99de1e177d01",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-99de1e177d01",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ff24ce367cc2d018c6505fef81710ecc3e401d8c3f6dc0e10691a1d9b97ee4a1",
+      "assembled_prompt_bytes": 18424,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-9f9b8fc63bb1",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 16
+    },
+    {
+      "session_id": "s-9f9b8fc63bb1",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-9f9c445d3e5f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "90bd09daf046bb8663f10231586f9a7950f0c8f4cf932e721cef1f837bbbc6c6",
+      "assembled_prompt_bytes": 13007,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-9f9c445d3e5f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "f587e2f522b4d6344dc9a967db808d35e70017e2b278259e20f83cb86ba68ca4",
+      "assembled_prompt_bytes": 12808,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-a160b1e29783",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 11
+    },
+    {
+      "session_id": "s-a160b1e29783",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-a5672ebb3b04",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 35
+    },
+    {
+      "session_id": "s-a5672ebb3b04",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-a6bb9f97fb84",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-a7775d1c1b52",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-a7775d1c1b52",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-a7775d1c1b52",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "d9df870b2f942823b48740931e3c1176cff8e9442d221b5574156bffb4b962f8",
+      "assembled_prompt_bytes": 18438,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-a7775d1c1b52",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ff24ce367cc2d018c6505fef81710ecc3e401d8c3f6dc0e10691a1d9b97ee4a1",
+      "assembled_prompt_bytes": 18424,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-a9fa911ca216",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-ac15fcc3f2fe",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-ac15fcc3f2fe",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-ace2ba5524cc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-ace2ba5524cc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-ad4ed59dae2d",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 22
+    },
+    {
+      "session_id": "s-ad4ed59dae2d",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-ad6601f666cd",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "481f855c78ba64f3345e41123a2197edab08094f908f0156129c5e81d007acdf",
+      "assembled_prompt_bytes": 12415,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-ad6601f666cd",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6f888f5fd8d2da70e0af6e783ebdaf4b323bfd6c7666d76d5ec15666a3f7c0a0",
+      "assembled_prompt_bytes": 12216,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-b1848a670786",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "746a0c892659a7d65ec2f8031029a3378e1a88f3f02ac5f8c0ff0448168563eb",
+      "assembled_prompt_bytes": 12213,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-b29737797b7c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 37
+    },
+    {
+      "session_id": "s-b29737797b7c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-b356c26a8653",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "9ad401a39492f3aa7fbbfa9c25edee56b4022fd14065ad237c66df69dbc8bb3e",
+      "assembled_prompt_bytes": 12612,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-b356c26a8653",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ed6fa5079c9ae300c136a25c420cbf6114bd8a0cd8abe0f180f8aa7bdb5ea861",
+      "assembled_prompt_bytes": 12413,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 9
+    },
+    {
+      "session_id": "s-b39e87d808d9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "3cf4e994019222d06d555b97e8cedbf8f3cd3063bd82c8fe76caa81b31b318fc",
+      "assembled_prompt_bytes": 12626,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-b39e87d808d9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "f83ba748d90aa024d68a0e814dcf1c9a6cac12c914d0bee3c8e9efb1bce0af13",
+      "assembled_prompt_bytes": 12825,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-b5713db7045a",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ef9802070b31db9b2d100ea9865a56aac0755f6b11f71a46831d39761ec98ca9",
+      "assembled_prompt_bytes": 11972,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-b62dc1140a5b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "60a73009d7f18a00e0532a4aeba25661a296f8522ce8f386941f27ea1723c031",
+      "assembled_prompt_bytes": 12949,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-b62dc1140a5b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "787fbee2a4667c2c5a47194f0ce49e927a6768067d4b9bd7aac431c184ee9d47",
+      "assembled_prompt_bytes": 12740,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-b7a292daeed2",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-b7a292daeed2",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-b9634c788979",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 11
+    },
+    {
+      "session_id": "s-b9634c788979",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-ba3f21a46030",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "81a444c6a9f766575f5b336e7ad419909101ca5f995e28a9b7eddf0e196e9e73",
+      "assembled_prompt_bytes": 11968,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-c25623075c49",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-c28d1593cd69",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "b6ed9fc74395d876dca19d5b58601e5430b096b8c8e68b57d77efa3f1503cce8",
+      "assembled_prompt_bytes": 12047,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-c5bfe4f9177e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-c5bfe4f9177e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-c68c4d7632cc",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6acb8431f2d47de6bc017ccb4edb226806f8659b95c0b0e2f3452090abdfb05e",
+      "assembled_prompt_bytes": 12019,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-c76aea21c497",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "2df14e48e6408b271ec7ee2afb52aeb7825c9e88f4e23da45bbeb4e39690d0c5",
+      "assembled_prompt_bytes": 12333,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-c8086526891c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "e2834537c3b73694c2551b87252d58ac4517343d848a52b5f646ac9f7de0919d",
+      "assembled_prompt_bytes": 12547,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-c8d95c839e91",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 11
+    },
+    {
+      "session_id": "s-c8d95c839e91",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-cb0cfc6abbdd",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 14
+    },
+    {
+      "session_id": "s-cb0cfc6abbdd",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-cca751e5f469",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "2a5e97da245f0f553158dd88783615a90cdaeb7c7af8b55d8bb1f569bcdceb00",
+      "assembled_prompt_bytes": 12374,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-cdac9f113f2c",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "f69c70c255c9cfb491b0fb59470a2f2f646bed33e7524508b6e1e3827bf849c8",
+      "assembled_prompt_bytes": 12004,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-ce064d3016de",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "5a85e351ef88f2bb046dd6b98fe7f43eedaa531d2dbef9f5040d957030d18b1b",
+      "assembled_prompt_bytes": 12252,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-ce064d3016de",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "a6f4dd67368f5163b55d51b8bb87076b6f97d62b994493b52822e62a64f39331",
+      "assembled_prompt_bytes": 12451,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-d24cef02b3d4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 26
+    },
+    {
+      "session_id": "s-d24cef02b3d4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-d24cef02b3d4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ff24ce367cc2d018c6505fef81710ecc3e401d8c3f6dc0e10691a1d9b97ee4a1",
+      "assembled_prompt_bytes": 18424,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-d38ea806421b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-d38ea806421b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-d44aa62a118a",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "61a2c26c2ca9c6549602a73c363d8cf6fa8a915bded1967b5df9ed513e7dfadd",
+      "assembled_prompt_bytes": 12159,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-d53f14359276",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ea731b8b87ccfa8ceae749d822728021a83bd0b9d6bb678ae69750841e29eb52",
+      "assembled_prompt_bytes": 12771,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 8
+    },
+    {
+      "session_id": "s-d724d3e0f0e4",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-d85abe072df5",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "3fa3e504d23abb7a5073b5d7739fb2789d25a5a88a5993f18690c0e4962c0a57",
+      "assembled_prompt_bytes": 12407,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-d9a9aefc60f9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 27
+    },
+    {
+      "session_id": "s-d9a9aefc60f9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-daa5dfc0ea7b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "0f8ac335a355335cc8d4792993f978b7cb81cefe225fca737506f54ed0451412",
+      "assembled_prompt_bytes": 12521,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-daa5dfc0ea7b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "64e39fc07eec93f2b573ad7f0d4cd1cf2c6a425f0c1b9cdc479faf26010cc977",
+      "assembled_prompt_bytes": 12322,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-dc95d23e27c9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-dc95d23e27c9",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-e0ef498de2ac",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "e43bea3a463e77e5806a471a1a66c70b51ba063c49fbd4cc78112d24820c0bea",
+      "assembled_prompt_bytes": 12191,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-e4f4cf7c8e9e",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 7
+    },
+    {
+      "session_id": "s-e66aa9278517",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-eb9a3fe23336",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "b6ed9fc74395d876dca19d5b58601e5430b096b8c8e68b57d77efa3f1503cce8",
+      "assembled_prompt_bytes": 12047,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-f0077bee597b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 10
+    },
+    {
+      "session_id": "s-f0077bee597b",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-f29d94f71c0f",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "ee89d407fc122f93912c8c8e7c121ee47d296cc3d09a84d3c487b4899649ef30",
+      "assembled_prompt_bytes": 12382,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-f89ae12d0af1",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "77539164440027bf08663b44f02380dc401b17b6711b6f31d8f259822180b7ac",
+      "assembled_prompt_bytes": 12102,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 3
+    },
+    {
+      "session_id": "s-f9fa8e229723",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "cd1da287f5a6dd0402c4f6b156f3bd1d18fe28107ea8865882a5a4746f1bd618",
+      "assembled_prompt_bytes": 12131,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-fdd696ceccf3",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 4
+    },
+    {
+      "session_id": "s-fe9cc913d0c0",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "4448c898345dd7d1d1c847cab7decc6a8f704816b3451f5475ce397c241601ca",
+      "assembled_prompt_bytes": 18229,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 33
+    },
+    {
+      "session_id": "s-fe9cc913d0c0",
+      "model": "gpt-5.4",
+      "assembled_prompt_sha256": "6a1ee9245d3e22ce8dcf64a9621bd057d292f50975d1ffd23bd96990f8414c60",
+      "assembled_prompt_bytes": 18428,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 3
+    }
+  ],
+  "surfaces": {
+    "public_hooks": [
+      {
+        "name": "UserPromptSubmit",
+        "expectation": "required",
+        "observed_count": 988,
+        "status": "exercised"
+      },
+      {
+        "name": "PreToolUse",
+        "expectation": "conditional",
+        "observed_count": 454,
+        "status": "exercised"
+      },
+      {
+        "name": "PermissionRequest",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostToolUse",
+        "expectation": "conditional",
+        "observed_count": 454,
+        "status": "exercised"
+      },
+      {
+        "name": "PreCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SessionStart",
+        "expectation": "required",
+        "observed_count": 102,
+        "status": "exercised"
+      },
+      {
+        "name": "SessionEnd",
+        "expectation": "required",
+        "observed_count": 102,
+        "status": "exercised"
+      },
+      {
+        "name": "SubagentStart",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SubagentStop",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PreVerify",
+        "expectation": "required",
+        "observed_count": 530,
+        "status": "exercised"
+      },
+      {
+        "name": "PostVerify",
+        "expectation": "required",
+        "observed_count": 530,
+        "status": "exercised"
+      },
+      {
+        "name": "Stop",
+        "expectation": "required",
+        "observed_count": 530,
+        "status": "exercised"
+      }
+    ],
+    "middleware": [
+      {
+        "name": "llm_execution",
+        "status": "exercised",
+        "observed_count": 988
+      },
+      {
+        "name": "llm_request",
+        "status": "exercised",
+        "observed_count": 988
+      },
+      {
+        "name": "tool_execution",
+        "status": "exercised",
+        "observed_count": 454
+      },
+      {
+        "name": "tool_request",
+        "status": "exercised",
+        "observed_count": 454
+      }
+    ],
+    "runtime_events": {
+      "cognitive_act": 454,
+      "cognitive_observe": 454,
+      "cognitive_perceive": 988,
+      "cognitive_plan": 988,
+      "cognitive_reflect": 984,
+      "cognitive_update_memory": 984,
+      "extension_invoked": 6574,
+      "llm_call_ended": 988,
+      "llm_call_started": 988,
+      "reasoning_metrics": 984,
+      "session_ended": 984,
+      "session_started": 988,
+      "tool_exec_ended": 454,
+      "tool_exec_started": 454,
+      "turn_completed": 984,
+      "turn_verify_failed": 4,
+      "turn_verify_passed": 526,
+      "user_input_received": 988
+    },
+    "disabled": [
+      {
+        "name": "auto_learning",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "gateway",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "mcp_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "plugin_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "scheduler",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      }
+    ]
+  },
+  "persistence": {
+    "session_event_dbs": [
+      "sessions.db"
+    ],
+    "hook_event_db": "sessions.db",
+    "native_receipt": {
+      "path": "results.json",
+      "sha256": "4affa4062c2728110ff119b65c5929ed44ccb2c290f07675a937698c500c1e17",
+      "simulation_count": 50
+    }
+  }
+}
