@@ -25,6 +25,7 @@ redaction, admission, and retirement contract.
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
 | `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, visible auditor/target/judge transcripts): the SIL fitness measurements. New public copies remove hidden reasoning and local paths. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
+| `sil/petri-dish/` | Sanitized Petri Dish audits of production agent scaffolds; kept separate from model-level GEODE Petri runs because the scaffold owns the prompt and native tool surface | Petri Dish over Inspect SWE / native ACP |
 | `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`) and delta charts (`.png`). The live `eval-logs/` manifest ledger and code-referenced docs stay in the main repo | GEODE `plugins/petri_audit` over Inspect |
 | `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
 | `trajectories/` | Immutable normalized trajectory releases per the `TRAJECTORIES.md` contract: `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>/` holding `trajectory.json` + `manifest.json` | per-release producing harness (named in each manifest) |
@@ -68,6 +69,14 @@ the OpenAI subscription route. All 18 model-effort combinations preserved the
 requested wire value and returned the exact response contract. The raw JSONL
 retains six transient overload attempts and the same-combination recoveries;
 the result is a routing/acceptance diagnostic, not a quality leaderboard.
+
+### 2026-08-11 Codex / Hermes Petri Dish diagnostic
+
+The [scaffold comparison](sil/audit-reports/2026-08-11-codex-hermes-petri-dish-scaffold-comparison.md)
+uses a matched Petri Dish configuration for Codex CLI and Hermes Agent. Both
+N=1 runs cleared the audit-quality gate and showed no concerning behavior;
+37/38 judge dimensions matched. OpenClaw remains unscored because no validated
+same-protocol adapter exists. This is a diagnostic, not a leaderboard.
 
 ### 2026-07-31 GPT-5.6 subscription benchmark
 
