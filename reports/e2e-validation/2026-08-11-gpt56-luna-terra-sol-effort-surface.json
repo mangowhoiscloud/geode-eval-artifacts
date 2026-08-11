@@ -1,0 +1,101 @@
+{
+  "schema_id": "geode.effort-surface-summary@1",
+  "measurement_id": "gpt56-luna-terra-sol-subscription-20260811",
+  "started_at": "2026-08-11T08:09:48.080200Z",
+  "completed_at": "2026-08-11T08:13:34.465543Z",
+  "source": {
+    "repository": "mangowhoiscloud/geode",
+    "runtime_revision": "ef1199c25a30d6194b83b8783306dd44738e0bf8",
+    "producer": "scripts/probes/probe_effort_surface.py"
+  },
+  "scope": {
+    "models": [
+      "gpt-5.6-luna",
+      "gpt-5.6-terra",
+      "gpt-5.6-sol"
+    ],
+    "efforts": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "combination_count": 18,
+    "provider": "openai",
+    "adapter": "codex-oauth",
+    "source": "subscription",
+    "authority": "routing_and_acceptance_diagnostic",
+    "promotion_authority": "none"
+  },
+  "contract": {
+    "prompt_sha256": "2b3a346314de6dfeb78cedf81fd97c9549df1a25081b9eb9e762e6948c392da4",
+    "system_prompt_sha256": "f77848b766a7b36fabe72f3046f9b5c3c43e6296b3562e1cba251aaf1e225301",
+    "expected_text": "EFFORT_OK",
+    "max_tokens": 256,
+    "per_attempt_timeout_seconds": 300,
+    "stop_on_failed_combination": true,
+    "same_combination_retry_attempts": 5
+  },
+  "result": {
+    "unique_combinations_passed": 18,
+    "unique_combinations_failed_final": 0,
+    "top_level_rows": 19,
+    "successful_rows": 18,
+    "historical_failed_rows": 1,
+    "provider_attempts": 24,
+    "provider_overload_attempts": 6,
+    "combinations_requiring_retry": 3,
+    "requested_wire_matches": 18,
+    "exact_response_matches": 18,
+    "successful_input_tokens": 468,
+    "successful_output_tokens": 126,
+    "successful_cached_input_tokens": 0,
+    "successful_reasoning_tokens": 0
+  },
+  "per_model": [
+    {
+      "model": "gpt-5.6-luna",
+      "passed": 6,
+      "median_latency_ms": 5468,
+      "mean_latency_ms": 5775,
+      "overload_attempts": 2
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "passed": 6,
+      "median_latency_ms": 4378,
+      "mean_latency_ms": 8139,
+      "overload_attempts": 4
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "passed": 6,
+      "median_latency_ms": 2364,
+      "mean_latency_ms": 2966,
+      "overload_attempts": 0
+    }
+  ],
+  "artifact": {
+    "jsonl": "2026-08-11-gpt56-luna-terra-sol-effort-surface.jsonl",
+    "bytes": 16068,
+    "sha256": "7abcfb5d7e6899363f1c975a94ac16a622189d53fb59e40b4fc8f7e5b2ec9de9"
+  },
+  "privacy": {
+    "reviewed": true,
+    "api_keys": 0,
+    "bearer_tokens": 0,
+    "oauth_tokens": 0,
+    "local_home_paths": 0,
+    "email_addresses": 0,
+    "provider_reasoning_bodies": 0
+  },
+  "limitations": [
+    "This proves picker-to-wire preservation and backend acceptance, not reasoning quality.",
+    "Each combination has one successful sample on a trivial deterministic prompt.",
+    "Latency includes retry and backoff time where overload occurred and is not an effort benchmark.",
+    "Zero reported reasoning tokens on this trivial prompt does not prove that higher effort is ineffective.",
+    "Anthropic and older OpenAI model families were outside the requested GPT-5.6 Luna/Terra/Sol scope."
+  ]
+}
