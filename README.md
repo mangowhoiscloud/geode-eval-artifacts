@@ -6,9 +6,10 @@ Raw run logs behind the benchmark numbers published in the GEODE docs
 Every score GEODE publishes cites a result directory; this repository is where
 those directories live, so any reported number can be traced back to verifier
 output and the trace material retained by the producing harness. Trace fidelity
-varies: tau2 and Petri retain full message sequences, while the public MCPMark
+varies: tau2 and Petri retain full visible message sequences, while the public MCPMark
 copy retains final answers and ordered MCP execution logs, not full model
-dialogue. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the stable schema,
+dialogue. Hidden reasoning and local paths are removed from new public Petri
+copies. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the stable schema,
 redaction, admission, and retirement contract.
 
 ## Layout
@@ -23,7 +24,7 @@ redaction, admission, and retirement contract.
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
-| `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, full auditor/target/judge transcripts): the SIL fitness measurements. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
+| `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, visible auditor/target/judge transcripts): the SIL fitness measurements. New public copies remove hidden reasoning and local paths. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
 | `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`) and delta charts (`.png`). The live `eval-logs/` manifest ledger and code-referenced docs stay in the main repo | GEODE `plugins/petri_audit` over Inspect |
 | `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
 | `trajectories/` | Immutable normalized trajectory releases per the `TRAJECTORIES.md` contract: `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>/` holding `trajectory.json` + `manifest.json` | per-release producing harness (named in each manifest) |
@@ -254,7 +255,7 @@ verdicts: the self-improving loop's measurement and selection record):
 
 | Metric | Value |
 |---|---:|
-| Petri audit logs published | 408 (`.eval`, 2026-05-15 to 2026-06-11) |
+| Petri audit logs published | 411 (`.eval`, 2026-05-15 to 2026-08-11) |
 | Served in the self-improving hub | 29 (curated subset with rendered views) |
 
 | Metric | Value |
