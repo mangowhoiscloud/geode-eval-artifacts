@@ -60,6 +60,15 @@ this table is the summary of the stack that produced them.
   2026-07-11 through 2026-07-13) plus `crucible-rowcache-live-*`
   cache-priming runs.
 
+### 2026-08-11 GPT-5.6 effort surface
+
+The [effort-surface record](reports/e2e-validation/2026-08-11-gpt56-luna-terra-sol-effort-surface.md)
+measures every GEODE-exposed effort on GPT-5.6 Luna, Terra, and Sol through
+the OpenAI subscription route. All 18 model-effort combinations preserved the
+requested wire value and returned the exact response contract. The raw JSONL
+retains six transient overload attempts and the same-combination recoveries;
+the result is a routing/acceptance diagnostic, not a quality leaderboard.
+
 ### 2026-07-31 GPT-5.6 subscription benchmark
 
 The [run record](reports/e2e-validation/2026-07-31-gpt56-benchmark.md)
