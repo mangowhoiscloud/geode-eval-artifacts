@@ -1,0 +1,113 @@
+{
+  "schema_id": "geode.trajectory@1",
+  "schema_version": 1,
+  "trajectory_id": "mcpmark-codex-e3b0c44298fc1c14",
+  "captured_at": "2026-08-12T23:02:37.789200Z",
+  "trajectory_class": [
+    "benchmark",
+    "dialogue",
+    "tool"
+  ],
+  "source": {
+    "harness": "mcpmark",
+    "run": "e3b0c44298fc1c14",
+    "session": "ephemeral-codex-exec",
+    "task": "798343a1c08bed17478c9f3516711cc7b59a926dbf48cfcceb0c721aec74de0b",
+    "parents": []
+  },
+  "events": [
+    {
+      "event_id": "38eb2ef9c09e81cda4a55e23c658d759",
+      "ordinal": 1,
+      "occurred_at": "2026-08-12T23:02:37.789200Z",
+      "kind": "user_message",
+      "actor": "user",
+      "session_id": "ephemeral-codex-exec",
+      "turn_id": "turn-1",
+      "call_id": "",
+      "payload": {
+        "content": {
+          "_omitted_payload_sha256": "f2cfdc8417d570d601918bd34169b0ed472826b72070bee2a03420c9c917fd85",
+          "_omitted_payload_bytes": 742,
+          "_content_omitted": [
+            "native_value"
+          ]
+        }
+      }
+    }
+  ],
+  "outcome": {
+    "success": false,
+    "failure": "",
+    "protocol_violations": 0
+  },
+  "integrity": {
+    "scope_complete": true,
+    "replay_complete": false,
+    "replay_incompleteness": [
+      "codex exec JSONL omits per-event timestamps and internal model-call boundaries",
+      "1 event payload(s) are truncated, corrupt, or omitted"
+    ],
+    "record_count": 1,
+    "complete": false,
+    "scope_incompleteness": [],
+    "incompleteness": [
+      "codex exec JSONL omits per-event timestamps and internal model-call boundaries",
+      "1 event payload(s) are truncated, corrupt, or omitted"
+    ],
+    "quality": {
+      "event_id_unique": true,
+      "ordinal_contiguous": true,
+      "correlation": {
+        "session_id_present": 1,
+        "turn_id_present": 1,
+        "turn_id_required": 1,
+        "turn_id_missing": 0,
+        "tool_call_id_present": 0,
+        "event_count": 1
+      },
+      "tool_pairing": {
+        "calls": 0,
+        "results": 0,
+        "paired": 0,
+        "orphan_calls": 0,
+        "orphan_results": 0,
+        "missing_call_ids": 0
+      },
+      "payload_issue_events": 1,
+      "replay_fidelity": "reduced"
+    }
+  },
+  "privacy": {
+    "review_state": "reviewed",
+    "native_results_embedded": false,
+    "payloads": "prompt, reasoning, tool bodies, and responses replaced by SHA-256 digests"
+  },
+  "provenance": {
+    "adapter": "plugins.benchmark_harness.trajectory_artifacts",
+    "model": "gpt-5.4",
+    "provider": "codex-cli",
+    "source": "subscription",
+    "effort": "high",
+    "native_schema": "codex exec JSONL"
+  },
+  "runtime_event_refs": [],
+  "evidence_refs": [
+    {
+      "kind": "native_receipt",
+      "schema_id": "codex.exec.jsonl@native",
+      "reference": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authority": "Codex exec JSONL event stream"
+    }
+  ],
+  "artifact_digests": [
+    {
+      "path": "threestudio__requirements_completion/execution.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "threestudio__requirements_completion/execution.trajectory.source.json",
+      "sha256": "3ba368b1d0082515ecfe4c987b9ba8cd13416b9c64e1092c58e206bc91ad5c6b"
+    }
+  ]
+}

@@ -89,6 +89,20 @@ exact tool pairs with zero orphans. Private bodies are digested, so all 20
 records are scope-complete and intentionally replay-incomplete. This is a
 paired harness diagnostic, not an MCPMark Verified leaderboard submission.
 
+### 2026-08-13 GPT-5.4 filesystem/standard paired diagnostic
+
+The [validated comparison bundle](mcpmark/results-paired/mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813/)
+compares GEODE and Codex CLI on all 30 pinned `filesystem/standard` tasks with
+GPT-5.4 subscription and `high` reasoning. GEODE scored **21/30 (70.0%)** and
+Codex scored **20/30 (66.7%)** in one paired repetition. The two reviewed
+trajectory releases preserve 3,381 canonical events and 1,430 exact tool
+call/result pairs with zero orphans.
+
+This is a directional harness diagnostic, not a causal runtime comparison or
+the full 127-task MCPMark Verified leaderboard. Native total-input counters use
+different cache-accounting conventions; cache-excluded input was higher for
+GEODE, so the result does not support a token-efficiency claim.
+
 ### 2026-08-12 GPT-5.4 GEODE token-efficiency rerun
 
 The [matched rerun record](reports/e2e-validation/2026-08-12-mcpmark-geode-gpt54-token-efficiency-rerun.md)
