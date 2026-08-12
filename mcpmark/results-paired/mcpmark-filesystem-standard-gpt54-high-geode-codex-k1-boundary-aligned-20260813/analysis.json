@@ -1,0 +1,88 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813",
+  "analyzed_at": "2026-08-12T23:18:20Z",
+  "run_spec_sha256": "d1d804e93c4dcdf62545b653f749697d73686d2891b3ebc79d4b751653d8ba1c",
+  "attempts_sha256": "a6e099723a95be84676ed4d2e78f7353bc5e6fcb17cb637d165b000828497d03",
+  "selected_attempt_ids": [
+    "boundary-aligned-pass1-complete"
+  ],
+  "answer": "Across the frozen 30-task pass, GEODE scored 21/30 and Codex scored 20/30. The signed GEODE-minus-Codex accuracy delta was 0.033333; GEODE native-reported input tokens were 7740631 versus 14750143 for Codex.",
+  "metrics": [
+    {
+      "name": "paired_verifier_accuracy_delta",
+      "value": 0.03333333333333333,
+      "numerator": 1,
+      "denominator": 30,
+      "unit": "ratio",
+      "source_ref": "score-receipt.json",
+      "source_locator": {
+        "value": "/paired/accuracy_delta/value",
+        "numerator": "/paired/accuracy_delta/numerator",
+        "denominator": "/paired/accuracy_delta/denominator"
+      }
+    },
+    {
+      "name": "geode_native_input_tokens",
+      "value": 7740631,
+      "numerator": 7740631,
+      "denominator": 30,
+      "unit": "tokens",
+      "source_ref": "score-receipt.json",
+      "source_locator": {
+        "value": "/arms/geode/native_input_tokens",
+        "numerator": "/arms/geode/native_input_tokens",
+        "denominator": "/paired/accuracy_delta/denominator"
+      }
+    },
+    {
+      "name": "codex_native_input_tokens",
+      "value": 14750143,
+      "numerator": 14750143,
+      "denominator": 30,
+      "unit": "tokens",
+      "source_ref": "score-receipt.json",
+      "source_locator": {
+        "value": "/arms/codex/native_input_tokens",
+        "numerator": "/arms/codex/native_input_tokens",
+        "denominator": "/paired/accuracy_delta/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "The frozen conjunction is satisfied; promotion authority remains none because this is one directional repetition."
+  },
+  "limitations": [
+    "One repetition does not estimate run-to-run variance or pass@k.",
+    "GEODE and Codex are different harnesses, so the comparison is directional rather than causal.",
+    "Native input-token counters use different cache-accounting conventions; fresh-input counters are secondary diagnostics.",
+    "Published trajectories are scope-complete but digest-reduced and not replay-complete.",
+    "Hard 1200-second timeouts and ordinary verifier failures are retained as performance outcomes.",
+    "Three prior infrastructure-invalid runs are lineage only and are excluded from the denominator."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "score-receipt.json",
+      "sha256": "5862ea786b4b1517dff7518b11d395878b2ec15f07272725d83c0bd2d755b8fa"
+    },
+    {
+      "kind": "verifier-receipt",
+      "path": "verifier-index.json",
+      "sha256": "7e3bfc6bd6dcc6213a4022bf108f7d1e0b8349adaa829f74c15b3c6818a6e5ed"
+    },
+    {
+      "kind": "trajectory",
+      "path": "trajectory-index.json",
+      "sha256": "531a215bed0d792fb5b2ab7df762e18c728118ad59b5a0f044a64de3e207a8ce"
+    },
+    {
+      "kind": "other",
+      "path": "timing-end.json",
+      "sha256": "22cfc21cc22c859bada3e9e7879d743876aafac84cfb9c69e4869da2742d41f2"
+    }
+  ]
+}

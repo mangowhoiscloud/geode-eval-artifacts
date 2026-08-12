@@ -1,0 +1,115 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813",
+  "created_at": "2026-08-12T19:02:41Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-12T19:02:41Z",
+    "live_test_approved": true,
+    "operator": "Codex session on behalf of the repository owner"
+  },
+  "study": {
+    "research_question": "On all 30 pinned MCPMark Verified filesystem/standard tasks, how do GEODE and Codex compare when both use the GPT-5.4 ChatGPT subscription route at high effort?",
+    "research_gap": "No infrastructure-valid 30-pair run exists. Preserved pilots exposed shared-fixture extraction races, a runner argument defect, false GEODE convergence, exception-shaped verifier receipts, and unequal failure boundaries. This run starts only after serial fixture freezing, round-level convergence repair, verifier guards, strict empty-response handling, equal hard wall deadlines, and escaped runtime-error invalidation.",
+    "hypothesis": "On one complete paired pass over 30 tasks, GEODE verifier accuracy will be no more than 10 percentage points below Codex and GEODE will use fewer native-reported input tokens.",
+    "primary_metric": {
+      "name": "paired_verifier_accuracy_delta",
+      "unit": "ratio",
+      "direction": "target",
+      "aggregation": "(GEODE verifier passes across 30 tasks - Codex verifier passes across 30 tasks) / 30",
+      "denominator": 30
+    },
+    "decision_rule": "Support the hypothesis only if all 30 task pairs are infrastructure-valid, the paired verifier accuracy delta is at least -0.10, and total native-reported GEODE input tokens are lower than Codex; otherwise report mixed or unsupported without promotion.",
+    "invalidation_rule": "Stop on a route, model, effort, GEODE revision, Codex revision, upstream harness revision, verifier patch digest, task count/order, fixture reset, or verifier identity mismatch. Missing native result, trajectory, or verifier receipt invalidates the attempt. An escaped setup, provider, hook, or programming exception is infrastructure-invalid. A recovered ordinary model retry, model action error, hard outer 1200-second timeout, and ordinary verifier failure remain performance outcomes.",
+    "analysis_plan": "Execute one task pair at a time with max concurrency one, alternating which arm runs first by task index. Report pass@1, paired discordances, accuracy delta, native input/output/reasoning/cache counters, MCP calls, wall time, retry evidence, and failure classes. Do not claim pass@k, causal runtime parity, or publication-grade uncertainty from one repetition. Exclude preserved infrastructure-invalid pilots from the primary denominator and publish them only as failure lineage."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "a8f45f3c9f05860656ced8c57f12fbc7d3b49159",
+      "branch": "codex/gpt54-mcpmark-full-pair",
+      "dirty": false
+    },
+    "harness": {
+      "name": "MCPMark Verified filesystem/standard with verifier guard patch",
+      "source": "https://github.com/eval-sys/mcpmark.git",
+      "revision": "cd45b7f57923b9b3985467f5139927575f83141c+patch-sha256:04a34e664f590c36bc85765581318c0887000f6ca79213efd97705795ca4dac4"
+    },
+    "model": {
+      "provider": "OpenAI",
+      "label": "gpt-5.4",
+      "route": "subscription",
+      "reasoning": "high"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 build 24D70",
+      "architecture": "arm64",
+      "reset_strategy": "Pre-materialize and digest all ten shared fixture categories. For each task and arm, upstream MCPMark creates a fresh PID-scoped backup, executes one arm, applies the same patched verifier, and cleans the backup before the next arm. Arm-first order alternates by task index.",
+      "initial_state_ref": "git-tree:7b8c71786a427e1d58e2fc5b0fba5d1fefa43054"
+    },
+    "execution": {
+      "command_redacted": "Run runner.sh. It validates all frozen revisions, patch and fixture digests, then invokes plugins.benchmark_harness.run_mcpmark serially for each ordered task with filesystem/standard, GPT-5.4 high, k=1, timeout=1200, and subscription authentication. OPENAI_API_KEY=dummy satisfies upstream argument preflight only.",
+      "ordered_workload_ids": [
+        "desktop/music_report",
+        "desktop/project_management",
+        "desktop/timeline_extraction",
+        "desktop_template/budget_computation",
+        "desktop_template/contact_information",
+        "desktop_template/file_arrangement",
+        "file_context/duplicates_searching",
+        "file_context/file_merging",
+        "file_context/file_splitting",
+        "file_context/pattern_matching",
+        "file_context/uppercase",
+        "file_property/size_classification",
+        "file_property/time_classification",
+        "folder_structure/structure_analysis",
+        "folder_structure/structure_mirror",
+        "legal_document/dispute_review",
+        "legal_document/individual_comments",
+        "legal_document/solution_tracing",
+        "papers/author_folders",
+        "papers/find_math_paper",
+        "papers/organize_legacy_papers",
+        "student_database/duplicate_name",
+        "student_database/english_talent",
+        "student_database/gradebased_score",
+        "threestudio/code_locating",
+        "threestudio/output_analysis",
+        "threestudio/requirements_completion",
+        "votenet/dataset_comparison",
+        "votenet/debugging",
+        "votenet/requirements_writing"
+      ],
+      "workload_ids_sha256": "50483308573ce407abaf0700885d56c6df0453557669dddce9edcece83710433",
+      "repetitions": 1,
+      "seed_schedule": ["upstream-run-1"],
+      "max_concurrency": 1,
+      "timeout_seconds": 1200,
+      "budget": {
+        "kind": "subscription",
+        "limit": null,
+        "unit": "ChatGPT subscription quota"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "Codex CLI 0.145.0 at source revision dad1db87bb5ad4b92af6b0f58502d12453681f81",
+      "comparability": "directional",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "native-results",
+    "trajectory": "trajectory-index.json",
+    "verifier_receipts": "verifier-index.json",
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": "publication-manifest.json"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "Keep raw logs, messages, fixture paths, tool bodies, subscription diagnostics, local absolute paths, sessions, and credentials private. Publish only reviewed summaries, verifier-bound outcomes, reduced trajectory releases, portable relative references, hashes, and allowlisted metadata."
+  }
+}
