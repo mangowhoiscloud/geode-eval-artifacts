@@ -78,6 +78,17 @@ N=1 runs cleared the audit-quality gate and showed no concerning behavior;
 37/38 judge dimensions matched. OpenClaw remains unscored because no validated
 same-protocol adapter exists. This is a diagnostic, not a leaderboard.
 
+### 2026-08-12 GPT-5.4 GEODE / Codex paired MCPMark diagnostic
+
+The [paired run record](reports/e2e-validation/2026-08-12-mcpmark-geode-codex-gpt54-paired.md)
+compares GEODE and Codex CLI on the same ten upstream `filesystem/easy`
+tasks, GPT-5.4 subscription route, `high` effort, fixture reset, and exact
+task verifier. Both arms scored **9/10** and failed the same trailing-LF case.
+The two reviewed trajectory releases retain 486 canonical events and 166
+exact tool pairs with zero orphans. Private bodies are digested, so all 20
+records are scope-complete and intentionally replay-incomplete. This is a
+paired harness diagnostic, not an MCPMark Verified leaderboard submission.
+
 ### 2026-07-31 GPT-5.6 subscription benchmark
 
 The [run record](reports/e2e-validation/2026-07-31-gpt56-benchmark.md)
