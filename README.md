@@ -89,6 +89,16 @@ exact tool pairs with zero orphans. Private bodies are digested, so all 20
 records are scope-complete and intentionally replay-incomplete. This is a
 paired harness diagnostic, not an MCPMark Verified leaderboard submission.
 
+### 2026-08-12 GPT-5.4 GEODE token-efficiency rerun
+
+The [matched rerun record](reports/e2e-validation/2026-08-12-mcpmark-geode-gpt54-token-efficiency-rerun.md)
+repeats the GEODE arm on the same ten `filesystem/easy` tasks after repairing
+the model-facing MCP result boundary and multi-round prompt prefix. Accuracy
+stayed **9/10**, while native input tokens fell **29.8%** and output tokens fell
+**19.0%**. The reviewed release retains 188 canonical events and 54 exact tool
+pairs with zero orphans. This is a single-trial matched diagnostic, not an
+MCPMark Verified score or a billing claim.
+
 ### 2026-07-31 GPT-5.6 subscription benchmark
 
 The [run record](reports/e2e-validation/2026-07-31-gpt56-benchmark.md)
