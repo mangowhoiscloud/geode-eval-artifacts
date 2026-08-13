@@ -1,0 +1,1959 @@
+{
+  "aggregates": {
+    "guard-25000": {
+      "action_elapsed_seconds": 6076.699046207999,
+      "attempts": 15,
+      "cache_read_tokens": 2351104,
+      "cache_write_tokens": 0,
+      "deadline_expirations": 2,
+      "fresh_input_tokens": 3782288,
+      "input_tokens": 6133392,
+      "mcp_calls": 443,
+      "mcp_errors": 75,
+      "output_tokens": 146710,
+      "passes": 7,
+      "read_references": 532,
+      "reasoning_tokens": 107425,
+      "repeated_read_references": 211,
+      "runner_envelope_seconds": 6119.09554521,
+      "token_usage_covered_attempts": 13,
+      "token_usage_missing_attempts": 2,
+      "tool_result_truncations": 15,
+      "unique_read_references": 321
+    },
+    "unlimited-0": {
+      "action_elapsed_seconds": 4910.216562125017,
+      "attempts": 15,
+      "cache_read_tokens": 778240,
+      "cache_write_tokens": 0,
+      "deadline_expirations": 2,
+      "fresh_input_tokens": 2202725,
+      "input_tokens": 2980965,
+      "mcp_calls": 255,
+      "mcp_errors": 27,
+      "output_tokens": 101113,
+      "passes": 10,
+      "read_references": 315,
+      "reasoning_tokens": 74764,
+      "repeated_read_references": 63,
+      "runner_envelope_seconds": 4951.086035666,
+      "token_usage_covered_attempts": 13,
+      "token_usage_missing_attempts": 2,
+      "tool_result_truncations": 0,
+      "unique_read_references": 252
+    }
+  },
+  "fresh_input_formula": "input - cache_read - cache_write",
+  "generated_at": "2026-08-13T17:31:03.011803Z",
+  "paired_outcomes": {
+    "both_fail": 5,
+    "both_pass": 7,
+    "unlimited_only_pass": 3
+  },
+  "repeated_read_formula": "read references - unique read references within one arm",
+  "rows": [
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 114.31929208303336,
+        "expired": false,
+        "runner_envelope_seconds": 117.581038917,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-01-legal_document__dispute_review--guard-25000/stdout.log",
+          "sha256": "6f164567dac63a18d4aac3febd7c90ff2925bae007d4a640d811d1248a0e12d3"
+        },
+        {
+          "path": "runner-logs/r1-01-legal_document__dispute_review--guard-25000/stderr.log",
+          "sha256": "aa84428ea5b83ab189b1a1cd1e92bc2e96b41249fe351af66d117f6e3b09124c"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "f800f077caafa1e3169a5ba49358dcb5ba3cc74e47631139bdbfe273f3db3db3"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "db7a7e271426eb4eb86aff93133eb1ec4bbe79c4453a11529197259ba42b8dd7"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "54c7a1974f274e710a0c5df3cba69f46c07ea6b744f3f49567458c8c60815a3a"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "27a3a7c8440a2052e5668b43164a1393ad073573c1ea0e0731d8f68813b38e5c"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "8e2da713f473d954a2b1a6c9f495c1408c4a59dbe4bc9b3b6422a607e72a8ee6"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "94a0eecef3fae904da0f72299a4284a6d5833d0681ba2a5b1289df533599e86d"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 11,
+        "errors": 3,
+        "read_references": 9,
+        "repeated_read_references": 6,
+        "tool_result_truncations": 1,
+        "unique_read_references": 3
+      },
+      "repetition": 1,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 129024,
+        "cache_write": 0,
+        "fresh_input": 139767,
+        "input": 268791,
+        "output": 3145,
+        "reasoning": 2087
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 68.34064887498971,
+        "expired": false,
+        "runner_envelope_seconds": 71.787117417,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-01-legal_document__dispute_review--unlimited-0/stdout.log",
+          "sha256": "6c4e0625517bf11d220ce7c6cddff1f1d3a75fbac0bdecaa4c1904dece633c71"
+        },
+        {
+          "path": "runner-logs/r1-01-legal_document__dispute_review--unlimited-0/stderr.log",
+          "sha256": "fcb21232274f44238240189017af941ebd7a89a2ba6eae5e1b7d47bdee3b7949"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "9ee6d0f91e428a67c5b6db9d49fa558a2c015495a5f69b989e2a1fd417750fa2"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "bd5e4b54f8da46adceb7b1d0539a6dffa34d31d2f6323af0c3aa993799c225df"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "b4ab29db58598d95b6c92afdd30ab84e8acc791196f40b7b1531cec4ecfb51a8"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "a610a8ba96f79bf69132709ee00a47f4181dd57ffa19ed4848021defe95bf88b"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "60d3af6e163a25c477f251374b13de78b3de54722198258758cc1096ff18df15"
+        },
+        {
+          "path": "native-results/r1-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "4c6482317bd0025f56e0d7eed24fa3af0365005b0b349991139dbfc00e97f1a3"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 8,
+        "errors": 3,
+        "read_references": 6,
+        "repeated_read_references": 3,
+        "tool_result_truncations": 0,
+        "unique_read_references": 3
+      },
+      "repetition": 1,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 24064,
+        "cache_write": 0,
+        "fresh_input": 118930,
+        "input": 142994,
+        "output": 2035,
+        "reasoning": 1229
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 96.15363641700242,
+        "expired": false,
+        "runner_envelope_seconds": 99.494207209,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-02-legal_document__individual_comments--guard-25000/stdout.log",
+          "sha256": "195e4ae6f4b6eae0186124c312cd835ebd534ea6f997c57f55408fe82c9cc191"
+        },
+        {
+          "path": "runner-logs/r1-02-legal_document__individual_comments--guard-25000/stderr.log",
+          "sha256": "39658bdb898e23895ad424ab80d331512162a909e846703254c7c5b1a2a60ed4"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "f100722922c11286b36f29a24d52a64be419155f0ba9a6d2526de19f4f406c97"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "61a22903ced59d116d757ea6c30aacd963d727daf11eadf90dde57c127380078"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "b542a045fa84ab7c787fa2a27e8c93f8611033c0629f9c10383525a221757227"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "c5f17836a706dc39ad7868c154bf0034a0c8754f7a932d04e36aee56650419ad"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "6d7ac5ee5ae1d4282f181673c52df09f251bef94cbfbe6cf8d16bf5b00bb4599"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "807e2e2f4fc120c07a8b6175f019e0e03b772bf27973fdf81dac38ac917e9388"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 8,
+        "errors": 0,
+        "read_references": 8,
+        "repeated_read_references": 4,
+        "tool_result_truncations": 1,
+        "unique_read_references": 4
+      },
+      "repetition": 1,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 41984,
+        "cache_write": 0,
+        "fresh_input": 195909,
+        "input": 237893,
+        "output": 3120,
+        "reasoning": 2224
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 82.18844525003806,
+        "expired": false,
+        "runner_envelope_seconds": 85.478386542,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-02-legal_document__individual_comments--unlimited-0/stdout.log",
+          "sha256": "0de4c7772ac53a835fe5dfe89b889b97dc920cfcf4dfc23f41defc4a81814822"
+        },
+        {
+          "path": "runner-logs/r1-02-legal_document__individual_comments--unlimited-0/stderr.log",
+          "sha256": "c69da086c97bced57b70c5f43333dfb827dd7e6c20d93f2ff1ed4469331647e0"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "ff3a4d095ecc2da1056c8873557ecbb752eb1284a0c9dfade6d2ab53fdd4d999"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "4f154d5d73b7ecd11ab174911d5303047063673232ff3a9dca4094544fdb0c24"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "dd7112d832a5db20130d1300c71b27e27b1d5b93e968655a5ca02cbb92d9010d"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "441dd9c70ddfd262dd19c59e2dab010ef0044ccf963abea587ec4d1de8032d90"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "6d7ac5ee5ae1d4282f181673c52df09f251bef94cbfbe6cf8d16bf5b00bb4599"
+        },
+        {
+          "path": "native-results/r1-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "0a002767ca97492d35cc3826fd4d358c50b1a2241a06cb10d8467740d0c12df2"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 5,
+        "errors": 0,
+        "read_references": 4,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 4
+      },
+      "repetition": 1,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 20992,
+        "cache_write": 0,
+        "fresh_input": 155249,
+        "input": 176241,
+        "output": 2975,
+        "reasoning": 2370
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 183.76245083299,
+        "expired": false,
+        "runner_envelope_seconds": 186.892155125,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-03-legal_document__solution_tracing--guard-25000/stdout.log",
+          "sha256": "b0aff915fa6a1d51c42138344ce58f8b78eb6b6e9262f61834b2ca156d16d16c"
+        },
+        {
+          "path": "runner-logs/r1-03-legal_document__solution_tracing--guard-25000/stderr.log",
+          "sha256": "9537b8b3ac0e3c4b1ce5be44f3f6f45d707b299c44a48d99d45995aadf800e46"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "5c1f23ee97ad043d575a174574002faadb9b9605d21e23e320ad286c3b2c534b"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "7bfb99dd25219b9bcc7778f48e87277507f50c1a4150eed057140e864b9e5bd3"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "16121048ee5a9a0d5ddadc8e30560a41ace47c5b5e22c2e556624bbb50c85f47"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "b3c85a8027dc61e3d637944061649b40ec62c02a576593d28478b6a75d33da19"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "ec889e73b9623f70dbbc86d0d42b4e63ecb77561fa07f549b03a4dff8f1f11ed"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "7c11f70ad9903eaf0255c1be882633f33379e447e9c720804eeca06d9cb901c5"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 17,
+        "errors": 0,
+        "read_references": 18,
+        "repeated_read_references": 12,
+        "tool_result_truncations": 1,
+        "unique_read_references": 6
+      },
+      "repetition": 1,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 61952,
+        "cache_write": 0,
+        "fresh_input": 373752,
+        "input": 435704,
+        "output": 6435,
+        "reasoning": 4656
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 96.53345662500942,
+        "expired": false,
+        "runner_envelope_seconds": 99.07870925,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-03-legal_document__solution_tracing--unlimited-0/stdout.log",
+          "sha256": "576234095b64c655b5189b922c1cd5fa082fadf21562e913044296ed38e30576"
+        },
+        {
+          "path": "runner-logs/r1-03-legal_document__solution_tracing--unlimited-0/stderr.log",
+          "sha256": "ed67bc371da3c9fc09a0dd23cd3321628685dc163b73e9fa1179b03c0ec48b4e"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "557ad4eae08a976ce5496335fdf07a2aff757f828f308f3f1a103a85875cb995"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "8584dd74b4fcad0d9da87113d90822e935410f16d706dd6bcaa07acfd10e90fb"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "42063b99e33191312a7fedb4bc7297a8e97403cec262fc981a19584daa7eee9c"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "0e8d674929962e16ce8978668900e2c83564e752c9ee1366efa380cd4c7a33a1"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "f9c582ea8cf40530b7094f14d7ece4e79e03657e34390a106d106ae6f3713aa5"
+        },
+        {
+          "path": "native-results/r1-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "73ac0654b50332dd490c599f7f67f88664dee1f078d7bfc9011d1ccdb349403e"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 10,
+        "errors": 0,
+        "read_references": 6,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 6
+      },
+      "repetition": 1,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 22016,
+        "cache_write": 0,
+        "fresh_input": 230008,
+        "input": 252024,
+        "output": 3207,
+        "reasoning": 2386
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 1194.410294166999,
+        "expired": false,
+        "runner_envelope_seconds": 1197.387463834,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-04-papers__author_folders--guard-25000/stdout.log",
+          "sha256": "72382bc3ba77ff6ff60a92d2b24f85181906a49cb30378d13c73fba2db2946e1"
+        },
+        {
+          "path": "runner-logs/r1-04-papers__author_folders--guard-25000/stderr.log",
+          "sha256": "1754b57ecb913927ec6fa3e89ff6bc5749c9b8d1b32d3491a62fe6658e39f2fd"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "3adcb5148c6193e72f77b9c040e4e879aa267203f953e6b42f1ff0b16cc9fa9e"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "65b91d652dacdbfd7f20b23fc9f7d734f6625951e925c0e761ae5eb220d98f69"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "e94f4c73e4e3de0df4559008479582fae838aa0c0a7dc2d544fa9b1c741fbce7"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "727ae5d6d9538183cf83239f958997e7ac49f0203a3bc5026ae4f8649d27e194"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "ffb228b9ad27e5d72b4a767bedd2d87e973229bd387129ee37aa733882cf5c5e"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "0e35c68cb78aa5c6bedc108db557503f293b2c15cb790417f65ef1f4e5580535"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 26,
+        "errors": 6,
+        "read_references": 91,
+        "repeated_read_references": 7,
+        "tool_result_truncations": 1,
+        "unique_read_references": 84
+      },
+      "repetition": 1,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": {
+        "cache_read": 308736,
+        "cache_write": 0,
+        "fresh_input": 294036,
+        "input": 602772,
+        "output": 59743,
+        "reasoning": 53163
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 1181.6452670409926,
+        "expired": false,
+        "runner_envelope_seconds": 1184.404905708,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-04-papers__author_folders--unlimited-0/stdout.log",
+          "sha256": "5c46205c39f641f35dd5897448c51d715351838ff79dee52ebb34affce64ac11"
+        },
+        {
+          "path": "runner-logs/r1-04-papers__author_folders--unlimited-0/stderr.log",
+          "sha256": "d51f8e26f0c2f6cf0bc57cd579d78c8108a3895e113a704e93605b768ca8e1de"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "7953369f67b4db967e41acccc925d748fe09f57408f66cfa61645d4397f438d9"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "44cfad82ba35fd73ab1830d9c0976b76f42f5f3a3b5c076c3b18cf40cc6c9fd8"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "0020dc66e57657e2c51930d337552f7c2569f0da5bed9246f8825471ac261aa5"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "235d6c6e6ba748ebaeb0068c56e7155755c1f74fb9fbe93c67b388d48e66c44a"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "17682d26541955825806d7bc7e5cca305ac2b30c0c0197732fc9ab43b5784d5a"
+        },
+        {
+          "path": "native-results/r1-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "724e6fc4623c5948a9a2594cdf46feb4d2704a2c627f827d114f8f6c45e687b8"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 22,
+        "errors": 6,
+        "read_references": 93,
+        "repeated_read_references": 9,
+        "tool_result_truncations": 0,
+        "unique_read_references": 84
+      },
+      "repetition": 1,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": {
+        "cache_read": 144896,
+        "cache_write": 0,
+        "fresh_input": 171053,
+        "input": 315949,
+        "output": 54597,
+        "reasoning": 48407
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 205.1192543330253,
+        "expired": false,
+        "runner_envelope_seconds": 207.703072458,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-05-papers__organize_legacy_papers--guard-25000/stdout.log",
+          "sha256": "ec7cb9d98d60d882b0903cfaf4f6b33db2d3154e2926fa2036904245ec6c9533"
+        },
+        {
+          "path": "runner-logs/r1-05-papers__organize_legacy_papers--guard-25000/stderr.log",
+          "sha256": "57612d325253a91abe8dae775b12be9dece04c78552a63c6fde82303c51f2a18"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "9b73c547a7e8b2a13a900accde7c42abadcf18b42a9d113cce3804652319115b"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "b9117a49a296b873274afc0c8adaa24cef71bd7c015eb5876ec245ad377cfb1d"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "29150f2ad6abad9dfd50eff17cd46bf0f193501c5b2bbb762806293ec95f7573"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "bb5d5511a11754792397b5a52072c09808b46425552855c4f0d856136e67072f"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "810edf77d4e954029008c114a2683bb844b05b4b4363c89d57c1430bc5c68b6c"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "132f70d1eb2e524281bcb4ced45dd04571be2ac654002d30038aad31978e0148"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 38,
+        "errors": 4,
+        "read_references": 20,
+        "repeated_read_references": 10,
+        "tool_result_truncations": 1,
+        "unique_read_references": 10
+      },
+      "repetition": 1,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 271360,
+        "cache_write": 0,
+        "fresh_input": 147542,
+        "input": 418902,
+        "output": 8639,
+        "reasoning": 3959
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 178.00796183396596,
+        "expired": false,
+        "runner_envelope_seconds": 180.318161875,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r1-05-papers__organize_legacy_papers--unlimited-0/stdout.log",
+          "sha256": "6118c4d5878158a7fa6796c34d8635d3d229bb07dfc63ef5ddeca7586629c5b6"
+        },
+        {
+          "path": "runner-logs/r1-05-papers__organize_legacy_papers--unlimited-0/stderr.log",
+          "sha256": "e4f029d545cd12f7607cfa73588d3d89bdc920e39a99adf1bf9fe542bacf7af3"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "308953844231f2d891946d59b3f8ea73aa4b7a6627de13116870d3cd15278f51"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "91b38dd1326a4ed3ef312a85b869d748ae86003e8b1d99f4426eb826a0e13506"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "0e65df0880b152c0119930f5361a0cbe128450800e0bda354db11928eabf94d1"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "670af160f9922c6d57ed664f6a4a6ff8a6fe4e94e3dc4ade3bfc650e318ddb30"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "0c5abaf7e23087010f89e392d06998b1c03c426c8b1ee0694047057441d54ab9"
+        },
+        {
+          "path": "native-results/r1-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "f16c564d1bee7516c0016d36b9d6ffb1a862a19769266e625a378ebf901477cb"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 39,
+        "errors": 4,
+        "read_references": 12,
+        "repeated_read_references": 2,
+        "tool_result_truncations": 0,
+        "unique_read_references": 10
+      },
+      "repetition": 1,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 176640,
+        "cache_write": 0,
+        "fresh_input": 150321,
+        "input": 326961,
+        "output": 6745,
+        "reasoning": 2439
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 118.27723487501498,
+        "expired": false,
+        "runner_envelope_seconds": 120.74890425,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-01-legal_document__dispute_review--guard-25000/stdout.log",
+          "sha256": "72dfdb464c6dcddef0b97c5cc8a7cbedefa8cbaddccf21e6870c9a8744369dbf"
+        },
+        {
+          "path": "runner-logs/r2-01-legal_document__dispute_review--guard-25000/stderr.log",
+          "sha256": "3a8c205c440459a64cdfafc4da7226d3cef1f8286001c3dc9c15cdf2d12a03cc"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "dc4fab0307ca9206a256370e2f643bbd151a585887ba5de74ad815ed7104c179"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "8e88059fcfabdcf8c62b7851d32147ce77da87fafa39b6ebef73c204df73e130"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "5aa708cd6e09a857be9b54b9f675a2345a80b1c06c3e1b20bbd571b3d513a520"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "20ff06dc29032e94bd8fb07be2e0cc5ab4d8a20f738943f90a2f3d5db07d1fa6"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "612043e25db30fef2b1d6a708786f1d1c2e6e2cc5ee3c838907531af3e27f5d2"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "66c060e715d5bd68bb2e1a1fabc0d26685d39413d34e91fa251a6d68e935b7eb"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 9,
+        "errors": 0,
+        "read_references": 7,
+        "repeated_read_references": 4,
+        "tool_result_truncations": 1,
+        "unique_read_references": 3
+      },
+      "repetition": 2,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 93184,
+        "cache_write": 0,
+        "fresh_input": 255550,
+        "input": 348734,
+        "output": 3511,
+        "reasoning": 2652
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 71.50612941698637,
+        "expired": false,
+        "runner_envelope_seconds": 73.845051208,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-01-legal_document__dispute_review--unlimited-0/stdout.log",
+          "sha256": "586531b56fce80cc4acf32272937618ddb989654c40b8ae3cd86e40e3cc09e1d"
+        },
+        {
+          "path": "runner-logs/r2-01-legal_document__dispute_review--unlimited-0/stderr.log",
+          "sha256": "f954b20a8b4df8328482c0857aaf5777ab3d35a8c5aa3ab3558042106df52db3"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "e841585141cba9874a69d57bf1903ed91a2b3d02749ab02b04f0288cf6e5e0a2"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "675c6c94157b9fef7256b29816460cd8632f6b8b96ba6d500082f317a849d348"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "1da9fc44d8cb1d259696adfa35d6080ccdeab81fa221d5b451c1e60e02ac6e07"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "1b90ff847825edf2e942bffd39f65970482628d0287d35db5ed779da7b15f682"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "612043e25db30fef2b1d6a708786f1d1c2e6e2cc5ee3c838907531af3e27f5d2"
+        },
+        {
+          "path": "native-results/r2-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "26fe8009a7f0c7d100d015cde7ad6a4828635c23a2fbbc01b08396a607105f4e"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 8,
+        "errors": 3,
+        "read_references": 6,
+        "repeated_read_references": 3,
+        "tool_result_truncations": 0,
+        "unique_read_references": 3
+      },
+      "repetition": 2,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 25600,
+        "cache_write": 0,
+        "fresh_input": 117394,
+        "input": 142994,
+        "output": 1973,
+        "reasoning": 1206
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 140.331645208993,
+        "expired": false,
+        "runner_envelope_seconds": 142.603886292,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-02-legal_document__individual_comments--guard-25000/stdout.log",
+          "sha256": "5e60c22df2343191ef3b329612a59afa7c711cb54d48cb3d96fa45a51fab6add"
+        },
+        {
+          "path": "runner-logs/r2-02-legal_document__individual_comments--guard-25000/stderr.log",
+          "sha256": "6aa61a231bac63218bec194d8c086351883cdcfe5a3fa9a77ed0754fbc08a4af"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "be81de2aea79d1e7b0b2021c00411feef58cab15be256aa1d441b9a5c0bfc9a0"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "f1337d86c3f6d3d4bdb1a3667b39ad0f338d934ea0c63e0fca0c1d07d2b63e80"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "31291790a056ea5d3017705488b5b0e1658d40c3a06132cb1cb03fac2b7ce799"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "22b648e334345951ba079e41b919c5522895439c8ccbd485c7ff929b99015503"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "6d7ac5ee5ae1d4282f181673c52df09f251bef94cbfbe6cf8d16bf5b00bb4599"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "bd26b55de52eaf278d188c21a08022dcae02ca9cedf9d147617cd6c8d39c0c9b"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 16,
+        "errors": 4,
+        "read_references": 16,
+        "repeated_read_references": 12,
+        "tool_result_truncations": 1,
+        "unique_read_references": 4
+      },
+      "repetition": 2,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 152576,
+        "cache_write": 0,
+        "fresh_input": 217872,
+        "input": 370448,
+        "output": 4892,
+        "reasoning": 3266
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 54.098643584002275,
+        "expired": false,
+        "runner_envelope_seconds": 56.472102916,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-02-legal_document__individual_comments--unlimited-0/stdout.log",
+          "sha256": "1c03b2dddb77618bc23430e09088232b5c3f58132c6594029c63e39a340dc740"
+        },
+        {
+          "path": "runner-logs/r2-02-legal_document__individual_comments--unlimited-0/stderr.log",
+          "sha256": "c72fe3ea753a0dcda2bf81e7d4f485c0711d031bfc37e26327bb490fdadcd44e"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "f61a9c6952a610697efa762caa10be2c6f01d8f89ed985fa67a2c89bb941f893"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "bd052e2fac88a3dd55f83a940cb84464e4a3bc79a28e79f266a6bf16bba2d484"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "083683b11b8697dd8a524274d2f22eeda059d86f1f2e8600d6bd1afc3b483a67"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "23341b0f70e6624d67ad029b9adc21a23161a2eac9a30ff2315246a3870c46c7"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "6d7ac5ee5ae1d4282f181673c52df09f251bef94cbfbe6cf8d16bf5b00bb4599"
+        },
+        {
+          "path": "native-results/r2-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "962d660814df46532993a2497c95c7a3236161f4be80f5e351409c8a3ee25c28"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 5,
+        "errors": 0,
+        "read_references": 4,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 4
+      },
+      "repetition": 2,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 21504,
+        "cache_write": 0,
+        "fresh_input": 155077,
+        "input": 176581,
+        "output": 1645,
+        "reasoning": 1013
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 453.30995479098056,
+        "expired": false,
+        "runner_envelope_seconds": 455.937011916,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-03-legal_document__solution_tracing--guard-25000/stdout.log",
+          "sha256": "231a41f111cd8e532192e9581a93d51c6e2cb28bbb6caea5da0c66b6b55fc6c2"
+        },
+        {
+          "path": "runner-logs/r2-03-legal_document__solution_tracing--guard-25000/stderr.log",
+          "sha256": "9f37cba7189a811d9fda66281fcd5465dc16019d741b9fd7b14def13df6fb9a7"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "b6506bf6d7c2301204d47674f94a9d549542e39ab43f7f5fb8ff79e09a91a3ff"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "b32abeee4fc2a16ec863f7240284a446ca7253b0f9cbb1a2a624664fb53753db"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "82feef140d0ee2839b0fdbec5e1e86014f8864676d6ab3e446d216f23f092dbc"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "a1433f5c6fa54cf4d042eb2735ead327ab97af477bfb3500fb744356d9adfaa0"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "566ddc6054e7c898f16c0d1d5ccd96e05b112d005b4df6cfd7e00280e425cae9"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "e64b8970ac92850bac53d196e0bff76291a97dda4603b609602160b0ca6ab5e4"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 57,
+        "errors": 5,
+        "read_references": 58,
+        "repeated_read_references": 52,
+        "tool_result_truncations": 1,
+        "unique_read_references": 6
+      },
+      "repetition": 2,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 364544,
+        "cache_write": 0,
+        "fresh_input": 738177,
+        "input": 1102721,
+        "output": 15155,
+        "reasoning": 9814
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 109.09522287501022,
+        "expired": false,
+        "runner_envelope_seconds": 111.356869041,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-03-legal_document__solution_tracing--unlimited-0/stdout.log",
+          "sha256": "ffd904ec0da51c8cc5d0bc5c6461e0b075eb1c15e85c49182d1ca4f0384ead52"
+        },
+        {
+          "path": "runner-logs/r2-03-legal_document__solution_tracing--unlimited-0/stderr.log",
+          "sha256": "9ab6445efdc673628d8d53f731298cb0b35e53e745609030ddf41438f8553860"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "90e15424c702a742d783ac3e32bd838725c8d46378fc9f1b0cce9da8d3c75f13"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "0b11b7aabb316aff8bbd2ba860db3ac1ad4579393a799fa82d5bc38250fe3a31"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "ac825a2430f6630159b1c4cd364145d2f4cbe261e1e7eddc6977a9d01c841c8b"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "d67505c5616bf143db163bb1bf96a2613c90a0ef623c36cc42681a8b3f23e851"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "ec889e73b9623f70dbbc86d0d42b4e63ecb77561fa07f549b03a4dff8f1f11ed"
+        },
+        {
+          "path": "native-results/r2-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "1bb5001ac8ac8cd90cbc54b7c5cd0df22f2112920d1e3614b1ed5f070493b724"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 5,
+        "errors": 0,
+        "read_references": 6,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 6
+      },
+      "repetition": 2,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 17920,
+        "cache_write": 0,
+        "fresh_input": 234231,
+        "input": 252151,
+        "output": 3960,
+        "reasoning": 3260
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 1200.009969292034,
+        "expired": true,
+        "runner_envelope_seconds": 1202.956786792,
+        "status": "right_censored"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-04-papers__author_folders--guard-25000/stdout.log",
+          "sha256": "0cc7b7b42a1f08eec7cea5ba6ad0554b01a9c70d3c9916ef3147b0ae92d7c6a0"
+        },
+        {
+          "path": "runner-logs/r2-04-papers__author_folders--guard-25000/stderr.log",
+          "sha256": "70354c386b1bbc977c7dbcdec1225d0549a935e1541a42cf0a9bff0eff7d47f2"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "7b47dfd229444cf163203092adf5452f697f4922d744a9d4212a468858035b7d"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "cad4e7fe2841098f586f24afdf582b9492b58718d4f69d1843b1e7aa894ec2a1"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "1cf103c0c0169565cb4aef6e68c97c038c675975960a78af169c0be435a94d53"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "f513dd19e38a8a348902eb1e18bf8ff45615fb965f0a101aa65faa57bcde57cc"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "460d89daf24f632f71b43d463153ef8d0dfecdbcb04b2ff30e6a67f2d06a0125"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "a82d7f875c50c3a455bb7ff157ddc9ba33445e6c472e7068710daf76bea61da8"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 47,
+        "errors": 25,
+        "read_references": 99,
+        "repeated_read_references": 15,
+        "tool_result_truncations": 1,
+        "unique_read_references": 84
+      },
+      "repetition": 2,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": null,
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 1200.0032964999555,
+        "expired": true,
+        "runner_envelope_seconds": 1203.293720959,
+        "status": "right_censored"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-04-papers__author_folders--unlimited-0/stdout.log",
+          "sha256": "ae3717dd987f9eba30546c2bf279e6702167b4f06dcf85374b80e7b38af54801"
+        },
+        {
+          "path": "runner-logs/r2-04-papers__author_folders--unlimited-0/stderr.log",
+          "sha256": "2621d57af6e20b0e765a12e758edbdf654dd54a47ec8733c1300323c4f04973c"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "953e5d740f27d98c4781cdc4274047d7de7c792566fe028642e2409a6e966c48"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "07f97a685f271664722585a28891384993d6a305535091323c388dc430217038"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "079caec4ce61e24d952155da75f2574e5b7a3a296587546d0e95f90b34b4d729"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "f1de3f85273283d371420b127b029e993f43ac6f02620a5e74943527ac616555"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "460d89daf24f632f71b43d463153ef8d0dfecdbcb04b2ff30e6a67f2d06a0125"
+        },
+        {
+          "path": "native-results/r2-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "cd931d6d1467bdecabd452d6a2c64d4ed410958379a990a753c7ec3852b70be0"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 41,
+        "errors": 0,
+        "read_references": 17,
+        "repeated_read_references": 2,
+        "tool_result_truncations": 0,
+        "unique_read_references": 15
+      },
+      "repetition": 2,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": null,
+      "verifier_pass": false
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 281.8887721669744,
+        "expired": false,
+        "runner_envelope_seconds": 284.668386125,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-05-papers__organize_legacy_papers--guard-25000/stdout.log",
+          "sha256": "1725a2d2019ee791bd4cda9fc7b7f4488336b427297149084869a0af658c0829"
+        },
+        {
+          "path": "runner-logs/r2-05-papers__organize_legacy_papers--guard-25000/stderr.log",
+          "sha256": "97a15ff671635d2d7b9a1aec72d296559a6c9ef59f425cab9c8663fa232c4bef"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "775c7fb71d1fadd599098908fe117d5ae2709a399b6a03b2526cb15a0d7abd1c"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "a4051b7bb803443cbfb75086f186769f8d7ee26aa013d8c0dd2eea7e6d8b09b1"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "bed920872a379cb9442554fb6ed5ecbe101ed0b8ee64d4d137a032c5c31b1d7f"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "e15a007793a88bf8f20ee15b86bd8075cef436786e956eac4c2a16642737d3f8"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "1637e1eb37b170103d7d0f83ea55e9aeb87a065519d3503f3736273786717f02"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "7b59806a5e9cd7c5fde5bb4858645200415eaf13d45fa9bfbc5f272d27c422d8"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 39,
+        "errors": 5,
+        "read_references": 20,
+        "repeated_read_references": 10,
+        "tool_result_truncations": 1,
+        "unique_read_references": 10
+      },
+      "repetition": 2,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 355328,
+        "cache_write": 0,
+        "fresh_input": 221776,
+        "input": 577104,
+        "output": 10981,
+        "reasoning": 6130
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 213.97675791598158,
+        "expired": false,
+        "runner_envelope_seconds": 216.733983333,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r2-05-papers__organize_legacy_papers--unlimited-0/stdout.log",
+          "sha256": "0bd1d9de9083dd92ee80f1f824364aa8c2dfb1a58bc8b686504907c86a36d8f7"
+        },
+        {
+          "path": "runner-logs/r2-05-papers__organize_legacy_papers--unlimited-0/stderr.log",
+          "sha256": "b564a922eb9cb950dce38a950ddeb30ae12c520caefc6ee61e391e84fa4f22e3"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "c60b951a0c6b28ee72183459385a11988d0d254d352b5227e2a3875f7792d75e"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "999e2dd1466f1bb07211689139d7dfab57c6ee07a50ae307980fc3c9dd818343"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "d4a62dd9987eddea8bd7184dba3a9da5ad05070832bd992dbbdb5be7f852cebd"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "62f5dcc5745c08a3da0b95bf76bcac182852a864e2080fc756a59643d5c20c79"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "48b813c82d5cd9ce2c4a059b2a636aa615614cdaff4297cce0aadc4e02542609"
+        },
+        {
+          "path": "native-results/r2-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "c385037ce6af851cb024e1613723a5245396c76a80866e0c7543d4a9d99c090a"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 38,
+        "errors": 4,
+        "read_references": 20,
+        "repeated_read_references": 10,
+        "tool_result_truncations": 0,
+        "unique_read_references": 10
+      },
+      "repetition": 2,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 131072,
+        "cache_write": 0,
+        "fresh_input": 183060,
+        "input": 314132,
+        "output": 8648,
+        "reasoning": 3929
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 156.04231687495485,
+        "expired": false,
+        "runner_envelope_seconds": 158.692406417,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-01-legal_document__dispute_review--guard-25000/stdout.log",
+          "sha256": "e4ebf88b59e3bf489aa8d1cee67f64885b825b38756e0e107aeb3d2aae867123"
+        },
+        {
+          "path": "runner-logs/r3-01-legal_document__dispute_review--guard-25000/stderr.log",
+          "sha256": "0f243c5829df6ae5975c0c291491eeb85914f9ea1277d0ec1ff493ca7a574787"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "1d37491be370c21bfd36d74c1fe69ba97128fc1f8962d5aefcab915662ea5dab"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "940648c620e026ce356fed59426c80033b207647bf6bab5f323f528eee8bd5a1"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "a854730d8186104373bf94adb1a5a19563100addcf26bc7c58740dee5d598b75"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "41387737ebd8ad64a0dd61c1f4dceca970d26d315aefa2c85ebd87b599987ccc"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "612043e25db30fef2b1d6a708786f1d1c2e6e2cc5ee3c838907531af3e27f5d2"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "4afd4adae9fcaf05ac252e19bf74db3b7b92918c05eb459be8da6da45b2572c4"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 10,
+        "errors": 3,
+        "read_references": 9,
+        "repeated_read_references": 6,
+        "tool_result_truncations": 1,
+        "unique_read_references": 3
+      },
+      "repetition": 3,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 28160,
+        "cache_write": 0,
+        "fresh_input": 239420,
+        "input": 267580,
+        "output": 2884,
+        "reasoning": 1906
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 84.0748869170202,
+        "expired": false,
+        "runner_envelope_seconds": 86.745251375,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-01-legal_document__dispute_review--unlimited-0/stdout.log",
+          "sha256": "627030f46ffc20de0943ec86f460aa4e7857c3e1873edd4deb0278df5dd3a90d"
+        },
+        {
+          "path": "runner-logs/r3-01-legal_document__dispute_review--unlimited-0/stderr.log",
+          "sha256": "e9c5df2f0e0937de03e30fb6b5c53d10ec57489cd3bc0d7386038740d494459e"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/meta.json",
+          "sha256": "8df94cd99addc9ae2598988c8effcbbb9a4c76b2766dcb5b0ec1e7bec2efe6c4"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "6d3bcb1736493874e5f58a45638b3b04eaa0bf96b7b6ffad25e7302a5799a47f"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.trajectory.json",
+          "sha256": "a4185e8fdd0984cbafa8b81eb56f2e759be19274648560b1dec455f46c9414ae"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.deadline.json",
+          "sha256": "998446d937b3e34eece0478fc41ef50ddd52edce2cd37b567d3094c3629b3d40"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/messages.json",
+          "sha256": "6db6a4b17f3b6bbae4746eaf1c95770e6ef000dd3cbee9c608ef22952f5b71df"
+        },
+        {
+          "path": "native-results/r3-01-legal_document__dispute_review--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__dispute_review/execution.log",
+          "sha256": "5c40d2ad91a5e6e96bd2cca1d7e274b8fc4b92da6d0ab9ee0e29be0adee4dbef"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 7,
+        "errors": 3,
+        "read_references": 6,
+        "repeated_read_references": 3,
+        "tool_result_truncations": 0,
+        "unique_read_references": 3
+      },
+      "repetition": 3,
+      "task": "legal_document/dispute_review",
+      "task_index": 1,
+      "tokens": {
+        "cache_read": 21504,
+        "cache_write": 0,
+        "fresh_input": 116597,
+        "input": 138101,
+        "output": 1955,
+        "reasoning": 1253
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 148.03748825000366,
+        "expired": false,
+        "runner_envelope_seconds": 150.438260958,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-02-legal_document__individual_comments--guard-25000/stdout.log",
+          "sha256": "63d68f524ce0d3c1d0cd630217cf3e1e97b1abe11e6ac7d9325ee0a76af1a2ec"
+        },
+        {
+          "path": "runner-logs/r3-02-legal_document__individual_comments--guard-25000/stderr.log",
+          "sha256": "ca344cb1a47ba63e3d8bdd108ebd6358cb060321c0959dfba59d42e231e5a1ff"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "29317e90d65822ba639382e1076589c98f8edd1cbdaea7a9d6b1ec86b99679c6"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "f7cb86924c3a18124243ed158229e5c0cbf885a5dcbdd8f452d14053ceea49be"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "eefb7d534f2adf20fb86f76c3e4f819e9c9d1694f4334772c1c63cc862e5467b"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "e04f5bc4b5f2b98e5dd07cdede72479b09043e0d7a55b39fd39e588a44c18597"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "6d7ac5ee5ae1d4282f181673c52df09f251bef94cbfbe6cf8d16bf5b00bb4599"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "7a070c1d114ffa403ddc14ffded835d2cc61792cb3353a0c87a1e3f80a8073b6"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 20,
+        "errors": 4,
+        "read_references": 20,
+        "repeated_read_references": 16,
+        "tool_result_truncations": 1,
+        "unique_read_references": 4
+      },
+      "repetition": 3,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 33792,
+        "cache_write": 0,
+        "fresh_input": 199790,
+        "input": 233582,
+        "output": 5332,
+        "reasoning": 3362
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 82.9961041250499,
+        "expired": false,
+        "runner_envelope_seconds": 85.309784791,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-02-legal_document__individual_comments--unlimited-0/stdout.log",
+          "sha256": "2e2903665092ca0bc5c756f6e104a2a58fb78384d3c2dd56251f408b6a0e8022"
+        },
+        {
+          "path": "runner-logs/r3-02-legal_document__individual_comments--unlimited-0/stderr.log",
+          "sha256": "a91f2e41af9bdd3b2075b50052ce93b27a2132c5fcec05b484e2759840428661"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/meta.json",
+          "sha256": "0b35d61c1c6140ab2a200daa959b7c60ebe98ee56fcd7e1304703c825b62623e"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "97a8582f982570e779ada92ce4bde58270a06a432d9a5a0c81d154c3524c70af"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.trajectory.json",
+          "sha256": "80d48352742022b794e2bb001bbfec87802778714da6f017a9103646f243322d"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.deadline.json",
+          "sha256": "e778cbff39e3ace7e495b0c2fbbbb634d06472588afd4cbee99eb2e16a6eb5f9"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/messages.json",
+          "sha256": "3dea09beabf276707b7cce36db49e07d642ed78e372b3287cd9f7b0ab58289dc"
+        },
+        {
+          "path": "native-results/r3-02-legal_document__individual_comments--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__individual_comments/execution.log",
+          "sha256": "2c22c80ed11878e686b73985705dd01415c6595807d10f60359c52f96c460a3a"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 5,
+        "errors": 0,
+        "read_references": 4,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 4
+      },
+      "repetition": 3,
+      "task": "legal_document/individual_comments",
+      "task_index": 2,
+      "tokens": {
+        "cache_read": 21504,
+        "cache_write": 0,
+        "fresh_input": 154738,
+        "input": 176242,
+        "output": 2333,
+        "reasoning": 1729
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 344.0733664999716,
+        "expired": false,
+        "runner_envelope_seconds": 346.848188375,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-03-legal_document__solution_tracing--guard-25000/stdout.log",
+          "sha256": "a01ed6baa1564f97a5d1ea2923950c744559406d942de071ff4e0f5336f47f0c"
+        },
+        {
+          "path": "runner-logs/r3-03-legal_document__solution_tracing--guard-25000/stderr.log",
+          "sha256": "85843271224badf3f014d487350144b584addfb16bf687498abdcc9312eca016"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "9bb89982dd8bc04456888a588a25b96b5e7cc45922f8fe31f786ff4f8d76d2eb"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "6a29d23d7a19903712d5bfc2ac1f6e34967f93785952ef332c836e935cd30f9c"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "5b2cf58538621200e0ee293c97d271461e679a01a6883494c2987ee703ad7436"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "16096be1b3d28b1986c80678655d1eda6956e51171fa29667903e8ae99e6aeec"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "f9c582ea8cf40530b7094f14d7ece4e79e03657e34390a106d106ae6f3713aa5"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "3d36292fec77dad221fdda8f1d78f04517b69cc9a719b9c93721ffcdcce44064"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 38,
+        "errors": 0,
+        "read_references": 38,
+        "repeated_read_references": 32,
+        "tool_result_truncations": 1,
+        "unique_read_references": 6
+      },
+      "repetition": 3,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 158720,
+        "cache_write": 0,
+        "fresh_input": 474501,
+        "input": 633221,
+        "output": 13083,
+        "reasoning": 9427
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 83.66734116600128,
+        "expired": false,
+        "runner_envelope_seconds": 86.200850417,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-03-legal_document__solution_tracing--unlimited-0/stdout.log",
+          "sha256": "ac0dbc83190dd2d772776c084e7d8024dab3226544338cbd66b9f787dec1a2b4"
+        },
+        {
+          "path": "runner-logs/r3-03-legal_document__solution_tracing--unlimited-0/stderr.log",
+          "sha256": "30d5598e89c0a5b73507137afc184a5e8c76300b863216776d435e74498b55e4"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/meta.json",
+          "sha256": "6bd9d1b45c231a6bed2d20293ab80ff18df5c7cbdb8210b1f138ea849480b434"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "24c82b1a7182ac98e2ea0dcb04d64ea1bb203e1bb4ebf6a0d690fb26ba2d1570"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.trajectory.json",
+          "sha256": "49f49775777099e5087e275a7a02255965082e5b84d5df0239b3afbc8b2342ba"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.deadline.json",
+          "sha256": "68b12ada10d56a9ccb3a3c78e2bf674cf259fa8d61abfaa6dfc640dca38d6091"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/messages.json",
+          "sha256": "f9c582ea8cf40530b7094f14d7ece4e79e03657e34390a106d106ae6f3713aa5"
+        },
+        {
+          "path": "native-results/r3-03-legal_document__solution_tracing--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/legal_document__solution_tracing/execution.log",
+          "sha256": "6aa045367732c43326ffa608908d9ad64cbeab357d1e3dadf88368d3e993445a"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 5,
+        "errors": 0,
+        "read_references": 6,
+        "repeated_read_references": 0,
+        "tool_result_truncations": 0,
+        "unique_read_references": 6
+      },
+      "repetition": 3,
+      "task": "legal_document/solution_tracing",
+      "task_index": 3,
+      "tokens": {
+        "cache_read": 21504,
+        "cache_write": 0,
+        "fresh_input": 230795,
+        "input": 252299,
+        "output": 3159,
+        "reasoning": 2465
+      },
+      "verifier_pass": true
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 1200.0126766250469,
+        "expired": true,
+        "runner_envelope_seconds": 1203.327136334,
+        "status": "right_censored"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-04-papers__author_folders--guard-25000/stdout.log",
+          "sha256": "967dc6a5749bbccf322c82692f4d7ca8c1e2d8f689876a377b703df5ea0eab8a"
+        },
+        {
+          "path": "runner-logs/r3-04-papers__author_folders--guard-25000/stderr.log",
+          "sha256": "450e4db53b128fd62364470193464fba3b7636530f84fa76b1576ba360920d79"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "351d7bb824a8b9e73f0ba4ebbf2f5f88eaf598b93e550a63539ede204c26e1d7"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "c623c30d6b9adfd874d9b20bd9ebc3c493ffe3d7bfd6c0fa036bb2256362f2bd"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "62dfffa04af03081a2b35a22cfd0d3994970ef5298cb4ffeaea536a288ab0b10"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "e0b5a5e520e0464bd53a2bbe0c7355691e6ad41e8b2727153dbac9b501c51758"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "460d89daf24f632f71b43d463153ef8d0dfecdbcb04b2ff30e6a67f2d06a0125"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "02bf71c565162d868a8253f0ce77d922c33b4f6584153544cc4e4172c95c1b4e"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 66,
+        "errors": 12,
+        "read_references": 99,
+        "repeated_read_references": 15,
+        "tool_result_truncations": 1,
+        "unique_read_references": 84
+      },
+      "repetition": 3,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": null,
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 1200.0138179999776,
+        "expired": true,
+        "runner_envelope_seconds": 1203.13605625,
+        "status": "right_censored"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-04-papers__author_folders--unlimited-0/stdout.log",
+          "sha256": "80af7ba416e908a60a29111bc0cc029cd890685d16b02a8d265e41728615859b"
+        },
+        {
+          "path": "runner-logs/r3-04-papers__author_folders--unlimited-0/stderr.log",
+          "sha256": "688bb1c2ff520643b83741c39e45d9f881824ce5a31735e3f459f718e5f7c10e"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/meta.json",
+          "sha256": "3292ab54dbaabfd4e5b7def9df1d8bf060a70222291d0f35f8773f052aa3cd27"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "e31b39b3e11980700709f1b87d1467aae4cfbc4a4b2ff76925a8bc0900249590"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.trajectory.json",
+          "sha256": "7a1fb83fc0ef2fd446c06d38a54a32962eaa23ecbc9f9f6b8cbbf64a6c7cbca4"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.deadline.json",
+          "sha256": "959312c6aa08771b367efc56c6127bd228d2cc90d6a3cb854cbd43c261328c65"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/messages.json",
+          "sha256": "460d89daf24f632f71b43d463153ef8d0dfecdbcb04b2ff30e6a67f2d06a0125"
+        },
+        {
+          "path": "native-results/r3-04-papers__author_folders--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__author_folders/execution.log",
+          "sha256": "98990e93f4e1f04f347b39e30fa9637fc906bd6cc0ae940759f6445a1f001ccf"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 19,
+        "errors": 0,
+        "read_references": 105,
+        "repeated_read_references": 21,
+        "tool_result_truncations": 0,
+        "unique_read_references": 84
+      },
+      "repetition": 3,
+      "task": "papers/author_folders",
+      "task_index": 4,
+      "tokens": null,
+      "verifier_pass": false
+    },
+    {
+      "arm": "guard-25000",
+      "deadline": {
+        "action_elapsed_seconds": 240.9506937909755,
+        "expired": false,
+        "runner_envelope_seconds": 243.816640208,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-05-papers__organize_legacy_papers--guard-25000/stdout.log",
+          "sha256": "7c692b63899b3d1933f2c397512e5b9c4d076a4f45db96d6ef678dd536abfbe3"
+        },
+        {
+          "path": "runner-logs/r3-05-papers__organize_legacy_papers--guard-25000/stderr.log",
+          "sha256": "ebe8c12d06b858e92739fdc4eed6b122f6bce73f09a1fd4faf815f25bc505846"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "8ef398074d5606c1daade61c3c4851e528b918867a9efe8ffb4eb46deca8e657"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "f55c4751e565743bee9a7fc338116215a550e270e4d349b4294c1f585fc675e6"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "111eb610676dd638511c7eee832f3ef79a89b0772cabffe7feda2981fa01c736"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "37f361e3290e113123c3dcbed7e0fa79514512abc47ff49b370590d6ad3d7419"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "5ccc1a28096ebf9162977e4ef16ff40d088a4f645a56df928666ef79216b13da"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--guard-25000/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "cc056f2ddd8978ea187ee73eb2b0e04af08f4bddee443a2d579abd9fe932ae6b"
+        }
+      ],
+      "max_tool_result_tokens": 25000,
+      "mcp": {
+        "calls": 41,
+        "errors": 4,
+        "read_references": 20,
+        "repeated_read_references": 10,
+        "tool_result_truncations": 1,
+        "unique_read_references": 10
+      },
+      "repetition": 3,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 351744,
+        "cache_write": 0,
+        "fresh_input": 284196,
+        "input": 635940,
+        "output": 9790,
+        "reasoning": 4779
+      },
+      "verifier_pass": false
+    },
+    {
+      "arm": "unlimited-0",
+      "deadline": {
+        "action_elapsed_seconds": 204.06858200003626,
+        "expired": false,
+        "runner_envelope_seconds": 206.925084584,
+        "status": "complete"
+      },
+      "evidence": [
+        {
+          "path": "runner-logs/r3-05-papers__organize_legacy_papers--unlimited-0/stdout.log",
+          "sha256": "a9774b9767befdc3962c8dec1ed4ef3bad209fd5244b5022bb72c6f6d1264937"
+        },
+        {
+          "path": "runner-logs/r3-05-papers__organize_legacy_papers--unlimited-0/stderr.log",
+          "sha256": "06750114d5532e8b9454b2d4e9d186799acdcee37863849dd4b5d7b428d560ea"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/meta.json",
+          "sha256": "f0a1b2f6f094e5367e8f4224b8fb236a94da9f764e5114211e09658a067ea392"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/summary.json",
+          "sha256": "0743320b2157e8b53857b9410ed70a1f037f8ef30c7b6537aee12a85767f63f4"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.trajectory.json",
+          "sha256": "6338944d49d2c1f641d4afa9f5c72b1109c19ccdc6a01b0e9302c04a4dd15a4d"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.deadline.json",
+          "sha256": "1b45ecd239df3d1db9cd4d50fc03030fc78f5aa322dbb4b59b445366fc2c1c0d"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/messages.json",
+          "sha256": "71d01d2dc77774bd12740cdbb57d2d34b123dbf46dfa5e64f6556d871252bd75"
+        },
+        {
+          "path": "native-results/r3-05-papers__organize_legacy_papers--unlimited-0/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/geode-gpt-5-4-high__filesystem/run-1/papers__organize_legacy_papers/execution.log",
+          "sha256": "a4e437b9ab2733fa5f827d82d11df42c3e2a776faa8df79f6d6505a95f9120c2"
+        }
+      ],
+      "max_tool_result_tokens": 0,
+      "mcp": {
+        "calls": 38,
+        "errors": 4,
+        "read_references": 20,
+        "repeated_read_references": 10,
+        "tool_result_truncations": 0,
+        "unique_read_references": 10
+      },
+      "repetition": 3,
+      "task": "papers/organize_legacy_papers",
+      "task_index": 5,
+      "tokens": {
+        "cache_read": 129024,
+        "cache_write": 0,
+        "fresh_input": 185272,
+        "input": 314296,
+        "output": 7881,
+        "reasoning": 3078
+      },
+      "verifier_pass": true
+    }
+  ],
+  "run_id": "mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z",
+  "schema_id": "geode.mcpmark-tool-cap-diagnostic@1",
+  "schema_version": 1,
+  "source_events": {
+    "path": "runner-events.jsonl",
+    "sha256": "c10f09372b4f7da6c0e0a68bdb5ec0a2ebf989f3d4deafa04932911b3e387f71"
+  },
+  "source_result": {
+    "path": "runner-result.json",
+    "sha256": "04f39957cfd7b3a603b54f58d45a6171be9caf156a273314b74bae33e95611ed"
+  }
+}

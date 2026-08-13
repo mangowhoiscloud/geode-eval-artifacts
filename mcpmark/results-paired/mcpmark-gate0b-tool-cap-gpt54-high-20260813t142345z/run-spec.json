@@ -1,0 +1,94 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z",
+  "created_at": "2026-08-13T14:23:45Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-13T14:23:45Z",
+    "live_test_approved": true,
+    "operator": "Codex operator under explicit user approval in the current task"
+  },
+  "study": {
+    "research_question": "Does removing the 25K tool-result guard on the same large-result MCP tasks increase verifier accuracy and change rereads, fresh input tokens, and wall time?",
+    "research_gap": "The earlier Filesystem-30 observation did not isolate the 25K direct MCP tool-result guard under a common deadline and replicated matched task state.",
+    "hypothesis": "Across 15 task-repetitions per arm, unlimited-0 produces more verifier passes than guard-25000.",
+    "primary_metric": {
+      "name": "verifier-pass-rate arm delta",
+      "unit": "ratio",
+      "direction": "target",
+      "aggregation": "(sum(unlimited-0 passes) - sum(guard-25000 passes)) / 15",
+      "denominator": 15
+    },
+    "decision_rule": "supported if unlimited-0 passes exceed guard-25000 passes; mixed if equal; not-supported if lower",
+    "invalidation_rule": "Invalidate the run if any attempt changes the frozen deadline or identity contract, cannot bind the arm cap or reconstruct truncation, fails fixture cleanup or reset, lacks native result, verifier, or trajectory evidence, or exits on an unrecovered provider quota or transport error.",
+    "analysis_plan": "Select all 30 fresh attempts; compute the signed verifier-pass-rate arm delta as (unlimited-0 passes - guard-25000 passes) / 15; report secondary token, wall-time, MCP call/error, reread, and truncation metrics for explanation only; preserve infrastructure-invalid attempts and do not replace or score them."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "02f71fae260f050a5ab02af943cfd2244441da7f",
+      "branch": "codex/mcpmark-tool-cap-live",
+      "dirty": false
+    },
+    "harness": {
+      "name": "MCPMark filesystem/standard Gate 0B",
+      "source": "https://github.com/eval-sys/mcpmark.git",
+      "revision": "cd45b7f57923b9b3985467f5139927575f83141c+patch-sha256:3f41f13a8edf7b40f411bf0a76412c28fc9629338d9e5051d5633dc064c563e6"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-5.4",
+      "route": "subscription",
+      "reasoning": "high"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 (24D70)",
+      "architecture": "arm64",
+      "reset_strategy": "For every child process, MCPMark copies the pinned category fixture to a unique PID-scoped backup, executes and verifies only that copy, removes it, and the outer runner rejects backup residue while re-hashing the source category before each arm.",
+      "initial_state_ref": "fixture-tree-sha256:c8cfb2815f63ded54a7d79ffed2e0719190bb2dc1e571112a6012f97f95e9f17"
+    },
+    "execution": {
+      "command_redacted": ".venv/bin/python -m plugins.benchmark_harness.run_mcpmark_pair --profile max-tool-result-tokens --run-spec artifacts/eval/runs/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z-preregistration/run-spec.json --mcpmark-root artifacts/eval/harnesses/mcpmark --output-dir artifacts/eval/runs/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z-attempt-001 --python .venv/bin/python",
+      "ordered_workload_ids": [
+        "legal_document/dispute_review",
+        "legal_document/individual_comments",
+        "legal_document/solution_tracing",
+        "papers/author_folders",
+        "papers/organize_legacy_papers"
+      ],
+      "workload_ids_sha256": "b0953abbe11808bd25a03ef97355380ae2a58f0086025cd2557f1cacf32f3a00",
+      "repetitions": 3,
+      "seed_schedule": [
+        "upstream-run-1",
+        "upstream-run-2",
+        "upstream-run-3"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 1200,
+      "budget": {
+        "kind": "wall-time",
+        "limit": 1200,
+        "unit": "seconds"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "guard-25000",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "native-results",
+    "trajectory": "native-results",
+    "verifier_receipts": "runner-events.jsonl",
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": "publication-manifest.json"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "Keep raw prompts, model messages, tool arguments and results, local paths, account identity, OAuth material, and other secrets local; publish only reviewed digest projections, native outcomes, verifier receipts, and redacted trajectories."
+  }
+}

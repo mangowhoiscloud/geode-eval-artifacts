@@ -108,6 +108,25 @@ only. They do not support a matched-timeout, causal, efficiency, hypothesis,
 or promotion claim. The exact runner is digest-bound but withheld, so the
 public bundle is not independently executable by itself.
 
+### 2026-08-14 GPT-5.4 MCP tool-result cap diagnostic
+
+The [validated Gate 0B bundle](mcpmark/results-paired/mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z/)
+runs the same five pinned MCPMark `filesystem/standard` large-result tasks for
+three counterbalanced paired repetitions under a common 1,200-second deadline.
+With GPT-5.4 subscription and `high` reasoning, `unlimited-0` passed **10/15**
+and `guard-25000` passed **7/15**, a signed delta of **+3/15 = +0.20**. This
+supports the frozen hypothesis only for this diagnostic slice;
+`promotion_authority=none`, and it is not a full MCPMark Verified headline.
+
+Exact observed fresh-input totals cover 13/15 attempts per arm:
+**3,782,288** tokens for `guard-25000` and **2,202,725** for `unlimited-0`.
+The four score-bearing `author_folders` deadline expirations emitted no native
+token counts. Six reviewed releases retain 26 scope-complete,
+replay-incomplete trajectories; four scope-incomplete timeout trajectories
+remain withheld while their verifier outcomes remain in the primary score.
+The prior infrastructure-invalid runner attempt is preserved as lineage and
+contributes zero denominator.
+
 ### 2026-08-12 GPT-5.4 GEODE token-efficiency rerun
 
 The [matched rerun record](reports/e2e-validation/2026-08-12-mcpmark-geode-gpt54-token-efficiency-rerun.md)
