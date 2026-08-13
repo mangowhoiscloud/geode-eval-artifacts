@@ -1,0 +1,83 @@
+{
+  "schema": "geode.eval-correction.v1",
+  "correction_id": "mcpmark-gpt54-filesystem-standard-timeout-boundary-20260813",
+  "issued_at": "2026-08-12T23:59:57Z",
+  "run_id": "mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813",
+  "status": "supersedes-prospective-claim",
+  "original_artifact_revision": "c5683ea5a21d04911e2c8114622cc90f0af4f771",
+  "supersession": {
+    "original_analysis": {
+      "path": "analysis.json",
+      "sha256": "0659df620aad2bbe15fe85fd882b19c866c1c4a9f499cf8c37b729248b37bc67"
+    },
+    "replacement_analysis": {
+      "path": "analysis.superseding-2026-08-13.json",
+      "sha256": "562db280b94b8c8b3e2168550443ebd47c816c866b68f60ec96f3ea5cb75c079"
+    },
+    "affected_claims": [
+      "The prospective hypothesis was supported.",
+      "The two arms used equal hard wall deadlines."
+    ],
+    "retained_evidence": [
+      "Native verifier outcomes: GEODE 21/30 and Codex 20/30.",
+      "Per-task score and verifier receipts.",
+      "Reviewed behavior trajectories and arm-native usage counters."
+    ]
+  },
+  "immutable_sources": {
+    "run_spec": {
+      "path": "run-spec.json",
+      "sha256": "d1d804e93c4dcdf62545b653f749697d73686d2891b3ebc79d4b751653d8ba1c",
+      "affected_pointers": [
+        "/study/research_gap",
+        "/study/invalidation_rule"
+      ]
+    },
+    "attempts": {
+      "path": "attempts.jsonl",
+      "sha256": "a6e099723a95be84676ed4d2e78f7353bc5e6fcb17cb637d165b000828497d03"
+    },
+    "score_receipt": {
+      "path": "score-receipt.json",
+      "sha256": "5862ea786b4b1517dff7518b11d395878b2ec15f07272725d83c0bd2d755b8fa"
+    },
+    "verifier_index": {
+      "path": "verifier-index.json",
+      "sha256": "7e3bfc6bd6dcc6213a4022bf108f7d1e0b8349adaa829f74c15b3c6818a6e5ed"
+    },
+    "trajectory_index": {
+      "path": "trajectory-index.json",
+      "sha256": "531a215bed0d792fb5b2ab7df762e18c728118ad59b5a0f044a64de3e207a8ce"
+    },
+    "withheld_runner": {
+      "path": "runner.sh",
+      "sha256": "fe14222157a56071731226cf1b86d01a81db1147ba34f0981f863430f8c263f6",
+      "published": false
+    },
+    "geode_source": {
+      "revision": "a8f45f3c9f05860656ced8c57f12fbc7d3b49159",
+      "path": "plugins/benchmark_harness/mcpmark_geode_agent.py",
+      "sha256": "35fd79e0f15786da9e24a4ce6bad6eff2fd9e104aef9124f0fb07dcb2608b412",
+      "git_blob": "1fd96da45a23206bf70ebc50f9bada5859497577"
+    }
+  },
+  "finding": {
+    "geode_boundary": "The 1200-second asyncio timeout wrapped loop.arun at source lines 424-427, after MCP server creation, server entry, list_tools, and loop construction at lines 406-421. Timeout finalization and session marking were outside.",
+    "codex_boundary": "The 1200-second wait_for wrapped process.communicate at lines 588-591 after process creation at lines 581-587, so Codex-internal MCP startup was inside the timed process lifetime; result parsing remained outside.",
+    "deviation": "The runtime boundaries did not satisfy the preregistered equal-hard-deadline condition.",
+    "reproducibility": "The exact runner is digest-bound but withheld; the original 72-file public bundle is not independently executable from its frozen command alone."
+  },
+  "disposition": {
+    "hypothesis_status": "invalidated",
+    "promotion_authority": "none",
+    "allowed_claim": "Retrospective descriptive directional observation only.",
+    "forbidden_claims": [
+      "matched-timeout comparison",
+      "causal runtime comparison",
+      "token efficiency",
+      "prospective hypothesis support",
+      "promotion"
+    ],
+    "follow_up": "A future comparison must publish its executable runner and place both setup/execution surfaces under a preregistered, tested timeout contract."
+  }
+}

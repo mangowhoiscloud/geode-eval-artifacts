@@ -98,10 +98,15 @@ Codex scored **20/30 (66.7%)** in one paired repetition. The two reviewed
 trajectory releases preserve 3,381 canonical events and 1,430 exact tool
 call/result pairs with zero orphans.
 
-This is a directional harness diagnostic, not a causal runtime comparison or
-the full 127-task MCPMark Verified leaderboard. Native total-input counters use
-different cache-accounting conventions; cache-excluded input was higher for
-GEODE, so the result does not support a token-efficiency claim.
+**Correction:** post-run source review found that the two adapters did not
+implement the preregistered equal hard-wall timeout boundary. The original
+prospective “supported” decision is superseded by the
+[corrected analysis](mcpmark/results-paired/mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813/analysis.superseding-2026-08-13.json)
+and its [digest-bound receipt](mcpmark/results-paired/mcpmark-filesystem-standard-gpt54-high-geode-codex-k1-boundary-aligned-20260813/correction.json).
+The native 21/30 and 20/30 outcomes remain retrospective descriptive evidence
+only. They do not support a matched-timeout, causal, efficiency, hypothesis,
+or promotion claim. The exact runner is digest-bound but withheld, so the
+public bundle is not independently executable by itself.
 
 ### 2026-08-12 GPT-5.4 GEODE token-efficiency rerun
 
