@@ -1,0 +1,117 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "mcpmark-gate0c-filesystem30-gpt54-high-20260813t190922z",
+  "created_at": "2026-08-13T19:09:22Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-13T19:09:22Z",
+    "live_test_approved": true,
+    "operator": "Codex operator under explicit user approval in the current task"
+  },
+  "study": {
+    "research_question": "On the same 30 MCPMark Filesystem tasks, semantic fixture state, verifier, GPT-5.4/high subscription route, and common timed action surface, how do GEODE and Codex differ in verifier accuracy?",
+    "research_gap": "The prior 30-task observation used different timeout start boundaries and its fixture receipt did not bind score-bearing file mtimes or empty directories.",
+    "hypothesis": "Across the frozen 30-task workload, GEODE verifier accuracy is no more than 10 percentage points below Codex verifier accuracy.",
+    "primary_metric": {
+      "name": "GEODE minus Codex verifier-pass-rate delta",
+      "unit": "ratio",
+      "direction": "target",
+      "aggregation": "(sum(geode passes) - sum(codex passes)) / 30",
+      "denominator": 30
+    },
+    "decision_rule": "supported if the GEODE-minus-Codex verifier-pass-rate delta is at least -0.10; not-supported if lower",
+    "invalidation_rule": "Invalidate the run if any arm changes the frozen deadline, model, route, tool schema, task, semantic fixture, verifier, reset identity, or the GEODE 25K tool-result cap; fails fixture cleanup; lacks native result, verifier, deadline, or trajectory evidence; or exits on an unrecovered provider quota or transport error.",
+    "analysis_plan": "Select all 60 fresh arms only when all 30 pairs are infrastructure-valid; compute (GEODE passes - Codex passes) / 30; report arm accuracy, paired wins, losses, ties, cache-excluded input, output, reasoning, wall time, MCP calls and errors, repeated reads, and termination classes; preserve invalid attempts and do not replace or score them."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "f4b3760488a80dad1186d54458f63bbb08768719",
+      "branch": "origin/main",
+      "dirty": false
+    },
+    "harness": {
+      "name": "MCPMark filesystem/standard Gate 0C corrective pair",
+      "source": "https://github.com/eval-sys/mcpmark.git",
+      "revision": "cd45b7f57923b9b3985467f5139927575f83141c+patch-sha256:3f41f13a8edf7b40f411bf0a76412c28fc9629338d9e5051d5633dc064c563e6"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-5.4",
+      "route": "subscription",
+      "reasoning": "high"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 (24D70)",
+      "architecture": "arm64",
+      "reset_strategy": "Each native process copies the pinned category fixture to a unique PID-scoped backup; the runner rejects backup residue and verifies the score-bearing semantic fixture before and after every arm. Arms and tasks run serially with no resumed output.",
+      "initial_state_ref": "fixture-semantic-sha256:273477d554250f4f076e69651e29689ed71095ec1b3fe3e054094be82f574fbf"
+    },
+    "execution": {
+      "command_redacted": ".venv/bin/python -m plugins.benchmark_harness.run_mcpmark_pair --profile filesystem30-geode-codex --run-spec artifacts/eval/runs/mcpmark-gate0c-filesystem30-gpt54-high-20260813t190922z-preregistration/run-spec.json --mcpmark-root artifacts/eval/harnesses/mcpmark --output-dir artifacts/eval/runs/mcpmark-gate0c-filesystem30-gpt54-high-20260813t190922z-attempt-001 --python .venv/bin/python",
+      "ordered_workload_ids": [
+        "desktop/music_report",
+        "desktop/project_management",
+        "desktop/timeline_extraction",
+        "desktop_template/budget_computation",
+        "desktop_template/contact_information",
+        "desktop_template/file_arrangement",
+        "file_context/duplicates_searching",
+        "file_context/file_merging",
+        "file_context/file_splitting",
+        "file_context/pattern_matching",
+        "file_context/uppercase",
+        "file_property/size_classification",
+        "file_property/time_classification",
+        "folder_structure/structure_analysis",
+        "folder_structure/structure_mirror",
+        "legal_document/dispute_review",
+        "legal_document/individual_comments",
+        "legal_document/solution_tracing",
+        "papers/author_folders",
+        "papers/find_math_paper",
+        "papers/organize_legacy_papers",
+        "student_database/duplicate_name",
+        "student_database/english_talent",
+        "student_database/gradebased_score",
+        "threestudio/code_locating",
+        "threestudio/output_analysis",
+        "threestudio/requirements_completion",
+        "votenet/dataset_comparison",
+        "votenet/debugging",
+        "votenet/requirements_writing"
+      ],
+      "workload_ids_sha256": "50483308573ce407abaf0700885d56c6df0453557669dddce9edcece83710433",
+      "repetitions": 1,
+      "seed_schedule": [
+        "upstream-run-1"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 1200,
+      "budget": {
+        "kind": "wall-time",
+        "limit": 1200,
+        "unit": "seconds"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "codex-cli 0.145.0; openai/codex@dad1db87bb5ad4b92af6b0f58502d12453681f81; executable-sha256:1da3f4e0e96028b8a771814293c3033dafd1971f943f6c7e79b0897fe705f590",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "native-results",
+    "trajectory": "native-results",
+    "verifier_receipts": "runner-events.jsonl",
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": "publication-manifest.json"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "Keep raw prompts, model messages, tool arguments and results, local paths, account identity, OAuth material, and other secrets local; publish only reviewed digest projections, native outcomes, verifier receipts, and redacted trajectories."
+  }
+}

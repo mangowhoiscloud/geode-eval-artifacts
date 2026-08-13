@@ -1,0 +1,349 @@
+{
+  "analyzed_at": "2026-08-13T23:05:25.206910Z",
+  "answer": "Across the frozen 30 paired tasks, GEODE passed 23/30 and Codex passed 21/30; the signed verifier-pass-rate delta was 0.066667.",
+  "attempts_sha256": "04d8afb9c6228b8698080fd9d9e3d48aa5fd3dc684e7c4ba702a4c9389359110",
+  "decision": {
+    "hypothesis_status": "supported",
+    "outcome": "diagnostic-only",
+    "rationale": "The frozen threshold is GEODE-minus-Codex >= -0.10; promotion authority remains none."
+  },
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "runner-result.json",
+      "sha256": "3c5763e4c13ca7a9b39627b30fd35145aebf83e43e8c791a0556e89fc5f4a017"
+    },
+    {
+      "kind": "verifier-receipt",
+      "path": "runner-events.jsonl",
+      "sha256": "f13029f29aa249730e59154f9be6853a56eb9a1fbec9b163fae78cb643104099"
+    },
+    {
+      "kind": "other",
+      "path": "diagnostic-receipt.json",
+      "sha256": "8d64b53f83440b573f762b203942828b9a12e693b5763b28ec4555a0e9637ca4"
+    },
+    {
+      "kind": "trajectory",
+      "path": "trajectory-index.json",
+      "sha256": "610d2c59ccc46a5713217e87d55589456fbb9c31a90e1b203ad261ce45c03cdb"
+    }
+  ],
+  "limitations": [
+    "This is one paired repetition and has no k=3 stability authority.",
+    "The subscription route is product-route evidence, not API-key leaderboard evidence.",
+    "The common action deadline excludes fixture setup and the native post-action verifier.",
+    "GEODE uses its frozen 25K MCP result guard while Codex uses its native CLI runtime.",
+    "Published trajectories are digest-reduced and intentionally replay-incomplete.",
+    "Token totals exclude attempts with missing native usage: GEODE=1, Codex=0.",
+    "1 score-bearing scope-incomplete trajectories are withheld from release."
+  ],
+  "metrics": [
+    {
+      "denominator": 30,
+      "name": "GEODE minus Codex verifier-pass-rate delta",
+      "numerator": 2,
+      "source_locator": {
+        "denominator": "/primary_metric/denominator",
+        "numerator": "/primary_metric/numerator",
+        "value": "/primary_metric/value"
+      },
+      "source_ref": "runner-result.json",
+      "unit": "ratio",
+      "value": 0.06666666666666667
+    },
+    {
+      "denominator": 30,
+      "name": "verifier_accuracy_geode",
+      "numerator": 23,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/passes",
+        "value": "/aggregates/geode/accuracy"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "ratio",
+      "value": 0.7666666666666667
+    },
+    {
+      "denominator": 29,
+      "name": "fresh_input_tokens_geode",
+      "numerator": 3119951,
+      "source_locator": {
+        "denominator": "/aggregates/geode/token_usage_covered_attempts",
+        "numerator": "/aggregates/geode/fresh_input_tokens",
+        "value": "/aggregates/geode/fresh_input_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 3119951
+    },
+    {
+      "denominator": 29,
+      "name": "output_tokens_geode",
+      "numerator": 313287,
+      "source_locator": {
+        "denominator": "/aggregates/geode/token_usage_covered_attempts",
+        "numerator": "/aggregates/geode/output_tokens",
+        "value": "/aggregates/geode/output_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 313287
+    },
+    {
+      "denominator": 29,
+      "name": "reasoning_tokens_geode",
+      "numerator": 213167,
+      "source_locator": {
+        "denominator": "/aggregates/geode/token_usage_covered_attempts",
+        "numerator": "/aggregates/geode/reasoning_tokens",
+        "value": "/aggregates/geode/reasoning_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 213167
+    },
+    {
+      "denominator": 30,
+      "name": "action_elapsed_seconds_geode",
+      "numerator": 8463.25209391897,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/action_elapsed_seconds",
+        "value": "/aggregates/geode/action_elapsed_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 8463.25209391897
+    },
+    {
+      "denominator": 30,
+      "name": "runner_envelope_seconds_geode",
+      "numerator": 8536.382176335,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/runner_envelope_seconds",
+        "value": "/aggregates/geode/runner_envelope_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 8536.382176335
+    },
+    {
+      "denominator": 30,
+      "name": "native_execution_log_calls_geode",
+      "numerator": 644,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/native_execution_log_calls",
+        "value": "/aggregates/geode/native_execution_log_calls"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 644
+    },
+    {
+      "denominator": 30,
+      "name": "native_execution_log_errors_geode",
+      "numerator": 51,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/native_execution_log_errors",
+        "value": "/aggregates/geode/native_execution_log_errors"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 51
+    },
+    {
+      "denominator": 30,
+      "name": "repeated_read_references_geode",
+      "numerator": 81,
+      "source_locator": {
+        "denominator": "/aggregates/geode/attempts",
+        "numerator": "/aggregates/geode/repeated_read_references",
+        "value": "/aggregates/geode/repeated_read_references"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "references",
+      "value": 81
+    },
+    {
+      "denominator": 30,
+      "name": "verifier_accuracy_codex",
+      "numerator": 21,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/passes",
+        "value": "/aggregates/codex/accuracy"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "ratio",
+      "value": 0.7
+    },
+    {
+      "denominator": 30,
+      "name": "fresh_input_tokens_codex",
+      "numerator": 1324387,
+      "source_locator": {
+        "denominator": "/aggregates/codex/token_usage_covered_attempts",
+        "numerator": "/aggregates/codex/fresh_input_tokens",
+        "value": "/aggregates/codex/fresh_input_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 1324387
+    },
+    {
+      "denominator": 30,
+      "name": "output_tokens_codex",
+      "numerator": 256627,
+      "source_locator": {
+        "denominator": "/aggregates/codex/token_usage_covered_attempts",
+        "numerator": "/aggregates/codex/output_tokens",
+        "value": "/aggregates/codex/output_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 256627
+    },
+    {
+      "denominator": 30,
+      "name": "reasoning_tokens_codex",
+      "numerator": 122757,
+      "source_locator": {
+        "denominator": "/aggregates/codex/token_usage_covered_attempts",
+        "numerator": "/aggregates/codex/reasoning_tokens",
+        "value": "/aggregates/codex/reasoning_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 122757
+    },
+    {
+      "denominator": 30,
+      "name": "action_elapsed_seconds_codex",
+      "numerator": 5484.322127917199,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/action_elapsed_seconds",
+        "value": "/aggregates/codex/action_elapsed_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 5484.322127917199
+    },
+    {
+      "denominator": 30,
+      "name": "runner_envelope_seconds_codex",
+      "numerator": 5548.725379954,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/runner_envelope_seconds",
+        "value": "/aggregates/codex/runner_envelope_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 5548.725379954
+    },
+    {
+      "denominator": 30,
+      "name": "native_execution_log_calls_codex",
+      "numerator": 678,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/native_execution_log_calls",
+        "value": "/aggregates/codex/native_execution_log_calls"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 678
+    },
+    {
+      "denominator": 30,
+      "name": "native_execution_log_errors_codex",
+      "numerator": 17,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/native_execution_log_errors",
+        "value": "/aggregates/codex/native_execution_log_errors"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 17
+    },
+    {
+      "denominator": 30,
+      "name": "repeated_read_references_codex",
+      "numerator": 213,
+      "source_locator": {
+        "denominator": "/aggregates/codex/attempts",
+        "numerator": "/aggregates/codex/repeated_read_references",
+        "value": "/aggregates/codex/repeated_read_references"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "references",
+      "value": 213
+    },
+    {
+      "denominator": 30,
+      "name": "paired_both_pass",
+      "numerator": 17,
+      "source_locator": {
+        "denominator": "/paired_denominator",
+        "numerator": "/paired_outcomes/both_pass",
+        "value": "/paired_outcomes/both_pass"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "task-pairs",
+      "value": 17
+    },
+    {
+      "denominator": 30,
+      "name": "paired_both_fail",
+      "numerator": 3,
+      "source_locator": {
+        "denominator": "/paired_denominator",
+        "numerator": "/paired_outcomes/both_fail",
+        "value": "/paired_outcomes/both_fail"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "task-pairs",
+      "value": 3
+    },
+    {
+      "denominator": 30,
+      "name": "paired_geode_only_pass",
+      "numerator": 6,
+      "source_locator": {
+        "denominator": "/paired_denominator",
+        "numerator": "/paired_outcomes/geode_only_pass",
+        "value": "/paired_outcomes/geode_only_pass"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "task-pairs",
+      "value": 6
+    },
+    {
+      "denominator": 30,
+      "name": "paired_codex_only_pass",
+      "numerator": 4,
+      "source_locator": {
+        "denominator": "/paired_denominator",
+        "numerator": "/paired_outcomes/codex_only_pass",
+        "value": "/paired_outcomes/codex_only_pass"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "task-pairs",
+      "value": 4
+    }
+  ],
+  "run_id": "mcpmark-gate0c-filesystem30-gpt54-high-20260813t190922z",
+  "run_spec_sha256": "e4e9abbdd326f093bb1d513aa2800609f1566b0819929f341623011bb5fa1bb0",
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "selected_attempt_ids": [
+    "attempt-001-complete"
+  ]
+}
