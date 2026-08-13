@@ -127,6 +127,23 @@ remain withheld while their verifier outcomes remain in the primary score.
 The prior infrastructure-invalid runner attempt is preserved as lineage and
 contributes zero denominator.
 
+### 2026-08-14 GPT-5.4 Gate 0C filesystem30 paired diagnostic
+
+The [validated Gate 0C bundle](mcpmark/results-paired/mcpmark-gate0c-filesystem30-gpt54-high-20260813t190922z/)
+compares GEODE and Codex CLI on the same 30 pinned `filesystem/standard` tasks
+in one paired repetition under a common 1,200-second action deadline. GEODE
+passed **23/30 (76.7%)** and Codex passed **21/30 (70.0%)**, a signed delta of
+**+2/30 = +0.0667**. This is a direct diagnostic with
+`promotion_authority=none`, not an MCPMark Verified headline.
+
+The reviewed releases publish 29 GEODE and 30 Codex scope-complete,
+replay-incomplete trajectories with 3,091 events and 1,281 exact tool pairs.
+The bundle separately labels 644/678 native execution-log rows and 645/678
+normalized trajectory call attempts; one explicit GEODE recovery projection
+accounts for the difference. One score-bearing scope-incomplete GEODE
+trajectory remains withheld while its verifier outcome stays in the primary
+score.
+
 ### 2026-08-12 GPT-5.4 GEODE token-efficiency rerun
 
 The [matched rerun record](reports/e2e-validation/2026-08-12-mcpmark-geode-gpt54-token-efficiency-rerun.md)
