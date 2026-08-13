@@ -1,0 +1,223 @@
+{
+  "analyzed_at": "2026-08-13T17:31:03.011803Z",
+  "answer": "Across the frozen 15 task-repetitions per arm, unlimited-0 passed 10/15 and guard-25000 passed 7/15; the signed verifier-pass-rate delta was 0.200000.",
+  "attempts_sha256": "a2d51de7c499c4eafeddfa64828e3a8f9cbf468cbfc03f5c5fc6a05e54f9bcba",
+  "decision": {
+    "hypothesis_status": "supported",
+    "outcome": "diagnostic-only",
+    "rationale": "The frozen signed numerator determines hypothesis status; promotion authority remains none."
+  },
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "runner-result.json",
+      "sha256": "04f39957cfd7b3a603b54f58d45a6171be9caf156a273314b74bae33e95611ed"
+    },
+    {
+      "kind": "verifier-receipt",
+      "path": "runner-events.jsonl",
+      "sha256": "c10f09372b4f7da6c0e0a68bdb5ec0a2ebf989f3d4deafa04932911b3e387f71"
+    },
+    {
+      "kind": "other",
+      "path": "diagnostic-receipt.json",
+      "sha256": "b6e1e46425eb2c8f945d68b057bc12fe807fe052764b066ce080a4192f420003"
+    },
+    {
+      "kind": "trajectory",
+      "path": "trajectory-index.json",
+      "sha256": "118ceabe739093f62d8ff2c9824cbdee3c729162e71e3df344ee89657e140902"
+    },
+    {
+      "kind": "other",
+      "path": "prior-run-lineage.json",
+      "sha256": "41c4e255e451ef90caffa6a70b50d72cfeae59c6fb18bd0f3bb66e5759081c2b"
+    }
+  ],
+  "limitations": [
+    "This five-task, three-repetition subset is diagnostic and is not an MCPMark suite headline.",
+    "The subscription route is product-route evidence, not API-key leaderboard evidence.",
+    "Secondary token, wall-time, tool, reread, and truncation measurements are explanatory only.",
+    "Exact token totals cover 13/15 attempts per arm; the four score-bearing author_folders deadline expirations emitted empty native token usage and are excluded from token aggregates.",
+    "Scope-incomplete timeout trajectories are withheld even though their verifier failures remain score-bearing.",
+    "The prior infrastructure-invalid run is lineage only and contributes zero denominator."
+  ],
+  "metrics": [
+    {
+      "denominator": 15,
+      "name": "verifier-pass-rate arm delta",
+      "numerator": 3,
+      "source_locator": {
+        "denominator": "/primary_metric/denominator",
+        "numerator": "/primary_metric/numerator",
+        "value": "/primary_metric/value"
+      },
+      "source_ref": "runner-result.json",
+      "unit": "ratio",
+      "value": 0.2
+    },
+    {
+      "denominator": 13,
+      "name": "observed_fresh_input_tokens_guard_25000",
+      "numerator": 3782288,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/token_usage_covered_attempts",
+        "numerator": "/aggregates/guard-25000/fresh_input_tokens",
+        "value": "/aggregates/guard-25000/fresh_input_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 3782288
+    },
+    {
+      "denominator": 15,
+      "name": "action_elapsed_seconds_guard_25000",
+      "numerator": 6076.699046207999,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/attempts",
+        "numerator": "/aggregates/guard-25000/action_elapsed_seconds",
+        "value": "/aggregates/guard-25000/action_elapsed_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 6076.699046207999
+    },
+    {
+      "denominator": 15,
+      "name": "mcp_calls_guard_25000",
+      "numerator": 443,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/attempts",
+        "numerator": "/aggregates/guard-25000/mcp_calls",
+        "value": "/aggregates/guard-25000/mcp_calls"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 443
+    },
+    {
+      "denominator": 15,
+      "name": "mcp_errors_guard_25000",
+      "numerator": 75,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/attempts",
+        "numerator": "/aggregates/guard-25000/mcp_errors",
+        "value": "/aggregates/guard-25000/mcp_errors"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 75
+    },
+    {
+      "denominator": 15,
+      "name": "repeated_read_references_guard_25000",
+      "numerator": 211,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/attempts",
+        "numerator": "/aggregates/guard-25000/repeated_read_references",
+        "value": "/aggregates/guard-25000/repeated_read_references"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "references",
+      "value": 211
+    },
+    {
+      "denominator": 15,
+      "name": "tool_result_truncations_guard_25000",
+      "numerator": 15,
+      "source_locator": {
+        "denominator": "/aggregates/guard-25000/attempts",
+        "numerator": "/aggregates/guard-25000/tool_result_truncations",
+        "value": "/aggregates/guard-25000/tool_result_truncations"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "events",
+      "value": 15
+    },
+    {
+      "denominator": 13,
+      "name": "observed_fresh_input_tokens_unlimited_0",
+      "numerator": 2202725,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/token_usage_covered_attempts",
+        "numerator": "/aggregates/unlimited-0/fresh_input_tokens",
+        "value": "/aggregates/unlimited-0/fresh_input_tokens"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "tokens",
+      "value": 2202725
+    },
+    {
+      "denominator": 15,
+      "name": "action_elapsed_seconds_unlimited_0",
+      "numerator": 4910.216562125017,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/attempts",
+        "numerator": "/aggregates/unlimited-0/action_elapsed_seconds",
+        "value": "/aggregates/unlimited-0/action_elapsed_seconds"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "seconds",
+      "value": 4910.216562125017
+    },
+    {
+      "denominator": 15,
+      "name": "mcp_calls_unlimited_0",
+      "numerator": 255,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/attempts",
+        "numerator": "/aggregates/unlimited-0/mcp_calls",
+        "value": "/aggregates/unlimited-0/mcp_calls"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 255
+    },
+    {
+      "denominator": 15,
+      "name": "mcp_errors_unlimited_0",
+      "numerator": 27,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/attempts",
+        "numerator": "/aggregates/unlimited-0/mcp_errors",
+        "value": "/aggregates/unlimited-0/mcp_errors"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "calls",
+      "value": 27
+    },
+    {
+      "denominator": 15,
+      "name": "repeated_read_references_unlimited_0",
+      "numerator": 63,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/attempts",
+        "numerator": "/aggregates/unlimited-0/repeated_read_references",
+        "value": "/aggregates/unlimited-0/repeated_read_references"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "references",
+      "value": 63
+    },
+    {
+      "denominator": 15,
+      "name": "tool_result_truncations_unlimited_0",
+      "numerator": 0,
+      "source_locator": {
+        "denominator": "/aggregates/unlimited-0/attempts",
+        "numerator": "/aggregates/unlimited-0/tool_result_truncations",
+        "value": "/aggregates/unlimited-0/tool_result_truncations"
+      },
+      "source_ref": "diagnostic-receipt.json",
+      "unit": "events",
+      "value": 0
+    }
+  ],
+  "run_id": "mcpmark-gate0b-tool-cap-gpt54-high-20260813t142345z",
+  "run_spec_sha256": "421f695062f7936ef28c991b32077f5402205d41d4bcc4da0be5240d56a1264c",
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "selected_attempt_ids": [
+    "attempt-001-complete"
+  ]
+}
