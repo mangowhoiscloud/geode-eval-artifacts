@@ -1,0 +1,172 @@
+{
+  "schema_id": "geode.slack-gateway-live-e2e@1",
+  "measurement_id": "slack-gateway-live-e2e-20260817",
+  "started_at": "2026-08-16T17:19:19Z",
+  "completed_at": "2026-08-16T17:26:56Z",
+  "source": {
+    "repository": "https://github.com/mangowhoiscloud/geode",
+    "executed_revision": "e54bde2254c4503662c59d3ac2a927b2483f0573",
+    "canonical_develop_revision": "76ca740ee39100f8477c551f125086896c03fe26",
+    "pull_request": "https://github.com/mangowhoiscloud/geode/pull/3007",
+    "executed_worktree_dirty": false
+  },
+  "runtime": {
+    "platform": "macOS 15.3.1 arm64",
+    "gateway": "Slack Socket Mode",
+    "model": "gpt-5.6-sol",
+    "provider": "openai",
+    "adapter": "codex-oauth",
+    "primary_source": "subscription",
+    "channel_identity_published": false
+  },
+  "scope": {
+    "authority": "routing_and_behavior_diagnostic",
+    "promotion_authority": "none",
+    "case_count": 3,
+    "human_orchestrator_modified_agent_responses": false,
+    "live_external_services": [
+      "Slack",
+      "Codex subscription backend",
+      "Playwright MCP",
+      "Z.AI auxiliary post-turn route"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "daily-chat",
+      "started_at": "2026-08-16T17:19:19Z",
+      "completed_at": "2026-08-16T17:19:35Z",
+      "contract": {
+        "request": "Give one low-pressure ten-minute action in Korean, use no tools, stay within two sentences, and end with DAILY-CHAT-OK.",
+        "expected_terminal_marker": "DAILY-CHAT-OK"
+      },
+      "result": "passed",
+      "rounds": 1,
+      "tool_calls": 0,
+      "assistant_response": "가장 급한 일 하나만 열고, 10분 타이머를 맞춘 뒤 첫 단계만 해봐요. 끝까지 할 필요 없이 타이머가 울리면 멈춰도 괜찮아요. DAILY-CHAT-OK."
+    },
+    {
+      "case_id": "strict-computer-use",
+      "started_at": "2026-08-16T17:21:07Z",
+      "completed_at": "2026-08-16T17:22:05Z",
+      "contract": {
+        "request": "Use only computer_use: capture the current desktop, then navigate Chrome to example.com only if the target can be verified safely.",
+        "expected_terminal_markers": [
+          "COMPUTER-USE-LIVE-OK",
+          "COMPUTER-USE-LIVE-BLOCKED"
+        ]
+      },
+      "result": "blocked_as_designed",
+      "rounds": 3,
+      "tool_calls": 2,
+      "observations": {
+        "capture": "passed",
+        "driver": "macos_helper",
+        "screen": {
+          "width": 1710,
+          "height": 1107
+        },
+        "capture_sha256": "f1447ba2f375b720f8f7b067e1b26a0468b4e7cb13472c350eae0474e9d66a24",
+        "locate_capture_sha256": "bcabcea14bad5c5dcd918bc9063796faa21343796da591bcadcb512201e53b72",
+        "locate": "blocked",
+        "blocked_reason": "visual grounding is not configured for provider=openai source=subscription; implicit GLM fallback is disabled to preserve provider/source isolation",
+        "blind_click_or_typing_attempted": false
+      },
+      "terminal_marker": "COMPUTER-USE-LIVE-BLOCKED"
+    },
+    {
+      "case_id": "browser-ui-fallback",
+      "started_at": "2026-08-16T17:26:20Z",
+      "completed_at": "2026-08-16T17:26:56Z",
+      "contract": {
+        "request": "Choose a provider-safe perception path, open example.com in a new Chrome tab, verify the visible title, and avoid web_fetch, shell, login, submission, and file mutation.",
+        "expected_terminal_marker": "BROWSER-COMPUTER-LIVE-OK"
+      },
+      "result": "passed",
+      "rounds": 3,
+      "tool_calls": 2,
+      "tool_path": [
+        "Playwright MCP browser_tabs",
+        "Playwright MCP browser_snapshot"
+      ],
+      "verified_page": {
+        "url": "https://example.com/",
+        "title": "Example Domain",
+        "visible_heading": "Example Domain"
+      },
+      "assistant_response": "Chrome 새 탭에서 https://example.com/을 실제로 열었습니다. 보이는 페이지 제목은 Example Domain입니다. 도구 경로: Playwright 브라우저 DOM → 새 탭 생성·탐색 → 접근성 스냅샷으로 H1 및 문서 제목 확인. BROWSER-COMPUTER-LIVE-OK"
+    }
+  ],
+  "route_findings": {
+    "primary_agent_route_subscription": true,
+    "strict_subscription_only": false,
+    "post_turn_auxiliary_route": {
+      "provider": "glm",
+      "source": "payg",
+      "observed_successful_calls": 3,
+      "stage": "after the primary AgenticLoop session ended and before the Slack processor returned"
+    },
+    "claim_boundary": "The three primary GEODE answers used Codex OAuth subscription. The end-to-end request lifecycle was not subscription-only because each observed post-turn path made one successful GLM PAYG text-completion call."
+  },
+  "raw_evidence": [
+    {
+      "case_id": "daily-chat",
+      "kind": "messages",
+      "bytes": 1029,
+      "sha256": "161c555f8b6de25baeda544879cecb7fdc420ec1f7fe46c441a013dde7aa6fc4",
+      "classification": "private-session-record",
+      "published": false
+    },
+    {
+      "case_id": "strict-computer-use",
+      "kind": "messages",
+      "bytes": 27226,
+      "sha256": "8a8c5c0f10a49a89a227d9e382d029788e6e3309989319d46b16fc51e1ca2856",
+      "classification": "private-session-record",
+      "published": false
+    },
+    {
+      "case_id": "strict-computer-use",
+      "kind": "tools",
+      "bytes": 3665,
+      "sha256": "79ab9ca436880a5b9d1837ccf93e7832f6974447c262f274e55c7bf8b62ef271",
+      "classification": "private-session-record",
+      "published": false
+    },
+    {
+      "case_id": "browser-ui-fallback",
+      "kind": "messages",
+      "bytes": 16676,
+      "sha256": "65310facd4cdb1311a9199a80873b8a2f36d970b1a01ddeac9d923db9e43a807",
+      "classification": "private-session-record",
+      "published": false
+    },
+    {
+      "case_id": "browser-ui-fallback",
+      "kind": "tools",
+      "bytes": 1329,
+      "sha256": "0f4b6556972cf037d265e56f67f6acc48f0881d44ee469034bb0704b389868a0",
+      "classification": "private-session-record",
+      "published": false
+    }
+  ],
+  "privacy": {
+    "reviewed": true,
+    "method": "allowlisted summary plus structured secret, identity, local-path, and contact scan",
+    "published_raw_session_ids": 0,
+    "published_workspace_or_channel_ids": 0,
+    "published_absolute_paths": 0,
+    "published_local_usernames": 0,
+    "published_email_addresses": 0,
+    "published_phone_numbers": 0,
+    "published_credentials": 0,
+    "published_provider_reasoning_bodies": 0
+  },
+  "limitations": [
+    "This is a three-case live behavior diagnostic, not a benchmark, score, confidence interval, or provider leaderboard.",
+    "Strict computer_use capture succeeded, but pixel-level locate and interaction were not supported by the active OpenAI subscription source; GEODE stopped instead of performing an unverified action.",
+    "The successful browser UI case used the provider-safe Playwright DOM path, not computer_use visual grounding.",
+    "The primary answers used Codex OAuth subscription, but the complete lifecycle also used one GLM PAYG auxiliary call per case after the primary session.",
+    "Raw session records, provider reasoning, runtime logs, local paths, and Slack workspace/channel identities remain withheld."
+  ]
+}
