@@ -1,0 +1,104 @@
+{
+  "schema_id": "geode.trajectory@1",
+  "schema_version": 1,
+  "trajectory_id": "tau2-tau2-3domain-retail-20260825",
+  "captured_at": "2026-08-25T03:58:10.682409Z",
+  "trajectory_class": [
+    "benchmark",
+    "dialogue",
+    "tool",
+    "lifecycle"
+  ],
+  "source": {
+    "harness": "tau2-bench",
+    "run": "tau2-3domain-retail-20260825",
+    "session": "tau2-3domain-retail-20260825",
+    "parents": [],
+    "runtime_profile_sha256": "0b546529a1e3da6191f2b649afeec36f32808af25517216180154765da133be2",
+    "attempt_manifest_sha256": "4861669e5bc854e2a3bdad20c0393f8e4f467ca9b2b36d75e33aaf2125356532"
+  },
+  "events": [],
+  "outcome": {
+    "execution_status": "invalid",
+    "failure_class": "infrastructure_contamination",
+    "simulation_count": 1,
+    "domain": "retail",
+    "arm": "diagnostic"
+  },
+  "integrity": {
+    "scope_complete": false,
+    "replay_complete": false,
+    "scope_incompleteness": [
+      "source carried no GEODE session identifiers",
+      "trajectory contains no events"
+    ],
+    "record_count": 0,
+    "complete": false,
+    "replay_incompleteness": [
+      "producer declared trajectory replay incomplete"
+    ],
+    "incompleteness": [
+      "source carried no GEODE session identifiers",
+      "trajectory contains no events",
+      "producer declared trajectory replay incomplete"
+    ],
+    "quality": {
+      "event_id_unique": true,
+      "ordinal_contiguous": true,
+      "correlation": {
+        "session_id_present": 0,
+        "turn_id_present": 0,
+        "turn_id_required": 0,
+        "turn_id_missing": 0,
+        "tool_call_id_present": 0,
+        "control_call_id_missing": 0,
+        "event_count": 0
+      },
+      "tool_pairing": {
+        "calls": 0,
+        "results": 0,
+        "paired": 0,
+        "orphan_calls": 0,
+        "orphan_results": 0,
+        "missing_call_ids": 0
+      },
+      "payload_issue_events": 0,
+      "replay_fidelity": "full"
+    }
+  },
+  "privacy": {
+    "review_state": "local",
+    "native_results_embedded": false,
+    "payloads": "redacted and bounded by SessionEventStore"
+  },
+  "provenance": {
+    "adapter": "evals.benchmarks.trajectory_artifacts",
+    "native_schema": "tau2 results.json",
+    "native_results": "results.json",
+    "store": "sessions.db:session_events"
+  },
+  "runtime_event_refs": [],
+  "evidence_refs": [
+    {
+      "kind": "native_receipt",
+      "schema_id": "tau2.results@native",
+      "reference": "7749ffc551c085b086268e3df9d76d265ffa8aa5c719e647e86ef373eb8aff2f",
+      "raw_artifact_sha256": "7749ffc551c085b086268e3df9d76d265ffa8aa5c719e647e86ef373eb8aff2f",
+      "authority": "tau2 native results receipt"
+    }
+  ],
+  "artifact_digests": [
+    {
+      "path": "results.json",
+      "sha256": "7749ffc551c085b086268e3df9d76d265ffa8aa5c719e647e86ef373eb8aff2f"
+    },
+    {
+      "path": "tau2-3domain-retail-20260825.runtime-profile.json",
+      "sha256": "0b546529a1e3da6191f2b649afeec36f32808af25517216180154765da133be2"
+    },
+    {
+      "path": "tau2-3domain-retail-20260825.attempt-manifest.json",
+      "sha256": "4861669e5bc854e2a3bdad20c0393f8e4f467ca9b2b36d75e33aaf2125356532"
+    }
+  ]
+}
