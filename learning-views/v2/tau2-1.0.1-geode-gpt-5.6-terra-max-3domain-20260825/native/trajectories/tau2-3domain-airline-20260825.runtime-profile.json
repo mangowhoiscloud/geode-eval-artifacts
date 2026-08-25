@@ -1,0 +1,285 @@
+{
+  "schema": "geode.tau2-runtime-profile.v1",
+  "run_id": "tau2-3domain-airline-20260825",
+  "runtime_revision": "8a5c26454e11c3d6240a772a8a40277781b77789",
+  "runtime_version": "1.0.26",
+  "runtime_profile": "geode-dual-runtime",
+  "routes": {
+    "agent": {
+      "model": "gpt-5.6-terra",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "max"
+    },
+    "user": {
+      "implementation": "geode_user",
+      "model": "gpt-5.5",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "high"
+    }
+  },
+  "assembled_requests": [
+    {
+      "session_id": "s-cbe1987dc0d5",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "e1603bdfe09218061a9b0feab62c5936445fc8a94c8f179044a60b027700120d",
+      "assembled_prompt_bytes": 12038,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-e8f971c578b2",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "712bfc0a005cba1c6d9c76334fbc94f447c3ee2e617b52ea187dc12a29777133",
+      "assembled_prompt_bytes": 18136,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-e8f971c578b2",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "ffef5cb15ecb2909a86ac4e339f0415f256eaceb58b7b688f04f85c4aaa49db7",
+      "assembled_prompt_bytes": 18331,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "8d4fad2bb1d4ac1585395a73cf511c30e46b3ee3d3ef377c9975b707f98a509c",
+      "tool_allowlist": [
+        "book_reservation",
+        "calculate",
+        "cancel_reservation",
+        "get_flight_status",
+        "get_reservation_details",
+        "get_user_details",
+        "list_all_airports",
+        "search_direct_flight",
+        "search_onestop_flight",
+        "send_certificate",
+        "transfer_to_human_agents",
+        "update_reservation_baggages",
+        "update_reservation_flights",
+        "update_reservation_passengers"
+      ],
+      "observed_count": 1
+    }
+  ],
+  "surfaces": {
+    "public_hooks": [
+      {
+        "name": "UserPromptSubmit",
+        "expectation": "required",
+        "observed_count": 12,
+        "status": "exercised"
+      },
+      {
+        "name": "PreToolUse",
+        "expectation": "conditional",
+        "observed_count": 3,
+        "status": "exercised"
+      },
+      {
+        "name": "PermissionRequest",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostToolUse",
+        "expectation": "conditional",
+        "observed_count": 3,
+        "status": "exercised"
+      },
+      {
+        "name": "PreCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SessionStart",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SessionEnd",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SubagentStart",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SubagentStop",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PreVerify",
+        "expectation": "required",
+        "observed_count": 9,
+        "status": "exercised"
+      },
+      {
+        "name": "PostVerify",
+        "expectation": "required",
+        "observed_count": 9,
+        "status": "exercised"
+      },
+      {
+        "name": "Stop",
+        "expectation": "required",
+        "observed_count": 9,
+        "status": "exercised"
+      }
+    ],
+    "middleware": [
+      {
+        "name": "llm_execution",
+        "status": "exercised",
+        "observed_count": 12
+      },
+      {
+        "name": "llm_request",
+        "status": "exercised",
+        "observed_count": 12
+      },
+      {
+        "name": "tool_execution",
+        "status": "exercised",
+        "observed_count": 3
+      },
+      {
+        "name": "tool_request",
+        "status": "exercised",
+        "observed_count": 3
+      }
+    ],
+    "runtime_events": {
+      "cognitive_act": 3,
+      "cognitive_observe": 3,
+      "cognitive_perceive": 12,
+      "cognitive_plan": 12,
+      "cognitive_reflect": 12,
+      "cognitive_update_memory": 12,
+      "extension_invoked": 91,
+      "llm_call_ended": 12,
+      "llm_call_started": 12,
+      "reasoning_metrics": 12,
+      "session_ended": 12,
+      "session_started": 12,
+      "tool_exec_ended": 3,
+      "tool_exec_started": 3,
+      "turn_completed": 12,
+      "turn_verify_passed": 9,
+      "user_input_received": 12
+    },
+    "disabled": [
+      {
+        "name": "auto_learning",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "gateway",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "mcp_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "plugin_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "scheduler",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      }
+    ]
+  },
+  "persistence": {
+    "session_event_dbs": [
+      "sessions.db"
+    ],
+    "hook_event_db": "sessions.db",
+    "native_receipt": {
+      "path": "results.json",
+      "sha256": "53b7395f0dd4bda6c17b253c8f4c5d3d8ca857d13a3170b2e1f8fdd448f9bd88",
+      "simulation_count": 1
+    }
+  }
+}

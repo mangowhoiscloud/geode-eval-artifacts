@@ -1,0 +1,92 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825",
+  "created_at": "2026-08-25T03:33:04Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-25T03:33:04Z",
+    "live_test_approved": true,
+    "operator": "codex"
+  },
+  "study": {
+    "research_question": "Can GEODE at revision 8a5c26454 complete three Oracle-validated Terminal-Bench 2.1 tasks and preserve one native verifier result plus one geode.trajectory@1 record per task?",
+    "research_gap": "GEODE has no public Terminal-Bench 2.1 execution artifact tied to its native agent trajectory contract.",
+    "hypothesis": "GEODE will pass at least two of the three frozen tasks while emitting a valid trajectory for every infrastructure-valid attempt.",
+    "primary_metric": {
+      "name": "task_pass_rate",
+      "unit": "ratio",
+      "direction": "maximize",
+      "aggregation": "Count native Terminal-Bench verifier rewards equal to 1.0 and divide by the three frozen tasks; no retries enter the denominator.",
+      "denominator": 3
+    },
+    "decision_rule": "Report the native pass rate descriptively and accept the data release only if all three selected attempts have native verifier receipts and valid geode.trajectory@1 artifacts; this diagnostic run cannot promote a release.",
+    "invalidation_rule": "Mark an attempt invalid for harness, Docker, authentication, quota, missing verifier, or missing trajectory failures. Do not replace a semantic reward of zero, and do not retry an infrastructure-valid task.",
+    "analysis_plan": "Select the sole attempt for each frozen task. Preserve native rewards including zero, validate each trajectory, report passed and failed tasks, aggregate tokens and wall time where emitted, and keep official leaderboard results directional because this is a three-task subscription-route pilot."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "8a5c26454e11c3d6240a772a8a40277781b77789",
+      "branch": "codex/eval-data-v2-20260825",
+      "dirty": false
+    },
+    "harness": {
+      "name": "Harbor Terminal-Bench 2.1",
+      "source": "terminal-bench/terminal-bench-2-1@6",
+      "revision": "harbor=0.8.0;dataset-sha256=7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-5.6-terra",
+      "route": "subscription",
+      "reasoning": "max"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 with Docker Desktop",
+      "architecture": "arm64 host; benchmark containers use task-provided Linux images",
+      "reset_strategy": "Harbor creates and destroys an isolated Docker Compose project for every task attempt.",
+      "initial_state_ref": "terminal-bench/terminal-bench-2-1@6 task package plus dataset SHA-256 in harness revision"
+    },
+    "execution": {
+      "command_redacted": "uv run harbor run --dataset terminal-bench/terminal-bench-2-1@6 --agent-import-path evals.benchmarks.harbor_geode_agent:GeodeHarborAgent --model gpt-5.6-terra --ak effort=max --ak provider=openai --ak source=subscription --include-task-name terminal-bench/fix-git --include-task-name terminal-bench/openssl-selfsigned-cert --include-task-name terminal-bench/build-pmars --n-attempts 1 --n-concurrent 1 --yes",
+      "ordered_workload_ids": [
+        "terminal-bench/fix-git",
+        "terminal-bench/openssl-selfsigned-cert",
+        "terminal-bench/build-pmars"
+      ],
+      "workload_ids_sha256": "f1c0f4d3210894c7477d819603a5abd153ffe4e2a258cfd6216074df7738aca6",
+      "repetitions": 1,
+      "seed_schedule": [
+        20260825
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 1200,
+      "budget": {
+        "kind": "subscription",
+        "limit": null,
+        "unit": "three subscription-route task attempts"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "Terminal-Bench 2.1 official leaderboard",
+      "comparability": "directional",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "native/harbor/result.json",
+    "measurement_results": null,
+    "trajectory": "trajectory-release.json",
+    "verifier_receipts": "native/harbor",
+    "outcome_receipts": null,
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": "publication-manifest.json"
+  },
+  "privacy": {
+    "classification": "public",
+    "redaction_boundary": "Publish public benchmark instructions, model actions, verifier outputs, normalized records, and aggregate usage only after secret and absolute-path scans; exclude OAuth material, environment variables, subscription credentials, and machine-local cache paths."
+  }
+}

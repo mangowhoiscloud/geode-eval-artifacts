@@ -1,0 +1,384 @@
+{
+  "schema": "geode.tau2-runtime-profile.v1",
+  "run_id": "tau2-3domain-retail-r1-20260825",
+  "runtime_revision": "8a5c26454e11c3d6240a772a8a40277781b77789",
+  "runtime_version": "1.0.26",
+  "runtime_profile": "geode-dual-runtime",
+  "routes": {
+    "agent": {
+      "model": "gpt-5.6-terra",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "max"
+    },
+    "user": {
+      "implementation": "geode_user",
+      "model": "gpt-5.5",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "high"
+    }
+  },
+  "assembled_requests": [
+    {
+      "session_id": "s-084254f67630",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "701bf42cf00ec8467957994df154292721425f7fe4d639e91ade3862818158cb",
+      "assembled_prompt_bytes": 12524,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 2
+    },
+    {
+      "session_id": "s-084254f67630",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "d26b2f71ea3442794eab41d92d1ceb47ec5d61d0fd19f878ecb130321bfabf60",
+      "assembled_prompt_bytes": 12069,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-084254f67630",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "f1cbe6b3f20c4a675b8e39b8936939bcb793b8c4b19d44cbfadd1f7e887f8440",
+      "assembled_prompt_bytes": 12264,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "tool_allowlist": [],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-75ed61fa9424",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "2e8db22c812e300c4a860754f05d28f4d9f55f3b2eb52a9b65a35c0137204b3d",
+      "assembled_prompt_bytes": 17159,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "55b355c183b95e69f224572734f015b5bf88590ebf4f32d85e38def8197f98c1",
+      "tool_allowlist": [
+        "calculate",
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "find_user_id_by_name_zip",
+        "get_item_details",
+        "get_order_details",
+        "get_product_details",
+        "get_user_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items",
+        "transfer_to_human_agents"
+      ],
+      "observed_count": 6
+    },
+    {
+      "session_id": "s-75ed61fa9424",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "7138317dd69e06361b62b8284ded4041525fa424ce49cb1a46a87fcb581f4a82",
+      "assembled_prompt_bytes": 17354,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "55b355c183b95e69f224572734f015b5bf88590ebf4f32d85e38def8197f98c1",
+      "tool_allowlist": [
+        "calculate",
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "find_user_id_by_name_zip",
+        "get_item_details",
+        "get_order_details",
+        "get_product_details",
+        "get_user_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items",
+        "transfer_to_human_agents"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-75ed61fa9424",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "eadb707962f4696a1014957abe3c96e6acc8955ee8afd5715051d4f25f9b02fc",
+      "assembled_prompt_bytes": 17614,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "55b355c183b95e69f224572734f015b5bf88590ebf4f32d85e38def8197f98c1",
+      "tool_allowlist": [
+        "calculate",
+        "cancel_pending_order",
+        "exchange_delivered_order_items",
+        "find_user_id_by_email",
+        "find_user_id_by_name_zip",
+        "get_item_details",
+        "get_order_details",
+        "get_product_details",
+        "get_user_details",
+        "list_all_product_types",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+        "return_delivered_order_items",
+        "transfer_to_human_agents"
+      ],
+      "observed_count": 3
+    }
+  ],
+  "surfaces": {
+    "public_hooks": [
+      {
+        "name": "UserPromptSubmit",
+        "expectation": "required",
+        "observed_count": 14,
+        "status": "exercised"
+      },
+      {
+        "name": "PreToolUse",
+        "expectation": "conditional",
+        "observed_count": 6,
+        "status": "exercised"
+      },
+      {
+        "name": "PermissionRequest",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostToolUse",
+        "expectation": "conditional",
+        "observed_count": 6,
+        "status": "exercised"
+      },
+      {
+        "name": "PreCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SessionStart",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SessionEnd",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SubagentStart",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SubagentStop",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PreVerify",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      },
+      {
+        "name": "PostVerify",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      },
+      {
+        "name": "Stop",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      }
+    ],
+    "middleware": [
+      {
+        "name": "llm_execution",
+        "status": "exercised",
+        "observed_count": 14
+      },
+      {
+        "name": "llm_request",
+        "status": "exercised",
+        "observed_count": 14
+      },
+      {
+        "name": "tool_execution",
+        "status": "exercised",
+        "observed_count": 6
+      },
+      {
+        "name": "tool_request",
+        "status": "exercised",
+        "observed_count": 6
+      }
+    ],
+    "runtime_events": {
+      "cognitive_act": 6,
+      "cognitive_observe": 6,
+      "cognitive_perceive": 14,
+      "cognitive_plan": 14,
+      "cognitive_reflect": 14,
+      "cognitive_update_memory": 14,
+      "extension_invoked": 108,
+      "llm_call_ended": 14,
+      "llm_call_started": 14,
+      "reasoning_metrics": 14,
+      "session_ended": 14,
+      "session_started": 14,
+      "tool_exec_ended": 6,
+      "tool_exec_started": 6,
+      "turn_completed": 14,
+      "turn_verify_passed": 8,
+      "user_input_received": 14
+    },
+    "disabled": [
+      {
+        "name": "auto_learning",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "gateway",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "mcp_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "plugin_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "scheduler",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      }
+    ]
+  },
+  "persistence": {
+    "session_event_dbs": [
+      "sessions.db"
+    ],
+    "hook_event_db": "sessions.db",
+    "native_receipt": {
+      "path": "results.json",
+      "sha256": "641ad1454a3da0e0a7194c039a99fba42e26b8636254739ad34e39abc45f3f50",
+      "simulation_count": 1
+    }
+  }
+}

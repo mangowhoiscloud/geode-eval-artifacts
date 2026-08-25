@@ -1,0 +1,339 @@
+{
+  "schema": "geode.tau2-runtime-profile.v1",
+  "run_id": "tau2-3domain-telecom-r1-20260825",
+  "runtime_revision": "8a5c26454e11c3d6240a772a8a40277781b77789",
+  "runtime_version": "1.0.26",
+  "runtime_profile": "geode-dual-runtime",
+  "routes": {
+    "agent": {
+      "model": "gpt-5.6-terra",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "max"
+    },
+    "user": {
+      "implementation": "geode_user",
+      "model": "gpt-5.5",
+      "provider": "openai",
+      "source": "subscription",
+      "effort": "high"
+    }
+  },
+  "assembled_requests": [
+    {
+      "session_id": "s-2d5074e33352",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "04517e466445fe9ccea03825dfd32a4eb443772648b1d71c6dd2bcc22f8157a8",
+      "assembled_prompt_bytes": 14419,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "3a17d323cbb02c6ec119586ea1e79cda1c3f380fb72684d7fd1d7cba1202f715",
+      "tool_allowlist": [
+        "can_send_mms",
+        "check_apn_settings",
+        "check_app_permissions",
+        "check_app_status",
+        "check_data_restriction_status",
+        "check_installed_apps",
+        "check_network_mode_preference",
+        "check_network_status",
+        "check_payment_request",
+        "check_sim_status",
+        "check_status_bar",
+        "check_vpn_status",
+        "check_wifi_calling_status",
+        "check_wifi_status",
+        "connect_vpn",
+        "disconnect_vpn",
+        "grant_app_permission",
+        "make_payment",
+        "reboot_device",
+        "reseat_sim_card",
+        "reset_apn_settings",
+        "run_speed_test",
+        "set_apn_settings",
+        "set_network_mode_preference",
+        "toggle_airplane_mode",
+        "toggle_data",
+        "toggle_data_saver_mode",
+        "toggle_roaming",
+        "toggle_wifi",
+        "toggle_wifi_calling"
+      ],
+      "observed_count": 5
+    },
+    {
+      "session_id": "s-2d5074e33352",
+      "model": "gpt-5.5",
+      "assembled_prompt_sha256": "60412b7781f6427bab8a4c4035d80d3f9b7446bd300be2a33b1e43bd561a7170",
+      "assembled_prompt_bytes": 14618,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "geode_task_preflight",
+            "count": 1
+          },
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "scenario",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "3a17d323cbb02c6ec119586ea1e79cda1c3f380fb72684d7fd1d7cba1202f715",
+      "tool_allowlist": [
+        "can_send_mms",
+        "check_apn_settings",
+        "check_app_permissions",
+        "check_app_status",
+        "check_data_restriction_status",
+        "check_installed_apps",
+        "check_network_mode_preference",
+        "check_network_status",
+        "check_payment_request",
+        "check_sim_status",
+        "check_status_bar",
+        "check_vpn_status",
+        "check_wifi_calling_status",
+        "check_wifi_status",
+        "connect_vpn",
+        "disconnect_vpn",
+        "grant_app_permission",
+        "make_payment",
+        "reboot_device",
+        "reseat_sim_card",
+        "reset_apn_settings",
+        "run_speed_test",
+        "set_apn_settings",
+        "set_network_mode_preference",
+        "toggle_airplane_mode",
+        "toggle_data",
+        "toggle_data_saver_mode",
+        "toggle_roaming",
+        "toggle_wifi",
+        "toggle_wifi_calling"
+      ],
+      "observed_count": 1
+    },
+    {
+      "session_id": "s-e0561f80819b",
+      "model": "gpt-5.6-terra",
+      "assembled_prompt_sha256": "851748efd1d6de6f1414a49bfe37c38e539ab334a594df8712ddd2cead0366e8",
+      "assembled_prompt_bytes": 33823,
+      "prompt_block_inventory": {
+        "cache_boundary_present": false,
+        "xml_tags": [
+          {
+            "name": "goal_state",
+            "count": 1
+          },
+          {
+            "name": "main_policy",
+            "count": 1
+          },
+          {
+            "name": "policy",
+            "count": 1
+          },
+          {
+            "name": "tech_support_policy",
+            "count": 1
+          }
+        ]
+      },
+      "tool_schema_sha256": "de269df98f0e28e556e5781380da662b32965fc168f784e8fc38b80e84c85b42",
+      "tool_allowlist": [
+        "disable_roaming",
+        "enable_roaming",
+        "get_bills_for_customer",
+        "get_customer_by_id",
+        "get_customer_by_name",
+        "get_customer_by_phone",
+        "get_data_usage",
+        "get_details_by_id",
+        "refuel_data",
+        "resume_line",
+        "send_payment_request",
+        "suspend_line",
+        "transfer_to_human_agents"
+      ],
+      "observed_count": 8
+    }
+  ],
+  "surfaces": {
+    "public_hooks": [
+      {
+        "name": "UserPromptSubmit",
+        "expectation": "required",
+        "observed_count": 14,
+        "status": "exercised"
+      },
+      {
+        "name": "PreToolUse",
+        "expectation": "conditional",
+        "observed_count": 6,
+        "status": "exercised"
+      },
+      {
+        "name": "PermissionRequest",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostToolUse",
+        "expectation": "conditional",
+        "observed_count": 6,
+        "status": "exercised"
+      },
+      {
+        "name": "PreCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PostCompact",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SessionStart",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SessionEnd",
+        "expectation": "required",
+        "observed_count": 2,
+        "status": "exercised"
+      },
+      {
+        "name": "SubagentStart",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "SubagentStop",
+        "expectation": "conditional",
+        "observed_count": 0,
+        "status": "not_exercised"
+      },
+      {
+        "name": "PreVerify",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      },
+      {
+        "name": "PostVerify",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      },
+      {
+        "name": "Stop",
+        "expectation": "required",
+        "observed_count": 8,
+        "status": "exercised"
+      }
+    ],
+    "middleware": [
+      {
+        "name": "llm_execution",
+        "status": "exercised",
+        "observed_count": 14
+      },
+      {
+        "name": "llm_request",
+        "status": "exercised",
+        "observed_count": 14
+      },
+      {
+        "name": "tool_execution",
+        "status": "exercised",
+        "observed_count": 6
+      },
+      {
+        "name": "tool_request",
+        "status": "exercised",
+        "observed_count": 6
+      }
+    ],
+    "runtime_events": {
+      "cognitive_act": 6,
+      "cognitive_observe": 6,
+      "cognitive_perceive": 14,
+      "cognitive_plan": 14,
+      "cognitive_reflect": 14,
+      "cognitive_update_memory": 14,
+      "extension_invoked": 108,
+      "llm_call_ended": 14,
+      "llm_call_started": 14,
+      "reasoning_metrics": 14,
+      "session_ended": 14,
+      "session_started": 14,
+      "tool_exec_ended": 6,
+      "tool_exec_started": 6,
+      "turn_completed": 14,
+      "turn_verify_passed": 8,
+      "user_input_received": 14
+    },
+    "disabled": [
+      {
+        "name": "auto_learning",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "gateway",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "mcp_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "plugin_discovery",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      },
+      {
+        "name": "scheduler",
+        "status": "disabled",
+        "reason": "outside benchmark-safe runtime profile"
+      }
+    ]
+  },
+  "persistence": {
+    "session_event_dbs": [
+      "sessions.db"
+    ],
+    "hook_event_db": "sessions.db",
+    "native_receipt": {
+      "path": "results.json",
+      "sha256": "edfdb560868dad1de2298fb9c0b296a23e449ae52f49b334631ee54755c6dea2",
+      "simulation_count": 1
+    }
+  }
+}
