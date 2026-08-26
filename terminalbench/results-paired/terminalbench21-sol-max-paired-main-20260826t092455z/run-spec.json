@@ -1,0 +1,92 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-sol-max-paired-main-20260826t092455z",
+  "created_at": "2026-08-26T09:24:55Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-26T09:29:40Z",
+    "live_test_approved": true,
+    "operator": "Codex delegated GEODE evaluation"
+  },
+  "study": {
+    "research_question": "On a frozen three-task Terminal-Bench 2.1 diagnostic subset, how does GEODE compare with native Codex when both use gpt-5.6-sol, max reasoning, OpenAI subscription auth, Harbor 0.22.0, canonical task containers, and canonical verifiers?",
+    "research_gap": "GEODE has a Harbor adapter but no same-model Terminal-Bench 2.1 paired measurement or public canonical artifact bundle.",
+    "hypothesis": "GEODE's valid task success count will be within one task of native Codex on the three frozen tasks.",
+    "primary_metric": {
+      "name": "per-arm task success rate",
+      "unit": "fraction",
+      "direction": "maximize",
+      "aggregation": "For each arm separately, sum canonical Harbor verifier binary rewards across the three frozen tasks and divide by three; never pool arms.",
+      "denominator": 3
+    },
+    "decision_rule": "Classify the hypothesis as supported if the absolute difference between valid GEODE and native Codex success counts is at most one task. The result remains diagnostic-only regardless of outcome.",
+    "invalidation_rule": "Exclude an attempt as infrastructure-invalid if dataset identity or digest differs, timeout or resource overrides appear, subscription auth fails, the container cannot start, or the canonical verifier does not produce a receipt. A verifier reward of zero after a valid agent phase is a valid semantic failure. If either arm has no valid attempt for any frozen task after one infrastructure retry, the paired conclusion is inconclusive.",
+    "analysis_plan": "Run GEODE then native Codex, serially at concurrency one, across the frozen order. Preserve every attempt. Permit at most one retry only for a recorded infrastructure-invalid cell; select the first valid attempt per arm-task and never retry semantic failure. The shared external budget is 900 seconds per attempt with no monetary API cap because both routes use the approved subscription. GEODE freezes max_tokens=32768 per model call; native Codex exposes no per-run token cap through Harbor and retains its pinned CLI defaults, so token policy is part of the harness difference. Report exact numerators and denominators, per-task pairing, invalid counts, wall time, and available token usage. Compare the local paired subset directly only between arms. Treat full 89-task k>=5 official submissions and public leaderboard values as directional or not comparable, never as the same rank statistic."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "11fc370af279ade50308bf1af14e5464b0dca209",
+      "branch": "feature/terminalbench-eval-artifacts",
+      "dirty": false
+    },
+    "harness": {
+      "name": "Harbor paired GEODE and native Codex adapters",
+      "source": "https://github.com/laude-institute/harbor",
+      "revision": "v0.22.0"
+    },
+    "model": {
+      "provider": "OpenAI",
+      "label": "gpt-5.6-sol",
+      "route": "subscription",
+      "reasoning": "max"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 Docker Desktop 4.53.0 Docker Engine 29.0.1",
+      "architecture": "arm64 host and linux/amd64 containers under Docker Desktop emulation",
+      "reset_strategy": "Harbor creates a fresh Docker task environment for every attempt and deletes it after canonical verification.",
+      "initial_state_ref": "terminal-bench/terminal-bench-2-1@sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a; ordered task digests 802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a,d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302,a3d048d351136e48070696cda8bb79660dfd74db1fea3b6da88559f0332699c1"
+    },
+    "execution": {
+      "command_redacted": "GEODE: uv run --with harbor==0.22.0 harbor run -d terminal-bench/terminal-bench-2-1@6 -i terminal-bench/regex-log -i terminal-bench/openssl-selfsigned-cert -i terminal-bench/cancel-async-tasks -a evals.platforms.harbor:GeodeHarborAgent -m geode/gpt-5.6-sol -k 1 -n 1 --ak provider=openai --ak source=subscription --ak effort=max --ak agent_timeout_sec=900; native: CODEX_FORCE_AUTH_JSON=1 uv run --with harbor==0.22.0 harbor run -d terminal-bench/terminal-bench-2-1@6 -i terminal-bench/regex-log -i terminal-bench/openssl-selfsigned-cert -i terminal-bench/cancel-async-tasks -a codex -m openai/gpt-5.6-sol -k 1 -n 1 --ak version=0.145.0 --ak reasoning_effort=max",
+      "ordered_workload_ids": [
+        "terminal-bench/regex-log",
+        "terminal-bench/openssl-selfsigned-cert",
+        "terminal-bench/cancel-async-tasks"
+      ],
+      "workload_ids_sha256": "f4779af01651bebb5200b78ecd276c16524071cac7b7ed6814c659ce2481f4a3",
+      "repetitions": 1,
+      "seed_schedule": [
+        "harbor-0.22.0-exposes-no-seed-option"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 900,
+      "budget": {
+        "kind": "combined",
+        "limit": 10800,
+        "unit": "agent-seconds including one invalid retry per cell"
+      }
+    },
+    "comparison": {
+      "claim_class": "paired-runtime",
+      "comparator": "Harbor native Codex 0.145.0 using the same gpt-5.6-sol subscription route",
+      "comparability": "direct",
+      "promotion_authority": "paired-runtime"
+    }
+  },
+  "artifacts": {
+    "native_results": "native-results.json",
+    "measurement_results": null,
+    "trajectory": "trajectory.json",
+    "verifier_receipts": "verifier-receipts.json",
+    "outcome_receipts": "outcomes.json",
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": "publication.json"
+  },
+  "privacy": {
+    "classification": "public",
+    "redaction_boundary": "Never retain auth.json, OAuth or API tokens, machine-local absolute paths, environment dumps, private prompts, provider reasoning, or local identity. Publish only redacted commands, native Harbor results, approved task trajectories, verifier receipts, outcome summaries, analysis, and hashes after secret scanning."
+  }
+}
