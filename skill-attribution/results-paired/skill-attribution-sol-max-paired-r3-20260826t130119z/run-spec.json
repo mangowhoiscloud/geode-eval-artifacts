@@ -1,0 +1,103 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "skill-attribution-sol-max-paired-r3-20260826t130119z",
+  "created_at": "2026-08-26T13:01:19Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-26T13:01:19Z",
+    "live_test_approved": true,
+    "operator": "Codex delegated GEODE evaluation"
+  },
+  "study": {
+    "research_question": "On three repetitions of the frozen 12-case synthetic matrix, does making exactly one target runtime skill available improve native deterministic verifier outcomes under the same GEODE runtime and gpt-5.6-sol subscription policy after closing SA-GAP-01 through SA-GAP-03?",
+    "research_gap": "The first score-bearing run exposed hidden verifier IDs, answer-only grading of structured grilling output, a trigger-bearing seeded negative control, and no repeated observations. The corrected evaluator is merged, but it has no prospective repeated measurement.",
+    "hypothesis": "The sum of matched with-skill minus without-skill native verifier passes across 36 repeated pairs is positive.",
+    "primary_metric": {
+      "name": "mean signed native-verifier pass delta",
+      "unit": "signed pass fraction",
+      "direction": "target",
+      "aggregation": "For each matched case and repetition compute int(with-skill verifier pass) minus int(without-skill verifier pass), sum the 36 signed values, and divide by 36.",
+      "denominator": 36
+    },
+    "decision_rule": "Support the preregistered hypothesis only if every arm is valid and the signed verifier-pass numerator is greater than zero. Separately report repetition-level deltas and every negative-control activation or irrelevant action. This diagnostic has no runtime or release promotion authority.",
+    "invalidation_rule": "If any arm fails to return a successful runtime termination, exact frozen request identity, fixture-bound verifier receipt, trajectory, or reward within 180 seconds, mark the aggregate not measurable. Do not retry or replace a semantic verifier failure; an infrastructure retry requires a separately frozen run ID and fresh output root.",
+    "analysis_plan": "Execute all 72 arms serially in the frozen alternating order. Preserve every arm. Report the exact primary numerator and denominator, repetition-level signed deltas, and per-pair verifier, skill activation, irrelevant-action, token, elapsed-time, and safety deltas. Inspect target-skill, prompt-class, and negative-control rows descriptively without changing the preregistered primary rule or making population-level claims."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "9ff286071aab68825afa8158aa7ee982cea9c4b8",
+      "branch": "develop",
+      "dirty": false
+    },
+    "harness": {
+      "name": "skill-attribution",
+      "source": "mangowhoiscloud/geode",
+      "revision": "geode-skill-attribution-live-v1"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-5.6-sol",
+      "route": "subscription",
+      "reasoning": "max"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1",
+      "architecture": "arm64",
+      "reset_strategy": "Launch every arm in a new child process with a unique fresh GEODE_STATE_ROOT and session ID; do not resume an output root.",
+      "initial_state_ref": "fixture-sha256:cf41a9ddcc10dca76c921f71e09537505f76d9a01281180a8e2ba2e39650b3ea"
+    },
+    "execution": {
+      "command_redacted": "uv run python -m evals.benchmarks.skill_attribution_live run --run-spec run-spec.json --fixture evals/benchmarks/fixtures/skill-attribution-pilot.json --output-dir fresh-run-output",
+      "ordered_workload_ids": [
+        "slop-explicit",
+        "slop-implicit",
+        "slop-contextual",
+        "slop-negative",
+        "research-explicit",
+        "research-implicit",
+        "research-contextual",
+        "research-negative",
+        "grill-explicit",
+        "grill-implicit",
+        "grill-contextual",
+        "grill-negative"
+      ],
+      "workload_ids_sha256": "36f3293f14efd464e7256d338f1733b9a0bf50575282bed507fcd6f70a8e79d9",
+      "repetitions": 3,
+      "seed_schedule": [
+        "subscription-route-rep-1",
+        "subscription-route-rep-2",
+        "subscription-route-rep-3"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 180,
+      "budget": {
+        "kind": "subscription",
+        "limit": null,
+        "unit": "approved ChatGPT subscription quota"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "same GEODE runtime, model, route, tools, prompt, fixture, and initial-state contract without the target skill in the runtime registry",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "artifacts/native-results.json",
+    "measurement_results": null,
+    "trajectory": "artifacts/trajectory.json",
+    "verifier_receipts": "artifacts/verifier-receipts.json",
+    "outcome_receipts": "artifacts/outcome-receipts.json",
+    "attempts": "artifacts/attempts.jsonl",
+    "analysis": "artifacts/analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "The synthetic fixture and digest-only trajectories may be reviewed for publication. Keep provider reasoning, system/session text, child stdout/stderr, GEODE_STATE_ROOT databases, OAuth material, environment dumps, machine-local absolute paths, and operator identity private."
+  }
+}
