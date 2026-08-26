@@ -1,0 +1,90 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-sol-max-paired-smoke-20260826t092455z",
+  "created_at": "2026-08-26T09:24:55Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-08-26T09:29:40Z",
+    "live_test_approved": true,
+    "operator": "Codex delegated GEODE evaluation"
+  },
+  "study": {
+    "research_question": "Can the frozen GEODE and native Codex subscription routes each complete one canonical Terminal-Bench 2.1 task under the same Harbor verifier before the paired main run?",
+    "research_gap": "The GEODE Harbor adapter exists but has no recorded live compatibility result against Harbor 0.22.0 and gpt-5.6-sol.",
+    "hypothesis": "Both arms will produce a Harbor native result and verifier reward without an infrastructure error.",
+    "primary_metric": {
+      "name": "infrastructure-valid arm rate",
+      "unit": "fraction",
+      "direction": "maximize",
+      "aggregation": "Number of arms with a completed verifier receipt divided by two frozen arms.",
+      "denominator": 2
+    },
+    "decision_rule": "Proceed to the main run only if both arms are infrastructure-valid; task reward may be zero without blocking expansion.",
+    "invalidation_rule": "Mark an arm infrastructure-invalid if dataset identity or task digest differs, timeout or resource overrides appear, subscription auth fails, the container cannot start, or the verifier does not produce a receipt. A semantic verifier reward of zero is valid data.",
+    "analysis_plan": "Run GEODE first and native Codex second on regex-log. Preserve all attempts. Permit at most one retry only for a recorded infrastructure-invalid attempt; select the first valid attempt per arm and never retry a semantic failure. The shared external budget is 900 seconds per attempt with no monetary API cap because both routes use the approved subscription. GEODE freezes max_tokens=32768 per model call; native Codex exposes no per-run token cap through Harbor and retains its pinned CLI defaults, so token policy is part of the harness difference."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "11fc370af279ade50308bf1af14e5464b0dca209",
+      "branch": "feature/terminalbench-eval-artifacts",
+      "dirty": false
+    },
+    "harness": {
+      "name": "Harbor paired GEODE and native Codex adapters",
+      "source": "https://github.com/laude-institute/harbor",
+      "revision": "v0.22.0"
+    },
+    "model": {
+      "provider": "OpenAI",
+      "label": "gpt-5.6-sol",
+      "route": "subscription",
+      "reasoning": "max"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 Docker Desktop 4.53.0 Docker Engine 29.0.1",
+      "architecture": "arm64 host and linux/amd64 containers under Docker Desktop emulation",
+      "reset_strategy": "Harbor creates a fresh Docker task environment for every arm attempt and deletes it after verification.",
+      "initial_state_ref": "terminal-bench/terminal-bench-2-1@sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a; regex-log@sha256:802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a"
+    },
+    "execution": {
+      "command_redacted": "GEODE: uv run --with harbor==0.22.0 harbor run -d terminal-bench/terminal-bench-2-1@6 -i terminal-bench/regex-log -a evals.platforms.harbor:GeodeHarborAgent -m geode/gpt-5.6-sol -k 1 -n 1 --ak provider=openai --ak source=subscription --ak effort=max --ak agent_timeout_sec=900; native: CODEX_FORCE_AUTH_JSON=1 uv run --with harbor==0.22.0 harbor run -d terminal-bench/terminal-bench-2-1@6 -i terminal-bench/regex-log -a codex -m openai/gpt-5.6-sol -k 1 -n 1 --ak version=0.145.0 --ak reasoning_effort=max",
+      "ordered_workload_ids": [
+        "terminal-bench/regex-log"
+      ],
+      "workload_ids_sha256": "180e56b253e22a0c690a284ca3c0dbe9835b4fbaa928074b783c793a490b9a1f",
+      "repetitions": 1,
+      "seed_schedule": [
+        "harbor-0.22.0-exposes-no-seed-option"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 900,
+      "budget": {
+        "kind": "combined",
+        "limit": 3600,
+        "unit": "agent-seconds including one invalid retry per arm"
+      }
+    },
+    "comparison": {
+      "claim_class": "smoke",
+      "comparator": "Harbor native Codex 0.145.0 using the same gpt-5.6-sol subscription route",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/native",
+    "measurement_results": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/measurement.json",
+    "trajectory": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/trajectories",
+    "verifier_receipts": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/verifier-receipts",
+    "outcome_receipts": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/outcomes",
+    "attempts": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/attempts.jsonl",
+    "analysis": "artifacts/eval/runs/terminalbench21-sol-max-paired-smoke-20260826t092455z/analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "public",
+    "redaction_boundary": "Never retain auth.json, OAuth or API tokens, machine-local absolute paths, environment dumps, private prompts, provider reasoning, or local identity. Publish only redacted commands, native Harbor results, approved task trajectories, verifier receipts, outcome summaries, and hashes after secret scanning."
+  }
+}

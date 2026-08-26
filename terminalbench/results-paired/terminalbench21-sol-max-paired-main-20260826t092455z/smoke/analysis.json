@@ -1,0 +1,65 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-sol-max-paired-smoke-20260826t092455z",
+  "analyzed_at": "2026-08-26T10:07:42Z",
+  "run_spec_sha256": "d76a865d673f9a9fc7eb3d2b3728152ab7fb484df1ec9119db7270763c08cdad",
+  "attempts_sha256": "a061956c11aff539daee11c18e55eb1097d147b42c3b3f0a9ea703d207a81f0b",
+  "selected_attempt_ids": [
+    "geode-regex-log-smoke-001",
+    "codex-regex-log-smoke-001"
+  ],
+  "answer": "The paid smoke gate passed. Both frozen arms produced infrastructure-valid Harbor results, canonical verifier receipts, reward 1.0, and a trajectory under the same Terminal-Bench 2.1 task digest, 900-second timeout, model label, reasoning effort, subscription route, and concurrency.",
+  "metrics": [
+    {
+      "name": "infrastructure-valid arm rate",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "fraction",
+      "source_ref": "native-results.json",
+      "source_locator": {
+        "value": "/infrastructure_valid_arm_rate/value",
+        "numerator": "/infrastructure_valid_arm_rate/numerator",
+        "denominator": "/infrastructure_valid_arm_rate/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "Both arms completed without an infrastructure error, so the preregistered condition to proceed to the main run was met."
+  },
+  "limitations": [
+    "The smoke contains one task and is not a capability score.",
+    "The no-model oracle preflight completed before the final run-spec freeze and is preserved as verifier setup evidence, not as a selected prospective attempt.",
+    "The original preregistration used invalid artifact directory locators from the repository template; the original bytes and hash are retained and only post-run artifact locators were corrected."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "native-results.json",
+      "sha256": "cd1e63fc52a60ae7c3fee79259d0f7c49fd39497be81b3c1c45fb3e6e8a0ce4d"
+    },
+    {
+      "kind": "verifier-receipt",
+      "path": "verifier-receipts.json",
+      "sha256": "81cd9b211a3ca8d9ec8cc7a5769268787c97f3bb5c833c48b9fb6b59dfb3d270"
+    },
+    {
+      "kind": "outcome-receipt",
+      "path": "outcomes.json",
+      "sha256": "123e7f6f7efad542ec742cd403f8d5d36d60a874154475a9cea7cc032e31d085"
+    },
+    {
+      "kind": "trajectory",
+      "path": "trajectory.json",
+      "sha256": "cbd38ec043d70f3f43a40ea330d2277b6e9dcd12be4a071407f1f84bb6096ef4"
+    },
+    {
+      "kind": "other",
+      "path": "preregistration-receipt.json",
+      "sha256": "6326d5f524076370f8298f5e31c89d54c0e8ba98b66eb302ad496998649058b2"
+    }
+  ]
+}

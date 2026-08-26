@@ -1,0 +1,88 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-sol-max-paired-main-20260826t092455z",
+  "analyzed_at": "2026-08-26T10:07:42Z",
+  "run_spec_sha256": "86ebef5c71f9b50458436c1ca5af59f4d5a99b82add1ea12c210ade93f529f8a",
+  "attempts_sha256": "e90dfe7f56c6fd21ca0d76ad813a0d33057f786cca988d84b5eeacdaf012d27a",
+  "selected_attempt_ids": [
+    "geode-openssl-selfsigned-cert-001",
+    "geode-regex-log-001",
+    "geode-cancel-async-tasks-001",
+    "codex-openssl-selfsigned-cert-001",
+    "codex-regex-log-001",
+    "codex-cancel-async-tasks-001"
+  ],
+  "answer": "On the frozen three-task diagnostic subset, GEODE scored 3/3 and native Codex scored 3/3. The paired success-count difference was zero, so the preregistered within-one-task hypothesis is supported. This answers only the local same-model harness comparison; it does not estimate full-suite accuracy or an official leaderboard rank.",
+  "metrics": [
+    {
+      "name": "per-arm task success rate",
+      "value": 1.0,
+      "numerator": 3,
+      "denominator": 3,
+      "unit": "fraction",
+      "source_ref": "native-results.json",
+      "source_locator": {
+        "value": "/arms/geode/score/value",
+        "numerator": "/arms/geode/score/numerator",
+        "denominator": "/arms/geode/score/denominator"
+      }
+    },
+    {
+      "name": "native Codex task success rate",
+      "value": 1.0,
+      "numerator": 3,
+      "denominator": 3,
+      "unit": "fraction",
+      "source_ref": "native-results.json",
+      "source_locator": {
+        "value": "/arms/codex/score/value",
+        "numerator": "/arms/codex/score/numerator",
+        "denominator": "/arms/codex/score/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "Both arms passed all three frozen tasks, giving an absolute success-count difference of zero, which is within the preregistered threshold of one. The sample and repetition count do not authorize a suite headline."
+  },
+  "limitations": [
+    "The sample is 3 of 89 tasks with one repetition per arm; official submissions require all 89 tasks and at least five trials per task.",
+    "Harbor 0.22.0 exposes repetition count but no run seed option, so no seed schedule could be controlled.",
+    "The host is arm64 and the official task images are linux/amd64 under Docker Desktop emulation.",
+    "Arms ran serially in GEODE-then-Codex order without randomized arm order.",
+    "GEODE freezes 32768 output tokens per model call while native Codex exposes no per-run token cap through Harbor; this internal token policy is part of the harness difference.",
+    "Detailed provider reasoning, native session logs, and native ATIF/system text are withheld; the public trajectory is a schema-valid digest-only scope summary and is not replay-complete.",
+    "Harbor cost fields are model-price estimates attached to subscription-route trials, not proof of billed API charges.",
+    "The original preregistration used invalid artifact directory locators from the repository template; the original bytes and hash are retained and only post-run artifact locators were corrected.",
+    "No official maintainer judge reviewed reward hacking, and the run is not eligible for official leaderboard submission."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "native-results.json",
+      "sha256": "62163327fdd1a48e497993d9866e0417d0b921083afee07cb35f59d3de9ebccc"
+    },
+    {
+      "kind": "verifier-receipt",
+      "path": "verifier-receipts.json",
+      "sha256": "ea57056145fb28b2adf83c0d3f338207c811479ef945082b1f4dbb89ad6cd0f1"
+    },
+    {
+      "kind": "outcome-receipt",
+      "path": "outcomes.json",
+      "sha256": "667f6f68ca6e6f1446778b93d5938ab7b2a07440406fa103186067aabd75cc18"
+    },
+    {
+      "kind": "trajectory",
+      "path": "trajectory.json",
+      "sha256": "31c639654b6188e3b9e11c13c6a4ef60639921d5d83f35525fcc0b9e5c0ea22b"
+    },
+    {
+      "kind": "other",
+      "path": "preregistration-receipt.json",
+      "sha256": "4275816a44d6ad5d8aeaecf2206e8601f728f372672801aec19b9feeae39823e"
+    }
+  ]
+}
