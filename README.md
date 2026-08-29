@@ -1,16 +1,92 @@
 # GEODE Evaluation Artifacts
 
-Raw run logs behind the benchmark numbers published in the GEODE docs
-([Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2) ·
-[MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark)).
-Every score GEODE publishes cites a result directory; this repository is where
-those directories live, so any reported number can be traced back to verifier
-output and the trace material retained by the producing harness. Trace fidelity
-varies: tau2 and Petri retain full visible message sequences, while the public MCPMark
-copy retains final answers and ordered MCP execution logs, not full model
-dialogue. Hidden reasoning and local paths are removed from new public Petri
-copies. See [`TRAJECTORIES.md`](TRAJECTORIES.md) for the stable schema,
-redaction, admission, and retirement contract.
+Public evidence behind GEODE's agent-runtime and evaluation claims. This
+repository preserves native verifier receipts, normalized trajectories,
+learning projections, and the reports that interpret them. A reported number
+should be traceable back to the producing harness without treating a summary,
+derived dataset, or model-authored judgment as ground truth.
+
+Published benchmark pages: [Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2) ·
+[MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark). The
+stable publication, redaction, admission, and retirement rules live in
+[`TRAJECTORIES.md`](TRAJECTORIES.md).
+
+## Evidence contract
+
+| Layer | What it answers | Authority and limit |
+|---|---|---|
+| Native result / verifier receipt | Did the task pass under the producing harness? | Score authority. A report or normalized record must not replace it. |
+| Normalized `geode.trajectory@1` | What visible events, tool pairs, and terminal state can be joined across harnesses? | Analysis surface. `scope_complete` does not imply byte replay when private bodies are digest-projected. |
+| Learning view v2 | Which example, rollout, trajectory, and native reward belong together? | Derived, digest-bound projection. Invalid attempts and zero rewards remain explicit. |
+| Analysis / run report | What does a frozen run support? | Run-local interpretation only. Broader project claims live in GEODE's evidence ledger; diagnostic subsets are not leaderboards, release decisions, or causal claims. |
+
+The native receipt owns the score; the trajectory owns the public event
+sequence; the learning view owns the join; the report owns the bounded
+interpretation. When they disagree, follow that order and inspect the recorded
+correction or lineage.
+
+## Why the repository keeps both raw evidence and task-scoped views
+
+The engineering hypothesis distilled from the July-August 2026 long-agent
+reading cycle is
+that durable agent memory is not "put the whole context back into the prompt."
+Raw records should remain available, while the current goal, confirmed
+evidence, unresolved conditions, and code locations are selected into a
+smaller view that can be rebuilt when intent changes. Destructive early
+summaries lose rejected candidates and later-needed evidence; indiscriminate
+raw-log replay introduces stale constraints and duplication.
+
+That hypothesis shapes this store in four concrete ways:
+
+1. **Preserve, then project.** Native artifacts remain append-only; normalized
+   trajectories and learning views are derived surfaces, not replacements.
+2. **Attribute behavior, not just outcomes.** IDs bind attempts, event order,
+   tool call/result pairs, verifier receipts, and terminal outcomes so analysis
+   can ask which observed actions changed state or evidence.
+3. **Keep roles and information boundaries visible.** Public records distinguish
+   agent, user/simulator, tool, verifier, and auditor surfaces. Hidden reasoning
+   is not reconstructed from user-facing summaries.
+4. **Curate only validated segments.** Infrastructure-invalid attempts remain
+   lineage rather than training examples; digest, completeness, privacy, and
+   native-reward checks gate published learning views.
+
+These are data and evaluation design choices, not proof that one context policy
+or rollout-selection algorithm improves open-ended research. In particular,
+student reachability of teacher segments and action-level causal credit remain
+open evaluation questions. The repository exposes the evidence needed to test
+them without promoting success-only rollouts or self-judged gains by default.
+This section is an operational synthesis, not a literature review, and makes no
+paper-specific attribution without a bibliography. Its reward-hacking threat
+model includes success-only selection that reinforces irrelevant detours,
+self-judging or cross-role answer leakage, and rewards that omit action order or
+information asymmetry.
+
+## Find evidence by question
+
+| Question | Start here |
+|---|---|
+| What is the trajectory schema and what may be published? | [`TRAJECTORIES.md`](TRAJECTORIES.md) |
+| How do example, rollout, trajectory, and reward join? | [`learning-views/v2/DATA-MODEL.md`](learning-views/v2/DATA-MODEL.md) |
+| Does a task-scoped skill help under a frozen paired protocol? | [Repeated analysis](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) · [native results](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/native-results.json) |
+| How did GEODE and native Codex compare on the same Terminal-Bench tasks? | [paired analysis](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) · [native results](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/native-results.json) |
+| Can a small native evaluation be consumed as a learning view? | [Terminal-Bench fast-3](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) · [Tau2 three-domain](learning-views/v2/tau2-1.0.1-geode-gpt-5.6-terra-max-3domain-20260825/README.md) |
+| Which mutation attempts were rejected or invalidated, and why? | [`crucible/runs/campaigns/`](crucible/runs/campaigns/) · [`crucible/gate-provenance/`](crucible/gate-provenance/) |
+| What visible safety behavior was audited across roles? | [`sil/petri-audits/`](sil/petri-audits/) · [`sil/petri-dish/`](sil/petri-dish/) |
+
+## Current focused datasets
+
+| Date | Dataset | Native outcome | What it supports |
+|---|---|---|---|
+| 2026-08-26 | [Terminal-Bench 2.1 paired diagnostic](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) | GEODE 3/3; native Codex 3/3 | Same-model, same three-task local harness comparison only; 3 of 89 tasks, k=1, no leaderboard authority. |
+| 2026-08-26 | [Skill-attribution paired pilot](skill-attribution/results-paired/skill-attribution-sol-max-paired-20260826t113400z/artifacts/analysis.json) | Signed pass delta +4 across 12 pairs (+0.333) | A preregistered synthetic pilot; diagnostic only. |
+| 2026-08-26 | [Skill-attribution repeated diagnostic](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) | Signed pass delta 0 across 36 pairs (0.000) | The pilot lift did not reproduce across three repetitions; skill effects must be remeasured, not assumed. |
+| 2026-08-25 | [Terminal-Bench fast-3 learning view](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) | GEODE 3/3 | Three digest-bound example/rollout/reward joins; not an official score. |
+| 2026-08-25 | [Tau2 three-domain learning view](learning-views/v2/tau2-1.0.1-geode-gpt-5.6-terra-max-3domain-20260825/README.md) | Native mean reward 1/3 | Selected valid runs plus explicit infrastructure-invalid retry lineage. |
+
+The skill-attribution pair is intentionally useful as a negative result: an
+apparent one-run gain disappeared under repetition. It shows why a pilot effect
+must be repeated under the target agent and task conditions before being
+treated as a useful memory or skill effect.
 
 ## Layout
 
@@ -30,6 +106,8 @@ redaction, admission, and retirement contract.
 | `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
 | `trajectories/` | Immutable normalized trajectory releases per the `TRAJECTORIES.md` contract: `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>/` holding `trajectory.json` + `manifest.json` | per-release producing harness (named in each manifest) |
 | `learning-views/` | Versioned `example -> rollout -> trajectory -> reward` projections with digest-bound native evaluator values; v2 keeps retry lineage and zero rewards explicit | GEODE evaluation data projector |
+| `terminalbench/results-paired/` | Preregistered GEODE/native-Codex paired diagnostics with native results, verifier receipts, normalized trajectories, and explicit non-leaderboard limits | Harbor / Terminal-Bench 2.1 |
+| `skill-attribution/results-paired/` | Paired and repeated skill-on/skill-off diagnostics with attempt, rollout, reward, verifier, privacy, and analysis records | GEODE skill-attribution runner |
 | `reports/checkpoint-retirement/` | Sanitized forensic receipts for retired local checkpoint stores; records integrity, aggregate schema statistics, runtime-consumer evidence, and disposition without publishing opaque state payloads | GEODE runtime-maintenance audit |
 | `crucible/campaign-records/` | The G0-G7 era campaign record (EN/KO, formerly `docs/architecture/crucible.md` in the main repo): telecom v1-v72 measurement narrative, weakness band, S5 trial runs. Superseded as an architecture contract by `docs/architecture/crucible-kernel.md`; preserved here as the historical run record | GEODE Crucible harness over tau2-bench |
 | `crucible/gate-provenance/crucible-power-admission-2026-07-13.md` | Family-power admission design record (Monte Carlo power audit of the frozen promotion rule; no provider calls) | GEODE Crucible harness |
@@ -45,6 +123,8 @@ this table is the summary of the stack that produced them.
 | GEODE entry point | `plugins/benchmark_harness/run_mcpmark.py` in the GEODE repo: registers the `geode` agent (a `BaseMCPAgent` wrapping GEODE's `AgenticLoop`) before `pipeline.main()` |
 | MCP servers (MCPMark) | GitHub: `ghcr.io/github/github-mcp-server:v0.15.0` (Docker stdio) · Postgres: `postgres-mcp==0.3.0` via pipx · Playwright: `@playwright/mcp@0.0.68` (headless chromium) · Notion: `@notionhq/notion-mcp-server` (stdio) · Filesystem: upstream MCPMark default |
 | tau2 harness | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`), GEODE agent + GEODE user-simulator adapters; native `user_simulator` comparator runs labeled separately |
+| Terminal-Bench paired diagnostic | Frozen model, harness, task, budget, arm, and limitation fields in the [run spec](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/run-spec.json) |
+| Skill-attribution repeated diagnostic | Frozen case matrix, skill arms, repetitions, verifier, and non-promotion scope in the [run spec](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/run-spec.json) |
 | Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 records use `gpt-5.6-sol` / subscription / `high`; the 2026-08-02 smoke and 2026-08-03 three-domain full cycle use `gpt-5.4` / subscription / `high` for both the agent and GEODE user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13 also used `gpt-5.4` but remain separately contract-scoped. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
 | Verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks. No GEODE-authored judges |
 
@@ -308,7 +388,7 @@ local paths or synthetic benchmark identities were redacted.
 | r34 | `INVALID`, no verdict | Power and runtime admission passed, but the evaluator subprocess exited before judgment. The run records one producer call and no score. |
 | r35 | `INVALID` verdict | A verdict-bearing measured attempt was vetoed for `task_coverage_incomplete` and `infrastructure_contamination`; `promotion_authority` remained `none`. |
 
-## Quantitative summary
+## Historical aggregate for the legacy harness directories
 
 Counted directly from the files in this repository on 2026-08-03; recompute
 any of it with `python3 scripts/stats.py`. Token figures are what the
