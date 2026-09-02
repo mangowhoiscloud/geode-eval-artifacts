@@ -1,0 +1,51 @@
+{
+  "schema": "geode.eval-run-protocol-amendment.v1",
+  "run_id": "terminalbench21-sol-max-fullsuite-paired-20260827t190300z",
+  "amendment_id": "protocol-amendment-003",
+  "preregistered_at": "2026-09-02T18:20:02Z",
+  "status": "active",
+  "reason": "The official tune-mjcf amd64 container cannot import its unchanged MuJoCo verifier dependency on this arm64 Docker Desktop host: the oracle preflight terminated with a fatal illegal-instruction error before pytest collection.",
+  "batch_049_treatment": {
+    "excluded_task": "terminal-bench/tune-mjcf",
+    "excluded_cells": [
+      "GEODE repetitions 1-5",
+      "native Codex repetitions 1-5"
+    ],
+    "excluded_cell_validity": "infrastructure-unavailable; no model call",
+    "selected_for_analysis": false,
+    "included_task": "terminal-bench/fix-code-vulnerability",
+    "included_task_digest": "sha256:d31348aa16b533a15f013420e4d9726dc529e6086adc7d6d48067d22cc18fe71",
+    "oracle_preflight": "raw/preflight/2026-09-03__02-47-48/fix-code-vulnerability__5PRQK6d/result.json",
+    "oracle_result_sha256": "92a4ab9bd736608de7205eb61764a7bc4b0e8fba06e56149e8a3ed6d679a3704",
+    "oracle_reward": 1.0
+  },
+  "included_measurement_contract": {
+    "dataset": "terminal-bench/terminal-bench-2-1@6",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "arms": [
+      "GEODE",
+      "native Codex"
+    ],
+    "arm_order": [
+      "GEODE",
+      "native Codex"
+    ],
+    "repetitions_per_arm": 5,
+    "max_concurrency": 2,
+    "automatic_retries": 0,
+    "timeout_multiplier": 1.0,
+    "verifier_env": {},
+    "scorer_and_tests": "unchanged official files",
+    "credential_route": "OpenAI subscription",
+    "observer_capture": "required before the first paid model call"
+  },
+  "analysis_policy": {
+    "batch_049_denominator_per_arm": 5,
+    "full_suite_primary_eligibility": false,
+    "coverage_label": "secondary paired coverage with symmetric infrastructure exclusion",
+    "official_leaderboard_equivalence": false,
+    "claim_limit": "The ten excluded tune-mjcf cells are neither zeroes nor passes and must never be inserted into a numerator or denominator."
+  },
+  "future_resolution": "Run tune-mjcf on an x86_64 Linux host with the unchanged official image and verifier before claiming 89-task coverage."
+}

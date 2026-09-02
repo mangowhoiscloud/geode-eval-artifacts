@@ -1,0 +1,65 @@
+{
+  "schema": "geode.eval-run-protocol-amendment.v1",
+  "run_id": "terminalbench21-sol-max-fullsuite-paired-20260827t190300z",
+  "amendment_id": "protocol-amendment-001",
+  "preregistered_at": "2026-09-02T14:31:20Z",
+  "status": "candidate pending oracle calibration",
+  "original_contract": {
+    "run_spec_sha256": "46685f7ebcdc515c4cc71185ab49c3fa2326873b0aee003587e602da4f1d22e7",
+    "task_manifest_sha256": "babc540a95a7a606e05e7e181fb8ba0c9d04fe1ad530e85a3e5e1fedb781a7a8",
+    "preregistration_receipt_sha256": "6024ad9042c0969449e77c5d923c0f69a2b712731237bff7c1570476055fee1f",
+    "live_preflight_sha256": "8cfcb73028f58b8b779225655fd8f0e1e9458bdccf864ad9b303dd87eed3cb2c"
+  },
+  "scope": {
+    "batch_id": "batch-048",
+    "tasks": [
+      "terminal-bench/bn-fit-modify",
+      "terminal-bench/constraints-scheduling"
+    ],
+    "arms": [
+      "GEODE",
+      "native Codex"
+    ],
+    "phase": "verifier only"
+  },
+  "change": {
+    "verifier_env": {
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "rationale": "The official amd64 task image runs through Rosetta on the arm64 host. bn-fit-modify reproduced a CPU-bound, no-output pytest stall with 15 process threads after dependency installation, while the same SciPy 1.16.1 KS call on the same data completed in 0.0025436249561607838 seconds on native arm64. Limiting OpenBLAS to the task CPU quota is the smallest infrastructure-only correction."
+  },
+  "unchanged": {
+    "dataset": "terminal-bench/terminal-bench-2-1@6",
+    "bn_fit_modify_task_digest": "sha256:b5f9644970c17ad9ddb46b7266f7bcd87c761d77d7e6f55d7cfe7284d5ff66e9",
+    "bn_fit_modify_image_digest": "sha256:5aeb11ca6e802b83816c9a31f055ac9d028309a853509400c2e3139ac2d8380d",
+    "agent_timeout_seconds": 3600.0,
+    "verifier_timeout_seconds": 3600.0,
+    "timeout_multiplier": 1.0,
+    "scorer_and_tests": "unchanged official files",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "repetitions_per_arm": 5,
+    "arm_order": [
+      "GEODE",
+      "native Codex"
+    ],
+    "automatic_retries": 0
+  },
+  "oracle_calibration_gate": {
+    "task": "terminal-bench/bn-fit-modify",
+    "attempts": 1,
+    "concurrency": 1,
+    "automatic_retries": 0,
+    "paid_model_calls": false,
+    "pass_condition": "Harbor completes one oracle trial with reward 1, zero errors, and a persisted verifier receipt within the unchanged 3600-second verifier timeout.",
+    "failure_condition": "Any exception, timeout, missing verifier receipt, or reward other than 1 rejects this amendment and blocks paid model calls for bn-fit-modify."
+  },
+  "analysis_policy": {
+    "classification_if_activated": "task-level infrastructure-amended secondary paired result",
+    "official_untouched_protocol_equivalence": false,
+    "primary_full_suite_eligibility": false,
+    "paired_harness_comparison": "allowed only because the same amendment is applied to both arms",
+    "claim_limit": "Never combine these cells with an untouched official leaderboard rank or describe them as protocol-identical."
+  },
+  "diagnostic_receipt": "receipts/preflight.batch-048.bn-fit-modify-diagnostic.json"
+}
