@@ -1,0 +1,2035 @@
+{
+  "schema_id": "geode.eval-task-manifest@1",
+  "run_id": "terminalbench21-sol-max-fullsuite-paired-20260827t190300z",
+  "dataset": {
+    "name": "terminal-bench/terminal-bench-2-1",
+    "digest": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "task_count": 89
+  },
+  "selection": {
+    "method": "all 89 tasks in Harbor registry order for terminal-bench/terminal-bench-2-1@6",
+    "frozen_before_execution": true,
+    "exclusions": [],
+    "ordered_workload_ids_sha256": "66149d7dd2f9e8304da675d47df79e66b962d5fe1a3dd5ec79903e2daa9c3aa1"
+  },
+  "repetitions_per_task_per_arm": 5,
+  "timeout_and_resource_policy": {
+    "timeout_multiplier": 1.0,
+    "overrides": [],
+    "source": "canonical task.toml resolved by Harbor 0.22.0",
+    "maximum_selected_agent_seconds_both_arms": 1519500
+  },
+  "concurrency_policy": {
+    "maximum": 2,
+    "memory_8192_mb_tasks": 1,
+    "all_other_tasks": 2,
+    "calibration_receipt": "resource-calibration-receipt.json",
+    "calibration_sha256": "7ab72354fec9e64316039ca9c4dffb002ed256adefd2c8bf1ee49828673d98d2"
+  },
+  "execution_batches": [
+    {
+      "batch_id": "batch-001",
+      "task_ids": [
+        "terminal-bench/write-compressor"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 2048,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-002",
+      "task_ids": [
+        "terminal-bench/torch-tensor-parallelism"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-003",
+      "task_ids": [
+        "terminal-bench/schemelike-metacircular-eval",
+        "terminal-bench/kv-store-grpc"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-004",
+      "task_ids": [
+        "terminal-bench/pypi-server",
+        "terminal-bench/dna-assembly"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-005",
+      "task_ids": [
+        "terminal-bench/torch-pipeline-parallelism"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-006",
+      "task_ids": [
+        "terminal-bench/qemu-alpine-ssh",
+        "terminal-bench/openssl-selfsigned-cert"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-007",
+      "task_ids": [
+        "terminal-bench/regex-chess",
+        "terminal-bench/log-summary-date-ranges"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-008",
+      "task_ids": [
+        "terminal-bench/model-extraction-relu-logits",
+        "terminal-bench/path-tracing"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-009",
+      "task_ids": [
+        "terminal-bench/regex-log"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 2048,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-010",
+      "task_ids": [
+        "terminal-bench/caffe-cifar-10"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 4
+    },
+    {
+      "batch_id": "batch-011",
+      "task_ids": [
+        "terminal-bench/mteb-leaderboard"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-012",
+      "task_ids": [
+        "terminal-bench/llm-inference-batching-scheduler",
+        "terminal-bench/pytorch-model-recovery"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-013",
+      "task_ids": [
+        "terminal-bench/circuit-fibsqrt",
+        "terminal-bench/merge-diff-arc-agi-task"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-014",
+      "task_ids": [
+        "terminal-bench/build-pov-ray",
+        "terminal-bench/cobol-modernization"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-015",
+      "task_ids": [
+        "terminal-bench/mcmc-sampling-stan"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 4
+    },
+    {
+      "batch_id": "batch-016",
+      "task_ids": [
+        "terminal-bench/gpt2-codegolf"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-017",
+      "task_ids": [
+        "terminal-bench/filter-js-from-html"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 1
+    },
+    {
+      "batch_id": "batch-018",
+      "task_ids": [
+        "terminal-bench/sam-cell-seg",
+        "terminal-bench/mteb-retrieve"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-019",
+      "task_ids": [
+        "terminal-bench/adaptive-rejection-sampler",
+        "terminal-bench/vulnerable-secret"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-020",
+      "task_ids": [
+        "terminal-bench/extract-elf",
+        "terminal-bench/nginx-request-logging"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-021",
+      "task_ids": [
+        "terminal-bench/make-doom-for-mips",
+        "terminal-bench/configure-git-webserver"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-022",
+      "task_ids": [
+        "terminal-bench/build-cython-ext",
+        "terminal-bench/train-fasttext"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-023",
+      "task_ids": [
+        "terminal-bench/compile-compcert",
+        "terminal-bench/fix-ocaml-gc"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 3
+    },
+    {
+      "batch_id": "batch-024",
+      "task_ids": [
+        "terminal-bench/gcode-to-text",
+        "terminal-bench/dna-insert"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-025",
+      "task_ids": [
+        "terminal-bench/raman-fitting",
+        "terminal-bench/overfull-hbox"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 3
+    },
+    {
+      "batch_id": "batch-026",
+      "task_ids": [
+        "terminal-bench/video-processing",
+        "terminal-bench/sanitize-git-repo"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-027",
+      "task_ids": [
+        "terminal-bench/qemu-startup",
+        "terminal-bench/hf-model-inference"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-028",
+      "task_ids": [
+        "terminal-bench/reshard-c4-data",
+        "terminal-bench/feal-differential-cryptanalysis"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-029",
+      "task_ids": [
+        "terminal-bench/rstan-to-pystan"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 8192,
+      "cpu_sum": 4
+    },
+    {
+      "batch_id": "batch-030",
+      "task_ids": [
+        "terminal-bench/make-mips-interpreter",
+        "terminal-bench/password-recovery"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-031",
+      "task_ids": [
+        "terminal-bench/sqlite-db-truncate",
+        "terminal-bench/query-optimize"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-032",
+      "task_ids": [
+        "terminal-bench/cancel-async-tasks",
+        "terminal-bench/financial-document-processor"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-033",
+      "task_ids": [
+        "terminal-bench/install-windows-3.11",
+        "terminal-bench/polyglot-c-py"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 3
+    },
+    {
+      "batch_id": "batch-034",
+      "task_ids": [
+        "terminal-bench/pytorch-model-cli",
+        "terminal-bench/db-wal-recovery"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-035",
+      "task_ids": [
+        "terminal-bench/largest-eigenval",
+        "terminal-bench/large-scale-text-editing"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-036",
+      "task_ids": [
+        "terminal-bench/break-filter-js-from-html",
+        "terminal-bench/count-dataset-tokens"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-037",
+      "task_ids": [
+        "terminal-bench/extract-moves-from-video",
+        "terminal-bench/path-tracing-reverse"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-038",
+      "task_ids": [
+        "terminal-bench/chess-best-move",
+        "terminal-bench/prove-plus-comm"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-039",
+      "task_ids": [
+        "terminal-bench/git-multibranch",
+        "terminal-bench/multi-source-data-merger"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-040",
+      "task_ids": [
+        "terminal-bench/sqlite-with-gcov",
+        "terminal-bench/polyglot-rust-c"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-041",
+      "task_ids": [
+        "terminal-bench/feal-linear-cryptanalysis",
+        "terminal-bench/crack-7z-hash"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-042",
+      "task_ids": [
+        "terminal-bench/sparql-university",
+        "terminal-bench/protein-assembly"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 6144,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-043",
+      "task_ids": [
+        "terminal-bench/custom-memory-heap-crash",
+        "terminal-bench/code-from-image"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-044",
+      "task_ids": [
+        "terminal-bench/fix-git",
+        "terminal-bench/winning-avg-corewars"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-045",
+      "task_ids": [
+        "terminal-bench/modernize-scientific-stack",
+        "terminal-bench/git-leak-recovery"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-046",
+      "task_ids": [
+        "terminal-bench/distribution-search",
+        "terminal-bench/build-pmars"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-047",
+      "task_ids": [
+        "terminal-bench/mailman",
+        "terminal-bench/headless-terminal"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-048",
+      "task_ids": [
+        "terminal-bench/bn-fit-modify",
+        "terminal-bench/constraints-scheduling"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-049",
+      "task_ids": [
+        "terminal-bench/tune-mjcf",
+        "terminal-bench/fix-code-vulnerability"
+      ],
+      "max_concurrency": 2,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 2
+    },
+    {
+      "batch_id": "batch-050",
+      "task_ids": [
+        "terminal-bench/portfolio-optimization"
+      ],
+      "max_concurrency": 1,
+      "memory_mb_sum": 4096,
+      "cpu_sum": 1
+    }
+  ],
+  "tasks": [
+    {
+      "id": "terminal-bench/write-compressor",
+      "digest": "sha256:d9ddd9a8e925e2c566b37b2492cbf995afecefe58874e4043ef78d7f3c892c7e",
+      "selection_hash": "2674f15a7c484bce7c09b3b874098b0438961bc68a06b3c9684704b6cb61c4ed",
+      "task_config_sha256": "6066a509066433c97c417fea68c4e3e73996f698dcdcbabe07718835eea355a6",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/write-compressor:20251031"
+    },
+    {
+      "id": "terminal-bench/torch-tensor-parallelism",
+      "digest": "sha256:f32ce74a5aeb6638480247ab799fe46127bbee631acdd0921b0f394ec49b3684",
+      "selection_hash": "d61d1ddd00e271a742f68aa016c0019fa9c06c266820dd0f23f14cbab58a1276",
+      "task_config_sha256": "72fd2a5500d1fe8795dcae76cccb1a29fb25894881a7475f2fa519c87d425a8d",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/torch-tensor-parallelism:20251031"
+    },
+    {
+      "id": "terminal-bench/schemelike-metacircular-eval",
+      "digest": "sha256:58130c2166c3115276dc8592f358e326ff2d81ea852e3d88636c82fd1dff57e6",
+      "selection_hash": "0e4fc3fb64e760b47626f377a2349124ab6abdb253f9ef8f639699bac2effdfd",
+      "task_config_sha256": "8dae8eb226183b0ca92331c1106152a7abc93b03b4e5a95291b86a4ddc9b44e0",
+      "agent_timeout_sec": 2400,
+      "verifier_timeout_sec": 2400,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/schemelike-metacircular-eval:20251031"
+    },
+    {
+      "id": "terminal-bench/kv-store-grpc",
+      "digest": "sha256:973c5d4c111fb61a344457936f1c36400acd2d9e44389e7b319586fe23a7a307",
+      "selection_hash": "d33b1aa4e68835d128a006c3a77ceb909fb3afa9979d926e88acc761858f24c5",
+      "task_config_sha256": "6ff0f30a526bfff86a67b0b53439b9965229c0f368167dc1a5d05f34d82299a3",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/kv-store-grpc:20251031"
+    },
+    {
+      "id": "terminal-bench/pypi-server",
+      "digest": "sha256:1a1e0542f58e2d3362fec17a9bbb98667717d9a4a3e9a4c8413d3150a4fa0ff1",
+      "selection_hash": "72e8521a52e796934e86220e89b8511fb1e5a2de3c0ed08bf601bcee5c741de9",
+      "task_config_sha256": "07c39d7a733c89adadf74bb63a3e906c3694feb6c490d5fc85ac187c003fd447",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/pypi-server:20251031"
+    },
+    {
+      "id": "terminal-bench/dna-assembly",
+      "digest": "sha256:e41a8e94d86019949b08d3b5f88a85f6d943ba0fd85d5e1d5ebb95cb8f66223f",
+      "selection_hash": "9473b5b434af1e3118bcc1f5592bdddabb65b1a50313e87079cc35e7b069a5ef",
+      "task_config_sha256": "7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/dna-assembly:20251031"
+    },
+    {
+      "id": "terminal-bench/torch-pipeline-parallelism",
+      "digest": "sha256:db605337c749a872cea7b5b413429b3915bb4c3efe0f7875f0c46ce81bd8c4fb",
+      "selection_hash": "cd0d1726fcab2973766cd43c6d408c1ec46fd58fc2222f3255db689e949d9d85",
+      "task_config_sha256": "8b4f9f525c08afbbc4eca9168e46238a61ccb903486773e9ca4da64bb7ffe857",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/torch-pipeline-parallelism:20251031"
+    },
+    {
+      "id": "terminal-bench/qemu-alpine-ssh",
+      "digest": "sha256:60b7050b0e0aa51641208cf65766743d340e59575db2c4d2f8628240846c2a28",
+      "selection_hash": "26fa62d646d3e856dc13a02af288171e6d61f9dd559079639bc93a8409a921e6",
+      "task_config_sha256": "10a43ec6ee732eeba852c377f12e23178f7fa5a4868143f3699a15565ffb64c7",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/qemu-alpine-ssh:20251031"
+    },
+    {
+      "id": "terminal-bench/openssl-selfsigned-cert",
+      "digest": "sha256:d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302",
+      "selection_hash": "8ccf13132748a43d892710d548f7c38c367046930ec72c7770d6d6cd579f7287",
+      "task_config_sha256": "75c8913f0fa15890786c11999cde920b8bfc10d4ce8a14edf1e76985a2ac5800",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/openssl-selfsigned-cert:20251031"
+    },
+    {
+      "id": "terminal-bench/regex-chess",
+      "digest": "sha256:e763e0ac1c9759081af0a4a82ba51b8cf9ae5485a93de3bbe42d7d344597bd78",
+      "selection_hash": "fff2fa9a519afcb1ffcf37939d591aec1c5c337360f0e76485f028a1f8387893",
+      "task_config_sha256": "07fe52636fcc4bc9fff25d5630af145b97a5331219d719cc8decb4ca67ea21d4",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/regex-chess:20251031"
+    },
+    {
+      "id": "terminal-bench/log-summary-date-ranges",
+      "digest": "sha256:27b074a2f10fff7606e096f3abd8dced418ad8fda0f53d88acbe477f2d9ceaf6",
+      "selection_hash": "270e4cf48363fa5d29c23a84b7b8ee7eb46aac124b725c3ce549165637d90742",
+      "task_config_sha256": "9a9593673d6805ef3a301ea734e9c4dbaf80da1b37c0fe9d1f2ceea2a8c57e18",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/log-summary-date-ranges:20251031"
+    },
+    {
+      "id": "terminal-bench/model-extraction-relu-logits",
+      "digest": "sha256:1ae5045ad68b5d34c3398b612066a07c4a08b6dc330d28868ec4021e17c94b17",
+      "selection_hash": "09d2a95d41bd592725bd44bf9f0be603b31d453713db29f2bf718dfbf30e4cc7",
+      "task_config_sha256": "eb64dfaf8ae88868911ae28855cdc4f767de464001e2704919015b595be6dc29",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/model-extraction-relu-logits:20251031"
+    },
+    {
+      "id": "terminal-bench/path-tracing",
+      "digest": "sha256:cf56094c881a488b27e9f204a638a7e78ed7d55e12dc3064108c93357190314c",
+      "selection_hash": "ebff6754755ba0d08b61ec8761250bfae2c4fb24a04aa4ff492ab84ee164d8a4",
+      "task_config_sha256": "cf47013f69bf1b43242da984f231d4daf364fdf44d3845f2eea2ca2cb9308c46",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/path-tracing:20251031"
+    },
+    {
+      "id": "terminal-bench/regex-log",
+      "digest": "sha256:802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a",
+      "selection_hash": "7edbf20c37eeb4d0a4f48674e5bf6d00347c0352e58d17042f9c70fa787f4290",
+      "task_config_sha256": "6bc98525852755caf1fe34c174c2f10f4328adb4ce6c1968dcafe1c877e4e160",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/regex-log:20251031"
+    },
+    {
+      "id": "terminal-bench/caffe-cifar-10",
+      "digest": "sha256:7b0045106d7d5af724efe96b610ba64f7893f5c88528401c573c4d47e384e2bf",
+      "selection_hash": "dcbaeec9984d8d59d8e034af63978269417ec2e301229f01495290977d702bd1",
+      "task_config_sha256": "2831165ad9d9e8bbc646e6d85c0a2290640dcc4f13749547a2937c7675012a8b",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 4,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/caffe-cifar-10:20260403"
+    },
+    {
+      "id": "terminal-bench/mteb-leaderboard",
+      "digest": "sha256:484f6d7008a05b5b8640fc6618a384b8c9447cd76f85416c8a595028d29bff9c",
+      "selection_hash": "05322c54e1922a443ff056c4ae82c48a3b5e1bf8a0d9232c0c23bf649ed4f5e3",
+      "task_config_sha256": "86574bd1c6c4fefd2e64eee9c2caa53d87c4bcf2e51547912440a0ddbd0badb8",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/mteb-leaderboard:20260430"
+    },
+    {
+      "id": "terminal-bench/llm-inference-batching-scheduler",
+      "digest": "sha256:a3bf47589118daec5124fe3689b4439802c805b2f4ed9d402a48ae73ca2fea67",
+      "selection_hash": "135175459d89d816dd418fe511a757a1e5024dbac42d313826916eee82987d8d",
+      "task_config_sha256": "52aaac942f917e6a91ff658e0272195bd1cd842d41d71e302414c52603cc588b",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/llm-inference-batching-scheduler:20251031"
+    },
+    {
+      "id": "terminal-bench/pytorch-model-recovery",
+      "digest": "sha256:2e628841cff93290919172398e573e794f34c95d9382b7425adde4364022decc",
+      "selection_hash": "ac216ad6803da42984d4ed2f03c8fab0983725101eb6bd52fa8a3dece918b970",
+      "task_config_sha256": "851a51204f53482a31f47cdf8833128cf421113b0331011286940fc857c37dfd",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/pytorch-model-recovery:20260430"
+    },
+    {
+      "id": "terminal-bench/circuit-fibsqrt",
+      "digest": "sha256:9bcffe1054bb33249aa578a9a2a74f3c8cca66b0cb7aa1328233f1d31822aae3",
+      "selection_hash": "79957ac65dbb374eb2290a87439aedcd5e7e3d6e6a81eae7bc8fbbc1e59f698d",
+      "task_config_sha256": "9f5aa1f7ebbbcec90fd109121e9bd509af3cfff6b4cec701bd91947988f40972",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/circuit-fibsqrt:20251031"
+    },
+    {
+      "id": "terminal-bench/merge-diff-arc-agi-task",
+      "digest": "sha256:6aab6511a5344ce87698293bb1ce4cc51d9a45f1ad9f0c075d2a83197b36727d",
+      "selection_hash": "e397e83041627c4f16629769f07a55176ef849c40242b50b9c2417eecf63719b",
+      "task_config_sha256": "6ced40e06b43b169857509765eb7f07791db558f9437cc7367d2536771c2ca5b",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/merge-diff-arc-agi-task:20251031"
+    },
+    {
+      "id": "terminal-bench/build-pov-ray",
+      "digest": "sha256:4f08dab602fe2e9e2f42051cc6aef684a88cf2822e8b499b3ca19e670759fddb",
+      "selection_hash": "3f1dd891e7f9ef0937cadff857badb38331a811060734677f3a8b9c70a6417e2",
+      "task_config_sha256": "b90a47ec26c1191d3c523cc094ea96b170e42fbfe176ef1f814c57d05390c097",
+      "agent_timeout_sec": 12000,
+      "verifier_timeout_sec": 12000,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/build-pov-ray:20251031"
+    },
+    {
+      "id": "terminal-bench/cobol-modernization",
+      "digest": "sha256:e03aa03965eee48c9f772d566ff9bcd741fceeac9693123f82a13fdd46be0d88",
+      "selection_hash": "fbb8053429dee1d000ceec96d96d541a9bd2c663b4dcad5b72cd157d6ae5a65f",
+      "task_config_sha256": "4b620211dc3d6b1b989f0210c5ecd2f606974581c8bce27bd78659d48cf0cfbd",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/cobol-modernization:20251031"
+    },
+    {
+      "id": "terminal-bench/mcmc-sampling-stan",
+      "digest": "sha256:443cd2b94ed797944793e97a56527a5dc0f8ad40f78ed418fe1b2e367cf22546",
+      "selection_hash": "ba08b008accbd8e694762b4652c2fed9366a70e077f8adf7ee44ddfe1398fdaf",
+      "task_config_sha256": "c1c0351670499e15b3818f7394894e2789f74fc2a61ea76eccab826c1a951a94",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 4,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/mcmc-sampling-stan:20251031"
+    },
+    {
+      "id": "terminal-bench/gpt2-codegolf",
+      "digest": "sha256:fe42af8e9c5aa927c3b680acd08e43032c84088fa9d770b03ce63dbc66fea4e7",
+      "selection_hash": "37088b2e850fb251d965d3b540bfec57a80dc311c6f8a4e04c096b919d8bfe8d",
+      "task_config_sha256": "a3fa186d438a42af5909384b8dc0dfdc2ab7a3a68af9159e9d00464988895af0",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/gpt2-codegolf:20251031"
+    },
+    {
+      "id": "terminal-bench/filter-js-from-html",
+      "digest": "sha256:2d1496b6fc62adeccdba7a56f4bc24e5ef265840434d2011234ed20b6c240759",
+      "selection_hash": "c86c52b16aa080cbd019e781dcca13a2f46a46cc9cdd942d58482bcf0542f1cc",
+      "task_config_sha256": "f7f888951c97b8120371139bb78d39499c2d3cd7aa3836d57fd6d8b9e4199344",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/filter-js-from-html:20251031"
+    },
+    {
+      "id": "terminal-bench/sam-cell-seg",
+      "digest": "sha256:37c182b91df18b9c2ea2dceda47430bbd585e7880c56fca2f1975907ce0df8ce",
+      "selection_hash": "da1b4d74629ef469d72cd60034ca8ed543dfa49c36ab8ce44dba6b05e032d8fd",
+      "task_config_sha256": "f0eb6af2acb87cb6fee67d77e8fdd55e3b331baf48999260bc5b6c4ac466c128",
+      "agent_timeout_sec": 7200,
+      "verifier_timeout_sec": 7200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/sam-cell-seg:20251031"
+    },
+    {
+      "id": "terminal-bench/mteb-retrieve",
+      "digest": "sha256:fa7c777df6ed8987a2bb144b4b73a1200935bbea69da03a2aaa1dc8aa9bd9dc9",
+      "selection_hash": "0ed53dc4330d5b325c396ccd4a34480ac90592762ca1e745b777f7fd4ad859f6",
+      "task_config_sha256": "a2a4ded9824d296ce99bfba6aa2c9341dcc58f10e66de2e8f95dc8e07379c3aa",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/mteb-retrieve:20260430"
+    },
+    {
+      "id": "terminal-bench/adaptive-rejection-sampler",
+      "digest": "sha256:bcaa2399985cd57666018025846289ab25e193ae0dd8fb7f0ffab2410c24d4de",
+      "selection_hash": "587920939501f6dbc9b3b76a876bd34a40b3bb628636e42beb8a69511860bd3f",
+      "task_config_sha256": "6ed7b37f74beb46e9d47b0f5fad53025667c9548baff4e96d467b56d429fab1a",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/adaptive-rejection-sampler:20251031"
+    },
+    {
+      "id": "terminal-bench/vulnerable-secret",
+      "digest": "sha256:d76dfa9e256487c5542905b892156f694137aeef784e1abf3f41e15a8c946eac",
+      "selection_hash": "228ea5ba40034b97d6a7e585e7b56f604048614b00b10e0e9437259a45f60525",
+      "task_config_sha256": "51079626e4c76445e616eff8723efc53af7f1cf8d9c64d15aab2f4f0ecd6df3c",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/vulnerable-secret:20251031"
+    },
+    {
+      "id": "terminal-bench/extract-elf",
+      "digest": "sha256:1ef31d566be4fe3459d5368621ae7ef7a31b23ef675737e473bbc43c8c7b3fce",
+      "selection_hash": "8e568aba1f562ce52be2234e063320b71f3dfb3245d23261f6bff65343032a67",
+      "task_config_sha256": "14e2c28fd7cc1c9c7b64ab0db5565899fed538e38c55074824647cacc3f7a172",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/extract-elf:20251031"
+    },
+    {
+      "id": "terminal-bench/nginx-request-logging",
+      "digest": "sha256:9d1b8bebd989ea0bc8080c3b159480068caf183c5fd61385868b2574b206e097",
+      "selection_hash": "620b303609b1ce75c6afcf4e822a0a8b9b726c718f8d1d6601cf30555ac43f17",
+      "task_config_sha256": "b7a78d00be13656f75069197100b7b8c4fd268decf6f78929c853b3222a2729d",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/nginx-request-logging:20251031"
+    },
+    {
+      "id": "terminal-bench/make-doom-for-mips",
+      "digest": "sha256:2d83dd3dee8e0f055e09973934cf0d7e3169a9cd90704cba5c8940b170be9498",
+      "selection_hash": "7bbf76a4983983b820cfdef8fb5e6279409e2a4dfcdee4ee3796d98b12bf73a0",
+      "task_config_sha256": "a7d7a498f0d3a992b384e5086ba2b411767c1c1a013d1b41f6a25cdaf6d05acc",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/make-doom-for-mips:20251031"
+    },
+    {
+      "id": "terminal-bench/configure-git-webserver",
+      "digest": "sha256:e3dc712acfecdb1338a889f86c97b37422c3778351253f9aca4236e895fdb36e",
+      "selection_hash": "b9d8e7a350496553bbf7269a647840b52b05561b05a0405868e4c917aa8cccd9",
+      "task_config_sha256": "ebb40d72f689512cbd90d865d88ef966b6665ab215544f9247b898b7fa94751b",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/configure-git-webserver:20251031"
+    },
+    {
+      "id": "terminal-bench/build-cython-ext",
+      "digest": "sha256:35dc561790e73f13e59837828ac0863c0893edc6b71d42cf7d58656c843adf12",
+      "selection_hash": "7df412b8ada42aaf513d1104aa3a85869e71aba603fac750f9311eb162a2c527",
+      "task_config_sha256": "c472f0e7522c128fb7f03e00b50c8cdf2e5e6474daa1e094e7441f4b54e770b2",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/build-cython-ext:20251031"
+    },
+    {
+      "id": "terminal-bench/train-fasttext",
+      "digest": "sha256:460fc0818971ec83545a76805267b65459128fad52e68c26a199a0d74022badb",
+      "selection_hash": "1fed7f2472b2b6f1deb01cbd6732baf4c510d23b0cc3cb675acde274b4c34e6a",
+      "task_config_sha256": "994fda7c3081bbdd9f6d05d6279ef64faefa94c214d1e08fbcea656540e4fe91",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/train-fasttext:20251031"
+    },
+    {
+      "id": "terminal-bench/compile-compcert",
+      "digest": "sha256:22bde2a73d62fa46f5ab96f710561a72e8d1aa4266f008605a17f174622ad785",
+      "selection_hash": "e85d620ec394bb0f1a179adda8f995d04691f32c524f15f62286f3ad184f29ee",
+      "task_config_sha256": "1d9618d7178cfa15918a293da126b867f3a7db160e604d4fec369949884dac39",
+      "agent_timeout_sec": 2400,
+      "verifier_timeout_sec": 2400,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/compile-compcert:20260403"
+    },
+    {
+      "id": "terminal-bench/fix-ocaml-gc",
+      "digest": "sha256:2031f3d5224b891fe443a31526b569eb756be2f88b663cb025448af9c4f97e2c",
+      "selection_hash": "107dcf7e11f8923f4c432a823886e549198b2418e699bef9bf81b90098cba17b",
+      "task_config_sha256": "423aab8ce6f44ce9349dcde647ca3cbd09afd5ac023910c25699ed687a3c71b2",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/fix-ocaml-gc:20251031"
+    },
+    {
+      "id": "terminal-bench/gcode-to-text",
+      "digest": "sha256:7dd2af04820e71ecaba96bc493cbffa16317e96816c6c8003385c034adf6c23b",
+      "selection_hash": "204c2082caa7ca5e38f70549f1e07a50f086f9e5b39fde45dedb7f090163ae5c",
+      "task_config_sha256": "3aa7a504fe5b3c6eaab16881b0e6dbbe8ac6d4f59084fa49b1e98ad9c71ea00c",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/gcode-to-text:20251031"
+    },
+    {
+      "id": "terminal-bench/dna-insert",
+      "digest": "sha256:37fc023970e3464c1acc31f43e04a0b4b94758130d340788f261f00764d9e530",
+      "selection_hash": "edfd3854560e02fc110c6c56abfbbd3b1c5f188f7ee6ad30820e9b93f4ff9fdc",
+      "task_config_sha256": "1a9efd5c826d64d31c4874b395f1f9c488b2f26581b0c752fc4619ff177f25eb",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/dna-insert:20251031"
+    },
+    {
+      "id": "terminal-bench/raman-fitting",
+      "digest": "sha256:97ca4025332b20739da553cab0658f2ead925d1b5b3b9b7664dc9eb5e7fbeab7",
+      "selection_hash": "754c4406ae64bd240c6820cfe2bf8736dcc2e0b940e9c8a9c489a9fa5374598a",
+      "task_config_sha256": "0f3f6b580d7435954b3a114e77cdfb6cd0a856f15cc0ad83cd1b69c48492dfed",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/raman-fitting:20251031"
+    },
+    {
+      "id": "terminal-bench/overfull-hbox",
+      "digest": "sha256:3c3b16e4b2de5fea90ca98db242b155a6843f9cc4dfd00be3479985a34bab4f7",
+      "selection_hash": "d9a3ed33d331ea9416a3ab47933724f79401f3bdc3bcfb4e0b1e73735fdb59fd",
+      "task_config_sha256": "64680925bd47043216bffb2c44eb3620f1730e111a89ffbcc5550e5ffc89e72b",
+      "agent_timeout_sec": 750,
+      "verifier_timeout_sec": 360,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/overfull-hbox:20260403"
+    },
+    {
+      "id": "terminal-bench/video-processing",
+      "digest": "sha256:d3f02e177b49e5768b6ce6709fc4ae3ef2ce0cdecb63b09fc9b07f9d3ddb7203",
+      "selection_hash": "9738a2043d7801ad9a1c5770e384fb5acfbd591a8e4c55dfaed30bd8cd68657f",
+      "task_config_sha256": "be4fb42fccc5faa4862789cedd2c560eaa5758a2971989649a6dafeaeccc17aa",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/video-processing:20251031"
+    },
+    {
+      "id": "terminal-bench/sanitize-git-repo",
+      "digest": "sha256:6e86297715fae62cd499fbdd27013e11a38d05d7e05b7f661cb50b4ecead128f",
+      "selection_hash": "e23d3dd4a19e3ff48b1dce0d193bc9dda7b7c4c21a3e46347db6563b7ad80987",
+      "task_config_sha256": "ff209feb7d07c68b8bd0d2e9abee96a1431c332095a1bbe0a532c44a833a264d",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/sanitize-git-repo:20251031"
+    },
+    {
+      "id": "terminal-bench/qemu-startup",
+      "digest": "sha256:8e58263747da7dc688ad470688fb72825c4ba2c1c40443fa0f52963645bbd999",
+      "selection_hash": "5af319fdc1945059a1bd242cc072daab46320240a43ed59732689ce3ca31ad6a",
+      "task_config_sha256": "dc46292fff83fba50192f4c30606a5f9c092a9fb82139686df7dabf6580937d4",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/qemu-startup:20251031"
+    },
+    {
+      "id": "terminal-bench/hf-model-inference",
+      "digest": "sha256:01370f37e61286f920dfca1e471496640ebcc8d06e1cc48d874c790715dbd4ad",
+      "selection_hash": "bc073d8afa0eb98dbf1dbd33e5676f912a742f65572ceadec79c442540c2001d",
+      "task_config_sha256": "951ae476f4d078a25b7a487430148971e3a2222d93c4e0a932442440807eb3b7",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/hf-model-inference:20260430"
+    },
+    {
+      "id": "terminal-bench/reshard-c4-data",
+      "digest": "sha256:a402bbfede73dd04168d697de9b9146026f69e14c8cd333b6a91fc87e44ecd4b",
+      "selection_hash": "9bfe4d7df7e33dbe1dd0219cd41f2a8cea80fc4e7be6eb4d122c669cbcec13c3",
+      "task_config_sha256": "c2f146a1e00f798f7486ff60686ad52749bb73c7b71e984d52716d859e0f7dd8",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/reshard-c4-data:20251031"
+    },
+    {
+      "id": "terminal-bench/feal-differential-cryptanalysis",
+      "digest": "sha256:8ea56995fcc43fb94f0e4e15adb12dd28836bf3e9c766b2cc7ae78a7ce90341f",
+      "selection_hash": "09aa6225bdf00b5af35e8aed6a57988a8e311af99d131e8692e8dcf4ba7c5f98",
+      "task_config_sha256": "dcb9f2f15047eee0be15ca18c39c357f89187a94aae6baeff276221e2383eecb",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/feal-differential-cryptanalysis:20251031"
+    },
+    {
+      "id": "terminal-bench/rstan-to-pystan",
+      "digest": "sha256:592f15f75751f3c4999c3d05087f2f8b2a4dbaaedbfad5a30ae54058b80b925f",
+      "selection_hash": "612127ae58afd0ca93ac0d43f4a504eb41c36e101926583679dcee9c866f68be",
+      "task_config_sha256": "ed0cd4382cb353e73cb575aa7a20b624e35f09ddd8769c332f40f8986980e13f",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 4,
+        "memory_mb": 8192,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/rstan-to-pystan:20251031"
+    },
+    {
+      "id": "terminal-bench/make-mips-interpreter",
+      "digest": "sha256:41a55da0abec5d7b32a0c2321f8b18e84000ca8074ae62c6874d6ed4a3a1cd3c",
+      "selection_hash": "39bf4f30f67df68f893b0b2648bc82e7360cf67f48622770377d74fad5aff83e",
+      "task_config_sha256": "3fda43066642fd38516d07b2679f9813bdb3f1a42bc80b0c06151f60b9210e82",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/make-mips-interpreter:20251031"
+    },
+    {
+      "id": "terminal-bench/password-recovery",
+      "digest": "sha256:9b5c6bdce0cf03f075b21f6a7af5030b825ce07d7b16b37610f3964217ab84a4",
+      "selection_hash": "b87f43ea6f964136c7774dbf129629f01ae44dcbe45bc247043358cfbc70fab2",
+      "task_config_sha256": "cfd0362d201b957796f9bf1c02cc75646250cb2bd107ec88c768bfcfd091b24b",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/password-recovery:20251031"
+    },
+    {
+      "id": "terminal-bench/sqlite-db-truncate",
+      "digest": "sha256:956f038b479cc3b9b493553b57a60a8ff4154526386c3914c0b99e93e1ab6e87",
+      "selection_hash": "87922aa6129cbe003363bd95d08d21bd4dbfe89e6c560d55c599dfad4e613a74",
+      "task_config_sha256": "56061acd75d9933aa554aeb249b85d7d081227fca1b71a3da7e3dc97a675723e",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/sqlite-db-truncate:20251031"
+    },
+    {
+      "id": "terminal-bench/query-optimize",
+      "digest": "sha256:169496ea6843cb403b0860132675baf7aa0df0ac8b86221068e27d86395260f4",
+      "selection_hash": "a583e0367425ef9b14011f5cf211211aab7ec90141986f67cb99bdaf0c7ef216",
+      "task_config_sha256": "6e88f2a86df699594bcb1bf81df4ed694505f79c9420f671335b02524bbe3868",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/query-optimize:20251031"
+    },
+    {
+      "id": "terminal-bench/cancel-async-tasks",
+      "digest": "sha256:a3d048d351136e48070696cda8bb79660dfd74db1fea3b6da88559f0332699c1",
+      "selection_hash": "02d5d7df38d2a6dab743ada8610e4591dc20e9e94aea3d3b1ba1e82861f1aee1",
+      "task_config_sha256": "14db0675e04408f2133b0067e8dbddf66a1d6e7baf6b8d38bef8ecccfc4e58a8",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/cancel-async-tasks:20251031"
+    },
+    {
+      "id": "terminal-bench/financial-document-processor",
+      "digest": "sha256:63dc43a15d9ec401613016e9114d1a93ec860eea63b2db02abfe8060deea30fb",
+      "selection_hash": "8bde83d0a12719094408f99aa082488fc3e566c976b8007ba10e91a8609327a9",
+      "task_config_sha256": "163ee252895c05d36ca37137dba4d6c24b46be28d56ce84ef8bb35bb5b894bda",
+      "agent_timeout_sec": 1200,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/financial-document-processor:20251031"
+    },
+    {
+      "id": "terminal-bench/install-windows-3.11",
+      "digest": "sha256:1f1361b0012e1ad24054e7cfc039829459e8ab0631b3573d9b93499bf6b3563e",
+      "selection_hash": "f9dc1455bd64c5bdf399b4e0b84cb65e5895056ddc04f6e1a9a21116ed65c2cf",
+      "task_config_sha256": "0485184bd16cc74883396115d93520bd25b36d23d61e248da88c0dceeab2eeac",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 2,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/install-windows-3.11:20251031"
+    },
+    {
+      "id": "terminal-bench/polyglot-c-py",
+      "digest": "sha256:25570ccacf63f573a252eaa2a9c62ee8b55f5aa228cc803b5beb39dd6d8afeb7",
+      "selection_hash": "b114c8e98e5abdb2cb8ccaf4bc74871c294001999fa78bcf90ef8d5f6051cacd",
+      "task_config_sha256": "d31b9f60c47eed0d79e10d3be8fd56a23e50b3986606e3f2546863d44ac9a9ea",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/polyglot-c-py:20251031"
+    },
+    {
+      "id": "terminal-bench/pytorch-model-cli",
+      "digest": "sha256:6f11544dcc81a380dc4611902961f5520259c462d9fceb413419d66ab9a96c79",
+      "selection_hash": "b8067c350a1f2258f44f9aef434459f22e5ef4837a5069de689e50eafeb67fe0",
+      "task_config_sha256": "fc1c018efbd5d0537ac0741d53d1ebad3886faa51d14cbde8ec953856411bc0d",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/pytorch-model-cli:20251031"
+    },
+    {
+      "id": "terminal-bench/db-wal-recovery",
+      "digest": "sha256:07e9193513bfce038b9f9d84962ecc85683eee0a642d14ee6fb7104b086ddab4",
+      "selection_hash": "43defc885fb5d8b71190a4a9b9c7b3f031d62c4b0ccb50815ad70298d7e014d7",
+      "task_config_sha256": "1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/db-wal-recovery:20251031"
+    },
+    {
+      "id": "terminal-bench/largest-eigenval",
+      "digest": "sha256:1b6f17c344d23e97435ba3fa93400d141f6bb7763ed2014fab418830983791b3",
+      "selection_hash": "10e74e2e8137d5a42929803398f9f0703ab9dd422b0d223f457b67c1884ca0fc",
+      "task_config_sha256": "f7b9b7dda446f969a3ce88f61039d216f4d58b5fc5c10ff9faa24e2403bbd830",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/largest-eigenval:20251031"
+    },
+    {
+      "id": "terminal-bench/large-scale-text-editing",
+      "digest": "sha256:1f1cddc3df15e452fe2d3c6928f6b1e5b5330a7ae67cab373a0d089ea7d334a2",
+      "selection_hash": "caff7ef9cbfec923021d5af9b8dbdf3b9c16a7fa98ba2630f9d84769bdeaca54",
+      "task_config_sha256": "5c9488e80c1186f72efb8193e6be13c74eadf334b3846db2e794d24513a88f5f",
+      "agent_timeout_sec": 1200,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/large-scale-text-editing:20251031"
+    },
+    {
+      "id": "terminal-bench/break-filter-js-from-html",
+      "digest": "sha256:678008d1a4fd1e6e1b9b3cc9a327219fe4b410a31eafc52e9099bbf947eea600",
+      "selection_hash": "2d7fc0bda0ddda0ee1d075cd919c4295d89fa5a9a78c2d73fcd53f3cb20869e7",
+      "task_config_sha256": "f820eb1b47e4ccc548b87d9a418fef519137dcf975ad73d0fb5246df00a9669b",
+      "agent_timeout_sec": 1200,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/break-filter-js-from-html:20251031"
+    },
+    {
+      "id": "terminal-bench/count-dataset-tokens",
+      "digest": "sha256:cd0574ec8281f53854256acc93702ed1441407c0428849e1dd4f27e863c6b08a",
+      "selection_hash": "1790eb52deef272ae1e4453740c7bd6158c0c7c9de464068a70b451b5b0817a8",
+      "task_config_sha256": "8220a1b8e6e08ecb95556920de358b6aa74b112d8a79625db6915f6b316ccd18",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/count-dataset-tokens:20251031"
+    },
+    {
+      "id": "terminal-bench/extract-moves-from-video",
+      "digest": "sha256:168e2b9168511b8f8d32b1697f4703b08626203e7949ad396658f4bef7dee66e",
+      "selection_hash": "4c449a1382fdac7af1eff6f2bac57fcdc67842304df771dd2cbf7aecad941724",
+      "task_config_sha256": "2c9e1b466871da3c3703ec3c6d9835f154b8f1cc34af1f1ba45d64fec56f3605",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/extract-moves-from-video:20260403"
+    },
+    {
+      "id": "terminal-bench/path-tracing-reverse",
+      "digest": "sha256:035880d7ef5554b217e53a75ce5e87e43193b7a44c30ad17226a6ab10fc11a6c",
+      "selection_hash": "8debdb61dc1a05bfc5aa1e4e83e0355c8404f803ab8b3dafb347349626702478",
+      "task_config_sha256": "f609310c99bd5f379eea2711f4af8eca79b5bcd1178a034b2285b1171c031b5b",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/path-tracing-reverse:20251031"
+    },
+    {
+      "id": "terminal-bench/chess-best-move",
+      "digest": "sha256:9ab8e4b3674282e751edafbd9b5bd551fef995fd6601585a2cdb04fd70c520da",
+      "selection_hash": "355823d5c7f6d35dccfc6bd4597c0972f16a7a0a5b0ae75add97b1adb79f0924",
+      "task_config_sha256": "d8f01d3c84ed5836edbb49c6c3b3cc7b5b96d951cf01a0987467c9206fb22f9e",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/chess-best-move:20251031"
+    },
+    {
+      "id": "terminal-bench/prove-plus-comm",
+      "digest": "sha256:d5ae25720df1f7cd619ed8408cda4b87b79a3d8b0ff4f1919e2c96e9547339c2",
+      "selection_hash": "354dee61c883e9d241ac4ef67952d49aa64c2a605f2090bb65cf6a7cfb30dc0f",
+      "task_config_sha256": "240f3ac0076e3362685c8598c4e56658e3882eb25a14ae6cc7e9ab3a4f6b09ea",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/prove-plus-comm:20251031"
+    },
+    {
+      "id": "terminal-bench/git-multibranch",
+      "digest": "sha256:7759a92a373c967dd31535975bad8659410644025673fe62385444fd2605c5fa",
+      "selection_hash": "b993932ecb827db7c4423f58feee1cc8b6661b02b593498ee7e299269b54f2e5",
+      "task_config_sha256": "4b9981604578a31205257cca36a28d0c89c9d8d1058541330acd11d3f8d65f82",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/git-multibranch:20251031"
+    },
+    {
+      "id": "terminal-bench/multi-source-data-merger",
+      "digest": "sha256:70367c38732e1beda7b229968a48d60242277c2fa4db91339c3f064c4c230d49",
+      "selection_hash": "48393f585c666dfe6a53707be62c5165a7584c60f66bf82ba222e383906107a8",
+      "task_config_sha256": "ee3964c0ee040f0a0cb121cefefbc15443d127684acb003fa5b61dd42f31c694",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/multi-source-data-merger:20251031"
+    },
+    {
+      "id": "terminal-bench/sqlite-with-gcov",
+      "digest": "sha256:9f9bd57fbf9f4831e9031755e83aea6b9d60d2b2d54e8a12d48cff4dca3c231d",
+      "selection_hash": "11e2507d98ee5906da764135f20675f7a45ceeab689210346c7a189539e245bc",
+      "task_config_sha256": "9a0da96990ee2ecbf4d92682a4c5301a53db45fc6e2d46ac7d45d3b8ee7fe523",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/sqlite-with-gcov:20251031"
+    },
+    {
+      "id": "terminal-bench/polyglot-rust-c",
+      "digest": "sha256:a33dc72e2278d225513c0724abe2e4539653d5ee7e4c2a90ba2d676586ba9f3d",
+      "selection_hash": "ab7540d7e67fd782b61747fc5dcb03bb413977e4925f93418fe88ecaabc1b3a1",
+      "task_config_sha256": "3c41e83437068c62a3fdff74641899146e34907aefd9e47346213f47caeb82de",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/polyglot-rust-c:20251031"
+    },
+    {
+      "id": "terminal-bench/feal-linear-cryptanalysis",
+      "digest": "sha256:0f3234c5fde85f9dc610d94cfefd4c892afb75c9e571f21f18fee66972b67332",
+      "selection_hash": "c5189236178ba7c7c8955c6a9182121247bbf95c6fca1dc4a09bea54f1a042d1",
+      "task_config_sha256": "a39ec2c427af534c96c719dc87f70eb536956b487ce909d04b6365160e7c9fc4",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/feal-linear-cryptanalysis:20251031"
+    },
+    {
+      "id": "terminal-bench/crack-7z-hash",
+      "digest": "sha256:99cbb2269f6bd112d3387fd01cb6900118fe4aded3f75a8d656580a8296a1ae5",
+      "selection_hash": "6d245d238e20384430cb74d6396c8116b70debc482ffe6c7c179ede776154230",
+      "task_config_sha256": "8e192bcbe00e817419bde7ff9b562a5fa0c1e24ec4f3384cba4a31eda0a7b013",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/crack-7z-hash:20251031"
+    },
+    {
+      "id": "terminal-bench/sparql-university",
+      "digest": "sha256:02aeca67b6c5b0d2d72c91ab471beb51ded6f42f0dc3dec580e20d489f09a867",
+      "selection_hash": "a3824b7286f585a793040d42d1841ae106ca3f10c6e0a4ac8d06ef54bfab58e0",
+      "task_config_sha256": "47a6f6dd9ce0fc7631ef607e900fcd039b2d064ea90545645b49c678cddc9585",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/sparql-university:20251031"
+    },
+    {
+      "id": "terminal-bench/protein-assembly",
+      "digest": "sha256:c491d45acce234e1aa1d44dcc6778c55fcf875e9eb254b8dd3ae5ef58119621b",
+      "selection_hash": "7ffe0a43d9005cfeb81610390294942e787c8456d8eb64012fd772a4556f91ae",
+      "task_config_sha256": "9b91f32925035fba7b5a1db16c7d4ed650a117af145d3d3f8e514cb4b1e970ab",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/protein-assembly:20260403"
+    },
+    {
+      "id": "terminal-bench/custom-memory-heap-crash",
+      "digest": "sha256:61e021e0304c9818a9be2c9173c8a0938ce5d136e95c5422e099f1fdb2dc080e",
+      "selection_hash": "fed14ddf6bea8f625d4b8d5c8e5b73ad5edc959219ac0048ed9b83b52711ac66",
+      "task_config_sha256": "ed474be1983e212913aa8866ebb66216acbe36aef2339ac375d232aa46617481",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/custom-memory-heap-crash:20251031"
+    },
+    {
+      "id": "terminal-bench/code-from-image",
+      "digest": "sha256:ef2907bb300d9b3352410c2a75dbf831278c187c073298371870ea9c83526f78",
+      "selection_hash": "86d6bf2d762dab301149449b0419a86689cc25544165f4ff6a580d5040e4a2a9",
+      "task_config_sha256": "3a13c1e252bb8759f51215be0b2b2cb1b4c697f0dd570f2d7702cc28b28f08de",
+      "agent_timeout_sec": 1200,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/code-from-image:20251031"
+    },
+    {
+      "id": "terminal-bench/fix-git",
+      "digest": "sha256:16948b980df9d96de616a205f5acca1c5d395de83ff4f8ffabcafacb93226f2e",
+      "selection_hash": "3515532db14c6092ac50109df1f452b32c15043270f4920016077188df71ebf6",
+      "task_config_sha256": "f59d711003b974e4ef8ed63556614e2ea9ea7d0e394af13b2071225e3fda7805",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/fix-git:20260403"
+    },
+    {
+      "id": "terminal-bench/winning-avg-corewars",
+      "digest": "sha256:a9f2c630fb7d656e96f3a42ade600a8abcb500631d153d62d5ceb2df073bc256",
+      "selection_hash": "3ea0850d6c27c088f42bc6b9cd1ab5eea23ac05c21da39217a6ec9029be2bc0b",
+      "task_config_sha256": "a9b48765d03a66d966f6a162be203bc31e1d9d6e4abe616a2f4b42bac5dc246f",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/winning-avg-corewars:20251031"
+    },
+    {
+      "id": "terminal-bench/modernize-scientific-stack",
+      "digest": "sha256:67a9952aca67df9c70510acf62faea336644a0e9d379f3aaf9df79f14c8fcb12",
+      "selection_hash": "5863a650488efb21ba03ea62ef89d44597de1e0f91dddedd676508be388a6eed",
+      "task_config_sha256": "a3029f3d4caaa1f08bd1b45488247bf8cb586bf1ce69717acf1114d20f51eb48",
+      "agent_timeout_sec": 600,
+      "verifier_timeout_sec": 600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/modernize-scientific-stack:20251031"
+    },
+    {
+      "id": "terminal-bench/git-leak-recovery",
+      "digest": "sha256:22a9ec10dbd4cd8b99477b70e1944103775ca41de9b9e0025ec4898cd17bd334",
+      "selection_hash": "1717f80b9a13e518d26935367509d158e6eabc2306722fd16a179fd19fa7d88a",
+      "task_config_sha256": "d7f23fda4a6ba3fff902d2a475db8ff74feb5d328980696a77068c02c57d3044",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/git-leak-recovery:20251031"
+    },
+    {
+      "id": "terminal-bench/distribution-search",
+      "digest": "sha256:8787d3004ac4dd9d78f0c14f5b5ef94a4ad3e69d8828d7d35b9fbd7828a69ed1",
+      "selection_hash": "ddd9994825ad92d7ec3951003efde46f0b73f37befdf69978edf723c027cd3e8",
+      "task_config_sha256": "70c8e73cafd0a75306375bec2c2e1e4d82e0cb969fd7e38a63e7c344de43b681",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/distribution-search:20251031"
+    },
+    {
+      "id": "terminal-bench/build-pmars",
+      "digest": "sha256:63f0449b276f081986740c941ea9372068b310a02b062c1e5e3400f575241893",
+      "selection_hash": "b501afef0479d812b319c9bb8f130059b5db06f432c0d8e33719cb79aebe6591",
+      "task_config_sha256": "7ee2eac27b99fd462e0760552a430454db693f86608af5bb570b020270e4c9cd",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/build-pmars:20251031"
+    },
+    {
+      "id": "terminal-bench/mailman",
+      "digest": "sha256:831b3ed00807153963c05f91599443e4839099521d1d56db811c5547ab280dbe",
+      "selection_hash": "414ee38d076d4223d500d3d357b7b9df1bb3cb42f6143bf0f6d0b61e6731afc9",
+      "task_config_sha256": "a04f4d0e9be25056d2cd79d6a018bc875b6e6fb51d429a9241f282272cc660d1",
+      "agent_timeout_sec": 1800,
+      "verifier_timeout_sec": 1800,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/mailman:20251031"
+    },
+    {
+      "id": "terminal-bench/headless-terminal",
+      "digest": "sha256:203953871ebdae4efbf163af9499849368dab5e219b70d447e5ee9701ad382d9",
+      "selection_hash": "99a1b0518d7fb6b503afd21636977f6d6150101b0856850262cb11c70b47212d",
+      "task_config_sha256": "abe0de1ac3adff1fbf0e22e1765efbc061a412891fd255926ed92a5ccacf69e6",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/headless-terminal:20251031"
+    },
+    {
+      "id": "terminal-bench/bn-fit-modify",
+      "digest": "sha256:b5f9644970c17ad9ddb46b7266f7bcd87c761d77d7e6f55d7cfe7284d5ff66e9",
+      "selection_hash": "0cea274d2dfd0dfb7daf709b4797fb1d678e8fb9cf958523cde7c584d8e886dc",
+      "task_config_sha256": "6493f7162da424a4fd95da721bd3fd1ce7e5dd26e792132cb9c46db536b67090",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/bn-fit-modify:20251031"
+    },
+    {
+      "id": "terminal-bench/constraints-scheduling",
+      "digest": "sha256:91dd6f87e1ee508328d5aafbd99a6bd1ccc47bc22671b4aaa4060bda492deb53",
+      "selection_hash": "0e5a18c46c1ef8e6dd2f38e0933845f7a8f9b1d355b4082fd5447a13987751a4",
+      "task_config_sha256": "7b9842de16d74e8faf8c7c0aa03b0b81145941cb12dd322d81ae23fc48607250",
+      "agent_timeout_sec": 1200,
+      "verifier_timeout_sec": 1200,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/constraints-scheduling:20251031"
+    },
+    {
+      "id": "terminal-bench/tune-mjcf",
+      "digest": "sha256:7da0fd3b906624df9eff8829ccd4f19cbb1ba967411b6d64d92b85b2f3fbdfb0",
+      "selection_hash": "562b24a2aecce3cefeed80266356cbc62fc6faec294fcf24165575b8365dcbf0",
+      "task_config_sha256": "27b6d4e5a23761cc1a24a695125d891be74a2930fb83a02a66221db0244b08b3",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/tune-mjcf:20251031"
+    },
+    {
+      "id": "terminal-bench/fix-code-vulnerability",
+      "digest": "sha256:d31348aa16b533a15f013420e4d9726dc529e6086adc7d6d48067d22cc18fe71",
+      "selection_hash": "ea18a12f6d6bc26a83948c85b70341052592cd042569650ac6b567064eeae5c5",
+      "task_config_sha256": "9aa2bd14ce9408289d199d0608bc3fa65b8b5e23374c9641020de62197dbf1e2",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/fix-code-vulnerability:20251031"
+    },
+    {
+      "id": "terminal-bench/portfolio-optimization",
+      "digest": "sha256:d112f8945600f18ec47bbbe76935dc05953173cc3d0a375a7aa2712b091584e4",
+      "selection_hash": "95427db8fdb3f8ba432c524c1dedc9413dc4a43eec85abb1335ba992fc7ff1b0",
+      "task_config_sha256": "4918687e4e261a9852e39e5a554156733c071c17dc89c5f544f15f2ef744ce0a",
+      "agent_timeout_sec": 3600,
+      "verifier_timeout_sec": 3600,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/portfolio-optimization:20251031"
+    }
+  ]
+}

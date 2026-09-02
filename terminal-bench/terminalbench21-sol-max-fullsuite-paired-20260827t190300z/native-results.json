@@ -1,0 +1,2517 @@
+{
+  "schema": "terminalbench21.paired-native-results.v1",
+  "run_id": "terminalbench21-sol-max-fullsuite-paired-20260827t190300z",
+  "suite": {
+    "name": "terminal-bench/terminal-bench-2-1",
+    "ref": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "frozen_task_count": 89,
+    "included_task_count": 87,
+    "repetitions": 5,
+    "frozen_cells_per_arm": 445
+  },
+  "model": {
+    "label": "gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "route": "OpenAI subscription"
+  },
+  "primary_metric": {
+    "status": "not-measurable",
+    "name": "verifier reward mean",
+    "frozen_denominator_per_arm": 445,
+    "reason": "Two tasks were prospectively excluded symmetrically as local infrastructure-unavailable and six native cells remain infrastructure-invalid after their supplement caps."
+  },
+  "secondary_observed_coverage": {
+    "geode": {
+      "passes": 344,
+      "valid_selected_cells": 435,
+      "intended_cells_after_symmetric_exclusion": 435,
+      "unresolved_infrastructure_invalid_cells": 0,
+      "observed_reward_mean": 0.7908045977011494
+    },
+    "native_codex": {
+      "passes": 331,
+      "valid_selected_cells": 429,
+      "intended_cells_after_symmetric_exclusion": 435,
+      "unresolved_infrastructure_invalid_cells": 6,
+      "observed_reward_mean": 0.7715617715617715
+    }
+  },
+  "exact_common_cell_comparison": {
+    "cells": 429,
+    "geode_passes": 339,
+    "native_passes": 331,
+    "both_pass": 286,
+    "geode_only": 53,
+    "native_only": 45,
+    "both_fail": 45
+  },
+  "excluded_tasks": [
+    {
+      "task_name": "terminal-bench/bn-fit-modify",
+      "cells_per_arm": 5,
+      "authority": "protocol-amendment-002.preregistered.json"
+    },
+    {
+      "task_name": "terminal-bench/tune-mjcf",
+      "cells_per_arm": 5,
+      "authority": "protocol-amendment-003.preregistered.json"
+    }
+  ],
+  "unresolved_cells": [
+    "native:terminal-bench/constraints-scheduling#repetition-4",
+    "native:terminal-bench/extract-moves-from-video#repetition-3",
+    "native:terminal-bench/financial-document-processor#repetition-5",
+    "native:terminal-bench/sqlite-with-gcov#repetition-5",
+    "native:terminal-bench/torch-pipeline-parallelism#repetition-1",
+    "native:terminal-bench/torch-pipeline-parallelism#repetition-4"
+  ],
+  "attempt_counts": {
+    "model_attempt_rows": 936,
+    "valid": 864,
+    "invalid": 72,
+    "supplements": 76
+  },
+  "tasks": [
+    {
+      "task_name": "terminal-bench/write-compressor",
+      "task_ref": "sha256:d9ddd9a8e925e2c566b37b2492cbf995afecefe58874e4043ef78d7f3c892c7e",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-write-compressor-r01-original",
+          "geode-write-compressor-r02-original",
+          "geode-write-compressor-r03-original",
+          "geode-write-compressor-r04-original",
+          "geode-write-compressor-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-write-compressor-r01-original",
+          "native-write-compressor-r02-original",
+          "native-write-compressor-r03-original",
+          "native-write-compressor-r04-original",
+          "supplement-001-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/torch-tensor-parallelism",
+      "task_ref": "sha256:f32ce74a5aeb6638480247ab799fe46127bbee631acdd0921b0f394ec49b3684",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-torch-tensor-parallelism-r01-original",
+          "geode-torch-tensor-parallelism-r02-original",
+          "geode-torch-tensor-parallelism-r03-original",
+          "geode-torch-tensor-parallelism-r04-original",
+          "geode-torch-tensor-parallelism-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-torch-tensor-parallelism-r01-original",
+          "native-torch-tensor-parallelism-r02-original",
+          "native-torch-tensor-parallelism-r03-original",
+          "supplement-002-native",
+          "native-torch-tensor-parallelism-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/schemelike-metacircular-eval",
+      "task_ref": "sha256:58130c2166c3115276dc8592f358e326ff2d81ea852e3d88636c82fd1dff57e6",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-schemelike-metacircular-eval-r01-original",
+          "geode-schemelike-metacircular-eval-r02-original",
+          "geode-schemelike-metacircular-eval-r03-original",
+          "geode-schemelike-metacircular-eval-r04-original",
+          "geode-schemelike-metacircular-eval-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-schemelike-metacircular-eval-r01-original",
+          "native-schemelike-metacircular-eval-r02-original",
+          "native-schemelike-metacircular-eval-r03-original",
+          "supplement-003-native",
+          "supplement-005-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/kv-store-grpc",
+      "task_ref": "sha256:973c5d4c111fb61a344457936f1c36400acd2d9e44389e7b319586fe23a7a307",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-kv-store-grpc-r01-original",
+          "geode-kv-store-grpc-r02-original",
+          "geode-kv-store-grpc-r03-original",
+          "geode-kv-store-grpc-r04-original",
+          "geode-kv-store-grpc-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-kv-store-grpc-r01-original",
+          "native-kv-store-grpc-r02-original",
+          "native-kv-store-grpc-r03-original",
+          "supplement-004-native",
+          "supplement-006-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/pypi-server",
+      "task_ref": "sha256:1a1e0542f58e2d3362fec17a9bbb98667717d9a4a3e9a4c8413d3150a4fa0ff1",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-pypi-server-r01-original",
+          "geode-pypi-server-r02-original",
+          "geode-pypi-server-r03-original",
+          "geode-pypi-server-r04-original",
+          "geode-pypi-server-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-pypi-server-r01-original",
+          "native-pypi-server-r02-original",
+          "native-pypi-server-r03-original",
+          "native-pypi-server-r04-original",
+          "native-pypi-server-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/dna-assembly",
+      "task_ref": "sha256:e41a8e94d86019949b08d3b5f88a85f6d943ba0fd85d5e1d5ebb95cb8f66223f",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-dna-assembly-r01-original",
+          "geode-dna-assembly-r02-original",
+          "geode-dna-assembly-r03-original",
+          "geode-dna-assembly-r04-original",
+          "geode-dna-assembly-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "supplement-007-native",
+          "supplement-008-native",
+          "supplement-009-native",
+          "supplement-010-native",
+          "native-dna-assembly-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/torch-pipeline-parallelism",
+      "task_ref": "sha256:db605337c749a872cea7b5b413429b3915bb4c3efe0f7875f0c46ce81bd8c4fb",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-torch-pipeline-parallelism-r01-original",
+          "geode-torch-pipeline-parallelism-r02-original",
+          "geode-torch-pipeline-parallelism-r03-original",
+          "geode-torch-pipeline-parallelism-r04-original",
+          "geode-torch-pipeline-parallelism-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 3,
+        "unresolved_cells": 2,
+        "selected_attempt_ids": [
+          "supplement-036-native",
+          "native-torch-pipeline-parallelism-r02-original",
+          "supplement-012-native",
+          "supplement-037-native",
+          "native-torch-pipeline-parallelism-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/qemu-alpine-ssh",
+      "task_ref": "sha256:60b7050b0e0aa51641208cf65766743d340e59575db2c4d2f8628240846c2a28",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-qemu-alpine-ssh-r01-original",
+          "geode-qemu-alpine-ssh-r02-original",
+          "geode-qemu-alpine-ssh-r03-original",
+          "geode-qemu-alpine-ssh-r04-original",
+          "geode-qemu-alpine-ssh-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-qemu-alpine-ssh-r01-original",
+          "native-qemu-alpine-ssh-r02-original",
+          "native-qemu-alpine-ssh-r03-original",
+          "native-qemu-alpine-ssh-r04-original",
+          "native-qemu-alpine-ssh-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/openssl-selfsigned-cert",
+      "task_ref": "sha256:d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-openssl-selfsigned-cert-r01-original",
+          "geode-openssl-selfsigned-cert-r02-original",
+          "geode-openssl-selfsigned-cert-r03-original",
+          "geode-openssl-selfsigned-cert-r04-original",
+          "geode-openssl-selfsigned-cert-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-openssl-selfsigned-cert-r01-original",
+          "native-openssl-selfsigned-cert-r02-original",
+          "native-openssl-selfsigned-cert-r03-original",
+          "native-openssl-selfsigned-cert-r04-original",
+          "native-openssl-selfsigned-cert-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/regex-chess",
+      "task_ref": "sha256:e763e0ac1c9759081af0a4a82ba51b8cf9ae5485a93de3bbe42d7d344597bd78",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-regex-chess-r01-original",
+          "geode-regex-chess-r02-original",
+          "geode-regex-chess-r03-original",
+          "geode-regex-chess-r04-original",
+          "geode-regex-chess-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-regex-chess-r01-original",
+          "native-regex-chess-r02-original",
+          "native-regex-chess-r03-original",
+          "native-regex-chess-r04-original",
+          "native-regex-chess-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/log-summary-date-ranges",
+      "task_ref": "sha256:27b074a2f10fff7606e096f3abd8dced418ad8fda0f53d88acbe477f2d9ceaf6",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-log-summary-date-ranges-r01-original",
+          "geode-log-summary-date-ranges-r02-original",
+          "geode-log-summary-date-ranges-r03-original",
+          "geode-log-summary-date-ranges-r04-original",
+          "geode-log-summary-date-ranges-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-log-summary-date-ranges-r01-original",
+          "native-log-summary-date-ranges-r02-original",
+          "native-log-summary-date-ranges-r03-original",
+          "native-log-summary-date-ranges-r04-original",
+          "native-log-summary-date-ranges-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/model-extraction-relu-logits",
+      "task_ref": "sha256:1ae5045ad68b5d34c3398b612066a07c4a08b6dc330d28868ec4021e17c94b17",
+      "geode": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-model-extraction-relu-logits-r01-original",
+          "geode-model-extraction-relu-logits-r02-original",
+          "geode-model-extraction-relu-logits-r03-original",
+          "geode-model-extraction-relu-logits-r04-original",
+          "geode-model-extraction-relu-logits-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-model-extraction-relu-logits-r01-original",
+          "native-model-extraction-relu-logits-r02-original",
+          "native-model-extraction-relu-logits-r03-original",
+          "native-model-extraction-relu-logits-r04-original",
+          "native-model-extraction-relu-logits-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/path-tracing",
+      "task_ref": "sha256:cf56094c881a488b27e9f204a638a7e78ed7d55e12dc3064108c93357190314c",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-path-tracing-r01-original",
+          "geode-path-tracing-r02-original",
+          "geode-path-tracing-r03-original",
+          "geode-path-tracing-r04-original",
+          "geode-path-tracing-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-path-tracing-r01-original",
+          "native-path-tracing-r02-original",
+          "native-path-tracing-r03-original",
+          "native-path-tracing-r04-original",
+          "native-path-tracing-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/regex-log",
+      "task_ref": "sha256:802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-regex-log-r01-original",
+          "geode-regex-log-r02-original",
+          "geode-regex-log-r03-original",
+          "geode-regex-log-r04-original",
+          "geode-regex-log-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-regex-log-r01-original",
+          "supplement-038-native",
+          "supplement-015-native",
+          "supplement-016-native",
+          "native-regex-log-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/caffe-cifar-10",
+      "task_ref": "sha256:7b0045106d7d5af724efe96b610ba64f7893f5c88528401c573c4d47e384e2bf",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-caffe-cifar-10-r01-original",
+          "geode-caffe-cifar-10-r02-original",
+          "geode-caffe-cifar-10-r03-original",
+          "geode-caffe-cifar-10-r04-original",
+          "geode-caffe-cifar-10-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-caffe-cifar-10-r01-original",
+          "native-caffe-cifar-10-r02-original",
+          "native-caffe-cifar-10-r03-original",
+          "native-caffe-cifar-10-r04-original",
+          "native-caffe-cifar-10-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/mteb-leaderboard",
+      "task_ref": "sha256:484f6d7008a05b5b8640fc6618a384b8c9447cd76f85416c8a595028d29bff9c",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-mteb-leaderboard-r01-original",
+          "geode-mteb-leaderboard-r02-original",
+          "geode-mteb-leaderboard-r03-original",
+          "geode-mteb-leaderboard-r04-original",
+          "geode-mteb-leaderboard-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-mteb-leaderboard-r01-original",
+          "native-mteb-leaderboard-r02-original",
+          "native-mteb-leaderboard-r03-original",
+          "native-mteb-leaderboard-r04-original",
+          "native-mteb-leaderboard-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/llm-inference-batching-scheduler",
+      "task_ref": "sha256:a3bf47589118daec5124fe3689b4439802c805b2f4ed9d402a48ae73ca2fea67",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-llm-inference-batching-scheduler-r01-original",
+          "geode-llm-inference-batching-scheduler-r02-original",
+          "geode-llm-inference-batching-scheduler-r03-original",
+          "geode-llm-inference-batching-scheduler-r04-original",
+          "geode-llm-inference-batching-scheduler-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-llm-inference-batching-scheduler-r01-original",
+          "native-llm-inference-batching-scheduler-r02-original",
+          "native-llm-inference-batching-scheduler-r03-original",
+          "native-llm-inference-batching-scheduler-r04-original",
+          "native-llm-inference-batching-scheduler-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/pytorch-model-recovery",
+      "task_ref": "sha256:2e628841cff93290919172398e573e794f34c95d9382b7425adde4364022decc",
+      "geode": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-pytorch-model-recovery-r01-original",
+          "geode-pytorch-model-recovery-r02-original",
+          "geode-pytorch-model-recovery-r03-original",
+          "geode-pytorch-model-recovery-r04-original",
+          "geode-pytorch-model-recovery-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-pytorch-model-recovery-r01-original",
+          "native-pytorch-model-recovery-r02-original",
+          "native-pytorch-model-recovery-r03-original",
+          "native-pytorch-model-recovery-r04-original",
+          "native-pytorch-model-recovery-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/circuit-fibsqrt",
+      "task_ref": "sha256:9bcffe1054bb33249aa578a9a2a74f3c8cca66b0cb7aa1328233f1d31822aae3",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-circuit-fibsqrt-r01-original",
+          "geode-circuit-fibsqrt-r02-original",
+          "geode-circuit-fibsqrt-r03-original",
+          "geode-circuit-fibsqrt-r04-original",
+          "geode-circuit-fibsqrt-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-circuit-fibsqrt-r01-original",
+          "native-circuit-fibsqrt-r02-original",
+          "supplement-022-native",
+          "supplement-023-native",
+          "supplement-024-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/merge-diff-arc-agi-task",
+      "task_ref": "sha256:6aab6511a5344ce87698293bb1ce4cc51d9a45f1ad9f0c075d2a83197b36727d",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-merge-diff-arc-agi-task-r01-original",
+          "geode-merge-diff-arc-agi-task-r02-original",
+          "geode-merge-diff-arc-agi-task-r03-original",
+          "geode-merge-diff-arc-agi-task-r04-original",
+          "geode-merge-diff-arc-agi-task-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "supplement-039-native",
+          "supplement-018-native",
+          "supplement-019-native",
+          "supplement-020-native",
+          "supplement-021-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/build-pov-ray",
+      "task_ref": "sha256:4f08dab602fe2e9e2f42051cc6aef684a88cf2822e8b499b3ca19e670759fddb",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-build-pov-ray-r01-original",
+          "geode-build-pov-ray-r02-original",
+          "geode-build-pov-ray-r03-original",
+          "geode-build-pov-ray-r04-original",
+          "geode-build-pov-ray-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-build-pov-ray-r01-original",
+          "native-build-pov-ray-r02-original",
+          "native-build-pov-ray-r03-original",
+          "native-build-pov-ray-r04-original",
+          "native-build-pov-ray-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/cobol-modernization",
+      "task_ref": "sha256:e03aa03965eee48c9f772d566ff9bcd741fceeac9693123f82a13fdd46be0d88",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-cobol-modernization-r01-original",
+          "geode-cobol-modernization-r02-original",
+          "geode-cobol-modernization-r03-original",
+          "geode-cobol-modernization-r04-original",
+          "geode-cobol-modernization-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-cobol-modernization-r01-original",
+          "native-cobol-modernization-r02-original",
+          "native-cobol-modernization-r03-original",
+          "native-cobol-modernization-r04-original",
+          "native-cobol-modernization-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/mcmc-sampling-stan",
+      "task_ref": "sha256:443cd2b94ed797944793e97a56527a5dc0f8ad40f78ed418fe1b2e367cf22546",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-mcmc-sampling-stan-r01-original",
+          "geode-mcmc-sampling-stan-r02-original",
+          "geode-mcmc-sampling-stan-r03-original",
+          "geode-mcmc-sampling-stan-r04-original",
+          "geode-mcmc-sampling-stan-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-mcmc-sampling-stan-r01-original",
+          "native-mcmc-sampling-stan-r02-original",
+          "native-mcmc-sampling-stan-r03-original",
+          "native-mcmc-sampling-stan-r04-original",
+          "native-mcmc-sampling-stan-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/gpt2-codegolf",
+      "task_ref": "sha256:fe42af8e9c5aa927c3b680acd08e43032c84088fa9d770b03ce63dbc66fea4e7",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-gpt2-codegolf-r01-original",
+          "geode-gpt2-codegolf-r02-original",
+          "geode-gpt2-codegolf-r03-original",
+          "geode-gpt2-codegolf-r04-original",
+          "geode-gpt2-codegolf-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-gpt2-codegolf-r01-original",
+          "native-gpt2-codegolf-r02-original",
+          "native-gpt2-codegolf-r03-original",
+          "native-gpt2-codegolf-r04-original",
+          "native-gpt2-codegolf-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/filter-js-from-html",
+      "task_ref": "sha256:2d1496b6fc62adeccdba7a56f4bc24e5ef265840434d2011234ed20b6c240759",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-filter-js-from-html-r01-original",
+          "supplement-025-geode",
+          "supplement-026-geode",
+          "supplement-027-geode",
+          "supplement-028-geode"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "supplement-029-native",
+          "supplement-030-native",
+          "supplement-031-native",
+          "supplement-040-native",
+          "supplement-033-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/sam-cell-seg",
+      "task_ref": "sha256:37c182b91df18b9c2ea2dceda47430bbd585e7880c56fca2f1975907ce0df8ce",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-sam-cell-seg-r01-original",
+          "geode-sam-cell-seg-r02-original",
+          "geode-sam-cell-seg-r03-original",
+          "geode-sam-cell-seg-r04-original",
+          "geode-sam-cell-seg-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-sam-cell-seg-r01-original",
+          "native-sam-cell-seg-r02-original",
+          "native-sam-cell-seg-r03-original",
+          "native-sam-cell-seg-r04-original",
+          "native-sam-cell-seg-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/mteb-retrieve",
+      "task_ref": "sha256:fa7c777df6ed8987a2bb144b4b73a1200935bbea69da03a2aaa1dc8aa9bd9dc9",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-mteb-retrieve-r01-original",
+          "geode-mteb-retrieve-r02-original",
+          "geode-mteb-retrieve-r03-original",
+          "geode-mteb-retrieve-r04-original",
+          "geode-mteb-retrieve-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-mteb-retrieve-r01-original",
+          "native-mteb-retrieve-r02-original",
+          "native-mteb-retrieve-r03-original",
+          "native-mteb-retrieve-r04-original",
+          "native-mteb-retrieve-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/adaptive-rejection-sampler",
+      "task_ref": "sha256:bcaa2399985cd57666018025846289ab25e193ae0dd8fb7f0ffab2410c24d4de",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-adaptive-rejection-sampler-r01-original",
+          "geode-adaptive-rejection-sampler-r02-original",
+          "geode-adaptive-rejection-sampler-r03-original",
+          "geode-adaptive-rejection-sampler-r04-original",
+          "geode-adaptive-rejection-sampler-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-adaptive-rejection-sampler-r01-original",
+          "native-adaptive-rejection-sampler-r02-original",
+          "native-adaptive-rejection-sampler-r03-original",
+          "native-adaptive-rejection-sampler-r04-original",
+          "native-adaptive-rejection-sampler-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/vulnerable-secret",
+      "task_ref": "sha256:d76dfa9e256487c5542905b892156f694137aeef784e1abf3f41e15a8c946eac",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-vulnerable-secret-r01-original",
+          "geode-vulnerable-secret-r02-original",
+          "geode-vulnerable-secret-r03-original",
+          "geode-vulnerable-secret-r04-original",
+          "geode-vulnerable-secret-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-vulnerable-secret-r01-original",
+          "native-vulnerable-secret-r02-original",
+          "native-vulnerable-secret-r03-original",
+          "native-vulnerable-secret-r04-original",
+          "native-vulnerable-secret-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/extract-elf",
+      "task_ref": "sha256:1ef31d566be4fe3459d5368621ae7ef7a31b23ef675737e473bbc43c8c7b3fce",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-extract-elf-r01-original",
+          "geode-extract-elf-r02-original",
+          "geode-extract-elf-r03-original",
+          "geode-extract-elf-r04-original",
+          "geode-extract-elf-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-extract-elf-r01-original",
+          "native-extract-elf-r02-original",
+          "native-extract-elf-r03-original",
+          "native-extract-elf-r04-original",
+          "native-extract-elf-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/nginx-request-logging",
+      "task_ref": "sha256:9d1b8bebd989ea0bc8080c3b159480068caf183c5fd61385868b2574b206e097",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-nginx-request-logging-r01-original",
+          "geode-nginx-request-logging-r02-original",
+          "geode-nginx-request-logging-r03-original",
+          "geode-nginx-request-logging-r04-original",
+          "geode-nginx-request-logging-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-nginx-request-logging-r01-original",
+          "native-nginx-request-logging-r02-original",
+          "native-nginx-request-logging-r03-original",
+          "native-nginx-request-logging-r04-original",
+          "native-nginx-request-logging-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/make-doom-for-mips",
+      "task_ref": "sha256:2d83dd3dee8e0f055e09973934cf0d7e3169a9cd90704cba5c8940b170be9498",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-make-doom-for-mips-r01-original",
+          "geode-make-doom-for-mips-r02-original",
+          "geode-make-doom-for-mips-r03-original",
+          "geode-make-doom-for-mips-r04-original",
+          "geode-make-doom-for-mips-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-make-doom-for-mips-r01-original",
+          "native-make-doom-for-mips-r02-original",
+          "native-make-doom-for-mips-r03-original",
+          "native-make-doom-for-mips-r04-original",
+          "native-make-doom-for-mips-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/configure-git-webserver",
+      "task_ref": "sha256:e3dc712acfecdb1338a889f86c97b37422c3778351253f9aca4236e895fdb36e",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-configure-git-webserver-r01-original",
+          "geode-configure-git-webserver-r02-original",
+          "geode-configure-git-webserver-r03-original",
+          "geode-configure-git-webserver-r04-original",
+          "geode-configure-git-webserver-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-configure-git-webserver-r01-original",
+          "supplement-035-native",
+          "native-configure-git-webserver-r03-original",
+          "native-configure-git-webserver-r04-original",
+          "native-configure-git-webserver-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/build-cython-ext",
+      "task_ref": "sha256:35dc561790e73f13e59837828ac0863c0893edc6b71d42cf7d58656c843adf12",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-build-cython-ext-r01-original",
+          "geode-build-cython-ext-r02-original",
+          "geode-build-cython-ext-r03-original",
+          "geode-build-cython-ext-r04-original",
+          "geode-build-cython-ext-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-build-cython-ext-r01-original",
+          "native-build-cython-ext-r02-original",
+          "native-build-cython-ext-r03-original",
+          "native-build-cython-ext-r04-original",
+          "native-build-cython-ext-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/train-fasttext",
+      "task_ref": "sha256:460fc0818971ec83545a76805267b65459128fad52e68c26a199a0d74022badb",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-train-fasttext-r01-original",
+          "geode-train-fasttext-r02-original",
+          "geode-train-fasttext-r03-original",
+          "geode-train-fasttext-r04-original",
+          "geode-train-fasttext-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-train-fasttext-r01-original",
+          "native-train-fasttext-r02-original",
+          "native-train-fasttext-r03-original",
+          "native-train-fasttext-r04-original",
+          "native-train-fasttext-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/compile-compcert",
+      "task_ref": "sha256:22bde2a73d62fa46f5ab96f710561a72e8d1aa4266f008605a17f174622ad785",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-compile-compcert-r01-original",
+          "geode-compile-compcert-r02-original",
+          "geode-compile-compcert-r03-original",
+          "geode-compile-compcert-r04-original",
+          "geode-compile-compcert-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-compile-compcert-r01-original",
+          "native-compile-compcert-r02-original",
+          "native-compile-compcert-r03-original",
+          "native-compile-compcert-r04-original",
+          "supplement-041-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/fix-ocaml-gc",
+      "task_ref": "sha256:2031f3d5224b891fe443a31526b569eb756be2f88b663cb025448af9c4f97e2c",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-fix-ocaml-gc-r01-original",
+          "geode-fix-ocaml-gc-r02-original",
+          "geode-fix-ocaml-gc-r03-original",
+          "geode-fix-ocaml-gc-r04-original",
+          "geode-fix-ocaml-gc-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-fix-ocaml-gc-r01-original",
+          "native-fix-ocaml-gc-r02-original",
+          "native-fix-ocaml-gc-r03-original",
+          "native-fix-ocaml-gc-r04-original",
+          "native-fix-ocaml-gc-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/gcode-to-text",
+      "task_ref": "sha256:7dd2af04820e71ecaba96bc493cbffa16317e96816c6c8003385c034adf6c23b",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-gcode-to-text-r01-original",
+          "geode-gcode-to-text-r02-original",
+          "geode-gcode-to-text-r03-original",
+          "geode-gcode-to-text-r04-original",
+          "geode-gcode-to-text-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-gcode-to-text-r01-original",
+          "native-gcode-to-text-r02-original",
+          "native-gcode-to-text-r03-original",
+          "native-gcode-to-text-r04-original",
+          "native-gcode-to-text-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/dna-insert",
+      "task_ref": "sha256:37fc023970e3464c1acc31f43e04a0b4b94758130d340788f261f00764d9e530",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-dna-insert-r01-original",
+          "geode-dna-insert-r02-original",
+          "geode-dna-insert-r03-original",
+          "geode-dna-insert-r04-original",
+          "geode-dna-insert-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-dna-insert-r01-original",
+          "supplement-042-native",
+          "native-dna-insert-r03-original",
+          "native-dna-insert-r04-original",
+          "native-dna-insert-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/raman-fitting",
+      "task_ref": "sha256:97ca4025332b20739da553cab0658f2ead925d1b5b3b9b7664dc9eb5e7fbeab7",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-raman-fitting-r01-original",
+          "geode-raman-fitting-r02-original",
+          "geode-raman-fitting-r03-original",
+          "geode-raman-fitting-r04-original",
+          "geode-raman-fitting-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-raman-fitting-r01-original",
+          "native-raman-fitting-r02-original",
+          "native-raman-fitting-r03-original",
+          "native-raman-fitting-r04-original",
+          "native-raman-fitting-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/overfull-hbox",
+      "task_ref": "sha256:3c3b16e4b2de5fea90ca98db242b155a6843f9cc4dfd00be3479985a34bab4f7",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-overfull-hbox-r01-original",
+          "geode-overfull-hbox-r02-original",
+          "geode-overfull-hbox-r03-original",
+          "geode-overfull-hbox-r04-original",
+          "geode-overfull-hbox-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-overfull-hbox-r01-original",
+          "native-overfull-hbox-r02-original",
+          "native-overfull-hbox-r03-original",
+          "supplement-043-native",
+          "native-overfull-hbox-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/video-processing",
+      "task_ref": "sha256:d3f02e177b49e5768b6ce6709fc4ae3ef2ce0cdecb63b09fc9b07f9d3ddb7203",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-video-processing-r01-original",
+          "geode-video-processing-r02-original",
+          "geode-video-processing-r03-original",
+          "geode-video-processing-r04-original",
+          "geode-video-processing-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-video-processing-r01-original",
+          "native-video-processing-r02-original",
+          "native-video-processing-r03-original",
+          "native-video-processing-r04-original",
+          "native-video-processing-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/sanitize-git-repo",
+      "task_ref": "sha256:6e86297715fae62cd499fbdd27013e11a38d05d7e05b7f661cb50b4ecead128f",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-sanitize-git-repo-r01-original",
+          "geode-sanitize-git-repo-r02-original",
+          "geode-sanitize-git-repo-r03-original",
+          "geode-sanitize-git-repo-r04-original",
+          "geode-sanitize-git-repo-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-sanitize-git-repo-r01-original",
+          "native-sanitize-git-repo-r02-original",
+          "native-sanitize-git-repo-r03-original",
+          "native-sanitize-git-repo-r04-original",
+          "native-sanitize-git-repo-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/qemu-startup",
+      "task_ref": "sha256:8e58263747da7dc688ad470688fb72825c4ba2c1c40443fa0f52963645bbd999",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-qemu-startup-r01-original",
+          "geode-qemu-startup-r02-original",
+          "geode-qemu-startup-r03-original",
+          "geode-qemu-startup-r04-original",
+          "geode-qemu-startup-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-qemu-startup-r01-original",
+          "native-qemu-startup-r02-original",
+          "native-qemu-startup-r03-original",
+          "native-qemu-startup-r04-original",
+          "native-qemu-startup-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/hf-model-inference",
+      "task_ref": "sha256:01370f37e61286f920dfca1e471496640ebcc8d06e1cc48d874c790715dbd4ad",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-hf-model-inference-r01-original",
+          "geode-hf-model-inference-r02-original",
+          "geode-hf-model-inference-r03-original",
+          "geode-hf-model-inference-r04-original",
+          "geode-hf-model-inference-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-hf-model-inference-r01-original",
+          "native-hf-model-inference-r02-original",
+          "native-hf-model-inference-r03-original",
+          "native-hf-model-inference-r04-original",
+          "native-hf-model-inference-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/reshard-c4-data",
+      "task_ref": "sha256:a402bbfede73dd04168d697de9b9146026f69e14c8cd333b6a91fc87e44ecd4b",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-reshard-c4-data-r01-original",
+          "geode-reshard-c4-data-r02-original",
+          "geode-reshard-c4-data-r03-original",
+          "geode-reshard-c4-data-r04-original",
+          "geode-reshard-c4-data-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-reshard-c4-data-r01-original",
+          "native-reshard-c4-data-r02-original",
+          "native-reshard-c4-data-r03-original",
+          "native-reshard-c4-data-r04-original",
+          "native-reshard-c4-data-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/feal-differential-cryptanalysis",
+      "task_ref": "sha256:8ea56995fcc43fb94f0e4e15adb12dd28836bf3e9c766b2cc7ae78a7ce90341f",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-feal-differential-cryptanalysis-r01-original",
+          "geode-feal-differential-cryptanalysis-r02-original",
+          "geode-feal-differential-cryptanalysis-r03-original",
+          "geode-feal-differential-cryptanalysis-r04-original",
+          "geode-feal-differential-cryptanalysis-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-feal-differential-cryptanalysis-r01-original",
+          "native-feal-differential-cryptanalysis-r02-original",
+          "native-feal-differential-cryptanalysis-r03-original",
+          "native-feal-differential-cryptanalysis-r04-original",
+          "native-feal-differential-cryptanalysis-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/rstan-to-pystan",
+      "task_ref": "sha256:592f15f75751f3c4999c3d05087f2f8b2a4dbaaedbfad5a30ae54058b80b925f",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-rstan-to-pystan-r01-original",
+          "geode-rstan-to-pystan-r02-original",
+          "geode-rstan-to-pystan-r03-original",
+          "geode-rstan-to-pystan-r04-original",
+          "geode-rstan-to-pystan-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-rstan-to-pystan-r01-original",
+          "supplement-044-native",
+          "native-rstan-to-pystan-r03-original",
+          "native-rstan-to-pystan-r04-original",
+          "native-rstan-to-pystan-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/make-mips-interpreter",
+      "task_ref": "sha256:41a55da0abec5d7b32a0c2321f8b18e84000ca8074ae62c6874d6ed4a3a1cd3c",
+      "geode": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-make-mips-interpreter-r01-original",
+          "geode-make-mips-interpreter-r02-original",
+          "geode-make-mips-interpreter-r03-original",
+          "geode-make-mips-interpreter-r04-original",
+          "geode-make-mips-interpreter-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-make-mips-interpreter-r01-original",
+          "native-make-mips-interpreter-r02-original",
+          "native-make-mips-interpreter-r03-original",
+          "native-make-mips-interpreter-r04-original",
+          "native-make-mips-interpreter-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/password-recovery",
+      "task_ref": "sha256:9b5c6bdce0cf03f075b21f6a7af5030b825ce07d7b16b37610f3964217ab84a4",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-password-recovery-r01-original",
+          "geode-password-recovery-r02-original",
+          "geode-password-recovery-r03-original",
+          "geode-password-recovery-r04-original",
+          "geode-password-recovery-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-password-recovery-r01-original",
+          "native-password-recovery-r02-original",
+          "native-password-recovery-r03-original",
+          "supplement-045-native",
+          "native-password-recovery-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/sqlite-db-truncate",
+      "task_ref": "sha256:956f038b479cc3b9b493553b57a60a8ff4154526386c3914c0b99e93e1ab6e87",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-sqlite-db-truncate-r01-original",
+          "geode-sqlite-db-truncate-r02-original",
+          "geode-sqlite-db-truncate-r03-original",
+          "geode-sqlite-db-truncate-r04-original",
+          "geode-sqlite-db-truncate-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-sqlite-db-truncate-r01-original",
+          "native-sqlite-db-truncate-r02-original",
+          "native-sqlite-db-truncate-r03-original",
+          "native-sqlite-db-truncate-r04-original",
+          "native-sqlite-db-truncate-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/query-optimize",
+      "task_ref": "sha256:169496ea6843cb403b0860132675baf7aa0df0ac8b86221068e27d86395260f4",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-query-optimize-r01-original",
+          "geode-query-optimize-r02-original",
+          "geode-query-optimize-r03-original",
+          "geode-query-optimize-r04-original",
+          "geode-query-optimize-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-query-optimize-r01-original",
+          "supplement-046-native",
+          "native-query-optimize-r03-original",
+          "native-query-optimize-r04-original",
+          "supplement-047-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/cancel-async-tasks",
+      "task_ref": "sha256:a3d048d351136e48070696cda8bb79660dfd74db1fea3b6da88559f0332699c1",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-cancel-async-tasks-r01-original",
+          "geode-cancel-async-tasks-r02-original",
+          "geode-cancel-async-tasks-r03-original",
+          "geode-cancel-async-tasks-r04-original",
+          "geode-cancel-async-tasks-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-cancel-async-tasks-r01-original",
+          "native-cancel-async-tasks-r02-original",
+          "native-cancel-async-tasks-r03-original",
+          "native-cancel-async-tasks-r04-original",
+          "native-cancel-async-tasks-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/financial-document-processor",
+      "task_ref": "sha256:63dc43a15d9ec401613016e9114d1a93ec860eea63b2db02abfe8060deea30fb",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-financial-document-processor-r01-original",
+          "geode-financial-document-processor-r02-original",
+          "geode-financial-document-processor-r03-original",
+          "geode-financial-document-processor-r04-original",
+          "geode-financial-document-processor-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 4,
+        "unresolved_cells": 1,
+        "selected_attempt_ids": [
+          "native-financial-document-processor-r01-original",
+          "native-financial-document-processor-r02-original",
+          "supplement-048-native",
+          "native-financial-document-processor-r04-original",
+          "supplement-049-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/install-windows-3.11",
+      "task_ref": "sha256:1f1361b0012e1ad24054e7cfc039829459e8ab0631b3573d9b93499bf6b3563e",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-install-windows-3.11-r01-original",
+          "geode-install-windows-3.11-r02-original",
+          "geode-install-windows-3.11-r03-original",
+          "geode-install-windows-3.11-r04-original",
+          "geode-install-windows-3.11-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-install-windows-3.11-r01-original",
+          "native-install-windows-3.11-r02-original",
+          "native-install-windows-3.11-r03-original",
+          "native-install-windows-3.11-r04-original",
+          "native-install-windows-3.11-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/polyglot-c-py",
+      "task_ref": "sha256:25570ccacf63f573a252eaa2a9c62ee8b55f5aa228cc803b5beb39dd6d8afeb7",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-polyglot-c-py-r01-original",
+          "geode-polyglot-c-py-r02-original",
+          "geode-polyglot-c-py-r03-original",
+          "geode-polyglot-c-py-r04-original",
+          "geode-polyglot-c-py-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-polyglot-c-py-r01-original",
+          "native-polyglot-c-py-r02-original",
+          "native-polyglot-c-py-r03-original",
+          "supplement-050-native",
+          "native-polyglot-c-py-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/pytorch-model-cli",
+      "task_ref": "sha256:6f11544dcc81a380dc4611902961f5520259c462d9fceb413419d66ab9a96c79",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-pytorch-model-cli-r01-original",
+          "geode-pytorch-model-cli-r02-original",
+          "geode-pytorch-model-cli-r03-original",
+          "geode-pytorch-model-cli-r04-original",
+          "geode-pytorch-model-cli-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-pytorch-model-cli-r01-original",
+          "native-pytorch-model-cli-r02-original",
+          "native-pytorch-model-cli-r03-original",
+          "native-pytorch-model-cli-r04-original",
+          "native-pytorch-model-cli-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/db-wal-recovery",
+      "task_ref": "sha256:07e9193513bfce038b9f9d84962ecc85683eee0a642d14ee6fb7104b086ddab4",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-db-wal-recovery-r01-original",
+          "geode-db-wal-recovery-r02-original",
+          "geode-db-wal-recovery-r03-original",
+          "geode-db-wal-recovery-r04-original",
+          "geode-db-wal-recovery-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-db-wal-recovery-r01-original",
+          "native-db-wal-recovery-r02-original",
+          "native-db-wal-recovery-r03-original",
+          "native-db-wal-recovery-r04-original",
+          "native-db-wal-recovery-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/largest-eigenval",
+      "task_ref": "sha256:1b6f17c344d23e97435ba3fa93400d141f6bb7763ed2014fab418830983791b3",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-largest-eigenval-r01-original",
+          "geode-largest-eigenval-r02-original",
+          "geode-largest-eigenval-r03-original",
+          "geode-largest-eigenval-r04-original",
+          "geode-largest-eigenval-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-largest-eigenval-r01-original",
+          "native-largest-eigenval-r02-original",
+          "native-largest-eigenval-r03-original",
+          "native-largest-eigenval-r04-original",
+          "native-largest-eigenval-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/large-scale-text-editing",
+      "task_ref": "sha256:1f1cddc3df15e452fe2d3c6928f6b1e5b5330a7ae67cab373a0d089ea7d334a2",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-large-scale-text-editing-r01-original",
+          "geode-large-scale-text-editing-r02-original",
+          "geode-large-scale-text-editing-r03-original",
+          "geode-large-scale-text-editing-r04-original",
+          "geode-large-scale-text-editing-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-large-scale-text-editing-r01-original",
+          "native-large-scale-text-editing-r02-original",
+          "native-large-scale-text-editing-r03-original",
+          "native-large-scale-text-editing-r04-original",
+          "native-large-scale-text-editing-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/break-filter-js-from-html",
+      "task_ref": "sha256:678008d1a4fd1e6e1b9b3cc9a327219fe4b410a31eafc52e9099bbf947eea600",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-break-filter-js-from-html-r01-original",
+          "geode-break-filter-js-from-html-r02-original",
+          "geode-break-filter-js-from-html-r03-original",
+          "geode-break-filter-js-from-html-r04-original",
+          "geode-break-filter-js-from-html-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-break-filter-js-from-html-r01-original",
+          "native-break-filter-js-from-html-r02-original",
+          "native-break-filter-js-from-html-r03-original",
+          "native-break-filter-js-from-html-r04-original",
+          "native-break-filter-js-from-html-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/count-dataset-tokens",
+      "task_ref": "sha256:cd0574ec8281f53854256acc93702ed1441407c0428849e1dd4f27e863c6b08a",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-count-dataset-tokens-r01-original",
+          "geode-count-dataset-tokens-r02-original",
+          "geode-count-dataset-tokens-r03-original",
+          "geode-count-dataset-tokens-r04-original",
+          "geode-count-dataset-tokens-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-count-dataset-tokens-r01-original",
+          "native-count-dataset-tokens-r02-original",
+          "native-count-dataset-tokens-r03-original",
+          "native-count-dataset-tokens-r04-original",
+          "native-count-dataset-tokens-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/extract-moves-from-video",
+      "task_ref": "sha256:168e2b9168511b8f8d32b1697f4703b08626203e7949ad396658f4bef7dee66e",
+      "geode": {
+        "passes": 0,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-extract-moves-from-video-r01-original",
+          "geode-extract-moves-from-video-r02-original",
+          "geode-extract-moves-from-video-r03-original",
+          "geode-extract-moves-from-video-r04-original",
+          "geode-extract-moves-from-video-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 2,
+        "valid_cells": 4,
+        "unresolved_cells": 1,
+        "selected_attempt_ids": [
+          "native-extract-moves-from-video-r01-original",
+          "native-extract-moves-from-video-r02-original",
+          "supplement-051-native",
+          "native-extract-moves-from-video-r04-original",
+          "native-extract-moves-from-video-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/path-tracing-reverse",
+      "task_ref": "sha256:035880d7ef5554b217e53a75ce5e87e43193b7a44c30ad17226a6ab10fc11a6c",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-path-tracing-reverse-r01-original",
+          "geode-path-tracing-reverse-r02-original",
+          "geode-path-tracing-reverse-r03-original",
+          "geode-path-tracing-reverse-r04-original",
+          "geode-path-tracing-reverse-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-path-tracing-reverse-r01-original",
+          "supplement-052-native",
+          "supplement-053-native",
+          "native-path-tracing-reverse-r04-original",
+          "native-path-tracing-reverse-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/chess-best-move",
+      "task_ref": "sha256:9ab8e4b3674282e751edafbd9b5bd551fef995fd6601585a2cdb04fd70c520da",
+      "geode": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-chess-best-move-r01-original",
+          "geode-chess-best-move-r02-original",
+          "geode-chess-best-move-r03-original",
+          "geode-chess-best-move-r04-original",
+          "geode-chess-best-move-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "supplement-054-native",
+          "native-chess-best-move-r02-original",
+          "native-chess-best-move-r03-original",
+          "native-chess-best-move-r04-original",
+          "native-chess-best-move-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/prove-plus-comm",
+      "task_ref": "sha256:d5ae25720df1f7cd619ed8408cda4b87b79a3d8b0ff4f1919e2c96e9547339c2",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-prove-plus-comm-r01-original",
+          "geode-prove-plus-comm-r02-original",
+          "geode-prove-plus-comm-r03-original",
+          "geode-prove-plus-comm-r04-original",
+          "geode-prove-plus-comm-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-prove-plus-comm-r01-original",
+          "supplement-055-native",
+          "supplement-056-native",
+          "native-prove-plus-comm-r04-original",
+          "supplement-057-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/git-multibranch",
+      "task_ref": "sha256:7759a92a373c967dd31535975bad8659410644025673fe62385444fd2605c5fa",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-git-multibranch-r01-original",
+          "geode-git-multibranch-r02-original",
+          "geode-git-multibranch-r03-original",
+          "geode-git-multibranch-r04-original",
+          "geode-git-multibranch-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-git-multibranch-r01-original",
+          "native-git-multibranch-r02-original",
+          "native-git-multibranch-r03-original",
+          "native-git-multibranch-r04-original",
+          "native-git-multibranch-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/multi-source-data-merger",
+      "task_ref": "sha256:70367c38732e1beda7b229968a48d60242277c2fa4db91339c3f064c4c230d49",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-multi-source-data-merger-r01-original",
+          "geode-multi-source-data-merger-r02-original",
+          "geode-multi-source-data-merger-r03-original",
+          "geode-multi-source-data-merger-r04-original",
+          "geode-multi-source-data-merger-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-multi-source-data-merger-r01-original",
+          "native-multi-source-data-merger-r02-original",
+          "native-multi-source-data-merger-r03-original",
+          "native-multi-source-data-merger-r04-original",
+          "native-multi-source-data-merger-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/sqlite-with-gcov",
+      "task_ref": "sha256:9f9bd57fbf9f4831e9031755e83aea6b9d60d2b2d54e8a12d48cff4dca3c231d",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-sqlite-with-gcov-r01-original",
+          "geode-sqlite-with-gcov-r02-original",
+          "geode-sqlite-with-gcov-r03-original",
+          "geode-sqlite-with-gcov-r04-original",
+          "geode-sqlite-with-gcov-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 4,
+        "unresolved_cells": 1,
+        "selected_attempt_ids": [
+          "native-sqlite-with-gcov-r01-original",
+          "supplement-058-native",
+          "native-sqlite-with-gcov-r03-original",
+          "native-sqlite-with-gcov-r04-original",
+          "supplement-060-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/polyglot-rust-c",
+      "task_ref": "sha256:a33dc72e2278d225513c0724abe2e4539653d5ee7e4c2a90ba2d676586ba9f3d",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-polyglot-rust-c-r01-original",
+          "geode-polyglot-rust-c-r02-original",
+          "geode-polyglot-rust-c-r03-original",
+          "geode-polyglot-rust-c-r04-original",
+          "geode-polyglot-rust-c-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-polyglot-rust-c-r01-original",
+          "native-polyglot-rust-c-r02-original",
+          "native-polyglot-rust-c-r03-original",
+          "supplement-059-native",
+          "native-polyglot-rust-c-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/feal-linear-cryptanalysis",
+      "task_ref": "sha256:0f3234c5fde85f9dc610d94cfefd4c892afb75c9e571f21f18fee66972b67332",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-feal-linear-cryptanalysis-r01-original",
+          "geode-feal-linear-cryptanalysis-r02-original",
+          "geode-feal-linear-cryptanalysis-r03-original",
+          "geode-feal-linear-cryptanalysis-r04-original",
+          "geode-feal-linear-cryptanalysis-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-feal-linear-cryptanalysis-r01-original",
+          "native-feal-linear-cryptanalysis-r02-original",
+          "native-feal-linear-cryptanalysis-r03-original",
+          "native-feal-linear-cryptanalysis-r04-original",
+          "native-feal-linear-cryptanalysis-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/crack-7z-hash",
+      "task_ref": "sha256:99cbb2269f6bd112d3387fd01cb6900118fe4aded3f75a8d656580a8296a1ae5",
+      "geode": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-crack-7z-hash-r01-original",
+          "geode-crack-7z-hash-r02-original",
+          "geode-crack-7z-hash-r03-original",
+          "geode-crack-7z-hash-r04-original",
+          "geode-crack-7z-hash-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-crack-7z-hash-r01-original",
+          "native-crack-7z-hash-r02-original",
+          "native-crack-7z-hash-r03-original",
+          "native-crack-7z-hash-r04-original",
+          "native-crack-7z-hash-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/sparql-university",
+      "task_ref": "sha256:02aeca67b6c5b0d2d72c91ab471beb51ded6f42f0dc3dec580e20d489f09a867",
+      "geode": {
+        "passes": 2,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-sparql-university-r01-original",
+          "geode-sparql-university-r02-original",
+          "geode-sparql-university-r03-original",
+          "geode-sparql-university-r04-original",
+          "geode-sparql-university-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-sparql-university-r01-original",
+          "native-sparql-university-r02-original",
+          "supplement-061-native",
+          "native-sparql-university-r04-original",
+          "supplement-062-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/protein-assembly",
+      "task_ref": "sha256:c491d45acce234e1aa1d44dcc6778c55fcf875e9eb254b8dd3ae5ef58119621b",
+      "geode": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-protein-assembly-r01-original",
+          "geode-protein-assembly-r02-original",
+          "geode-protein-assembly-r03-original",
+          "geode-protein-assembly-r04-original",
+          "geode-protein-assembly-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-protein-assembly-r01-original",
+          "native-protein-assembly-r02-original",
+          "native-protein-assembly-r03-original",
+          "native-protein-assembly-r04-original",
+          "native-protein-assembly-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/custom-memory-heap-crash",
+      "task_ref": "sha256:61e021e0304c9818a9be2c9173c8a0938ce5d136e95c5422e099f1fdb2dc080e",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-custom-memory-heap-crash-r01-original",
+          "geode-custom-memory-heap-crash-r02-original",
+          "geode-custom-memory-heap-crash-r03-original",
+          "geode-custom-memory-heap-crash-r04-original",
+          "geode-custom-memory-heap-crash-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-custom-memory-heap-crash-r01-original",
+          "native-custom-memory-heap-crash-r02-original",
+          "native-custom-memory-heap-crash-r03-original",
+          "native-custom-memory-heap-crash-r04-original",
+          "native-custom-memory-heap-crash-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/code-from-image",
+      "task_ref": "sha256:ef2907bb300d9b3352410c2a75dbf831278c187c073298371870ea9c83526f78",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-code-from-image-r01-original",
+          "geode-code-from-image-r02-original",
+          "geode-code-from-image-r03-original",
+          "geode-code-from-image-r04-original",
+          "geode-code-from-image-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-code-from-image-r01-original",
+          "native-code-from-image-r02-original",
+          "native-code-from-image-r03-original",
+          "native-code-from-image-r04-original",
+          "native-code-from-image-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/fix-git",
+      "task_ref": "sha256:16948b980df9d96de616a205f5acca1c5d395de83ff4f8ffabcafacb93226f2e",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-fix-git-r01-original",
+          "geode-fix-git-r02-original",
+          "geode-fix-git-r03-original",
+          "geode-fix-git-r04-original",
+          "geode-fix-git-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-fix-git-r01-original",
+          "native-fix-git-r02-original",
+          "native-fix-git-r03-original",
+          "native-fix-git-r04-original",
+          "native-fix-git-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/winning-avg-corewars",
+      "task_ref": "sha256:a9f2c630fb7d656e96f3a42ade600a8abcb500631d153d62d5ceb2df073bc256",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-winning-avg-corewars-r01-original",
+          "geode-winning-avg-corewars-r02-original",
+          "geode-winning-avg-corewars-r03-original",
+          "geode-winning-avg-corewars-r04-original",
+          "geode-winning-avg-corewars-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-winning-avg-corewars-r01-original",
+          "native-winning-avg-corewars-r02-original",
+          "native-winning-avg-corewars-r03-original",
+          "native-winning-avg-corewars-r04-original",
+          "native-winning-avg-corewars-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/modernize-scientific-stack",
+      "task_ref": "sha256:67a9952aca67df9c70510acf62faea336644a0e9d379f3aaf9df79f14c8fcb12",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-modernize-scientific-stack-r01-original",
+          "geode-modernize-scientific-stack-r02-original",
+          "geode-modernize-scientific-stack-r03-original",
+          "geode-modernize-scientific-stack-r04-original",
+          "geode-modernize-scientific-stack-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-modernize-scientific-stack-r01-original",
+          "native-modernize-scientific-stack-r02-original",
+          "native-modernize-scientific-stack-r03-original",
+          "native-modernize-scientific-stack-r04-original",
+          "native-modernize-scientific-stack-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/git-leak-recovery",
+      "task_ref": "sha256:22a9ec10dbd4cd8b99477b70e1944103775ca41de9b9e0025ec4898cd17bd334",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-git-leak-recovery-r01-original",
+          "geode-git-leak-recovery-r02-original",
+          "geode-git-leak-recovery-r03-original",
+          "geode-git-leak-recovery-r04-original",
+          "geode-git-leak-recovery-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-git-leak-recovery-r01-original",
+          "native-git-leak-recovery-r02-original",
+          "native-git-leak-recovery-r03-original",
+          "native-git-leak-recovery-r04-original",
+          "supplement-063-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/distribution-search",
+      "task_ref": "sha256:8787d3004ac4dd9d78f0c14f5b5ef94a4ad3e69d8828d7d35b9fbd7828a69ed1",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-distribution-search-r01-original",
+          "geode-distribution-search-r02-original",
+          "geode-distribution-search-r03-original",
+          "geode-distribution-search-r04-original",
+          "geode-distribution-search-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-distribution-search-r01-original",
+          "native-distribution-search-r02-original",
+          "native-distribution-search-r03-original",
+          "native-distribution-search-r04-original",
+          "native-distribution-search-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/build-pmars",
+      "task_ref": "sha256:63f0449b276f081986740c941ea9372068b310a02b062c1e5e3400f575241893",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-build-pmars-r01-original",
+          "geode-build-pmars-r02-original",
+          "geode-build-pmars-r03-original",
+          "geode-build-pmars-r04-original",
+          "geode-build-pmars-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-build-pmars-r01-original",
+          "native-build-pmars-r02-original",
+          "native-build-pmars-r03-original",
+          "native-build-pmars-r04-original",
+          "native-build-pmars-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/mailman",
+      "task_ref": "sha256:831b3ed00807153963c05f91599443e4839099521d1d56db811c5547ab280dbe",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-mailman-r01-original",
+          "geode-mailman-r02-original",
+          "geode-mailman-r03-original",
+          "geode-mailman-r04-original",
+          "geode-mailman-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-mailman-r01-original",
+          "native-mailman-r02-original",
+          "native-mailman-r03-original",
+          "supplement-064-native",
+          "native-mailman-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/headless-terminal",
+      "task_ref": "sha256:203953871ebdae4efbf163af9499849368dab5e219b70d447e5ee9701ad382d9",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-headless-terminal-r01-original",
+          "geode-headless-terminal-r02-original",
+          "geode-headless-terminal-r03-original",
+          "geode-headless-terminal-r04-original",
+          "geode-headless-terminal-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 1,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-headless-terminal-r01-original",
+          "native-headless-terminal-r02-original",
+          "native-headless-terminal-r03-original",
+          "native-headless-terminal-r04-original",
+          "native-headless-terminal-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/constraints-scheduling",
+      "task_ref": "sha256:91dd6f87e1ee508328d5aafbd99a6bd1ccc47bc22671b4aaa4060bda492deb53",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-constraints-scheduling-r01-original",
+          "geode-constraints-scheduling-r02-original",
+          "geode-constraints-scheduling-r03-original",
+          "geode-constraints-scheduling-r04-original",
+          "geode-constraints-scheduling-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 4,
+        "valid_cells": 4,
+        "unresolved_cells": 1,
+        "selected_attempt_ids": [
+          "supplement-065-native",
+          "native-constraints-scheduling-r02-original",
+          "native-constraints-scheduling-r03-original",
+          "supplement-066-native",
+          "supplement-067-native"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/fix-code-vulnerability",
+      "task_ref": "sha256:d31348aa16b533a15f013420e4d9726dc529e6086adc7d6d48067d22cc18fe71",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-fix-code-vulnerability-r01-original",
+          "geode-fix-code-vulnerability-r02-original",
+          "geode-fix-code-vulnerability-r03-original",
+          "geode-fix-code-vulnerability-r04-original",
+          "geode-fix-code-vulnerability-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 3,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-fix-code-vulnerability-r01-original",
+          "native-fix-code-vulnerability-r02-original",
+          "native-fix-code-vulnerability-r03-original",
+          "native-fix-code-vulnerability-r04-original",
+          "native-fix-code-vulnerability-r05-original"
+        ]
+      }
+    },
+    {
+      "task_name": "terminal-bench/portfolio-optimization",
+      "task_ref": "sha256:d112f8945600f18ec47bbbe76935dc05953173cc3d0a375a7aa2712b091584e4",
+      "geode": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "geode-portfolio-optimization-r01-original",
+          "geode-portfolio-optimization-r02-original",
+          "geode-portfolio-optimization-r03-original",
+          "geode-portfolio-optimization-r04-original",
+          "geode-portfolio-optimization-r05-original"
+        ]
+      },
+      "native": {
+        "passes": 5,
+        "valid_cells": 5,
+        "unresolved_cells": 0,
+        "selected_attempt_ids": [
+          "native-portfolio-optimization-r01-original",
+          "native-portfolio-optimization-r02-original",
+          "native-portfolio-optimization-r03-original",
+          "native-portfolio-optimization-r04-original",
+          "native-portfolio-optimization-r05-original"
+        ]
+      }
+    }
+  ],
+  "comparability": {
+    "local_pair": "secondary exact common-cell paired-runtime diagnostic under the frozen same-model contract",
+    "official_leaderboard": "not comparable as a rank or official suite score",
+    "official_submission_eligible": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "terminalbench21.outcomes.v1",
+  "run_id": "terminalbench21-sol-max-fullsuite-paired-20260827t190300z",
+  "primary_metric_status": "not-measurable",
+  "frozen_cells_per_arm": 445,
+  "symmetrically_excluded_cells_per_arm": 10,
+  "selected_terminal_cells_per_arm": 435,
+  "unresolved_native_cells": [
+    "native:terminal-bench/constraints-scheduling#repetition-4",
+    "native:terminal-bench/extract-moves-from-video#repetition-3",
+    "native:terminal-bench/financial-document-processor#repetition-5",
+    "native:terminal-bench/sqlite-with-gcov#repetition-5",
+    "native:terminal-bench/torch-pipeline-parallelism#repetition-1",
+    "native:terminal-bench/torch-pipeline-parallelism#repetition-4"
+  ],
+  "secondary_observed_coverage": {
+    "geode": {
+      "passes": 344,
+      "valid_selected_cells": 435,
+      "intended_cells_after_symmetric_exclusion": 435,
+      "unresolved_infrastructure_invalid_cells": 0,
+      "observed_reward_mean": 0.7908045977011494
+    },
+    "native_codex": {
+      "passes": 331,
+      "valid_selected_cells": 429,
+      "intended_cells_after_symmetric_exclusion": 435,
+      "unresolved_infrastructure_invalid_cells": 6,
+      "observed_reward_mean": 0.7715617715617715
+    }
+  },
+  "exact_common_cell_comparison": {
+    "cells": 429,
+    "geode_passes": 339,
+    "native_passes": 331,
+    "both_pass": 286,
+    "geode_only": 53,
+    "native_only": 45,
+    "both_fail": 45
+  },
+  "model_attempts": 936,
+  "valid_model_attempts": 864,
+  "invalid_model_attempts": 72,
+  "failure_classes": {
+    "canonical-agent-timeout": 61,
+    "infrastructure-exception:AgentSetupTimeoutError": 50,
+    "infrastructure-exception:ApiOverloadedError": 2,
+    "infrastructure-exception:NonZeroAgentExitCodeError": 13,
+    "infrastructure-exception:receipt-classified": 4,
+    "model-safety-refusal": 16,
+    "operator-protocol-misconfiguration:subscription-auth-not-injected": 3,
+    "verifier-reward-zero": 112
+  },
+  "decision": "inconclusive-full-suite-primary-ineligible"
+}
