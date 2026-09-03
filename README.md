@@ -77,6 +77,7 @@ information asymmetry.
 
 | Date | Dataset | Native outcome | What it supports |
 |---|---|---|---|
+| 2026-09-03 | [Terminal-Bench 2.1 full-suite evidence](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/analysis.json) · [KO→EN explainer](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v2-ko-en.mp4) | Frozen primary not measurable; exact common-cell secondary: GEODE 339/429, native Codex 331/429 | Same-model local paired-runtime evidence across 87 runnable tasks. Two tasks were symmetrically excluded as infrastructure-unavailable; this is not an official leaderboard result. |
 | 2026-08-26 | [Terminal-Bench 2.1 paired diagnostic](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) | GEODE 3/3; native Codex 3/3 | Same-model, same three-task local harness comparison only; 3 of 89 tasks, k=1, no leaderboard authority. |
 | 2026-08-26 | [Skill-attribution paired pilot](skill-attribution/results-paired/skill-attribution-sol-max-paired-20260826t113400z/artifacts/analysis.json) | Signed pass delta +4 across 12 pairs (+0.333) | A preregistered synthetic pilot; diagnostic only. |
 | 2026-08-26 | [Skill-attribution repeated diagnostic](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) | Signed pass delta 0 across 36 pairs (0.000) | The pilot lift did not reproduce across three repetitions; skill effects must be remeasured, not assumed. |
