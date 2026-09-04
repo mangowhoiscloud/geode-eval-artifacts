@@ -1,0 +1,70 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-astra-high-openssl-smoke-20260904t202725z",
+  "analyzed_at": "2026-09-04T20:31:50Z",
+  "run_spec_sha256": "0d0fbbacc040b0742a9bb7fc85796abaac7ee4bfe2f01c9472a037265500f0fe",
+  "attempts_sha256": "fdc9b9c6372f69faf3ce2a2ddfc964101b594d84d062893ef0c0bdb1bf15d5e5",
+  "selected_attempt_ids": [
+    "astra-openssl-r01-original"
+  ],
+  "answer": "Yes for this bounded scenario. GEODE main reached gpt-6-astra/high through the current OpenAI subscription route, executed the canonical containerized TLS provisioning task, terminated naturally after three rounds, and Harbor's canonical verifier returned reward 1 with no exception.",
+  "metrics": [
+    {
+      "name": "canonical verifier pass",
+      "value": 1,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "passed trials / selected trials",
+      "source_ref": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json",
+      "source_locator": {
+        "value": "/stats/evals/geode__gpt-6-astra__terminal-bench~1terminal-bench-2-1/metrics/0/mean",
+        "numerator": "/stats/evals/geode__gpt-6-astra__terminal-bench~1terminal-bench-2-1/metrics/0/mean",
+        "denominator": "/n_total_trials"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "The sole preregistered attempt was infrastructure-valid, completed without retry or fallback, and received canonical verifier reward 1. The smoke contract has no promotion authority, so the result remains diagnostic-only."
+  },
+  "limitations": [
+    "One task and one repetition do not estimate Terminal-Bench 2.1 suite accuracy, variance, or leaderboard rank.",
+    "The canonical linux/amd64 task image ran through Docker Desktop on an arm64 macOS host.",
+    "Harbor's cost_usd field is a price-table estimate, not evidence of subscription billing.",
+    "Raw model reasoning, OAuth material, and task tool payloads remain local and are not publication-reviewed."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json",
+      "sha256": "078321572fe643bd14e018fe3f272c2351146812c020cbe56b4c01f537bfa6ae"
+    },
+    {
+      "kind": "other",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/openssl-selfsigned-cert__nCXHtTa/result.json",
+      "sha256": "508123574727b31672fb727442863b869c8799347b922bceb075028a244f2968"
+    },
+    {
+      "kind": "other",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/openssl-selfsigned-cert__nCXHtTa/agent/geode-trajectory.json",
+      "sha256": "3718a5f20250c63426eb02febacb9442dbd6ee2d8a85bb81a56a3f653d42a068"
+    },
+    {
+      "kind": "other",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/openssl-selfsigned-cert__nCXHtTa/agent/trajectory.json",
+      "sha256": "19adcc8e500d6a4c1f4e77231482401250858b7df448b0340a5d9f5e539b5b61"
+    },
+    {
+      "kind": "other",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/openssl-selfsigned-cert__nCXHtTa/agent/recording.receipt.json",
+      "sha256": "1d20bd1766390845b8ae85d0369bf4cc2d9dfe18d2cb3f4dcdc300553ff47786"
+    },
+    {
+      "kind": "other",
+      "path": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/openssl-selfsigned-cert__nCXHtTa/verifier/ctrf.json",
+      "sha256": "71d3b74211c4c013cbc4a187be7cea1866f022f800fb5ae16fec14adbc3adb8f"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "terminalbench21-astra-high-openssl-smoke-20260904t202725z",
+  "created_at": "2026-09-04T20:27:25Z",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-04T20:27:25Z",
+    "live_test_approved": true,
+    "operator": "Codex local evaluator"
+  },
+  "study": {
+    "research_question": "Can GEODE main execute one canonical TLS provisioning task end to end through Harbor with gpt-6-astra/high on the current OpenAI subscription route and produce a canonical verifier result?",
+    "research_gap": "Astra support and account catalog visibility are present, but this account has no post-enablement evidence from a real containerized computer task through GEODE and Harbor.",
+    "hypothesis": "The single preregistered trial will complete without an infrastructure error and receive canonical verifier reward 1.",
+    "primary_metric": {
+      "name": "canonical verifier pass",
+      "unit": "passed trials / selected trials",
+      "direction": "maximize",
+      "aggregation": "Use the canonical Harbor verifier reward for the single preregistered trial; reward 1 counts as one pass over denominator one.",
+      "denominator": 1
+    },
+    "decision_rule": "Support the hypothesis only if the sole infrastructure-valid trial completes and the canonical Harbor verifier reports reward 1; reward 0 rejects it for this task.",
+    "invalidation_rule": "Auth or model-access failure, dataset or task digest drift, container admission failure, timeout enforcement failure, or missing canonical result or verifier evidence makes the run infrastructure-inconclusive.",
+    "analysis_plan": "Select the sole original attempt with no retry. Preserve the Harbor job result and nested GEODE ATIF trajectory and verifier output. Report task reward, termination, rounds, tokens, wall time, and any infrastructure failure without suite or leaderboard extrapolation."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "132dc61f90b0fe097cf16b01efa564e88d9d8dc9",
+      "branch": "main",
+      "dirty": false
+    },
+    "harness": {
+      "name": "Harbor",
+      "source": "https://github.com/harbor-framework/harbor",
+      "revision": "0.22.0"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-6-astra",
+      "route": "subscription",
+      "reasoning": "high"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1; Docker Engine 29.0.1; Docker VM 8 CPU and 8217731072 bytes memory",
+      "architecture": "arm64 host; canonical linux/amd64 task image under emulation",
+      "reset_strategy": "Harbor creates and deletes one fresh canonical task container; the existing task cache is read-only input and no previous trial state is resumed.",
+      "initial_state_ref": "terminal-bench/terminal-bench-2-1@6; terminal-bench/openssl-selfsigned-cert@sha256:d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302"
+    },
+    "execution": {
+      "command_redacted": "CODEX_FORCE_AUTH_JSON=true uv run --with harbor==0.22.0 harbor run --job-name terminalbench21-astra-high-openssl-smoke-20260904t202725z -d terminal-bench/terminal-bench-2-1@6 -i terminal-bench/openssl-selfsigned-cert -a evals.platforms.harbor:GeodeHarborAgent -m geode/gpt-6-astra --ak provider=openai --ak source=subscription --ak effort=high -k 1 -n 1 -r 0 --timeout-multiplier 1.0 -o artifacts/eval/runs/terminalbench21-astra-high-openssl-smoke-20260904t202725z/raw/harbor -y",
+      "ordered_workload_ids": [
+        "terminal-bench/openssl-selfsigned-cert"
+      ],
+      "workload_ids_sha256": "db496f72e56490507773b8ea43a4dbb5409c951218c928ced18c8fd7f6696e97",
+      "repetitions": 1,
+      "seed_schedule": [
+        "unsupported-by-harbor-0.22.0"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 2400,
+      "budget": {
+        "kind": "wall-time",
+        "limit": 2400,
+        "unit": "seconds for one trial; no automatic retry"
+      }
+    },
+    "comparison": {
+      "claim_class": "smoke",
+      "comparator": null,
+      "comparability": "not-comparable",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "Retain local Harbor results, GEODE and ATIF trajectories, verifier outputs, and operator log; do not publish OAuth material, provider reasoning, raw tool payloads, local absolute paths, or unreviewed task data."
+  }
+}
