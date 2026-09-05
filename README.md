@@ -6,8 +6,8 @@ learning projections, and the reports that interpret them. A reported number
 should be traceable back to the producing harness without treating a summary,
 derived dataset, or model-authored judgment as ground truth.
 
-Published benchmark pages: [Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2) ·
-[MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark). The
+Published benchmark pages: [Tau2](https://mangowhoiscloud.github.io/geode/docs/benchmarks/tau2/) ·
+[MCPMark](https://mangowhoiscloud.github.io/geode/docs/benchmarks/mcpmark/). The
 stable publication, redaction, admission, and retirement rules live in
 [`TRAJECTORIES.md`](TRAJECTORIES.md).
 
@@ -123,7 +123,10 @@ treated as a useful memory or skill effect.
 ## What was used
 
 Everything below is also recorded per run inside the artifacts themselves;
-this table is the summary of the stack that produced them.
+this table summarizes the historical producing stacks, not the current GEODE
+package layout. In particular, `plugins/*` paths are retired; see
+[Reproduction](#reproduction) for current entry points and the retained legacy
+command.
 
 | Component | Value |
 |---|---|
@@ -532,9 +535,10 @@ machine-readable outcome.
   into the GEODE repo's transient `tmp/crucible_*.json` and published here
   under the durable name `crucible/gate-provenance/`) at publish time. Nothing is rewritten after
   upload; corrections happen as new run directories.
-- Rate-limit (429) failures are never counted as task failures: the affected
-  task directory is deleted and the task rerun, because the harness resume
-  logic would otherwise pin the failure permanently.
+- Infrastructure-invalid attempts, including quota exhaustion, stay outside
+  the semantic-failure denominator and retain attempt lineage. Historical
+  MCPMark scratch-directory deletion was a resume workaround, not permission
+  to delete published evidence; see the [reference note](reports/readme-review/2026-09-06.md).
 
 ## What is excluded
 
@@ -560,21 +564,15 @@ machine-readable outcome.
 
 ## Reproduction
 
-From an `eval-sys/mcpmark@cd45b7f` checkout with the GEODE repo installed
-editable in its venv:
+Start with the selected run's frozen specification and producing revisions;
+installing today's GEODE does not reproduce a historical environment by itself.
+Current benchmark guidance is linked at the top of this README. For new
+Agent-World comparisons, use GEODE's
+[comparison contract](https://github.com/mangowhoiscloud/geode/blob/main/docs/eval/agent-world-comparison-contract.md).
 
-```bash
-set -a; source .mcp_env; set +a
-OPENAI_API_KEY=dummy \
-.venv/bin/python -m plugins.benchmark_harness.run_mcpmark \
-  --mcp <service> --task-suite <easy|standard> \
-  --models geode-gpt-5.5 --agent geode --reasoning-effort xhigh \
-  --k 1 --timeout 1200 \
-  --exp-name <run-id> --output-dir ./results-geode-agentworld
-```
-
-`OPENAI_API_KEY=dummy` only satisfies the pipeline's env check; model calls go
-through GEODE's `openai-codex` subscription provider. tau2 runs use the GEODE
-tau2 adapter in the GEODE repo (`plugins/benchmark_harness/tau2_geode_agent.py`).
-Exact per-run commands and environment state are recorded in the GEODE repo's
-`docs/eval/mcpmark-agentworld-comparison-runbook.md`.
+At the reviewed GEODE revision, the implementation entry points are the
+[MCPMark runner](https://github.com/mangowhoiscloud/geode/blob/b254ecb78724f3c228bc0c1ff40b97d240a40041/evals/benchmarks/mcpmark/runner.py)
+and [tau2 participant adapter](https://github.com/mangowhoiscloud/geode/blob/b254ecb78724f3c228bc0c1ff40b97d240a40041/evolve/crucible/assays/tau2_geode_agent.py).
+The retired `plugins.*` command and the link-audit findings are retained in the
+[2026-09-06 reference note](reports/readme-review/2026-09-06.md), not presented as
+current installation instructions.
