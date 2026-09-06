@@ -1,0 +1,623 @@
+{
+  "schema_id": "geode.trajectory@1",
+  "schema_version": 1,
+  "trajectory_id": "geode-agenticloop-hook-middleware-e2e-20260806T110436Z",
+  "captured_at": "2026-08-06T11:04:36Z",
+  "trajectory_class": [
+    "decision",
+    "tool"
+  ],
+  "source": {
+    "harness": "scripts/eval/run_hook_behavior_e2e.py",
+    "parents": null,
+    "run": "hook-middleware-e2e-20260806T110436Z",
+    "session": "hook-middleware-e2e-20260806T110436Z:suite",
+    "task": "validate GEODE public hooks and trusted middleware"
+  },
+  "events": [
+    {
+      "event_id": "bdc115f529b7f7c8422f544931c07eaf",
+      "ordinal": 1,
+      "occurred_at": "2026-08-06T11:04:36Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-compact",
+      "turn_id": "compact-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "action": "rewrite",
+        "hook": "PreCompact",
+        "payload_sha256": "85811ec69c5db5a41a3c3a0ff1cbd1ac4de59df67bd20a71839ac757c3d65181",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-compact",
+        "turn_id": "compact-turn"
+      }
+    },
+    {
+      "event_id": "975e0d21c51a8326fe68b4126ddc467d",
+      "ordinal": 2,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-compact",
+      "turn_id": "compact-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "action": "continue",
+        "hook": "PostCompact",
+        "payload_sha256": "ab7c5495e278af4d65818ba9f94be7f4944d21cba54fede6acc9b7816bdc08e6",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-compact",
+        "turn_id": "compact-turn"
+      }
+    },
+    {
+      "event_id": "0c72eb86e942aa362da81ffb930df706",
+      "ordinal": 3,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "compaction_result",
+      "actor": "system",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "compaction",
+        "message_count_after": 7,
+        "message_count_before": 12,
+        "persisted": true
+      }
+    },
+    {
+      "event_id": "5c1541c1e4bd084b56f13c3f3f538f9a",
+      "ordinal": 4,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-parent",
+      "turn_id": "subagent-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "action": "continue",
+        "hook": "SubagentStart",
+        "payload_sha256": "dd249e532f850321a26bc0fdebd2a28f6e0abb2f684ec92b2d9e438770a0b3c5",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-parent",
+        "turn_id": "subagent-turn"
+      }
+    },
+    {
+      "event_id": "3449c848222e5737a02d485162081576",
+      "ordinal": 5,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-parent",
+      "turn_id": "subagent-turn",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "action": "continue",
+        "hook": "SubagentStop",
+        "payload_sha256": "2481cf09ac9ad61259f200a2e8ec64f18f93d282724f7523aa7d12fa2f641957",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-parent",
+        "turn_id": "subagent-turn"
+      }
+    },
+    {
+      "event_id": "dadcd937fd3488d701144eada8457c95",
+      "ordinal": 6,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "subagent_result",
+      "actor": "system",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "subagent",
+        "success": true,
+        "task_id": "behavior-e2e-child"
+      }
+    },
+    {
+      "event_id": "061e47d8cfca42cd00ebced257d4ed64",
+      "ordinal": 7,
+      "occurred_at": "2026-08-06T11:04:47Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "rewrite",
+        "hook": "UserPromptSubmit",
+        "payload_sha256": "f99249161375043dad54be64a3b05b43ce1a2412cd4afc6dff60e2db7bd358d2",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "5d6fedc2f71aceeb6a617b6f7739fa3a",
+      "ordinal": 8,
+      "occurred_at": "2026-08-06T11:04:48Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "continue",
+        "hook": "SessionStart",
+        "payload_sha256": "710bc8ce047a96adb1afff529b75c15d7b7f617425cea8c252df449ed1cf1d9f",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "3311cd838662a3676f8e60c44f4d1639",
+      "ordinal": 9,
+      "occurred_at": "2026-08-06T11:04:48Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 8192,
+        "max_tokens_before": 16384,
+        "surface": "llm_request",
+        "transformed": true
+      }
+    },
+    {
+      "event_id": "de29256b63648a56cd168d2976e70908",
+      "ordinal": 10,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "760974946b9e82a8dde63967b1d15cfa",
+      "ordinal": 11,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "surface": "tool_request",
+        "transformed": true,
+        "tool": "hook_behavior_probe"
+      }
+    },
+    {
+      "event_id": "63df6a778161aadab7bb17ee51eacfdb",
+      "ordinal": 12,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "rewrite",
+        "hook": "PreToolUse",
+        "payload_sha256": "5090f182f797ff9221cfe9ea30d07af76afe1e9ca001910d152ed019f7eb84fc",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "44eab16bcaccf90c8a70bf0f2d999e60",
+      "ordinal": 13,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "request_permission",
+        "hook": "PreToolUse",
+        "payload_sha256": "6e3431ae4f79d10a7ec19de9bdaaf4b609115a37874a3fecfcbe09c5d5dafc2b",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "e2e774e0551e06fe302fed17bd42474d",
+      "ordinal": 14,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "allow",
+        "hook": "PermissionRequest",
+        "payload_sha256": "e38b7ea5ebfe0b6a97f76a998b71ddc7a175b17e9546b3fefde793f056e9f674",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "53a708f2cd93aefad05976e4f4b0fa3b",
+      "ordinal": 15,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "tool_call",
+      "actor": "assistant",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "tool-call-1",
+      "payload": {
+        "scenario": "live-agent",
+        "argument_sha256": "d528707cd23fbdce71480d5547a9059be9955a7f5062421a51ef443ff3cb0a0b",
+        "call_id": "tool-call-1",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "tool": "hook_behavior_probe",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "80cb53d87bf314466e14e04c8d301881",
+      "ordinal": 16,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "tool_result",
+      "actor": "environment",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "tool-call-1",
+      "payload": {
+        "scenario": "live-agent",
+        "call_id": "tool-call-1",
+        "result_sha256": "d50c85ab0b0b7cb399a740aa86f5164b2ed548d75625f456b4ffbc36068ada5b",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "status": "ok",
+        "tool": "hook_behavior_probe",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "d6cf4dc8384830010f351715ab9cf3f9",
+      "ordinal": 17,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "surface": "tool_execution",
+        "status": "called_next"
+      }
+    },
+    {
+      "event_id": "612dcc2c0b3704e81f9c830c99510502",
+      "ordinal": 18,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "add_context",
+        "hook": "PostToolUse",
+        "payload_sha256": "79aaafbaa848c2d278e7bcf51b800516eba27e1e3c4e7347e8fa208b2d01780c",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "877a0195eb4789d00741c6cf8aaa5a6e",
+      "ordinal": 19,
+      "occurred_at": "2026-08-06T11:04:51Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 512,
+        "max_tokens_before": 512,
+        "surface": "llm_request",
+        "transformed": false
+      }
+    },
+    {
+      "event_id": "315cdb91f7e5fd6280f5386ab40c7ca9",
+      "ordinal": 20,
+      "occurred_at": "2026-08-06T11:04:55Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "bc45afce9f8ae8d01ad6c0469b9211dc",
+      "ordinal": 21,
+      "occurred_at": "2026-08-06T11:04:55Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 8192,
+        "max_tokens_before": 16384,
+        "surface": "llm_request",
+        "transformed": true
+      }
+    },
+    {
+      "event_id": "be1311ef83a48d295c278f3f3df4c04a",
+      "ordinal": 22,
+      "occurred_at": "2026-08-06T11:04:58Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "352fd272c4c7abef1d330d35a464fdd4",
+      "ordinal": 23,
+      "occurred_at": "2026-08-06T11:04:58Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "max_tokens_after": 512,
+        "max_tokens_before": 512,
+        "surface": "llm_request",
+        "transformed": false
+      }
+    },
+    {
+      "event_id": "d4b9a50261ac0944b74df2bb29296b07",
+      "ordinal": 24,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "middleware",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "adapter": "codex-oauth",
+        "surface": "llm_execution",
+        "status": "ok"
+      }
+    },
+    {
+      "event_id": "b33ae18e46c3b9ece359b6c074acd1f2",
+      "ordinal": 25,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "strengthen",
+        "hook": "PreVerify",
+        "payload_sha256": "ea17d4b9ed886db1cf9aa4876bc0e23528983e4cefe9f4d3e72dcaf65ddb4957",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "7a186a3dfbb038fcc413cdd41a5c201c",
+      "ordinal": 26,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "accept",
+        "hook": "PostVerify",
+        "payload_sha256": "05b2290032f81bd2f86f961dcc3ec6e159aae67bc3e4e4fe87903b18b5ca0874",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "c6a870f350a94fe4406ecb9fd159abf0",
+      "ordinal": 27,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "finalize",
+        "hook": "Stop",
+        "payload_sha256": "fbb91c660695f82f7611eaa9b8effd8dc0c19d4de148d5309b5b0c6b916ed2b2",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "e0ca2ffd607a0f6e365b1abe890bd8ac",
+      "ordinal": 28,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "public_hook",
+      "actor": "extension",
+      "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+      "turn_id": "t-002755cebaa7",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "action": "continue",
+        "hook": "SessionEnd",
+        "payload_sha256": "10ee6ebba38239490d41053ca43874114ce0448fb168d6e2d3fb9d3829ca3e7b",
+        "session_id": "hook-middleware-e2e-20260806T110436Z-live",
+        "turn_id": "t-002755cebaa7"
+      }
+    },
+    {
+      "event_id": "e10fe3eeac3e23c5549c4dce3823cd73",
+      "ordinal": 29,
+      "occurred_at": "2026-08-06T11:05:01Z",
+      "kind": "final_result",
+      "actor": "assistant",
+      "session_id": "hook-middleware-e2e-20260806T110436Z:suite",
+      "turn_id": "",
+      "call_id": "",
+      "payload": {
+        "scenario": "live-agent",
+        "output_sha256": "6c4124c13e3601f6a6c040da30a5aff5d6010d9297c8019515c106e0caa8cbde",
+        "rounds": 2,
+        "termination_reason": "natural"
+      }
+    }
+  ],
+  "outcome": {
+    "hook_coverage": {
+      "covered": 13,
+      "expected": 13,
+      "missing": []
+    },
+    "middleware_coverage": {
+      "covered": 4,
+      "expected": 4,
+      "missing": []
+    },
+    "result": "pass",
+    "scored": false,
+    "sqlite_extension_rows": 24,
+    "terminal_state": "natural",
+    "tool_calls": 1,
+    "timeline_extension_rows": 24,
+    "unscored_reason": "release validation probe, not a benchmark task",
+    "verifier": "explicit release gates over exact hook/middleware multiplicity, exactly-once tool execution, SQLite/JSONL parity, correlation, and persisted compaction"
+  },
+  "integrity": {
+    "canonicalization": "UTF-8, LF, json.dumps(ensure_ascii=False, sort_keys=True, indent=2)",
+    "scope_complete": true,
+    "replay_complete": false,
+    "fidelity": "decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished",
+    "incompleteness": [
+      "payload digests intentionally replace private prompt and result bodies",
+      "privacy policy declares content reduction",
+      "declared fidelity limits replay: decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished"
+    ],
+    "replay_incompleteness": [
+      "payload digests intentionally replace private prompt and result bodies",
+      "privacy policy declares content reduction",
+      "declared fidelity limits replay: decision/tool trajectory; raw prompts, model reasoning, tool bodies, checkpoints, SQLite, and JSONL remain unpublished"
+    ],
+    "pairing_rule": "tool_result.call_id equals the preceding tool_call.call_id",
+    "record_count": 29,
+    "complete": false,
+    "scope_incompleteness": [],
+    "quality": {
+      "event_id_unique": true,
+      "ordinal_contiguous": true,
+      "correlation": {
+        "session_id_present": 29,
+        "turn_id_present": 16,
+        "turn_id_required": 2,
+        "turn_id_missing": 0,
+        "tool_call_id_present": 2,
+        "event_count": 29
+      },
+      "tool_pairing": {
+        "calls": 1,
+        "results": 1,
+        "paired": 1,
+        "orphan_calls": 0,
+        "orphan_results": 0,
+        "missing_call_ids": 0
+      },
+      "payload_issue_events": 0,
+      "replay_fidelity": "full"
+    }
+  },
+  "privacy": {
+    "license": "GEODE-owned run; no third-party dataset content",
+    "redactions": [
+      {
+        "rule": "publish payload digests instead of prompts/results",
+        "type": "content_reduction"
+      },
+      {
+        "rule": "exclude runtime home, SQLite, JSONL, and checkpoints",
+        "type": "artifact_allowlist"
+      }
+    ],
+    "review_state": "reviewed"
+  },
+  "provenance": {
+    "adapters": {
+      "llm": "codex-oauth (source=subscription)"
+    },
+    "extraction_transform": "in-process hook/middleware receipts normalized to decision/tool events",
+    "geode_revision": "18acd97f4b519f58c83c387f08dbcb9a5c2a48b5",
+    "middleware_counts": {
+      "tool_request": 1,
+      "tool_execution": 1,
+      "llm_request": 4,
+      "llm_execution": 4
+    },
+    "model_route": {
+      "effort": "high",
+      "model": "gpt-5.4",
+      "provider": "openai",
+      "source": "subscription"
+    },
+    "storage_checks": {
+      "compaction_artifacts": 1,
+      "sqlite_extension_rows": 24,
+      "timeline_extension_rows": 24
+    }
+  },
+  "runtime_event_refs": [],
+  "evidence_refs": [],
+  "artifact_digests": [],
+  "published_at": "2026-08-06T11:05:01Z",
+  "observed_on": "2026-08-06"
+}
