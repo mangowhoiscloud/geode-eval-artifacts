@@ -1,0 +1,142 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "jev-verdict-snapshots-20260923",
+  "analyzed_at": "2026-09-24T08:02:10Z",
+  "run_spec_sha256": "1e6e858c48788ea5dbfddab85f8d0836fb4884d793c45d17e2aef333cc3d1ca7",
+  "attempts_sha256": "e6823e29a7329a7d71f2b93abe01f22f6ac44c07c0184f4b9f536c7ff1adee71",
+  "selected_attempt_ids": [
+    "snapshot-01-llm",
+    "snapshot-01-jev",
+    "snapshot-02-jev",
+    "snapshot-02-llm",
+    "snapshot-03-llm",
+    "snapshot-03-jev",
+    "aggregate"
+  ],
+  "answer": "All six component observations completed; inspect paired labels before interpreting latency or estimated cost.",
+  "metrics": [
+    {
+      "name": "jev_minus_llm_exact_verdict_accuracy",
+      "unit": "ratio",
+      "value": 0.0,
+      "numerator": 0,
+      "denominator": 3,
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary/value",
+        "numerator": "/primary/numerator",
+        "denominator": "/primary/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "inconclusive",
+    "hypothesis_status": "supported",
+    "rationale": "One authored task with three dependent variants; no adoption, release, population or E2E authority."
+  },
+  "limitations": [
+    "Host component diagnostic, not Harbor E2E or an actual root repair.",
+    "Three counterfactual variants of one task, unseeded inference and unequal AB/BA order; no calibration or statistical superiority claim.",
+    "Observed usage is not exhaustive provider dispatch or billing. Missing counters remain unknown; tariff and subscription API equivalent stay separate.",
+    "Fixed code-owned feedback is not model reasoning. No hidden chain of thought was collected.",
+    "Retrospective public projection. Original contracts, receipts and digests remain separate; no new model calls."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "snapshot-01-llm/native.json",
+      "sha256": "adca5d0f5e8576dfe53c2cfdbac5cb3f2bb09febd7b8f33715cec4faba17f50a"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-01-llm/call-events.json",
+      "sha256": "1fac365a4b17973d9fae4c33dcd9d6055e6fc1e6ec39d52d4b63dc20824241b1"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-01-llm/events.db.withheld.json",
+      "sha256": "ffebd6ddce5a92e4d6ecf6634cfea4b7414d52720fe30e345d0d039dfca319e1"
+    },
+    {
+      "kind": "native-result",
+      "path": "snapshot-01-jev/native.json",
+      "sha256": "d1435cdec8a2c68d75e024774b95daa89b81f9ff69c5e46560e77c286a85171d"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-01-jev/call-events.json",
+      "sha256": "07c66212609ad32997b29b0d1b31cd140a4fa4e4eff4e2e93971591b4c546633"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-01-jev/events.db.withheld.json",
+      "sha256": "d6b588744ca3fa701fa7cfdfae7c2812d7b9b8254e12ff54dee55e1cedc60f4e"
+    },
+    {
+      "kind": "native-result",
+      "path": "snapshot-02-jev/native.json",
+      "sha256": "6eae5c1ed93d2f168b4700b5d0859928d1293d87df7a2326213ec9b7b7d64d98"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-02-jev/call-events.json",
+      "sha256": "0e220c855bcef3f2fc0f9ec43a81a0d1268cd09caebe833f49a7127f990e2cee"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-02-jev/events.db.withheld.json",
+      "sha256": "7ec81f6d2d29c959c5bdad17b43c3c1758e64e3f6a5b1a0db8792a452654593d"
+    },
+    {
+      "kind": "native-result",
+      "path": "snapshot-02-llm/native.json",
+      "sha256": "ac71e9f9fbfb22a6c358f79d9dacbd5fe06380db76a7adb344d70a744c79e37d"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-02-llm/call-events.json",
+      "sha256": "912bee132e47e490b4254d3db32ff62872476455be9589be18fbf82d5887af35"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-02-llm/events.db.withheld.json",
+      "sha256": "8ab88d272f5f5d7729a967ea8ce94b1fe9a05eedf3523f90d771b27a7295a7be"
+    },
+    {
+      "kind": "native-result",
+      "path": "snapshot-03-llm/native.json",
+      "sha256": "18d5b3744b237e235fd0a07fce106e13a88d787e77a76ec9035ba96f2fe6fd37"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-03-llm/call-events.json",
+      "sha256": "f622101ad0c500b08abc2f382eea6108e0961a78781a09060823f6d6c0a7389e"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-03-llm/events.db.withheld.json",
+      "sha256": "00178ee4b0bd2f265ccd53dce50c01db35f4a6cb9dfc88e8a2aaefc329833561"
+    },
+    {
+      "kind": "native-result",
+      "path": "snapshot-03-jev/native.json",
+      "sha256": "71ef8898371131eba6742ba24632b5df7879e5fc8d3c7837bcbb1330b7213c5a"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-03-jev/call-events.json",
+      "sha256": "b0b22473ba235fd3815fba699fdcf5f1b788d7127bfc9bb69ca53934e94c5f92"
+    },
+    {
+      "kind": "other",
+      "path": "snapshot-03-jev/events.db.withheld.json",
+      "sha256": "3693c3cd5602e307c638291717013c1d5c96e317245137d0a0ce7c9a92a8344f"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "793b83052ae415722e3a88fda5dbec843297456daed9313661efc424b88b7f74"
+    }
+  ]
+}

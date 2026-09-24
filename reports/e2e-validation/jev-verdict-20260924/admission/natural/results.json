@@ -1,0 +1,970 @@
+{
+  "phase": "admission",
+  "complete": true,
+  "planned_cells": 2,
+  "observed_cells": 2,
+  "independent_inboxes": 1,
+  "primary": {
+    "value": 1.0,
+    "numerator": 2,
+    "denominator": 2
+  },
+  "arms": {
+    "a": {
+      "attempted": 1,
+      "valid": 1,
+      "passed": 1,
+      "median_attempt_runtime_seconds": 30.96604547199999,
+      "median_valid_runtime_seconds": 30.96604547199999,
+      "median_attempt_host_seconds": 77.25182408299952,
+      "accounting": {
+        "scope": "recorded-runtime-llm-attempts-only",
+        "whole_runtime_complete": false,
+        "retained_attempt_coverage_complete": true,
+        "recorded_calls": 4,
+        "failed_calls": 0,
+        "contradictory_usage_calls": 0,
+        "usage": {
+          "input_tokens": {
+            "total": 6576,
+            "observed_sum": 6576,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "output_tokens": {
+            "total": 490,
+            "observed_sum": 490,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "cached_input_tokens": {
+            "total": 2176,
+            "observed_sum": 2176,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "cache_write_tokens": {
+            "total": 0,
+            "observed_sum": 0,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "reasoning_tokens": {
+            "total": 286,
+            "observed_sum": 286,
+            "observed_calls": 4,
+            "missing_calls": 0
+          }
+        },
+        "total_tokens": {
+          "total": 7066,
+          "observed_sum": 7066,
+          "observed_calls": 4,
+          "missing_calls": 0
+        },
+        "known_input_output_sum": 7066,
+        "costs": {
+          "typesafe_price_estimate_usd": {
+            "applicable_calls": 0,
+            "total": null,
+            "observed_sum": 0,
+            "observed_calls": 0,
+            "missing_calls": 0,
+            "currency": "USD",
+            "unit": "USD",
+            "authority": "published-input-token-tariff-calculation"
+          },
+          "subscription_api_equivalent_estimate_usd": {
+            "applicable_calls": 4,
+            "total": 0.070676,
+            "observed_sum": 0.070676,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "reported_cost_usd": {
+            "applicable_calls": 4,
+            "total": null,
+            "observed_sum": 0,
+            "observed_calls": 0,
+            "missing_calls": 4
+          },
+          "typesafe_price_estimate_us_cents": {
+            "applicable_calls": 0,
+            "total": null,
+            "observed_sum": 0.0,
+            "observed_calls": 0,
+            "missing_calls": 0,
+            "currency": "USD",
+            "unit": "US cents",
+            "authority": "published-input-token-tariff-calculation"
+          }
+        },
+        "subscription_api_equivalent_bounds_usd": [
+          {
+            "total": 0.070676,
+            "observed_sum": 0.070676,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          {
+            "total": 0.070676,
+            "observed_sum": 0.070676,
+            "observed_calls": 4,
+            "missing_calls": 0
+          }
+        ],
+        "unpriced_model_calls": 0
+      },
+      "by_purpose": {
+        "agentic_loop": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 2,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 4672,
+              "observed_sum": 4672,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 132,
+              "observed_sum": 132,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 2176,
+              "observed_sum": 2176,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "cache_write_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "reasoning_tokens": {
+              "total": 40,
+              "observed_sum": 40,
+              "observed_calls": 2,
+              "missing_calls": 0
+            }
+          },
+          "total_tokens": {
+            "total": 4804,
+            "observed_sum": 4804,
+            "observed_calls": 2,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 4804,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 2,
+              "total": 0.033736,
+              "observed_sum": 0.033736,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 2,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 2
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0.0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": 0.033736,
+              "observed_sum": 0.033736,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            {
+              "total": 0.033736,
+              "observed_sum": 0.033736,
+              "observed_calls": 2,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        },
+        "cognitive_reflection": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 1,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 643,
+              "observed_sum": 643,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 283,
+              "observed_sum": 283,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cache_write_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reasoning_tokens": {
+              "total": 188,
+              "observed_sum": 188,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          },
+          "total_tokens": {
+            "total": 926,
+            "observed_sum": 926,
+            "observed_calls": 1,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 926,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 1,
+              "total": 0.02058,
+              "observed_sum": 0.02058,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 1,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0.0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": 0.02058,
+              "observed_sum": 0.02058,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            {
+              "total": 0.02058,
+              "observed_sum": 0.02058,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        },
+        "turn_verification": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 1,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 1261,
+              "observed_sum": 1261,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 75,
+              "observed_sum": 75,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cache_write_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reasoning_tokens": {
+              "total": 58,
+              "observed_sum": 58,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          },
+          "total_tokens": {
+            "total": 1336,
+            "observed_sum": 1336,
+            "observed_calls": 1,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 1336,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 1,
+              "total": 0.016360000000000003,
+              "observed_sum": 0.016360000000000003,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 1,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0.0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": 0.016360000000000003,
+              "observed_sum": 0.016360000000000003,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            {
+              "total": 0.016360000000000003,
+              "observed_sum": 0.016360000000000003,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        }
+      },
+      "per_trial_burden": [
+        {
+          "trial": "verdict-r2-admission-r0-inbox-admission-a",
+          "analysis_call_count": 0,
+          "rejudgment_call_count": 0,
+          "rejudged_item_count": 0,
+          "helper_correction_count": 0,
+          "helper_rejudgment_recovery_count": 0,
+          "rejected_lookup_count": 0,
+          "lookup_attempt_count": 1,
+          "lookup_item_count": 1,
+          "extra_lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "false_completion_count": 0,
+          "helper_tool_elapsed_seconds": [],
+          "helper_invocations": 0,
+          "helper_repeats_same_state": 0,
+          "root_requests": 2,
+          "native_verify_events": 1,
+          "judgment_attempts": 1,
+          "replan_requests": 0,
+          "root_requests_consuming_feedback": 0,
+          "tracker_cost_authority": "published-tariff-estimate-not-invoice",
+          "judge_false_acceptance": false,
+          "held_delivery": false,
+          "repaired_success": false
+        }
+      ],
+      "item_metrics": [
+        {
+          "trial": "verdict-r2-admission-r0-inbox-admission-a",
+          "items": [
+            {
+              "id": "admit_one",
+              "passed": true,
+              "answer_matches": true,
+              "lookup_evidence_consumed": true,
+              "helper_matches": null,
+              "initial_helper_matches": null,
+              "helper_rejudgment_recovered": false,
+              "helper_correction": false,
+              "lookup_count": 1,
+              "wrong_target_lookup_count": 0,
+              "extra_lookup_count": 0,
+              "false_completion": false
+            },
+            {
+              "id": "admit_two",
+              "passed": true,
+              "answer_matches": true,
+              "lookup_evidence_consumed": true,
+              "helper_matches": null,
+              "initial_helper_matches": null,
+              "helper_rejudgment_recovered": false,
+              "helper_correction": false,
+              "lookup_count": 0,
+              "wrong_target_lookup_count": 0,
+              "extra_lookup_count": 0,
+              "false_completion": false
+            }
+          ]
+        }
+      ]
+    },
+    "b": {
+      "attempted": 1,
+      "valid": 1,
+      "passed": 1,
+      "median_attempt_runtime_seconds": 18.75788084199999,
+      "median_valid_runtime_seconds": 18.75788084199999,
+      "median_attempt_host_seconds": 67.3275041249999,
+      "accounting": {
+        "scope": "recorded-runtime-llm-attempts-only",
+        "whole_runtime_complete": false,
+        "retained_attempt_coverage_complete": true,
+        "recorded_calls": 4,
+        "failed_calls": 0,
+        "contradictory_usage_calls": 0,
+        "usage": {
+          "input_tokens": {
+            "total": 6466,
+            "observed_sum": 6466,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "output_tokens": {
+            "total": 274,
+            "observed_sum": 274,
+            "observed_calls": 4,
+            "missing_calls": 0
+          },
+          "cached_input_tokens": {
+            "total": null,
+            "observed_sum": 0,
+            "observed_calls": 3,
+            "missing_calls": 1
+          },
+          "cache_write_tokens": {
+            "total": null,
+            "observed_sum": 0,
+            "observed_calls": 3,
+            "missing_calls": 1
+          },
+          "reasoning_tokens": {
+            "total": null,
+            "observed_sum": 41,
+            "observed_calls": 3,
+            "missing_calls": 1
+          }
+        },
+        "total_tokens": {
+          "total": 6740,
+          "observed_sum": 6740,
+          "observed_calls": 4,
+          "missing_calls": 0
+        },
+        "known_input_output_sum": 6740,
+        "costs": {
+          "typesafe_price_estimate_usd": {
+            "applicable_calls": 1,
+            "total": 4.83e-05,
+            "observed_sum": 4.83e-05,
+            "observed_calls": 1,
+            "missing_calls": 0,
+            "currency": "USD",
+            "unit": "USD",
+            "authority": "published-input-token-tariff-calculation"
+          },
+          "subscription_api_equivalent_estimate_usd": {
+            "applicable_calls": 3,
+            "total": 0.06446,
+            "observed_sum": 0.06446,
+            "observed_calls": 3,
+            "missing_calls": 0
+          },
+          "reported_cost_usd": {
+            "applicable_calls": 4,
+            "total": null,
+            "observed_sum": 0,
+            "observed_calls": 0,
+            "missing_calls": 4
+          },
+          "typesafe_price_estimate_us_cents": {
+            "applicable_calls": 1,
+            "total": 0.00483,
+            "observed_sum": 0.00483,
+            "observed_calls": 1,
+            "missing_calls": 0,
+            "currency": "USD",
+            "unit": "US cents",
+            "authority": "published-input-token-tariff-calculation"
+          }
+        },
+        "subscription_api_equivalent_bounds_usd": [
+          {
+            "total": 0.06446,
+            "observed_sum": 0.06446,
+            "observed_calls": 3,
+            "missing_calls": 0
+          },
+          {
+            "total": 0.06446,
+            "observed_sum": 0.06446,
+            "observed_calls": 3,
+            "missing_calls": 0
+          }
+        ],
+        "unpriced_model_calls": 0
+      },
+      "by_purpose": {
+        "agentic_loop": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 2,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 4673,
+              "observed_sum": 4673,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 133,
+              "observed_sum": 133,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "cache_write_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "reasoning_tokens": {
+              "total": 41,
+              "observed_sum": 41,
+              "observed_calls": 2,
+              "missing_calls": 0
+            }
+          },
+          "total_tokens": {
+            "total": 4806,
+            "observed_sum": 4806,
+            "observed_calls": 2,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 4806,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 2,
+              "total": 0.053380000000000004,
+              "observed_sum": 0.053380000000000004,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 2,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 2
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0.0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": 0.053380000000000004,
+              "observed_sum": 0.053380000000000004,
+              "observed_calls": 2,
+              "missing_calls": 0
+            },
+            {
+              "total": 0.053380000000000004,
+              "observed_sum": 0.053380000000000004,
+              "observed_calls": 2,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        },
+        "cognitive_reflection": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 1,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 643,
+              "observed_sum": 643,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 93,
+              "observed_sum": 93,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cache_write_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reasoning_tokens": {
+              "total": 0,
+              "observed_sum": 0,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          },
+          "total_tokens": {
+            "total": 736,
+            "observed_sum": 736,
+            "observed_calls": 1,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 736,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 1,
+              "total": 0.011080000000000001,
+              "observed_sum": 0.011080000000000001,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 1,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0.0,
+              "observed_calls": 0,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": 0.011080000000000001,
+              "observed_sum": 0.011080000000000001,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            {
+              "total": 0.011080000000000001,
+              "observed_sum": 0.011080000000000001,
+              "observed_calls": 1,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        },
+        "turn_verification": {
+          "scope": "recorded-runtime-llm-attempts-only",
+          "whole_runtime_complete": false,
+          "retained_attempt_coverage_complete": true,
+          "recorded_calls": 1,
+          "failed_calls": 0,
+          "contradictory_usage_calls": 0,
+          "usage": {
+            "input_tokens": {
+              "total": 1150,
+              "observed_sum": 1150,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "total": 48,
+              "observed_sum": 48,
+              "observed_calls": 1,
+              "missing_calls": 0
+            },
+            "cached_input_tokens": {
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "cache_write_tokens": {
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "reasoning_tokens": {
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            }
+          },
+          "total_tokens": {
+            "total": 1198,
+            "observed_sum": 1198,
+            "observed_calls": 1,
+            "missing_calls": 0
+          },
+          "known_input_output_sum": 1198,
+          "costs": {
+            "typesafe_price_estimate_usd": {
+              "applicable_calls": 1,
+              "total": 4.83e-05,
+              "observed_sum": 4.83e-05,
+              "observed_calls": 1,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "USD",
+              "authority": "published-input-token-tariff-calculation"
+            },
+            "subscription_api_equivalent_estimate_usd": {
+              "applicable_calls": 0,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0
+            },
+            "reported_cost_usd": {
+              "applicable_calls": 1,
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 1
+            },
+            "typesafe_price_estimate_us_cents": {
+              "applicable_calls": 1,
+              "total": 0.00483,
+              "observed_sum": 0.00483,
+              "observed_calls": 1,
+              "missing_calls": 0,
+              "currency": "USD",
+              "unit": "US cents",
+              "authority": "published-input-token-tariff-calculation"
+            }
+          },
+          "subscription_api_equivalent_bounds_usd": [
+            {
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0
+            },
+            {
+              "total": null,
+              "observed_sum": 0,
+              "observed_calls": 0,
+              "missing_calls": 0
+            }
+          ],
+          "unpriced_model_calls": 0
+        }
+      },
+      "per_trial_burden": [
+        {
+          "trial": "verdict-r2-admission-r0-inbox-admission-b",
+          "analysis_call_count": 0,
+          "rejudgment_call_count": 0,
+          "rejudged_item_count": 0,
+          "helper_correction_count": 0,
+          "helper_rejudgment_recovery_count": 0,
+          "rejected_lookup_count": 0,
+          "lookup_attempt_count": 1,
+          "lookup_item_count": 1,
+          "extra_lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "false_completion_count": 0,
+          "helper_tool_elapsed_seconds": [],
+          "helper_invocations": 0,
+          "helper_repeats_same_state": 0,
+          "root_requests": 2,
+          "native_verify_events": 1,
+          "judgment_attempts": 1,
+          "replan_requests": 0,
+          "root_requests_consuming_feedback": 0,
+          "tracker_cost_authority": "published-tariff-estimate-not-invoice",
+          "judge_false_acceptance": false,
+          "held_delivery": false,
+          "repaired_success": false
+        }
+      ],
+      "item_metrics": [
+        {
+          "trial": "verdict-r2-admission-r0-inbox-admission-b",
+          "items": [
+            {
+              "id": "admit_one",
+              "passed": true,
+              "answer_matches": true,
+              "lookup_evidence_consumed": true,
+              "helper_matches": null,
+              "initial_helper_matches": null,
+              "helper_rejudgment_recovered": false,
+              "helper_correction": false,
+              "lookup_count": 1,
+              "wrong_target_lookup_count": 0,
+              "extra_lookup_count": 0,
+              "false_completion": false
+            },
+            {
+              "id": "admit_two",
+              "passed": true,
+              "answer_matches": true,
+              "lookup_evidence_consumed": true,
+              "helper_matches": null,
+              "initial_helper_matches": null,
+              "helper_rejudgment_recovered": false,
+              "helper_correction": false,
+              "lookup_count": 0,
+              "wrong_target_lookup_count": 0,
+              "extra_lookup_count": 0,
+              "false_completion": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "actual_charge_usd": null,
+  "paired_deltas": [
+    {
+      "case_id": "inbox-admission",
+      "repetition": 0,
+      "comparison": "jev_minus_llm",
+      "task_success_delta": 0,
+      "runtime_seconds_delta": -12.208164629999999
+    }
+  ],
+  "trials": [
+    {
+      "trial_name": "verdict-r2-admission-r0-inbox-admission-a",
+      "case_id": "inbox-admission",
+      "arm": "a",
+      "valid": true,
+      "passed": true
+    },
+    {
+      "trial_name": "verdict-r2-admission-r0-inbox-admission-b",
+      "case_id": "inbox-admission",
+      "arm": "b",
+      "valid": true,
+      "passed": true
+    }
+  ]
+}

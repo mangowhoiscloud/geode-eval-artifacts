@@ -1,0 +1,59 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-verdict-admission-20260923",
+  "analyzed_at": "2026-09-24T08:02:10Z",
+  "run_spec_sha256": "2811a47a37dd91c3dc0a861299ce1b4afe4d7dcb73cd7aea1a0c020c7e3aa3ab",
+  "attempts_sha256": "d0f328921ffb0af580709e8d6fe3bc0023cbaa6e81c925b4c598557f21d3c3cd",
+  "selected_attempt_ids": [
+    "geode-jev-verdict-admission-20260923-a0000",
+    "geode-jev-verdict-admission-20260923-aggregate"
+  ],
+  "answer": "Stopped incomplete; primary not measurable, failed evidence preserved.",
+  "metrics": [
+    {
+      "name": "matched_verdict_admission_success",
+      "value": "not-measurable",
+      "numerator": null,
+      "denominator": null,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": null
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "invalidated",
+    "rationale": "Author-visible synthetic inboxes; no general adoption authority"
+  },
+  "limitations": [
+    "Three independent authored inboxes, not 12 independent semantic tasks.",
+    "Matched typed verdict with fixed repair feedback, not native free-form LLM feedback or an encoder architecture ablation.",
+    "Natural trajectories may diverge after judgment; same-snapshot probes are separate.",
+    "Actual charges and exhaustive physical dispatch coverage unknown.",
+    "ATIF-derived replay is not raw PTY or timing authority.",
+    "Retrospective public projection. Original contracts, receipts and digests remain separate; no new model calls."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-admission-r0-inbox-admission-a/evidence-manifest.json",
+      "sha256": "e10f34c67293b2ad51dffec8c13ef8b5f51e1f298377aad85619dba8771f4024"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-admission-r0-inbox-admission-a/result.json",
+      "sha256": "ede472b54597061ac071249cdf58ad301263c7531e306c8910eec2e71dd4875b"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-admission-r0-inbox-admission-a/trial-receipt.json",
+      "sha256": "a1c52f6076569a00dc84bce0be13b32796304f0b73e0a3988123fc811751aeba"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "03c30ef6edf51be0532d8a88a2967df150f78e713124b43fd943d386a6465fb4"
+    }
+  ]
+}

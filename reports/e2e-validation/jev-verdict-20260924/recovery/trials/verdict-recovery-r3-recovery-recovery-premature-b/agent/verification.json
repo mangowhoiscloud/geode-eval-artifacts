@@ -1,0 +1,88 @@
+{
+  "inputs": [
+    {
+      "llm_call_id": "llm-t-84cc97d0254b:step-2-a1a1d069",
+      "candidate_call_id": "llm-t-84cc97d0254b:step-1-8e3bd5dc",
+      "state_sha256": "e89e3fcc6484a9b35bd3712b09adcadb00fdbf5e6a557c4b92d967b46bd09ad0",
+      "receipt_prefix_length": 3
+    },
+    {
+      "llm_call_id": "llm-t-7fa83e11916a:step-4-1bfbb728",
+      "candidate_call_id": "llm-t-7fa83e11916a:step-3-33764437",
+      "state_sha256": "0192d467fb901e7c5d713d049315eb4c377dedfeeaeee953ee8e3688de60ff7a",
+      "receipt_prefix_length": 10
+    }
+  ],
+  "judgments": [
+    {
+      "engine": "jev",
+      "model": "jev-1.13.0",
+      "provider": "typesafe",
+      "source": "payg",
+      "input_sha256": "e89e3fcc6484a9b35bd3712b09adcadb00fdbf5e6a557c4b92d967b46bd09ad0",
+      "source_sha256": "e89e3fcc6484a9b35bd3712b09adcadb00fdbf5e6a557c4b92d967b46bd09ad0",
+      "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+      "llm_call_id": "llm-t-84cc97d0254b:step-2-a1a1d069",
+      "step_id": "t-84cc97d0254b:step-2",
+      "response_model": "jev-1.13.0",
+      "response_provider": "typesafe",
+      "raw_answer_sha256": "fcc00b8b8d52887279cb1a18db750fc9b653bcf8dfaa187c297c957b3dc496be",
+      "accepted": true,
+      "verdict": "contradicted",
+      "native_answer": {
+        "type": "choice",
+        "choice": "contradicted",
+        "probabilities": {
+          "supported": 0.0,
+          "contradicted": 0.72,
+          "insufficient_evidence": 0.28
+        },
+        "confidence": 0.58
+      },
+      "feedback_sha256": "b0ec09fe1bd3bb12327551447ae87c625620b07b53355f82fa9db6ca5dac0721",
+      "error_type": null
+    },
+    {
+      "engine": "jev",
+      "model": "jev-1.13.0",
+      "provider": "typesafe",
+      "source": "payg",
+      "input_sha256": "0192d467fb901e7c5d713d049315eb4c377dedfeeaeee953ee8e3688de60ff7a",
+      "source_sha256": "0192d467fb901e7c5d713d049315eb4c377dedfeeaeee953ee8e3688de60ff7a",
+      "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+      "llm_call_id": "llm-t-7fa83e11916a:step-4-1bfbb728",
+      "step_id": "t-7fa83e11916a:step-4",
+      "response_model": "jev-1.13.0",
+      "response_provider": "typesafe",
+      "raw_answer_sha256": "15b5821bcf9001e2b14e36f7ae91023485b9e667dc75b0dd851be19116d5e55c",
+      "accepted": true,
+      "verdict": "supported",
+      "native_answer": {
+        "type": "choice",
+        "choice": "supported",
+        "probabilities": {
+          "contradicted": 0.11,
+          "insufficient_evidence": 0.06,
+          "supported": 0.83
+        },
+        "confidence": 0.74
+      },
+      "feedback_sha256": "16b8784c96bb7250cef2f7960c337759a4606bd41ddb1028781b1f8674285bde",
+      "error_type": null
+    }
+  ],
+  "root_requests": [
+    {
+      "llm_call_id": "llm-t-84cc97d0254b:step-1-8e3bd5dc",
+      "completed_judgments": 0
+    },
+    {
+      "llm_call_id": "llm-t-7fa83e11916a:step-2-ccb714f5",
+      "completed_judgments": 1
+    },
+    {
+      "llm_call_id": "llm-t-7fa83e11916a:step-3-33764437",
+      "completed_judgments": 1
+    }
+  ]
+}

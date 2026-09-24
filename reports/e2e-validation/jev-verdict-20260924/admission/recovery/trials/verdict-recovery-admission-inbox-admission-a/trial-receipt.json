@@ -1,0 +1,499 @@
+{
+  "index": 0,
+  "case_id": "inbox-admission",
+  "arm": "a",
+  "verification_engine": "llm",
+  "repetition": 0,
+  "position": 0,
+  "trial_name": "verdict-recovery-admission-inbox-admission-a",
+  "task_name": "inbox-admission",
+  "task_checksum": "617f46521837ce8afbfb14523ab9e9711b7e63b0ba3f3cfdf7176ba00181a30a",
+  "case_sha256": "91c3350f569904a59dc45be63c6c21525b58f361e420d265098bbaa216aba73c",
+  "valid": true,
+  "passed": true,
+  "error_type": null,
+  "host_elapsed_seconds": 263.7856752500011,
+  "actual_charge_usd": null,
+  "intervention_delivered": false,
+  "runtime": {
+    "profile": "read-only-decision-handoff",
+    "session_id": "s-6bc3e16c6a69",
+    "source_snapshot_complete": true,
+    "arm": "a0",
+    "case_id": "inbox-admission",
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "source": "subscription",
+    "runtime_scope": "isolated-AgenticLoop-not-default-GeodeRuntime-services",
+    "handoff_call_coverage_complete": true,
+    "workload_profile": "inbox",
+    "verification_engine": "llm",
+    "verification_metrics": {
+      "judgment_attempts": 1,
+      "replan_requests": 0,
+      "root_requests_consuming_feedback": 0,
+      "tracker_cost_authority": "published-tariff-estimate-not-invoice"
+    },
+    "valid": true,
+    "error_type": null,
+    "elapsed_seconds": 41.81545572800002,
+    "termination_reason": "natural",
+    "oracle": {
+      "passed": true,
+      "checks": {
+        "answer_shape": true,
+        "all_items_passed": true,
+        "root_request_observed": true,
+        "analysis_first": true,
+        "decision_succeeded": true,
+        "no_other_tools": true,
+        "results_consumed_by_root": true,
+        "lookup_after_interpretation": true
+      },
+      "items": [
+        {
+          "id": "admit_one",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 1,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        },
+        {
+          "id": "admit_two",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        }
+      ],
+      "component_matches": null,
+      "analysis_call_count": 0,
+      "rejudgment_call_count": 0,
+      "rejudged_item_count": 0,
+      "helper_correction_count": 0,
+      "helper_rejudgment_recovery_count": 0,
+      "rejected_lookup_count": 0,
+      "lookup_attempt_count": 1,
+      "lookup_item_count": 1,
+      "extra_lookup_count": 0,
+      "wrong_target_lookup_count": 0,
+      "false_completion_count": 0
+    },
+    "native_verify": [
+      {
+        "_dispatch_duration_ms": 0.18167495727539062,
+        "activity_schema_version": 10,
+        "duration_ms": 0.0,
+        "session_id": "s-6bc3e16c6a69",
+        "success": true,
+        "action": "turn.verify.passed"
+      }
+    ],
+    "usage": {
+      "scope": "recorded-runtime-llm-attempts-only",
+      "whole_runtime_complete": false,
+      "observation_status": "no_known_faults",
+      "known_sink_failure": false,
+      "mapping_anomaly_events": 0,
+      "limitation": "whole-runtime producer coverage and background-writer quiescence require separate verification; paired retained events alone cannot establish either; turn-final judge calls share loop accounting; legacy call purpose remains unknown",
+      "call_events": 4,
+      "terminal_event_count": 4,
+      "recorded_attempts_scope": "canonical-llm-ended-events-only; duplicates retained; no synthetic missing starts or ends",
+      "recorded_attempts": [
+        {
+          "session_id": "s-6bc3e16c6a69",
+          "llm_call_id": "llm-t-1a59c96257dd:step-1-11cf758c",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-1a59c96257dd:step-1-11cf758c:attempt-1",
+          "source_event_id": 8,
+          "occurred_at": 1790184920.8576076,
+          "source_payload_hash": "dc09fd2cd63d9094013f524d7183d8aacc486f86c79fcbe50d516cd5b360a7bc",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 2229,
+            "output_tokens": 78,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 44
+          }
+        },
+        {
+          "session_id": "s-6bc3e16c6a69",
+          "llm_call_id": "llm-43ffd3408fde44cebec4a1bdf9693329",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-43ffd3408fde44cebec4a1bdf9693329:attempt-1",
+          "source_event_id": 18,
+          "occurred_at": 1790184931.4058435,
+          "source_payload_hash": "c061f51a616accc170eeeb3de0e2e0decc7c9141c2ca73b3d63591442e83bd32",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "cognitive_reflection",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 640,
+            "output_tokens": 97,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-6bc3e16c6a69",
+          "llm_call_id": "llm-t-1a59c96257dd:step-2-3b74ad7e",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-1a59c96257dd:step-2-3b74ad7e:attempt-1",
+          "source_event_id": 26,
+          "occurred_at": 1790184935.9669213,
+          "source_payload_hash": "8af16111db6a23f33aa6fb5ae34b1c09b44bb40482f84e35a6f89b379b03b455",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 2351,
+            "output_tokens": 58,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-6bc3e16c6a69",
+          "llm_call_id": "llm-t-1a59c96257dd:step-3-8f4b6447",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-1a59c96257dd:step-3-8f4b6447:attempt-1",
+          "source_event_id": 33,
+          "occurred_at": 1790184942.8184948,
+          "source_payload_hash": "60c713cebfb986bd149decb739bb4f12ca05d7a8fd85db542bccca9df42457fd",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "matched-verifier-llm",
+          "purpose": "turn_verification",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 1258,
+            "output_tokens": 104,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 87
+          }
+        }
+      ],
+      "recorded_attempts_timestamp_unit": "unix-seconds-utc",
+      "started_events": 4,
+      "usage_events": 4,
+      "attempt_pairing_complete": true,
+      "input_tokens": 6478,
+      "input_tokens_observed_sum": 6478,
+      "input_tokens_missing_events": 0,
+      "output_tokens": 337,
+      "output_tokens_observed_sum": 337,
+      "output_tokens_missing_events": 0,
+      "cached_input_tokens": 0,
+      "cached_input_tokens_observed_sum": 0,
+      "cached_input_tokens_missing_events": 0,
+      "cache_write_tokens": 0,
+      "cache_write_tokens_observed_sum": 0,
+      "cache_write_tokens_missing_events": 0,
+      "source_snapshot_complete": true
+    },
+    "call_accounting": [
+      {
+        "purpose": "agentic_loop",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-1a59c96257dd:step-1-11cf758c:attempt-1",
+        "usage": {
+          "input_tokens": 2229,
+          "output_tokens": 78,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 44
+        },
+        "total_tokens": 2307,
+        "known_input_output_sum": 2307,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.02619,
+        "subscription_api_equivalent_bounds_usd": [
+          0.02619,
+          0.02619
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "cognitive_reflection",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-43ffd3408fde44cebec4a1bdf9693329:attempt-1",
+        "usage": {
+          "input_tokens": 640,
+          "output_tokens": 97,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 737,
+        "known_input_output_sum": 737,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.01125,
+        "subscription_api_equivalent_bounds_usd": [
+          0.01125,
+          0.01125
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "agentic_loop",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-1a59c96257dd:step-2-3b74ad7e:attempt-1",
+        "usage": {
+          "input_tokens": 2351,
+          "output_tokens": 58,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2409,
+        "known_input_output_sum": 2409,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.026410000000000003,
+        "subscription_api_equivalent_bounds_usd": [
+          0.026410000000000003,
+          0.026410000000000003
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "turn_verification",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-1a59c96257dd:step-3-8f4b6447:attempt-1",
+        "usage": {
+          "input_tokens": 1258,
+          "output_tokens": 104,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 87
+        },
+        "total_tokens": 1362,
+        "known_input_output_sum": 1362,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.01778,
+        "subscription_api_equivalent_bounds_usd": [
+          0.01778,
+          0.01778
+        ],
+        "reported_cost_usd": null
+      }
+    ],
+    "passed": true,
+    "intervention": null
+  },
+  "native_reward": {
+    "reward": 1.0
+  },
+  "independent_verifier": {
+    "passed": true,
+    "valid": true,
+    "error_type": null,
+    "oracle": {
+      "passed": true,
+      "checks": {
+        "answer_shape": true,
+        "all_items_passed": true,
+        "root_request_observed": true,
+        "analysis_first": true,
+        "decision_succeeded": true,
+        "no_other_tools": true,
+        "results_consumed_by_root": true,
+        "lookup_after_interpretation": true
+      },
+      "items": [
+        {
+          "id": "admit_one",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 1,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        },
+        {
+          "id": "admit_two",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        }
+      ],
+      "component_matches": null,
+      "analysis_call_count": 0,
+      "rejudgment_call_count": 0,
+      "rejudged_item_count": 0,
+      "helper_correction_count": 0,
+      "helper_rejudgment_recovery_count": 0,
+      "rejected_lookup_count": 0,
+      "lookup_attempt_count": 1,
+      "lookup_item_count": 1,
+      "extra_lookup_count": 0,
+      "wrong_target_lookup_count": 0,
+      "false_completion_count": 0
+    },
+    "native_verify": [
+      {
+        "_dispatch_duration_ms": 0.18167495727539062,
+        "activity_schema_version": 10,
+        "duration_ms": 0.0,
+        "session_id": "s-6bc3e16c6a69",
+        "success": true,
+        "action": "turn.verify.passed"
+      }
+    ]
+  },
+  "replay": {
+    "complete": true,
+    "score_authority": false,
+    "kind": "ATIF-derived-not-raw-PTY",
+    "timing": {
+      "step_count": 3,
+      "event_count": 5,
+      "synthetic_timestamp_count": 0,
+      "clamped_timestamp_count": 0
+    },
+    "latency_authority": "runtime measured elapsed only; never cast playback duration",
+    "sha256": {
+      "geode-trajectory.private.json": "96ec4d3dbdefaaf5d3c37ceafaa7a7616a78c4ea11c41dd1a790ac2e273a4c2d",
+      "trajectory.json": "3f9a48da94fa637d2e2f2c2c07542915012adb25c37af7ebb0814ca43c390c2b",
+      "recording.cast": "e45261f578bd75c0e0cfc7cb71c361302150c809168d9f15be83ab9a1909fb2c",
+      "recording.receipt.json": "c53e0359275573c619024e047a9bb06e9a6bf0bfb438c9254fa1a68abe44564a"
+    }
+  },
+  "semantic_metrics": {
+    "rejected_lookup_count": 0,
+    "lookup_attempt_count": 1,
+    "lookup_item_count": 1,
+    "extra_lookup_count": 0,
+    "wrong_target_lookup_count": 0,
+    "false_completion_count": 0,
+    "judgment_attempts": 1,
+    "replan_requests": 0,
+    "root_requests_consuming_feedback": 0,
+    "tracker_cost_authority": "published-tariff-estimate-not-invoice",
+    "root_requests": 2,
+    "held_delivery": false,
+    "judge_false_acceptance": false,
+    "call_durations_seconds": [
+      {
+        "llm_call_id": "llm-t-1a59c96257dd:step-1-11cf758c",
+        "purpose": "agentic_loop",
+        "seconds": 17.87548509100003
+      },
+      {
+        "llm_call_id": "llm-43ffd3408fde44cebec4a1bdf9693329",
+        "purpose": "cognitive_reflection",
+        "seconds": 5.042503959999976
+      },
+      {
+        "llm_call_id": "llm-t-1a59c96257dd:step-2-3b74ad7e",
+        "purpose": "agentic_loop",
+        "seconds": 3.963500085000021
+      },
+      {
+        "llm_call_id": "llm-t-1a59c96257dd:step-3-8f4b6447",
+        "purpose": "turn_verification",
+        "seconds": 6.536364419999983
+      }
+    ]
+  },
+  "item_metrics": [
+    {
+      "id": "admit_one",
+      "passed": true,
+      "answer_matches": true,
+      "lookup_evidence_consumed": true,
+      "helper_matches": null,
+      "initial_helper_matches": null,
+      "helper_rejudgment_recovered": false,
+      "helper_correction": false,
+      "lookup_count": 1,
+      "wrong_target_lookup_count": 0,
+      "extra_lookup_count": 0,
+      "false_completion": false
+    },
+    {
+      "id": "admit_two",
+      "passed": true,
+      "answer_matches": true,
+      "lookup_evidence_consumed": true,
+      "helper_matches": null,
+      "initial_helper_matches": null,
+      "helper_rejudgment_recovered": false,
+      "helper_correction": false,
+      "lookup_count": 0,
+      "wrong_target_lookup_count": 0,
+      "extra_lookup_count": 0,
+      "false_completion": false
+    }
+  ]
+}

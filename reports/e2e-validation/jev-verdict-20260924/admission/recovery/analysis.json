@@ -1,0 +1,79 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-verdict-recovery-admission-20260924",
+  "analyzed_at": "2026-09-24T08:02:10Z",
+  "run_spec_sha256": "ffa3daba6153c5650e5e4ef5b36e72656b311cb8294b0197d5ca3a822dfdf147",
+  "attempts_sha256": "2226b8bb9e0e85d306db0821134f30e50b02a7d766435f63f89f75c4ddec8102",
+  "selected_attempt_ids": [
+    "geode-jev-verdict-recovery-admission-20260924-a0000",
+    "geode-jev-verdict-recovery-admission-20260924-a0001",
+    "geode-jev-verdict-recovery-admission-20260924-aggregate"
+  ],
+  "answer": "Complete controlled diagnostic; interpret closed repair separately from final success and observed consumption.",
+  "metrics": [
+    {
+      "name": "recovery_admission_success",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary/value",
+        "numerator": "/primary/numerator",
+        "denominator": "/primary/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "mixed",
+    "rationale": "Author-visible controlled candidate replacement; no adoption authority"
+  },
+  "limitations": [
+    "One authored task family with two dependent controlled conditions; not natural failure frequency.",
+    "Matched typed verdict with fixed repair feedback; not native free-form LLM feedback or an encoder architecture ablation.",
+    "Controlled E2E trajectories can diverge; same-snapshot probes and historical natural runs are separate.",
+    "Actual charges and exhaustive physical dispatch coverage unknown.",
+    "ATIF-derived replay is not raw PTY or timing authority.",
+    "Retrospective public projection. Original contracts, receipts and digests remain separate; no new model calls."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-a/evidence-manifest.json",
+      "sha256": "7e05c1734958e87df30cc3540a07a4ff656e25c60220381adb1990084be33106"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-a/result.json",
+      "sha256": "b1303114b9d418b13fa51ec8ed1dbe954f2f39e2437e0dac19cdae822416033e"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-a/trial-receipt.json",
+      "sha256": "a40eeb26ec9c00cbcd902fed968bfd3a002cccf1f826fda228fb30a33f80c215"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-b/evidence-manifest.json",
+      "sha256": "867563ede891e0cd18d436b8aeb9f6424a68a9ae5ec9bf918aeb40e18b11d12b"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-b/result.json",
+      "sha256": "522d54b98d7fb636caddf45acd6080891a42255ab95508b17dc4cb8ad4b296b8"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/verdict-recovery-admission-inbox-admission-b/trial-receipt.json",
+      "sha256": "96f421dbcfa45a1f32450620b84581221372a71e37a9a0b8164c4195d960b85e"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "e7f9ce1212cca340fbb4ce9e35a929c7c1db52498092700f1cdfd28f14d8da34"
+    }
+  ]
+}

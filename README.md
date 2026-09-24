@@ -66,6 +66,7 @@ information asymmetry.
 | Question | Start here |
 |---|---|
 | What is the trajectory schema and what may be published? | [`TRAJECTORIES.md`](TRAJECTORIES.md) |
+| What changed when GEODE's final verdict used Astra or Jev? | [Natural rollouts, same-snapshot judgments and controlled repair](reports/e2e-validation/jev-verdict-20260924/README.md) — separate diagnostics, accounting and invalid-attempt lineage |
 | How do example, rollout, trajectory, and reward join? | [`learning-views/v2/DATA-MODEL.md`](learning-views/v2/DATA-MODEL.md) |
 | Does a task-scoped skill help under a frozen paired protocol? | [Repeated analysis](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) · [native results](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/native-results.json) |
 | Can GEODE use GPT-6 Astra through the current subscription route to finish a real container task? | [Astra E2E smoke](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) · [canonical result](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json) |

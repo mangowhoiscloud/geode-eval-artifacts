@@ -1,0 +1,95 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "jev-verdict-snapshots-20260923",
+  "created_at": "2026-09-24T08:02:10Z",
+  "preregistration": {
+    "mode": "retrospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-24T08:02:10Z",
+    "live_test_approved": false,
+    "operator": "public projection; no new execution"
+  },
+  "study": {
+    "research_question": "Can each engine distinguish supported, contradicted and insufficient evidence on identical authored snapshots?",
+    "research_gap": "Natural task outcomes do not establish matched-state judgment accuracy or negative-state discrimination.",
+    "hypothesis": "Both engines exactly classify all three authored states and project the intended repair branch.",
+    "primary_metric": {
+      "name": "jev_minus_llm_exact_verdict_accuracy",
+      "unit": "ratio",
+      "direction": "target",
+      "aggregation": "(Jev exact-label matches - LLM exact-label matches) / 3 paired authored states",
+      "denominator": 3
+    },
+    "decision_rule": "Descriptive component diagnostic only. No promotion, adoption, publication or release authority.",
+    "invalidation_rule": "Any missing, transport, contract, observation, source or digest-invalid call stops dispatch and makes the primary not measurable. Wrong valid labels remain failures.",
+    "analysis_plan": "Show all three paired labels, native answers, projected branches, per-call timing, token presence and separate price estimates. These are three counterfactual variants of one task: no IID confidence interval, calibration or pooled E2E denominator. Preserve invalid and failed consumption. Retrospective disclosure only; original prospective contract is source-contract.json."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "1c73cb97657dc811264bea338aa5a2ae324f0078",
+      "branch": "codex/jev-reflection-comparison-20260923",
+      "dirty": false
+    },
+    "harness": {
+      "name": "matched-verdict-snapshot-diagnostic",
+      "source": "Private runner.py over GEODE MatchedVerifierAdapter",
+      "revision": "c9b36c449577910c7ffaf7d8cde53812d43c222dd20fa0704347f0d2906b302f"
+    },
+    "model": {
+      "provider": "openai + typesafe",
+      "label": "gpt-6-astra | jev-1.13.0",
+      "route": "other",
+      "reasoning": "Astra xhigh; Jev not applicable"
+    },
+    "environment": {
+      "platform": "macOS-15.3.1-arm64-arm-64bit",
+      "architecture": "arm64",
+      "reset_strategy": "Fresh process and isolated GEODE home/state; no root, tools or mutable task world",
+      "initial_state_ref": "sha256:3a82a449f038c0509e0caa02552aec1852c7614a7882e4140ccb4c6d6f0fca55"
+    },
+    "execution": {
+      "command_redacted": "python -B runner.py --run",
+      "ordered_workload_ids": [
+        "snapshot-01-llm",
+        "snapshot-01-jev",
+        "snapshot-02-jev",
+        "snapshot-02-llm",
+        "snapshot-03-llm",
+        "snapshot-03-jev"
+      ],
+      "workload_ids_sha256": "c2154d7ddb6a0c23f4579cac7014eb4ff9a2dc6d2c1c2f1cce9849c57c52dc92",
+      "repetitions": 1,
+      "seed_schedule": [
+        "provider-unseeded; deterministic state and order"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 180,
+      "budget": {
+        "kind": "combined",
+        "limit": null,
+        "unit": "uncapped; fixed six-call scope"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "Astra subscription typed verdict versus direct TypeSafe Jev typed verdict",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "results.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "public",
+    "redaction_boundary": "Reviewed file/field projection; private prompts, reasoning and machine paths withheld."
+  }
+}
