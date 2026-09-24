@@ -1,0 +1,25 @@
+{
+  "source_revision": "588a1c8817d6cff83f8acc0c9e5187d91ccafe60",
+  "source_sha256": "400f3816bb249d700df40d5139c59e150f32db64f7ae836fa8f6857a460837cc",
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "profile": "decision-handoff",
+  "workload_profile": "inbox",
+  "arm": "a0",
+  "case_sha256": "c7b1a0642df653b330390f16aac9d0ff832593f71773818177022910382861e0",
+  "case_id": "recovery-contradiction",
+  "intervention": null,
+  "verification_intervention": {
+    "when": "after_observation"
+  },
+  "external_search_loop": false,
+  "model": "gpt-6-astra",
+  "source": "subscription",
+  "effort": "xhigh",
+  "verify_mode": "llm_judge",
+  "verification_engine": "llm",
+  "required_tools": [
+    "lookup_order_status"
+  ],
+  "agent_timeout_sec": 180,
+  "profile_scope": "fresh task container; no shell or filesystem tool"
+}

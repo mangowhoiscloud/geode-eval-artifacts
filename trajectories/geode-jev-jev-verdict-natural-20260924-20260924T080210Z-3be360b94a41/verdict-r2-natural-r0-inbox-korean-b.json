@@ -1,0 +1,509 @@
+{
+  "schema_id": "geode.trajectory@1",
+  "schema_version": 1,
+  "trajectory_id": "harbor-s-b1127aae8ee6",
+  "captured_at": "2026-09-23T08:59:43.294385Z",
+  "trajectory_class": [
+    "dialogue",
+    "tool",
+    "lifecycle"
+  ],
+  "source": {
+    "harness": "harbor",
+    "session": "s-b1127aae8ee6"
+  },
+  "events": [
+    {
+      "event_id": "7886b3f5-fd14-42ec-8a95-183ec6b928ee",
+      "ordinal": 1,
+      "occurred_at": "2026-09-23T08:58:58.352602Z",
+      "kind": "session.started",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "model": "gpt-6-astra",
+        "provider": "openai",
+        "status": "active",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "event_id": "dddc2b27-64bb-40c7-a0b8-9e0ebb16d05b",
+      "ordinal": 2,
+      "occurred_at": "2026-09-23T08:58:58.354824Z",
+      "kind": "message.user",
+      "actor": "user",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "model": "",
+        "provider": "",
+        "status": "",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "11193a0e272bb6fc83a473ad4c3070eb27b080f172f5399e0fd5a61fe9fad793",
+        "_omitted_payload_sha256": "11193a0e272bb6fc83a473ad4c3070eb27b080f172f5399e0fd5a61fe9fad793",
+        "_omitted_payload_bytes": 2493,
+        "_content_omitted": [
+          "content"
+        ]
+      }
+    },
+    {
+      "event_id": "93f61213-125b-42e7-a17e-87f5f635e261",
+      "ordinal": 3,
+      "occurred_at": "2026-09-23T08:58:58.410809Z",
+      "kind": "preflight.recorded",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "model": "",
+        "provider": "",
+        "status": "",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "b0ee01bf917218ee1796f46f38318b6b59289395f7a595f5d5430618f34fa9af",
+        "_omitted_payload_sha256": "b0ee01bf917218ee1796f46f38318b6b59289395f7a595f5d5430618f34fa9af",
+        "_omitted_payload_bytes": 584,
+        "_content_omitted": [
+          "action",
+          "capability_graph",
+          "capability_graph_sha256",
+          "entity_id",
+          "entity_type",
+          "level",
+          "preflight"
+        ]
+      }
+    },
+    {
+      "event_id": "7e6a27d9-0078-4313-b70e-e5da3ee18fca",
+      "ordinal": 4,
+      "occurred_at": "2026-09-23T08:59:09.116291Z",
+      "kind": "tool.called",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "call_mQFndyvLtlEOQBz8PqzjxjMy",
+      "payload": {
+        "tool": "lookup_order_status",
+        "model": "",
+        "provider": "",
+        "status": "",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "b8ae08be8151af19d0b066f850304fb4afc6e2fae13bfa1579e35e457b9510de",
+        "_omitted_payload_sha256": "d7a5833795b4d761313981a5e8e80f843323702d46150576abf42477376771ee",
+        "_omitted_payload_bytes": 239,
+        "_content_omitted": [
+          "arguments"
+        ]
+      }
+    },
+    {
+      "event_id": "cc79e97e-78ac-430b-9d28-f37acd4a2add",
+      "ordinal": 5,
+      "occurred_at": "2026-09-23T08:59:09.136205Z",
+      "kind": "tool.completed",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "call_mQFndyvLtlEOQBz8PqzjxjMy",
+      "payload": {
+        "tool": "lookup_order_status",
+        "model": "",
+        "provider": "",
+        "status": "ok",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "4d1bd0f220ab6b863d4cccc21ca64d9a7d0485fb9c3fd590877be32e1e62cb14",
+        "_omitted_payload_sha256": "9f6108ea7237f3563153e6402165c2ffaffa31911e151711550dff8c1c3e6670",
+        "_omitted_payload_bytes": 386,
+        "_content_omitted": [
+          "result",
+          "summary"
+        ]
+      }
+    },
+    {
+      "event_id": "ffe8bd72-0a6d-4127-a642-66a8a660499b",
+      "ordinal": 6,
+      "occurred_at": "2026-09-23T08:59:43.205895Z",
+      "kind": "verification.decided",
+      "actor": "policy",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "model": "",
+        "provider": "",
+        "status": "accept",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "76062bb6fc0c9fcfbb3add88b9007334a1e84100c0159c86fdb3d926ffe8694a",
+        "_omitted_payload_sha256": "76062bb6fc0c9fcfbb3add88b9007334a1e84100c0159c86fdb3d926ffe8694a",
+        "_omitted_payload_bytes": 401,
+        "_content_omitted": [
+          "built_in_passed",
+          "candidate_bytes",
+          "candidate_sha256",
+          "decisions",
+          "policy_action",
+          "root_turn_id",
+          "verify_attempt"
+        ]
+      }
+    },
+    {
+      "event_id": "5da620f4-29ca-440e-bf29-597ae573ce7c",
+      "ordinal": 7,
+      "occurred_at": "2026-09-23T08:59:43.211848Z",
+      "kind": "message.assistant",
+      "actor": "assistant",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "model": "",
+        "provider": "",
+        "status": "",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "b74a9af1f483053a80ff70620def5e97cac7c229a61dce128b38028ad0fc4de4",
+        "_omitted_payload_sha256": "b74a9af1f483053a80ff70620def5e97cac7c229a61dce128b38028ad0fc4de4",
+        "_omitted_payload_bytes": 1758,
+        "_content_omitted": [
+          "content"
+        ]
+      }
+    },
+    {
+      "event_id": "e1cfd6b9-02ef-42e0-bdb8-b202a5271600",
+      "ordinal": 8,
+      "occurred_at": "2026-09-23T08:59:43.214790Z",
+      "kind": "usage.recorded",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "cost_usd": 0.150311,
+        "input_tokens": 12446,
+        "output_tokens": 1093,
+        "model": "gpt-6-astra",
+        "provider": "",
+        "status": "",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "863344268eea94b7defcd438f6ec1f678f33d18ae1c67dd461d7b7805a7b06c1"
+      }
+    },
+    {
+      "event_id": "da893d76-bf2c-4694-b49e-fb0a20cefd49",
+      "ordinal": 9,
+      "occurred_at": "2026-09-23T08:59:43.217037Z",
+      "kind": "turn.completed",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "failed": false,
+        "rounds": 2,
+        "successful": true,
+        "termination_reason": "natural",
+        "tool_call_count": 1,
+        "model": "",
+        "provider": "",
+        "status": "completed",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "1426ad9dca621864e5c9d712935c139dfdf53ffaef87b07ec6750641413ae53a",
+        "_omitted_payload_sha256": "20ef4266a54df9af15737987e460fc8495502465632a40ca8868afbd5a412e61",
+        "_omitted_payload_bytes": 530,
+        "_content_omitted": [
+          "error",
+          "verify"
+        ]
+      }
+    },
+    {
+      "event_id": "cd88c1da-94b2-4a1e-99d1-2b7e63b53bd2",
+      "ordinal": 10,
+      "occurred_at": "2026-09-23T08:59:43.250061Z",
+      "kind": "session.ended",
+      "actor": "agent",
+      "session_id": "s-b1127aae8ee6",
+      "turn_id": "t-9975586f9bfa",
+      "call_id": "",
+      "payload": {
+        "completion_tokens": null,
+        "duration_s": null,
+        "projection_failed": false,
+        "prompt_tokens": null,
+        "record_failures": 0,
+        "rounds": null,
+        "runtime_observation_status": "no_known_faults",
+        "total_cost_usd": null,
+        "model": "",
+        "provider": "",
+        "status": "completed",
+        "source": "runtime",
+        "session_generation": 1,
+        "parent_event_id": null,
+        "source_payload_hash": "b14cd9eae2f65b4878e43e06656f9e469c08ff52ab6950a2596804529ca3a050"
+      }
+    }
+  ],
+  "outcome": {
+    "source_revision": "1c73cb97657dc811264bea338aa5a2ae324f0078",
+    "verify_mode": "llm_judge",
+    "verification_engine": "jev",
+    "profile": "decision-handoff",
+    "arm": "a0",
+    "execution_started": true,
+    "error_type": null,
+    "finalization_errors": [],
+    "usage": {
+      "scope": "recorded-runtime-llm-attempts-only",
+      "whole_runtime_complete": false,
+      "observation_status": "no_known_faults",
+      "known_sink_failure": false,
+      "mapping_anomaly_events": 0,
+      "limitation": "whole-runtime producer coverage and background-writer quiescence require separate verification; paired retained events alone cannot establish either; turn-final judge calls share loop accounting; legacy call purpose remains unknown",
+      "call_events": 5,
+      "terminal_event_count": 5,
+      "recorded_attempts_scope": "canonical-llm-ended-events-only; duplicates retained; no synthetic missing starts or ends",
+      "recorded_attempts": [
+        {
+          "session_id": "s-b1127aae8ee6",
+          "llm_call_id": "llm-t-9975586f9bfa:step-1-2c7d69bb",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-9975586f9bfa:step-1-2c7d69bb:attempt-1",
+          "source_event_id": 8,
+          "occurred_at": 1790153949.0859919,
+          "source_payload_hash": "6445ed0d50ceef0ea2490c2e3e5dbfd6b95760da52153f3440bf648b8d25ddc3",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 3011,
+            "output_tokens": 205,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 110
+          }
+        },
+        {
+          "session_id": "s-b1127aae8ee6",
+          "llm_call_id": "llm-169ee0b0d0694f68a897619091e60a6f",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-169ee0b0d0694f68a897619091e60a6f:attempt-1",
+          "source_event_id": 18,
+          "occurred_at": 1790153956.210588,
+          "source_payload_hash": "422cf347a1acaad3beff87ae7af6f94789f2fb5ee098d39acdffad109d444fa8",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "cognitive_reflection",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 1669,
+            "output_tokens": 176,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-b1127aae8ee6",
+          "llm_call_id": "llm-t-9975586f9bfa:step-2-92977511",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-9975586f9bfa:step-2-92977511:attempt-1",
+          "source_event_id": 26,
+          "occurred_at": 1790153973.1678202,
+          "source_payload_hash": "7ca471881e0643407055feb372080630893e542bd2e9bb38e546d201944057ae",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 3374,
+            "output_tokens": 486,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 21
+          }
+        },
+        {
+          "session_id": "s-b1127aae8ee6",
+          "llm_call_id": "llm-67137bd11be7483a99cdae894c9bb9b1",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-67137bd11be7483a99cdae894c9bb9b1:attempt-1",
+          "source_event_id": 31,
+          "occurred_at": 1790153982.7098641,
+          "source_payload_hash": "df587f76f57a70b68a0505778b50dbb89917508e3f7b8e6cd88ac772b2c9f109",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "cognitive_reflection",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 1741,
+            "output_tokens": 178,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-b1127aae8ee6",
+          "llm_call_id": "llm-t-9975586f9bfa:step-3-7eea1fce",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-9975586f9bfa:step-3-7eea1fce:attempt-1",
+          "source_event_id": 38,
+          "occurred_at": 1790153983.1869986,
+          "source_payload_hash": "fff01ba4abdbacd9ba750209761c356b263ed8dfa97f7b2c886f92fbcc572b3f",
+          "model": "jev-1.13.0",
+          "response_model": "jev-1.13.0",
+          "provider": "typesafe",
+          "adapter": "matched-verifier-jev",
+          "purpose": "turn_verification",
+          "source": "payg",
+          "effort": "none",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 2651,
+            "output_tokens": 48,
+            "cached_input_tokens": null,
+            "cache_write_tokens": null
+          }
+        }
+      ],
+      "recorded_attempts_timestamp_unit": "unix-seconds-utc",
+      "started_events": 5,
+      "usage_events": 5,
+      "attempt_pairing_complete": true,
+      "input_tokens": 12446,
+      "input_tokens_observed_sum": 12446,
+      "input_tokens_missing_events": 0,
+      "output_tokens": 1093,
+      "output_tokens_observed_sum": 1093,
+      "output_tokens_missing_events": 0,
+      "cached_input_tokens": null,
+      "cached_input_tokens_observed_sum": 0,
+      "cached_input_tokens_missing_events": 1,
+      "cache_write_tokens": null,
+      "cache_write_tokens_observed_sum": 0,
+      "cache_write_tokens_missing_events": 1,
+      "source_snapshot_complete": true
+    },
+    "score_authority": "Harbor task verifier, not runtime receipt",
+    "geode_session_id": "s-b1127aae8ee6",
+    "termination_reason": "natural"
+  },
+  "integrity": {
+    "scope_complete": true,
+    "replay_complete": false,
+    "scope_incompleteness": [],
+    "record_count": 10,
+    "complete": false,
+    "replay_incompleteness": [
+      "7 event payload(s) are truncated, corrupt, or omitted"
+    ],
+    "incompleteness": [
+      "7 event payload(s) are truncated, corrupt, or omitted"
+    ],
+    "quality": {
+      "event_id_unique": true,
+      "ordinal_contiguous": true,
+      "correlation": {
+        "session_id_present": 10,
+        "turn_id_present": 10,
+        "turn_id_required": 6,
+        "turn_id_missing": 0,
+        "tool_call_id_present": 2,
+        "control_call_id_missing": 0,
+        "event_count": 10
+      },
+      "tool_pairing": {
+        "calls": 1,
+        "results": 1,
+        "paired": 1,
+        "orphan_calls": 0,
+        "orphan_results": 0,
+        "missing_call_ids": 0
+      },
+      "payload_issue_events": 7,
+      "replay_fidelity": "reduced"
+    }
+  },
+  "privacy": {
+    "review_state": "reviewed",
+    "payloads": "Existing content digests retained",
+    "review_method": "Field allowlist, secret/identity scan, source integrity reconciliation",
+    "license_status": "Authored synthetic diagnostic; no third-party task dataset"
+  },
+  "provenance": {
+    "adapter": "evals.platforms.harbor_handoff",
+    "public_transform": "normalize.py; metadata-only publication derivation",
+    "source_revision": "1c73cb97657dc811264bea338aa5a2ae324f0078"
+  },
+  "runtime_event_refs": [
+    {
+      "kind": "runtime_event",
+      "schema_id": "geode.hook-event@3",
+      "authority": "GEODE local runtime hook event store",
+      "reference": "hook-events-sha256:5c45c939af741759713502b0b96827892b214e15717819df6824feb9355b418c",
+      "session_id": "s-b1127aae8ee6",
+      "record_count": 41,
+      "sha256": "5c45c939af741759713502b0b96827892b214e15717819df6824feb9355b418c"
+    }
+  ],
+  "evidence_refs": [],
+  "artifact_digests": [
+    {
+      "path": "natural/verdict-r2-natural-r0-inbox-korean-b/agent-geode-trajectory.json",
+      "sha256": "d6e1daac30d409f46432cb88c6bc25c9b36eedd9c39700af6967a23c134ea91a"
+    },
+    {
+      "path": "natural/verdict-r2-natural-r0-inbox-korean-b/verdict-r2-natural-r0-inbox-korean-b-result.json",
+      "sha256": "4b65384fc2946a5700345f2c9e09c72d6b85a50f893ff3639c87aaf1e785fec5"
+    },
+    {
+      "path": "natural/verdict-r2-natural-r0-inbox-korean-b/verifier-verifier-receipt.json",
+      "sha256": "08f09c8f0567fed11cdfb76793e3e6accfdf652e1206ed11b6581639cc372b9b"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source_revision": "5e7a00f5f388527a231c8a539e2369cfc71e5464",
+  "source_sha256": "1356ec61716612252873d3cf121a8836e264ddf0c870fd730b79fd892c45c5e3",
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "profile": "decision-handoff",
+  "workload_profile": "inbox",
+  "arm": "a0",
+  "case_sha256": "6d229fcbcb08a44213128a32d2b2ea6274b90354465397d5bce9ebc407c101e2",
+  "case_id": "inbox-admission",
+  "intervention": null,
+  "external_search_loop": false,
+  "model": "gpt-6-astra",
+  "source": "subscription",
+  "effort": "xhigh",
+  "verify_mode": "llm_judge",
+  "verification_engine": "llm",
+  "required_tools": [
+    "lookup_order_status"
+  ],
+  "agent_timeout_sec": 180,
+  "profile_scope": "fresh task container; no shell or filesystem tool"
+}

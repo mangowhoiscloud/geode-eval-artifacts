@@ -1,0 +1,78 @@
+{
+  "attempt_id": "snapshot-03-llm",
+  "sequence": 4,
+  "case_id": "snapshot-03",
+  "engine": "llm",
+  "mock": false,
+  "started_at": "2026-09-23T09:18:53.055531+00:00",
+  "valid": true,
+  "correct": true,
+  "expected_verdict": "insufficient_evidence",
+  "error_type": null,
+  "actual_charge_usd": null,
+  "correlation": {
+    "session_id": "snapshot-03-llm",
+    "turn_id": "turn-1",
+    "step_id": "verdict-1",
+    "llm_call_id": "snapshot-03-llm-call-1",
+    "llm_attempt_id": "snapshot-03-llm-call-1:attempt-1"
+  },
+  "observer_has_sink_failures": false,
+  "finished_at": "2026-09-23T09:18:57.842049+00:00",
+  "native_receipts": [
+    {
+      "engine": "llm",
+      "model": "gpt-6-astra",
+      "provider": "openai",
+      "source": "subscription",
+      "input_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+      "source_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+      "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+      "llm_call_id": "snapshot-03-llm-call-1",
+      "step_id": "verdict-1",
+      "response_model": "gpt-6-astra",
+      "response_provider": null,
+      "raw_answer_sha256": "0fb9c3af778bd91739656e4224cd2525fac68580747df9d5b96622bad0d1e02b",
+      "accepted": true,
+      "verdict": "insufficient_evidence",
+      "native_answer": {
+        "verdict": "insufficient_evidence"
+      },
+      "feedback_sha256": "0eb59e0900a91a538449e73094452e32db22bd3ef04559a8520c305a56ff23d2",
+      "error_type": null
+    }
+  ],
+  "accounting": {
+    "usage": {
+      "input_tokens": 507,
+      "output_tokens": 47,
+      "cached_input_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 27
+    },
+    "total_tokens": 554,
+    "known_input_output_sum": 554,
+    "missing_token_fields": [],
+    "contradictory_usage": false,
+    "response_model": "gpt-6-astra",
+    "error_type": null,
+    "typesafe_price_estimate_usd": null,
+    "typesafe_price_estimate_us_cents": null,
+    "subscription_api_equivalent_estimate_usd": 0.007420000000000001,
+    "subscription_api_equivalent_bounds_usd": [
+      0.007420000000000001,
+      0.007420000000000001
+    ],
+    "reported_cost_usd": null,
+    "model": "gpt-6-astra",
+    "purpose": "turn_verification",
+    "llm_attempt_id": "snapshot-03-llm-call-1:attempt-1"
+  },
+  "duration_ms": 4776.247124998918,
+  "projected_branch": {
+    "passed": false,
+    "should_retry": true,
+    "actual_root_consumption": false
+  },
+  "verdict": "insufficient_evidence"
+}

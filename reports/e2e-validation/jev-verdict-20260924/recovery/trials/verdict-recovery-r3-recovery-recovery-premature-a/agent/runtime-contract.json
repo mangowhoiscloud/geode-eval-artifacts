@@ -1,0 +1,25 @@
+{
+  "source_revision": "588a1c8817d6cff83f8acc0c9e5187d91ccafe60",
+  "source_sha256": "400f3816bb249d700df40d5139c59e150f32db64f7ae836fa8f6857a460837cc",
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "profile": "decision-handoff",
+  "workload_profile": "inbox",
+  "arm": "a0",
+  "case_sha256": "19fc6887e58a260021685aab1765fdd0decc8dbb958a02e5155d97a3d62f774e",
+  "case_id": "recovery-premature",
+  "intervention": null,
+  "verification_intervention": {
+    "when": "before_observation"
+  },
+  "external_search_loop": false,
+  "model": "gpt-6-astra",
+  "source": "subscription",
+  "effort": "xhigh",
+  "verify_mode": "llm_judge",
+  "verification_engine": "llm",
+  "required_tools": [
+    "lookup_order_status"
+  ],
+  "agent_timeout_sec": 180,
+  "profile_scope": "fresh task container; no shell or filesystem tool"
+}

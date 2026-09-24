@@ -1,0 +1,610 @@
+{
+  "mock": false,
+  "complete": true,
+  "logical_calls": 6,
+  "source_revision": "1c73cb97657dc811264bea338aa5a2ae324f0078",
+  "primary": {
+    "value": 0.0,
+    "numerator": 0,
+    "denominator": 3
+  },
+  "correct": {
+    "llm": 3,
+    "jev": 3
+  },
+  "rows": [
+    {
+      "attempt_id": "snapshot-01-llm",
+      "sequence": 0,
+      "case_id": "snapshot-01",
+      "engine": "llm",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:40.141945+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "supported",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-01-llm",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-01-llm-call-1",
+        "llm_attempt_id": "snapshot-01-llm-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:45.027806+00:00",
+      "native_receipts": [
+        {
+          "engine": "llm",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "source": "subscription",
+          "input_sha256": "5c32b6db5c03dc722e892b865594f3e347b7ea28455871f0bc22e172ac4272d0",
+          "source_sha256": "5c32b6db5c03dc722e892b865594f3e347b7ea28455871f0bc22e172ac4272d0",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-01-llm-call-1",
+          "step_id": "verdict-1",
+          "response_model": "gpt-6-astra",
+          "response_provider": null,
+          "raw_answer_sha256": "ad0d2424c0e7394761bf13cc6991a09899005082e328e5c2cf078ef559bddafc",
+          "accepted": true,
+          "verdict": "supported",
+          "native_answer": {
+            "verdict": "supported"
+          },
+          "feedback_sha256": "16b8784c96bb7250cef2f7960c337759a4606bd41ddb1028781b1f8674285bde",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 597,
+          "output_tokens": 42,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 639,
+        "known_input_output_sum": 639,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.00807,
+        "subscription_api_equivalent_bounds_usd": [
+          0.00807,
+          0.00807
+        ],
+        "reported_cost_usd": null,
+        "model": "gpt-6-astra",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-01-llm-call-1:attempt-1"
+      },
+      "duration_ms": 4881.465916001616,
+      "projected_branch": {
+        "passed": true,
+        "should_retry": false,
+        "actual_root_consumption": false
+      },
+      "verdict": "supported"
+    },
+    {
+      "attempt_id": "snapshot-01-jev",
+      "sequence": 1,
+      "case_id": "snapshot-01",
+      "engine": "jev",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:45.266964+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "supported",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-01-jev",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-01-jev-call-1",
+        "llm_attempt_id": "snapshot-01-jev-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:45.700297+00:00",
+      "native_receipts": [
+        {
+          "engine": "jev",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "source": "payg",
+          "input_sha256": "5c32b6db5c03dc722e892b865594f3e347b7ea28455871f0bc22e172ac4272d0",
+          "source_sha256": "5c32b6db5c03dc722e892b865594f3e347b7ea28455871f0bc22e172ac4272d0",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-01-jev-call-1",
+          "step_id": "verdict-1",
+          "response_model": "jev-1.13.0",
+          "response_provider": "typesafe",
+          "raw_answer_sha256": "2d42ad076eb5e1c01f36425bb0143b528e2880cdaf0bab2f5dca655088409a21",
+          "accepted": true,
+          "verdict": "supported",
+          "native_answer": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "contradicted": 0.0,
+              "supported": 1.0,
+              "insufficient_evidence": 0.0
+            },
+            "confidence": 1.0
+          },
+          "feedback_sha256": "16b8784c96bb7250cef2f7960c337759a4606bd41ddb1028781b1f8674285bde",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 678,
+          "output_tokens": 48,
+          "cached_input_tokens": null,
+          "cache_write_tokens": null,
+          "reasoning_tokens": null
+        },
+        "total_tokens": 726,
+        "known_input_output_sum": 726,
+        "missing_token_fields": [
+          "cached_input_tokens",
+          "cache_write_tokens",
+          "reasoning_tokens"
+        ],
+        "contradictory_usage": false,
+        "response_model": "jev-1.13.0",
+        "error_type": null,
+        "typesafe_price_estimate_usd": 2.8476e-05,
+        "typesafe_price_estimate_us_cents": 0.0028476,
+        "subscription_api_equivalent_estimate_usd": null,
+        "subscription_api_equivalent_bounds_usd": null,
+        "reported_cost_usd": null,
+        "model": "jev-1.13.0",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-01-jev-call-1:attempt-1"
+      },
+      "duration_ms": 425.5100410009618,
+      "projected_branch": {
+        "passed": true,
+        "should_retry": false,
+        "actual_root_consumption": false
+      },
+      "verdict": "supported"
+    },
+    {
+      "attempt_id": "snapshot-02-jev",
+      "sequence": 2,
+      "case_id": "snapshot-02",
+      "engine": "jev",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:45.925301+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "contradicted",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-02-jev",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-02-jev-call-1",
+        "llm_attempt_id": "snapshot-02-jev-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:46.230577+00:00",
+      "native_receipts": [
+        {
+          "engine": "jev",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "source": "payg",
+          "input_sha256": "84ce07c23e5cf956531e57ecaaf527fbf159b82a43ce08bbaa8c56be21aee12c",
+          "source_sha256": "84ce07c23e5cf956531e57ecaaf527fbf159b82a43ce08bbaa8c56be21aee12c",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-02-jev-call-1",
+          "step_id": "verdict-1",
+          "response_model": "jev-1.13.0",
+          "response_provider": "typesafe",
+          "raw_answer_sha256": "01852d504d117c0f1b13ecab78a7da6edad71cf9bf42619d4de07103b2e4e262",
+          "accepted": true,
+          "verdict": "contradicted",
+          "native_answer": {
+            "type": "choice",
+            "choice": "contradicted",
+            "probabilities": {
+              "contradicted": 1.0,
+              "supported": 0.0,
+              "insufficient_evidence": 0.0
+            },
+            "confidence": 1.0
+          },
+          "feedback_sha256": "b0ec09fe1bd3bb12327551447ae87c625620b07b53355f82fa9db6ca5dac0721",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 679,
+          "output_tokens": 51,
+          "cached_input_tokens": null,
+          "cache_write_tokens": null,
+          "reasoning_tokens": null
+        },
+        "total_tokens": 730,
+        "known_input_output_sum": 730,
+        "missing_token_fields": [
+          "cached_input_tokens",
+          "cache_write_tokens",
+          "reasoning_tokens"
+        ],
+        "contradictory_usage": false,
+        "response_model": "jev-1.13.0",
+        "error_type": null,
+        "typesafe_price_estimate_usd": 2.8518e-05,
+        "typesafe_price_estimate_us_cents": 0.0028518,
+        "subscription_api_equivalent_estimate_usd": null,
+        "subscription_api_equivalent_bounds_usd": null,
+        "reported_cost_usd": null,
+        "model": "jev-1.13.0",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-02-jev-call-1:attempt-1"
+      },
+      "duration_ms": 298.3222500006377,
+      "projected_branch": {
+        "passed": false,
+        "should_retry": true,
+        "actual_root_consumption": false
+      },
+      "verdict": "contradicted"
+    },
+    {
+      "attempt_id": "snapshot-02-llm",
+      "sequence": 3,
+      "case_id": "snapshot-02",
+      "engine": "llm",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:46.463103+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "contradicted",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-02-llm",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-02-llm-call-1",
+        "llm_attempt_id": "snapshot-02-llm-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:52.829781+00:00",
+      "native_receipts": [
+        {
+          "engine": "llm",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "source": "subscription",
+          "input_sha256": "84ce07c23e5cf956531e57ecaaf527fbf159b82a43ce08bbaa8c56be21aee12c",
+          "source_sha256": "84ce07c23e5cf956531e57ecaaf527fbf159b82a43ce08bbaa8c56be21aee12c",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-02-llm-call-1",
+          "step_id": "verdict-1",
+          "response_model": "gpt-6-astra",
+          "response_provider": null,
+          "raw_answer_sha256": "0197d9e172e41ad4c11eb6884d36875288f0c51f3e8133ae0ddd3f02c186b09a",
+          "accepted": true,
+          "verdict": "contradicted",
+          "native_answer": {
+            "verdict": "contradicted"
+          },
+          "feedback_sha256": "b0ec09fe1bd3bb12327551447ae87c625620b07b53355f82fa9db6ca5dac0721",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 597,
+          "output_tokens": 32,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 13
+        },
+        "total_tokens": 629,
+        "known_input_output_sum": 629,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.00757,
+        "subscription_api_equivalent_bounds_usd": [
+          0.00757,
+          0.00757
+        ],
+        "reported_cost_usd": null,
+        "model": "gpt-6-astra",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-02-llm-call-1:attempt-1"
+      },
+      "duration_ms": 6359.4435840022925,
+      "projected_branch": {
+        "passed": false,
+        "should_retry": true,
+        "actual_root_consumption": false
+      },
+      "verdict": "contradicted"
+    },
+    {
+      "attempt_id": "snapshot-03-llm",
+      "sequence": 4,
+      "case_id": "snapshot-03",
+      "engine": "llm",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:53.055531+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "insufficient_evidence",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-03-llm",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-03-llm-call-1",
+        "llm_attempt_id": "snapshot-03-llm-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:57.842049+00:00",
+      "native_receipts": [
+        {
+          "engine": "llm",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "source": "subscription",
+          "input_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+          "source_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-03-llm-call-1",
+          "step_id": "verdict-1",
+          "response_model": "gpt-6-astra",
+          "response_provider": null,
+          "raw_answer_sha256": "0fb9c3af778bd91739656e4224cd2525fac68580747df9d5b96622bad0d1e02b",
+          "accepted": true,
+          "verdict": "insufficient_evidence",
+          "native_answer": {
+            "verdict": "insufficient_evidence"
+          },
+          "feedback_sha256": "0eb59e0900a91a538449e73094452e32db22bd3ef04559a8520c305a56ff23d2",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 507,
+          "output_tokens": 47,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 27
+        },
+        "total_tokens": 554,
+        "known_input_output_sum": 554,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.007420000000000001,
+        "subscription_api_equivalent_bounds_usd": [
+          0.007420000000000001,
+          0.007420000000000001
+        ],
+        "reported_cost_usd": null,
+        "model": "gpt-6-astra",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-03-llm-call-1:attempt-1"
+      },
+      "duration_ms": 4776.247124998918,
+      "projected_branch": {
+        "passed": false,
+        "should_retry": true,
+        "actual_root_consumption": false
+      },
+      "verdict": "insufficient_evidence"
+    },
+    {
+      "attempt_id": "snapshot-03-jev",
+      "sequence": 5,
+      "case_id": "snapshot-03",
+      "engine": "jev",
+      "mock": false,
+      "started_at": "2026-09-23T09:18:58.071799+00:00",
+      "valid": true,
+      "correct": true,
+      "expected_verdict": "insufficient_evidence",
+      "error_type": null,
+      "actual_charge_usd": null,
+      "correlation": {
+        "session_id": "snapshot-03-jev",
+        "turn_id": "turn-1",
+        "step_id": "verdict-1",
+        "llm_call_id": "snapshot-03-jev-call-1",
+        "llm_attempt_id": "snapshot-03-jev-call-1:attempt-1"
+      },
+      "observer_has_sink_failures": false,
+      "finished_at": "2026-09-23T09:18:58.581044+00:00",
+      "native_receipts": [
+        {
+          "engine": "jev",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "source": "payg",
+          "input_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+          "source_sha256": "c5e4ddd5ba968fa597d7e469d3ba20faa40a47471d9ec89e4a973f0214c627df",
+          "question_sha256": "e20e931857a604baa37d65d551254def9ab67659dfb31bb9c517f1bc810b0d63",
+          "llm_call_id": "snapshot-03-jev-call-1",
+          "step_id": "verdict-1",
+          "response_model": "jev-1.13.0",
+          "response_provider": "typesafe",
+          "raw_answer_sha256": "3d5070a47fc2a31d2fa8dd4c0f2a646bc8d9be4e0543e692a11be6f980d6cd52",
+          "accepted": true,
+          "verdict": "insufficient_evidence",
+          "native_answer": {
+            "type": "choice",
+            "choice": "insufficient_evidence",
+            "probabilities": {
+              "supported": 0.0,
+              "insufficient_evidence": 0.97,
+              "contradicted": 0.03
+            },
+            "confidence": 0.95
+          },
+          "feedback_sha256": "0eb59e0900a91a538449e73094452e32db22bd3ef04559a8520c305a56ff23d2",
+          "error_type": null
+        }
+      ],
+      "accounting": {
+        "usage": {
+          "input_tokens": 607,
+          "output_tokens": 54,
+          "cached_input_tokens": null,
+          "cache_write_tokens": null,
+          "reasoning_tokens": null
+        },
+        "total_tokens": 661,
+        "known_input_output_sum": 661,
+        "missing_token_fields": [
+          "cached_input_tokens",
+          "cache_write_tokens",
+          "reasoning_tokens"
+        ],
+        "contradictory_usage": false,
+        "response_model": "jev-1.13.0",
+        "error_type": null,
+        "typesafe_price_estimate_usd": 2.5494e-05,
+        "typesafe_price_estimate_us_cents": 0.0025494,
+        "subscription_api_equivalent_estimate_usd": null,
+        "subscription_api_equivalent_bounds_usd": null,
+        "reported_cost_usd": null,
+        "model": "jev-1.13.0",
+        "purpose": "turn_verification",
+        "llm_attempt_id": "snapshot-03-jev-call-1:attempt-1"
+      },
+      "duration_ms": 501.52091599738924,
+      "projected_branch": {
+        "passed": false,
+        "should_retry": true,
+        "actual_root_consumption": false
+      },
+      "verdict": "insufficient_evidence"
+    }
+  ],
+  "setup_error": null,
+  "actual_charge_usd": null,
+  "accounting": {
+    "scope": "recorded-runtime-llm-attempts-only",
+    "whole_runtime_complete": false,
+    "retained_attempt_coverage_complete": true,
+    "recorded_calls": 6,
+    "failed_calls": 0,
+    "contradictory_usage_calls": 0,
+    "usage": {
+      "input_tokens": {
+        "total": 3665,
+        "observed_sum": 3665,
+        "observed_calls": 6,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 274,
+        "observed_sum": 274,
+        "observed_calls": 6,
+        "missing_calls": 0
+      },
+      "cached_input_tokens": {
+        "total": null,
+        "observed_sum": 0,
+        "observed_calls": 3,
+        "missing_calls": 3
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "observed_sum": 0,
+        "observed_calls": 3,
+        "missing_calls": 3
+      },
+      "reasoning_tokens": {
+        "total": null,
+        "observed_sum": 65,
+        "observed_calls": 3,
+        "missing_calls": 3
+      }
+    },
+    "total_tokens": {
+      "total": 3939,
+      "observed_sum": 3939,
+      "observed_calls": 6,
+      "missing_calls": 0
+    },
+    "known_input_output_sum": 3939,
+    "costs": {
+      "typesafe_price_estimate_usd": {
+        "applicable_calls": 3,
+        "total": 8.2488e-05,
+        "observed_sum": 8.2488e-05,
+        "observed_calls": 3,
+        "missing_calls": 0,
+        "currency": "USD",
+        "unit": "USD",
+        "authority": "published-input-token-tariff-calculation"
+      },
+      "subscription_api_equivalent_estimate_usd": {
+        "applicable_calls": 3,
+        "total": 0.02306,
+        "observed_sum": 0.02306,
+        "observed_calls": 3,
+        "missing_calls": 0
+      },
+      "reported_cost_usd": {
+        "applicable_calls": 6,
+        "total": null,
+        "observed_sum": 0,
+        "observed_calls": 0,
+        "missing_calls": 6
+      },
+      "typesafe_price_estimate_us_cents": {
+        "applicable_calls": 3,
+        "total": 0.0082488,
+        "observed_sum": 0.0082488,
+        "observed_calls": 3,
+        "missing_calls": 0,
+        "currency": "USD",
+        "unit": "US cents",
+        "authority": "published-input-token-tariff-calculation"
+      }
+    },
+    "subscription_api_equivalent_bounds_usd": [
+      {
+        "total": 0.02306,
+        "observed_sum": 0.02306,
+        "observed_calls": 3,
+        "missing_calls": 0
+      },
+      {
+        "total": 0.02306,
+        "observed_sum": 0.02306,
+        "observed_calls": 3,
+        "missing_calls": 0
+      }
+    ],
+    "unpriced_model_calls": 0
+  },
+  "independent_task_families": 1
+}

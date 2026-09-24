@@ -1,0 +1,91 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-verdict-recovery-recovery-20260924",
+  "created_at": "2026-09-23T17:50:37.191787+00:00",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-23T17:50:37.191787+00:00",
+    "live_test_approved": true,
+    "operator": "User-authorized; main-agent review required before dispatch"
+  },
+  "study": {
+    "research_question": "Does the matched final-verdict engine close actual rejection, consumed feedback, repair and independent task verification under two fixed candidate interventions?",
+    "research_gap": "Prior natural trials had no negative judgments; same-snapshot probes had no root continuation.",
+    "hypothesis": "Both engines may close repair, while judgment and downstream repair burden can differ.",
+    "primary_metric": {
+      "name": "closed_repair_delta",
+      "unit": "ratio",
+      "direction": "target",
+      "aggregation": "(Jev closed repairs minus LLM closed repairs) / 2 paired conditions",
+      "denominator": 2
+    },
+    "decision_rule": "Diagnostic only. Two fresh no-injection admission arms must be valid and pass with reviewed playback before four controlled cells. No adoption, release or publication authority.",
+    "invalidation_rule": "Stop on incomplete exports, observation/checker/source/usage/credential failure or timeout. Preserve invalid trials as unknown; any missing/invalid planned cell makes primary not measurable. Valid semantic failures continue.",
+    "analysis_plan": "One authored single-status task family with two dependent conditions, two engines and one repetition. Report closed repair by condition and arm, native first-verdict discrimination, false acceptance, hold, root/cognitive/judge/replan/tool burden, tokens and separate tariffs. No pooling with admission, old natural trials or snapshots. Preselected replay: recovery-contradiction, repetition0, including failure."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "588a1c8817d6cff83f8acc0c9e5187d91ccafe60",
+      "branch": "codex/jev-verdict-recovery-20260924",
+      "dirty": false
+    },
+    "harness": {
+      "name": "Harbor",
+      "source": "harbor==0.22.0; private runner.py",
+      "revision": "0.22.0"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-6-astra",
+      "route": "subscription",
+      "reasoning": "xhigh"
+    },
+    "environment": {
+      "platform": "macOS-15.3.1-arm64-arm-64bit",
+      "architecture": "arm64",
+      "reset_strategy": "Fresh public-network agent and separate static no-network verifier containers per cell; native Harbor artifact transfer only. No operator workspace mounted. Provider-free actual infrastructure proof expires after 24h. Root 180s, Harbor agent 210s, host watchdog 930s plus cancellation cleanup up to 120s. No trial rerun or helper HTTP retry; identical bounded root retry policy inherited.",
+      "initial_state_ref": "sha256:d6553caf658a2097c42f86a156c0e004a0bd0abe9d1b8c23661efb181b914e8b"
+    },
+    "execution": {
+      "command_redacted": "harbor-022/bin/python -B runner.py --phase recovery --execute --reviewed",
+      "ordered_workload_ids": [
+        "recovery-contradiction",
+        "recovery-premature"
+      ],
+      "workload_ids_sha256": "48b4bde875799e9e3031fa78921f489e110132620120e4f06d0311d22d08bb51",
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "max_concurrency": 1,
+      "timeout_seconds": 210,
+      "budget": {
+        "kind": "combined",
+        "limit": null,
+        "unit": "uncapped"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "A: subscription Astra/xhigh typed final verdict; B: direct jev-1.13.0 verdict. Same root/cognitive/feedback policy and controlled candidate replacement; runtime arm=a0.",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "results.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All trial prompts, provider receipts, databases, IDs and host paths are withheld-private pending exact-byte review. Never persist key contents in configs or metadata; actual charges stay unknown."
+  }
+}

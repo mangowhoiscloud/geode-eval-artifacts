@@ -1,0 +1,415 @@
+{
+  "index": 0,
+  "case_id": "inbox-admission",
+  "arm": "a",
+  "verification_engine": "llm",
+  "repetition": 0,
+  "position": 0,
+  "trial_name": "verdict-admission-r0-inbox-admission-a",
+  "task_name": "inbox-admission",
+  "task_checksum": "819e2874df2ad0e4bbb042dbc5278b876f93e220a92d4089db0e45882e66b3f7",
+  "case_sha256": "6d229fcbcb08a44213128a32d2b2ea6274b90354465397d5bce9ebc407c101e2",
+  "valid": false,
+  "passed": false,
+  "error_type": "ValueError",
+  "host_elapsed_seconds": 74.26521291599965,
+  "actual_charge_usd": null,
+  "intervention_delivered": false,
+  "runtime": {
+    "profile": "read-only-decision-handoff",
+    "session_id": "s-fa65f052a8b6",
+    "source_snapshot_complete": true,
+    "arm": "a0",
+    "case_id": "inbox-admission",
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "source": "subscription",
+    "runtime_scope": "isolated-AgenticLoop-not-default-GeodeRuntime-services",
+    "handoff_call_coverage_complete": true,
+    "workload_profile": "inbox",
+    "verification_engine": "llm",
+    "verification_metrics": {
+      "judgment_attempts": 1,
+      "replan_requests": 0,
+      "root_requests_consuming_feedback": 0,
+      "tracker_cost_authority": "published-tariff-estimate-not-invoice"
+    },
+    "valid": true,
+    "error_type": null,
+    "elapsed_seconds": 25.596293387000003,
+    "termination_reason": "natural",
+    "oracle": {
+      "passed": true,
+      "checks": {
+        "answer_shape": true,
+        "all_items_passed": true,
+        "root_request_observed": true,
+        "analysis_first": true,
+        "decision_succeeded": true,
+        "no_other_tools": true,
+        "results_consumed_by_root": true,
+        "lookup_after_interpretation": true
+      },
+      "items": [
+        {
+          "id": "admit_one",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 1,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        },
+        {
+          "id": "admit_two",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        }
+      ],
+      "component_matches": null,
+      "analysis_call_count": 0,
+      "rejudgment_call_count": 0,
+      "rejudged_item_count": 0,
+      "helper_correction_count": 0,
+      "helper_rejudgment_recovery_count": 0,
+      "rejected_lookup_count": 0,
+      "lookup_attempt_count": 1,
+      "lookup_item_count": 1,
+      "extra_lookup_count": 0,
+      "wrong_target_lookup_count": 0,
+      "false_completion_count": 0
+    },
+    "native_verify": [
+      {
+        "_dispatch_duration_ms": 0.022172927856445312,
+        "activity_schema_version": 10,
+        "duration_ms": 0.0,
+        "session_id": "s-fa65f052a8b6",
+        "success": true,
+        "action": "turn.verify.passed"
+      }
+    ],
+    "usage": {
+      "scope": "recorded-runtime-llm-attempts-only",
+      "whole_runtime_complete": false,
+      "observation_status": "no_known_faults",
+      "known_sink_failure": false,
+      "mapping_anomaly_events": 0,
+      "limitation": "whole-runtime producer coverage and background-writer quiescence require separate verification; paired retained events alone cannot establish either; turn-final judge calls share loop accounting; legacy call purpose remains unknown",
+      "call_events": 4,
+      "terminal_event_count": 4,
+      "recorded_attempts_scope": "canonical-llm-ended-events-only; duplicates retained; no synthetic missing starts or ends",
+      "recorded_attempts": [
+        {
+          "session_id": "s-fa65f052a8b6",
+          "llm_call_id": "llm-t-b422bb337fe2:step-1-31093e3c",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-b422bb337fe2:step-1-31093e3c:attempt-1",
+          "source_event_id": 8,
+          "occurred_at": 1790151563.0452023,
+          "source_payload_hash": "c171f80d8d442d15058e0330071fa582e2931f46b5e48e1ae12a5fb1f60d835f",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 2277,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 33
+          }
+        },
+        {
+          "session_id": "s-fa65f052a8b6",
+          "llm_call_id": "llm-979c145603ad40c6b62756532cbdbac9",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-979c145603ad40c6b62756532cbdbac9:attempt-1",
+          "source_event_id": 18,
+          "occurred_at": 1790151569.0128736,
+          "source_payload_hash": "cd77f4afee8690a19f3c718a16cab445dbbbbcb3ce72ba031e56bab9e523eb52",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "cognitive_reflection",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 643,
+            "output_tokens": 106,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-fa65f052a8b6",
+          "llm_call_id": "llm-t-b422bb337fe2:step-2-263ab13b",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-b422bb337fe2:step-2-263ab13b:attempt-1",
+          "source_event_id": 26,
+          "occurred_at": 1790151572.4309702,
+          "source_payload_hash": "86b2766a474cb90eaadaa7ab5efe148c7b9c5f4c92d8f73bc26687d45921a0c2",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "purpose": "agentic_loop",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 2388,
+            "output_tokens": 58,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "session_id": "s-fa65f052a8b6",
+          "llm_call_id": "llm-t-b422bb337fe2:step-3-0710c845",
+          "tool_call_id": null,
+          "llm_attempt_id": "llm-t-b422bb337fe2:step-3-0710c845:attempt-1",
+          "source_event_id": 33,
+          "occurred_at": 1790151579.5816917,
+          "source_payload_hash": "25b65986c9c0e0f61523610fe1ef669d257c01c47b4bc5781a5689af1f1314f9",
+          "model": "gpt-6-astra",
+          "response_model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "matched-verifier-llm",
+          "purpose": "turn_verification",
+          "source": "subscription",
+          "effort": "xhigh",
+          "error_type": null,
+          "usage": {
+            "input_tokens": 1261,
+            "output_tokens": 67,
+            "cached_input_tokens": 0,
+            "cache_write_tokens": 0,
+            "reasoning_tokens": 50
+          }
+        }
+      ],
+      "recorded_attempts_timestamp_unit": "unix-seconds-utc",
+      "started_events": 4,
+      "usage_events": 4,
+      "attempt_pairing_complete": true,
+      "input_tokens": 6569,
+      "input_tokens_observed_sum": 6569,
+      "input_tokens_missing_events": 0,
+      "output_tokens": 298,
+      "output_tokens_observed_sum": 298,
+      "output_tokens_missing_events": 0,
+      "cached_input_tokens": 0,
+      "cached_input_tokens_observed_sum": 0,
+      "cached_input_tokens_missing_events": 0,
+      "cache_write_tokens": 0,
+      "cache_write_tokens_observed_sum": 0,
+      "cache_write_tokens_missing_events": 0,
+      "source_snapshot_complete": true
+    },
+    "call_accounting": [
+      {
+        "purpose": "agentic_loop",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-b422bb337fe2:step-1-31093e3c:attempt-1",
+        "usage": {
+          "input_tokens": 2277,
+          "output_tokens": 67,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 33
+        },
+        "total_tokens": 2344,
+        "known_input_output_sum": 2344,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.02612,
+        "subscription_api_equivalent_bounds_usd": [
+          0.02612,
+          0.02612
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "cognitive_reflection",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-979c145603ad40c6b62756532cbdbac9:attempt-1",
+        "usage": {
+          "input_tokens": 643,
+          "output_tokens": 106,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 749,
+        "known_input_output_sum": 749,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.01173,
+        "subscription_api_equivalent_bounds_usd": [
+          0.01173,
+          0.01173
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "agentic_loop",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-b422bb337fe2:step-2-263ab13b:attempt-1",
+        "usage": {
+          "input_tokens": 2388,
+          "output_tokens": 58,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2446,
+        "known_input_output_sum": 2446,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.02678,
+        "subscription_api_equivalent_bounds_usd": [
+          0.02678,
+          0.02678
+        ],
+        "reported_cost_usd": null
+      },
+      {
+        "purpose": "turn_verification",
+        "model": "gpt-6-astra",
+        "llm_attempt_id": "llm-t-b422bb337fe2:step-3-0710c845:attempt-1",
+        "usage": {
+          "input_tokens": 1261,
+          "output_tokens": 67,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "reasoning_tokens": 50
+        },
+        "total_tokens": 1328,
+        "known_input_output_sum": 1328,
+        "missing_token_fields": [],
+        "contradictory_usage": false,
+        "response_model": "gpt-6-astra",
+        "error_type": null,
+        "typesafe_price_estimate_usd": null,
+        "typesafe_price_estimate_us_cents": null,
+        "subscription_api_equivalent_estimate_usd": 0.015960000000000002,
+        "subscription_api_equivalent_bounds_usd": [
+          0.015960000000000002,
+          0.015960000000000002
+        ],
+        "reported_cost_usd": null
+      }
+    ],
+    "passed": true,
+    "intervention": null
+  },
+  "native_reward": {
+    "reward": 1.0
+  },
+  "independent_verifier": {
+    "passed": true,
+    "valid": true,
+    "error_type": null,
+    "oracle": {
+      "passed": true,
+      "checks": {
+        "answer_shape": true,
+        "all_items_passed": true,
+        "root_request_observed": true,
+        "analysis_first": true,
+        "decision_succeeded": true,
+        "no_other_tools": true,
+        "results_consumed_by_root": true,
+        "lookup_after_interpretation": true
+      },
+      "items": [
+        {
+          "id": "admit_one",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 1,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        },
+        {
+          "id": "admit_two",
+          "passed": true,
+          "answer_matches": true,
+          "lookup_evidence_consumed": true,
+          "helper_matches": null,
+          "initial_helper_matches": null,
+          "helper_rejudgment_recovered": false,
+          "helper_correction": false,
+          "lookup_count": 0,
+          "wrong_target_lookup_count": 0,
+          "extra_lookup_count": 0,
+          "false_completion": false
+        }
+      ],
+      "component_matches": null,
+      "analysis_call_count": 0,
+      "rejudgment_call_count": 0,
+      "rejudged_item_count": 0,
+      "helper_correction_count": 0,
+      "helper_rejudgment_recovery_count": 0,
+      "rejected_lookup_count": 0,
+      "lookup_attempt_count": 1,
+      "lookup_item_count": 1,
+      "extra_lookup_count": 0,
+      "wrong_target_lookup_count": 0,
+      "false_completion_count": 0
+    },
+    "native_verify": [
+      {
+        "_dispatch_duration_ms": 0.022172927856445312,
+        "activity_schema_version": 10,
+        "duration_ms": 0.0,
+        "session_id": "s-fa65f052a8b6",
+        "success": true,
+        "action": "turn.verify.passed"
+      }
+    ]
+  },
+  "collection_error_type": "ValueError"
+}
