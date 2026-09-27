@@ -1,0 +1,67 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-external-cuavb-choice-admission-20260927-r4",
+  "analyzed_at": "2026-09-26T22:10:53.796162+00:00",
+  "run_spec_sha256": "a389b38b591d7c3a9aeaa82bb58cf59dfe8b1bad3e8c87103a32648304376b7b",
+  "attempts_sha256": "43e96b02470c1affbd9f5bc7926a646b4e4bec25ca8662e77f163dc9fa1c482a",
+  "selected_attempt_ids": [
+    "geode-jev-external-cuavb-choice-admission-20260927-r4-a00000",
+    "geode-jev-external-cuavb-choice-admission-20260927-r4-a00001",
+    "geode-jev-external-cuavb-choice-admission-20260927-r4-a00002",
+    "geode-jev-external-cuavb-choice-admission-20260927-r4-a00003",
+    "geode-jev-external-cuavb-choice-admission-20260927-r4-aggregate"
+  ],
+  "answer": "X1a output admission gate passed.",
+  "metrics": [
+    {
+      "name": "x1_admission_admitted_ratio",
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary/value",
+        "numerator": "/primary/numerator",
+        "denominator": "/primary/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "all four Choice calls admitted; two fixed states by two engines; no substitutions; execution guard/privacy receipt also required"
+  },
+  "limitations": [
+    "output admission only; no correctness, latency or generalized performance claim",
+    "Operational execution-guard and exact-byte privacy checks are separate gates."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-external-cuavb-choice-admission-20260927-r4-a00000.json",
+      "sha256": "54483092a0d9f3542578627ca1a2cdd3ff38fd60a61c4730b12ae70cc3c7abac"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-external-cuavb-choice-admission-20260927-r4-a00001.json",
+      "sha256": "aa65480ac0ed3999121daf2f0da9a87e70df55094ff454e6303449cb45a66e36"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-external-cuavb-choice-admission-20260927-r4-a00002.json",
+      "sha256": "8bf64445218e09d056e8670954dfcdba217174eb275dd395b9274385e95cefab"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-external-cuavb-choice-admission-20260927-r4-a00003.json",
+      "sha256": "251c0914e35ae4a75cee8d9db0301ae5b64b7659e2dbca5a62e0721b24d6ea9b"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "2bbd7f7062ee45ca4d260aff2b8f64cc63f399e50e20a73daaf3b7e3059cee24"
+    }
+  ]
+}

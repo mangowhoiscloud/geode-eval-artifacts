@@ -1,0 +1,2 @@
+Process every inbox item.
+<inbox>[{&quot;id&quot;: &quot;admit_one&quot;, &quot;request&quot;: &quot;B-209 was my old order. Check A-104, please.&quot;, &quot;candidates&quot;: [&quot;B-209&quot;, &quot;A-104&quot;]}, {&quot;id&quot;: &quot;admit_two&quot;, &quot;request&quot;: &quot;주문번호를 잊었어요. 배송 상태를 알려 주세요.&quot;, &quot;candidates&quot;: []}]</inbox>

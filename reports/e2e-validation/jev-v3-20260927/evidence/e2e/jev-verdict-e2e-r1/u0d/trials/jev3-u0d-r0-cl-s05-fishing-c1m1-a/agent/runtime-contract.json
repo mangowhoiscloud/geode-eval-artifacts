@@ -1,0 +1,25 @@
+{
+  "agent_timeout_sec": 180,
+  "arm": "a0",
+  "case_id": "noul-cl-s05-fishing-9f41773feb27",
+  "case_sha256": "93c3f1adf8d423cbe9f4bced1006b9b1bda662271c65f573c21ba8627edb5e90",
+  "effort": "xhigh",
+  "external_search_loop": false,
+  "intervention": null,
+  "model": "gpt-6-astra",
+  "profile": "decision-handoff",
+  "profile_scope": "fresh task container; no shell or filesystem tool",
+  "required_tools": [
+    "lookup_order_status"
+  ],
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "source": "subscription",
+  "source_revision": "7f32ff272d1b07a6404c593e74dad727857e0bd8",
+  "source_sha256": "e41ae23f2012dd432d2d84f103334cdb4305d2ad7267f8f1f81dc2dac0fb75ac",
+  "verification_engine": "llm",
+  "verification_intervention": {
+    "when": "before_observation"
+  },
+  "verify_mode": "llm_judge",
+  "workload_profile": "inbox"
+}

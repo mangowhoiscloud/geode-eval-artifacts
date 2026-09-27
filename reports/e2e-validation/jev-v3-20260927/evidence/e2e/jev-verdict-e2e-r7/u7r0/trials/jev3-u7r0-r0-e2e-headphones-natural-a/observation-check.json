@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 11017,
+        "total": 11017
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1137,
+        "total": 1137
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "7befaff237b7fda96463d258b70d84b8ea576de29d5f443f6ad150545da5acc6",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "a650046b20c35e4b8bb5733738e6806c60b13ca451829e3ba2888385a2e79b04",
+    "agent/geode-trajectory.json": "854729bbc7ef8b2757ee36dd3ed7c143477c2e40e105381b5dc84f3a65498c51",
+    "agent/geode-trajectory.private.json": "5f3a8108472edddba76b296e643c7a00614136c3e1d6afadf9e5ed1ba5736479",
+    "agent/handoff-result.json": "14214b45c78476f228345e64668bdcc353f2aedd3629ca55c5783410c827bc77",
+    "agent/handoff.json": "52aa9d8af1016a401d9b1ef8ee2406e4aba28799b0157b147f37f350c2440e02",
+    "agent/recording.cast": "d003ddb8f3ba8d1c94e306834c94b91e306e6b2019fdc88c9e18415dd12bdfb7",
+    "agent/recording.receipt.json": "da93dd81c65e51890768603c4ef1943f518a6f1c03387273acb42874e1734a44",
+    "agent/runtime-contract.json": "c9f70bbaf3fb1135ad49c8f579e8c337d75bf35502218b7e55df2e41f8a078d0",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "74e44b4852b86846bc08c06db98fbcb30e9c6c05afa8edb63b822656b1980888",
+    "agent/trajectory.json": "e55803567872bea87d8fe4a9e32c49ddf0063d8ac27720271cb90acc97b2db37",
+    "agent/verification.json": "638eca6dfef1083889bc2ac9ff2aea958ff3b74ccf6ad39a316e9c8e8ee485d8",
+    "result.json": "6922ddf26d4339e78f3e591b04f865860e2e9672cdc936244193324c7c9ae83c"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "0a85075f70857e588cefeaf33ab4d9ba29bdcb275c21995cedc358af2aa99352",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "a650046b20c35e4b8bb5733738e6806c60b13ca451829e3ba2888385a2e79b04",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "22307a57562d0cac03ce0af7a41d261dda91f9bc5819578cf3a90b8a2a2987e6",
+  "task_name": "nat-e2e-headphones-46ab0755b829",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-headphones-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

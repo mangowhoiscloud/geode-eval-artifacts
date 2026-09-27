@@ -1,0 +1,71 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-score-bestof-controlled-20260927-r5",
+  "analyzed_at": "2026-09-27T00:43:04.930162+00:00",
+  "run_spec_sha256": "bea4c466d06edaed4e3fa44398c64f1de7d49643144c26f1c0a5ac797e1181d2",
+  "attempts_sha256": "f0c905ea135d4f3dc4772f2779dc79932bcc194028f9de3e2a5ea0b93cce3e4f",
+  "selected_attempt_ids": [
+    "geode-jev-score-bestof-controlled-20260927-r5-score-analysis"
+  ],
+  "answer": "U4: -0.2625; frozen diagnostic decision not-supported.",
+  "metrics": [
+    {
+      "name": "score_ctl_top1_delta",
+      "value": -0.2625,
+      "numerator": -21,
+      "denominator": 80,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary_metric/value",
+        "numerator": "/primary_metric/numerator",
+        "denominator": "/primary_metric/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "not-supported",
+    "rationale": "05 §3.4; U4/X2 strict -0.10 CI bounds; U5 descriptive mixed. Selected infrastructure invalidity is not measurable."
+  },
+  "limitations": [
+    "No superiority or latency claim; no external tuning or p-value.",
+    "Missing usage stays unknown; analysis timestamps are not execution timing.",
+    "Candidate width and two presentation orders are not independent repetitions.",
+    "Intervals below 10 source clusters are unavailable; split strata are descriptive.",
+    "Signed CI bounds stay in digest-bound results.json /interval_metrics: native v1 forbids negative secondary numerators, so no lossy secondary projection is made."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "8f6eca04e3f725632e42721213e91988971a007452b403b69c088fee89ca3513"
+    },
+    {
+      "kind": "other",
+      "path": "freeze.json",
+      "sha256": "66fc49db706209e49eeb1b6ffa93e261c30f14b8f711d4a39de9c99c80425ca0"
+    },
+    {
+      "kind": "other",
+      "path": "execution-receipt.json",
+      "sha256": "66862d25dfcd867427cc241ff0e70bc674f1ad08a6009c8e3df7658eb86c5646"
+    },
+    {
+      "kind": "other",
+      "path": "private-receipts/geode-jev-score-bestof-controlled-20260927-r5-block.json",
+      "sha256": "d8630407678b724262be8fb6e66813ba3c1d98690c5d44ef49b61929bc397a4d"
+    },
+    {
+      "kind": "other",
+      "path": "dispatch-records.jsonl",
+      "sha256": "e7707671e1ad494089b85d35a1cf7af08ac7949a9ada20bd44998faf23802612"
+    },
+    {
+      "kind": "other",
+      "path": "timings.json",
+      "sha256": "c9b708a911c9532725c51c7b635a91a81acd8f2cbbe539ae9170032f1056a19c"
+    }
+  ]
+}

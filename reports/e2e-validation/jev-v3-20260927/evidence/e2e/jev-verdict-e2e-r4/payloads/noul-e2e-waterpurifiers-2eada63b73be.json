@@ -1,0 +1,152 @@
+{
+  "case": {
+    "id": "noul-e2e-waterpurifiers-2eada63b73be",
+    "items": [
+      {
+        "candidates": [],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg1",
+        "request": "정수기 필터를 주문했는데 주문번호를 모르겠어요. 언제 도착하나요?"
+      },
+      {
+        "candidates": [
+          "B-284"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "B-284",
+          "status": null
+        },
+        "expected_intent": "cancel",
+        "expected_order": "B-284",
+        "id": "msg2",
+        "request": "B-284 주문 취소해 주세요. 설치 공간이 부족하네요."
+      },
+      {
+        "candidates": [
+          "B-731"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "B-731",
+          "status": "shipped"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "B-731",
+        "id": "msg3",
+        "request": "B-731 지금 어디쯤 왔는지 알려 주세요."
+      },
+      {
+        "candidates": [
+          "B-506",
+          "B-163"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "B-163",
+          "status": "out_for_delivery"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "B-163",
+        "id": "msg4",
+        "request": "B-506은 작년에 산 정수기이고, 이번에 확인할 주문은 B-163이에요."
+      },
+      {
+        "candidates": [
+          "B-948"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "B-948",
+          "status": "on_hold"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "B-948",
+        "id": "msg5",
+        "request": "B-948 환불해 달라는 게 아니라 상태만 궁금합니다."
+      },
+      {
+        "candidates": [
+          "B-372",
+          "B-615"
+        ],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg6",
+        "request": "B-372랑 B-615 중에 어느 게 냉온수 정수기인지 헷갈려요. 그 주문 배송 상태 알려 주세요."
+      },
+      {
+        "candidates": [
+          "B-827"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "B-827",
+          "status": null
+        },
+        "expected_intent": "other",
+        "expected_order": "B-827",
+        "id": "msg7",
+        "request": "B-827 받는 주소를 회사로 바꿔 주실 수 있나요?"
+      },
+      {
+        "candidates": [
+          "B-059"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "B-059",
+          "status": "shipped"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "B-059",
+        "id": "msg8",
+        "request": "B-059 배송 조회 부탁드려요."
+      },
+      {
+        "candidates": [
+          "B-440"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "B-440",
+          "status": "processing"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "B-440",
+        "id": "msg9",
+        "request": "B-440 현재 상태 좀 확인해 주세요."
+      }
+    ],
+    "profile": "inbox",
+    "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;정수기 필터를 주문했는데 주문번호를 모르겠어요. 언제 도착하나요?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;B-284 주문 취소해 주세요. 설치 공간이 부족하네요.&quot;, &quot;candidates&quot;: [&quot;B-284&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;B-731 지금 어디쯤 왔는지 알려 주세요.&quot;, &quot;candidates&quot;: [&quot;B-731&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;B-506은 작년에 산 정수기이고, 이번에 확인할 주문은 B-163이에요.&quot;, &quot;candidates&quot;: [&quot;B-506&quot;, &quot;B-163&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;B-948 환불해 달라는 게 아니라 상태만 궁금합니다.&quot;, &quot;candidates&quot;: [&quot;B-948&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;B-372랑 B-615 중에 어느 게 냉온수 정수기인지 헷갈려요. 그 주문 배송 상태 알려 주세요.&quot;, &quot;candidates&quot;: [&quot;B-372&quot;, &quot;B-615&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;B-827 받는 주소를 회사로 바꿔 주실 수 있나요?&quot;, &quot;candidates&quot;: [&quot;B-827&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;B-059 배송 조회 부탁드려요.&quot;, &quot;candidates&quot;: [&quot;B-059&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;B-440 현재 상태 좀 확인해 주세요.&quot;, &quot;candidates&quot;: [&quot;B-440&quot;]}]</inbox>"
+  },
+  "intervention": null,
+  "orders": {
+    "B-059": "shipped",
+    "B-163": "out_for_delivery",
+    "B-284": "processing",
+    "B-372": "backordered",
+    "B-440": "processing",
+    "B-506": "delivered",
+    "B-615": "delivered",
+    "B-731": "shipped",
+    "B-827": "cancelled",
+    "B-948": "on_hold"
+  },
+  "verification_intervention": {
+    "candidate_output": "{\"items\": [{\"id\": \"msg1\", \"order_id\": null, \"status\": null, \"disposition\": \"needs_clarification\"}, {\"id\": \"msg2\", \"order_id\": \"B-284\", \"status\": null, \"disposition\": \"unsupported\"}, {\"id\": \"msg3\", \"order_id\": \"B-731\", \"status\": \"shipped\", \"disposition\": \"answered\"}, {\"id\": \"msg4\", \"order_id\": \"B-163\", \"status\": \"out_for_delivery\", \"disposition\": \"answered\"}, {\"id\": \"msg5\", \"order_id\": \"B-948\", \"status\": \"on_hold\", \"disposition\": \"answered\"}, {\"id\": \"msg6\", \"order_id\": null, \"status\": null, \"disposition\": \"needs_clarification\"}, {\"id\": \"msg7\", \"order_id\": \"B-827\", \"status\": null, \"disposition\": \"unsupported\"}, {\"id\": \"msg8\", \"order_id\": \"B-059\", \"status\": \"shipped\", \"disposition\": \"answered\"}, {\"id\": \"msg9\", \"order_id\": \"B-440\", \"status\": \"processing\", \"disposition\": \"answered\"}]}",
+    "when": "before_observation"
+  }
+}

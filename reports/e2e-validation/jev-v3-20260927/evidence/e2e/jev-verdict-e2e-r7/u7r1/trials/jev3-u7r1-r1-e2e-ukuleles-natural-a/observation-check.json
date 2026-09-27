@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 2048,
+        "total": 2048
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 12188,
+        "total": 12188
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1207,
+        "total": 1207
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "b9b34952e3cd2e9693e9ef3d80821f25c0831714dfc78178e0740691ac15000f",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "af8e3a5b0c6505bbee6c13989ddd71a4704997d41bfd643d276667c4f2245b3c",
+    "agent/geode-trajectory.json": "efd76cc9a51b37dbd11809a47c558d8b33fa8878aabbdf5a8bb7cb49c088c93a",
+    "agent/geode-trajectory.private.json": "521f019dfc255b38bf92b7832d0780791d941a61285f9f109173a227df7f16e2",
+    "agent/handoff-result.json": "8d9594130ada4e88d034592b6584e8b21d4da18ab74e1789531f9219cf70faf1",
+    "agent/handoff.json": "360e946602b0f0434d6f6637df01336bb8dafdf27f8e5533670a68bd2069828b",
+    "agent/recording.cast": "4625cc3337bfd2eaec9d0e7f14a265d30131157726b53fc2160a6febbbf8bb4c",
+    "agent/recording.receipt.json": "5f988766019688bceb2cb0ef48539d3273b64daa61f8caebc95f9ab18f72495a",
+    "agent/runtime-contract.json": "284720adfb0c6b3b5e4f26b9d26b49725c4698ae569bda2bcc17a731a00a48e2",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "c5700a33fffe2e4d4c72e20929aad99430f822985d293458bc73c63025392313",
+    "agent/trajectory.json": "d479d648161a65be23f57828f606e308011c0d8a2e6c0f82afc320f589d7be0c",
+    "agent/verification.json": "bde2f7756b5177c1e64004ed756445995f9b2c75adc1f4150c5c99d2fb63d2ab",
+    "result.json": "39a56f93d5839287aabcd7d22aef95b47e07f9768893c8ff9ddd297a2690d1f5"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "5cdd2f0d639ba7b91a09db7a27530cef3b7165a1e43f1ca3e782e6f3f019c983",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r1-20260927-r7",
+  "run_spec_sha256": "7ae2e1e44009d8e054955223ef8e42eccea0f67ce28f967a49222f3d3d6d28a5",
+  "source_reconciliation": {
+    "database_sha256": "af8e3a5b0c6505bbee6c13989ddd71a4704997d41bfd643d276667c4f2245b3c",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "133ecf07c278de4952375394d8801abe214d91258473faad6e5aa8660fd88c72",
+  "task_name": "nat-e2e-ukuleles-a0089cf3a6de",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r1-r1-e2e-ukuleles-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

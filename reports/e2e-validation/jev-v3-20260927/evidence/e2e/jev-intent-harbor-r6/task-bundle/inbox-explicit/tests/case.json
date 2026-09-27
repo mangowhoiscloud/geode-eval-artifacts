@@ -1,0 +1,174 @@
+{
+  "id": "inbox-explicit",
+  "items": [
+    {
+      "candidates": [
+        "C-318"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "C-318",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "C-318",
+      "id": "plain_one",
+      "request": "What is the current status of C-318?"
+    },
+    {
+      "candidates": [
+        "D-427"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "D-427",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "D-427",
+      "id": "plain_two",
+      "request": "Check whether D-427 has arrived."
+    },
+    {
+      "candidates": [
+        "E-536"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "E-536",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "E-536",
+      "id": "plain_three",
+      "request": "Please look up E-536 and tell me its status."
+    },
+    {
+      "candidates": [
+        "F-645"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "F-645",
+        "status": "cancelled"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "F-645",
+      "id": "plain_four",
+      "request": "Is F-645 still being processed? Just check it."
+    },
+    {
+      "candidates": [
+        "G-754"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "G-754",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "G-754",
+      "id": "plain_five",
+      "request": "Show the latest status for G-754."
+    },
+    {
+      "candidates": [
+        "H-863"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "H-863",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "H-863",
+      "id": "plain_six",
+      "request": "H-863 is my purchase. Has it been delivered?"
+    },
+    {
+      "candidates": [
+        "I-972"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "I-972",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "I-972",
+      "id": "plain_seven",
+      "request": "I only need an update on I-972."
+    },
+    {
+      "candidates": [
+        "J-081"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "J-081",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "J-081",
+      "id": "plain_eight",
+      "request": "Find the current shipping state of J-081."
+    },
+    {
+      "candidates": [
+        "C-318"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "C-318",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "C-318",
+      "id": "plain_nine",
+      "request": "Cancel my order C-318 now."
+    },
+    {
+      "candidates": [
+        "D-427"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "D-427",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "D-427",
+      "id": "plain_ten",
+      "request": "I want a refund for D-427."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "plain_eleven",
+      "request": "Could you check my delivery? I cannot find the order number."
+    },
+    {
+      "candidates": [
+        "C-318",
+        "D-427"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "plain_twelve",
+      "request": "Tell me the status of both C-318 and D-427."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;plain_one&quot;, &quot;request&quot;: &quot;What is the current status of C-318?&quot;, &quot;candidates&quot;: [&quot;C-318&quot;]}, {&quot;id&quot;: &quot;plain_two&quot;, &quot;request&quot;: &quot;Check whether D-427 has arrived.&quot;, &quot;candidates&quot;: [&quot;D-427&quot;]}, {&quot;id&quot;: &quot;plain_three&quot;, &quot;request&quot;: &quot;Please look up E-536 and tell me its status.&quot;, &quot;candidates&quot;: [&quot;E-536&quot;]}, {&quot;id&quot;: &quot;plain_four&quot;, &quot;request&quot;: &quot;Is F-645 still being processed? Just check it.&quot;, &quot;candidates&quot;: [&quot;F-645&quot;]}, {&quot;id&quot;: &quot;plain_five&quot;, &quot;request&quot;: &quot;Show the latest status for G-754.&quot;, &quot;candidates&quot;: [&quot;G-754&quot;]}, {&quot;id&quot;: &quot;plain_six&quot;, &quot;request&quot;: &quot;H-863 is my purchase. Has it been delivered?&quot;, &quot;candidates&quot;: [&quot;H-863&quot;]}, {&quot;id&quot;: &quot;plain_seven&quot;, &quot;request&quot;: &quot;I only need an update on I-972.&quot;, &quot;candidates&quot;: [&quot;I-972&quot;]}, {&quot;id&quot;: &quot;plain_eight&quot;, &quot;request&quot;: &quot;Find the current shipping state of J-081.&quot;, &quot;candidates&quot;: [&quot;J-081&quot;]}, {&quot;id&quot;: &quot;plain_nine&quot;, &quot;request&quot;: &quot;Cancel my order C-318 now.&quot;, &quot;candidates&quot;: [&quot;C-318&quot;]}, {&quot;id&quot;: &quot;plain_ten&quot;, &quot;request&quot;: &quot;I want a refund for D-427.&quot;, &quot;candidates&quot;: [&quot;D-427&quot;]}, {&quot;id&quot;: &quot;plain_eleven&quot;, &quot;request&quot;: &quot;Could you check my delivery? I cannot find the order number.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;plain_twelve&quot;, &quot;request&quot;: &quot;Tell me the status of both C-318 and D-427.&quot;, &quot;candidates&quot;: [&quot;C-318&quot;, &quot;D-427&quot;]}]</inbox>"
+}

@@ -1,0 +1,478 @@
+{
+  "acceptance_rule": "accepted receipt with verdict supported; an invalid output is wrong and never an acceptance",
+  "decision": "supported",
+  "descriptive": {
+    "cascade": {
+      "accuracy": {
+        "denominator": 239,
+        "numerator": 133,
+        "value": 0.5564853556485355
+      },
+      "coverage": {
+        "denominator": 239,
+        "numerator": 207,
+        "value": 0.8661087866108786
+      },
+      "tau": 0.5
+    },
+    "engines": {
+      "jev": {
+        "accept_brier": {
+          "denominator": 239,
+          "numerator": 76.9504,
+          "value": 0.3219682008368201
+        },
+        "accept_ece": {
+          "denominator": 239,
+          "numerator": 80.38,
+          "value": 0.33631799163179915
+        },
+        "aurc": {
+          "denominator": 239,
+          "numerator": 87.69531826150913,
+          "value": 0.36692601783058215
+        },
+        "error_detection_auroc": {
+          "denominator": 14008,
+          "numerator": 8211.5,
+          "value": 0.5862007424328954
+        },
+        "frozen_t": {
+          "accept_brier": {
+            "denominator": 239,
+            "numerator": 73.06455713154271,
+            "value": 0.30570944406503225
+          },
+          "accept_ece": {
+            "denominator": 239,
+            "numerator": 75.65382099048247,
+            "value": 0.3165431840605961
+          },
+          "temperature": 1.4
+        },
+        "risk_at_coverage": {
+          "0.5": 0.36666666666666664,
+          "0.8": 0.3854166666666667
+        }
+      },
+      "llm": {
+        "accept_brier": {
+          "denominator": 239,
+          "numerator": 109.24059901999999,
+          "value": 0.45707363606694557
+        },
+        "accept_ece": {
+          "denominator": 239,
+          "numerator": 110.22279999999999,
+          "value": 0.46118326359832634
+        },
+        "aurc": {
+          "denominator": 239,
+          "numerator": 83.06754332362142,
+          "value": 0.34756294277665867
+        },
+        "error_detection_auroc": {
+          "denominator": 14250,
+          "numerator": 8703.0,
+          "value": 0.6107368421052631
+        },
+        "frozen_t": {
+          "accept_brier": {
+            "denominator": 239,
+            "numerator": 70.02970854442793,
+            "value": 0.2930113328218742
+          },
+          "accept_ece": {
+            "denominator": 239,
+            "numerator": 59.23689070982323,
+            "value": 0.24785309920428128
+          },
+          "temperature": 8.0
+        },
+        "risk_at_coverage": {
+          "0.5": 0.4,
+          "0.8": 0.453125
+        }
+      }
+    },
+    "reference_agreement": {
+      "gpt_eval_score": {
+        "denominator": 206,
+        "numerator": 156,
+        "value": 0.7572815533980582
+      },
+      "mm_is_success_legacy": {
+        "denominator": 217,
+        "numerator": 159,
+        "value": 0.7327188940092166
+      },
+      "uv_outcome_success": {
+        "denominator": 225,
+        "numerator": 182,
+        "value": 0.8088888888888889
+      },
+      "verifier_is_success_legacy": {
+        "denominator": 217,
+        "numerator": 163,
+        "value": 0.7511520737327189
+      }
+    },
+    "strata": {
+      "length_quartile": {
+        "Q1": {
+          "delta": {
+            "denominator": 60,
+            "numerator": -3,
+            "value": -0.05
+          },
+          "items": 60,
+          "jev": {
+            "denominator": 60,
+            "numerator": 27,
+            "value": 0.45
+          },
+          "llm": {
+            "denominator": 60,
+            "numerator": 30,
+            "value": 0.5
+          }
+        },
+        "Q2": {
+          "delta": {
+            "denominator": 60,
+            "numerator": 0,
+            "value": 0.0
+          },
+          "items": 60,
+          "jev": {
+            "denominator": 60,
+            "numerator": 37,
+            "value": 0.6166666666666667
+          },
+          "llm": {
+            "denominator": 60,
+            "numerator": 37,
+            "value": 0.6166666666666667
+          }
+        },
+        "Q3": {
+          "delta": {
+            "denominator": 60,
+            "numerator": 4,
+            "value": 0.06666666666666667
+          },
+          "items": 60,
+          "jev": {
+            "denominator": 60,
+            "numerator": 35,
+            "value": 0.5833333333333334
+          },
+          "llm": {
+            "denominator": 60,
+            "numerator": 31,
+            "value": 0.5166666666666667
+          }
+        },
+        "Q4": {
+          "delta": {
+            "denominator": 59,
+            "numerator": 10,
+            "value": 0.1694915254237288
+          },
+          "items": 59,
+          "jev": {
+            "denominator": 59,
+            "numerator": 37,
+            "value": 0.6271186440677966
+          },
+          "llm": {
+            "denominator": 59,
+            "numerator": 27,
+            "value": 0.4576271186440678
+          }
+        }
+      },
+      "no_answer": {
+        "no": {
+          "delta": {
+            "denominator": 235,
+            "numerator": 11,
+            "value": 0.04680851063829787
+          },
+          "items": 235,
+          "jev": {
+            "denominator": 235,
+            "numerator": 132,
+            "value": 0.5617021276595745
+          },
+          "llm": {
+            "denominator": 235,
+            "numerator": 121,
+            "value": 0.5148936170212766
+          }
+        },
+        "yes": {
+          "delta": {
+            "denominator": 4,
+            "numerator": 0,
+            "value": 0.0
+          },
+          "items": 4,
+          "jev": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "llm": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          }
+        }
+      },
+      "reviewers": {
+        "1": {
+          "delta": {
+            "denominator": 154,
+            "numerator": 11,
+            "value": 0.07142857142857142
+          },
+          "items": 154,
+          "jev": {
+            "denominator": 154,
+            "numerator": 79,
+            "value": 0.512987012987013
+          },
+          "llm": {
+            "denominator": 154,
+            "numerator": 68,
+            "value": 0.44155844155844154
+          }
+        },
+        "2-3": {
+          "delta": {
+            "denominator": 85,
+            "numerator": 0,
+            "value": 0.0
+          },
+          "items": 85,
+          "jev": {
+            "denominator": 85,
+            "numerator": 57,
+            "value": 0.6705882352941176
+          },
+          "llm": {
+            "denominator": 85,
+            "numerator": 57,
+            "value": 0.6705882352941176
+          }
+        }
+      },
+      "source_split": {
+        "fara7b_om2w_browserbase": {
+          "delta": {
+            "denominator": 85,
+            "numerator": 0,
+            "value": 0.0
+          },
+          "items": 85,
+          "jev": {
+            "denominator": 85,
+            "numerator": 57,
+            "value": 0.6705882352941176
+          },
+          "llm": {
+            "denominator": 85,
+            "numerator": 57,
+            "value": 0.6705882352941176
+          }
+        },
+        "internal": {
+          "delta": {
+            "denominator": 154,
+            "numerator": 11,
+            "value": 0.07142857142857142
+          },
+          "items": 154,
+          "jev": {
+            "denominator": 154,
+            "numerator": 79,
+            "value": 0.512987012987013
+          },
+          "llm": {
+            "denominator": 154,
+            "numerator": 68,
+            "value": 0.44155844155844154
+          }
+        }
+      }
+    }
+  },
+  "engines": {
+    "jev": {
+      "accept_auroc": {
+        "denominator": 14280,
+        "numerator": 10901.0,
+        "value": 0.763375350140056
+      },
+      "balanced_accuracy": {
+        "denominator": 2,
+        "numerator": 1.134873949579832,
+        "value": 0.567436974789916
+      },
+      "binary_accuracy": {
+        "denominator": 239,
+        "numerator": 136,
+        "value": 0.5690376569037657
+      },
+      "false_acceptance_rate": {
+        "denominator": 120,
+        "numerator": 6,
+        "value": 0.05
+      },
+      "false_rejection_rate": {
+        "denominator": 119,
+        "numerator": 97,
+        "value": 0.8151260504201681
+      },
+      "selective": {
+        "coverage": {
+          "denominator": 239,
+          "numerator": 207,
+          "value": 0.8661087866108786
+        },
+        "risk": {
+          "denominator": 207,
+          "numerator": 82,
+          "value": 0.3961352657004831
+        }
+      },
+      "true_negative_rate": {
+        "denominator": 120,
+        "numerator": 114,
+        "value": 0.95
+      },
+      "true_positive_rate": {
+        "denominator": 119,
+        "numerator": 22,
+        "value": 0.18487394957983194
+      }
+    },
+    "llm": {
+      "accept_auroc": {
+        "denominator": 14280,
+        "numerator": 10433.0,
+        "value": 0.7306022408963585
+      },
+      "balanced_accuracy": {
+        "denominator": 2,
+        "numerator": 1.0420868347338936,
+        "value": 0.5210434173669468
+      },
+      "binary_accuracy": {
+        "denominator": 239,
+        "numerator": 125,
+        "value": 0.5230125523012552
+      },
+      "false_acceptance_rate": {
+        "denominator": 120,
+        "numerator": 1,
+        "value": 0.008333333333333333
+      },
+      "false_rejection_rate": {
+        "denominator": 119,
+        "numerator": 113,
+        "value": 0.9495798319327731
+      },
+      "true_negative_rate": {
+        "denominator": 120,
+        "numerator": 119,
+        "value": 0.9916666666666667
+      },
+      "true_positive_rate": {
+        "denominator": 119,
+        "numerator": 6,
+        "value": 0.05042016806722689
+      }
+    }
+  },
+  "gold_rule": "UV-blind human strict-majority Correct; the builder excluded ties",
+  "jev_accept_auroc_interval": {
+    "clusters": 133,
+    "confidence": 0.95,
+    "estimate": 0.763375350140056,
+    "lower": 0.7122541371845426,
+    "measurable_replicates": 2000,
+    "method": "source-cluster percentile bootstrap",
+    "replicates": 2000,
+    "seed": 13663686911481738339,
+    "upper": 0.8150663226095523
+  },
+  "mcnemar": {
+    "b": {
+      "denominator": 239,
+      "numerator": 22,
+      "value": 0.09205020920502092
+    },
+    "c": {
+      "denominator": 239,
+      "numerator": 11,
+      "value": 0.04602510460251046
+    }
+  },
+  "planned_items": 239,
+  "primary": {
+    "denominator": 239,
+    "interval": {
+      "clusters": 133,
+      "confidence": 0.95,
+      "estimate": 0.04602510460251046,
+      "lower": 0.004114804695405789,
+      "measurable_replicates": 2000,
+      "method": "source-cluster percentile bootstrap",
+      "replicates": 2000,
+      "seed": 3758731371951558559,
+      "upper": 0.09360658498589527
+    },
+    "name": "x1_binary_verdict_accuracy_delta",
+    "numerator": 11,
+    "reasons": [],
+    "value": 0.04602510460251046
+  },
+  "schema_id": "geode.jev-x1-binary@1",
+  "tau": {
+    "q": "receipt q, the three-label maximum",
+    "source": "selection-freeze.json cascade.tau; never fitted on external data",
+    "value": 0.5
+  },
+  "verdicts": {
+    "jev": {
+      "gold_accept": {
+        "contradicted": 17,
+        "insufficient_evidence": 80,
+        "invalid": 0,
+        "supported": 22
+      },
+      "gold_reject": {
+        "contradicted": 26,
+        "insufficient_evidence": 88,
+        "invalid": 0,
+        "supported": 6
+      }
+    },
+    "llm": {
+      "gold_accept": {
+        "contradicted": 16,
+        "insufficient_evidence": 97,
+        "invalid": 0,
+        "supported": 6
+      },
+      "gold_reject": {
+        "contradicted": 35,
+        "insufficient_evidence": 84,
+        "invalid": 0,
+        "supported": 1
+      }
+    }
+  }
+}

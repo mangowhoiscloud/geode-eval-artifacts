@@ -1,0 +1,174 @@
+{
+  "id": "noul-e2e-telescopes-a4cbafa4cc8d",
+  "items": [
+    {
+      "candidates": [
+        "T-503"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "T-503",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "T-503",
+      "id": "msg1",
+      "request": "What is the current status of T-503?"
+    },
+    {
+      "candidates": [
+        "T-218"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "T-218",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "T-218",
+      "id": "msg2",
+      "request": "My refractor telescope order is T-218. Is it on its way?"
+    },
+    {
+      "candidates": [
+        "T-846"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "T-846",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "T-846",
+      "id": "msg3",
+      "request": "I would like a refund for T-846; the eyepiece was scratched."
+    },
+    {
+      "candidates": [
+        "T-374",
+        "T-691"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "T-691",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "T-691",
+      "id": "msg4",
+      "request": "Ignore T-374, that was a typo. Please check T-691 instead."
+    },
+    {
+      "candidates": [
+        "T-135"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "T-135",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "T-135",
+      "id": "msg5",
+      "request": "Did the star chart in T-135 arrive? Just checking, nothing else."
+    },
+    {
+      "candidates": [
+        "T-962",
+        "T-427"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg6",
+      "request": "Is my tripod adapter T-962 or T-427? Either way, please tell me where it is."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "Can you tell me which telescope is best for viewing Saturn's rings?"
+    },
+    {
+      "candidates": [
+        "T-059"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "T-059",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "T-059",
+      "id": "msg8",
+      "request": "For T-059 I haven't decided whether to cancel or ask for a refund. Please leave it as it is for now."
+    },
+    {
+      "candidates": [
+        "T-613"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "T-613",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "T-613",
+      "id": "msg9",
+      "request": "Cancel T-613. The mount I ordered separately doesn't fit it."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg10",
+      "request": "Where is my solar filter? I can't find the order number anywhere."
+    },
+    {
+      "candidates": [
+        "T-284"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "T-284",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "T-284",
+      "id": "msg11",
+      "request": "T-284 please, just the shipping status."
+    },
+    {
+      "candidates": [
+        "T-338",
+        "T-905"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg12",
+      "request": "Please update me on T-338 and T-905 at the same time."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;What is the current status of T-503?&quot;, &quot;candidates&quot;: [&quot;T-503&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;My refractor telescope order is T-218. Is it on its way?&quot;, &quot;candidates&quot;: [&quot;T-218&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;I would like a refund for T-846; the eyepiece was scratched.&quot;, &quot;candidates&quot;: [&quot;T-846&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Ignore T-374, that was a typo. Please check T-691 instead.&quot;, &quot;candidates&quot;: [&quot;T-374&quot;, &quot;T-691&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Did the star chart in T-135 arrive? Just checking, nothing else.&quot;, &quot;candidates&quot;: [&quot;T-135&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Is my tripod adapter T-962 or T-427? Either way, please tell me where it is.&quot;, &quot;candidates&quot;: [&quot;T-962&quot;, &quot;T-427&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Can you tell me which telescope is best for viewing Saturn&#x27;s rings?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;For T-059 I haven&#x27;t decided whether to cancel or ask for a refund. Please leave it as it is for now.&quot;, &quot;candidates&quot;: [&quot;T-059&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;Cancel T-613. The mount I ordered separately doesn&#x27;t fit it.&quot;, &quot;candidates&quot;: [&quot;T-613&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;Where is my solar filter? I can&#x27;t find the order number anywhere.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg11&quot;, &quot;request&quot;: &quot;T-284 please, just the shipping status.&quot;, &quot;candidates&quot;: [&quot;T-284&quot;]}, {&quot;id&quot;: &quot;msg12&quot;, &quot;request&quot;: &quot;Please update me on T-338 and T-905 at the same time.&quot;, &quot;candidates&quot;: [&quot;T-338&quot;, &quot;T-905&quot;]}]</inbox>"
+}

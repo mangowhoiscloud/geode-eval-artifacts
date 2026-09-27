@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r5/payloads/noul-e2e-trampolines-211a0518ea9c.json",
+      "case_sha256": "8cf11582e45dc6da4c87d7cf0ed85737979ce6a6cc80b40f2dc3dc1bb3c10ff0",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-verdict-e2e-r5/source.tar.gz",
+      "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+      "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+      "typesafe_key_file": "source-runs/jev-verdict-e2e-r5/private-secrets/jev-9fblec0k.key",
+      "verification_engine": "jev",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r5/task-bundle/noul-e2e-trampolines-211a0518ea9c"
+  },
+  "trial_name": "jev3-u8c-r0-e2e-trampolines-c1m0-b",
+  "trials_dir": "source-runs/jev-verdict-e2e-r5/u8c/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

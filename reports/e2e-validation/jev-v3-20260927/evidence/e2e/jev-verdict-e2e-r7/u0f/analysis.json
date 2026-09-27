@@ -1,0 +1,76 @@
+{
+  "analyzed_at": "2026-09-27T13:54:34.560660+00:00",
+  "answer": "Complete diagnostic; paired concurrent slots; interpret with burden and consumption.",
+  "attempts_sha256": "9d370fb4330c7f7faec3bd68223932204ddf03c7280ff22d4cc2eadf808b46cd",
+  "decision": {
+    "hypothesis_status": "supported",
+    "outcome": "diagnostic-only",
+    "rationale": "05 v2 §3.4: admission units pass or fail; U7 and U8 are descriptive."
+  },
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s15-shoes-natural-c/evidence-manifest.json",
+      "sha256": "81280598afdb652993392ef7e80951a470463b83641377b4cfa5f055c686893d"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s15-shoes-natural-c/result.json",
+      "sha256": "e984640072828c10e3d99470f56007862f733a4e9f140a488c4a6ba101c42b61"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s15-shoes-natural-c/trial-receipt.json",
+      "sha256": "b5006e2b4b8d062feb3033125d58946a0a629b01480233f2b229e77cc75c586e"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s05-fishing-c1m1-c/evidence-manifest.json",
+      "sha256": "df8ced06e506edb325ea5cdf5b8f705f1f8f5bd4f84525eacf72d7d89b997a01"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s05-fishing-c1m1-c/result.json",
+      "sha256": "a1219961edd371fab7028873ca088e8ed0695124e5889b682564b4e02b15d638"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0f-r0-cl-s05-fishing-c1m1-c/trial-receipt.json",
+      "sha256": "22a04623380ec08a693a5e3c8c3b0a9cfb8c92a054b2a00d675e32569b08dcf9"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "fb965724427ef19dc7f2665127979a2f5231a7efdde20e494c5dd1e58177340d"
+    }
+  ],
+  "limitations": [
+    "Shared Codex account: external usage unknown; latency is interpreted within pairs only.",
+    "pair_sync=false pairs are excluded from within-pair latency, kept for success and recovery.",
+    "Actual charges unknown; Jev amounts are tariff estimates from the host ledger."
+  ],
+  "metrics": [
+    {
+      "denominator": 2,
+      "name": "cascade_e2e_admission_success",
+      "numerator": 2,
+      "source_locator": {
+        "denominator": "/primary/denominator",
+        "numerator": "/primary/numerator",
+        "value": "/primary/value"
+      },
+      "source_ref": "results.json",
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "run_id": "geode-jev-verdict-e2e-cascade-admission-20260927-r7",
+  "run_spec_sha256": "714c6c615fad0264bccfb5541601fe7d63e8bb3f20c31c49dbe99012af3a338d",
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "selected_attempt_ids": [
+    "geode-jev-verdict-e2e-cascade-admission-20260927-r7-a0000",
+    "geode-jev-verdict-e2e-cascade-admission-20260927-r7-a0001",
+    "geode-jev-verdict-e2e-cascade-admission-20260927-r7-aggregate"
+  ]
+}

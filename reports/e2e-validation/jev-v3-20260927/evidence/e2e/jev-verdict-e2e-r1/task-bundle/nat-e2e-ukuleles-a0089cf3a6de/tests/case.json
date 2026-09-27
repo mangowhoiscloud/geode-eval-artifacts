@@ -1,0 +1,173 @@
+{
+  "id": "nat-e2e-ukuleles-a0089cf3a6de",
+  "items": [
+    {
+      "candidates": [
+        "U-652"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "U-652",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "U-652",
+      "id": "msg1",
+      "request": "What's the status of U-652?"
+    },
+    {
+      "candidates": [
+        "U-309"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "U-309",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "U-309",
+      "id": "msg2",
+      "request": "Is my concert ukulele U-309 on the way?"
+    },
+    {
+      "candidates": [
+        "U-874"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "U-874",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "U-874",
+      "id": "msg3",
+      "request": "U-874 came with a cracked bridge. I'd like a refund."
+    },
+    {
+      "candidates": [
+        "U-127",
+        "U-495"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "U-495",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "U-495",
+      "id": "msg4",
+      "request": "Scratch U-127, I mistyped. Please check U-495."
+    },
+    {
+      "candidates": [
+        "U-782"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "U-782",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "U-782",
+      "id": "msg5",
+      "request": "I'm not cancelling U-782. Has it been delivered?"
+    },
+    {
+      "candidates": [
+        "U-261"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "U-261",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "U-261",
+      "id": "msg6",
+      "request": "Could you tune the strings on U-261 before you send it?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "Where is my ukulele gig bag? I don't have an order number."
+    },
+    {
+      "candidates": [
+        "U-983"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "U-983",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "U-983",
+      "id": "msg8",
+      "request": "Please cancel U-983. I'm going with a tenor model instead."
+    },
+    {
+      "candidates": [
+        "U-046",
+        "U-517"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg9",
+      "request": "My clip-on tuner is U-046 or U-517, I'm not certain which. Where is it?"
+    },
+    {
+      "candidates": [
+        "U-830"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "U-830",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "U-830",
+      "id": "msg10",
+      "request": "For U-830 I'm undecided between cancelling and a refund. Please don't do anything yet."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg11",
+      "request": "Which strings would you recommend for a beginner?"
+    },
+    {
+      "candidates": [
+        "U-173"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "U-173",
+        "status": "cancelled"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "U-173",
+      "id": "msg12",
+      "request": "Check U-173 for me, just the status."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;What&#x27;s the status of U-652?&quot;, &quot;candidates&quot;: [&quot;U-652&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Is my concert ukulele U-309 on the way?&quot;, &quot;candidates&quot;: [&quot;U-309&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;U-874 came with a cracked bridge. I&#x27;d like a refund.&quot;, &quot;candidates&quot;: [&quot;U-874&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Scratch U-127, I mistyped. Please check U-495.&quot;, &quot;candidates&quot;: [&quot;U-127&quot;, &quot;U-495&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;I&#x27;m not cancelling U-782. Has it been delivered?&quot;, &quot;candidates&quot;: [&quot;U-782&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Could you tune the strings on U-261 before you send it?&quot;, &quot;candidates&quot;: [&quot;U-261&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Where is my ukulele gig bag? I don&#x27;t have an order number.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Please cancel U-983. I&#x27;m going with a tenor model instead.&quot;, &quot;candidates&quot;: [&quot;U-983&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;My clip-on tuner is U-046 or U-517, I&#x27;m not certain which. Where is it?&quot;, &quot;candidates&quot;: [&quot;U-046&quot;, &quot;U-517&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;For U-830 I&#x27;m undecided between cancelling and a refund. Please don&#x27;t do anything yet.&quot;, &quot;candidates&quot;: [&quot;U-830&quot;]}, {&quot;id&quot;: &quot;msg11&quot;, &quot;request&quot;: &quot;Which strings would you recommend for a beginner?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg12&quot;, &quot;request&quot;: &quot;Check U-173 for me, just the status.&quot;, &quot;candidates&quot;: [&quot;U-173&quot;]}]</inbox>"
+}

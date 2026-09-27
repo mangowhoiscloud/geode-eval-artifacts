@@ -1,0 +1,21 @@
+schema_version = "1.4"
+artifacts = ["/logs/agent/handoff-result.json", "/logs/agent/handoff.json", "/logs/agent/runtime-finalized.json"]
+[metadata]
+name = "noul-e2e-waterpurifiers-b588160ad737"
+category = "diagnostic-decision-handoff"
+[agent]
+timeout_sec = 570
+[verifier]
+timeout_sec = 30
+network_mode = "no-network"
+[verifier.environment]
+cpus = 1
+memory_mb = 1024
+storage_mb = 1024
+network_mode = "no-network"
+[environment]
+docker_image = "python:3.12.12-slim-bookworm@sha256:593bd06efe90efa80dc4eee3948be7c0fde4134606dd40d8dd8dbcade98e669c"
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+network_mode = "public"

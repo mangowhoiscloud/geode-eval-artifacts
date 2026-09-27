@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-09-27T16:51:49.971156+09:00",
+  "scope": "arithmetic upper bound only, not rescoring or corrected performance",
+  "shadow_sha256": "ebf4f839c43124be320f4e45cd9eb4fa8b871d2a0b5a44dc80e4cd138c00643f",
+  "reason": "Only distinct changed pools can change a 0/1 pool outcome; all previously admitted outputs are unchanged. Assume every affected formerly invalid pool becomes correct to bound maximum gain.",
+  "bounds": {
+    "U4": {
+      "frozen_jev_numerator": 58,
+      "frozen_astra_numerator": 79,
+      "denominator": 80,
+      "affected_distinct_pools": 2,
+      "max_possible_jev_gain_pp": 2.5,
+      "frozen_point_delta_pp": -26.25,
+      "best_case_point_delta_pp_if_all_affected_pools_become_correct": -23.75,
+      "corrected_accuracy_measured": false,
+      "new_confidence_interval": null,
+      "frozen_results": {
+        "path": "[local-path-withheld]",
+        "sha256": "8f6eca04e3f725632e42721213e91988971a007452b403b69c088fee89ca3513"
+      },
+      "source_pointer": "/summary/selectors"
+    },
+    "X2": {
+      "frozen_jev_numerator": 194,
+      "frozen_astra_numerator": 226,
+      "denominator": 240,
+      "affected_distinct_pools": 3,
+      "max_possible_jev_gain_pp": 1.25,
+      "frozen_point_delta_pp": -13.333333333333334,
+      "best_case_point_delta_pp_if_all_affected_pools_become_correct": -12.083333333333334,
+      "corrected_accuracy_measured": false,
+      "new_confidence_interval": null,
+      "frozen_results": {
+        "path": "[local-path-withheld]",
+        "sha256": "0bb07aded502d78d2bc87031b0e060c35b25768f50863c2f16f8683ac23de3a6"
+      },
+      "source_pointer": "/summary/selectors"
+    }
+  },
+  "claim": "Boundary bug alone cannot reverse the observed pointwise ordering in U4 or X2. Frozen results and CI remain historical authorities; no corrected significance claim.",
+  "gold_read": false,
+  "model_calls": 0
+}

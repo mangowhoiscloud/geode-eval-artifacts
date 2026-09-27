@@ -1,0 +1,236 @@
+{
+  "fit_scope": "U1 fit scope: all 160 selection states; primary 144 headline; outside 16 descriptive.",
+  "headline": {
+    "both_true_flagged": {
+      "jev": {
+        "denominator": 36,
+        "numerator": 36,
+        "value": 1.0
+      },
+      "llm": {
+        "denominator": 36,
+        "numerator": 36,
+        "value": 1.0
+      }
+    },
+    "conditions": {
+      "has_contradiction": {
+        "jev": {
+          "accuracy": {
+            "denominator": 144,
+            "numerator": 72,
+            "value": 0.5
+          },
+          "auroc_error_detection": 0.8964120370370371,
+          "brier": 0.30297291666666665,
+          "ece": 0.35548611111111106,
+          "nll": 0.8140704716093062,
+          "planned": 144,
+          "valid": 144
+        },
+        "llm": {
+          "accuracy": {
+            "denominator": 144,
+            "numerator": 72,
+            "value": 0.5
+          },
+          "auroc_error_detection": 0.5972222222222222,
+          "brier": 0.4980652777777778,
+          "ece": 0.49902777777777785,
+          "nll": 6.012305520595564,
+          "planned": 144,
+          "valid": 144
+        }
+      },
+      "missing_evidence": {
+        "jev": {
+          "accuracy": {
+            "denominator": 144,
+            "numerator": 72,
+            "value": 0.5
+          },
+          "auroc_error_detection": 0.8572530864197531,
+          "brier": 0.29790625,
+          "ece": 0.2670138888888889,
+          "nll": 0.7991461195567461,
+          "planned": 144,
+          "valid": 144
+        },
+        "llm": {
+          "accuracy": {
+            "denominator": 144,
+            "numerator": 138,
+            "value": 0.9583333333333334
+          },
+          "auroc_error_detection": 0.8592995169082126,
+          "brier": 0.03948611111111111,
+          "ece": 0.03680555555555565,
+          "nll": 0.2219798686342785,
+          "planned": 144,
+          "valid": 144
+        }
+      }
+    },
+    "decision": "mixed",
+    "joint_accuracy": {
+      "jev": {
+        "denominator": 144,
+        "numerator": 36,
+        "value": 0.25
+      },
+      "llm": {
+        "denominator": 144,
+        "numerator": 66,
+        "value": 0.4583333333333333
+      }
+    },
+    "primary": {
+      "denominator": 144,
+      "interval": {
+        "clusters": 18,
+        "confidence": 0.95,
+        "estimate": -0.20833333333333331,
+        "lower": -0.2361111111111111,
+        "measurable_replicates": 2000,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "seed": 3199579427810064586,
+        "upper": -0.18055555555555558
+      },
+      "name": "m7sel_noul_joint_accuracy_delta",
+      "numerator": -30,
+      "value": -0.20833333333333334
+    }
+  },
+  "hypothesis_status": "mixed",
+  "inputs": {
+    "analysis_entry": "024ed39ad5f980a54e9033a8066d6b6a03019d71ab316ada50c619a59aa937be",
+    "dispatch_summary": "4dac0d5b122d81c083a8d185d5739679985ff9425f86cbd64d36486b07594ed4",
+    "private_block_receipt": "a9931c21271ba93370aba016ee14d21e792834263aa4e6d278e18c522be8f005",
+    "process_receipt": "e32dd3a557aba917bfa9815e5fb3678821ce1142d4713cd05db111b36e43313e",
+    "selection_gold": "8a339cf040435a9492f0dc13e2978d4a211af8dc2d2eba7f5e88499b5959f58d",
+    "selection_manifest": "0c0a64b1c62ae22c854b0b065fe8a37406da9b2ac8733d35f594e80171df599d",
+    "source_freeze": "6adedc5a80e1b8f2b2d84f3505e2c28166dcfbb67abd7b7451a97b42fcec932f"
+  },
+  "outside": {
+    "both_true_flagged": {
+      "jev": {
+        "denominator": 0,
+        "numerator": 0,
+        "value": null
+      },
+      "llm": {
+        "denominator": 0,
+        "numerator": 0,
+        "value": null
+      }
+    },
+    "conditions": {
+      "has_contradiction": {
+        "jev": {
+          "accuracy": {
+            "denominator": 16,
+            "numerator": 11,
+            "value": 0.6875
+          },
+          "auroc_error_detection": 0.6636363636363637,
+          "brier": 0.22897499999999998,
+          "ece": 0.24375000000000002,
+          "nll": 0.6479857225868544,
+          "planned": 16,
+          "valid": 16
+        },
+        "llm": {
+          "accuracy": {
+            "denominator": 16,
+            "numerator": 13,
+            "value": 0.8125
+          },
+          "auroc_error_detection": 0.5897435897435898,
+          "brier": 0.183825,
+          "ece": 0.18374999999999997,
+          "nll": 1.9479831263005645,
+          "planned": 16,
+          "valid": 16
+        }
+      },
+      "missing_evidence": {
+        "jev": {
+          "accuracy": {
+            "denominator": 16,
+            "numerator": 11,
+            "value": 0.6875
+          },
+          "auroc_error_detection": 0.32727272727272727,
+          "brier": 0.23768750000000002,
+          "ece": 0.21625000000000003,
+          "nll": 0.6774377483459658,
+          "planned": 16,
+          "valid": 16
+        },
+        "llm": {
+          "accuracy": {
+            "denominator": 16,
+            "numerator": 15,
+            "value": 0.9375
+          },
+          "auroc_error_detection": 0.4,
+          "brier": 0.0625375,
+          "ece": 0.06000000000000005,
+          "nll": 0.8659883710617997,
+          "planned": 16,
+          "valid": 16
+        }
+      }
+    },
+    "decision": "mixed",
+    "joint_accuracy": {
+      "jev": {
+        "denominator": 16,
+        "numerator": 6,
+        "value": 0.375
+      },
+      "llm": {
+        "denominator": 16,
+        "numerator": 12,
+        "value": 0.75
+      }
+    },
+    "primary": {
+      "denominator": 16,
+      "interval": {
+        "clusters": 16,
+        "confidence": 0.95,
+        "estimate": -0.375,
+        "lower": -0.6875,
+        "measurable_replicates": 2000,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "seed": 3280116011691787401,
+        "upper": 0.0
+      },
+      "name": "m7sel_outside_noul_joint_accuracy_delta",
+      "numerator": -6,
+      "value": -0.375
+    }
+  },
+  "primary": {
+    "denominator": 144,
+    "interval": {
+      "clusters": 18,
+      "confidence": 0.95,
+      "estimate": -0.20833333333333331,
+      "lower": -0.2361111111111111,
+      "measurable_replicates": 2000,
+      "method": "source-cluster percentile bootstrap",
+      "replicates": 2000,
+      "seed": 3199579427810064586,
+      "upper": -0.18055555555555558
+    },
+    "name": "m7sel_noul_joint_accuracy_delta",
+    "numerator": -30,
+    "value": -0.20833333333333334
+  },
+  "source_attempts_sha256": "da4a610f29b0688783d5ac7477907bc68a4d2a8a5788d6eb27372d0379f54e44",
+  "source_revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace"
+}

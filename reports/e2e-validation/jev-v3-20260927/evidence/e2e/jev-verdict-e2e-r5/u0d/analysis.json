@@ -1,0 +1,108 @@
+{
+  "analyzed_at": "2026-09-27T02:07:29.112518+00:00",
+  "answer": "Complete diagnostic; paired concurrent slots; interpret with burden and consumption.",
+  "attempts_sha256": "d6a2b49cc8d47cf976527a4924b9fc1445657ad0b1b434a42ac16d514a32a17f",
+  "decision": {
+    "hypothesis_status": "supported",
+    "outcome": "diagnostic-only",
+    "rationale": "05 v2 §3.4: admission units pass or fail; U7 and U8 are descriptive."
+  },
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-a/evidence-manifest.json",
+      "sha256": "e1fb14110e07755c489248a6fdbfb918637d7e216fa4309681c3a893232f9ef6"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-a/result.json",
+      "sha256": "1501befc6b28431e655b9cd79539b0233f54cadfee529f919dec5c63da68cfaf"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-a/trial-receipt.json",
+      "sha256": "8758289fb153c378ce658cdc6f91607e60fa9130c848e0174eaa961145fb298e"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-b/evidence-manifest.json",
+      "sha256": "3a14a9c6f24c3c49168005a04980d5631b968740ea54457d3f20f6f30ab5f81e"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-b/result.json",
+      "sha256": "923fd45390b893706a7c15342291743f6cb89f3dd088f533a5fe64f852ffac22"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s15-shoes-natural-b/trial-receipt.json",
+      "sha256": "6b8d01f09b1376020051af6f97f8c8b3b8502115927d9f2927a3a85dea3a3632"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-b/evidence-manifest.json",
+      "sha256": "6cb72f15cfad1460f494cc4f2cbff0536473cdd27362d43adda44042d2e573fb"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-b/result.json",
+      "sha256": "e4906edf9e5bf52a74eaa871ca2e10ad95b85215ff78804299caa665e4b2af7f"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-b/trial-receipt.json",
+      "sha256": "4513f4bda1a3208d6892b0e8621e93db5d621183bc65c4ba95ff8925a50bb174"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-a/evidence-manifest.json",
+      "sha256": "efb466706fb27c536c830dadb08a5c0ca9956b771ad0b3c9ca370cb47c4952d5"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-a/result.json",
+      "sha256": "64cd746cf749c37bc633be420145703203d98232a971b839540392121a1bec8d"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/jev3-u0d-r0-cl-s05-fishing-c1m1-a/trial-receipt.json",
+      "sha256": "68d6844540ee984a8607eaa35bc5d3d0cfa0d509f64d4b7e34bfd868509b5e4a"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "61af0676f784d569b27e70a137ad3aea8aa53910e34bb9c00c63709b0ae0ad6c"
+    }
+  ],
+  "limitations": [
+    "Shared Codex account: external usage unknown; latency is interpreted within pairs only.",
+    "pair_sync=false pairs are excluded from within-pair latency, kept for success and recovery.",
+    "Actual charges unknown; Jev amounts are tariff estimates from the host ledger."
+  ],
+  "metrics": [
+    {
+      "denominator": 4,
+      "name": "verdict_e2e_admission_success",
+      "numerator": 4,
+      "source_locator": {
+        "denominator": "/primary/denominator",
+        "numerator": "/primary/numerator",
+        "value": "/primary/value"
+      },
+      "source_ref": "results.json",
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "run_id": "geode-jev-verdict-e2e-admission-20260927-r5",
+  "run_spec_sha256": "6e5bebebfa8bf0ca5ef6d120a85b83a40684b571c636f74a059950088c63f65b",
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "selected_attempt_ids": [
+    "geode-jev-verdict-e2e-admission-20260927-r5-a0000",
+    "geode-jev-verdict-e2e-admission-20260927-r5-a0001",
+    "geode-jev-verdict-e2e-admission-20260927-r5-a0002",
+    "geode-jev-verdict-e2e-admission-20260927-r5-a0003",
+    "geode-jev-verdict-e2e-admission-20260927-r5-aggregate"
+  ]
+}

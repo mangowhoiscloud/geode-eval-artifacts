@@ -1,0 +1,33 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "b",
+      "case_file": "source-runs/jev-intent-harbor-r6/payloads/inbox-explicit.json",
+      "case_sha256": "dd31a29a03c36f44cce012f74d88ff5e04aadc1b9d2c876ad1f9fa17e21d06ec",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-intent-harbor-r6/source.tar.gz",
+      "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+      "source_sha256": "40c9b0ab082ab4ec212cd7b1ff38a17a268b4b2445093238568d662855f6447a",
+      "typesafe_key_file": "source-runs/jev-intent-harbor-r6/private-secrets/jev-gsdeoq71.key",
+      "verify_mode": "rule_based"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-intent-harbor-r6/task-bundle/inbox-explicit"
+  },
+  "trial_name": "inbox-natural-r0-inbox-explicit-b",
+  "trials_dir": "source-runs/jev-intent-harbor-r6/natural/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

@@ -1,0 +1,3203 @@
+{
+  "accuracy": {
+    "jev": {
+      "denominator": 120,
+      "numerator": 84,
+      "reasons": [],
+      "value": 0.7
+    },
+    "llm": {
+      "denominator": 120,
+      "numerator": 90,
+      "reasons": [],
+      "value": 0.75
+    }
+  },
+  "decision_rule": "supported: CI upper < 0 s (Jev faster); not-supported: CI lower > 0 s; mixed otherwise",
+  "gold_attached": true,
+  "latency_rule": "runner monotonic clock from dispatch to completion; pacing waits excluded; median over comparable pairs of Jev minus Astra",
+  "mode": "paired-latency",
+  "pairs": [
+    {
+      "cluster_id": "cl-ho23-bath",
+      "delta_s": -8.440627916017547,
+      "dispatch_skew_s": 0.07311354100238532,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00000",
+        "latency_s": 0.4305528340046294,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00001",
+        "latency_s": 8.871180750022177,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-6dcc3876b30f6a28",
+      "workload_id": "s-6dcc3876b30f6a28"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -51.0389935420244,
+      "dispatch_skew_s": 0.0007594579947181046,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00002",
+        "latency_s": 0.23946779099060223,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00003",
+        "latency_s": 51.278461333015,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-fc1d91565e079068",
+      "workload_id": "s-fc1d91565e079068"
+    },
+    {
+      "cluster_id": "cl-ho13-hardware",
+      "delta_s": -19.636653749999823,
+      "dispatch_skew_s": 0.05361520798760466,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00004",
+        "latency_s": 0.2717756250058301,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00005",
+        "latency_s": 19.908429375005653,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4ff02d6358d55c6a",
+      "workload_id": "s-4ff02d6358d55c6a"
+    },
+    {
+      "cluster_id": "cl-ho02-bikeparts",
+      "delta_s": -33.16083329200046,
+      "dispatch_skew_s": 0.00081945801503025,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00006",
+        "latency_s": 0.26798179099569097,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00007",
+        "latency_s": 33.42881508299615,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-f2745b9138081a48",
+      "workload_id": "s-f2745b9138081a48"
+    },
+    {
+      "cluster_id": "cl-ho04-boardgames",
+      "delta_s": -22.169890999997733,
+      "dispatch_skew_s": 0.04685829198569991,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00008",
+        "latency_s": 0.2542697080061771,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00009",
+        "latency_s": 22.42416070800391,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-fa2f57281a633fd1",
+      "workload_id": "s-fa2f57281a633fd1"
+    },
+    {
+      "cluster_id": "cl-ho15-running",
+      "delta_s": -62.10448470900883,
+      "dispatch_skew_s": 0.0008054999925661832,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00010",
+        "latency_s": 0.2193285409884993,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00011",
+        "latency_s": 62.32381324999733,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-577936c4beaf3f55",
+      "workload_id": "s-577936c4beaf3f55"
+    },
+    {
+      "cluster_id": "cl-ho16-banchan",
+      "delta_s": -16.681927708967123,
+      "dispatch_skew_s": 0.05268979197717272,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00012",
+        "latency_s": 0.2807245830190368,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00013",
+        "latency_s": 16.96265229198616,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-3de5da7b14775fcb",
+      "workload_id": "s-3de5da7b14775fcb"
+    },
+    {
+      "cluster_id": "cl-ho22-fruit",
+      "delta_s": -7.542280082998332,
+      "dispatch_skew_s": 0.0008117500110529363,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00014",
+        "latency_s": 0.26238241701503284,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00015",
+        "latency_s": 7.8046625000133645,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-9f2a23c050f0e9a3",
+      "workload_id": "s-9f2a23c050f0e9a3"
+    },
+    {
+      "cluster_id": "cl-ho02-bikeparts",
+      "delta_s": -4.6674403329670895,
+      "dispatch_skew_s": 0.05392145799123682,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00016",
+        "latency_s": 0.25784254202153534,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00017",
+        "latency_s": 4.925282874988625,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-ea4fe79a6a0f79fc",
+      "workload_id": "s-ea4fe79a6a0f79fc"
+    },
+    {
+      "cluster_id": "cl-ho18-ereader",
+      "delta_s": -8.5222589999903,
+      "dispatch_skew_s": 0.000731875014025718,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00018",
+        "latency_s": 0.24649366599624045,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00019",
+        "latency_s": 8.76875266598654,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-ff2b9019b021496f",
+      "workload_id": "s-ff2b9019b021496f"
+    },
+    {
+      "cluster_id": "cl-ho19-pottery",
+      "delta_s": -15.123937416996341,
+      "dispatch_skew_s": 0.053765457996632904,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00020",
+        "latency_s": 0.24876933300402015,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00021",
+        "latency_s": 15.372706750000361,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-27140361cbc566a2",
+      "workload_id": "s-27140361cbc566a2"
+    },
+    {
+      "cluster_id": "cl-ho11-officeink",
+      "delta_s": -4.7384937920141965,
+      "dispatch_skew_s": 0.0007795830024406314,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00022",
+        "latency_s": 0.2729610000096727,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00023",
+        "latency_s": 5.011454792023869,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4c2e13751aa0d4b5",
+      "workload_id": "s-4c2e13751aa0d4b5"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -7.750334332988132,
+      "dispatch_skew_s": 0.05579391698120162,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00024",
+        "latency_s": 0.2977388750005048,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00025",
+        "latency_s": 8.048073207988637,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-3160e0c7226120ab",
+      "workload_id": "s-3160e0c7226120ab"
+    },
+    {
+      "cluster_id": "cl-ho26-cosmetics",
+      "delta_s": -14.722680459002731,
+      "dispatch_skew_s": 0.0008185000042431056,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00026",
+        "latency_s": 0.2387391660013236,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00027",
+        "latency_s": 14.961419625004055,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-6f46f225c82983d3",
+      "workload_id": "s-6f46f225c82983d3"
+    },
+    {
+      "cluster_id": "cl-ho10-yarn",
+      "delta_s": -6.575188333023107,
+      "dispatch_skew_s": 0.05267845801427029,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00028",
+        "latency_s": 0.22554641700116917,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00029",
+        "latency_s": 6.800734750024276,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-2dab102c5eacb1e2",
+      "workload_id": "s-2dab102c5eacb1e2"
+    },
+    {
+      "cluster_id": "cl-ho15-running",
+      "delta_s": -41.89949633300421,
+      "dispatch_skew_s": 0.000806791998911649,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00030",
+        "latency_s": 0.22185475000878796,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00031",
+        "latency_s": 42.121351083012996,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-d5e3cb0ceb95234b",
+      "workload_id": "s-d5e3cb0ceb95234b"
+    },
+    {
+      "cluster_id": "cl-ho09-baking",
+      "delta_s": -6.7828582499641925,
+      "dispatch_skew_s": 0.05360437498893589,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00032",
+        "latency_s": 0.2509146250085905,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00033",
+        "latency_s": 7.033772874972783,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-3e764d58b838ab83",
+      "workload_id": "s-3e764d58b838ab83"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -9.54411291598808,
+      "dispatch_skew_s": 0.0007520420185755938,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00034",
+        "latency_s": 0.29695962500409223,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00035",
+        "latency_s": 9.841072540992172,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4b0ca9d7097a473c",
+      "workload_id": "s-4b0ca9d7097a473c"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -6.730872708023526,
+      "dispatch_skew_s": 0.03701666701817885,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00036",
+        "latency_s": 0.258611541998107,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00037",
+        "latency_s": 6.989484250021633,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-09e5c5b76f633f24",
+      "workload_id": "s-09e5c5b76f633f24"
+    },
+    {
+      "cluster_id": "cl-ho25-artsupply",
+      "delta_s": -13.260033832979389,
+      "dispatch_skew_s": 0.0007341250020544976,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00038",
+        "latency_s": 0.3911431670130696,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00039",
+        "latency_s": 13.651176999992458,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-2d0c40915c28dec8",
+      "workload_id": "s-2d0c40915c28dec8"
+    },
+    {
+      "cluster_id": "cl-ho05-aquarium",
+      "delta_s": -10.673056833998999,
+      "dispatch_skew_s": 0.03669458400690928,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00040",
+        "latency_s": 0.28070500001194887,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00041",
+        "latency_s": 10.953761834010947,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-5980ca7bc39d8f75",
+      "workload_id": "s-5980ca7bc39d8f75"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -17.57844808298978,
+      "dispatch_skew_s": 0.0008439999946858734,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00042",
+        "latency_s": 0.25782308299676515,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00043",
+        "latency_s": 17.836271165986545,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4eee1a5c1fc6f43f",
+      "workload_id": "s-4eee1a5c1fc6f43f"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -23.69374049900216,
+      "dispatch_skew_s": 0.04652708300272934,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00044",
+        "latency_s": 0.3749085839954205,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00045",
+        "latency_s": 24.06864908299758,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-c86378f8cf95e9e1",
+      "workload_id": "s-c86378f8cf95e9e1"
+    },
+    {
+      "cluster_id": "cl-ho21-dogtreats",
+      "delta_s": -15.498418667004444,
+      "dispatch_skew_s": 0.0008366669935639948,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00046",
+        "latency_s": 0.23048699999344535,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00047",
+        "latency_s": 15.728905666997889,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-7741914f37d082be",
+      "workload_id": "s-7741914f37d082be"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -50.71326529199723,
+      "dispatch_skew_s": 0.05041495797922835,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00048",
+        "latency_s": 0.25462087499909103,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00049",
+        "latency_s": 50.96788616699632,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-37497fae621da615",
+      "workload_id": "s-37497fae621da615"
+    },
+    {
+      "cluster_id": "cl-ho19-pottery",
+      "delta_s": -6.857296166010201,
+      "dispatch_skew_s": 0.0008444999984931201,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00050",
+        "latency_s": 0.26646204199641943,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00051",
+        "latency_s": 7.12375820800662,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-b0763fb614f41579",
+      "workload_id": "s-b0763fb614f41579"
+    },
+    {
+      "cluster_id": "cl-ho16-banchan",
+      "delta_s": -12.254379750025691,
+      "dispatch_skew_s": 0.029363500012550503,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00052",
+        "latency_s": 0.2625211249978747,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00053",
+        "latency_s": 12.516900875023566,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-44476ef90989f94c",
+      "workload_id": "s-44476ef90989f94c"
+    },
+    {
+      "cluster_id": "cl-ho12-puzzles",
+      "delta_s": -10.766414833022282,
+      "dispatch_skew_s": 0.0007396669825538993,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00054",
+        "latency_s": 0.28671633297926746,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00055",
+        "latency_s": 11.053131166001549,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-65734f240877e8d3",
+      "workload_id": "s-65734f240877e8d3"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -11.296973959018942,
+      "dispatch_skew_s": 0.05240616700029932,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00056",
+        "latency_s": 0.24861650000093505,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00057",
+        "latency_s": 11.545590459019877,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-283d8c155255e0f5",
+      "workload_id": "s-283d8c155255e0f5"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -6.750318459031405,
+      "dispatch_skew_s": 0.0008301659836433828,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00058",
+        "latency_s": 0.26322274998528883,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00059",
+        "latency_s": 7.013541209016694,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-2f423dfea15cf0de",
+      "workload_id": "s-2f423dfea15cf0de"
+    },
+    {
+      "cluster_id": "cl-ho10-yarn",
+      "delta_s": -6.680482374998974,
+      "dispatch_skew_s": 0.05191608300083317,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00060",
+        "latency_s": 0.2719832499860786,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00061",
+        "latency_s": 6.952465624985052,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-bf24269cdffb893f",
+      "workload_id": "s-bf24269cdffb893f"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -7.016662749985699,
+      "dispatch_skew_s": 0.000827083014883101,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00062",
+        "latency_s": 0.2343846670119092,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00063",
+        "latency_s": 7.251047416997608,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-795f5e2bf3a08352",
+      "workload_id": "s-795f5e2bf3a08352"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -5.716162542026723,
+      "dispatch_skew_s": 0.05085558301652782,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00064",
+        "latency_s": 0.25053195797954686,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00065",
+        "latency_s": 5.96669450000627,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4e5fac059b73b65e",
+      "workload_id": "s-4e5fac059b73b65e"
+    },
+    {
+      "cluster_id": "cl-ho03-tea",
+      "delta_s": -8.472843874013051,
+      "dispatch_skew_s": 0.0007767089991830289,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00066",
+        "latency_s": 0.23244391698972322,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00067",
+        "latency_s": 8.705287791002775,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-b30d253ff6351b9c",
+      "workload_id": "s-b30d253ff6351b9c"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -34.07973558298545,
+      "dispatch_skew_s": 0.05033983298926614,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00068",
+        "latency_s": 0.23994912501075305,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00069",
+        "latency_s": 34.3196847079962,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-09a52f87d55f0734",
+      "workload_id": "s-09a52f87d55f0734"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -12.184409167006379,
+      "dispatch_skew_s": 0.0007869999972172081,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00070",
+        "latency_s": 0.23060108299250714,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00071",
+        "latency_s": 12.415010249998886,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-bc5da50385ddfe62",
+      "workload_id": "s-bc5da50385ddfe62"
+    },
+    {
+      "cluster_id": "cl-ho16-banchan",
+      "delta_s": -6.975311957998201,
+      "dispatch_skew_s": 0.05560508300550282,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00072",
+        "latency_s": 0.38657324999803677,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00073",
+        "latency_s": 7.361885207996238,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-75bdbeba882caff7",
+      "workload_id": "s-75bdbeba882caff7"
+    },
+    {
+      "cluster_id": "cl-ho15-running",
+      "delta_s": -9.121912083006464,
+      "dispatch_skew_s": 0.0007736669795121998,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00074",
+        "latency_s": 0.3133164999890141,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00075",
+        "latency_s": 9.435228582995478,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a8581afe3fb48fc4",
+      "workload_id": "s-a8581afe3fb48fc4"
+    },
+    {
+      "cluster_id": "cl-ho21-dogtreats",
+      "delta_s": -41.068165291973855,
+      "dispatch_skew_s": 0.04730854197987355,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00076",
+        "latency_s": 0.2460947910149116,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00077",
+        "latency_s": 41.31426008298877,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-0df283c57ab4f193",
+      "workload_id": "s-0df283c57ab4f193"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -19.649613458983367,
+      "dispatch_skew_s": 0.0007305410108529031,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00078",
+        "latency_s": 0.29733495801337995,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00079",
+        "latency_s": 19.946948416996747,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-70d3a0d1d0ceda77",
+      "workload_id": "s-70d3a0d1d0ceda77"
+    },
+    {
+      "cluster_id": "cl-ho06-pens",
+      "delta_s": -37.1180842089816,
+      "dispatch_skew_s": 0.039838625001721084,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00080",
+        "latency_s": 0.2672680410032626,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00081",
+        "latency_s": 37.38535224998486,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-c613c81382e74bc4",
+      "workload_id": "s-c613c81382e74bc4"
+    },
+    {
+      "cluster_id": "cl-ho09-baking",
+      "delta_s": -6.592757707985584,
+      "dispatch_skew_s": 0.0007730840006843209,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00082",
+        "latency_s": 0.251567041996168,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00083",
+        "latency_s": 6.844324749981752,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-70f5595f51503690",
+      "workload_id": "s-70f5595f51503690"
+    },
+    {
+      "cluster_id": "cl-ho25-artsupply",
+      "delta_s": -12.418414793006377,
+      "dispatch_skew_s": 0.04884495900478214,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00084",
+        "latency_s": 0.23419504100456834,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00085",
+        "latency_s": 12.652609834010946,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-def7305f57aab37b",
+      "workload_id": "s-def7305f57aab37b"
+    },
+    {
+      "cluster_id": "cl-ho26-cosmetics",
+      "delta_s": -21.730703999986872,
+      "dispatch_skew_s": 0.0007919170020613819,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00086",
+        "latency_s": 0.28544570799567737,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00087",
+        "latency_s": 22.01614970798255,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-0fc65a3ebcc3f9bc",
+      "workload_id": "s-0fc65a3ebcc3f9bc"
+    },
+    {
+      "cluster_id": "cl-ho18-ereader",
+      "delta_s": -4.85881870801677,
+      "dispatch_skew_s": 0.05445583301479928,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00088",
+        "latency_s": 0.28173391698510386,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00089",
+        "latency_s": 5.140552625001874,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-2b3a55e91b4fa5f6",
+      "workload_id": "s-2b3a55e91b4fa5f6"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -5.791318541014334,
+      "dispatch_skew_s": 0.0007841250044293702,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00090",
+        "latency_s": 0.23230283398879692,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00091",
+        "latency_s": 6.023621375003131,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-c6a9c787a5283c65",
+      "workload_id": "s-c6a9c787a5283c65"
+    },
+    {
+      "cluster_id": "cl-ho20-kidsbooks",
+      "delta_s": -8.570008832990425,
+      "dispatch_skew_s": 0.052891582978190854,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00092",
+        "latency_s": 0.24637454201001674,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00093",
+        "latency_s": 8.816383375000441,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-19979b0bb1d4bf7e",
+      "workload_id": "s-19979b0bb1d4bf7e"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -7.893912875006208,
+      "dispatch_skew_s": 0.0008131669892463833,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00094",
+        "latency_s": 0.2716970419860445,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00095",
+        "latency_s": 8.165609916992253,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-536fb9cddf9de7c3",
+      "workload_id": "s-536fb9cddf9de7c3"
+    },
+    {
+      "cluster_id": "cl-ho03-tea",
+      "delta_s": -11.719979583984241,
+      "dispatch_skew_s": 0.052374791994225234,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00096",
+        "latency_s": 0.26627958301105537,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00097",
+        "latency_s": 11.986259166995296,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-bc8f27ae0fadd52b",
+      "workload_id": "s-bc8f27ae0fadd52b"
+    },
+    {
+      "cluster_id": "cl-ho19-pottery",
+      "delta_s": -6.515032833995065,
+      "dispatch_skew_s": 0.0008157909906003624,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00098",
+        "latency_s": 0.23419858299894258,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00099",
+        "latency_s": 6.749231416994007,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-6da220e0418057cb",
+      "workload_id": "s-6da220e0418057cb"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -6.5291949170059524,
+      "dispatch_skew_s": 0.03542345800087787,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00100",
+        "latency_s": 0.22303570798248984,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00101",
+        "latency_s": 6.752230624988442,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-59fe530a4ee0a0a3",
+      "workload_id": "s-59fe530a4ee0a0a3"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -7.840482792002149,
+      "dispatch_skew_s": 0.0007753749960102141,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00102",
+        "latency_s": 0.28687995800282806,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00103",
+        "latency_s": 8.127362750004977,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-098c9e544b3fb27d",
+      "workload_id": "s-098c9e544b3fb27d"
+    },
+    {
+      "cluster_id": "cl-ho17-coffee",
+      "delta_s": -16.79123779098154,
+      "dispatch_skew_s": 0.05435291599133052,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00104",
+        "latency_s": 0.26150983400293626,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00105",
+        "latency_s": 17.052747624984477,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-f3593f8db6494a56",
+      "workload_id": "s-f3593f8db6494a56"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -26.672545667010127,
+      "dispatch_skew_s": 0.0008457079820800573,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00106",
+        "latency_s": 0.2512067079951521,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00107",
+        "latency_s": 26.92375237500528,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-05de2fb033e970b6",
+      "workload_id": "s-05de2fb033e970b6"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -17.25156895798864,
+      "dispatch_skew_s": 0.03727387500111945,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00108",
+        "latency_s": 0.2714881249994505,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00109",
+        "latency_s": 17.52305708298809,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-00d8397456ef94c7",
+      "workload_id": "s-00d8397456ef94c7"
+    },
+    {
+      "cluster_id": "cl-ho10-yarn",
+      "delta_s": -7.80913708297885,
+      "dispatch_skew_s": 0.0008020000241231173,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00110",
+        "latency_s": 0.28143395800725557,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00111",
+        "latency_s": 8.090571040986106,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-d63b85e5764750bc",
+      "workload_id": "s-d63b85e5764750bc"
+    },
+    {
+      "cluster_id": "cl-ho17-coffee",
+      "delta_s": -16.71423754200805,
+      "dispatch_skew_s": 0.05562112500774674,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00112",
+        "latency_s": 0.2488860829907935,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00113",
+        "latency_s": 16.963123624998843,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-5413d0ffa914e116",
+      "workload_id": "s-5413d0ffa914e116"
+    },
+    {
+      "cluster_id": "cl-ho13-hardware",
+      "delta_s": -18.406781790981768,
+      "dispatch_skew_s": 0.0008652090036775917,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00114",
+        "latency_s": 0.5607895420107525,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00115",
+        "latency_s": 18.96757133299252,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-0dec788d302768e3",
+      "workload_id": "s-0dec788d302768e3"
+    },
+    {
+      "cluster_id": "cl-ho09-baking",
+      "delta_s": -12.445951583998976,
+      "dispatch_skew_s": 0.0553105839935597,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00116",
+        "latency_s": 0.2507169159944169,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00117",
+        "latency_s": 12.696668499993393,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-cbe6d732cef0d13f",
+      "workload_id": "s-cbe6d732cef0d13f"
+    },
+    {
+      "cluster_id": "cl-ho18-ereader",
+      "delta_s": -22.489640041982057,
+      "dispatch_skew_s": 0.0008019999950192869,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00118",
+        "latency_s": 0.2764425830100663,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00119",
+        "latency_s": 22.766082624992123,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-2ecb06a9c9040513",
+      "workload_id": "s-2ecb06a9c9040513"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -19.73572975001298,
+      "dispatch_skew_s": 0.04918349999934435,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00120",
+        "latency_s": 0.3447419159929268,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00121",
+        "latency_s": 20.080471666005906,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-f0042588c0217f0f",
+      "workload_id": "s-f0042588c0217f0f"
+    },
+    {
+      "cluster_id": "cl-ho23-bath",
+      "delta_s": -19.03993666599854,
+      "dispatch_skew_s": 0.0007870419940445572,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00122",
+        "latency_s": 0.26693379200878553,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00123",
+        "latency_s": 19.306870458007324,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a6fafc8256f8a799",
+      "workload_id": "s-a6fafc8256f8a799"
+    },
+    {
+      "cluster_id": "cl-ho17-coffee",
+      "delta_s": -12.898900583008071,
+      "dispatch_skew_s": 0.04582699999446049,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00124",
+        "latency_s": 0.24957254200126044,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00125",
+        "latency_s": 13.148473125009332,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-90683201cf7a52d7",
+      "workload_id": "s-90683201cf7a52d7"
+    },
+    {
+      "cluster_id": "cl-ho04-boardgames",
+      "delta_s": -7.876170709001599,
+      "dispatch_skew_s": 0.0007914159796200693,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00126",
+        "latency_s": 0.3528804579982534,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00127",
+        "latency_s": 8.229051166999852,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-874c718c1f5ee090",
+      "workload_id": "s-874c718c1f5ee090"
+    },
+    {
+      "cluster_id": "cl-ho11-officeink",
+      "delta_s": -6.642206708987942,
+      "dispatch_skew_s": 0.038579916988965124,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00128",
+        "latency_s": 0.3040561249945313,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00129",
+        "latency_s": 6.946262833982473,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-331254b39de4967d",
+      "workload_id": "s-331254b39de4967d"
+    },
+    {
+      "cluster_id": "cl-ho21-dogtreats",
+      "delta_s": -26.306219582998892,
+      "dispatch_skew_s": 0.0009424169838894159,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00130",
+        "latency_s": 0.25563037500251085,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00131",
+        "latency_s": 26.561849958001403,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-392c44c8ce4fe8fc",
+      "workload_id": "s-392c44c8ce4fe8fc"
+    },
+    {
+      "cluster_id": "cl-ho09-baking",
+      "delta_s": -7.047556083009113,
+      "dispatch_skew_s": 0.04715737499645911,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00132",
+        "latency_s": 0.2518122920009773,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00133",
+        "latency_s": 7.29936837501009,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-3e6bc1a1ed04055a",
+      "workload_id": "s-3e6bc1a1ed04055a"
+    },
+    {
+      "cluster_id": "cl-ho12-puzzles",
+      "delta_s": -6.789615001005586,
+      "dispatch_skew_s": 0.0008438329969067127,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00134",
+        "latency_s": 0.2511406659905333,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00135",
+        "latency_s": 7.0407556669961195,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-7a4844a70ee5392b",
+      "workload_id": "s-7a4844a70ee5392b"
+    },
+    {
+      "cluster_id": "cl-ho11-officeink",
+      "delta_s": -30.219007375999354,
+      "dispatch_skew_s": 0.048793208989081904,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00136",
+        "latency_s": 0.23664508300134912,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00137",
+        "latency_s": 30.455652459000703,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-5993149e586a91e9",
+      "workload_id": "s-5993149e586a91e9"
+    },
+    {
+      "cluster_id": "cl-ho22-fruit",
+      "delta_s": -8.108911374001764,
+      "dispatch_skew_s": 0.0008162919839378446,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00138",
+        "latency_s": 0.25015733399777673,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00139",
+        "latency_s": 8.35906870799954,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-15aab771acf866e4",
+      "workload_id": "s-15aab771acf866e4"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -20.864264500007266,
+      "dispatch_skew_s": 0.05451958300545812,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00140",
+        "latency_s": 0.2285129579831846,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00141",
+        "latency_s": 21.09277745799045,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-fa7a5c89cb56f051",
+      "workload_id": "s-fa7a5c89cb56f051"
+    },
+    {
+      "cluster_id": "cl-ho24-hiking",
+      "delta_s": -6.551905374974012,
+      "dispatch_skew_s": 0.0009251250012312084,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00142",
+        "latency_s": 0.31181616699905135,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00143",
+        "latency_s": 6.863721541973064,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-b8b6d9a215c3e00c",
+      "workload_id": "s-b8b6d9a215c3e00c"
+    },
+    {
+      "cluster_id": "cl-ho12-puzzles",
+      "delta_s": -13.81869095901493,
+      "dispatch_skew_s": 0.050533542002085596,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00144",
+        "latency_s": 0.25427158299135044,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00145",
+        "latency_s": 14.07296254200628,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-5f46cdbbf1aec699",
+      "workload_id": "s-5f46cdbbf1aec699"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -8.988726541982032,
+      "dispatch_skew_s": 0.0008103330037556589,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00146",
+        "latency_s": 0.24341412499779835,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00147",
+        "latency_s": 9.23214066697983,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-265b61ce2012c6da",
+      "workload_id": "s-265b61ce2012c6da"
+    },
+    {
+      "cluster_id": "cl-ho23-bath",
+      "delta_s": -10.386676082009217,
+      "dispatch_skew_s": 0.037693666003178805,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00148",
+        "latency_s": 0.22786183399148285,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00149",
+        "latency_s": 10.6145379160007,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-68ad1fc71c87e42a",
+      "workload_id": "s-68ad1fc71c87e42a"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -8.305757833004463,
+      "dispatch_skew_s": 0.0006919169973116368,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00150",
+        "latency_s": 0.28670066699851304,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00151",
+        "latency_s": 8.592458500002977,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-904f64018e74293d",
+      "workload_id": "s-904f64018e74293d"
+    },
+    {
+      "cluster_id": "cl-ho22-fruit",
+      "delta_s": -15.019144667021465,
+      "dispatch_skew_s": 0.0509082920034416,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00152",
+        "latency_s": 0.2655054999922868,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00153",
+        "latency_s": 15.284650167013751,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-1945ea2e9eb63d26",
+      "workload_id": "s-1945ea2e9eb63d26"
+    },
+    {
+      "cluster_id": "cl-ho26-cosmetics",
+      "delta_s": -5.497959708009148,
+      "dispatch_skew_s": 0.0008082499844022095,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00154",
+        "latency_s": 0.249217625008896,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00155",
+        "latency_s": 5.747177333018044,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a824df8c5e205af5",
+      "workload_id": "s-a824df8c5e205af5"
+    },
+    {
+      "cluster_id": "cl-ho25-artsupply",
+      "delta_s": -6.690487749991007,
+      "dispatch_skew_s": 0.04265183399547823,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00156",
+        "latency_s": 0.2672749999910593,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00157",
+        "latency_s": 6.9577627499820665,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-fa193ce41a3c0435",
+      "workload_id": "s-fa193ce41a3c0435"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -19.404609250021167,
+      "dispatch_skew_s": 0.0008178329735528678,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00158",
+        "latency_s": 0.24679266699240543,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00159",
+        "latency_s": 19.651401917013573,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-389fd13cbcf8db41",
+      "workload_id": "s-389fd13cbcf8db41"
+    },
+    {
+      "cluster_id": "cl-ho10-yarn",
+      "delta_s": -48.743206832994474,
+      "dispatch_skew_s": 0.05647083299118094,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00160",
+        "latency_s": 0.22369966699625365,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00161",
+        "latency_s": 48.96690649999073,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-33549449cfc3091f",
+      "workload_id": "s-33549449cfc3091f"
+    },
+    {
+      "cluster_id": "cl-ho26-cosmetics",
+      "delta_s": -16.507362083008047,
+      "dispatch_skew_s": 0.0008163340098690242,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00162",
+        "latency_s": 0.2493029169854708,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00163",
+        "latency_s": 16.756664999993518,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-95fa852b7ab180c1",
+      "workload_id": "s-95fa852b7ab180c1"
+    },
+    {
+      "cluster_id": "cl-ho19-pottery",
+      "delta_s": -7.703266291995533,
+      "dispatch_skew_s": 0.04860466698301025,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00164",
+        "latency_s": 0.23704316600924358,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00165",
+        "latency_s": 7.940309458004776,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-7d362e6060c3beed",
+      "workload_id": "s-7d362e6060c3beed"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -8.809355083998526,
+      "dispatch_skew_s": 0.0007692500075791031,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00166",
+        "latency_s": 0.2580325000162702,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00167",
+        "latency_s": 9.067387584014796,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-b6a5bef1b3130e28",
+      "workload_id": "s-b6a5bef1b3130e28"
+    },
+    {
+      "cluster_id": "cl-ho04-boardgames",
+      "delta_s": -18.146025249996455,
+      "dispatch_skew_s": 0.056177582999225706,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00168",
+        "latency_s": 0.23715612501837313,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00169",
+        "latency_s": 18.38318137501483,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-959429b49919afd6",
+      "workload_id": "s-959429b49919afd6"
+    },
+    {
+      "cluster_id": "cl-ho23-bath",
+      "delta_s": -10.964676999021322,
+      "dispatch_skew_s": 0.0007777919818181545,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00170",
+        "latency_s": 0.23057583399349824,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00171",
+        "latency_s": 11.19525283301482,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-30ffabce2d202e46",
+      "workload_id": "s-30ffabce2d202e46"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -7.394892292009899,
+      "dispatch_skew_s": 0.05707104201428592,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00172",
+        "latency_s": 0.2564142910123337,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00173",
+        "latency_s": 7.651306583022233,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-c49dc02de1cd6d66",
+      "workload_id": "s-c49dc02de1cd6d66"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -5.080272499995772,
+      "dispatch_skew_s": 0.0008032080077100545,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00174",
+        "latency_s": 0.26045883298502304,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00175",
+        "latency_s": 5.340731332980795,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-87bfe9dde5cc06ae",
+      "workload_id": "s-87bfe9dde5cc06ae"
+    },
+    {
+      "cluster_id": "cl-ho11-officeink",
+      "delta_s": -7.442367791023571,
+      "dispatch_skew_s": 0.03128529101377353,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00176",
+        "latency_s": 0.2410049589816481,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00177",
+        "latency_s": 7.683372750005219,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-9ba9d65e22823505",
+      "workload_id": "s-9ba9d65e22823505"
+    },
+    {
+      "cluster_id": "cl-ho22-fruit",
+      "delta_s": -18.537614708999172,
+      "dispatch_skew_s": 0.000799582980107516,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00178",
+        "latency_s": 0.24084195800242014,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00179",
+        "latency_s": 18.778456667001592,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-7d8e07d98e28706e",
+      "workload_id": "s-7d8e07d98e28706e"
+    },
+    {
+      "cluster_id": "cl-ho05-aquarium",
+      "delta_s": -10.880993708997266,
+      "dispatch_skew_s": 0.05250175000401214,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00180",
+        "latency_s": 0.25092270798631944,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00181",
+        "latency_s": 11.131916416983586,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-3bd69c62593ff6ed",
+      "workload_id": "s-3bd69c62593ff6ed"
+    },
+    {
+      "cluster_id": "cl-ho13-hardware",
+      "delta_s": -6.0148521669907495,
+      "dispatch_skew_s": 0.0007940420182421803,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00182",
+        "latency_s": 0.22552300000097603,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00183",
+        "latency_s": 6.240375166991726,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-cd3d73ea01e5664f",
+      "workload_id": "s-cd3d73ea01e5664f"
+    },
+    {
+      "cluster_id": "cl-ho21-dogtreats",
+      "delta_s": -8.145239083009074,
+      "dispatch_skew_s": 0.03188241700991057,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00184",
+        "latency_s": 0.23514654199243523,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00185",
+        "latency_s": 8.380385625001509,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a36ce9bed2d7752a",
+      "workload_id": "s-a36ce9bed2d7752a"
+    },
+    {
+      "cluster_id": "cl-ho20-kidsbooks",
+      "delta_s": -12.539003417012282,
+      "dispatch_skew_s": 0.00076374999480322,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00186",
+        "latency_s": 0.2887810419779271,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00187",
+        "latency_s": 12.827784458990209,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-618645db36ef5bdb",
+      "workload_id": "s-618645db36ef5bdb"
+    },
+    {
+      "cluster_id": "cl-ho12-puzzles",
+      "delta_s": -6.35853749900707,
+      "dispatch_skew_s": 0.051284957997268066,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00188",
+        "latency_s": 0.23564004199579358,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00189",
+        "latency_s": 6.594177541002864,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-974d4687d94cd480",
+      "workload_id": "s-974d4687d94cd480"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -7.501427082985174,
+      "dispatch_skew_s": 0.0009918750147335231,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00190",
+        "latency_s": 0.28343887501978315,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00191",
+        "latency_s": 7.784865958004957,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-e83fcd57e34466b5",
+      "workload_id": "s-e83fcd57e34466b5"
+    },
+    {
+      "cluster_id": "cl-ho03-tea",
+      "delta_s": -10.326011542027118,
+      "dispatch_skew_s": 0.0559660000144504,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00192",
+        "latency_s": 0.23961716599296778,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00193",
+        "latency_s": 10.565628708020085,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4f4f8bba7f0fb843",
+      "workload_id": "s-4f4f8bba7f0fb843"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -15.001420958986273,
+      "dispatch_skew_s": 0.0007657080132048577,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00194",
+        "latency_s": 0.23498129099607468,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00195",
+        "latency_s": 15.236402249982348,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-66626ada5758b60b",
+      "workload_id": "s-66626ada5758b60b"
+    },
+    {
+      "cluster_id": "cl-ho06-pens",
+      "delta_s": -5.989830540987896,
+      "dispatch_skew_s": 0.04934558298555203,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00196",
+        "latency_s": 0.24386162500013597,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00197",
+        "latency_s": 6.233692165988032,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-33d64b8bd348835e",
+      "workload_id": "s-33d64b8bd348835e"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -6.1263962509983685,
+      "dispatch_skew_s": 0.0012011659855488688,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00198",
+        "latency_s": 0.2674355409981217,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00199",
+        "latency_s": 6.39383179199649,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-d9be04691f3e05c6",
+      "workload_id": "s-d9be04691f3e05c6"
+    },
+    {
+      "cluster_id": "cl-ho13-hardware",
+      "delta_s": -8.723103873984655,
+      "dispatch_skew_s": 0.033543666009791195,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00200",
+        "latency_s": 0.25512979199993424,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00201",
+        "latency_s": 8.97823366598459,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a3660a19adf5983b",
+      "workload_id": "s-a3660a19adf5983b"
+    },
+    {
+      "cluster_id": "cl-ho17-coffee",
+      "delta_s": -9.46434199999203,
+      "dispatch_skew_s": 0.0007544590043835342,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00202",
+        "latency_s": 0.2444742500083521,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00203",
+        "latency_s": 9.708816250000382,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-65ef67c89ed10136",
+      "workload_id": "s-65ef67c89ed10136"
+    },
+    {
+      "cluster_id": "cl-ho16-banchan",
+      "delta_s": -12.249521499994444,
+      "dispatch_skew_s": 0.04937200000858866,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00204",
+        "latency_s": 0.2511325420055073,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00205",
+        "latency_s": 12.500654041999951,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-baa98b4bd36169ed",
+      "workload_id": "s-baa98b4bd36169ed"
+    },
+    {
+      "cluster_id": "cl-ho05-aquarium",
+      "delta_s": -8.661158791015623,
+      "dispatch_skew_s": 0.0007567919965367764,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00206",
+        "latency_s": 0.39637529200990684,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00207",
+        "latency_s": 9.05753408302553,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-0d6088852785e395",
+      "workload_id": "s-0d6088852785e395"
+    },
+    {
+      "cluster_id": "cl-ho13-hardware",
+      "delta_s": -7.368935375998262,
+      "dispatch_skew_s": 0.048966041998937726,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00208",
+        "latency_s": 0.25696066601085477,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00209",
+        "latency_s": 7.625896042009117,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-33cb81bb29fc3f6c",
+      "workload_id": "s-33cb81bb29fc3f6c"
+    },
+    {
+      "cluster_id": "cl-ho08-vinyl",
+      "delta_s": -9.051074459013762,
+      "dispatch_skew_s": 0.000683707999996841,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00210",
+        "latency_s": 0.22343587499926798,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00211",
+        "latency_s": 9.27451033401303,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-892602388f8dc1e1",
+      "workload_id": "s-892602388f8dc1e1"
+    },
+    {
+      "cluster_id": "cl-ho04-boardgames",
+      "delta_s": -10.076354291988537,
+      "dispatch_skew_s": 0.03744829198694788,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00212",
+        "latency_s": 0.24967229101457633,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00213",
+        "latency_s": 10.326026583003113,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-87d9b1047b87d804",
+      "workload_id": "s-87d9b1047b87d804"
+    },
+    {
+      "cluster_id": "cl-ho07-camping",
+      "delta_s": -9.359434626006987,
+      "dispatch_skew_s": 0.0007899159973021597,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00214",
+        "latency_s": 0.24620116598089226,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00215",
+        "latency_s": 9.60563579198788,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-806334ac043262c4",
+      "workload_id": "s-806334ac043262c4"
+    },
+    {
+      "cluster_id": "cl-ho01-plants",
+      "delta_s": -6.845542374008801,
+      "dispatch_skew_s": 0.048581415991066024,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00216",
+        "latency_s": 0.24919308398966677,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00217",
+        "latency_s": 7.094735457998468,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-b2e7127ab6186e28",
+      "workload_id": "s-b2e7127ab6186e28"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -12.514170041977195,
+      "dispatch_skew_s": 0.0007850410183891654,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00218",
+        "latency_s": 0.24970845799543895,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00219",
+        "latency_s": 12.763878499972634,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-76d95204e5121694",
+      "workload_id": "s-76d95204e5121694"
+    },
+    {
+      "cluster_id": "cl-ho15-running",
+      "delta_s": -14.41968999998062,
+      "dispatch_skew_s": 0.03427645898773335,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00220",
+        "latency_s": 0.27239587501389906,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00221",
+        "latency_s": 14.692085874994518,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-548962fd5733da68",
+      "workload_id": "s-548962fd5733da68"
+    },
+    {
+      "cluster_id": "cl-ho27-keyboard",
+      "delta_s": -7.5244968330080155,
+      "dispatch_skew_s": 0.0007699169800616801,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00222",
+        "latency_s": 0.2236792079929728,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00223",
+        "latency_s": 7.748176041000988,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-72fe88a054069688",
+      "workload_id": "s-72fe88a054069688"
+    },
+    {
+      "cluster_id": "cl-ho21-dogtreats",
+      "delta_s": -10.797302083024988,
+      "dispatch_skew_s": 0.04870408301940188,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00224",
+        "latency_s": 0.24130704198614694,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00225",
+        "latency_s": 11.038609125011135,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-fd3a309615d8675f",
+      "workload_id": "s-fd3a309615d8675f"
+    },
+    {
+      "cluster_id": "cl-ho05-aquarium",
+      "delta_s": -29.544734834023984,
+      "dispatch_skew_s": 0.0007238329853862524,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00226",
+        "latency_s": 0.2783774579875171,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00227",
+        "latency_s": 29.8231122920115,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-01348039db024205",
+      "workload_id": "s-01348039db024205"
+    },
+    {
+      "cluster_id": "cl-ho14-candles",
+      "delta_s": -28.378530375979608,
+      "dispatch_skew_s": 0.05891016699024476,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00228",
+        "latency_s": 0.3223916660062969,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00229",
+        "latency_s": 28.700922041985905,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-0fa999c2c23af9c7",
+      "workload_id": "s-0fa999c2c23af9c7"
+    },
+    {
+      "cluster_id": "cl-ho16-banchan",
+      "delta_s": -7.6117288330278825,
+      "dispatch_skew_s": 0.000827791984193027,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00230",
+        "latency_s": 0.2363916249887552,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00231",
+        "latency_s": 7.848120458016638,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-e0d4dd0b57d04a4d",
+      "workload_id": "s-e0d4dd0b57d04a4d"
+    },
+    {
+      "cluster_id": "cl-ho17-coffee",
+      "delta_s": -9.66595529098413,
+      "dispatch_skew_s": 0.06221183299203403,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00232",
+        "latency_s": 0.2858108750078827,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00233",
+        "latency_s": 9.951766165992012,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-bc47cb4dc4928dc5",
+      "workload_id": "s-bc47cb4dc4928dc5"
+    },
+    {
+      "cluster_id": "cl-ho09-baking",
+      "delta_s": -16.394854750018567,
+      "dispatch_skew_s": 0.0007677499961573631,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00234",
+        "latency_s": 0.28505979100009426,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00235",
+        "latency_s": 16.67991454101866,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-4ff7bdd3124f836a",
+      "workload_id": "s-4ff7bdd3124f836a"
+    },
+    {
+      "cluster_id": "cl-ho19-pottery",
+      "delta_s": -26.438174583978252,
+      "dispatch_skew_s": 0.05239766699378379,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00236",
+        "latency_s": 0.24937383300857618,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "llm",
+        "jev"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00237",
+        "latency_s": 26.68754841698683,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-a04419f2ee2a4dd8",
+      "workload_id": "s-a04419f2ee2a4dd8"
+    },
+    {
+      "cluster_id": "cl-ho05-aquarium",
+      "delta_s": -6.088882248994196,
+      "dispatch_skew_s": 0.0006818340043537319,
+      "excluded_reason": null,
+      "jev": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00238",
+        "latency_s": 0.2791392919898499,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "launch_order": [
+        "jev",
+        "llm"
+      ],
+      "llm": {
+        "attempt_id": "geode-jev-verdict-panel-latency-20260927-r5-a00239",
+        "latency_s": 6.368021540984046,
+        "replacement": false,
+        "status": "admitted",
+        "validity": "valid"
+      },
+      "state_id": "s-aac9d9aec1896515",
+      "workload_id": "s-aac9d9aec1896515"
+    }
+  ],
+  "primary": {
+    "decision": "supported",
+    "denominator": 1,
+    "interval": {
+      "clusters": 27,
+      "confidence": 0.95,
+      "estimate": -10.201182917007827,
+      "lower": -11.342328291502781,
+      "measurable_replicates": 2000,
+      "method": "source-cluster percentile bootstrap",
+      "replicates": 2000,
+      "seed": 3613411871340909984,
+      "upper": -8.809355083998526
+    },
+    "name": "paired_median_latency_delta_s",
+    "numerator": -10.201182917007827,
+    "reasons": [],
+    "unit": "s",
+    "value": -10.201182917007827
+  },
+  "schema_id": "geode.jev-panel-latency@1",
+  "split_manifest_sha256": "9fc1e80d9484c601776193310946a63c1870305053f9bdacf0e46662095c175c",
+  "summary": {
+    "comparable_pairs": {
+      "denominator": 120,
+      "numerator": 120,
+      "value": 1.0
+    },
+    "dispatch_skew_limit_s": 1.0,
+    "excluded_by_reason": {
+      "dispatch_skew_exceeded": 0,
+      "infrastructure_invalid": 0,
+      "judgment_output_invalid": 0,
+      "missing_attempt": 0,
+      "replaced_call": 0
+    },
+    "excluded_pairs": 0,
+    "launched_first": {
+      "jev": 60,
+      "llm": 60
+    },
+    "max_dispatch_skew_s": {
+      "denominator": 1,
+      "numerator": 0.07311354100238532,
+      "value": 0.07311354100238532
+    },
+    "median_latency_s": {
+      "jev": {
+        "denominator": 1,
+        "numerator": 0.2530410000035772,
+        "value": 0.2530410000035772
+      },
+      "llm": {
+        "denominator": 1,
+        "numerator": 10.4458276455116,
+        "value": 10.4458276455116
+      }
+    },
+    "planned_pairs": 120,
+    "selected_invalid_attempts": 0
+  }
+}

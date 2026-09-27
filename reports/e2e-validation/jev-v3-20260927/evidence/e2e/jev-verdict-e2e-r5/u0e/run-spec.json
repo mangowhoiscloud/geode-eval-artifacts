@@ -1,0 +1,90 @@
+{
+  "artifacts": {
+    "analysis": "analysis.json",
+    "attempts": "attempts.jsonl",
+    "measurement_results": null,
+    "native_results": "results.json",
+    "outcome_receipts": null,
+    "publication_manifest": null,
+    "trajectory": null,
+    "verifier_receipts": null
+  },
+  "created_at": "2026-09-27T01:53:08.002339+00:00",
+  "preregistration": {
+    "frozen_at": "2026-09-27T02:05:10.901878+00:00",
+    "live_test_approved": true,
+    "mode": "prospective",
+    "operator": "User-authorized U/X budget recovery, 2026-09-27; source5 CI and G3 passed",
+    "status": "frozen"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  },
+  "reproduction": {
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparability": "direct",
+      "comparator": "A-Noul: Astra V1 condition probabilities; B-Noul: jev-1.13.0 Noul; threshold 0.5 both",
+      "promotion_authority": "none"
+    },
+    "environment": {
+      "architecture": "arm64",
+      "initial_state_ref": "Option E; sources sha256:d5e847383a2e5d7604897ff14a09727c2b9abdab73d9eb7d740df8a656cd348a; manifest sha256:ac773cb4be37dc284fdb76ccce3c35c7578a5092ea756d8a8b94c575fe108171; slots sha256:3ccf2747a3d3b93113c187313fde0fccfaa1be7df12cc7ddbd8513f9de89d9ed; bundle sha256:6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913. Cases/instructions/orders/interventions preserved; no sealed labels inspected.",
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "reset_strategy": "Fresh public-network agent and separate no-network verifier per trial; concurrent arms within each slot, cleanup before next; no operator mount. Root 540s shared by initial plus at most two verification continuations, six rounds per turn; agent570/setup600/verifier30/watchdog1290/cleanup120 seconds. Panel/E2E never overlap. Native account/plan guards checked at execution; external account usage unknown. New budget policy epoch, not pooled with original180s results."
+    },
+    "execution": {
+      "budget": {
+        "kind": "combined",
+        "limit": 20,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-2.35"
+      },
+      "command_redacted": "Paired-slot dispatcher: every arm of a slot launched together from cells/e2e-slots.jsonl, next slot after all arms are cleaned up, Harbor 0.22.0 task bundles with frozen payload digests; Codex file auth and the TypeSafe key are loaded at run time and never printed",
+      "max_concurrency": 2,
+      "ordered_workload_ids": [
+        "cl-s05-fishing#c1m1"
+      ],
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "timeout_seconds": 570,
+      "workload_ids_sha256": "9d24c7ee9b5a28f47d04be77ad10803f2bf16b2749f0816c0e0e8ec05d43c39e"
+    },
+    "geode": {
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false,
+      "revision": "1f6553431932040336cadcddb26893e30ebbb706"
+    },
+    "harness": {
+      "name": "Harbor",
+      "revision": "0.22.0",
+      "source": "harbor==0.22.0; paired dispatcher sha256 16b3034ee781d504989f25fbcf71c2b40eec82a4e4da48fd69ca73215a215a2a; E runner sha256 a00fb55179858892adb69f4e5cbfebeb4a0bd1c70069c032d4f38c55e56f29ef"
+    },
+    "model": {
+      "label": "gpt-6-astra",
+      "provider": "openai",
+      "reasoning": "xhigh",
+      "route": "subscription"
+    }
+  },
+  "run_id": "geode-jev-noul-verdict-admission-20260927-r5",
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "study": {
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: n/a. Workload order per 05 v2.2 §8.1. Budget amendment sha256:741ca53c73597ed702a8d5647e5a2cb26deb4cfefeb4721fd1497db868227cb7; authorization sha256:0daa4127e765adb51b5ea67de0bc58e6199e1ff0363b70bc8cc7f5e81915d4ff. Full registered unit rerun once; retain original results separately. Same-source admission and actual human playback gates apply.",
+    "decision_rule": "Admission only. U8n is frozen only after both cells pass and the user reviews the casts.",
+    "hypothesis": "Both cells pass admission.",
+    "invalidation_rule": "Judgment-output invalid is a semantic failure of a valid trial and keeps the trial in its denominator. Infrastructure invalid (transport failure, route drift, missing or contradictory usage, observation-check failure, incomplete export) is validity=invalid, outcome=unknown with a failure class; the first such cell stops dispatch, it stays selected and the primary is reported as not measurable. There is no replacement. A Jev failure followed by an LLM decision never counts as Jev acceptance.",
+    "primary_metric": {
+      "aggregation": "verified admitted cells / 2 (injected c1m1 A-Noul|B-Noul slot)",
+      "denominator": 2,
+      "direction": "maximize",
+      "name": "noul_e2e_admission_success",
+      "unit": "ratio"
+    },
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "research_question": "Do the Noul verdict arms admit in one paired concurrent injected c1m1 slot?"
+  }
+}

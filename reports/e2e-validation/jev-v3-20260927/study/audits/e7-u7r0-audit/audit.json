@@ -1,0 +1,5771 @@
+{
+  "analysis_sha256": "2c81619a8d23e6fc7df8a5799ad720f2b9accfd98b2e232c77a01cd94c17fe82",
+  "calls": {
+    "actual_invoice_usd": null,
+    "error_types": {},
+    "models": {
+      "gpt-6-astra": 120,
+      "jev-1.13.0": 24
+    },
+    "purposes": {
+      "agentic_loop": 72,
+      "cognitive_reflection": 36,
+      "turn_verification": 36
+    },
+    "started_ended_accounting_joined": true,
+    "unique_attempts": 144,
+    "usage": {
+      "gpt-6-astra": {
+        "cache_write_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 0
+        },
+        "cached_input_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 11648
+        },
+        "input_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 333844
+        },
+        "output_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 39567
+        },
+        "reasoning_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 16876
+        }
+      },
+      "jev-1.13.0": {
+        "cache_write_tokens": {
+          "missing_calls": 24,
+          "observed_sum": 0
+        },
+        "cached_input_tokens": {
+          "missing_calls": 24,
+          "observed_sum": 0
+        },
+        "input_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 52949
+        },
+        "output_tokens": {
+          "missing_calls": 0,
+          "observed_sum": 1152
+        },
+        "reasoning_tokens": {
+          "missing_calls": 24,
+          "observed_sum": 0
+        }
+      }
+    },
+    "whole_runtime_complete": false
+  },
+  "counts": {
+    "invalid": 0,
+    "not_started": 0,
+    "observed": 36,
+    "planned": 36,
+    "strict_success": 36,
+    "valid": 36,
+    "valid_failed": 0
+  },
+  "credential_reads": 0,
+  "database_references_not_reopened": [
+    {
+      "manifest_sha256": "7964b1e5f28424760061258c0eb6179058ca0b99f3e13b8ce559070a7b3d3a19",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "7964b1e5f28424760061258c0eb6179058ca0b99f3e13b8ce559070a7b3d3a19",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a77db1f96cf2930d2174e9d83e086a9eb455895b28783727b3f78cc77c5cb4d7",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a77db1f96cf2930d2174e9d83e086a9eb455895b28783727b3f78cc77c5cb4d7",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "851787a6cebadc42e31211c04bf283921c5d84228a7b9c9782e5584b5e9239c0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "851787a6cebadc42e31211c04bf283921c5d84228a7b9c9782e5584b5e9239c0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a9765cf4f438924dc6bc432eeb8871d9a8859e2219130204fc9b51ce286eba49",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a9765cf4f438924dc6bc432eeb8871d9a8859e2219130204fc9b51ce286eba49",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "30023ff312197db54a9402cc16185b32ede5e1e281e20b3399402bb254bbeb90",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "30023ff312197db54a9402cc16185b32ede5e1e281e20b3399402bb254bbeb90",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "44d43e0f746281ec9451de9ca777b25659dc0c4b4b7b4c3f04243cb3ddbf7f95",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "44d43e0f746281ec9451de9ca777b25659dc0c4b4b7b4c3f04243cb3ddbf7f95",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f566b39c4fbf5cbabe3605b6a226153c1fdae8ffdc9cd9300a65c313a1435b11",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f566b39c4fbf5cbabe3605b6a226153c1fdae8ffdc9cd9300a65c313a1435b11",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a650046b20c35e4b8bb5733738e6806c60b13ca451829e3ba2888385a2e79b04",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a650046b20c35e4b8bb5733738e6806c60b13ca451829e3ba2888385a2e79b04",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "5606dae37b6c6dd7dfeb0958f8d91ccafbbd3b94447dc9078db7341bbc19a092",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "5606dae37b6c6dd7dfeb0958f8d91ccafbbd3b94447dc9078db7341bbc19a092",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "5ec766225fac91a785f58e38d8b2efba017beba24a59cb8dbde550ab6c673980",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "5ec766225fac91a785f58e38d8b2efba017beba24a59cb8dbde550ab6c673980",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "d805734ad82376e53192c41cc7011960dc6c744edc26032906e24bfa9007ceef",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "d805734ad82376e53192c41cc7011960dc6c744edc26032906e24bfa9007ceef",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "252f986297059ea9ece80dfb95dd4e2a15730aa28767e59a1e1c566f5894fe5c",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "252f986297059ea9ece80dfb95dd4e2a15730aa28767e59a1e1c566f5894fe5c",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "050f43a88a933a831611f7ea16f51707a77aa984f7b073c53f028f5a98210b00",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "050f43a88a933a831611f7ea16f51707a77aa984f7b073c53f028f5a98210b00",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "2b52a59619e824d5fd77ff5ad30c2f47ec3f53b75f794f3cbae6367d4d4d8026",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "2b52a59619e824d5fd77ff5ad30c2f47ec3f53b75f794f3cbae6367d4d4d8026",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a7881279f94b071618bc53de85b84da3b8136d603f968ac18916d9bb22ce7235",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a7881279f94b071618bc53de85b84da3b8136d603f968ac18916d9bb22ce7235",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f76542e911e5b58c6079336cc66ecf1c04da286b8d4ce08f52c7377ded4174e5",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f76542e911e5b58c6079336cc66ecf1c04da286b8d4ce08f52c7377ded4174e5",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f9012aa88fae20a15cf40dec12dfa48f6ebf81c013bf605628a642f46cbcddd2",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "f9012aa88fae20a15cf40dec12dfa48f6ebf81c013bf605628a642f46cbcddd2",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "67273ef20d4339acfd44a3a3c53d31682e7e877f8c014bdafcffa58f98163c0b",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "67273ef20d4339acfd44a3a3c53d31682e7e877f8c014bdafcffa58f98163c0b",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "354fc800c44ce26fa3bbecde4efc5b60f6a4f551a02ae36286f6cef759eb7038",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "354fc800c44ce26fa3bbecde4efc5b60f6a4f551a02ae36286f6cef759eb7038",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e6c613dddce5422340c3ce93cf6438c06121d733097aa18606e0b69b57967287",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e6c613dddce5422340c3ce93cf6438c06121d733097aa18606e0b69b57967287",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "50226108f34f493ca9f45af31f4101fd4301eda55b6aa5fb4f80206cc09cf67a",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "50226108f34f493ca9f45af31f4101fd4301eda55b6aa5fb4f80206cc09cf67a",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "14c311ab5aa55663b4882df13f9e813d179b47a9f10497c962ea4d815d74572e",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "14c311ab5aa55663b4882df13f9e813d179b47a9f10497c962ea4d815d74572e",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "b30f9f927aed40186ed0f942219f5a41e602ed36ca1caba645b0f2812df24b76",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "b30f9f927aed40186ed0f942219f5a41e602ed36ca1caba645b0f2812df24b76",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fb69a26da2ad5083072ed9db998b0b0f5c5ef2d0ff7cf0b886bca2daddda69bc",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fb69a26da2ad5083072ed9db998b0b0f5c5ef2d0ff7cf0b886bca2daddda69bc",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "0bad1d0d42009049d1d6f8996d2b6af0befb2aa3c8743179830a884a7b0acae0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "0bad1d0d42009049d1d6f8996d2b6af0befb2aa3c8743179830a884a7b0acae0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "7879a8546191b9702c4ce8240188acacac30cba9728963da972d16b5922924eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "7879a8546191b9702c4ce8240188acacac30cba9728963da972d16b5922924eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "dc5c1d54ad0c72bd0b9a8fea589ab10fc2336a55bdc4f54b138f77dc01ce0649",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "dc5c1d54ad0c72bd0b9a8fea589ab10fc2336a55bdc4f54b138f77dc01ce0649",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "79518a9844d69a6eda5f737b0888fea01b23febd9e2b2a8db10e10e1b6f56cf2",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "79518a9844d69a6eda5f737b0888fea01b23febd9e2b2a8db10e10e1b6f56cf2",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "09e5529c057556e79d1fa680b00a549b9eb074fcb3bf5c0509dc6fc45648c28c",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "09e5529c057556e79d1fa680b00a549b9eb074fcb3bf5c0509dc6fc45648c28c",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "2194cb534c0a893bab861b032949e1961b43e863b64e231a69b5e97ac49fb9fe",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "2194cb534c0a893bab861b032949e1961b43e863b64e231a69b5e97ac49fb9fe",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "15f3380bbbbdab92ffadf16e47b13412a93f1fcbe59053de3b9351160b1b00af",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "15f3380bbbbdab92ffadf16e47b13412a93f1fcbe59053de3b9351160b1b00af",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "1b133a5df73cc0e78db0d29533cee5b04f6cbe4e0dc7a20ce42136c151d9e6cc",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "1b133a5df73cc0e78db0d29533cee5b04f6cbe4e0dc7a20ce42136c151d9e6cc",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "8dc076a8181248145cb23872b9365b9fd3f9dfbed92110bc040d6fde62bbff31",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "8dc076a8181248145cb23872b9365b9fd3f9dfbed92110bc040d6fde62bbff31",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "906f683b7bb1c3a3c81b4046491e052027d0bd494dc3cc23550855f4e8e6446d",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "906f683b7bb1c3a3c81b4046491e052027d0bd494dc3cc23550855f4e8e6446d",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "75de32d5f4acd838493f4229dfc6155f78b0a14eb3c1c621f0d62f3b0ec9a11a",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "75de32d5f4acd838493f4229dfc6155f78b0a14eb3c1c621f0d62f3b0ec9a11a",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a9c75bc6ac9c6faf07deedd1a750991a3ea5ac900304ea333f8fc85d0a7755d0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    },
+    {
+      "manifest_sha256": "a9c75bc6ac9c6faf07deedd1a750991a3ea5ac900304ea333f8fc85d0a7755d0",
+      "path": "[local-path-withheld]",
+      "reason": "database contents not independently read; retained native reconciliation only"
+    }
+  ],
+  "decision": {
+    "hypothesis_status": "mixed",
+    "outcome": "diagnostic-only",
+    "rationale": "05 v2 §3.4: admission units pass or fail; U7 and U8 are descriptive."
+  },
+  "dispatch": {
+    "complete": true,
+    "max_agent_start_skew_s": 25.175844,
+    "max_dispatch_skew_s": 0.006103,
+    "pair_sync_false": 0,
+    "pair_sync_unknown": 0,
+    "slots_run": 12,
+    "stop": null,
+    "stopped_before": null
+  },
+  "execution": {
+    "ended_at": "2026-09-27T14:44:20.271284+00:00",
+    "exit_code": 0,
+    "freeze_sha256": "d49a247c63310e68c7e3c4d9fd708125411df0059981954a4f57fa3ed541cf0d",
+    "runner_sha256": "a00fb55179858892adb69f4e5cbfebeb4a0bd1c70069c032d4f38c55e56f29ef",
+    "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+    "started_at": "2026-09-27T14:15:40.073677+00:00",
+    "unit": "U7r0"
+  },
+  "freeze_sha256": "d49a247c63310e68c7e3c4d9fd708125411df0059981954a4f57fa3ed541cf0d",
+  "human_reviewed": false,
+  "infra_calls": 0,
+  "jev_settlement": {
+    "known_tariff_estimate_usd": "0.002223858",
+    "ledger_snapshot_sha256": "c12f96f71a0c1f6c2358a2d23dba2ab051f4b59d25c169e7e92cf9febbed5c67",
+    "old_unknown_reserves_retained": true,
+    "open_reservations_for_this_unit": 0,
+    "reservations": 24,
+    "settled_calls": 24,
+    "settlements": 24,
+    "unknown_cost_reserve_usd": "0",
+    "unknown_token_calls": 0
+  },
+  "limitations": [
+    "This complete first repeat is descriptive; reliability requires the separately registered complete second E7 repeat.",
+    "All 36 success receipts and retained call joins are verified, not general task or provider reliability.",
+    "No native runtime exceeded 180 seconds; this is not an estimate of the causal effect of changing the budget to 540 seconds.",
+    "Retained call accounting is verified, not complete backend billing or all-runtime producer coverage.",
+    "Original source5 events have no source6 capture metadata; no retroactive promotion.",
+    "Private trajectories and cases were hash-only; session database contents were not independently read; native source reconciliation remains its authority.",
+    "U7 has 12 tasks and two registered repeats; no new statistics or fitted criteria were produced.",
+    "Historical E6 invalid results remain separate and are not pooled with E7."
+  ],
+  "lock_release": {
+    "events": [
+      {
+        "at": "2026-09-27T14:15:41.229262+00:00",
+        "event": "acquire",
+        "mode": "e2e-slot",
+        "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7"
+      },
+      {
+        "at": "2026-09-27T14:44:20.174433+00:00",
+        "event": "release",
+        "mode": "e2e-slot",
+        "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7"
+      }
+    ],
+    "path": "[local-path-withheld]",
+    "release_observed": true
+  },
+  "model_calls_added": 0,
+  "native_analysis_reexecuted": false,
+  "native_bundle_validation": {
+    "attempts": 37,
+    "declared_artifacts": [
+      "native_results"
+    ],
+    "publication_status": null,
+    "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7"
+  },
+  "original_bound_files": 1698,
+  "originals_modified": false,
+  "primary": {
+    "denominator": 12,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "quota": {
+    "account_plan_filtered": true,
+    "all36_private_guard_receipts_current_account": true,
+    "end": {
+      "account_matches_g0": "true",
+      "checkpoint_id": "U7r0-end",
+      "decision": "closed",
+      "delta_astra_calls": "120",
+      "delta_used_pct": "1.0",
+      "event": "unit_end",
+      "next_unit": "U7r0",
+      "notes": "external shared-account usage is included in delta (not subtracted)",
+      "plan": "pro",
+      "program_astra_calls_cum": "3633",
+      "program_astra_input_tokens_cum": "8640916",
+      "projected_end_pct": "",
+      "r_status": "",
+      "r_used_pct_per_100_calls": "",
+      "reset_at_kst": "2026-10-04 08:12",
+      "time_kst": "2026-09-27 23:44",
+      "unit_astra_calls_planned": "",
+      "used_pct": "18.0",
+      "window_seconds": ""
+    },
+    "end_window_not_persisted": true,
+    "external_shared_account_usage_unknown": true,
+    "middle": [
+      {
+        "account_matches_g0": "",
+        "checkpoint_id": "U7r0-mid",
+        "decision": "continue",
+        "delta_astra_calls": "",
+        "delta_used_pct": "",
+        "event": "unit_mid",
+        "next_unit": "U7r0",
+        "notes": "source=wham-live",
+        "plan": "",
+        "program_astra_calls_cum": "",
+        "program_astra_input_tokens_cum": "",
+        "projected_end_pct": "",
+        "r_status": "",
+        "r_used_pct_per_100_calls": "",
+        "reset_at_kst": "2026-10-04 08:12",
+        "time_kst": "2026-09-27 23:29",
+        "unit_astra_calls_planned": "",
+        "used_pct": "18.0",
+        "window_seconds": ""
+      }
+    ],
+    "middle_account_fields_not_persisted": true,
+    "native_r_after": 2.0,
+    "path": "[local-path-withheld]",
+    "planned360_point_forecast_not_hard_cap": true,
+    "pre_execution_readiness": {
+      "path": "[local-path-withheld]",
+      "projected_end_pct": 27.076923076923077,
+      "recorded_at": "2026-09-27T23:09:58.809557+09:00",
+      "sha256": "9bedf64049918ef77d274878dc54dd9294fc45a0a89c0506ab4a7460b9e7f8eb",
+      "used_pct": 16.0
+    },
+    "r_status": "measured",
+    "same_reset_observed": true,
+    "selection_scope": {
+      "end_minute": "2026-09-27 23:44",
+      "historical_same_named_U7r0_rows_excluded": true,
+      "start_minute": "2026-09-27 23:15"
+    },
+    "snapshot_sha256": "6a2be6fe9484a006f37dcda5963d806940481ddcac0081ee242f530184035a0b",
+    "start": {
+      "account_matches_g0": "true",
+      "checkpoint_id": "U7r0-start",
+      "decision": "start",
+      "delta_astra_calls": "",
+      "delta_used_pct": "",
+      "event": "unit_start",
+      "next_unit": "U7r0",
+      "notes": "source=wham-live",
+      "plan": "pro",
+      "program_astra_calls_cum": "3513",
+      "program_astra_input_tokens_cum": "8307072",
+      "projected_end_pct": "28.077",
+      "r_status": "measured",
+      "r_used_pct_per_100_calls": "3.076923",
+      "reset_at_kst": "2026-10-04 08:12",
+      "time_kst": "2026-09-27 23:15",
+      "unit_astra_calls_planned": "360",
+      "used_pct": "17.0",
+      "window_seconds": "604800"
+    },
+    "start_window_seconds": 604800
+  },
+  "raw_model_text_published": false,
+  "recorded_at": "2026-09-27T14:47:01.279516+00:00",
+  "results_sha256": "41671d86bbe2f1570e0b3c90964efc8422b00c18f45b003c9252edcc1c83b7a4",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "runtime_distribution": {
+    "at_or_over_540_s": 0,
+    "by_arm": {
+      "A": {
+        "maximum_s": 82.815506204,
+        "minimum_s": 48.3918913550001,
+        "n": 12,
+        "over_180_s": 0
+      },
+      "B": {
+        "maximum_s": 45.771421229,
+        "minimum_s": 34.76174376600001,
+        "n": 12,
+        "over_180_s": 0
+      },
+      "C": {
+        "maximum_s": 52.41737360700006,
+        "minimum_s": 37.16875268300009,
+        "n": 12,
+        "over_180_s": 0
+      }
+    },
+    "causal_budget_effect_not_identified": true,
+    "field": "trial-receipt.runtime.elapsed_seconds",
+    "maximum_s": 82.815506204,
+    "minimum_s": 34.76174376600001,
+    "n": 36,
+    "over_180_s": 0,
+    "termination_reasons": {
+      "natural": 36
+    }
+  },
+  "slots": [
+    {
+      "agent_start_skew_s": 11.833845,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.004036,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s01",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 15.174469,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.003494,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s02",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 5.110407,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.003548,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "C",
+        "A",
+        "B"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s03",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 23.071671,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.004866,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s04",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 19.20445,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.003597,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s05",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 24.736082,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.005814,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "C",
+        "A",
+        "B"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s06",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 19.53575,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.006103,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s07",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 3.768048,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.003514,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s08",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 25.175844,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.004281,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "C",
+        "A",
+        "B"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s09",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 6.032383,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.004806,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s10",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 19.402814,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.003575,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "B",
+        "C",
+        "A"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s11",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    },
+    {
+      "agent_start_skew_s": 15.151896,
+      "concurrent_trials": {
+        "A": 2,
+        "B": 2,
+        "C": 2
+      },
+      "dispatch_errors": {},
+      "dispatch_skew_s": 0.004517,
+      "exit_codes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "launch_order": [
+        "C",
+        "A",
+        "B"
+      ],
+      "pair_sync": true,
+      "slot_id": "U7r0-s12",
+      "stop": null,
+      "validity": {
+        "A": "valid",
+        "B": "valid",
+        "C": "valid"
+      }
+    }
+  ],
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "status": "read-only-audit-complete-native-r0-gate-passed-r1-not-executed-by-auditor",
+  "stop": null,
+  "trials": [
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-766245d1d1d4:step-1-13044748:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2631,
+            "output_tokens": 172,
+            "reasoning_tokens": 103
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-fc4d03c1b0dd4b42aca7ace180b7762d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1933,
+            "output_tokens": 466,
+            "reasoning_tokens": 293
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-766245d1d1d4:step-2-b2c3cb53:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2915,
+            "output_tokens": 342,
+            "reasoning_tokens": 31
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-766245d1d1d4:step-3-ad19e5c8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2668,
+            "output_tokens": 168,
+            "reasoning_tokens": 125
+          }
+        }
+      ],
+      "case_id": "nat-e2e-golfballs-d46a1475604d",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "39a41a74ba702528089a91875044d80aeca15dbe0cb31482ffecaa7a118d90b6"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 11.833845,
+        "agent_start_utc": "2026-09-27T14:16:58.381300Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004036,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:15:42.217906+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s01"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 169.48,
+      "index": 0,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 82.815506204,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s01",
+      "slot_index": 1,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "88f969f87ca88624b098376546f66c6b89ad677df9cd173bfa25d682e974da08"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-golfballs-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-766245d1d1d4:step-3-ad19e5c8",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a99d249763d4:step-1-20cf0153:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2631,
+            "output_tokens": 189,
+            "reasoning_tokens": 120
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-fb66d48c9d094836adf1bb6df5e5501e:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1932,
+            "output_tokens": 405,
+            "reasoning_tokens": 239
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a99d249763d4:step-2-e6244c63:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2932,
+            "output_tokens": 336,
+            "reasoning_tokens": 25
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a99d249763d4:step-3-24d89438:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 1948,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-golfballs-d46a1475604d",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "42ce85f03f3e9c44a1e86fc5f6b41947d70c224ae8b7db5e0404acdf2d8d9eb2"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 11.833845,
+        "agent_start_utc": "2026-09-27T14:16:59.852890Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004036,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:15:42.219525+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s01"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 124.034,
+      "index": 1,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 34.76174376600001,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s01",
+      "slot_index": 1,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "b2faa3f1eea3d1222678fba8a52b2dc17e54c9cba97345c36ac09c53c90f9d16"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-golfballs-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-a99d249763d4:step-3-24d89438",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0502ec87c4fa:step-1-97d4cac8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 2048,
+            "input_tokens": 2631,
+            "output_tokens": 171,
+            "reasoning_tokens": 102
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-f8943b3ac56a446da2896e271bb7bda4:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1931,
+            "output_tokens": 406,
+            "reasoning_tokens": 236
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0502ec87c4fa:step-2-2f213333:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2914,
+            "output_tokens": 323,
+            "reasoning_tokens": 12
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0502ec87c4fa:step-3-cbf13cf3:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 1947,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-golfballs-d46a1475604d",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "7ff3d010f29941d62767b4ce57b1242abb75c979016547a4a462123120c3e599"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 11.833845,
+        "agent_start_utc": "2026-09-27T14:16:48.019045Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004036,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:15:42.221946+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s01"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 124.627,
+      "index": 2,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 48.962733523,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s01",
+      "slot_index": 1,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "bf803bfcbf5ef356b826ac289413a3b889cd0f52c31a68894f8bb9d668d5c77f"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-golfballs-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-0502ec87c4fa:step-3-cbf13cf3",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6808d71be7e9:step-1-98e5b106:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2883,
+            "output_tokens": 248,
+            "reasoning_tokens": 167
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-8a10a40562a64fe2b117dbaf158a043c:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2497,
+            "output_tokens": 473,
+            "reasoning_tokens": 306
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6808d71be7e9:step-2-32606f8c:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3267,
+            "output_tokens": 449,
+            "reasoning_tokens": 27
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6808d71be7e9:step-3-ff5e149a:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2387,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-washingmachines-5bf569ed8618",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "e9a29639f551dfae7cda492eaeb0c566de63998e697fafc55539ef71e8619d3b"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 15.174469,
+        "agent_start_utc": "2026-09-27T14:19:27.904803Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003494,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:18:32.873729+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s02"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 110.142,
+      "index": 3,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 43.62317685299999,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s02",
+      "slot_index": 2,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "a6e410d1ccafffca6f800282b3467cb404dc87a1bfb09a50799b8dc68edc6b29"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-washingmachines-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-6808d71be7e9:step-3-ff5e149a",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-95b7b63162ea:step-1-eb3f9be7:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2883,
+            "output_tokens": 234,
+            "reasoning_tokens": 153
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-11ebb6f42f604d6dbb1d09b6c40f0948:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2499,
+            "output_tokens": 354,
+            "reasoning_tokens": 190
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-95b7b63162ea:step-2-686f15d9:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3253,
+            "output_tokens": 453,
+            "reasoning_tokens": 31
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-95b7b63162ea:step-3-72a681ff:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2389,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-washingmachines-5bf569ed8618",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "9d2acafec6085e0e245ff141e405de1c9ff3713150cc91bac99246c0bcf71c1d"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 15.174469,
+        "agent_start_utc": "2026-09-27T14:19:43.079272Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003494,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:18:32.875495+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s02"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 124.891,
+      "index": 4,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 44.67977056299998,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s02",
+      "slot_index": 2,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "3ebb8eb1ac2805c1dcb7931b9fb49656ba3bb7ef59f1cfc00b3ccac91d684228"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-washingmachines-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-95b7b63162ea:step-3-72a681ff",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-2a77f834abd1:step-1-266dba53:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2883,
+            "output_tokens": 299,
+            "reasoning_tokens": 218
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-dfcd684d977b42f8bcaaeeb215c89c2f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2497,
+            "output_tokens": 475,
+            "reasoning_tokens": 301
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-2a77f834abd1:step-2-d84cdc73:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3318,
+            "output_tokens": 481,
+            "reasoning_tokens": 59
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-2a77f834abd1:step-3-75600c54:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3309,
+            "output_tokens": 234,
+            "reasoning_tokens": 191
+          }
+        }
+      ],
+      "case_id": "nat-e2e-washingmachines-5bf569ed8618",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "d71b28a97e0faae61524536fe9ce5d269f6de1ed48f6ad0fd666267d258ecac2"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 15.174469,
+        "agent_start_utc": "2026-09-27T14:19:43.033672Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003494,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:18:32.877225+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s02"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 142.922,
+      "index": 5,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 62.855155155000034,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s02",
+      "slot_index": 2,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "70228ba3865483a3c53a4cf3dd0c9f9f9785412401bc607652d90e1bb03433aa"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-washingmachines-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-2a77f834abd1:step-3-75600c54",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-f0aeac342189:step-1-27c26240:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2779,
+            "output_tokens": 158,
+            "reasoning_tokens": 89
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-0e8e17a188344f0c83380e77b4b439d9:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2277,
+            "output_tokens": 499,
+            "reasoning_tokens": 337
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-f0aeac342189:step-2-0e93dc63:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3050,
+            "output_tokens": 407,
+            "reasoning_tokens": 23
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-f0aeac342189:step-3-665c13ca:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2174,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-headphones-46ab0755b829",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "d55965026dafd564df4ba7041c9413048e80154daedc3cfb26f72877a5a9b773"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 5.110407,
+        "agent_start_utc": "2026-09-27T14:22:10.379744Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003548,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:20:56.815929+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s03"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 125.456,
+      "index": 6,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 40.69735176900002,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s03",
+      "slot_index": 3,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "5f559ee198b6ee7587f3a378f7099e5082444afaf8870b61944a0fb2f2b3a27c"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-headphones-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-f0aeac342189:step-3-665c13ca",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-60c87cf4fd73:step-1-2bf3707f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2779,
+            "output_tokens": 182,
+            "reasoning_tokens": 113
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-23d557df31d54a86a60533471668c81a:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2278,
+            "output_tokens": 417,
+            "reasoning_tokens": 238
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-60c87cf4fd73:step-2-693a9d69:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3074,
+            "output_tokens": 328,
+            "reasoning_tokens": 14
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-60c87cf4fd73:step-3-053a2de2:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2886,
+            "output_tokens": 210,
+            "reasoning_tokens": 167
+          }
+        }
+      ],
+      "case_id": "nat-e2e-headphones-46ab0755b829",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "d003ddb8f3ba8d1c94e306834c94b91e306e6b2019fdc88c9e18415dd12bdfb7"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 5.110407,
+        "agent_start_utc": "2026-09-27T14:22:12.877440Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003548,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:20:56.817643+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s03"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 135.34,
+      "index": 7,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 49.89270823100003,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s03",
+      "slot_index": 3,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "e55803567872bea87d8fe4a9e32c49ddf0063d8ac27720271cb90acc97b2db37"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-headphones-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-60c87cf4fd73:step-3-053a2de2",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-526e8b66fa22:step-1-2255544a:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2779,
+            "output_tokens": 196,
+            "reasoning_tokens": 127
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-5cc2fdb7f8a7429ca011d684f9679faf:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2279,
+            "output_tokens": 447,
+            "reasoning_tokens": 279
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-526e8b66fa22:step-2-d4e4d743:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 2688,
+            "input_tokens": 3088,
+            "output_tokens": 403,
+            "reasoning_tokens": 19
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-526e8b66fa22:step-3-763fe029:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2175,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-headphones-46ab0755b829",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "1fa735c5495b762e12d8404a3fe1bacc0e6e33512ebfd307aed46b7162f08ce1"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 5.110407,
+        "agent_start_utc": "2026-09-27T14:22:07.767033Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003548,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:20:56.819477+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s03"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 125.489,
+      "index": 8,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 42.674280769000006,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s03",
+      "slot_index": 3,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "2eee44c8545dfb71108454a79ddedb68ef5b0720fcbc0ff3b076943cd8233e4e"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-headphones-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-526e8b66fa22:step-3-763fe029",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c8ba17c4ca57:step-1-0a841b9d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2886,
+            "output_tokens": 143,
+            "reasoning_tokens": 74
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-564d2518094b4ca39f4d1deaf7fded98:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2390,
+            "output_tokens": 463,
+            "reasoning_tokens": 293
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c8ba17c4ca57:step-2-1cd4a710:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3142,
+            "output_tokens": 405,
+            "reasoning_tokens": 18
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c8ba17c4ca57:step-3-b1e22c14:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3075,
+            "output_tokens": 160,
+            "reasoning_tokens": 117
+          }
+        }
+      ],
+      "case_id": "nat-e2e-surfboards-691c476815f8",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "8ec385c917ccc34d76586be7b9db84646a24d5063b5958e8e8b2411bc3336d36"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 23.071671,
+        "agent_start_utc": "2026-09-27T14:24:21.314297Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004866,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:23:13.158075+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s04"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 127.633,
+      "index": 9,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 48.69512977299996,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s04",
+      "slot_index": 4,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "8a6fdb4284825529d6cd34b7e914d41c9a0554b65f5c971b8c28e68760d6302d"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-surfboards-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-c8ba17c4ca57:step-3-b1e22c14",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-de7da6102b2b:step-1-8549e49f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2886,
+            "output_tokens": 144,
+            "reasoning_tokens": 75
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-afe27e9adb1c4750b3def1c699b2e87d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2392,
+            "output_tokens": 470,
+            "reasoning_tokens": 300
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-de7da6102b2b:step-2-06124ad5:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3143,
+            "output_tokens": 401,
+            "reasoning_tokens": 14
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-de7da6102b2b:step-3-c75dded4:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2236,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-surfboards-691c476815f8",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "33bb524319fe2136e2a73a914b74d57a78d5b4cdbdc5a743172ead1aa5caa444"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 23.071671,
+        "agent_start_utc": "2026-09-27T14:24:03.955357Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004866,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:23:13.161143+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s04"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 103.197,
+      "index": 10,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 41.375866894999945,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s04",
+      "slot_index": 4,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "073c1ad38e86e49684dde724bec944d947c90682de7e04fc590c7d363fc4e714"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-surfboards-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-de7da6102b2b:step-3-c75dded4",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4333e288a61:step-1-34acf8eb:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2886,
+            "output_tokens": 134,
+            "reasoning_tokens": 65
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-73901a5b442b49579798dfcb4465be82:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2391,
+            "output_tokens": 438,
+            "reasoning_tokens": 273
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4333e288a61:step-2-af76e98c:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3133,
+            "output_tokens": 409,
+            "reasoning_tokens": 22
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4333e288a61:step-3-8b62a8d8:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2235,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-surfboards-691c476815f8",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "0391a15589ec2dbcfcb9bd9af85be00b8ea51e54c0b520809081b894a19bc5ec"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 23.071671,
+        "agent_start_utc": "2026-09-27T14:24:27.027028Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004866,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:23:13.162941+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s04"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 135.743,
+      "index": 11,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 52.41737360700006,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s04",
+      "slot_index": 4,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "911af3f4ab94c3578612d346e145f3e9651a0dfde128374cefa9142d000cc16d"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-surfboards-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-a4333e288a61:step-3-8b62a8d8",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-1ef8e356cc71:step-1-2faaddb3:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 2048,
+            "input_tokens": 2859,
+            "output_tokens": 168,
+            "reasoning_tokens": 87
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-47ca657aa11a408888ce680327f29a71:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2480,
+            "output_tokens": 412,
+            "reasoning_tokens": 253
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-1ef8e356cc71:step-2-d61d1a30:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3162,
+            "output_tokens": 451,
+            "reasoning_tokens": 30
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-1ef8e356cc71:step-3-b6c667b1:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2359,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-modeltrains-ccba0b31917f",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "e5ed41662258048f8b2579d4e6a125da7961d74bad9d480e925720661c4e6108"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 19.20445,
+        "agent_start_utc": "2026-09-27T14:26:24.509487Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003597,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:25:29.900125+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s05"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 103.328,
+      "index": 12,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 37.85574759999997,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s05",
+      "slot_index": 5,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "c4b762f4812d8472ca0519ad26c43a03d84f5b9c52b3309f10e6842e5b06ce08"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-modeltrains-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-1ef8e356cc71:step-3-b6c667b1",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-508869b91e3d:step-1-41f737b0:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2859,
+            "output_tokens": 218,
+            "reasoning_tokens": 137
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-1bed916c268b4e4981b23e41671f28a1:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2477,
+            "output_tokens": 450,
+            "reasoning_tokens": 291
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-508869b91e3d:step-2-f8efdfc1:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3212,
+            "output_tokens": 440,
+            "reasoning_tokens": 19
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-508869b91e3d:step-3-cc4241e0:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2345,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-modeltrains-ccba0b31917f",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "a72036f4c03e1b69698258629bd48faf3e219be7f938828a8c809124b0ef1afa"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 19.20445,
+        "agent_start_utc": "2026-09-27T14:26:38.309770Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003597,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:25:29.902041+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s05"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 124.492,
+      "index": 13,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 46.24216510400004,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s05",
+      "slot_index": 5,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "dc8b615e60fc7bb6ec3bf4a5cc489681b63c775b57653bf9d71982b4cf53f4a2"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-modeltrains-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-508869b91e3d:step-3-cc4241e0",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-8fa7c326e7e2:step-1-00929643:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2859,
+            "output_tokens": 161,
+            "reasoning_tokens": 80
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-31f5cd4b34984d31b41bb635d77e1e06:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2478,
+            "output_tokens": 459,
+            "reasoning_tokens": 300
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-8fa7c326e7e2:step-2-cf18d1d8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3155,
+            "output_tokens": 451,
+            "reasoning_tokens": 30
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-8fa7c326e7e2:step-3-9b264fb9:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3296,
+            "output_tokens": 201,
+            "reasoning_tokens": 158
+          }
+        }
+      ],
+      "case_id": "nat-e2e-modeltrains-ccba0b31917f",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "d8aa81bf7c49fc2025f2cdb7a1c6651ab4ff7f26c2f3c17b3fade5c8b7ff97ca"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 19.20445,
+        "agent_start_utc": "2026-09-27T14:26:19.105320Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003597,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:25:29.903720+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s05"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 109.584,
+      "index": 14,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 50.14246398099999,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s05",
+      "slot_index": 5,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "9cdbedaecfa0593ee25394f05e3247793535c5595a05c6125a83a43bef73e982"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-modeltrains-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-8fa7c326e7e2:step-3-9b264fb9",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-ee276ec8ff42:step-1-4257650d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2754,
+            "output_tokens": 189,
+            "reasoning_tokens": 120
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-c1247832c25f411391f03e487b71d918:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2112,
+            "output_tokens": 415,
+            "reasoning_tokens": 249
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-ee276ec8ff42:step-2-ee6dd8b1:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3055,
+            "output_tokens": 367,
+            "reasoning_tokens": 20
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-ee276ec8ff42:step-3-30076b71:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2059,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-projectors-72b7c4f044f2",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "263f8fe277745a9adebe09a68636a9388b061a846ec3246eb0c395f1984137ab"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 24.736082,
+        "agent_start_utc": "2026-09-27T14:28:56.704596Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.005814,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:27:35.439030+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s06"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 131.017,
+      "index": 15,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 39.083423477,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s06",
+      "slot_index": 6,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "7c2ccb9d4bdaa5fd73b93ed77d15bec47cec2b828294ca9a4c1dd38b95fb05f5"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-projectors-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-ee276ec8ff42:step-3-30076b71",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7da6defd0f72:step-1-ed29f811:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2754,
+            "output_tokens": 151,
+            "reasoning_tokens": 82
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-c02c90ed8e61477692486b6992835835:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2108,
+            "output_tokens": 440,
+            "reasoning_tokens": 275
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7da6defd0f72:step-2-dac2d9d7:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3017,
+            "output_tokens": 384,
+            "reasoning_tokens": 37
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7da6defd0f72:step-3-9d3aed24:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2844,
+            "output_tokens": 183,
+            "reasoning_tokens": 140
+          }
+        }
+      ],
+      "case_id": "nat-e2e-projectors-72b7c4f044f2",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "726cf4e532a14b86a4ee1a4d1bf78e8c0221c08019828117fd9b6e80d3e61d1a"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 24.736082,
+        "agent_start_utc": "2026-09-27T14:28:31.968514Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.005814,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:27:35.442185+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s06"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 120.252,
+      "index": 16,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 52.533511524000005,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s06",
+      "slot_index": 6,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "d7ea27676c188283fbf44e42e3ff3bca4bed4a05e4ba76eea16aba66012b4fb0"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-projectors-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-7da6defd0f72:step-3-9d3aed24",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-73d3f8548f7f:step-1-515d087f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2754,
+            "output_tokens": 237,
+            "reasoning_tokens": 168
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-e5252fcfbcd84a868085d70a3341f68f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2108,
+            "output_tokens": 478,
+            "reasoning_tokens": 328
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-73d3f8548f7f:step-2-b0b6ccec:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3103,
+            "output_tokens": 363,
+            "reasoning_tokens": 16
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-73d3f8548f7f:step-3-51d97768:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2057,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-projectors-72b7c4f044f2",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "82b83b25f2e21890c15d81b8168a1a01e2b50a1db612c557c70e3a8ed79020dc"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 24.736082,
+        "agent_start_utc": "2026-09-27T14:28:54.831977Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.005814,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:27:35.444844+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s06"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 133.66,
+      "index": 17,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 43.94963081200001,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s06",
+      "slot_index": 6,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "4b504c38d256509ac4c2fb82ec43314a67d8110d524a4b25c11591bf393c4a25"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-projectors-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-73d3f8548f7f:step-3-51d97768",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7ddd53e1cb78:step-1-96f4514a:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2940,
+            "output_tokens": 218,
+            "reasoning_tokens": 137
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-6b5a92b9a66b463d9e51ed066eb6bf0e:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2669,
+            "output_tokens": 470,
+            "reasoning_tokens": 283
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7ddd53e1cb78:step-2-cc76800d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3292,
+            "output_tokens": 477,
+            "reasoning_tokens": 21
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-7ddd53e1cb78:step-3-087df425:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3480,
+            "output_tokens": 215,
+            "reasoning_tokens": 174
+          }
+        }
+      ],
+      "case_id": "nat-e2e-ukuleles-a0089cf3a6de",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "0366d1bb0c93230984b11e39b2ec01e289879b4f510d5a41c2f9b2a41cf84a61"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 19.53575,
+        "agent_start_utc": "2026-09-27T14:31:02.226720Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.006103,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:29:50.642625+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s07"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 137.967,
+      "index": 18,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 56.339271234999956,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s07",
+      "slot_index": 7,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "e64cd72e530a5e2e2e77d4748ad9c662dfb2066ec01f6c9a43bc57d10b8c44a2"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-ukuleles-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-7ddd53e1cb78:step-3-087df425",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c6af3ffce8ce:step-1-4afe5a08:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2940,
+            "output_tokens": 317,
+            "reasoning_tokens": 236
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-140cc3d9117346d5b1052b614d368512:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2673,
+            "output_tokens": 403,
+            "reasoning_tokens": 232
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c6af3ffce8ce:step-2-3c69687a:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 2816,
+            "input_tokens": 3391,
+            "output_tokens": 511,
+            "reasoning_tokens": 55
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c6af3ffce8ce:step-3-b79cc886:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2469,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-ukuleles-a0089cf3a6de",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "cd15df6bb85c3f9c34424f8f9341d261606977e271f8facdfb8e2e39cb19b7be"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 19.53575,
+        "agent_start_utc": "2026-09-27T14:31:21.762470Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.006103,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:29:50.645235+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s07"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 144.911,
+      "index": 19,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 44.08989035399998,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s07",
+      "slot_index": 7,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "63ab8e3e60e3390312e44f707391cf29a3ac02ed8a8daef1844296e398edb3e4"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-ukuleles-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-c6af3ffce8ce:step-3-b79cc886",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0980f72d8961:step-1-d571f281:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2940,
+            "output_tokens": 207,
+            "reasoning_tokens": 126
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-65f6170d80044af2acbf801650fe1cdb:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2671,
+            "output_tokens": 440,
+            "reasoning_tokens": 262
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0980f72d8961:step-2-8ee23031:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3281,
+            "output_tokens": 327,
+            "reasoning_tokens": 29
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-0980f72d8961:step-3-77fcd618:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2309,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-ukuleles-a0089cf3a6de",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "a347093844d9e8b1193cf0df108a24985db3e6d067a886721c1002010445f0fb"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 19.53575,
+        "agent_start_utc": "2026-09-27T14:31:12.943159Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.006103,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:29:50.648728+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s07"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 133.289,
+      "index": 20,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 39.29186443499998,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s07",
+      "slot_index": 7,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "102a3968dc020afbd4e7e8b11b3c5b380063e751ce206ace626acfc00a29d4d8"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-ukuleles-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-0980f72d8961:step-3-77fcd618",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6c272bfcad5a:step-1-60cb6123:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2879,
+            "output_tokens": 173,
+            "reasoning_tokens": 92
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-459927d6744d4782b06f6757ec321ec8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2487,
+            "output_tokens": 449,
+            "reasoning_tokens": 277
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6c272bfcad5a:step-2-13b4406e:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3187,
+            "output_tokens": 461,
+            "reasoning_tokens": 40
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6c272bfcad5a:step-3-f0c28c1c:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2388,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-swimwear-5dd3e712ab99",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "e0ff300f76a101b37c7ada454263b7f51c395c1cfad6e563fce34ba2c9ce4351"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 3.768048,
+        "agent_start_utc": "2026-09-27T14:33:32.922293Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003514,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:32:16.615622+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s08"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 133.447,
+      "index": 21,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 45.34270922900009,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s08",
+      "slot_index": 8,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "2acb5743b9ddb67c34b7ebbc749a8fd1665ab210e8b0273dba87e4ddafb5d5e8"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-swimwear-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-6c272bfcad5a:step-3-f0c28c1c",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-23f0ea1acfed:step-1-b125b6f5:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2879,
+            "output_tokens": 212,
+            "reasoning_tokens": 131
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-1a151164f64040109b8b47b49887d709:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2490,
+            "output_tokens": 569,
+            "reasoning_tokens": 384
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-23f0ea1acfed:step-2-fef21428:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 2048,
+            "input_tokens": 3226,
+            "output_tokens": 476,
+            "reasoning_tokens": 55
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-23f0ea1acfed:step-3-a22d56e1:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2391,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-swimwear-5dd3e712ab99",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "973768060a08a0d2a4ff60591d588da2a534f13beb1eb611133b1e38427d0806"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 3.768048,
+        "agent_start_utc": "2026-09-27T14:33:36.379520Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003514,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:32:16.617286+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s08"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 135.161,
+      "index": 22,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 45.278196980000075,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s08",
+      "slot_index": 8,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "a43d2321a6fb2bcd4d5e70ce3c5fa5eb32b06f6be4a84086ab25483edacd449e"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-swimwear-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-23f0ea1acfed:step-3-a22d56e1",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5b0b5acd7c51:step-1-151cb2e2:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2879,
+            "output_tokens": 262,
+            "reasoning_tokens": 181
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-d76d3b823fe545918169e8e9261e83d3:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2489,
+            "output_tokens": 462,
+            "reasoning_tokens": 290
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5b0b5acd7c51:step-2-16997e60:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3276,
+            "output_tokens": 454,
+            "reasoning_tokens": 33
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5b0b5acd7c51:step-3-d94fade6:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3302,
+            "output_tokens": 258,
+            "reasoning_tokens": 215
+          }
+        }
+      ],
+      "case_id": "nat-e2e-swimwear-5dd3e712ab99",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "f7d311990f30d119d6838d3ff90b92fa71f56483ccaf39346c8b9e7243cd14d9"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 3.768048,
+        "agent_start_utc": "2026-09-27T14:33:32.611472Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003514,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:32:16.619136+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s08"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 142.279,
+      "index": 23,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 56.21331244199996,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s08",
+      "slot_index": 8,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "c0df945fda7e4a1999e06b9f7f664868828feaeffb43c5b63f0340ee23a39b06"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-swimwear-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-5b0b5acd7c51:step-3-d94fade6",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-775a674c46f2:step-1-b92e05c6:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2778,
+            "output_tokens": 205,
+            "reasoning_tokens": 136
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-3f42f08a30414e79a515441d9e78fdbf:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2278,
+            "output_tokens": 491,
+            "reasoning_tokens": 329
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-775a674c46f2:step-2-61ab7e63:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3096,
+            "output_tokens": 251,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-775a674c46f2:step-3-319343ae:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2044,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-vacuums-a7e19596d4bf",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "68e10acde05554f2bcebbc9005947df6c30caf3099c6467edd6008f4db1f52e0"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 25.175844,
+        "agent_start_utc": "2026-09-27T14:36:02.943868Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004281,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:34:39.947964+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s09"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 130.181,
+      "index": 24,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 37.16875268300009,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s09",
+      "slot_index": 9,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "c9e5f20d444c8c858f6cb9f64976e50498fbd269c1edbc524713cb6542e97bf7"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-vacuums-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-775a674c46f2:step-3-319343ae",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-df28348adb49:step-1-57c19272:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2778,
+            "output_tokens": 157,
+            "reasoning_tokens": 88
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-56a2e8501f614171be9d402f266ec8c3:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2275,
+            "output_tokens": 417,
+            "reasoning_tokens": 244
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-df28348adb49:step-2-7be29cee:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3048,
+            "output_tokens": 412,
+            "reasoning_tokens": 28
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-df28348adb49:step-3-414487c8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3013,
+            "output_tokens": 171,
+            "reasoning_tokens": 128
+          }
+        }
+      ],
+      "case_id": "nat-e2e-vacuums-a7e19596d4bf",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "d20ab9a60d529a17232348332657b10dc73c3f5c7801b1ccf93d85529266b493"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 25.175844,
+        "agent_start_utc": "2026-09-27T14:35:59.948300Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004281,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:34:39.950342+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s09"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 137.959,
+      "index": 25,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 48.3918913550001,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s09",
+      "slot_index": 9,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "261a806f690755267f830292c74a6134b2d03fbb2539e63b7be986eba0bce6ec"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-vacuums-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-df28348adb49:step-3-414487c8",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-34fa22564e65:step-1-7fc44b14:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2778,
+            "output_tokens": 227,
+            "reasoning_tokens": 158
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-9d2781b640944941a4a4aa32aff2cd13:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2280,
+            "output_tokens": 361,
+            "reasoning_tokens": 204
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-34fa22564e65:step-2-1be5e954:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3118,
+            "output_tokens": 382,
+            "reasoning_tokens": 0
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-34fa22564e65:step-3-91ac0ed8:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2175,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-vacuums-a7e19596d4bf",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "9a25f60bded4eaa3e5f9f24d03c5d4f7fae52ce4025376c9eaced1700e7e2745"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 25.175844,
+        "agent_start_utc": "2026-09-27T14:35:37.768024Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004281,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:34:39.952244+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s09"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 109.165,
+      "index": 26,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 40.08704739299992,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s09",
+      "slot_index": 9,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "ec6a6b896f44167d0c560e1027a0ba7fcdd2cc20354b943985c8947b77eddad0"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-vacuums-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-34fa22564e65:step-3-91ac0ed8",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e6650ccd808d:step-1-789a64d1:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2915,
+            "output_tokens": 259,
+            "reasoning_tokens": 166
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-a7e5885679894aba9d47ed16d6ab41ff:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2587,
+            "output_tokens": 405,
+            "reasoning_tokens": 240
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e6650ccd808d:step-2-9bdf36ca:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3334,
+            "output_tokens": 516,
+            "reasoning_tokens": 55
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e6650ccd808d:step-3-f90a566b:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3538,
+            "output_tokens": 195,
+            "reasoning_tokens": 152
+          }
+        }
+      ],
+      "case_id": "nat-e2e-airpurifiers-619e184547da",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "9e01e1effa36ff76a0e8db423012aedd9af8d9d05acf7e6fb40733631f4212c4"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 6.032383,
+        "agent_start_utc": "2026-09-27T14:38:11.616565Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004806,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:36:58.935661+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s10"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 135.275,
+      "index": 27,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 52.950102690999984,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s10",
+      "slot_index": 10,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "e64809cf6bd6369f1625a55316bf4ec308c6129936c501ecf6fee73d4077c1ae"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-airpurifiers-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-e6650ccd808d:step-3-f90a566b",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c31ed026a884:step-1-5feff439:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2915,
+            "output_tokens": 253,
+            "reasoning_tokens": 160
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-07b17fe434034e6caaf3f40053621efa:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2588,
+            "output_tokens": 421,
+            "reasoning_tokens": 251
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c31ed026a884:step-2-eff8e1e2:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3328,
+            "output_tokens": 491,
+            "reasoning_tokens": 30
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-c31ed026a884:step-3-374c7f05:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2511,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-airpurifiers-619e184547da",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "a07b521250557e322dd62c04c601b04bd2915979010558cf206ca7739dc48f4b"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 6.032383,
+        "agent_start_utc": "2026-09-27T14:38:17.648948Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004806,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:36:58.937773+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s10"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 134.814,
+      "index": 28,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 45.771421229,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s10",
+      "slot_index": 10,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "08eacf530093f937211777a3705b6051afbcdb35ba6eb05b6ef8657718786f1c"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-airpurifiers-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-c31ed026a884:step-3-374c7f05",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-fc06cc5df105:step-1-1c2c0d3b:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2915,
+            "output_tokens": 232,
+            "reasoning_tokens": 139
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-e487518eca7649418b1f081c0b7a4219:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2589,
+            "output_tokens": 467,
+            "reasoning_tokens": 293
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-fc06cc5df105:step-2-dbe69262:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3307,
+            "output_tokens": 354,
+            "reasoning_tokens": 52
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-fc06cc5df105:step-3-25cd3413:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2353,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-airpurifiers-619e184547da",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "1f2b4c6c08ad349a94ab35b4e5f809219a40d7fd2bfe3288f8b7fba6c346eb77"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 6.032383,
+        "agent_start_utc": "2026-09-27T14:38:14.161758Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004806,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:36:58.940467+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s10"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 128.959,
+      "index": 29,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 42.42738452000003,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s10",
+      "slot_index": 10,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "7516ab625c89ead778e571b865b2ef09a8ec964e9eee66d7e1a794de4755a754"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-airpurifiers-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-fc06cc5df105:step-3-25cd3413",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6e14f6b64950:step-1-63ce6a5f:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2642,
+            "output_tokens": 193,
+            "reasoning_tokens": 136
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-e7e1703fdb414a9c92c01466c478a75e:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1961,
+            "output_tokens": 461,
+            "reasoning_tokens": 288
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6e14f6b64950:step-2-4ce7d47d:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2925,
+            "output_tokens": 329,
+            "reasoning_tokens": 19
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-6e14f6b64950:step-3-1685ccbc:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 1912,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-dumbbells-61faa9e30784",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "cc55bc8e80f0cf8d48dffbf09ece7e7d17423a0b8c946228df0b69574304a6b7"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 19.402814,
+        "agent_start_utc": "2026-09-27T14:40:32.488747Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003575,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:39:15.247863+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s11"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 126.631,
+      "index": 30,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 39.314902016999895,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s11",
+      "slot_index": 11,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "7ba632c7543a9befb797bbd142b00406785e5173ef81d364ade9db570df56aef"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-dumbbells-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-6e14f6b64950:step-3-1685ccbc",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-cbdd4ee58775:step-1-b7ee48ab:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2642,
+            "output_tokens": 135,
+            "reasoning_tokens": 78
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-e134b8cc343c4325b0c596f7ec5a33c0:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1963,
+            "output_tokens": 423,
+            "reasoning_tokens": 255
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-cbdd4ee58775:step-2-d806e21b:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2867,
+            "output_tokens": 333,
+            "reasoning_tokens": 23
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-cbdd4ee58775:step-3-7407412d:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 1914,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-dumbbells-61faa9e30784",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "c4468dbad58e6719f0197e1c93598103fc9ecea79cf4992adeb6b4ee6fa75a9f"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 19.402814,
+        "agent_start_utc": "2026-09-27T14:40:25.521107Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003575,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:39:15.249659+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s11"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 121.94,
+      "index": 31,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 40.01851847599983,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s11",
+      "slot_index": 11,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "431d623ba9bcf5778b5c448a6508d88bd36ba8e072324eb51affec2b075eab53"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-dumbbells-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-cbdd4ee58775:step-3-7407412d",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-913158ecd0af:step-1-d4e6b367:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2642,
+            "output_tokens": 134,
+            "reasoning_tokens": 77
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-f7dde818bc1948539548e3f428e138ed:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 1963,
+            "output_tokens": 377,
+            "reasoning_tokens": 202
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-913158ecd0af:step-2-c952ae4a:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2866,
+            "output_tokens": 334,
+            "reasoning_tokens": 24
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-913158ecd0af:step-3-ec4e4873:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2592,
+            "output_tokens": 186,
+            "reasoning_tokens": 145
+          }
+        }
+      ],
+      "case_id": "nat-e2e-dumbbells-61faa9e30784",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "8bfc81bb15047f97be7337b9d4ab020fa4e779767589e3cda5a2fb95873abbaf"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 19.402814,
+        "agent_start_utc": "2026-09-27T14:40:44.923921Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.003575,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:39:15.251439+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s11"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 150.316,
+      "index": 32,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 50.24101606499994,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s11",
+      "slot_index": 11,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "7b2957d2b3b19fa5e14503fd305d65dc0c8e786ac4d7bd93f672b19b27842790"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-dumbbells-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-913158ecd0af:step-3-ec4e4873",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "C",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4925e1c371f:step-1-0ce67a22:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2729,
+            "output_tokens": 174,
+            "reasoning_tokens": 105
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-a480f263486049a69d33be0404e0d0a3:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2157,
+            "output_tokens": 419,
+            "reasoning_tokens": 251
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4925e1c371f:step-2-89d7eef8:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3016,
+            "output_tokens": 375,
+            "reasoning_tokens": 27
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-a4925e1c371f:step-3-20df8ad9:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2085,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-deskchairs-a253e2d82c78",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "14532afb21cdb93d522730d0ccf7c59b11ed0d1fa0fead584ad85a1df7c74359"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 0,
+        "agent_start_skew_s": 15.151896,
+        "agent_start_utc": "2026-09-27T14:42:59.923080Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004517,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:41:46.616871+00:00",
+        "pair_sync": true,
+        "position": 0,
+        "slot_id": "U7r0-s12"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 123.069,
+      "index": 33,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 37.851984683999945,
+      "semantic_metrics": {
+        "cascade": {
+          "astra_fallbacks": 0,
+          "jev_admitted": 1,
+          "jev_primaries": 1,
+          "routing_failures": 0
+        },
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s12",
+      "slot_index": 12,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "3bbefc6d19411d88a72a0b2eda72b6dfd0bac9c9c5cb4b3185aba0db8a31dec5"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-deskchairs-natural-c",
+      "validity": "valid",
+      "verification_engine": "cascade",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-a4925e1c371f:step-3-20df8ad9",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "A",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5db523bb3d90:step-1-e394a6aa:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2729,
+            "output_tokens": 148,
+            "reasoning_tokens": 79
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-2e9382f2f72845efa1dcadd9542ac6b7:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2156,
+            "output_tokens": 380,
+            "reasoning_tokens": 211
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5db523bb3d90:step-2-0783ee9e:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2990,
+            "output_tokens": 368,
+            "reasoning_tokens": 20
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-5db523bb3d90:step-3-4c609344:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2863,
+            "output_tokens": 118,
+            "reasoning_tokens": 75
+          }
+        }
+      ],
+      "case_id": "nat-e2e-deskchairs-a253e2d82c78",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "b602c1052408aaa5aec1f5925476370450e86eabe0a51b3b41ddb608df34318e"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 2,
+        "agent_start_skew_s": 15.151896,
+        "agent_start_utc": "2026-09-27T14:43:15.074976Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004517,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:41:46.619249+00:00",
+        "pair_sync": true,
+        "position": 1,
+        "slot_id": "U7r0-s12"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 152.552,
+      "index": 34,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 53.61768473400002,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s12",
+      "slot_index": 12,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "6c7b3a2fc86bc82080e50d1ebdd45f7a3ceb3712fcd5576c2ddef3891dbb5491"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-deskchairs-natural-a",
+      "validity": "valid",
+      "verification_engine": "llm",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "llm",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-5db523bb3d90:step-3-4c609344",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    },
+    {
+      "arm_letter": "B",
+      "call_records": [
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e03b4f849c7a:step-1-f62f6455:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2729,
+            "output_tokens": 135,
+            "reasoning_tokens": 66
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-968aacb7497a4ebb8fef109ccb4d10cb:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "cognitive_reflection",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2160,
+            "output_tokens": 417,
+            "reasoning_tokens": 241
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e03b4f849c7a:step-2-94fe9105:attempt-1",
+          "model": "gpt-6-astra",
+          "purpose": "agentic_loop",
+          "usage": {
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2977,
+            "output_tokens": 390,
+            "reasoning_tokens": 42
+          }
+        },
+        {
+          "error_type": null,
+          "llm_attempt_id": "llm-t-e03b4f849c7a:step-3-94497af3:attempt-1",
+          "model": "jev-1.13.0",
+          "purpose": "turn_verification",
+          "usage": {
+            "cache_write_tokens": null,
+            "cached_input_tokens": null,
+            "input_tokens": 2087,
+            "output_tokens": 48,
+            "reasoning_tokens": null
+          }
+        }
+      ],
+      "case_id": "nat-e2e-deskchairs-a253e2d82c78",
+      "cast": {
+        "path": "[local-path-withheld]",
+        "sha256": "2a1628901d3eda4e7021621b9acd9a7c0fcf854ba85e434c6565525151403887"
+      },
+      "cleanup_complete": true,
+      "concurrency": {
+        "agent_start_rank": 1,
+        "agent_start_skew_s": 15.151896,
+        "agent_start_utc": "2026-09-27T14:42:59.980556Z",
+        "barrier_used": false,
+        "concurrent_trials": 2,
+        "dispatch_skew_s": 0.004517,
+        "external_account_usage": "unknown",
+        "external_usage_reason": "shared-account-video-session",
+        "host_launch_utc": "2026-09-27T14:41:46.621386+00:00",
+        "pair_sync": true,
+        "position": 2,
+        "slot_id": "U7r0-s12"
+      },
+      "exports_complete": true,
+      "failure_class": null,
+      "final_text_empty": false,
+      "host_elapsed_seconds": 123.034,
+      "index": 35,
+      "native_exception_type": null,
+      "native_observation_valid": true,
+      "native_reward": 1.0,
+      "native_source_reconciled": true,
+      "outcome": "passed",
+      "repetition": 0,
+      "replay_complete": true,
+      "runtime_seconds": 36.416279224999926,
+      "semantic_metrics": {
+        "cascade": null,
+        "false_completion_count": 0,
+        "held_delivery": false,
+        "judge_false_acceptance": false,
+        "strict_success": true
+      },
+      "slot_id": "U7r0-s12",
+      "slot_index": 12,
+      "strict_success": true,
+      "termination_reason": "natural",
+      "trajectory": {
+        "path": "[local-path-withheld]",
+        "sha256": "bc7a8de6a14d2791f9ec7dfa56f091c1a873bc6240b4e66aa7407007e07db156"
+      },
+      "trial_name": "jev3-u7r0-r0-e2e-deskchairs-natural-b",
+      "validity": "valid",
+      "verification_engine": "jev",
+      "verification_summary_distinct_from_calls": [
+        {
+          "attempt_id": null,
+          "engine": "jev",
+          "error_type": null,
+          "latency_ms": null,
+          "llm_call_id": "llm-t-e03b4f849c7a:step-3-94497af3",
+          "status": null,
+          "valid": null
+        }
+      ],
+      "whole_runtime_complete": false
+    }
+  ],
+  "u7r1_gate": {
+    "blocking_predecessor": null,
+    "both_repeat_reliability": "not yet measured; requires complete E7 r1 in addition to this complete r0",
+    "current_runner_allows_independent_execution": true,
+    "native_needs": [
+      "U0d",
+      "U7r0",
+      "U0f"
+    ],
+    "no_replacement_or_rerun_performed": true,
+    "same_E7_r0_complete": true,
+    "source_locations": [
+      "runner.py:172-177",
+      "runner.py:480-497",
+      "runner.py:1268-1302"
+    ],
+    "verified_native_bindings": {
+      "[local-path-withheld]#1a38c079fa4f8e1b": "eb4636c44f4cf7e9c538e4ea14c6213e3f8861f54b45ac82876a77ba247218bf",
+      "[local-path-withheld]#c9f86c57c67b8a9a": "d6a2b49cc8d47cf976527a4924b9fc1445657ad0b1b434a42ac16d514a32a17f",
+      "[local-path-withheld]#b802b2eed2fb55ee": "6b83abceca3f5728feb74038b02abda8b71b6635d59cd11b4668f35e02acfa1a",
+      "[local-path-withheld]#5250316b180694de": "8c20375d0f0cb9ada7573d1e7c239b560f3ae155878ab416ad36a05bf592df7f",
+      "[local-path-withheld]#2cbac13a05e96876": "61af0676f784d569b27e70a137ad3aea8aa53910e34bb9c00c63709b0ae0ad6c",
+      "[local-path-withheld]#ade0617f4e344ed7": "6e5bebebfa8bf0ca5ef6d120a85b83a40684b571c636f74a059950088c63f65b",
+      "[local-path-withheld]#761a04cd23862053": "1f774d36615e826b85a6ed71ecdbf2a2f4bd268bebbb3013fad6300ddc0368bf",
+      "[local-path-withheld]#16a1e5fd68cd95cd": "9d370fb4330c7f7faec3bd68223932204ddf03c7280ff22d4cc2eadf808b46cd",
+      "[local-path-withheld]#cd7ee23017ac1e9c": "fa85b635801a0f94edb92ebb07c3a90c769f28331c7787143fcb56bb0f07cd73",
+      "[local-path-withheld]#10341b2be96ad4f2": "47522597cc623f56a8cb2a2a87f2a38364602538b0762adf3bf0935cfbea58e8",
+      "[local-path-withheld]#8333ed6fa413abe5": "fb965724427ef19dc7f2665127979a2f5231a7efdde20e494c5dd1e58177340d",
+      "[local-path-withheld]#3d94cb52fa09294c": "714c6c615fad0264bccfb5541601fe7d63e8bb3f20c31c49dbe99012af3a338d",
+      "[local-path-withheld]#6e5e7dfc4ce0e758": "2c81619a8d23e6fc7df8a5799ad720f2b9accfd98b2e232c77a01cd94c17fe82",
+      "[local-path-withheld]#8e9cab401678e51a": "d811838c4e1596b8411df774f708987352642d1a8c7d894ea97bbf09ed2030be",
+      "[local-path-withheld]#49a9c364886f5f3a": "d49a247c63310e68c7e3c4d9fd708125411df0059981954a4f57fa3ed541cf0d",
+      "[local-path-withheld]#2781327bb011ba92": "41671d86bbe2f1570e0b3c90964efc8422b00c18f45b003c9252edcc1c83b7a4",
+      "[local-path-withheld]#491257ff42a6b73c": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad"
+    }
+  },
+  "valid_success_by_arm": {
+    "A": 12,
+    "B": 12,
+    "C": 12
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "noul-e2e-poolcues-5a764a2fccb9",
+  "items": [
+    {
+      "candidates": [
+        "A-548"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "A-548",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "A-548",
+      "id": "msg1",
+      "request": "Could you check the status of A-548?"
+    },
+    {
+      "candidates": [
+        "A-913"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "A-913",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "A-913",
+      "id": "msg2",
+      "request": "My two-piece maple cue is A-913. Where is it?"
+    },
+    {
+      "candidates": [
+        "A-276"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "A-276",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "A-276",
+      "id": "msg3",
+      "request": "A-276 arrived with a warped shaft. I'd like a refund."
+    },
+    {
+      "candidates": [
+        "A-631",
+        "A-084"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "A-084",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "A-084",
+      "id": "msg4",
+      "request": "Please disregard A-631; I meant A-084. What's its status?"
+    },
+    {
+      "candidates": [
+        "A-752"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "A-752",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "A-752",
+      "id": "msg5",
+      "request": "I'm not asking to cancel A-752. Has it arrived?"
+    },
+    {
+      "candidates": [
+        "A-319"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "A-319",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "A-319",
+      "id": "msg6",
+      "request": "Can you fit a new tip on the cue in A-319 before shipping?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "Where's the chalk and cue case I ordered? I don't know the order number."
+    },
+    {
+      "candidates": [
+        "A-865"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "A-865",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "A-865",
+      "id": "msg8",
+      "request": "Cancel A-865, please. I'm switching to a lighter cue."
+    },
+    {
+      "candidates": [
+        "A-407",
+        "A-190"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg9",
+      "request": "Which one is my bridge head, A-407 or A-190? Could you tell me where it is?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg10",
+      "request": "What cue weight suits a beginner?"
+    },
+    {
+      "candidates": [
+        "A-523"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "A-523",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "A-523",
+      "id": "msg11",
+      "request": "What's the latest on A-523?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Could you check the status of A-548?&quot;, &quot;candidates&quot;: [&quot;A-548&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;My two-piece maple cue is A-913. Where is it?&quot;, &quot;candidates&quot;: [&quot;A-913&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;A-276 arrived with a warped shaft. I&#x27;d like a refund.&quot;, &quot;candidates&quot;: [&quot;A-276&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Please disregard A-631; I meant A-084. What&#x27;s its status?&quot;, &quot;candidates&quot;: [&quot;A-631&quot;, &quot;A-084&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;I&#x27;m not asking to cancel A-752. Has it arrived?&quot;, &quot;candidates&quot;: [&quot;A-752&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Can you fit a new tip on the cue in A-319 before shipping?&quot;, &quot;candidates&quot;: [&quot;A-319&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Where&#x27;s the chalk and cue case I ordered? I don&#x27;t know the order number.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Cancel A-865, please. I&#x27;m switching to a lighter cue.&quot;, &quot;candidates&quot;: [&quot;A-865&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;Which one is my bridge head, A-407 or A-190? Could you tell me where it is?&quot;, &quot;candidates&quot;: [&quot;A-407&quot;, &quot;A-190&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;What cue weight suits a beginner?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg11&quot;, &quot;request&quot;: &quot;What&#x27;s the latest on A-523?&quot;, &quot;candidates&quot;: [&quot;A-523&quot;]}]</inbox>"
+}

@@ -1,0 +1,33 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r7/payloads/nat-e2e-airpurifiers-619e184547da.json",
+      "case_sha256": "7dfa27e2fc0ed0f4ee08273585ee7cff25bfb6d0124110478735bee15121f146",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-verdict-e2e-r7/source.tar.gz",
+      "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+      "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+      "verification_engine": "llm",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r7/task-bundle/nat-e2e-airpurifiers-619e184547da"
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-airpurifiers-natural-a",
+  "trials_dir": "source-runs/jev-verdict-e2e-r7/u7r0/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "nat-e2e-headphones-46ab0755b829",
+  "items": [
+    {
+      "candidates": [
+        "H-529"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "H-529",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "H-529",
+      "id": "msg1",
+      "request": "Where are my noise-cancelling headphones? Order H-529."
+    },
+    {
+      "candidates": [
+        "H-186"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "H-186",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "H-186",
+      "id": "msg2",
+      "request": "Cancel H-186, I ordered the wrong colour."
+    },
+    {
+      "candidates": [
+        "H-743",
+        "H-352"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "H-352",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "H-352",
+      "id": "msg3",
+      "request": "H-743 was a gift I already received. Please check H-352 for me."
+    },
+    {
+      "candidates": [
+        "H-918"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "H-918",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "H-918",
+      "id": "msg4",
+      "request": "I'm not requesting a return for H-918. Has it shipped?"
+    },
+    {
+      "candidates": [
+        "H-064"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "H-064",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "H-064",
+      "id": "msg5",
+      "request": "The left earcup on H-064 is silent. Refund, please."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg6",
+      "request": "I can't find my order number for the replacement ear pads. Where are they?"
+    },
+    {
+      "candidates": [
+        "H-675"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "H-675",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "H-675",
+      "id": "msg7",
+      "request": "Could you include a spare cable with H-675?"
+    },
+    {
+      "candidates": [
+        "H-231",
+        "H-807"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg8",
+      "request": "Which is my DAC order, H-231 or H-807? I need its status."
+    },
+    {
+      "candidates": [
+        "H-490"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "H-490",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "H-490",
+      "id": "msg9",
+      "request": "What's the delivery status of H-490?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg10",
+      "request": "Are wired headphones better for gaming?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Where are my noise-cancelling headphones? Order H-529.&quot;, &quot;candidates&quot;: [&quot;H-529&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Cancel H-186, I ordered the wrong colour.&quot;, &quot;candidates&quot;: [&quot;H-186&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;H-743 was a gift I already received. Please check H-352 for me.&quot;, &quot;candidates&quot;: [&quot;H-743&quot;, &quot;H-352&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;I&#x27;m not requesting a return for H-918. Has it shipped?&quot;, &quot;candidates&quot;: [&quot;H-918&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;The left earcup on H-064 is silent. Refund, please.&quot;, &quot;candidates&quot;: [&quot;H-064&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;I can&#x27;t find my order number for the replacement ear pads. Where are they?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Could you include a spare cable with H-675?&quot;, &quot;candidates&quot;: [&quot;H-675&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Which is my DAC order, H-231 or H-807? I need its status.&quot;, &quot;candidates&quot;: [&quot;H-231&quot;, &quot;H-807&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;What&#x27;s the delivery status of H-490?&quot;, &quot;candidates&quot;: [&quot;H-490&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;Are wired headphones better for gaming?&quot;, &quot;candidates&quot;: []}]</inbox>"
+}

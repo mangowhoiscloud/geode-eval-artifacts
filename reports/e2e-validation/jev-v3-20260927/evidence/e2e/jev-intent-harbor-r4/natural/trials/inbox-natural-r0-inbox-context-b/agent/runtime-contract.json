@@ -1,0 +1,28 @@
+{
+  "agent_timeout_sec": 540.0,
+  "arm": "b",
+  "case_id": "inbox-context",
+  "case_sha256": "d2bffb159036ad243e6cbfa5270552856931a806b3f4cb3c4972d60ce0f182cd",
+  "effort": "xhigh",
+  "external_search_loop": false,
+  "finalization_errors": [
+    {
+      "error_type": "RuntimeError",
+      "stage": "host_stop_runtime"
+    }
+  ],
+  "intervention": null,
+  "model": "gpt-6-astra",
+  "profile": "decision-handoff",
+  "profile_scope": "fresh task container; no shell or filesystem tool",
+  "required_tools": [
+    "analyze_request",
+    "lookup_order_status"
+  ],
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "source": "subscription",
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "verify_mode": "rule_based",
+  "workload_profile": "inbox"
+}

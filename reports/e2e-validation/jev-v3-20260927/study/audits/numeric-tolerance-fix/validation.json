@@ -1,0 +1,121 @@
+{
+  "schema": "jev-v3-numeric-tolerance-validation-v1",
+  "recorded_at": "2026-09-27T07:44:54Z",
+  "base_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "worktree": "[local-path-withheld]",
+  "uncommitted": true,
+  "scope": "Exact decimal arithmetic for validated numeric values at SystemOne and matched LLM Choice admission; original scientific results remain frozen.",
+  "changed_source_sha256": {
+    "[local-path-withheld]#7796175dd185600d": "de6dab0f7e9c4bf2c4593cf95284eae07ec48c19a0e1a8ca43d1ab873edce941",
+    "[local-path-withheld]#21853acc30b9bbc8": "131cef5e9f789f401989e528859f385723f0ba618e264d079a1be3fa6b93ccd5",
+    "[local-path-withheld]#8c23a4a4ea3dc2b0": "2a36c55ec02651397d61e3c64d6aefab00f1117c9831d08501571370a9e6f1b4",
+    "[local-path-withheld]#dbd813f3d2dbb00e": "219b2220c8d0791dc4cd9d000c2322ec0cf4d6ed9084e3139cdc71aadf98592e",
+    "[local-path-withheld]#c5a681806cc66633": "c68f93ce094ec67ceff57bb820e2d3c736164d7e6018ba659a4c7e85855cf263",
+    "[local-path-withheld]#76d713adc6368bfb": "7df935577bb83cd2cb16c58e866fc29f0d9358b1c8982bfc4dfa7dc78cc937fc"
+  },
+  "checks": {
+    "new_regressions_before_fix": {
+      "run_cases": 13,
+      "failures": 5,
+      "purpose": "Reproduce decimal boundary rejection before implementation"
+    },
+    "final_caller_suite": {
+      "tests": 665,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "duration_s": 9.1,
+      "junit": "[local-path-withheld]",
+      "junit_sha256": "a850f401f304c0dfe6c80c86c412bcfa44c9809b7be0b34617b9870b856a04c1"
+    },
+    "ruff_check": {
+      "files": 5,
+      "exit_code": 0
+    },
+    "ruff_format_check": {
+      "files": 5,
+      "exit_code": 0
+    },
+    "mypy": {
+      "files": [
+        "core/llm/adapters/typesafe.py",
+        "evals/benchmarks/decision_verification.py"
+      ],
+      "exit_code": 0
+    },
+    "lint_imports": {
+      "kept": 7,
+      "broken": 0,
+      "exit_code": 0
+    },
+    "git_diff_check": {
+      "exit_code": 0
+    }
+  },
+  "shadow_receipt": {
+    "path": "[local-path-withheld]",
+    "sha256": "ebf4f839c43124be320f4e45cd9eb4fa8b871d2a0b5a44dc80e4cd138c00643f",
+    "total_original_cells_verified": 1920,
+    "jev_parser_rows": 640,
+    "unchanged_admitted_outputs": 635,
+    "old_reject_to_new_accept": 5,
+    "original_bytes_unchanged_rechecked": true
+  },
+  "exact_changed_boundaries": [
+    {
+      "unit": "U4",
+      "pool_id": "q-f0cb080b1a85dd8d",
+      "order": "reverse",
+      "exact_max_score_deviation": "3/100",
+      "score_tolerance": "3/100",
+      "raw_answer_sha256": "ee7203478a8485448ce8de57d36dc1db93ff8dd0b21bda11a30c6571d6b7bfb4"
+    },
+    {
+      "unit": "U4",
+      "pool_id": "cl-s14-bedding--q2",
+      "order": "forward",
+      "exact_max_score_deviation": "3/100",
+      "score_tolerance": "3/100",
+      "raw_answer_sha256": "bb571678f5d59984cac4258294b17b2f8847d75723a47de76786b86f31f215c2"
+    },
+    {
+      "unit": "X2",
+      "pool_id": "x2-8c78199b1ef8b24a",
+      "order": "reverse",
+      "exact_max_score_deviation": "3/100",
+      "score_tolerance": "3/100",
+      "raw_answer_sha256": "e6b780cd97ac37dcbe7728e8d2cec794d73abbc6773317c263a072fd4b6d493f"
+    },
+    {
+      "unit": "X2",
+      "pool_id": "x2-711955ded266ee0e",
+      "order": "forward",
+      "exact_max_score_deviation": "3/100",
+      "score_tolerance": "3/100",
+      "raw_answer_sha256": "24842cd916b15ed01dfa7871e20fdf1f83e3908a137aeb97ad18b70e4d819fc8"
+    },
+    {
+      "unit": "X2",
+      "pool_id": "x2-d8e49616d1111f42",
+      "order": "forward",
+      "exact_max_score_deviation": "3/100",
+      "score_tolerance": "3/100",
+      "raw_answer_sha256": "78c5e91d2d35ed31fe471422da9a1b6bf521e7be9445221f803f3a623237ef2b"
+    }
+  ],
+  "patch": {
+    "path": "[local-path-withheld]",
+    "sha256": "1458885916a1e5e35922244f0f334f0cc86104b25fcd2108475b7abad6050fcc"
+  },
+  "additional_validator_audit": {
+    "matched_llm_choice": "Exact decimal sum comparison now matches SystemOne; 16 cross-engine endpoint/next-float integration cases pass.",
+    "matched_llm_score": "Scalar finite scores [0,3] and argmax; no distribution sum or expected-value difference, unchanged.",
+    "noul": "Both engines validate finite probabilities [0,1] independently and apply >=0.5; no sum or expectation arithmetic, unchanged.",
+    "intent_llm": "Returns labels only, with no probabilities or sum/expectation arithmetic; unchanged."
+  },
+  "limits": [
+    "This preserves existing JSON/strict-float numeric normalization; it does not introduce arbitrary-precision JSON lexical semantics.",
+    "Only model-free retained-answer parsing was repeated. No gold/grade read, accuracy recomputation, scientific aggregate write, model/Docker call, commit or push.",
+    "Generated changelog mirror is owned by root; regenerate after final CHANGELOG update before integration."
+  ]
+}

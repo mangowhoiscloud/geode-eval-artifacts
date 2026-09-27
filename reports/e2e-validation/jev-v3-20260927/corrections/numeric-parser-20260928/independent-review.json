@@ -1,0 +1,113 @@
+{
+  "bindings": {
+    "U4-cell-audit.json": "f54f6e76117d25239b605417c0c0eb44b328dbb05bd5e222cadcf80528588ff0",
+    "U4-corrected-results.json": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16",
+    "X2-cell-audit.json": "2abe058d9bcd378b098a799cbcebdf921673fdad00dd6cf511c25ad97d178a1c",
+    "X2-corrected-results.json": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39",
+    "contract.json": "b93e1fa2ff11cd8b6979967a72f4c0eb34bb42e217c94f7582453dd8078ba1df",
+    "receipt.json": "85f2d6ab2650e458a2d9374c64ec71a4b7e1bccf8bf37c1604c69e3351b564db",
+    "remeasure.py": "d047e4c2953893f3529c7de615f83ff7a2ebcc62cbafe8202a732c0a0ba3fba9"
+  },
+  "checks": {
+    "analysis_bridge_sha_match": true,
+    "contract_predates_corrected_receipt": true,
+    "current_native_owner_sha_match": 4,
+    "model_calls": 0,
+    "old_parser_source2_source5_equal": true,
+    "original_native_files_sha_match_before_after": 24,
+    "original_writes": 0,
+    "provider_raw_response_bodies_parsed_or_displayed_for_this_review": false,
+    "unchanged_scoring_candidate_metrics_owner_equal_source2_source5": true
+  },
+  "critical_findings": [],
+  "limitations": [
+    "Offline post-hoc software correction; not a new prospective model sample or the original frozen primary result.",
+    "Raw response parsing is verified by the bound producer and its full-matrix baseline gate; this independent review reconstructs numeric cell audits, not private response text.",
+    "Listwise raw provider bodies are absent and remain unreplayed; native observed winners retained.",
+    "The registered -10 pp rule remains a historical rule without an independently validated utility/SLO basis.",
+    "X2 remains mixed: CI crosses -10 pp but is wholly below zero; do not claim non-inferiority or equivalence."
+  ],
+  "major_findings": [],
+  "method": "Independent stdlib reconstruction of per-order and averaged pointwise winners from cell-audit vectors plus unchanged native grades; whole-cluster seeded bootstrap independently recomputed from original and corrected outcomes. Source parser/remeasure control flow read; no model, provider or sealed source accessed. Native source files hashed, not rewritten.",
+  "reviewed_at": "2026-09-27T20:18:53.724064+00:00",
+  "schema": "jev-v3.postfix-remeasurement-independent-review@1",
+  "status": "clear-with-limitations",
+  "units": {
+    "U4": {
+      "baseline_ci_exact_independently_reproduced": true,
+      "changed_orders": 2,
+      "changed_pools": 2,
+      "confidence_interval": {
+        "clusters": 45,
+        "confidence": 0.95,
+        "estimate": -0.25,
+        "lower": -0.3522894385026738,
+        "measurable_replicates": 2000,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "seed": 7666079396718865552,
+        "upper": -0.1625
+      },
+      "corrected_ci_exact_independently_reproduced": true,
+      "corrected_correct": {
+        "astra_listwise": 79.0,
+        "astra_pointwise": 79.0,
+        "jev_pointwise": 59.0
+      },
+      "decision": "not-supported",
+      "full_matrix_unique_exact": 480,
+      "gain_correct_pools": 1,
+      "listwise_native_winners_preserved": 160,
+      "original_correct": {
+        "astra_listwise": 79.0,
+        "astra_pointwise": 79.0,
+        "jev_pointwise": 58.0
+      },
+      "pointwise_cells_reconstructed_from_numeric_audit": 320,
+      "pool_order_grade_ids_cluster_split_preserved": 80,
+      "primary": {
+        "denominator": 80,
+        "numerator": -20,
+        "value": -0.25
+      }
+    },
+    "X2": {
+      "baseline_ci_exact_independently_reproduced": true,
+      "changed_orders": 3,
+      "changed_pools": 3,
+      "confidence_interval": {
+        "clusters": 94,
+        "confidence": 0.95,
+        "estimate": -0.125,
+        "lower": -0.17216117216117216,
+        "measurable_replicates": 2000,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "seed": 3629238633783592610,
+        "upper": -0.08044827586206903
+      },
+      "corrected_ci_exact_independently_reproduced": true,
+      "corrected_correct": {
+        "astra_listwise": 227.5,
+        "astra_pointwise": 226.0,
+        "jev_pointwise": 196.0
+      },
+      "decision": "mixed",
+      "full_matrix_unique_exact": 1440,
+      "gain_correct_pools": 2,
+      "listwise_native_winners_preserved": 480,
+      "original_correct": {
+        "astra_listwise": 227.5,
+        "astra_pointwise": 226.0,
+        "jev_pointwise": 194.0
+      },
+      "pointwise_cells_reconstructed_from_numeric_audit": 960,
+      "pool_order_grade_ids_cluster_split_preserved": 240,
+      "primary": {
+        "denominator": 240,
+        "numerator": -30,
+        "value": -0.125
+      }
+    }
+  }
+}

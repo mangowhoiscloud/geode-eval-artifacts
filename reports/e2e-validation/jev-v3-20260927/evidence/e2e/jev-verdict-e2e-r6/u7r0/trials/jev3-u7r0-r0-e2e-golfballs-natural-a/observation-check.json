@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 10180,
+        "total": 10180
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1119,
+        "total": 1119
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "1c9391b5f035717917a710e0a961d118a008f2fd39f074820ebbf461fa738a2b",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "f924dfed43223a3d1d49a0caa71544d7984937718b38ee2e75d50f19b5c511c1",
+    "agent/geode-trajectory.json": "ae833e2f08171038e6401e3c2a1395ed871c0368beeb55d70a0e8a2b1fd872f1",
+    "agent/geode-trajectory.private.json": "4115f3a3afea6a03a5110f2f52220601583abf17aeaa5d85a736feab58076e88",
+    "agent/handoff-result.json": "28e46f3960030de8792101ee1d9356f8b7df854e8eb6e286d844bd07f8537437",
+    "agent/handoff.json": "c7351757577f39426409190bce7451ed804be81ada79d2bfce4bf95eed6d29bc",
+    "agent/recording.cast": "a876c03cbeffad23d5955cdff92b6ce7bf1971335599b6417cc424d097a6b53f",
+    "agent/recording.receipt.json": "8b08d43b68a7dbf4ff5081efa1e44b3bc7cf01cd774bf63ac18437aedba391b4",
+    "agent/runtime-contract.json": "6c552dea7dfd01519464acb321de0f26aa0b48759f8a62eb795e8ff53f79c19f",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "7a264a7e87c473ae874966b3c13a6e76bfe976c521ce7865ba09ebc3fde4d427",
+    "agent/trajectory.json": "16b769e163a598cb9d921fcfa3c31c00392c0df6e6b2cc82189ab5f7853075d6",
+    "agent/verification.json": "ea3cde37d6bf7c81e937afadfbe92c0789a6d4088dc36dff77eb029117e5ca13",
+    "result.json": "85002ca22471f531563c8e4aa5ce1847fe6fc21a854e911b8e8fd5fc5f3ce86f"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "0e7a7673d217e62acd4bd02f2a5b85db7e79e8bfca4340ac17f5f3e238034f8e",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r6",
+  "run_spec_sha256": "8e7d6c5d7043a42d170ab67974420c559eb43e5a39edc26721d19a0135c55c05",
+  "source_reconciliation": {
+    "database_sha256": "f924dfed43223a3d1d49a0caa71544d7984937718b38ee2e75d50f19b5c511c1",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "10977916d1b0bd5f7f79eb6cffc95e6eba04f0a3fbc3c79855433f76e81b1945",
+  "task_name": "nat-e2e-golfballs-d46a1475604d",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-golfballs-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

@@ -1,0 +1,235 @@
+{
+  "classification": "additive-numeric-parser-input-disclosure",
+  "created_at": "2026-09-27T20:52:18.184514+00:00",
+  "status": "numeric-disclosure-and-parser-to-outcome-validated; full-bootstrap-pending",
+  "scope": "Only the audited 1280 exact retained raw_answer strings and their identity/hash fields; no private dispatch copy. Jev raw_answer is the adapter serialization of the answers object, not the full HTTP response.",
+  "files": [
+    {
+      "public_file": "numeric-responses.jsonl",
+      "public_sha256": "81a29191d5a83126d3f647e15d6a43de1f742dbcf552c3729aa2b28f50cc79f0",
+      "bytes": 2132304,
+      "rows": 1280
+    }
+  ],
+  "source_files": [
+    {
+      "source_file": "jev-panel-r5/u4/dispatch-records.jsonl",
+      "source_sha256": "e7707671e1ad494089b85d35a1cf7af08ac7949a9ada20bd44998faf23802612",
+      "rows": 80,
+      "source_before_after_unchanged": true
+    },
+    {
+      "source_file": "jev-panel-r7/x2/dispatch-records.jsonl",
+      "source_sha256": "0327633632ec0f518f7e02f6d0979c1beb824b9122c53eacf30e69b99c519639",
+      "rows": 240,
+      "source_before_after_unchanged": true
+    }
+  ],
+  "counts": {
+    "U4/astra_pointwise": 160,
+    "U4/jev_pointwise": 160,
+    "X2/astra_pointwise": 480,
+    "X2/jev_pointwise": 480
+  },
+  "raw_answer_utf8_bytes": {
+    "U4/astra_pointwise": 4663,
+    "U4/jev_pointwise": 328790,
+    "X2/astra_pointwise": 14042,
+    "X2/jev_pointwise": 985945
+  },
+  "total_raw_answer_utf8_bytes": 1333440,
+  "content_allowlist": {
+    "astra": "exact c0..c3 keys with finite numbers in [0,3]; no string leaves",
+    "jev": "exact c0..c3 objects with type=score, finite score/confidence/probabilities, and exact public CANDIDATE_LEVELS legend",
+    "duplicate_json_keys": 0,
+    "unclassified_string_leaves": 0,
+    "task_or_candidate_bodies": false,
+    "provider_reasoning_or_payload": false,
+    "authentication_account_or_personal_paths": false
+  },
+  "lineage": {
+    "initial_publication_map_sha256": "ff22d91a7648cd9ac9d082e6b68737e1e1938fa08ce565f995030763a85b440d",
+    "initial_map_retained": false,
+    "old_raw_response_bodies_included_false_applies_to": "Initial projection only; this additive sidecar releases the exact scoped numeric parser inputs.",
+    "original_native_results_replaced": false,
+    "original_contract_and_corrected_results_changed": false,
+    "readme_supersession": {
+      "file": "README.md",
+      "initial_sha256": "6bea7ef08f231cb47dc9d2c5e4406c76a42a8d2fdb603acaaa07f879d5653994",
+      "current_sha256": "1975a950124cd71d00ef6ba788c90792d81cb0146806be1a10fa93e547b1ff51",
+      "reason": "Add exact numeric parser-input disclosure and public reconstruction; original results/contract unchanged."
+    },
+    "map_revision": {
+      "previous_sha256": "ff22d91a7648cd9ac9d082e6b68737e1e1938fa08ce565f995030763a85b440d",
+      "current_sha256": "9efdada78f71bf9e009c5044626abfc93be12bd96d750f4c054a6e6654d94568",
+      "changed_entry_only": "README.md",
+      "original_source_sha256_retained": true,
+      "other_seven_entries_unchanged": true,
+      "reason": "Authorized staging correction of public documentation hash; no native or corrected scientific evidence changed."
+    }
+  },
+  "listwise_boundary": {
+    "orders": 640,
+    "raw_answer_available": false,
+    "reproduction": "Retained native winner observations only."
+  },
+  "model_calls": 0,
+  "network_calls": 0,
+  "original_writes": 0,
+  "full_bootstrap_run": false,
+  "validated_at": "2026-09-27T20:56:04.540839+00:00",
+  "validation": {
+    "scope": "Offline exact numeric parsing, complete matrix and original/corrected outcome reconstruction; no bootstrap or live inference performed in this extension check.",
+    "units": {
+      "U4": {
+        "original_and_corrected_outcomes_exact": true,
+        "summary_exact": true,
+        "split_summary_exact": true,
+        "corrected_primary": {
+          "value": -0.25,
+          "numerator": -20,
+          "denominator": 80
+        },
+        "matrix_cells": 480,
+        "reparsed_pointwise": 320,
+        "retained_listwise": 160,
+        "changed_orders": 2
+      },
+      "X2": {
+        "original_and_corrected_outcomes_exact": true,
+        "summary_exact": true,
+        "split_summary_exact": true,
+        "corrected_primary": {
+          "value": -0.125,
+          "numerator": -30,
+          "denominator": 240
+        },
+        "matrix_cells": 1440,
+        "reparsed_pointwise": 960,
+        "retained_listwise": 480,
+        "changed_orders": 3
+      }
+    },
+    "tampered_binding_rejections": [
+      "raw_answer_sha256",
+      "source_dispatch_sha256",
+      "source_line_1based",
+      "source_json_pointer"
+    ],
+    "native_owner_sha256": {
+      "evals/benchmarks/decision_metrics.py": "7732d5d5a1f5c109856f50df26b5ee534797115c62880036058f1bae71c4cf9d",
+      "evals/benchmarks/score_selection.py": "fd5d940c321a60841273929a977e258eb730756a00c133513c9d01b0fcd28c3f",
+      "evals/benchmarks/verdict_panel_runner.py": "b046336e576aae16235f7524d0d86d9c343e653cc9f4aecde28c5f805ec7bb13",
+      "evals/benchmarks/decision_candidate.py": "9b666c36b6a976bdf0d92aceb5cb75f2ca433d88a4a2512d125146d1950749c1",
+      "core/llm/adapters/typesafe.py": "de6dab0f7e9c4bf2c4593cf95284eae07ec48c19a0e1a8ca43d1ab873edce941"
+    },
+    "actual_imported_parser_and_candidate_paths_match_pin": true,
+    "source_revision": "802cfd4b9d3220ce2be1744e8cf22161345b0954",
+    "public_inputs_sha256": {
+      "evidence/panel-source-map.json": "94ab8ac5ac7018e6f51ea635ab8aefd45f3b41bde5003598958025394b520976",
+      "study/source-map.json": "c64556584789073568ce30f67d8cec16db665e3c35cbcfe7c19950e424c3b8d8",
+      "corrections/numeric-parser-20260928/publication-map.json": "9efdada78f71bf9e009c5044626abfc93be12bd96d750f4c054a6e6654d94568",
+      "corrections/numeric-parser-20260928/U4-corrected-results.json": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16",
+      "evidence/panel/jev-panel-r5/u4/results.json": "7229b54eed1dee6820598bb39361b842fa52c5643e3e01324dbc46f4ca6bb879",
+      "evidence/panel/jev-panel-r5/u4/freeze.json": "c62df7069a80a486c69d6a3379b3a3d4670def5412fff0415672c9113ea30366",
+      "evidence/panel/jev-panel-r5/u4/run-spec.json": "6fb18eb2ade023a0f66db41c05f3e7a6525b57caebe5580f8f0a9ac39cb9cea7",
+      "evidence/panel/jev-panel-r5/u4/dispatch-records.jsonl": "4b0566126f76734746e9a2c2b5b7f2160e84c03b72711f72e367793b07ae3f02",
+      "corrections/numeric-parser-20260928/numeric-responses.jsonl": "81a29191d5a83126d3f647e15d6a43de1f742dbcf552c3729aa2b28f50cc79f0",
+      "corrections/numeric-parser-20260928/X2-corrected-results.json": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39",
+      "evidence/panel/jev-panel-r7/x2/results.json": "80d9becb2200977ff957ee90a0b9fae5b081bbe7c10a9086e3d00bcc61867ab8",
+      "evidence/panel/jev-panel-r7/x2/freeze.json": "210e816fd4bee2e3cb6eae73a9c6bf6049a8443c83bebb3880b8c6403b000ca8",
+      "evidence/panel/jev-panel-r7/x2/run-spec.json": "bb5ae1c92f44f10472844877de0f4a66413c93ff0e254bb16cfff0a1c9766a39",
+      "evidence/panel/jev-panel-r7/x2/dispatch-records.jsonl": "1f5abcaa4791c09f8c2158feacfbd0a8b8e7b8647610a521eb0dc7e8b20721f1"
+    },
+    "existing_correction_files_preserved": [
+      {
+        "file": "contract.json",
+        "sha256": "b93e1fa2ff11cd8b6979967a72f4c0eb34bb42e217c94f7582453dd8078ba1df"
+      },
+      {
+        "file": "remeasure.py",
+        "sha256": "d047e4c2953893f3529c7de615f83ff7a2ebcc62cbafe8202a732c0a0ba3fba9"
+      },
+      {
+        "file": "receipt.json",
+        "sha256": "85f2d6ab2650e458a2d9374c64ec71a4b7e1bccf8bf37c1604c69e3351b564db"
+      },
+      {
+        "file": "U4-corrected-results.json",
+        "sha256": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16"
+      },
+      {
+        "file": "X2-corrected-results.json",
+        "sha256": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39"
+      },
+      {
+        "file": "U4-cell-audit.json",
+        "sha256": "f54f6e76117d25239b605417c0c0eb44b328dbb05bd5e222cadcf80528588ff0"
+      },
+      {
+        "file": "X2-cell-audit.json",
+        "sha256": "2abe058d9bcd378b098a799cbcebdf921673fdad00dd6cf511c25ad97d178a1c"
+      }
+    ],
+    "model_calls": 0,
+    "bootstrap_calls": 0,
+    "independence": "Read-only disclosure audit and public-adapter check of prior correction evidence; the original remeasurement, source map and result bytes were not rewritten. Parent clean-reader execution/review remains pending.",
+    "all_eight_publication_map_entries_match": [
+      {
+        "file": "contract.json",
+        "public_sha256": "b93e1fa2ff11cd8b6979967a72f4c0eb34bb42e217c94f7582453dd8078ba1df",
+        "source_sha256": "b93e1fa2ff11cd8b6979967a72f4c0eb34bb42e217c94f7582453dd8078ba1df"
+      },
+      {
+        "file": "remeasure.py",
+        "public_sha256": "d047e4c2953893f3529c7de615f83ff7a2ebcc62cbafe8202a732c0a0ba3fba9",
+        "source_sha256": "d047e4c2953893f3529c7de615f83ff7a2ebcc62cbafe8202a732c0a0ba3fba9"
+      },
+      {
+        "file": "receipt.json",
+        "public_sha256": "85f2d6ab2650e458a2d9374c64ec71a4b7e1bccf8bf37c1604c69e3351b564db",
+        "source_sha256": "85f2d6ab2650e458a2d9374c64ec71a4b7e1bccf8bf37c1604c69e3351b564db"
+      },
+      {
+        "file": "U4-corrected-results.json",
+        "public_sha256": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16",
+        "source_sha256": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16"
+      },
+      {
+        "file": "X2-corrected-results.json",
+        "public_sha256": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39",
+        "source_sha256": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39"
+      },
+      {
+        "file": "U4-cell-audit.json",
+        "public_sha256": "f54f6e76117d25239b605417c0c0eb44b328dbb05bd5e222cadcf80528588ff0",
+        "source_sha256": "f54f6e76117d25239b605417c0c0eb44b328dbb05bd5e222cadcf80528588ff0"
+      },
+      {
+        "file": "X2-cell-audit.json",
+        "public_sha256": "2abe058d9bcd378b098a799cbcebdf921673fdad00dd6cf511c25ad97d178a1c",
+        "source_sha256": "2abe058d9bcd378b098a799cbcebdf921673fdad00dd6cf511c25ad97d178a1c"
+      },
+      {
+        "file": "README.md",
+        "public_sha256": "1975a950124cd71d00ef6ba788c90792d81cb0146806be1a10fa93e547b1ff51",
+        "source_sha256": "6bea7ef08f231cb47dc9d2c5e4406c76a42a8d2fdb603acaaa07f879d5653994"
+      }
+    ]
+  },
+  "tooling": {
+    "tools/recompute_results.py": "78974d956a7b0febb08674e47ba3a1e476b08f63dd9430ab7582fa328414a96e",
+    "REPRODUCE.md": "25407d45d4d155ace69315703ea7a8508483a6bd9bf5d993d788ee426d9f8529",
+    "corrections/numeric-parser-20260928/README.md": "1975a950124cd71d00ef6ba788c90792d81cb0146806be1a10fa93e547b1ff51"
+  },
+  "tooling_history": [
+    {
+      "at": "2026-09-28T07:25:55+09:00",
+      "path": "REPRODUCE.md",
+      "previous_sha256": "058f101850fc649a1aaf741f4123e972cf1e94153eef88dca194c1b766b237cd",
+      "current_sha256": "25407d45d4d155ace69315703ea7a8508483a6bd9bf5d993d788ee426d9f8529",
+      "previous_disclosure_sha256": "e19b51ee5843a59fc8b73d8ba75a1cf65d55c8c3ac7393b517f320990a672d98",
+      "reason": "Add separate U8n post-hoc command and disclosure boundary; panel/numeric inputs, calculation owners and prior numerical verification unchanged."
+    }
+  ]
+}

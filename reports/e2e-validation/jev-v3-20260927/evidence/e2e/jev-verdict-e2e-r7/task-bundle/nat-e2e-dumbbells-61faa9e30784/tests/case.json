@@ -1,0 +1,116 @@
+{
+  "id": "nat-e2e-dumbbells-61faa9e30784",
+  "items": [
+    {
+      "candidates": [
+        "F-384"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "F-384",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "F-384",
+      "id": "msg1",
+      "request": "Please look up F-384 and tell me its status."
+    },
+    {
+      "candidates": [
+        "F-927"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "F-927",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "F-927",
+      "id": "msg2",
+      "request": "I need to cancel F-927. The weights are too heavy for me."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg3",
+      "request": "Where's my adjustable dumbbell set? I don't remember the order number."
+    },
+    {
+      "candidates": [
+        "F-163",
+        "F-603"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "F-603",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "F-603",
+      "id": "msg4",
+      "request": "F-163 is the kettlebell I got last month. I'm asking about F-603."
+    },
+    {
+      "candidates": [
+        "F-745"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "F-745",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "F-745",
+      "id": "msg5",
+      "request": "Don't refund F-745, just tell me if it's on the way."
+    },
+    {
+      "candidates": [
+        "F-218"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "F-218",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "F-218",
+      "id": "msg6",
+      "request": "F-218 arrived with a bent handle, so I want my money back."
+    },
+    {
+      "candidates": [
+        "F-571"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "F-571",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "F-571",
+      "id": "msg7",
+      "request": "Can you split F-571 into two separate deliveries?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg8",
+      "request": "How often should I increase the weight when training?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Please look up F-384 and tell me its status.&quot;, &quot;candidates&quot;: [&quot;F-384&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;I need to cancel F-927. The weights are too heavy for me.&quot;, &quot;candidates&quot;: [&quot;F-927&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;Where&#x27;s my adjustable dumbbell set? I don&#x27;t remember the order number.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;F-163 is the kettlebell I got last month. I&#x27;m asking about F-603.&quot;, &quot;candidates&quot;: [&quot;F-163&quot;, &quot;F-603&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Don&#x27;t refund F-745, just tell me if it&#x27;s on the way.&quot;, &quot;candidates&quot;: [&quot;F-745&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;F-218 arrived with a bent handle, so I want my money back.&quot;, &quot;candidates&quot;: [&quot;F-218&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Can you split F-571 into two separate deliveries?&quot;, &quot;candidates&quot;: [&quot;F-571&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;How often should I increase the weight when training?&quot;, &quot;candidates&quot;: []}]</inbox>"
+}

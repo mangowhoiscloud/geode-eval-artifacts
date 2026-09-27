@@ -1,0 +1,92 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-score-bestof-admission-20260927-r3",
+  "created_at": "2026-09-26T21:25:10.835494+00:00",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-26T21:25:10.835494+00:00",
+    "live_test_approved": true,
+    "operator": "User authorized account switch and remaining U execution 2026-09-27; acct [account-withheld]/pro; prior quota refusal preserved"
+  },
+  "study": {
+    "research_question": "Does the Score-S harness admit both selectors on frozen controlled pools and on one natural pool generated once with delegate_task(best_of=4)?",
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "hypothesis": "18 selector outputs are admissible; the observed Score expected-level deviation fixes the preregistered tolerance.",
+    "primary_metric": {
+      "name": "score_admission_valid_selection_ratio",
+      "unit": "ratio",
+      "direction": "maximize",
+      "aggregation": "valid selector outputs / 18 planned (2 controlled pools x 2 orders x 3 selectors + 1 natural pool x 2 orders x 3 selectors)",
+      "denominator": 18
+    },
+    "decision_rule": "Admission only. Runs with score_tolerance=0.05; then freeze the Score expected-level tolerance = min(0.05, max(0.03, observed max deviation rounded up to 0.01)) in score-tolerance-freeze.json. Record natural-pool discriminativeness; above 70% non-discriminative makes U5 descriptive only.",
+    "invalidation_rule": "Judgment-output invalid (schema, label, non-finite probability, Choice sum beyond 0.025, verdict not an argmax label, refusal, unexpected stop reason) is a valid attempt with a wrong answer: it stays in accuracy denominators and is excluded from probability metrics. Infrastructure invalid (no response, timeout, missing capture or receipt, harness error, quota exhaustion) is validity=invalid, outcome=unknown. Preregistered panel exception: a transport failure without any response is kept as an unselected invalid attempt and replaced exactly once by a child attempt on the same input; a failed replacement stays selected, makes the primary not measurable and stops the unit; replacements above 2% of planned calls stop the unit. Quota exhaustion, harness errors and route violations (non-subscription Astra, model, effort or provider drift, global Jev) are selected invalid attempts and stop the unit. Pin #2 (0028): non-quota HTTP 429 is rate_limited; wait Retry-After (seconds or HTTP-date, default 30 s, clipped to 0-120 s) then exactly one replacement under the same 2% ceiling. retry_wait_s is excluded from measured latency. quota, billing, usage_limit, usage_not_included and plan_limit codes, HTTP 402 and BillingError are quota_exhausted: stop without replacement.",
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: n/a. Workload order per 05 v2.2 §8.1. Run with score_tolerance=0.05 (rule ceiling); write score-tolerance-freeze.json from the score_expectation summary before U4, U5s or X2 (05 v2.2 §4.1). Account transition: [account-withheld]/pro; predecessor geode-jev-score-bestof-admission-20260927 retained; no old-account model results pooled. P-r1 startup failed before calls (empty adapter registry); P-r2 initializes existing built-ins with EMPTY_POLICY_SOURCES before dispatch. P-r3 uses run-scoped Jev accounting identifiers; predecessor U0a/U0c-i results remain P-r2; P-r2 U1 freeze had no live calls. G candidate workers use the bundled data_analyst prompt and native best-of-4 lenses with no tools, fixed Astra/xhigh/subscription and a fresh manager per pool; auxiliary model overrides are refused before calls. G native child artifacts are bound to the phase directory through existing run_dir_scope; model prompts and metrics are unchanged."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace",
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false
+    },
+    "harness": {
+      "name": "GEODE Score-S selection dispatch",
+      "source": "evals/benchmarks/score_selection.py dispatch_selection at 2f2b494d605c9306dcf1d94a2394e7576e959ace (bounded concurrency and per-call timeouts from integration patch 0024); Run driver sha256 f0eab18f7fa3871e57b4e1b69a9afb39aa180ea960b1f1c23f7848883d69b5ed; generation driver sha256 c55e4b0470c60eed2c48bae3bd81759231b3644049d545823fb65cb14f78b0a6; U0b analysis entry sha256 6b6b6805bc30ff4452ac87001647de5b237725f4af6d44fb5814ba3f7a10874e",
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-6-astra",
+      "route": "subscription",
+      "reasoning": "xhigh"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "architecture": "arm64",
+      "reset_strategy": "G: one selection inbox via delegate_task(best_of=4), using the pinned natural-task template and inline orders; freeze four candidates once, no regeneration. P: three direct selectors, both orders, identical frozen pools, no root loop. G/P run sequentially under the shared program lock and never overlap E. Shared Codex subscription fp [account-withheld]; external account usage unknown.",
+      "initial_state_ref": "selection manifest sha256:0c0a64b1c62ae22c854b0b065fe8a37406da9b2ac8733d35f594e80171df599d; test public manifest sha256:9fc1e80d9484c601776193310946a63c1870305053f9bdacf0e46662095c175c; natural-task.template.txt sha256:4202becf1707781de1379a1703595869762b34be2b50d65817900940c6e69f94"
+    },
+    "execution": {
+      "command_redacted": "gen_driver.py --unit U0b --task-template natural-task.template.txt; freeze its natural pool, then Run driver: score_selection.dispatch_selection over the frozen pools; selectors astra_pointwise, jev_pointwise (sum_tolerance=0.025, frozen score_tolerance) and astra_listwise; orders forward then reverse; max_concurrency=4; timeouts={\"llm\": 180, \"jev\": 60}; transport failures without a response follow 05 §4.2 (one replacement, stop above 2%), response-contract violations are wrong answers (05 §3.1); Codex file auth and the TypeSafe key are loaded at run time and never printed",
+      "ordered_workload_ids": [
+        "q-1305d88cfd3a003c",
+        "cl-s09-drones--q2",
+        "cl-s06-frames"
+      ],
+      "workload_ids_sha256": "49890487b9552469421d84ad9551f6cc28c0d02222bab5a6c22ddb7f7f7c4ae5",
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "max_concurrency": 4,
+      "timeout_seconds": 180,
+      "budget": {
+        "kind": "combined",
+        "limit": 40,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-1.00"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "Astra pointwise scores vs jev-1.13.0 Score on the same frozen pools, both orders; production listwise select_candidate reference",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "results.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "attempts.jsonl",
+    "analysis": "analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  }
+}

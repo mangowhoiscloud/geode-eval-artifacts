@@ -1,0 +1,449 @@
+{
+  "recorded_at": "2026-09-27T22:37:21.132173+09:00",
+  "scope": "two failed U7r0 ukuleles natural B/C cells; public exported diagnostics and pinned source only",
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "execution_receipt": {
+    "path": "[local-path-withheld]",
+    "sha256": "9a32a5686c071a371ca8ac43aacacade6b85c383434c2664b7a8858ab951e82f",
+    "unit": "U7r0",
+    "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+    "freeze_sha256": "44d8a5d175f23f2cfdb94f717617dd659fc374dd476eb55942c80b7a42149023",
+    "runner_sha256": "a00fb55179858892adb69f4e5cbfebeb4a0bd1c70069c032d4f38c55e56f29ef",
+    "started_at": "2026-09-27T13:00:48.347104+00:00",
+    "exit_code": 1,
+    "ended_at": "2026-09-27T13:27:26.161266+00:00"
+  },
+  "finding": "Jev transport/read-timeout and non-200 HTTP response before any admitted judgment; fail-closed verification; provider-internal cause unknown",
+  "trials": [
+    {
+      "arm": "b",
+      "trial_name": "jev3-u7r0-r0-e2e-ukuleles-natural-b",
+      "path": "[local-path-withheld]",
+      "harbor_exception": "NonZeroAgentExitCodeError",
+      "native_failure_class": "runtime_error",
+      "native_error_type": "runtime_error",
+      "termination_reason": "external_verification_required",
+      "root_budget_seconds": 540.0,
+      "root_runtime_seconds": 107.27758767399996,
+      "root_budget_exhausted": false,
+      "harbor_intervals_seconds": {
+        "environment_setup": 3.428408,
+        "agent_setup": 204.834711,
+        "agent_execution": 118.36099,
+        "verifier": 6.963272
+      },
+      "harbor_trial_wall_seconds": 337.8739,
+      "observed_call_attempts": [
+        {
+          "purpose": "agentic_loop",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 13194.75929799978,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2940,
+            "output_tokens": 193,
+            "reasoning_tokens": 112
+          }
+        },
+        {
+          "purpose": "cognitive_reflection",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 17088.840465999965,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2673,
+            "output_tokens": 520,
+            "reasoning_tokens": 343
+          }
+        },
+        {
+          "purpose": "agentic_loop",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 16125.609797999914,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3267,
+            "output_tokens": 481,
+            "reasoning_tokens": 25
+          }
+        },
+        {
+          "purpose": "turn_verification",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "adapter": "matched-verifier-jev",
+          "source": "payg",
+          "effort": "none",
+          "success": false,
+          "error_type": "ReadTimeout",
+          "duration_ms": 30089.97480499988,
+          "usage": null
+        },
+        {
+          "purpose": "turn_verification",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "adapter": "matched-verifier-jev",
+          "source": "payg",
+          "effort": "none",
+          "success": false,
+          "error_type": "HTTPStatusError",
+          "duration_ms": 26502.417761999823,
+          "usage": null
+        }
+      ],
+      "retry_events": 1,
+      "matched_verification_inputs": 1,
+      "completed_judgment_receipts": 0,
+      "cascade_metrics": null,
+      "finalized": {
+        "exports_complete": true,
+        "status": "finalized",
+        "execution_started": true,
+        "error_type": "runtime_error",
+        "finalization_errors": []
+      },
+      "replay_complete": true,
+      "runtime_log_bytes": 0,
+      "usage": {
+        "whole_runtime_complete": false,
+        "observation_status": "no_known_faults",
+        "known_sink_failure": false,
+        "mapping_anomaly_events": 0,
+        "terminal_event_count": 5,
+        "started_events": 5,
+        "usage_events": 3,
+        "attempt_pairing_complete": true,
+        "input_tokens": null,
+        "input_tokens_observed_sum": 8880,
+        "input_tokens_missing_events": 2,
+        "output_tokens": null,
+        "output_tokens_observed_sum": 1194,
+        "output_tokens_missing_events": 2,
+        "source_snapshot_complete": true
+      },
+      "http_status_code": null,
+      "provider_request_id": null,
+      "http_status_classification": "not-recoverable-from-inspected-public-exported-evidence"
+    },
+    {
+      "arm": "c",
+      "trial_name": "jev3-u7r0-r0-e2e-ukuleles-natural-c",
+      "path": "[local-path-withheld]",
+      "harbor_exception": "NonZeroAgentExitCodeError",
+      "native_failure_class": "runtime_error",
+      "native_error_type": "runtime_error",
+      "termination_reason": "external_verification_required",
+      "root_budget_seconds": 540.0,
+      "root_runtime_seconds": 105.70354338099992,
+      "root_budget_exhausted": false,
+      "harbor_intervals_seconds": {
+        "environment_setup": 3.382832,
+        "agent_setup": 218.721772,
+        "agent_execution": 111.486092,
+        "verifier": 6.099881
+      },
+      "harbor_trial_wall_seconds": 344.654649,
+      "observed_call_attempts": [
+        {
+          "purpose": "agentic_loop",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 11844.048879999946,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2940,
+            "output_tokens": 277,
+            "reasoning_tokens": 196
+          }
+        },
+        {
+          "purpose": "cognitive_reflection",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 13824.22034000001,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 2672,
+            "output_tokens": 408,
+            "reasoning_tokens": 239
+          }
+        },
+        {
+          "purpose": "agentic_loop",
+          "model": "gpt-6-astra",
+          "provider": "openai",
+          "adapter": "codex-oauth",
+          "source": "subscription",
+          "effort": "xhigh",
+          "success": true,
+          "error_type": null,
+          "duration_ms": 17072.64763199987,
+          "usage": {
+            "cache_write_1h_tokens": null,
+            "cache_write_tokens": 0,
+            "cached_input_tokens": 0,
+            "input_tokens": 3351,
+            "output_tokens": 485,
+            "reasoning_tokens": 29
+          }
+        },
+        {
+          "purpose": "turn_verification",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "adapter": "matched-verifier-jev",
+          "source": "payg",
+          "effort": "none",
+          "success": false,
+          "error_type": "ReadTimeout",
+          "duration_ms": 30113.87868099996,
+          "usage": null
+        },
+        {
+          "purpose": "turn_verification",
+          "model": "jev-1.13.0",
+          "provider": "typesafe",
+          "adapter": "matched-verifier-jev",
+          "source": "payg",
+          "effort": "none",
+          "success": false,
+          "error_type": "ReadTimeout",
+          "duration_ms": 30083.708347000083,
+          "usage": null
+        }
+      ],
+      "retry_events": 1,
+      "matched_verification_inputs": 1,
+      "completed_judgment_receipts": 0,
+      "cascade_metrics": {
+        "jev_primaries": 0,
+        "jev_admitted": 0,
+        "astra_fallbacks": 0,
+        "routing_failures": 0
+      },
+      "finalized": {
+        "exports_complete": true,
+        "status": "finalized",
+        "execution_started": true,
+        "error_type": "runtime_error",
+        "finalization_errors": []
+      },
+      "replay_complete": true,
+      "runtime_log_bytes": 0,
+      "usage": {
+        "whole_runtime_complete": false,
+        "observation_status": "no_known_faults",
+        "known_sink_failure": false,
+        "mapping_anomaly_events": 0,
+        "terminal_event_count": 5,
+        "started_events": 5,
+        "usage_events": 3,
+        "attempt_pairing_complete": true,
+        "input_tokens": null,
+        "input_tokens_observed_sum": 8963,
+        "input_tokens_missing_events": 2,
+        "output_tokens": null,
+        "output_tokens_observed_sum": 1170,
+        "output_tokens_missing_events": 2,
+        "source_snapshot_complete": true
+      },
+      "http_status_code": null,
+      "provider_request_id": null,
+      "http_status_classification": "not-recoverable-from-inspected-public-exported-evidence"
+    }
+  ],
+  "source_references": [
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1291,
+      "end_line": 1294,
+      "claim": "actual matched-verifier shared HTTP client timeout=30",
+      "sha256": "0f8ed22d42c2b9cdbeba244bcb796c180bf0c712f5dcaa25f6f0cc0a4be5cf82"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1149,
+      "end_line": 1178,
+      "claim": "Jev and cascade matched-adapter construction",
+      "sha256": "0f8ed22d42c2b9cdbeba244bcb796c180bf0c712f5dcaa25f6f0cc0a4be5cf82"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 544,
+      "end_line": 568,
+      "claim": "Jev dispatch uses call_typesafe; transport exception escapes without completed judgment receipt",
+      "sha256": "cd6bfd09cf645fdb68cbaeb446485dd19994cf35abe467cf12639014522e4354"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1,
+      "end_line": 10,
+      "claim": "compatibility import of canonical transport",
+      "sha256": "18a7c32b822b83e8d9c0724e4091e369b27dd7dfebad88728c98455e8b989485"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 123,
+      "end_line": 143,
+      "claim": "POST direct TypeSafe endpoint; any non-200 raises HTTPStatusError with generic message",
+      "sha256": "face5d9ae15569843ac71ed15324bee8ae75a85fcb3788e7d91fd19685f5c343"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 184,
+      "end_line": 188,
+      "claim": "call_typesafe fixes TypeSafe provider and Jev model",
+      "sha256": "face5d9ae15569843ac71ed15324bee8ae75a85fcb3788e7d91fd19685f5c343"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 60,
+      "end_line": 128,
+      "claim": "strict connection-class exception receives one same-adapter retry",
+      "sha256": "2d4f28ab389af657cb7fde30f230aeadfee8dbf7e14984fe0663f1baef80e576"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 524,
+      "end_line": 534,
+      "claim": "retry dispatch boundary and middleware invocation",
+      "sha256": "2d4f28ab389af657cb7fde30f230aeadfee8dbf7e14984fe0663f1baef80e576"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 120,
+      "end_line": 142,
+      "claim": "failed call persists exception class and elapsed time, no HTTP status/request id",
+      "sha256": "fea654e79ee2af8062eb5926a4e617b5d0f08b4ea62694b3f42698e4b99a1d05"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 912,
+      "end_line": 921,
+      "claim": "exception means unavailable verification",
+      "sha256": "4d880ba56dd6815c5b0583d72afd8529babaa7257639fd491f152718a6271910"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 983,
+      "end_line": 998,
+      "claim": "verification_error supplies neither success nor repair",
+      "sha256": "4d880ba56dd6815c5b0583d72afd8529babaa7257639fd491f152718a6271910"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 598,
+      "end_line": 610,
+      "claim": "verification_error event mapping",
+      "sha256": "05f441fef5a7ba98862b2fe5a2bece9c53d1bd22ffe2c2651e53cf77053b58a1"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1424,
+      "end_line": 1443,
+      "claim": "shared root540 wait and error mapping",
+      "sha256": "0f8ed22d42c2b9cdbeba244bcb796c180bf0c712f5dcaa25f6f0cc0a4be5cf82"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1555,
+      "end_line": 1568,
+      "claim": "failed/missing-usage calls invalidate trial",
+      "sha256": "0f8ed22d42c2b9cdbeba244bcb796c180bf0c712f5dcaa25f6f0cc0a4be5cf82"
+    },
+    {
+      "path": "[local-path-withheld]",
+      "start_line": 1,
+      "end_line": 13,
+      "claim": "transport error is not Astra escalation and invalidates trial",
+      "sha256": "37a91854c16185b22fa5cc9ac83a98ec74a6d92514962cfcf3a75a96ece5ada0"
+    }
+  ],
+  "known": {
+    "read_timeouts": 3,
+    "http_status_errors": 1,
+    "failed_jev_calls_usage_unknown": 4,
+    "astra_calls_before_failure_successful": 6,
+    "root540_exhausted": false,
+    "capture_export_failure": false,
+    "hidden_astra_cascade_success": false
+  },
+  "unknown": {
+    "http_status_code": null,
+    "response_body": null,
+    "response_headers": null,
+    "provider_request_id": null,
+    "quota_or_rate_limit": null,
+    "auth_failure": null,
+    "upstream_5xx_or_service_outage": null,
+    "provider_vs_network_read_delay": null,
+    "actual_invoice_usd": null
+  },
+  "code_change_assessment": {
+    "required_fix_demonstrated": false,
+    "interpretation": "Observed exceptions match existing fail-closed transport and accounting policy. Data do not establish a model semantic defect, parser defect, global-budget exhaustion, or a need to enlarge 540/30. Missing HTTP status prevents a more specific external-service diagnosis.",
+    "optional_future_diagnostic_boundary": "Existing observation owner could preserve strictly allowlisted status/type/request ID prospectively; no change, replay, probe, or new retry performed here."
+  },
+  "status_page": {
+    "url": "https://status.typesafe.ai/",
+    "observer": "root",
+    "observed_at_kst": "2026-09-27 22:35",
+    "reported_status": "All services online / Operational",
+    "reported_last_updated_utc": "2026-09-27 13:03",
+    "read_by_this_auditor": false,
+    "proves_cause_or_recovery_after_failures": false
+  },
+  "ledger_receipt": {
+    "path": "[local-path-withheld]",
+    "sha256": "91e9afee95eb7b4498618c81e0a1b6c09cc2afbe1bc5d813e0494f30316f0c1a"
+  },
+  "evidence_files_unchanged": 26,
+  "read_private_reasoning": false,
+  "read_credentials_or_private_secrets": false,
+  "read_sealed_folders": false,
+  "model_api_calls": 0,
+  "http_requests": 0,
+  "infra_calls": 0,
+  "render_calls": 0,
+  "source_or_frozen_files_modified": false,
+  "native_results_reclassified": false
+}

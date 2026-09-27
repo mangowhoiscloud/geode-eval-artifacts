@@ -1,0 +1,91 @@
+{
+  "attempt_id": "geode-jev-choice-intent-panel-admission-20260927-r2-a00001",
+  "call_timing": {
+    "completed_at": "2026-09-26T21:15:08.741040Z",
+    "completed_monotonic_s": 7.603829833999043,
+    "dispatched_at": "2026-09-26T21:15:01.137889Z",
+    "dispatched_monotonic_s": 0.0005465839931275696,
+    "in_flight_panel_calls": 0,
+    "position": 0
+  },
+  "cluster_id": "ip-a02",
+  "engine": "llm",
+  "error_type": null,
+  "latency_s": 7.603283250005916,
+  "observed_result": "Admitted matched judgment; correctness is scored after unseal.",
+  "primitive": "choice",
+  "receipt": {
+    "accepted": true,
+    "contract": "analyze_request-inbox",
+    "engine": "llm",
+    "error_type": null,
+    "input_sha256": "a6f8c45a44be1c78afdaa43688b662d7ff9f04594ab798b5c06c91a97e0d071d",
+    "items": [
+      {
+        "id": "q1",
+        "intent": "status_only",
+        "source_sha256": "8da2b767ddccb43a6dd27629b76ddb19ff0ec64c55acb4c5d0d8ee0e2a461643",
+        "target": null
+      },
+      {
+        "id": "q2",
+        "intent": "refund",
+        "source_sha256": "c3d4358a8b5b4de6f77fe212b841b7154469599c0f4d86ac8c7bf4f92bad711d",
+        "target": {
+          "end": 5,
+          "order_id": "G-322",
+          "start": 0
+        }
+      },
+      {
+        "id": "q3",
+        "intent": "status_only",
+        "source_sha256": "1314284012009c578f6ac336358de4317481d35a23d4e62ee0ec47bbea0a2313",
+        "target": {
+          "end": 11,
+          "order_id": "H-359",
+          "start": 6
+        }
+      },
+      {
+        "id": "q4",
+        "intent": "other",
+        "source_sha256": "f67bd63f4f3f264fa4ab4d4ad80bf17a64062b84110d66d3a5760b4bce91804d",
+        "target": {
+          "end": 5,
+          "order_id": "I-396",
+          "start": 0
+        }
+      },
+      {
+        "id": "q5",
+        "intent": "status_only",
+        "source_sha256": "764273bd4db123906d9ad252b27792662239f98224eaf87f3c369720b9506e2d",
+        "target": null
+      }
+    ],
+    "llm_call_id": "llm.choice.ip-a02",
+    "model": "gpt-6-astra",
+    "primitives": null,
+    "provider": "openai",
+    "question_sha256": "e9fcdcff75d2e7d0c1bfd7a5f7952f65eaf448d64cb7e280d750338c6ef0f08e",
+    "raw_answer_retention": "complete",
+    "raw_answer_sha256": "e1fdf6e418e65e4f2a637f37481a09278dad802bffc5221901699178c7b1d823",
+    "response_model": "gpt-6-astra",
+    "response_provider": null,
+    "source": "subscription",
+    "source_sha256": "1d3c64ccaa5bf99e27b8ffa60f194c422f08ed9094cbec3d2e51283615359895",
+    "step_id": "base"
+  },
+  "state_id": "ip-a02",
+  "status": "admitted",
+  "stop_reason": "completed",
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 2578,
+    "output_tokens": 171,
+    "reasoning_tokens": 87
+  },
+  "variant": "base",
+  "workload_id": "ip-a02"
+}

@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 180,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e/payloads/nat-cl-s15-shoes-5c57a5370c94.json",
+      "case_sha256": "25a5a72c233e25b84cda6555c6a78e780e8979307288fddf28b8a4fe09d1f46c",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-intent-harbor/source.tar.gz",
+      "source_revision": "7cd052649c19ad1e11eafdacea7902c7f548a398",
+      "source_sha256": "f34fc1b6dd0c5cc4947230e86053054011804fe2a64f2a2f208613745361fb16",
+      "typesafe_key_file": "source-runs/jev-verdict-e2e/private-secrets/jev-ddmttrgm.key",
+      "verification_engine": "jev",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 210.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e/task-bundle/nat-cl-s15-shoes-5c57a5370c94"
+  },
+  "trial_name": "jev3-u0d-r0-cl-s15-shoes-natural-b",
+  "trials_dir": "source-runs/jev-verdict-e2e/u0d/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

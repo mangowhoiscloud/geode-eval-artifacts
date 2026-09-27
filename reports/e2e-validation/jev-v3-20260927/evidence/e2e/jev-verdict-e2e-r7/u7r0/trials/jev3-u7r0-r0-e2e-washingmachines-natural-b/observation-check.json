@@ -1,0 +1,107 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 1,
+        "observed_sum": 0,
+        "total": null
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 1,
+        "observed_sum": 0,
+        "total": null
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 11034,
+        "total": 11034
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1218,
+        "total": 1218
+      }
+    },
+    "observed_efforts": {
+      "none": 1,
+      "xhigh": 3
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": false,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "efcf5553b1abb87493dc001d5e9b7a9fe57c771d2099e1a2c7af42200a8927c0",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "a9765cf4f438924dc6bc432eeb8871d9a8859e2219130204fc9b51ce286eba49",
+    "agent/geode-trajectory.json": "0adf74d0c1538822638f6585326a815a145e035407ac650375f5a671dc897f4c",
+    "agent/geode-trajectory.private.json": "44b865fb777d19eccc7829e96100fbf373724d730d5765424f9a177ff700a701",
+    "agent/handoff-result.json": "921c97e4c1ceb82a78cb43cd04b1d77858047c2151d177e3616ba458ac2ad7cb",
+    "agent/handoff.json": "19f30c88929bf93e7c575608f69e4536141ff0a850cc6024555351c76956e881",
+    "agent/recording.cast": "e9a29639f551dfae7cda492eaeb0c566de63998e697fafc55539ef71e8619d3b",
+    "agent/recording.receipt.json": "7db139a225aba6ad7d2f886e4a481b634910e9507840b244a5b74c1975b7bc55",
+    "agent/runtime-contract.json": "0340141fd99cfd272ecf28e6958564dc0e805b9f89ae13f2c3e265597b0a6675",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "bf0cf9d8f56925822d47a47dbf97859034f4551a59c2bd8f67f99e89958db99c",
+    "agent/trajectory.json": "a6e410d1ccafffca6f800282b3467cb404dc87a1bfb09a50799b8dc68edc6b29",
+    "agent/verification.json": "c8d8ae10743337720d6907b7e5814949e462dd28f15621a8e716b9a2e961be64",
+    "result.json": "4adb6b158471e84e087d9ea8e373b66b028e2dcc91014f566589ebe37c76a921"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established",
+    "provider counter coverage incomplete"
+  ],
+  "cache_complete": false,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "d4d9c028f87cf17df680ef3071e721a3eedc35797186e32ad120d0243ac5518d",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "a9765cf4f438924dc6bc432eeb8871d9a8859e2219130204fc9b51ce286eba49",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "d2878a7de8162072a23384796aca9fff4513154ee50ed0fe6380ecf23ba3a476",
+  "task_name": "nat-e2e-washingmachines-5bf569ed8618",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-washingmachines-natural-b",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

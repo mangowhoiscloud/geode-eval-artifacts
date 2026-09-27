@@ -1,0 +1,104 @@
+{
+  "builder_sha256": "7d2ed7ebbd34e6ebe53aa1f76486caf2be7c1abe241558f8303d754de6c9fd98",
+  "builder_version": "jev-external-x1-builder@1",
+  "counts": {
+    "annotation_rows": 369,
+    "annotators_per_included": {
+      "1": 154,
+      "2": 82,
+      "3": 3
+    },
+    "clusters": 133,
+    "excluded_tie": 21,
+    "gold_accept": {
+      "fara7b_om2w_browserbase:accept": 29,
+      "fara7b_om2w_browserbase:reject": 56,
+      "internal:accept": 90,
+      "internal:reject": 64
+    },
+    "included": 239,
+    "included_by_split": {
+      "fara7b_om2w_browserbase": 85,
+      "internal": 154
+    },
+    "state_chars_min_median_max": [
+      2535,
+      9071,
+      59816
+    ],
+    "trajectories": 260,
+    "truncated": 0
+  },
+  "files": {
+    "excluded.x1.jsonl": "7d56df660e4912f2ba76d235209ab0fe7413a9e2059d3212105c1fceb043e2dd",
+    "gold.x1.jsonl": "44b57959e5ba0cfd986a09146026f29e23ec299dfac2743e0960c24da1512c65",
+    "reference.x1.jsonl": "c44c811136dde5ae99fcdc73b75f0db29a8c901300f402da0b4cbb96c051e146",
+    "states.x1.jsonl": "fa5b02661188ce988f4ca3586d7b0d17b894a944c577878a6bae77966b7cecab"
+  },
+  "leak_check": {
+    "bare_label_word_occurrences_informational": {
+      "Correct": 1,
+      "Incorrect": 0
+    },
+    "free_text_hits": [],
+    "free_text_probe_min_chars": 30,
+    "free_text_probes": 938,
+    "label_field_names_checked": [
+      "human_judgement_outcome",
+      "human_judgement_process",
+      "human_process_score",
+      "outcome_comment",
+      "process_comment",
+      "informed_outcome_agreement",
+      "informed_process_agreement",
+      "informed_outcome_comment",
+      "informed_process_comment",
+      "gpt_eval_json",
+      "gpt_response_text",
+      "rubric_is_success",
+      "uv_rubric_score",
+      "uv_outcome_success",
+      "mm_is_success",
+      "verifier_is_success",
+      "final_human_outcome_label",
+      "final_human_process_label",
+      "median_human_rubric_score_agnostic",
+      "majority_human_outcome_vote",
+      "gold_accept",
+      "majority_outcome",
+      "annotator"
+    ],
+    "label_field_names_found": [],
+    "passed": true,
+    "problems": [],
+    "source_task_id_inside_state": [],
+    "state_keys_exact": true
+  },
+  "primitive": "choice",
+  "raw_sha256": {
+    "annotations.jsonl": "01a7d3f775f09966db286593a1ad1c290f43b3aa5e205ff0cef0f65792ab939d",
+    "trajectories.labels.jsonl": "1ffe340443ad69917bd5f64ea78bddf26c7d85c3a1ba8078df138a54c0289ce3",
+    "trajectories.text.jsonl": "adc70a0706b514f26690d2e86e683e840effba3085a2458c425c749a8f4de5aa"
+  },
+  "rules": {
+    "acceptance_draft": "engine verdict == supported",
+    "gold": "strict majority of UV-blind human_judgement_outcome (Correct/Incorrect)",
+    "gold_accept": "majority_outcome == Correct",
+    "inputs": "instruction, web_surfer_log actions (arguments incl. agent thoughts, timestamp, page_url), final_answer, init_url, start_timestamp; no screenshots, no label or verifier columns",
+    "sample": "all trajectories of both splits (no sampling)",
+    "state_bound": "len(json.dumps(state, ensure_ascii=False)) <= 60000",
+    "tie": "excluded and listed in excluded.x1.jsonl",
+    "truncation": "T1: session start + first 5 actions + log_omission + largest fitting action suffix (head shrinks only if no suffix fits)",
+    "unit_of_analysis": "trajectory"
+  },
+  "schema_id": "geode.jev-external-unit-manifest@1",
+  "schema_version": 1,
+  "source": {
+    "card_sha256": "44d7190b72ae489297f59d6fadff635ced6dd067c845c77b04f187a7b2d7bec7",
+    "dataset": "microsoft/CUAVerifierBench",
+    "license": "MIT",
+    "revision": "c19eb323cd802add5c3d2840ff13044061364867"
+  },
+  "task_contract_sha256": "b7ddb4ccc3740637e87fd6503885e1866a7aa5272bf667d1a2088a875cc01d7c",
+  "unit": "X1"
+}

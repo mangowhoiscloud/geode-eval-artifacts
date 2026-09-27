@@ -1,0 +1,107 @@
+{
+  "artifacts": {
+    "analysis": "analysis.json",
+    "attempts": "attempts.jsonl",
+    "measurement_results": null,
+    "native_results": "results.json",
+    "outcome_receipts": null,
+    "publication_manifest": null,
+    "trajectory": null,
+    "verifier_receipts": null
+  },
+  "created_at": "2026-09-26T21:35:28+00:00",
+  "preregistration": {
+    "frozen_at": "2026-09-26T21:45:04.666030+00:00",
+    "live_test_approved": true,
+    "mode": "prospective",
+    "operator": "User approved playback and U8c/U6b execution; Codex source3 new-account continuation",
+    "status": "frozen"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  },
+  "reproduction": {
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparability": "direct",
+      "comparator": "A-Choice: Astra V1; B-Choice: jev-1.13.0; injected c1m0/c0m1/c1m1; paired concurrent slots",
+      "promotion_authority": "none"
+    },
+    "environment": {
+      "architecture": "arm64",
+      "initial_state_ref": "e2e-sources sha256:d5e847383a2e5d7604897ff14a09727c2b9abdab73d9eb7d740df8a656cd348a (option E, sealed second-author inboxes)",
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "reset_strategy": "Fresh public-network agent container and separate no-network verifier per trial; paired concurrent slot (all arms launched together, next slot only after every arm is cleaned up); no operator workspace mount; root 180s/6 rounds, agent 210s, setup 600s, verifier 30s, watchdog 930s, cleanup 120s; panel and E2E never overlap; account fp anonymous-account-03/pro shared with a user-approved video session (external usage unknown)."
+    },
+    "execution": {
+      "budget": {
+        "kind": "combined",
+        "limit": 360,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-1.00"
+      },
+      "command_redacted": "harbor-runner-022/bin/python -B runner.py --unit U8c --execute --reviewed --quota-live",
+      "max_concurrency": 2,
+      "ordered_workload_ids": [
+        "e2e-telescopes#c1m0",
+        "e2e-telescopes#c0m1",
+        "e2e-telescopes#c1m1",
+        "e2e-badminton#c0m1",
+        "e2e-badminton#c1m1",
+        "e2e-badminton#c1m0",
+        "e2e-waterpurifiers#c1m1",
+        "e2e-waterpurifiers#c1m0",
+        "e2e-waterpurifiers#c0m1",
+        "e2e-strollers#c1m0",
+        "e2e-strollers#c0m1",
+        "e2e-strollers#c1m1",
+        "e2e-trampolines#c0m1",
+        "e2e-trampolines#c1m1",
+        "e2e-trampolines#c1m0",
+        "e2e-poolcues#c1m1",
+        "e2e-poolcues#c1m0",
+        "e2e-poolcues#c0m1"
+      ],
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "timeout_seconds": 210,
+      "workload_ids_sha256": "d15b14313f117992e61b71758fb28b278400c16e66944d29ba1459a51dc4f463"
+    },
+    "geode": {
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false,
+      "revision": "7f32ff272d1b07a6404c593e74dad727857e0bd8"
+    },
+    "harness": {
+      "name": "Harbor",
+      "revision": "0.22.0",
+      "source": "harbor==0.22.0; paired-slot dispatcher sha256 16b3034ee781d504989f25fbcf71c2b40eec82a4e4da48fd69ca73215a215a2a; private runner sha256 943f7dde5db95a4de714f3bb88b023251ba53b7c4bbf35a075198d69028bcd09"
+    },
+    "model": {
+      "label": "gpt-6-astra",
+      "provider": "openai",
+      "reasoning": "xhigh",
+      "route": "subscription"
+    }
+  },
+  "run_id": "geode-jev-verdict-e2e-injection-20260927-r2",
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "study": {
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: n/a. Workload order per 05 v2.2 §8.1.",
+    "decision_rule": "Descriptive (mixed); per-cell recovery, first misjudgment, repair depth, usage and time.",
+    "hypothesis": "Descriptive only.",
+    "invalidation_rule": "Judgment-output invalid is a semantic failure of a valid trial and keeps the trial in its denominator. Infrastructure invalid (transport failure, route drift, missing or contradictory usage, observation-check failure, incomplete export) is validity=invalid, outcome=unknown with a failure class; the first such cell stops dispatch, it stays selected and the primary is reported as not measurable. There is no replacement. A Jev failure followed by an LLM decision never counts as Jev acceptance.",
+    "primary_metric": {
+      "aggregation": "(Jev recovered - Astra recovered) / 18 task-cells (c1m0,c0m1,c1m1 x 6 tasks)",
+      "denominator": 18,
+      "direction": "target",
+      "name": "m8i_choice_recovery_delta",
+      "unit": "ratio"
+    },
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "research_question": "After an injected defect, does the Choice verdict engine change recovery to an oracle-passing answer?"
+  }
+}

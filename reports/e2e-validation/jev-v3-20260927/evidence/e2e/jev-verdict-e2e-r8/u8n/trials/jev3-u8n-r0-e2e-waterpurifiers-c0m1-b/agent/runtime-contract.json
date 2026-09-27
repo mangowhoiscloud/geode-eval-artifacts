@@ -1,0 +1,26 @@
+{
+  "agent_timeout_sec": 540.0,
+  "arm": "a0",
+  "case_id": "noul-e2e-waterpurifiers-2eada63b73be",
+  "case_sha256": "8f559b2105aea951b5c5632ae165c16bf395f36f59dcb06dee6549f6dc7868cf",
+  "effort": "xhigh",
+  "external_search_loop": false,
+  "intervention": null,
+  "model": "gpt-6-astra",
+  "profile": "decision-handoff",
+  "profile_scope": "fresh task container; no shell or filesystem tool",
+  "required_tools": [
+    "lookup_order_status"
+  ],
+  "runtime": "evals.benchmarks.decision_handoff_runtime:run_arm",
+  "source": "subscription",
+  "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+  "source_sha256": "40c9b0ab082ab4ec212cd7b1ff38a17a268b4b2445093238568d662855f6447a",
+  "verification_engine": "jev",
+  "verification_intervention": {
+    "when": "before_observation"
+  },
+  "verification_primitive": "noul",
+  "verify_mode": "llm_judge",
+  "workload_profile": "inbox"
+}

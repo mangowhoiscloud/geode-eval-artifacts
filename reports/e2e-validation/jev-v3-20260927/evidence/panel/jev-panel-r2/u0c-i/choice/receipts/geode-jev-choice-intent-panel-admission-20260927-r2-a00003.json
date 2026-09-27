@@ -1,0 +1,99 @@
+{
+  "attempt_id": "geode-jev-choice-intent-panel-admission-20260927-r2-a00003",
+  "call_timing": {
+    "completed_at": "2026-09-26T21:15:15.381828Z",
+    "completed_monotonic_s": 14.244738542009145,
+    "dispatched_at": "2026-09-26T21:15:08.744305Z",
+    "dispatched_monotonic_s": 7.607099874992855,
+    "in_flight_panel_calls": 1,
+    "position": 1
+  },
+  "cluster_id": "ip-a01",
+  "engine": "llm",
+  "error_type": null,
+  "latency_s": 6.63763866701629,
+  "observed_result": "Admitted matched judgment; correctness is scored after unseal.",
+  "primitive": "choice",
+  "receipt": {
+    "accepted": true,
+    "contract": "analyze_request-inbox",
+    "engine": "llm",
+    "error_type": null,
+    "input_sha256": "fb34986f7af9e1c4ca917d43a5afa38e8481e0b9ff805a4a328fb7cf518f0be4",
+    "items": [
+      {
+        "id": "q1",
+        "intent": "status_only",
+        "source_sha256": "a3422d942d6bd47835436f6410af5cf55edd665fde1b627fce0907ca91ff75cd",
+        "target": {
+          "end": 26,
+          "order_id": "A-100",
+          "start": 21
+        }
+      },
+      {
+        "id": "q2",
+        "intent": "cancel",
+        "source_sha256": "755fda5ca8b9eb6c3304bc4f528b7a63442919963d7be45d548382a49b27c284",
+        "target": {
+          "end": 22,
+          "order_id": "B-137",
+          "start": 17
+        }
+      },
+      {
+        "id": "q3",
+        "intent": "status_only",
+        "source_sha256": "9b91e71e70a30d34deec37bc0dfb3bd6fbae66eea3e03409170f868c47835289",
+        "target": {
+          "end": 24,
+          "order_id": "D-211",
+          "start": 19
+        }
+      },
+      {
+        "id": "q4",
+        "intent": "other",
+        "source_sha256": "3a319fd748fbf53165cb47b789f4b99aa09b8514369d00f997e1dc6b8ca12a49",
+        "target": {
+          "end": 38,
+          "order_id": "E-248",
+          "start": 33
+        }
+      },
+      {
+        "id": "q5",
+        "intent": "status_only",
+        "source_sha256": "874c033bab406dd96d5087742ab48dad3f68aecd8129ae6e6de7a837f1f7476c",
+        "target": {
+          "end": 24,
+          "order_id": "F-285",
+          "start": 19
+        }
+      }
+    ],
+    "llm_call_id": "llm.choice.ip-a01",
+    "model": "gpt-6-astra",
+    "primitives": null,
+    "provider": "openai",
+    "question_sha256": "480abbbe44d28d47dd4b13387119ab68096b0f0248fd2e6cff205764ea9b78ab",
+    "raw_answer_retention": "complete",
+    "raw_answer_sha256": "f9a6bb95530bfcd0db883231d1f2420ec90cb7b92d74066de73a44fa0a321351",
+    "response_model": "gpt-6-astra",
+    "response_provider": null,
+    "source": "subscription",
+    "source_sha256": "e2003f56e4cf7e95f99b5bb7444a8abdb1cef916ef6634d4837759940734abc9",
+    "step_id": "base"
+  },
+  "state_id": "ip-a01",
+  "status": "admitted",
+  "stop_reason": "completed",
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 2653,
+    "output_tokens": 169,
+    "reasoning_tokens": 50
+  },
+  "variant": "base",
+  "workload_id": "ip-a01"
+}

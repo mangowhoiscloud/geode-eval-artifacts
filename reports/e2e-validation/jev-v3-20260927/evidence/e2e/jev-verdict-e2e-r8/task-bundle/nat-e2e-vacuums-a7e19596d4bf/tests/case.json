@@ -1,0 +1,145 @@
+{
+  "id": "nat-e2e-vacuums-a7e19596d4bf",
+  "items": [
+    {
+      "candidates": [
+        "V-418"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "V-418",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "V-418",
+      "id": "msg1",
+      "request": "Has my cordless vacuum V-418 shipped?"
+    },
+    {
+      "candidates": [
+        "V-763"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "V-763",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "V-763",
+      "id": "msg2",
+      "request": "Cancel V-763. The robot vacuum I ordered separately covers everything."
+    },
+    {
+      "candidates": [
+        "V-235",
+        "V-591"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "V-591",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "V-591",
+      "id": "msg3",
+      "request": "I got V-235 already. I need the status of V-591."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg4",
+      "request": "Where is my spare dust bag order? I can't find the number."
+    },
+    {
+      "candidates": [
+        "V-046"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "V-046",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "V-046",
+      "id": "msg5",
+      "request": "Please don't cancel or refund V-046. What's happening with it?"
+    },
+    {
+      "candidates": [
+        "V-872"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "V-872",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "V-872",
+      "id": "msg6",
+      "request": "The motor in V-872 cuts out after five minutes. Refund me, please."
+    },
+    {
+      "candidates": [
+        "V-307"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "V-307",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "V-307",
+      "id": "msg7",
+      "request": "Can I pick up V-307 at your store instead of having it delivered?"
+    },
+    {
+      "candidates": [
+        "V-654",
+        "V-129"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg8",
+      "request": "Look up V-654 and V-129 for me."
+    },
+    {
+      "candidates": [
+        "V-980"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "V-980",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "V-980",
+      "id": "msg9",
+      "request": "What's the current status of V-980?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg10",
+      "request": "Which vacuum works best on thick carpets?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Has my cordless vacuum V-418 shipped?&quot;, &quot;candidates&quot;: [&quot;V-418&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Cancel V-763. The robot vacuum I ordered separately covers everything.&quot;, &quot;candidates&quot;: [&quot;V-763&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;I got V-235 already. I need the status of V-591.&quot;, &quot;candidates&quot;: [&quot;V-235&quot;, &quot;V-591&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Where is my spare dust bag order? I can&#x27;t find the number.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Please don&#x27;t cancel or refund V-046. What&#x27;s happening with it?&quot;, &quot;candidates&quot;: [&quot;V-046&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;The motor in V-872 cuts out after five minutes. Refund me, please.&quot;, &quot;candidates&quot;: [&quot;V-872&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Can I pick up V-307 at your store instead of having it delivered?&quot;, &quot;candidates&quot;: [&quot;V-307&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Look up V-654 and V-129 for me.&quot;, &quot;candidates&quot;: [&quot;V-654&quot;, &quot;V-129&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;What&#x27;s the current status of V-980?&quot;, &quot;candidates&quot;: [&quot;V-980&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;Which vacuum works best on thick carpets?&quot;, &quot;candidates&quot;: []}]</inbox>"
+}

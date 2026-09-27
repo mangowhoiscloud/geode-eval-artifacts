@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 180,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r1/payloads/noul-cl-s05-fishing-9f41773feb27.json",
+      "case_sha256": "93c3f1adf8d423cbe9f4bced1006b9b1bda662271c65f573c21ba8627edb5e90",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-intent-harbor-r1/source.tar.gz",
+      "source_revision": "7f32ff272d1b07a6404c593e74dad727857e0bd8",
+      "source_sha256": "e41ae23f2012dd432d2d84f103334cdb4305d2ad7267f8f1f81dc2dac0fb75ac",
+      "verification_engine": "llm",
+      "verification_primitive": "noul",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 210.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r1/task-bundle/noul-cl-s05-fishing-9f41773feb27"
+  },
+  "trial_name": "jev3-u0e-r0-cl-s05-fishing-c1m1-a",
+  "trials_dir": "source-runs/jev-verdict-e2e-r1/u0e/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

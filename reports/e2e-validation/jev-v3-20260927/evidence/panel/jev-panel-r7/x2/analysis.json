@@ -1,0 +1,71 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-external-m2w-score-20260927-r7",
+  "analyzed_at": "2026-09-27T03:06:28.873371+00:00",
+  "run_spec_sha256": "ef79065faa757f1783d92b54c60075dffc84be4e0aa437764ab17b6beab39a47",
+  "attempts_sha256": "e4227dc8ba871ec5ae888df170037b406dd230a53b440c5571f7bde9eb877e3d",
+  "selected_attempt_ids": [
+    "geode-jev-external-m2w-score-20260927-r7-score-analysis"
+  ],
+  "answer": "X2: -0.13333333333333333; frozen diagnostic decision mixed.",
+  "metrics": [
+    {
+      "name": "x2_score_top1_delta",
+      "value": -0.13333333333333333,
+      "numerator": -32,
+      "denominator": 240,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary_metric/value",
+        "numerator": "/primary_metric/numerator",
+        "denominator": "/primary_metric/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "mixed",
+    "rationale": "05 §3.4; U4/X2 strict -0.10 CI bounds; U5 descriptive mixed. Selected infrastructure invalidity is not measurable."
+  },
+  "limitations": [
+    "No superiority or latency claim; no external tuning or p-value.",
+    "Missing usage stays unknown; analysis timestamps are not execution timing.",
+    "Candidate width and two presentation orders are not independent repetitions.",
+    "Intervals below 10 source clusters are unavailable; split strata are descriptive.",
+    "Signed CI bounds stay in digest-bound results.json /interval_metrics: native v1 forbids negative secondary numerators, so no lossy secondary projection is made."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "0bb07aded502d78d2bc87031b0e060c35b25768f50863c2f16f8683ac23de3a6"
+    },
+    {
+      "kind": "other",
+      "path": "freeze.json",
+      "sha256": "9098b0409730cf9356eb6e3dc6590eb35a901c2328dc8e62670dc63c8f1a1a75"
+    },
+    {
+      "kind": "other",
+      "path": "execution-receipt.json",
+      "sha256": "a50c65ccbc6bd525b2ba1f4d6acab328b7c7eea6b35fb9d1b4bd82f741c03a09"
+    },
+    {
+      "kind": "other",
+      "path": "private-receipts/geode-jev-external-m2w-score-20260927-r7-block.json",
+      "sha256": "37dbbc641d5300c343eae2c7d8e42ddb2c3fa8260ae2a2587f2148695fe11829"
+    },
+    {
+      "kind": "other",
+      "path": "dispatch-records.jsonl",
+      "sha256": "0327633632ec0f518f7e02f6d0979c1beb824b9122c53eacf30e69b99c519639"
+    },
+    {
+      "kind": "other",
+      "path": "timings.json",
+      "sha256": "630ade4a16302935275f7f650757970e9c7b3e3868767f3c9a9538fc1ced2c9d"
+    }
+  ]
+}

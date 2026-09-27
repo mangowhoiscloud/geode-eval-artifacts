@@ -1,0 +1,90 @@
+{
+  "artifacts": {
+    "analysis": "analysis.json",
+    "attempts": "attempts.jsonl",
+    "measurement_results": null,
+    "native_results": "results.json",
+    "outcome_receipts": null,
+    "publication_manifest": null,
+    "trajectory": null,
+    "verifier_receipts": null
+  },
+  "created_at": "2026-09-27T01:54:59.243339+00:00",
+  "preregistration": {
+    "frozen_at": "2026-09-27T02:07:26.849405+00:00",
+    "live_test_approved": true,
+    "mode": "prospective",
+    "operator": "Parent reviewed source, protocol and provider-free gates; --freeze --reviewed",
+    "status": "frozen"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All trial prompts, provider receipts, databases, IDs and host paths are withheld-private pending exact-byte review. Never persist key contents in configs or metadata; actual charges stay unknown."
+  },
+  "reproduction": {
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparability": "direct",
+      "comparator": "A typed Astra intent+target helper versus B direct Jev1.13.0 helper; root/cognitive/final Astra subscription xhigh fixed",
+      "promotion_authority": "none"
+    },
+    "environment": {
+      "architecture": "arm64",
+      "initial_state_ref": "sha256:9843c3500e695b7a1b21b7ff3d21cc29fbd8571b40a8f4b1e73508a8f2bdc9d2",
+      "platform": "macOS-15.3.1-arm64-arm-64bit",
+      "reset_strategy": "Fresh public-network agent and separate static no-network verifier containers per cell; native Harbor artifact transfer only. No operator workspace mounted. Provider-free actual infrastructure proof expires after 24h. Root 540s, Harbor agent 570s, host watchdog 1290s plus cancellation cleanup up to 120s. No trial rerun or helper HTTP retry; identical bounded root retry policy inherited."
+    },
+    "execution": {
+      "budget": {
+        "kind": "combined",
+        "limit": 20,
+        "unit": "astra-xhigh-calls"
+      },
+      "command_redacted": "harbor-runner-022/bin/python -B runner.py --phase admission --execute --reviewed",
+      "max_concurrency": 2,
+      "ordered_workload_ids": [
+        "inbox-admission"
+      ],
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "timeout_seconds": 570,
+      "workload_ids_sha256": "0808a80d168238d423d2591b0f7f47d42fd5139a2dbc578923a9ca85d194a7ea"
+    },
+    "geode": {
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false,
+      "revision": "1f6553431932040336cadcddb26893e30ebbb706"
+    },
+    "harness": {
+      "name": "Harbor",
+      "revision": "0.22.0",
+      "source": "harbor==0.22.0; private runner sha256:284ca0901c77745055fd947927749ae544fe497ae774a51e5a23173c761448dc"
+    },
+    "model": {
+      "label": "gpt-6-astra",
+      "provider": "openai",
+      "reasoning": "xhigh",
+      "route": "subscription"
+    }
+  },
+  "run_id": "geode-jev-choice-intent-admission-20260927-r4",
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "study": {
+    "analysis_plan": "Three author-visible inboxes, 12 items each, A/B once; 36 items and 72 intended Choice answers per arm. Distinguish intent, target, full task success, wrong/extra reads, false completion, rejudgments and per-purpose costs. Preselected replay: inbox-korean, repetition0. Final/cognitive/root Astra subscription xhigh remain common; raw rule_based alias resolves to effective llm_judge. No pooling with historical runs. New recovery condition: shared root budget 540s; Harbor agent 570s; host watchdog 1290s, with the previous workload, model, effort, round and continuation limits unchanged. Operational allocation only, not an empirical SLO; retain prior interrupted lineage separately. Authorized new540s policy epoch (initial and at most two verification continuations share one clock); not pooled with180s results. Jev program cap2.35/start2.115/stop2.2325. Budget amendment authorization sha256:0daa4127e765adb51b5ea67de0bc58e6199e1ff0363b70bc8cc7f5e81915d4ff. No claim of empirical optimality or guaranteed completion.",
+    "decision_rule": "Diagnostic only. Freeze after parent review; then both fresh admission arms and playback must pass before natural execution. No adoption or release authority.",
+    "hypothesis": "Jev may reduce helper latency while whole-task success and total burden depend on the unchanged Astra consumer.",
+    "invalidation_rule": "Stop on incomplete exports, observation/checker/source/usage/credential failure or timeout. Preserve invalid trials as unknown; any missing/invalid planned cell makes primary not measurable. Valid semantic failures continue.",
+    "primary_metric": {
+      "aggregation": "Verified passing admission arms / 2",
+      "denominator": 2,
+      "direction": "target",
+      "name": "admission_success",
+      "unit": "ratio"
+    },
+    "research_gap": "Component decisions alone do not establish downstream task completion, recovery, or full task burden.",
+    "research_question": "Does replacing a typed Astra intent-and-target helper with Jev preserve verified whole-inbox completion and change end-to-end burden?"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "nat-e2e-golfballs-d46a1475604d",
+  "items": [
+    {
+      "candidates": [
+        "G-592"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "G-592",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "G-592",
+      "id": "msg1",
+      "request": "Has G-592 left the warehouse yet?"
+    },
+    {
+      "candidates": [
+        "G-318"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "G-318",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "G-318",
+      "id": "msg2",
+      "request": "I want my money back for G-318. Two sleeves of balls were missing from the box."
+    },
+    {
+      "candidates": [
+        "G-744"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "G-744",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "G-744",
+      "id": "msg3",
+      "request": "Don't cancel G-744. I just need to know where it is."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg4",
+      "request": "Can you recommend a ball for a beginner with a slow swing?"
+    },
+    {
+      "candidates": [
+        "G-201"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "G-201",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "G-201",
+      "id": "msg5",
+      "request": "Please check G-201 for me."
+    },
+    {
+      "candidates": [
+        "G-867",
+        "G-435"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "G-435",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "G-435",
+      "id": "msg6",
+      "request": "I typed G-867 by mistake earlier. The order I'm asking about is G-435."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "Where are my personalised golf balls? I don't have the order number handy."
+    },
+    {
+      "candidates": [
+        "G-076"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "G-076",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "G-076",
+      "id": "msg8",
+      "request": "Cancel G-076 please; I no longer need it."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Has G-592 left the warehouse yet?&quot;, &quot;candidates&quot;: [&quot;G-592&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;I want my money back for G-318. Two sleeves of balls were missing from the box.&quot;, &quot;candidates&quot;: [&quot;G-318&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;Don&#x27;t cancel G-744. I just need to know where it is.&quot;, &quot;candidates&quot;: [&quot;G-744&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Can you recommend a ball for a beginner with a slow swing?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Please check G-201 for me.&quot;, &quot;candidates&quot;: [&quot;G-201&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;I typed G-867 by mistake earlier. The order I&#x27;m asking about is G-435.&quot;, &quot;candidates&quot;: [&quot;G-867&quot;, &quot;G-435&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Where are my personalised golf balls? I don&#x27;t have the order number handy.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Cancel G-076 please; I no longer need it.&quot;, &quot;candidates&quot;: [&quot;G-076&quot;]}]</inbox>"
+}

@@ -1,0 +1,131 @@
+{
+  "id": "nat-e2e-deskchairs-a253e2d82c78",
+  "items": [
+    {
+      "candidates": [
+        "C-742"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "C-742",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "C-742",
+      "id": "msg1",
+      "request": "Could you check where my office chair C-742 is?"
+    },
+    {
+      "candidates": [
+        "C-284"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "C-284",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "C-284",
+      "id": "msg2",
+      "request": "Please cancel C-284; my company is buying chairs for us instead."
+    },
+    {
+      "candidates": [
+        "C-956",
+        "C-413"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "C-413",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "C-413",
+      "id": "msg3",
+      "request": "C-956 is the footrest I already received. The one I'm asking about is C-413."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg4",
+      "request": "I ordered replacement casters but can't find the order number. Have they shipped?"
+    },
+    {
+      "candidates": [
+        "C-620"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "C-620",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "C-620",
+      "id": "msg5",
+      "request": "Leave C-620 as it is, don't cancel anything. What's its status?"
+    },
+    {
+      "candidates": [
+        "C-179"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "C-179",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "C-179",
+      "id": "msg6",
+      "request": "The armrest on C-179 snapped on day one. I want a refund."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "Is there a chair you'd suggest for someone over two metres tall?"
+    },
+    {
+      "candidates": [
+        "C-845"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "C-845",
+        "status": "backordered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "C-845",
+      "id": "msg8",
+      "request": "Status of C-845, please."
+    },
+    {
+      "candidates": [
+        "C-302",
+        "C-568"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg9",
+      "request": "Tell me where C-302 and C-568 are."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Could you check where my office chair C-742 is?&quot;, &quot;candidates&quot;: [&quot;C-742&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Please cancel C-284; my company is buying chairs for us instead.&quot;, &quot;candidates&quot;: [&quot;C-284&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;C-956 is the footrest I already received. The one I&#x27;m asking about is C-413.&quot;, &quot;candidates&quot;: [&quot;C-956&quot;, &quot;C-413&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;I ordered replacement casters but can&#x27;t find the order number. Have they shipped?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Leave C-620 as it is, don&#x27;t cancel anything. What&#x27;s its status?&quot;, &quot;candidates&quot;: [&quot;C-620&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;The armrest on C-179 snapped on day one. I want a refund.&quot;, &quot;candidates&quot;: [&quot;C-179&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Is there a chair you&#x27;d suggest for someone over two metres tall?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Status of C-845, please.&quot;, &quot;candidates&quot;: [&quot;C-845&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;Tell me where C-302 and C-568 are.&quot;, &quot;candidates&quot;: [&quot;C-302&quot;, &quot;C-568&quot;]}]</inbox>"
+}
