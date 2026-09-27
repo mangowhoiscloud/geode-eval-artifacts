@@ -1,0 +1,92 @@
+{
+  "artifacts": {
+    "analysis": "analysis.json",
+    "attempts": "attempts.jsonl",
+    "measurement_results": null,
+    "native_results": "results.json",
+    "outcome_receipts": null,
+    "publication_manifest": null,
+    "trajectory": null,
+    "verifier_receipts": null
+  },
+  "created_at": "2026-09-26T18:48:30.076070+00:00",
+  "preregistration": {
+    "frozen_at": null,
+    "live_test_approved": false,
+    "mode": "prospective",
+    "operator": "Parent source/spec review pending; preparation only",
+    "status": "draft"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All trial prompts, provider receipts, databases, IDs and host paths are withheld-private pending exact-byte review. Never persist key contents in configs or metadata; actual charges stay unknown."
+  },
+  "reproduction": {
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparability": "direct",
+      "comparator": "A typed Astra intent+target helper versus B direct Jev1.13.0 helper; root/cognitive/final Astra subscription xhigh fixed",
+      "promotion_authority": "none"
+    },
+    "environment": {
+      "architecture": "arm64",
+      "initial_state_ref": "sha256:da7034daae81080a349a678b83daa297709e07b6f3064946ffb876012887ac41",
+      "platform": "macOS-15.3.1-arm64-arm-64bit",
+      "reset_strategy": "Fresh public-network agent and separate static no-network verifier containers per cell; native Harbor artifact transfer only. No operator workspace mounted. Provider-free actual infrastructure proof expires after 24h. Root 180s, Harbor agent 210s, host watchdog 930s plus cancellation cleanup up to 120s. No trial rerun or helper HTTP retry; identical bounded root retry policy inherited."
+    },
+    "execution": {
+      "budget": {
+        "kind": "combined",
+        "limit": 60,
+        "unit": "astra-xhigh-calls"
+      },
+      "command_redacted": "harbor-runner-022/bin/python -B runner.py --phase natural --execute --reviewed",
+      "max_concurrency": 2,
+      "ordered_workload_ids": [
+        "inbox-explicit",
+        "inbox-context",
+        "inbox-korean"
+      ],
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "timeout_seconds": 210,
+      "workload_ids_sha256": "ccf345883ae035ba720a76abf020730e66d8e84caeaab4044d0fd17e30f467a0"
+    },
+    "geode": {
+      "branch": "codex/jev-intent-harbor-20260924",
+      "dirty": false,
+      "revision": "7f32ff272d1b07a6404c593e74dad727857e0bd8"
+    },
+    "harness": {
+      "name": "Harbor",
+      "revision": "0.22.0",
+      "source": "harbor==0.22.0; private runner.py"
+    },
+    "model": {
+      "label": "gpt-6-astra",
+      "provider": "openai",
+      "reasoning": "xhigh",
+      "route": "subscription"
+    }
+  },
+  "run_id": "geode-jev-choice-intent-natural-20260926",
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "study": {
+    "analysis_plan": "Three author-visible inboxes, 12 items each, A/B once; 36 items and 72 intended Choice answers per arm. Distinguish intent, target, full task success, wrong/extra reads, false completion, rejudgments and per-purpose costs. Preselected replay: inbox-korean, repetition0. Final/cognitive/root Astra subscription xhigh remain common; raw rule_based alias resolves to effective llm_judge. No pooling with historical runs.",
+    "decision_rule": "Diagnostic only. Freeze after parent review; then both fresh admission arms and playback must pass before natural execution. No adoption or release authority.",
+    "hypothesis": "Jev may reduce helper latency while whole-task success and total burden depend on the unchanged Astra consumer.",
+    "invalidation_rule": "Stop on incomplete exports, observation/checker/source/usage/credential failure or timeout. Preserve invalid trials as unknown; any missing/invalid planned cell makes primary not measurable. Valid semantic failures continue.",
+    "primary_metric": {
+      "aggregation": "(B strict inbox passes - A strict inbox passes) / 3. Strict: native/oracle pass with consumed evidence and zero wrong-target/extra lookups or false completions.",
+      "denominator": 3,
+      "direction": "target",
+      "name": "strict_task_success_delta",
+      "unit": "ratio"
+    },
+    "research_gap": "Component decisions alone do not establish downstream task completion, recovery, or full task burden.",
+    "research_question": "Does replacing a typed Astra intent-and-target helper with Jev preserve verified whole-inbox completion and change end-to-end burden?"
+  }
+}

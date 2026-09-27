@@ -1,0 +1,345 @@
+{
+  "agent_execution": {
+    "finished_at": "2026-09-27T12:48:47.307875Z",
+    "started_at": "2026-09-27T12:47:28.773874Z"
+  },
+  "agent_info": {
+    "model_info": {
+      "name": "gpt-6-astra",
+      "provider": null
+    },
+    "name": "geode-handoff",
+    "version": "1236ce96c8c5a79699d98f5c960b7a699c1f228a"
+  },
+  "agent_result": {
+    "cost_usd": null,
+    "metadata": {
+      "arm": "b",
+      "effective_verify_mode": "llm_judge",
+      "error_type": null,
+      "execution_started": true,
+      "finalization_errors": [],
+      "geode_session_id": "s-587e6a79ae45",
+      "profile": "decision-handoff",
+      "root_budget_s": 540.0,
+      "score_authority": "Harbor task verifier, not runtime receipt",
+      "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+      "termination_reason": "natural",
+      "usage": {
+        "attempt_pairing_complete": true,
+        "cache_write_tokens": null,
+        "cache_write_tokens_missing_events": 1,
+        "cache_write_tokens_observed_sum": 0,
+        "cached_input_tokens": null,
+        "cached_input_tokens_missing_events": 1,
+        "cached_input_tokens_observed_sum": 0,
+        "call_events": 7,
+        "input_tokens": 26242,
+        "input_tokens_missing_events": 0,
+        "input_tokens_observed_sum": 26242,
+        "known_sink_failure": false,
+        "limitation": "whole-runtime producer coverage and background-writer quiescence require separate verification; paired retained events alone cannot establish either; turn-final judge calls share loop accounting; legacy call purpose remains unknown",
+        "mapping_anomaly_events": 0,
+        "observation_status": "no_known_faults",
+        "output_tokens": 3103,
+        "output_tokens_missing_events": 0,
+        "output_tokens_observed_sum": 3103,
+        "recorded_attempts": [
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-t-46bc4d811d1a:step-1-379b2a14:attempt-1",
+            "llm_call_id": "llm-t-46bc4d811d1a:step-1-379b2a14",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513255.231445,
+            "provider": "openai",
+            "purpose": "agentic_loop",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 7,
+            "source_payload_hash": "fcb482f504613ab4e6d6e3d09e138210e9338a6684e58187ff33b05539fa9594",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 3076,
+              "output_tokens": 15,
+              "reasoning_tokens": 0
+            }
+          },
+          {
+            "adapter": "typesafe-decision-handoff",
+            "effort": "none",
+            "error_type": null,
+            "llm_attempt_id": "llm-e63e15479d214395853787ba2005137a:attempt-1",
+            "llm_call_id": "llm-e63e15479d214395853787ba2005137a",
+            "model": "jev-1.13.0",
+            "occurred_at": 1790513255.5816925,
+            "provider": "typesafe",
+            "purpose": "structured_decision",
+            "response_model": "jev-1.13.0",
+            "session_id": "s-587e6a79ae45",
+            "source": "payg",
+            "source_event_id": 11,
+            "source_payload_hash": "4a2c31cffdfb8eb67b07f5129ba8f5858abcadf0debc1eacaddb8eda9b3cb3ee",
+            "tool_call_id": "call_FNZJ3kbM8J5GEAX6ZcgoGuS8",
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": null,
+              "cached_input_tokens": null,
+              "input_tokens": 5156,
+              "output_tokens": 1019
+            }
+          },
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-0015bac3912f446f8b67796896b57a0e:attempt-1",
+            "llm_call_id": "llm-0015bac3912f446f8b67796896b57a0e",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513270.384373,
+            "provider": "openai",
+            "purpose": "cognitive_reflection",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 17,
+            "source_payload_hash": "65a4c1d87a20d3349ad9fce75cd391cd519351cc90ae3191639b599eae535ad5",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 2813,
+              "output_tokens": 436,
+              "reasoning_tokens": 261
+            }
+          },
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-t-46bc4d811d1a:step-2-e3308e97:attempt-1",
+            "llm_call_id": "llm-t-46bc4d811d1a:step-2-e3308e97",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513277.8421638,
+            "provider": "openai",
+            "purpose": "agentic_loop",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 23,
+            "source_payload_hash": "2466f4de76cd2c17498adbaf7eb7dc254ca716b55c00ca5167770402735700e2",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 4075,
+              "output_tokens": 180,
+              "reasoning_tokens": 85
+            }
+          },
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-ab6217d144b94356862d36afda8d7235:attempt-1",
+            "llm_call_id": "llm-ab6217d144b94356862d36afda8d7235",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513292.457873,
+            "provider": "openai",
+            "purpose": "cognitive_reflection",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 31,
+            "source_payload_hash": "87f8dc869e84c08655a4630b6074d4d02cdbb4f7c8524e0d38c04915246cf272",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 3023,
+              "output_tokens": 423,
+              "reasoning_tokens": 236
+            }
+          },
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-t-46bc4d811d1a:step-3-b81d3204:attempt-1",
+            "llm_call_id": "llm-t-46bc4d811d1a:step-3-b81d3204",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513305.6436243,
+            "provider": "openai",
+            "purpose": "agentic_loop",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 37,
+            "source_payload_hash": "d7fb6a23b4061d52a7a6e8a4ce27ff299eb6fba05f72d110d10730065ffe7625",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 4413,
+              "output_tokens": 379,
+              "reasoning_tokens": 0
+            }
+          },
+          {
+            "adapter": "codex-oauth",
+            "effort": "xhigh",
+            "error_type": null,
+            "llm_attempt_id": "llm-t-46bc4d811d1a:step-4-d933af57:attempt-1",
+            "llm_call_id": "llm-t-46bc4d811d1a:step-4-d933af57",
+            "model": "gpt-6-astra",
+            "occurred_at": 1790513326.7135544,
+            "provider": "openai",
+            "purpose": "turn_verification",
+            "response_model": "gpt-6-astra",
+            "session_id": "s-587e6a79ae45",
+            "source": "subscription",
+            "source_event_id": 42,
+            "source_payload_hash": "f7bbe3cabe56ad5f5d20b72363106636ef616dea7212acb0511574c0844e495a",
+            "tool_call_id": null,
+            "usage": {
+              "cache_write_1h_tokens": null,
+              "cache_write_tokens": 0,
+              "cached_input_tokens": 0,
+              "input_tokens": 3686,
+              "output_tokens": 651,
+              "reasoning_tokens": 468
+            }
+          }
+        ],
+        "recorded_attempts_scope": "canonical-llm-ended-events-only; duplicates retained; no synthetic missing starts or ends",
+        "recorded_attempts_timestamp_unit": "unix-seconds-utc",
+        "scope": "recorded-runtime-llm-attempts-only",
+        "source_snapshot_complete": true,
+        "started_events": 7,
+        "terminal_event_count": 7,
+        "usage_events": 7,
+        "whole_runtime_complete": false
+      },
+      "verify_mode": "rule_based"
+    },
+    "n_cache_tokens": null,
+    "n_input_tokens": null,
+    "n_output_tokens": null
+  },
+  "agent_setup": {
+    "finished_at": "2026-09-27T12:47:28.772972Z",
+    "started_at": "2026-09-27T12:46:11.289135Z"
+  },
+  "config": {
+    "agent": {
+      "concurrency_group": null,
+      "extra_allowed_hosts": [],
+      "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+      "kwargs": {
+        "agent_timeout_sec": 540,
+        "arm": "b",
+        "case_file": "source-runs/jev-intent-harbor-r6/payloads/inbox-korean.json",
+        "case_sha256": "5bb30f6fa813c4b7b8af3ef21e4d34e997c3bc5f93b1dc6d9c1d821c9d40a08f",
+        "effort": "xhigh",
+        "provider": "openai",
+        "source": "subscription",
+        "source_bundle": "source-runs/jev-intent-harbor-r6/source.tar.gz",
+        "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+        "source_sha256": "40c9b0ab082ab4ec212cd7b1ff38a17a268b4b2445093238568d662855f6447a",
+        "typesafe_key_file": "source-runs/jev-intent-harbor-r6/private-secrets/jev-vl7ltaps.key",
+        "verify_mode": "rule_based"
+      },
+      "load_trajectory": null,
+      "max_timeout_sec": null,
+      "mcp_servers": [],
+      "model_name": "gpt-6-astra",
+      "n_concurrent": null,
+      "name": null,
+      "override_setup_timeout_sec": 600.0,
+      "override_timeout_sec": 570.0,
+      "resume_trajectory": false,
+      "skills": []
+    },
+    "agent_setup_timeout_multiplier": null,
+    "agent_timeout_multiplier": null,
+    "artifacts": [],
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [],
+      "force_build": false,
+      "import_path": "runner:ObservedDockerEnvironment",
+      "kwargs": {},
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "environment_build_timeout_multiplier": null,
+    "extra_instruction_paths": [],
+    "install_only": false,
+    "job_id": null,
+    "source_trial": null,
+    "task": {
+      "download_dir": null,
+      "git_commit_id": null,
+      "git_url": null,
+      "name": null,
+      "overwrite": false,
+      "path": "source-runs/jev-intent-harbor-r6/task-bundle/inbox-korean",
+      "ref": null,
+      "source": null
+    },
+    "timeout_multiplier": 1.0,
+    "trial_name": "inbox-natural-r0-inbox-korean-b",
+    "trials_dir": "source-runs/jev-intent-harbor-r6/natural/trials",
+    "user_agent": null,
+    "verifier": {
+      "disable": false,
+      "max_timeout_sec": null,
+      "override_timeout_sec": 30.0
+    },
+    "verifier_timeout_multiplier": null
+  },
+  "environment_setup": {
+    "finished_at": "2026-09-27T12:46:11.288909Z",
+    "started_at": "2026-09-27T12:46:08.982979Z"
+  },
+  "exception_info": null,
+  "finished_at": "2026-09-27T12:48:56.469546Z",
+  "id": "59b62c36-3e74-4f1e-8ac0-65c6c8642d21",
+  "source": null,
+  "started_at": "2026-09-27T12:46:08.981833Z",
+  "step_results": null,
+  "task_checksum": "c858a6006073c4b45c9d2e45f5a956dc8d73b94255a431a06393261e6865bdd4",
+  "task_id": {
+    "path": "source-runs/jev-intent-harbor-r6/task-bundle/inbox-korean"
+  },
+  "task_name": "inbox-korean",
+  "trial_name": "inbox-natural-r0-inbox-korean-b",
+  "trial_uri": "file://source-runs/jev-intent-harbor-r6/natural/trials/inbox-natural-r0-inbox-korean-b",
+  "verifier": {
+    "finished_at": "2026-09-27T12:48:56.469480Z",
+    "started_at": "2026-09-27T12:48:51.215818Z"
+  },
+  "verifier_environment_mode": "separate",
+  "verifier_result": {
+    "rewards": {
+      "reward": 1.0
+    }
+  }
+}

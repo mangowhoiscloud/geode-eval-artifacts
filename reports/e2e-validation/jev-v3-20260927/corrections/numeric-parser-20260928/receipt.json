@@ -1,0 +1,86 @@
+{
+  "completed_at": "2026-09-27T20:10:12.666815+00:00",
+  "classification": "offline-post-hoc-bug-correction",
+  "contract_sha256": "b93e1fa2ff11cd8b6979967a72f4c0eb34bb42e217c94f7582453dd8078ba1df",
+  "source_files_preserved": 24,
+  "model_calls": 0,
+  "original_writes": 0,
+  "units": {
+    "U4": {
+      "matrix_cells": 480,
+      "reparsed_pointwise": 320,
+      "retained_listwise": 160,
+      "changed_orders": 2,
+      "changed_pools": 2,
+      "baseline_outcomes_summary_ci_exact": true,
+      "primary": {
+        "value": -0.25,
+        "numerator": -20,
+        "denominator": 80
+      },
+      "ci": {
+        "estimate": -0.25,
+        "lower": -0.3522894385026738,
+        "upper": -0.1625,
+        "confidence": 0.95,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "measurable_replicates": 2000,
+        "clusters": 45,
+        "seed": 7666079396718865552
+      },
+      "decision": "not-supported",
+      "astra_correct": {
+        "numerator": 79,
+        "denominator": 80,
+        "value": 0.9875
+      },
+      "jev_correct": {
+        "numerator": 59,
+        "denominator": 80,
+        "value": 0.7375
+      }
+    },
+    "X2": {
+      "matrix_cells": 1440,
+      "reparsed_pointwise": 960,
+      "retained_listwise": 480,
+      "changed_orders": 3,
+      "changed_pools": 3,
+      "baseline_outcomes_summary_ci_exact": true,
+      "primary": {
+        "value": -0.125,
+        "numerator": -30,
+        "denominator": 240
+      },
+      "ci": {
+        "estimate": -0.125,
+        "lower": -0.17216117216117216,
+        "upper": -0.08044827586206903,
+        "confidence": 0.95,
+        "method": "source-cluster percentile bootstrap",
+        "replicates": 2000,
+        "measurable_replicates": 2000,
+        "clusters": 94,
+        "seed": 3629238633783592610
+      },
+      "decision": "mixed",
+      "astra_correct": {
+        "numerator": 226,
+        "denominator": 240,
+        "value": 0.9416666666666667
+      },
+      "jev_correct": {
+        "numerator": 196,
+        "denominator": 240,
+        "value": 0.8166666666666667
+      }
+    }
+  },
+  "outputs": {
+    "U4-cell-audit.json": "f54f6e76117d25239b605417c0c0eb44b328dbb05bd5e222cadcf80528588ff0",
+    "U4-corrected-results.json": "e19401239a3170c608ac11305ceb794b44219bf80f7a06028cb5174868241d16",
+    "X2-cell-audit.json": "2abe058d9bcd378b098a799cbcebdf921673fdad00dd6cf511c25ad97d178a1c",
+    "X2-corrected-results.json": "437bbd847bafa2a1cde4da4046fa2f09d76510cfdf8e670a72f228327347ba39"
+  }
+}

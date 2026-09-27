@@ -1,0 +1,130 @@
+{
+  "id": "nat-e2e-projectors-72b7c4f044f2",
+  "items": [
+    {
+      "candidates": [
+        "Z-243"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Z-243",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Z-243",
+      "id": "msg1",
+      "request": "Can you check the delivery status of my projector, Z-243?"
+    },
+    {
+      "candidates": [
+        "Z-768"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "Z-768",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "Z-768",
+      "id": "msg2",
+      "request": "Cancel Z-768 please; I found a brighter model."
+    },
+    {
+      "candidates": [
+        "Z-195",
+        "Z-532"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Z-532",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Z-532",
+      "id": "msg3",
+      "request": "Z-195 was the screen, which already arrived. Now I'm asking about Z-532."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg4",
+      "request": "Where's my ceiling mount? The order number isn't in my inbox."
+    },
+    {
+      "candidates": [
+        "Z-879"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Z-879",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Z-879",
+      "id": "msg5",
+      "request": "I don't want to cancel Z-879. Where is it now?"
+    },
+    {
+      "candidates": [
+        "Z-416"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "Z-416",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "Z-416",
+      "id": "msg6",
+      "request": "Z-416 shows a dead pixel line. Please refund it."
+    },
+    {
+      "candidates": [
+        "Z-061"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "Z-061",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "Z-061",
+      "id": "msg7",
+      "request": "Can you ship Z-061 to my office address instead?"
+    },
+    {
+      "candidates": [
+        "Z-624"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Z-624",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Z-624",
+      "id": "msg8",
+      "request": "What's the status on Z-624?"
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg9",
+      "request": "How many lumens do I need for a bright living room?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Can you check the delivery status of my projector, Z-243?&quot;, &quot;candidates&quot;: [&quot;Z-243&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Cancel Z-768 please; I found a brighter model.&quot;, &quot;candidates&quot;: [&quot;Z-768&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;Z-195 was the screen, which already arrived. Now I&#x27;m asking about Z-532.&quot;, &quot;candidates&quot;: [&quot;Z-195&quot;, &quot;Z-532&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;Where&#x27;s my ceiling mount? The order number isn&#x27;t in my inbox.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;I don&#x27;t want to cancel Z-879. Where is it now?&quot;, &quot;candidates&quot;: [&quot;Z-879&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Z-416 shows a dead pixel line. Please refund it.&quot;, &quot;candidates&quot;: [&quot;Z-416&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Can you ship Z-061 to my office address instead?&quot;, &quot;candidates&quot;: [&quot;Z-061&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;What&#x27;s the status on Z-624?&quot;, &quot;candidates&quot;: [&quot;Z-624&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;How many lumens do I need for a bright living room?&quot;, &quot;candidates&quot;: []}]</inbox>"
+}

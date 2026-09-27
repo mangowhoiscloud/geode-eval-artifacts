@@ -1,0 +1,77 @@
+{
+  "analyzed_at": "2026-09-27T12:22:28.929643+00:00",
+  "answer": "Completed this synthetic inbox diagnostic; canonical and strict success are separate.",
+  "attempts_sha256": "f42aca05a7dfb2d6ba8078dd862aaad8741e363ffcb92692c8a86dea68ba6d20",
+  "decision": {
+    "hypothesis_status": "mixed",
+    "outcome": "diagnostic-only",
+    "rationale": "Known synthetic workload; one repeat; no promotion authority."
+  },
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-a/evidence-manifest.json",
+      "sha256": "99f634e8e554c4ba171ff1e60c65fba3ff94ff7e4b0bdd24af90fa8b27d8e924"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-a/result.json",
+      "sha256": "71f8f27c00b05909fe14affda8f6b7c3bae81e98b8425ca426daa8282aa81751"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-a/trial-receipt.json",
+      "sha256": "10bacd515eb54570ebe137508711ca0e9578a770f6432fa18e7f69563f6c97e9"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-b/evidence-manifest.json",
+      "sha256": "85e7f61cf173acabbe8f7541f4aa6b010cdc726a03eec93c78f914c4133a8678"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-b/result.json",
+      "sha256": "2c8ec1ff259605f31f10adb35d95b6f03557f716eb79cc4bbe1c3e875a44b2c8"
+    },
+    {
+      "kind": "native-result",
+      "path": "trials/inbox-admission-r0-inbox-admission-b/trial-receipt.json",
+      "sha256": "42aad2cd0e42cd4be5aeae8e902636891fc5fbd58aa96d726eab1ccbcd333f88"
+    },
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "4d455cdeb48a8027f86c966e67cf6c439a9d9821b143dff66312bc3931e05e36"
+    }
+  ],
+  "limitations": [
+    "Three author-visible inboxes, not sealed held-out tasks.",
+    "Intent and source-bound target are offloaded; root rollouts are independent.",
+    "Recorded usage and tariff estimates do not establish actual provider charges.",
+    "ATIF-derived replay is not raw PTY or score authority."
+  ],
+  "metrics": [
+    {
+      "denominator": 2,
+      "name": "admission_success",
+      "numerator": 2,
+      "source_locator": {
+        "denominator": "/primary/denominator",
+        "numerator": "/primary/numerator",
+        "value": "/primary/value"
+      },
+      "source_ref": "results.json",
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "run_id": "geode-jev-choice-intent-admission-20260927-r6",
+  "run_spec_sha256": "7fbcdcd1485e276fd9e967b73fad72d4048e71fc8522a5884719e27b49abc24c",
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "selected_attempt_ids": [
+    "geode-jev-choice-intent-admission-20260927-r6-a0000",
+    "geode-jev-choice-intent-admission-20260927-r6-a0001",
+    "geode-jev-choice-intent-admission-20260927-r6-aggregate"
+  ]
+}

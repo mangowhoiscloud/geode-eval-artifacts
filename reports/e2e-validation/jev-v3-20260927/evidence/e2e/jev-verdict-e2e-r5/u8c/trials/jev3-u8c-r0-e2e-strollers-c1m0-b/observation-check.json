@@ -1,0 +1,108 @@
+{
+  "accounting": {
+    "attempts": 7,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 2,
+        "observed_sum": 0,
+        "total": null
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 2,
+        "observed_sum": 0,
+        "total": null
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 15589,
+        "total": 15589
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 2811,
+        "total": 2811
+      }
+    },
+    "observed_efforts": {
+      "none": 2,
+      "xhigh": 5
+    },
+    "purposes": {
+      "agentic_loop": 4,
+      "cognitive_reflection": 1,
+      "turn_verification": 2
+    },
+    "uniform_requested_effort": false,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "7bc9ce894c3d6d49dd82cd4e70de6c7f7babdefe2e3af4e088bf38c3240c4ba2",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "88bca78f1f74ccae02212b55f436d2f4028311de66749227ba552f62da6d5516",
+    "agent/geode-trajectory.json": "dd23311f36bbc314ce2066a71a3ae99150f5a5d3a929306a4407052e770b9847",
+    "agent/geode-trajectory.private.json": "487a235bced49781d0e603136f6968cadb69c752d015151b97a7a0dad7ff9c24",
+    "agent/handoff-result.json": "b8886ac7041cb2958f76cab888990a1286c68d58adee4d1befdb8b75e7ea8ba3",
+    "agent/handoff.json": "89d7d83e773fce979b0031ec386f087b33d8ef5930c196ff346f128f92b8e254",
+    "agent/intervention.json": "342da4c41918666fbe6e88ccbe639143d9e2fea99716613ca62412f375d2fdcc",
+    "agent/recording.cast": "e42503008af80df330e165d2fccff804e54c48b5ef5920adda7a876cfd134c75",
+    "agent/recording.receipt.json": "832f9e28d4b3a34ee75f7d0d3f7f580a428dab963ec5df3c7d21510328b0354b",
+    "agent/runtime-contract.json": "b97393df3db10b4603b0ed2d4b9c758cbde0e927979ffc1b39da8c9693e9c4c5",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "2d2612d56d29b7e8f0408239b5ce554a6758fd178efb131f70440917994105d0",
+    "agent/trajectory.json": "3b55ce224a5454e903520cfae8384c065597db091f87c6093a1710f6c32c9359",
+    "agent/verification.json": "35be8ce76e75f0223593954f3f8c6f0145dd077d79eb4ea576580f2cd9a1043e",
+    "result.json": "32a851578fd7203383ed6c3092e1ef82444b2db05f60efa763ede3f23f645483"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established",
+    "provider counter coverage incomplete"
+  ],
+  "cache_complete": false,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 2,
+    "native_passed": true,
+    "native_verdicts": 2,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "afae4851414b159b71b554c45f5b147069fec900ee98e29e85be1102cc3b3635",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-injection-20260927-r5",
+  "run_spec_sha256": "eab61f1a5c6f12ec1e9c5cc3c47747931441ac864a1e7d0de42524e31ac8b7f4",
+  "source_reconciliation": {
+    "database_sha256": "88bca78f1f74ccae02212b55f436d2f4028311de66749227ba552f62da6d5516",
+    "hook_rows": 59,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 16
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "2e4cb2d954614764fa4a78d7bbd0f74d55f2ba94a103c1fa0415acad1aad1433",
+  "task_name": "noul-e2e-strollers-a00e759df4ee",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 6,
+    "step_count": 4,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u8c-r0-e2e-strollers-c1m0-b",
+  "verification": {
+    "completed_judgments": 2,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

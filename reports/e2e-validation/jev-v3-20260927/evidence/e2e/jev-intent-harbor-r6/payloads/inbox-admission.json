@@ -1,0 +1,49 @@
+{
+  "case": {
+    "id": "inbox-admission",
+    "items": [
+      {
+        "candidates": [
+          "B-209",
+          "A-104"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "A-104",
+          "status": "shipped"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "A-104",
+        "id": "admit_one",
+        "request": "B-209 was my old order. Check A-104, please."
+      },
+      {
+        "candidates": [],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "admit_two",
+        "request": "주문번호를 잊었어요. 배송 상태를 알려 주세요."
+      }
+    ],
+    "profile": "inbox",
+    "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;admit_one&quot;, &quot;request&quot;: &quot;B-209 was my old order. Check A-104, please.&quot;, &quot;candidates&quot;: [&quot;B-209&quot;, &quot;A-104&quot;]}, {&quot;id&quot;: &quot;admit_two&quot;, &quot;request&quot;: &quot;주문번호를 잊었어요. 배송 상태를 알려 주세요.&quot;, &quot;candidates&quot;: []}]</inbox>"
+  },
+  "intervention": null,
+  "orders": {
+    "A-104": "shipped",
+    "B-209": "delivered",
+    "C-318": "processing",
+    "D-427": "delivered",
+    "E-536": "shipped",
+    "F-645": "cancelled",
+    "G-754": "processing",
+    "H-863": "delivered",
+    "I-972": "shipped",
+    "J-081": "processing"
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "schema_id": "geode.jev-selection-freeze@1",
+  "schema_version": 1,
+  "temperature_grid": [
+    0.25,
+    0.35,
+    0.5,
+    0.7,
+    1.0,
+    1.4,
+    2.0,
+    2.8,
+    4.0,
+    5.6,
+    8.0
+  ],
+  "tau_grid": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    1.0
+  ],
+  "temperatures": {
+    "choice": {
+      "llm": {
+        "temperature": 8.0,
+        "nll": 0.6808056712626814,
+        "grid": [
+          0.25,
+          0.35,
+          0.5,
+          0.7,
+          1.0,
+          1.4,
+          2.0,
+          2.8,
+          4.0,
+          5.6,
+          8.0
+        ]
+      },
+      "jev": {
+        "temperature": 1.4,
+        "nll": 0.7249841073356296,
+        "grid": [
+          0.25,
+          0.35,
+          0.5,
+          0.7,
+          1.0,
+          1.4,
+          2.0,
+          2.8,
+          4.0,
+          5.6,
+          8.0
+        ]
+      }
+    },
+    "noul": {
+      "has_contradiction": {
+        "llm": {
+          "temperature": 8.0,
+          "nll": 5.284367236368444,
+          "grid": [
+            0.25,
+            0.35,
+            0.5,
+            0.7,
+            1.0,
+            1.4,
+            2.0,
+            2.8,
+            4.0,
+            5.6,
+            8.0
+          ]
+        },
+        "jev": {
+          "temperature": 4.0,
+          "nll": 0.6649424550911609,
+          "grid": [
+            0.25,
+            0.35,
+            0.5,
+            0.7,
+            1.0,
+            1.4,
+            2.0,
+            2.8,
+            4.0,
+            5.6,
+            8.0
+          ]
+        }
+      },
+      "missing_evidence": {
+        "llm": {
+          "temperature": 2.0,
+          "nll": 0.2532769951008401,
+          "grid": [
+            0.25,
+            0.35,
+            0.5,
+            0.7,
+            1.0,
+            1.4,
+            2.0,
+            2.8,
+            4.0,
+            5.6,
+            8.0
+          ]
+        },
+        "jev": {
+          "temperature": 5.6,
+          "nll": 0.6851500041705709,
+          "grid": [
+            0.25,
+            0.35,
+            0.5,
+            0.7,
+            1.0,
+            1.4,
+            2.0,
+            2.8,
+            4.0,
+            5.6,
+            8.0
+          ]
+        }
+      }
+    }
+  },
+  "cascade": {
+    "tau": 0.5,
+    "admissible": true,
+    "fallback_accuracy": 0.54375,
+    "tolerance": 0.02,
+    "grid": [
+      {
+        "tau": 0.5,
+        "accuracy": {
+          "value": 0.55,
+          "numerator": 88,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.9125,
+          "numerator": 146,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.55,
+        "accuracy": {
+          "value": 0.53125,
+          "numerator": 85,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.83125,
+          "numerator": 133,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.6,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.7875,
+          "numerator": 126,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.65,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.74375,
+          "numerator": 119,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.7,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.675,
+          "numerator": 108,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.75,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.59375,
+          "numerator": 95,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.8,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.55,
+          "numerator": 88,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.85,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.45,
+          "numerator": 72,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.9,
+        "accuracy": {
+          "value": 0.525,
+          "numerator": 84,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.4,
+          "numerator": 64,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.95,
+        "accuracy": {
+          "value": 0.54375,
+          "numerator": 87,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.325,
+          "numerator": 52,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.975,
+        "accuracy": {
+          "value": 0.54375,
+          "numerator": 87,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.19375,
+          "numerator": 31,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 0.99,
+        "accuracy": {
+          "value": 0.54375,
+          "numerator": 87,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.15,
+          "numerator": 24,
+          "denominator": 160
+        }
+      },
+      {
+        "tau": 1.0,
+        "accuracy": {
+          "value": 0.54375,
+          "numerator": 87,
+          "denominator": 160
+        },
+        "coverage": {
+          "value": 0.03125,
+          "numerator": 5,
+          "denominator": 160
+        }
+      }
+    ]
+  },
+  "selection_metrics": {
+    "choice": {
+      "llm": {
+        "accuracy": {
+          "value": 0.54375,
+          "numerator": 87,
+          "denominator": 160
+        },
+        "brier": 0.893449396,
+        "nll": 2.1561946140271395,
+        "ece": 0.45226125,
+        "auroc_error_detection": 0.9756731223429381,
+        "valid": 160,
+        "planned": 160
+      },
+      "jev": {
+        "accuracy": {
+          "value": 0.58125,
+          "numerator": 93,
+          "denominator": 160
+        },
+        "brier": 0.511395625,
+        "nll": 0.7748648605681452,
+        "ece": 0.21725,
+        "auroc_error_detection": 0.8171240571336864,
+        "valid": 160,
+        "planned": 160
+      }
+    },
+    "noul": {
+      "llm": {
+        "has_contradiction": {
+          "accuracy": {
+            "value": 0.53125,
+            "numerator": 85,
+            "denominator": 160
+          },
+          "brier": 0.46664125,
+          "nll": 5.605873281166064,
+          "ece": 0.4675,
+          "auroc_error_detection": 0.5825882352941176,
+          "valid": 160,
+          "planned": 160
+        },
+        "missing_evidence": {
+          "accuracy": {
+            "value": 0.95625,
+            "numerator": 153,
+            "denominator": 160
+          },
+          "brier": 0.041791249999999995,
+          "nll": 0.2863807188770306,
+          "ece": 0.039124999999999854,
+          "auroc_error_detection": 0.7978524743230626,
+          "valid": 160,
+          "planned": 160
+        }
+      },
+      "jev": {
+        "has_contradiction": {
+          "accuracy": {
+            "value": 0.51875,
+            "numerator": 83,
+            "denominator": 160
+          },
+          "brier": 0.295573125,
+          "nll": 0.7974619967070611,
+          "ece": 0.3328125,
+          "auroc_error_detection": 0.8621498982944766,
+          "valid": 160,
+          "planned": 160
+        },
+        "missing_evidence": {
+          "accuracy": {
+            "value": 0.51875,
+            "numerator": 83,
+            "denominator": 160
+          },
+          "brier": 0.291884375,
+          "nll": 0.786975282435668,
+          "ece": 0.2534374999999999,
+          "auroc_error_detection": 0.7778907839148803,
+          "valid": 160,
+          "planned": 160
+        }
+      }
+    }
+  },
+  "inputs": {
+    "analysis_entry": "024ed39ad5f980a54e9033a8066d6b6a03019d71ab316ada50c619a59aa937be",
+    "choice/analysis.json": "fa2bf5ea768009d6c6ea158a9ea6bd023aa97342b15a4ac60ec73a6283d50b86",
+    "choice/attempts.jsonl": "336b96c1e3142a1b80004509d7830d8d1d2fcc8c689cdaf879208808ced892cd",
+    "dispatch_summary": "4dac0d5b122d81c083a8d185d5739679985ff9425f86cbd64d36486b07594ed4",
+    "noul/analysis.json": "41a7d4ad5bb2ef800ade86698d721df7c52b587afe885e6e94ed6f6d88a6601e",
+    "noul/attempts.jsonl": "5fd36aaca635650921afe5578c37a3ae0203f7d1263647093d3f3711915864c6",
+    "private_block_receipt": "a9931c21271ba93370aba016ee14d21e792834263aa4e6d278e18c522be8f005",
+    "process_receipt": "e32dd3a557aba917bfa9815e5fb3678821ce1142d4713cd05db111b36e43313e",
+    "selection_gold": "8a339cf040435a9492f0dc13e2978d4a211af8dc2d2eba7f5e88499b5959f58d",
+    "selection_manifest": "0c0a64b1c62ae22c854b0b065fe8a37406da9b2ac8733d35f594e80171df599d",
+    "source_freeze": "6adedc5a80e1b8f2b2d84f3505e2c28166dcfbb67abd7b7451a97b42fcec932f"
+  },
+  "authority": "selection split only; not refitted after any test call"
+}

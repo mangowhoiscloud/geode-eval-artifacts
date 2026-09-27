@@ -1,0 +1,33 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "b",
+      "case_file": "source-runs/jev-intent-harbor-r5/payloads/inbox-admission.json",
+      "case_sha256": "6d229fcbcb08a44213128a32d2b2ea6274b90354465397d5bce9ebc407c101e2",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-intent-harbor-r5/source.tar.gz",
+      "source_revision": "68a1675733f24d897622d7d12286d52255fb485d",
+      "source_sha256": "654bc545ce750f6cfdb1c52a2e2508a7e51a9fe01c261d6a9b3b253cd6ab60b6",
+      "typesafe_key_file": "source-runs/jev-intent-harbor-r5/private-secrets/jev-3irvvl4z.key",
+      "verify_mode": "rule_based"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-intent-harbor-r5/task-bundle/inbox-admission"
+  },
+  "trial_name": "inbox-admission-r0-inbox-admission-b",
+  "trials_dir": "source-runs/jev-intent-harbor-r5/admission/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

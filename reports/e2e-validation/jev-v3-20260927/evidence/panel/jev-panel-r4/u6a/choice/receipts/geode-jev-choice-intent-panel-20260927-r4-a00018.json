@@ -1,0 +1,197 @@
+{
+  "attempt_id": "geode-jev-choice-intent-panel-20260927-r4-a00018",
+  "call_timing": {
+    "completed_at": "2026-09-26T22:12:40.272908Z",
+    "completed_monotonic_s": 84.45331254100893,
+    "dispatched_at": "2026-09-26T22:12:39.990821Z",
+    "dispatched_monotonic_s": 84.17123837501276,
+    "in_flight_panel_calls": 0,
+    "position": 0
+  },
+  "cluster_id": "ip-013",
+  "engine": "jev",
+  "error_type": null,
+  "latency_s": 0.2820741659961641,
+  "observed_result": "Admitted matched judgment; correctness is scored after unseal.",
+  "primitive": "choice",
+  "receipt": {
+    "accepted": true,
+    "contract": "analyze_request-inbox",
+    "engine": "jev",
+    "error_type": null,
+    "input_sha256": "ef6ffe1a96d88f0be8d97279a5b9dadf62df7189f63b01eb85b83a138f5828a5",
+    "items": [
+      {
+        "id": "q1",
+        "intent": "refund",
+        "source_sha256": "bdf1a859c4f0e664d8559f46417c8b7dd294ee65937f901166df3e1eeba7aec5",
+        "target": {
+          "end": 32,
+          "order_id": "C-422",
+          "start": 27
+        }
+      },
+      {
+        "id": "q2",
+        "intent": "status_only",
+        "source_sha256": "5ba374e377f8cb6c4dc8d8681f23d465112e1b70df0d3c9c40496d699c943c2f",
+        "target": {
+          "end": 34,
+          "order_id": "D-459",
+          "start": 29
+        }
+      },
+      {
+        "id": "q3",
+        "intent": "other",
+        "source_sha256": "909567eb24888c5bf1c5343dec967ee58fc3e9ae5aa0847a10169185f1b3d4ce",
+        "target": {
+          "end": 10,
+          "order_id": "E-496",
+          "start": 5
+        }
+      },
+      {
+        "id": "q4",
+        "intent": "other",
+        "source_sha256": "8a6f2ac05820fb3ef1fcce21c562d151265abae0051929de1b9c5c42b6b2bf23",
+        "target": null
+      },
+      {
+        "id": "q5",
+        "intent": "status_only",
+        "source_sha256": "84416ae761e65e4bd3d7ce938277988c132ac7c4dbaab7297aecefa75746260b",
+        "target": {
+          "end": 14,
+          "order_id": "H-607",
+          "start": 9
+        }
+      }
+    ],
+    "llm_call_id": "jev.choice.ip-013",
+    "model": "jev-1.13.0",
+    "primitives": {
+      "q1_intent": {
+        "choice": "refund",
+        "confidence": 1.0,
+        "probabilities": {
+          "cancel": 0.0,
+          "other": 0.0,
+          "refund": 1.0,
+          "status_only": 0.0
+        },
+        "type": "choice"
+      },
+      "q1_target": {
+        "choice": "order_0",
+        "confidence": 1.0,
+        "probabilities": {
+          "none": 0.0,
+          "order_0": 1.0
+        },
+        "type": "choice"
+      },
+      "q2_intent": {
+        "choice": "status_only",
+        "confidence": 1.0,
+        "probabilities": {
+          "cancel": 0.0,
+          "other": 0.0,
+          "refund": 0.0,
+          "status_only": 1.0
+        },
+        "type": "choice"
+      },
+      "q2_target": {
+        "choice": "order_0",
+        "confidence": 0.99,
+        "probabilities": {
+          "none": 0.0,
+          "order_0": 1.0
+        },
+        "type": "choice"
+      },
+      "q3_intent": {
+        "choice": "other",
+        "confidence": 0.9,
+        "probabilities": {
+          "cancel": 0.0,
+          "other": 0.93,
+          "refund": 0.0,
+          "status_only": 0.07
+        },
+        "type": "choice"
+      },
+      "q3_target": {
+        "choice": "order_0",
+        "confidence": 1.0,
+        "probabilities": {
+          "none": 0.0,
+          "order_0": 1.0
+        },
+        "type": "choice"
+      },
+      "q4_intent": {
+        "choice": "other",
+        "confidence": 0.52,
+        "probabilities": {
+          "cancel": 0.0,
+          "other": 0.64,
+          "refund": 0.0,
+          "status_only": 0.36
+        },
+        "type": "choice"
+      },
+      "q4_target": {
+        "choice": "none",
+        "confidence": 0.99,
+        "probabilities": {
+          "none": 0.99,
+          "order_0": 0.01,
+          "order_1": 0.0
+        },
+        "type": "choice"
+      },
+      "q5_intent": {
+        "choice": "status_only",
+        "confidence": 0.99,
+        "probabilities": {
+          "cancel": 0.0,
+          "other": 0.01,
+          "refund": 0.0,
+          "status_only": 0.99
+        },
+        "type": "choice"
+      },
+      "q5_target": {
+        "choice": "order_0",
+        "confidence": 1.0,
+        "probabilities": {
+          "none": 0.0,
+          "order_0": 1.0
+        },
+        "type": "choice"
+      }
+    },
+    "provider": "typesafe",
+    "question_sha256": "4770320ea18a3ab9cb6a6301ef8b4a9ba5694364b8c5d21ddac3d18fd6a85e13",
+    "raw_answer_retention": "complete",
+    "raw_answer_sha256": "f1031914aab340e489d168e418ecc10e149987cb2174f92c031e8ffeb533dd0f",
+    "response_model": "jev-1.13.0",
+    "response_provider": "typesafe",
+    "source": "payg",
+    "source_sha256": "436344fef0339c5b1bf0f280fc3c8a26d86b288c5122b814b2d139576ba33d15",
+    "step_id": "base"
+  },
+  "state_id": "ip-013",
+  "status": "admitted",
+  "stop_reason": "end_turn",
+  "usage": {
+    "cached_input_tokens": null,
+    "input_tokens": 2171,
+    "output_tokens": 412,
+    "reasoning_tokens": null
+  },
+  "variant": "base",
+  "workload_id": "ip-013"
+}

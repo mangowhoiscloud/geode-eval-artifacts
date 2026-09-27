@@ -1,0 +1,820 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-choice-intent-panel-admission-20260927-r2",
+  "analyzed_at": "2026-09-26T21:16:27.310901+00:00",
+  "run_spec_sha256": "951aaf04f0a68741edd2310b2102611a78d6c12c2fe4b540f8b0ad19521b3204",
+  "attempts_sha256": "4320cf5d8587698d5b36b4e34903704ef5b66d1183b479ac23514588174852fb",
+  "selected_attempt_ids": [
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00000",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00001",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00002",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00003",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00004",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00005",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00006",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-a00007",
+    "geode-jev-choice-intent-panel-admission-20260927-r2-aggregate"
+  ],
+  "answer": "U0c-i admitted all eight planned helper responses.",
+  "metrics": [
+    {
+      "name": "intent_panel_admission_admitted_ratio",
+      "value": 1.0,
+      "numerator": 8,
+      "denominator": 8,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/admission/value",
+        "numerator": "/admission/numerator",
+        "denominator": "/admission/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/llm/joint_accuracy/value",
+        "numerator": "/engines/llm/joint_accuracy/numerator",
+        "denominator": "/engines/llm/joint_accuracy/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_label_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/llm/intent_accuracy/value",
+        "numerator": "/engines/llm/intent_accuracy/numerator",
+        "denominator": "/engines/llm/intent_accuracy/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_target_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/llm/target_accuracy/value",
+        "numerator": "/engines/llm/target_accuracy/numerator",
+        "denominator": "/engines/llm/target_accuracy/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_helper_admitted_ratio",
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/llm/helper_admitted/value",
+        "numerator": "/engines/llm/helper_admitted/numerator",
+        "denominator": "/engines/llm/helper_admitted/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/jev/joint_accuracy/value",
+        "numerator": "/engines/jev/joint_accuracy/numerator",
+        "denominator": "/engines/jev/joint_accuracy/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_label_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/jev/intent_accuracy/value",
+        "numerator": "/engines/jev/intent_accuracy/numerator",
+        "denominator": "/engines/jev/intent_accuracy/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_target_accuracy",
+      "value": 1.0,
+      "numerator": 20,
+      "denominator": 20,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/jev/target_accuracy/value",
+        "numerator": "/engines/jev/target_accuracy/numerator",
+        "denominator": "/engines/jev/target_accuracy/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_helper_admitted_ratio",
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/engines/jev/helper_admitted/value",
+        "numerator": "/engines/jev/helper_admitted/numerator",
+        "denominator": "/engines/jev/helper_admitted/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_correction_cancel",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/correction_cancel/llm/value",
+        "numerator": "/strata/phenomenon/correction_cancel/llm/numerator",
+        "denominator": "/strata/phenomenon/correction_cancel/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_correction_cancel",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/correction_cancel/jev/value",
+        "numerator": "/strata/phenomenon/correction_cancel/jev/numerator",
+        "denominator": "/strata/phenomenon/correction_cancel/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_correction_status",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/correction_status/llm/value",
+        "numerator": "/strata/phenomenon/correction_status/llm/numerator",
+        "denominator": "/strata/phenomenon/correction_status/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_correction_status",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/correction_status/jev/value",
+        "numerator": "/strata/phenomenon/correction_status/jev/numerator",
+        "denominator": "/strata/phenomenon/correction_status/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_explicit_cancel",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_cancel/llm/value",
+        "numerator": "/strata/phenomenon/explicit_cancel/llm/numerator",
+        "denominator": "/strata/phenomenon/explicit_cancel/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_explicit_cancel",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_cancel/jev/value",
+        "numerator": "/strata/phenomenon/explicit_cancel/jev/numerator",
+        "denominator": "/strata/phenomenon/explicit_cancel/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_explicit_refund",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_refund/llm/value",
+        "numerator": "/strata/phenomenon/explicit_refund/llm/numerator",
+        "denominator": "/strata/phenomenon/explicit_refund/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_explicit_refund",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_refund/jev/value",
+        "numerator": "/strata/phenomenon/explicit_refund/jev/numerator",
+        "denominator": "/strata/phenomenon/explicit_refund/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_explicit_status",
+      "value": 1.0,
+      "numerator": 3,
+      "denominator": 3,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_status/llm/value",
+        "numerator": "/strata/phenomenon/explicit_status/llm/numerator",
+        "denominator": "/strata/phenomenon/explicit_status/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_explicit_status",
+      "value": 1.0,
+      "numerator": 3,
+      "denominator": 3,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/explicit_status/jev/value",
+        "numerator": "/strata/phenomenon/explicit_status/jev/numerator",
+        "denominator": "/strata/phenomenon/explicit_status/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_multi_target_status",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/multi_target_status/llm/value",
+        "numerator": "/strata/phenomenon/multi_target_status/llm/numerator",
+        "denominator": "/strata/phenomenon/multi_target_status/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_multi_target_status",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/multi_target_status/jev/value",
+        "numerator": "/strata/phenomenon/multi_target_status/jev/numerator",
+        "denominator": "/strata/phenomenon/multi_target_status/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_negated_action",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/negated_action/llm/value",
+        "numerator": "/strata/phenomenon/negated_action/llm/numerator",
+        "denominator": "/strata/phenomenon/negated_action/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_negated_action",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/negated_action/jev/value",
+        "numerator": "/strata/phenomenon/negated_action/jev/numerator",
+        "denominator": "/strata/phenomenon/negated_action/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_no_mention",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/no_mention/llm/value",
+        "numerator": "/strata/phenomenon/no_mention/llm/numerator",
+        "denominator": "/strata/phenomenon/no_mention/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_no_mention",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/no_mention/jev/value",
+        "numerator": "/strata/phenomenon/no_mention/jev/numerator",
+        "denominator": "/strata/phenomenon/no_mention/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_policy_question",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/policy_question/llm/value",
+        "numerator": "/strata/phenomenon/policy_question/llm/numerator",
+        "denominator": "/strata/phenomenon/policy_question/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_policy_question",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/policy_question/jev/value",
+        "numerator": "/strata/phenomenon/policy_question/jev/numerator",
+        "denominator": "/strata/phenomenon/policy_question/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_quoted_old_command",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/quoted_old_command/llm/value",
+        "numerator": "/strata/phenomenon/quoted_old_command/llm/numerator",
+        "denominator": "/strata/phenomenon/quoted_old_command/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_quoted_old_command",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/quoted_old_command/jev/value",
+        "numerator": "/strata/phenomenon/quoted_old_command/jev/numerator",
+        "denominator": "/strata/phenomenon/quoted_old_command/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_third_party_quote",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/third_party_quote/llm/value",
+        "numerator": "/strata/phenomenon/third_party_quote/llm/numerator",
+        "denominator": "/strata/phenomenon/third_party_quote/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_third_party_quote",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/third_party_quote/jev/value",
+        "numerator": "/strata/phenomenon/third_party_quote/jev/numerator",
+        "denominator": "/strata/phenomenon/third_party_quote/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_three_way_correction",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/three_way_correction/llm/value",
+        "numerator": "/strata/phenomenon/three_way_correction/llm/numerator",
+        "denominator": "/strata/phenomenon/three_way_correction/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_three_way_correction",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/three_way_correction/jev/value",
+        "numerator": "/strata/phenomenon/three_way_correction/jev/numerator",
+        "denominator": "/strata/phenomenon/three_way_correction/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_undecided_action",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/undecided_action/llm/value",
+        "numerator": "/strata/phenomenon/undecided_action/llm/numerator",
+        "denominator": "/strata/phenomenon/undecided_action/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_undecided_action",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/undecided_action/jev/value",
+        "numerator": "/strata/phenomenon/undecided_action/jev/numerator",
+        "denominator": "/strata/phenomenon/undecided_action/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_phenomenon_unrelated_info",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/unrelated_info/llm/value",
+        "numerator": "/strata/phenomenon/unrelated_info/llm/numerator",
+        "denominator": "/strata/phenomenon/unrelated_info/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_phenomenon_unrelated_info",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/phenomenon/unrelated_info/jev/value",
+        "numerator": "/strata/phenomenon/unrelated_info/jev/numerator",
+        "denominator": "/strata/phenomenon/unrelated_info/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_language_en",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/language/en/llm/value",
+        "numerator": "/strata/language/en/llm/numerator",
+        "denominator": "/strata/language/en/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_language_en",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/language/en/jev/value",
+        "numerator": "/strata/language/en/jev/numerator",
+        "denominator": "/strata/language/en/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_language_ko",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/language/ko/llm/value",
+        "numerator": "/strata/language/ko/llm/numerator",
+        "denominator": "/strata/language/ko/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_language_ko",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/language/ko/jev/value",
+        "numerator": "/strata/language/ko/jev/numerator",
+        "denominator": "/strata/language/ko/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_family_language_en",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/family_language/en/llm/value",
+        "numerator": "/strata/family_language/en/llm/numerator",
+        "denominator": "/strata/family_language/en/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_family_language_en",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/family_language/en/jev/value",
+        "numerator": "/strata/family_language/en/jev/numerator",
+        "denominator": "/strata/family_language/en/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_family_language_ko",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/family_language/ko/llm/value",
+        "numerator": "/strata/family_language/ko/llm/numerator",
+        "denominator": "/strata/family_language/ko/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_family_language_ko",
+      "value": 1.0,
+      "numerator": 10,
+      "denominator": 10,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/family_language/ko/jev/value",
+        "numerator": "/strata/family_language/ko/jev/numerator",
+        "denominator": "/strata/family_language/ko/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_n_candidates_0",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/0/llm/value",
+        "numerator": "/strata/n_candidates/0/llm/numerator",
+        "denominator": "/strata/n_candidates/0/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_n_candidates_0",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/0/jev/value",
+        "numerator": "/strata/n_candidates/0/jev/numerator",
+        "denominator": "/strata/n_candidates/0/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_n_candidates_1",
+      "value": 1.0,
+      "numerator": 14,
+      "denominator": 14,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/1/llm/value",
+        "numerator": "/strata/n_candidates/1/llm/numerator",
+        "denominator": "/strata/n_candidates/1/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_n_candidates_1",
+      "value": 1.0,
+      "numerator": 14,
+      "denominator": 14,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/1/jev/value",
+        "numerator": "/strata/n_candidates/1/jev/numerator",
+        "denominator": "/strata/n_candidates/1/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_n_candidates_2",
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/2/llm/value",
+        "numerator": "/strata/n_candidates/2/llm/numerator",
+        "denominator": "/strata/n_candidates/2/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_n_candidates_2",
+      "value": 1.0,
+      "numerator": 4,
+      "denominator": 4,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/2/jev/value",
+        "numerator": "/strata/n_candidates/2/jev/numerator",
+        "denominator": "/strata/n_candidates/2/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_n_candidates_3",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/3/llm/value",
+        "numerator": "/strata/n_candidates/3/llm/numerator",
+        "denominator": "/strata/n_candidates/3/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_n_candidates_3",
+      "value": 1.0,
+      "numerator": 1,
+      "denominator": 1,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/n_candidates/3/jev/value",
+        "numerator": "/strata/n_candidates/3/jev/numerator",
+        "denominator": "/strata/n_candidates/3/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_target_none",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/target/none/llm/value",
+        "numerator": "/strata/target/none/llm/numerator",
+        "denominator": "/strata/target/none/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_target_none",
+      "value": 1.0,
+      "numerator": 2,
+      "denominator": 2,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/target/none/jev/value",
+        "numerator": "/strata/target/none/jev/numerator",
+        "denominator": "/strata/target/none/jev/denominator"
+      }
+    },
+    {
+      "name": "llm_intent_joint_accuracy_target_order",
+      "value": 1.0,
+      "numerator": 18,
+      "denominator": 18,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/target/order/llm/value",
+        "numerator": "/strata/target/order/llm/numerator",
+        "denominator": "/strata/target/order/llm/denominator"
+      }
+    },
+    {
+      "name": "jev_intent_joint_accuracy_target_order",
+      "value": 1.0,
+      "numerator": 18,
+      "denominator": 18,
+      "unit": "ratio",
+      "source_ref": "intent-results.json",
+      "source_locator": {
+        "value": "/strata/target/order/jev/value",
+        "numerator": "/strata/target/order/jev/numerator",
+        "denominator": "/strata/target/order/jev/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "Four frozen families, both engines; admission requires eight admitted responses and verified execution closure."
+  },
+  "limitations": [
+    "Admission is schema/route completion, not perfect helper accuracy or an E2E root result.",
+    "Four author-visible families support a diagnostic only, not generalization or a latency claim.",
+    "Original calls remain selected; the extra attempt is analysis-only, with no model dispatch."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00000.json",
+      "sha256": "55a854a63b4eed01577cf309ab19ad29ecfc10e9f791fcb12da558785edc99d7"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00001.json",
+      "sha256": "2544b9e62572bdbc796b08e7071f8824b7e00bce6e6a7988af7024be572a0600"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00002.json",
+      "sha256": "fe39600e2176e862362ad3d71f22d73429f9af4abd4af85c4f1a9d9e2e153e60"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00003.json",
+      "sha256": "a378f0c5a1214ae579a0748c2935786975f9735cd8f85c0aa6ebbc4fa1239b4c"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00004.json",
+      "sha256": "b1295a891cb836cb8889c66343bdc91a70f1eb52364742793533fa3e95f56e07"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00005.json",
+      "sha256": "0d2af8d19192f68f2ce0df52b84945f6467b28e0141338ddd0645069de3977de"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00006.json",
+      "sha256": "6793b8af39b7129b3d230d715045bd15a1a55f029ad0c7a62ed75e50e31634a5"
+    },
+    {
+      "kind": "native-result",
+      "path": "receipts/geode-jev-choice-intent-panel-admission-20260927-r2-a00007.json",
+      "sha256": "969b260bb57386800025329be180ba6528b049ce392f44736e29607198e61db3"
+    },
+    {
+      "kind": "native-result",
+      "path": "intent-results.json",
+      "sha256": "700951a50f67206e332e72cf1de442136422fa02eaba5827cac934b65090adbf"
+    }
+  ]
+}

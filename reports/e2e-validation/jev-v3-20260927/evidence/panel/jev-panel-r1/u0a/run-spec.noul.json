@@ -1,0 +1,97 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-verdict-panel-admission-noul-20260927-r1",
+  "created_at": "2026-09-26T21:09:23.377283+00:00",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-26T21:09:23.377283+00:00",
+    "live_test_approved": true,
+    "operator": "User authorized account switch and remaining U execution 2026-09-27; acct [account-withheld]/pro; prior quota refusal preserved"
+  },
+  "study": {
+    "research_question": "Do both matched verifier engines return admissible contract-V1 Choice and Noul judgments on frozen selection-split admission states through the frozen routes?",
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "hypothesis": "All 32 admission calls complete on the frozen routes and the judgment-output invalid rate per engine is at most 10%.",
+    "primary_metric": {
+      "name": "panel_admission_admitted_ratio",
+      "unit": "ratio",
+      "direction": "maximize",
+      "aggregation": "admitted Noul judgments / 16 planned calls (8 selection states x Astra,Jev); the other primitive is the sibling run of the same PanelUnit",
+      "denominator": 16
+    },
+    "decision_rule": "Admission only; excluded from every analysis denominator. Proceed only if every call is on the frozen route, per-engine judgment-output invalid rate at most 10%, strict (1e-5) and 0.025 classes are recorded and no secret appears. Otherwise fix and start a new lineage.",
+    "invalidation_rule": "Judgment-output invalid (schema, label, non-finite probability, Choice sum beyond 0.025, verdict not an argmax label, refusal, unexpected stop reason) is a valid attempt with a wrong answer: it stays in accuracy denominators and is excluded from probability metrics. Infrastructure invalid (no response, timeout, missing capture or receipt, harness error, quota exhaustion) is validity=invalid, outcome=unknown. Preregistered panel exception: a transport failure without any response is kept as an unselected invalid attempt and replaced exactly once by a child attempt on the same input; a failed replacement stays selected, makes the primary not measurable and stops the unit; replacements above 2% of planned calls stop the unit. Quota exhaustion, harness errors and route violations (non-subscription Astra, model, effort or provider drift, global Jev) are selected invalid attempts and stop the unit. Pin #2 (0028): non-quota HTTP 429 is rate_limited; wait Retry-After (seconds or HTTP-date, default 30 s, clipped to 0-120 s) then exactly one replacement under the same 2% ceiling. retry_wait_s is excluded from measured latency. quota, billing, usage_limit, usage_not_included and plan_limit codes, HTTP 402 and BillingError are quota_exhausted: stop without replacement.",
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: n/a. Workload order per 05 v2.2 §8.1. Account transition: [account-withheld]/pro; predecessor geode-jev-verdict-panel-admission-noul-20260927 retained; no old-account model results pooled. U0a analysis entry sha256:f12158ea03aebbb4c4a06bc5e0aba976098a7796a62278b9c21e3fb8c8bc5435."
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace",
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false
+    },
+    "harness": {
+      "name": "GEODE verdict panel runner",
+      "source": "evals/benchmarks/verdict_panel_runner.py at 2f2b494d605c9306dcf1d94a2394e7576e959ace; Run driver sha256 d365dcf0fa4676bcf3cca7723a33ec05cfae4048c45492a15dc426e7a3c161b7",
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-6-astra",
+      "route": "subscription",
+      "reasoning": "xhigh"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "architecture": "arm64",
+      "reset_strategy": "Direct MatchedVerifierAdapter calls on frozen rendered states, one state per call, no cross-state input; no Harbor, root loop or tools; panel and E2E never overlap (global execution lock); Codex subscription account fp [account-withheld] is shared with a user-approved video session (external usage unknown).",
+      "initial_state_ref": "selection manifest sha256:0c0a64b1c62ae22c854b0b065fe8a37406da9b2ac8733d35f594e80171df599d"
+    },
+    "execution": {
+      "command_redacted": "Run driver: PanelRunner(PanelUnit(run_ids choice and noul, mode=latin, max_concurrency=4, pacing_s=1.0, heartbeat_s=5.0, timeouts llm 180 s and jev 60 s), workloads_from_states(ordered_workload_ids)).run(); cells rotated as a 4x4 Latin square over [A-Choice, B-Choice, A-Noul, B-Noul]; Codex file auth and the TypeSafe key are loaded at run time and never printed",
+      "ordered_workload_ids": [
+        "cl-s02-kites--q2a",
+        "cl-s16-clocks--q2b",
+        "cl-s10-photoprints--q1c",
+        "cl-s04-watches--q1c",
+        "cl-s03-luggage--q1d",
+        "cl-s07-sunglasses--q2b",
+        "cl-s08-wallpaper--q1a",
+        "cl-s14-bedding--q2d"
+      ],
+      "workload_ids_sha256": "d26cebe136a57bafb536ce421ddff4b43c4192f932a02b0e3fa4d1abffec7177",
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "max_concurrency": 4,
+      "timeout_seconds": 180,
+      "budget": {
+        "kind": "combined",
+        "limit": 9,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-1.00"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "A: gpt-6-astra/xhigh Codex subscription MatchedVerifierAdapter contract V1; B: direct jev-1.13.0; identical frozen states and questions (Choice and Noul)",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "noul/results.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "noul/attempts.jsonl",
+    "analysis": "noul/analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  }
+}

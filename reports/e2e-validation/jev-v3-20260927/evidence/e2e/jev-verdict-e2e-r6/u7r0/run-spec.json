@@ -1,0 +1,101 @@
+{
+  "artifacts": {
+    "analysis": "analysis.json",
+    "attempts": "attempts.jsonl",
+    "measurement_results": null,
+    "native_results": "results.json",
+    "outcome_receipts": null,
+    "publication_manifest": null,
+    "trajectory": null,
+    "verifier_receipts": null
+  },
+  "created_at": "2026-09-27T01:53:08.022226+00:00",
+  "preregistration": {
+    "frozen_at": "2026-09-27T21:25:24.351538+09:00",
+    "live_test_approved": true,
+    "mode": "prospective",
+    "operator": "User delegated completion; root checked source5, same-source playback, new account and actual I6 quota.",
+    "status": "frozen"
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  },
+  "reproduction": {
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparability": "direct",
+      "comparator": "A: Astra xhigh Choice final verdict; B: Jev 1.13.0 Choice final verdict; C: Jev 1.13.0 Choice with frozen tau 0.50 then Astra xhigh fallback; same Astra xhigh root/repair, a0 inbox, concurrent A/B/C slots. C inclusion authorized by the budget recovery instruction.",
+      "promotion_authority": "none"
+    },
+    "environment": {
+      "architecture": "arm64",
+      "initial_state_ref": "Option E; sources sha256:d5e847383a2e5d7604897ff14a09727c2b9abdab73d9eb7d740df8a656cd348a; manifest sha256:ac773cb4be37dc284fdb76ccce3c35c7578a5092ea756d8a8b94c575fe108171; slots sha256:3ccf2747a3d3b93113c187313fde0fccfaa1be7df12cc7ddbd8513f9de89d9ed; bundle sha256:6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913. Cases/instructions/orders/interventions preserved; no sealed labels inspected.",
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "reset_strategy": "Fresh public-network agent and separate no-network verifier per trial; concurrent arms within each slot, cleanup before next; no operator mount. Root 540s shared by initial plus at most two verification continuations, six rounds per turn; agent570/setup600/verifier30/watchdog1290/cleanup120 seconds. Panel/E2E never overlap. Native account/plan guards checked at execution; external account usage unknown. New budget policy epoch, not pooled with original180s results."
+    },
+    "execution": {
+      "budget": {
+        "kind": "combined",
+        "limit": 360,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-2.35"
+      },
+      "command_redacted": "Paired-slot dispatcher: every arm of a slot launched together from cells/e2e-slots.jsonl, next slot after all arms are cleaned up, Harbor 0.22.0 task bundles with frozen payload digests; Codex file auth and the TypeSafe key are loaded at run time and never printed",
+      "max_concurrency": 3,
+      "ordered_workload_ids": [
+        "e2e-golfballs",
+        "e2e-washingmachines",
+        "e2e-headphones",
+        "e2e-surfboards",
+        "e2e-modeltrains",
+        "e2e-projectors",
+        "e2e-ukuleles",
+        "e2e-swimwear",
+        "e2e-vacuums",
+        "e2e-airpurifiers",
+        "e2e-dumbbells",
+        "e2e-deskchairs"
+      ],
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "timeout_seconds": 570,
+      "workload_ids_sha256": "e99585fb0dfa48f426b7b8f2065a133ca882b2924fb6e746e55faee1cce8fde2"
+    },
+    "geode": {
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false,
+      "revision": "1f6553431932040336cadcddb26893e30ebbb706"
+    },
+    "harness": {
+      "name": "Harbor",
+      "revision": "0.22.0",
+      "source": "harbor==0.22.0; paired dispatcher sha256 16b3034ee781d504989f25fbcf71c2b40eec82a4e4da48fd69ca73215a215a2a; E runner sha256 a00fb55179858892adb69f4e5cbfebeb4a0bd1c70069c032d4f38c55e56f29ef"
+    },
+    "model": {
+      "label": "gpt-6-astra",
+      "provider": "openai",
+      "reasoning": "xhigh",
+      "route": "subscription"
+    }
+  },
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r6",
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "study": {
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: ab8450752e4ccc384a52a50de142f9bbe51094f1f945386983369ee8cd3d3e21. Workload order per 05 v2.2 §8.1. No reliability rows here; pass@n/pass^n evidence is attached to the U7r1 analysis only (05 v2.2 §3.7). New epoch runner sha256:a00fb55179858892adb69f4e5cbfebeb4a0bd1c70069c032d4f38c55e56f29ef; tau=0.50, no refit. U0f playback approval receipt sha256:ac883f4921ae7fce3d3d22a7f0140e20b7d624a14b6c8364fa5bbe858f0969da; three-arm synthetic verification sha256:f3b965ef2931482546b5dc3a7121a043b27dfaa2d4c1793eb476cbfe487ba595. New authorized540s shared budget; no sufficiency/optimality claim. Primary remains B-minus-A strict successes over 12 tasks; C is descriptive. Two full repeats must share task bytes, source, arm policy and tau. Native reliability_for attaches pass@1/pass@2/pass^2 for A/B/C (nine auxiliary rows) and summary/gate only to U7r1. Any incomplete/invalid planned repetition matrix withholds all comparison reliability rows as not-measurable. No replacement. Budget amendment sha256:741ca53c73597ed702a8d5647e5a2cb26deb4cfefeb4721fd1497db868227cb7; authorization sha256:0daa4127e765adb51b5ea67de0bc58e6199e1ff0363b70bc8cc7f5e81915d4ff. Full registered unit rerun once; retain original results separately. Same-source admission and actual delegated-agent playback gates apply under prospective amendment sha256:3b5a7f0fa49160835e9f0d9a521fb08bb351392f8734434a905ac85679bda90b and explicit user authorization sha256:3af3919606cd30d585fa10fceeef1623238cbdd15f0ac59dbea17f2928e8a026. Actual player review sha256:7098ede3969f1436bc14f068f25d9f7b792f2ad86c2e82a9bb7a769739b62b6d; human_reviewed=false and deferred until user returns. New E6 account lineage: source5/task/order/ABC/tau/repetition unchanged; original E5 completion/playback evidence referenced, not rerun. Formal prospective operating forecast amendment withheld-local-path-bd3e9a5c47a0949d SHA256 5528b6ffd52bed91e62cac3c5583dae5378588e7c980313caf3b43d8b1e5eebb; planned360 is not a runtime hard cap. Actual accountanonymous-account-01/pro, single604800s/reset2026-10-04 08:12, I6 admission13Astra/usage2to3 yielded native provisional r15.384615384615383. Account/epoch/infra readiness withheld-local-path-98b96608f158881b SHA256 e7899ebe93138e638401642d0dcdc1b791b0b44cd59a82680f6871bb4d043f60. Same-source E5 admission refs only; no source7 scientific evidence transfer. Live execution authorization is recorded under existing full-completion user delegation. Native account/plan expected values must be bound from actual G0 before freeze; quota calibration requires same single window/reset and finite native r. Existing r0 quota-refused receipt remains immutable. Source7 I6 calibration is account operation evidence only, not source5 scientific admission. Quota check at middle slot once, account/STOP/preflight every slot; thresholds90/95 unchanged.",
+    "decision_rule": "Descriptive only (mixed), no promotion authority. A/B/C, 12 tasks per repeat, same tau 0.50. Planned Astra projection budget 360 per repeat; this is not a separate per-call hard counter. U7r1 reliability only after both complete matrices.",
+    "hypothesis": "Descriptive only (12 tasks).",
+    "invalidation_rule": "Judgment-output invalid is a semantic failure of a valid trial and keeps the trial in its denominator. Infrastructure invalid (transport failure, route drift, missing or contradictory usage, observation-check failure, incomplete export) is validity=invalid, outcome=unknown with a failure class; the first such cell stops dispatch, it stays selected and the primary is reported as not measurable. There is no replacement. A Jev failure followed by an LLM decision never counts as Jev acceptance.",
+    "primary_metric": {
+      "aggregation": "(Jev strict successes - Astra strict successes) / 12 paired slots",
+      "denominator": 12,
+      "direction": "target",
+      "name": "m8n_strict_success_delta",
+      "unit": "ratio"
+    },
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "research_question": "Does swapping the final verdict engine change strict task success, false completion, recovery and per-stage burden on natural tasks run as simultaneous A/B/C slots?"
+  }
+}

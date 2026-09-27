@@ -1,0 +1,159 @@
+{
+  "id": "nat-e2e-swimwear-5dd3e712ab99",
+  "items": [
+    {
+      "candidates": [
+        "W-318"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "W-318",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "W-318",
+      "id": "msg1",
+      "request": "W-318 수영복 배송 어디까지 왔나요?"
+    },
+    {
+      "candidates": [
+        "W-742"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "W-742",
+        "status": null
+      },
+      "expected_intent": "cancel",
+      "expected_order": "W-742",
+      "id": "msg2",
+      "request": "W-742는 사이즈가 안 맞을 것 같아서 취소하고 싶어요."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg3",
+      "request": "래시가드 주문 상태 알려 주세요. 주문번호는 메일에서 못 찾았어요."
+    },
+    {
+      "candidates": [
+        "W-165",
+        "W-903"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "W-903",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "W-903",
+      "id": "msg4",
+      "request": "W-165는 제 딸 주문이에요. 제 주문인 W-903 상태를 확인해 주세요."
+    },
+    {
+      "candidates": [
+        "W-527"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "W-527",
+        "status": "on_hold"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "W-527",
+      "id": "msg5",
+      "request": "W-527을 취소하려는 건 아니고, 지금 어떤 상태인지만 알려 주세요."
+    },
+    {
+      "candidates": [
+        "W-286"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "W-286",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "W-286",
+      "id": "msg6",
+      "request": "W-286 받았는데 색이 상품 이미지와 달라서 환불받고 싶습니다."
+    },
+    {
+      "candidates": [
+        "W-667",
+        "W-071"
+      ],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg7",
+      "request": "W-667과 W-071 둘 다 상태를 알려 주세요."
+    },
+    {
+      "candidates": [
+        "W-834"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "W-834",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "W-834",
+      "id": "msg8",
+      "request": "W-834에 선물 포장을 추가할 수 있을까요?"
+    },
+    {
+      "candidates": [
+        "W-455"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "W-455",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "W-455",
+      "id": "msg9",
+      "request": "수영모 주문은 W-455예요. 언제쯤 받을 수 있는지 조회해 주세요."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg10",
+      "request": "여름휴가 때 입기 좋은 수영복 좀 추천해 주세요."
+    },
+    {
+      "candidates": [
+        "W-392"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "W-392",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "W-392",
+      "id": "msg11",
+      "request": "W-392 배송 완료됐는지 확인 부탁드립니다."
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;W-318 수영복 배송 어디까지 왔나요?&quot;, &quot;candidates&quot;: [&quot;W-318&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;W-742는 사이즈가 안 맞을 것 같아서 취소하고 싶어요.&quot;, &quot;candidates&quot;: [&quot;W-742&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;래시가드 주문 상태 알려 주세요. 주문번호는 메일에서 못 찾았어요.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;W-165는 제 딸 주문이에요. 제 주문인 W-903 상태를 확인해 주세요.&quot;, &quot;candidates&quot;: [&quot;W-165&quot;, &quot;W-903&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;W-527을 취소하려는 건 아니고, 지금 어떤 상태인지만 알려 주세요.&quot;, &quot;candidates&quot;: [&quot;W-527&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;W-286 받았는데 색이 상품 이미지와 달라서 환불받고 싶습니다.&quot;, &quot;candidates&quot;: [&quot;W-286&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;W-667과 W-071 둘 다 상태를 알려 주세요.&quot;, &quot;candidates&quot;: [&quot;W-667&quot;, &quot;W-071&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;W-834에 선물 포장을 추가할 수 있을까요?&quot;, &quot;candidates&quot;: [&quot;W-834&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;수영모 주문은 W-455예요. 언제쯤 받을 수 있는지 조회해 주세요.&quot;, &quot;candidates&quot;: [&quot;W-455&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;여름휴가 때 입기 좋은 수영복 좀 추천해 주세요.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg11&quot;, &quot;request&quot;: &quot;W-392 배송 완료됐는지 확인 부탁드립니다.&quot;, &quot;candidates&quot;: [&quot;W-392&quot;]}]</inbox>"
+}

@@ -1,0 +1,175 @@
+{
+  "case": {
+    "id": "nat-e2e-modeltrains-ccba0b31917f",
+    "items": [
+      {
+        "candidates": [
+          "L-462"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "L-462",
+          "status": "processing"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "L-462",
+        "id": "msg1",
+        "request": "Has L-462 been dispatched?"
+      },
+      {
+        "candidates": [
+          "L-826"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "L-826",
+          "status": "shipped"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "L-826",
+        "id": "msg2",
+        "request": "Where's my steam locomotive, L-826?"
+      },
+      {
+        "candidates": [
+          "L-205"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "L-205",
+          "status": null
+        },
+        "expected_intent": "refund",
+        "expected_order": "L-205",
+        "id": "msg3",
+        "request": "I'd like a refund for L-205. The track pieces don't connect."
+      },
+      {
+        "candidates": [
+          "L-593",
+          "L-348"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "L-348",
+          "status": "on_hold"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "L-348",
+        "id": "msg4",
+        "request": "L-593 was my brother's order. Please check mine, L-348."
+      },
+      {
+        "candidates": [
+          "L-976"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "L-976",
+          "status": "backordered"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "L-976",
+        "id": "msg5",
+        "request": "Do not cancel L-976. I only need to know where it stands."
+      },
+      {
+        "candidates": [
+          "L-131"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "L-131",
+          "status": null
+        },
+        "expected_intent": "other",
+        "expected_order": "L-131",
+        "id": "msg6",
+        "request": "Could you engrave my name on the display case in L-131?"
+      },
+      {
+        "candidates": [],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg7",
+        "request": "I've lost the order number for the signal kit. Has it been sent?"
+      },
+      {
+        "candidates": [
+          "L-684",
+          "L-059"
+        ],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg8",
+        "request": "Is my caboose L-684 or L-059? I'm not sure. When will it arrive?"
+      },
+      {
+        "candidates": [
+          "L-723"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "L-723",
+          "status": null
+        },
+        "expected_intent": "cancel",
+        "expected_order": "L-723",
+        "id": "msg9",
+        "request": "Cancel L-723 please."
+      },
+      {
+        "candidates": [],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "other",
+        "expected_order": null,
+        "id": "msg10",
+        "request": "What scale should I choose for a small apartment layout?"
+      },
+      {
+        "candidates": [
+          "L-518"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "L-518",
+          "status": "out_for_delivery"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "L-518",
+        "id": "msg11",
+        "request": "What's the current status of L-518?"
+      }
+    ],
+    "profile": "inbox",
+    "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Has L-462 been dispatched?&quot;, &quot;candidates&quot;: [&quot;L-462&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Where&#x27;s my steam locomotive, L-826?&quot;, &quot;candidates&quot;: [&quot;L-826&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;I&#x27;d like a refund for L-205. The track pieces don&#x27;t connect.&quot;, &quot;candidates&quot;: [&quot;L-205&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;L-593 was my brother&#x27;s order. Please check mine, L-348.&quot;, &quot;candidates&quot;: [&quot;L-593&quot;, &quot;L-348&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Do not cancel L-976. I only need to know where it stands.&quot;, &quot;candidates&quot;: [&quot;L-976&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Could you engrave my name on the display case in L-131?&quot;, &quot;candidates&quot;: [&quot;L-131&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;I&#x27;ve lost the order number for the signal kit. Has it been sent?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;Is my caboose L-684 or L-059? I&#x27;m not sure. When will it arrive?&quot;, &quot;candidates&quot;: [&quot;L-684&quot;, &quot;L-059&quot;]}, {&quot;id&quot;: &quot;msg9&quot;, &quot;request&quot;: &quot;Cancel L-723 please.&quot;, &quot;candidates&quot;: [&quot;L-723&quot;]}, {&quot;id&quot;: &quot;msg10&quot;, &quot;request&quot;: &quot;What scale should I choose for a small apartment layout?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg11&quot;, &quot;request&quot;: &quot;What&#x27;s the current status of L-518?&quot;, &quot;candidates&quot;: [&quot;L-518&quot;]}]</inbox>"
+  },
+  "intervention": null,
+  "orders": {
+    "L-059": "processing",
+    "L-131": "delivered",
+    "L-205": "delivered",
+    "L-348": "on_hold",
+    "L-462": "processing",
+    "L-518": "out_for_delivery",
+    "L-593": "out_for_delivery",
+    "L-684": "shipped",
+    "L-723": "on_hold",
+    "L-826": "shipped",
+    "L-976": "backordered"
+  }
+}

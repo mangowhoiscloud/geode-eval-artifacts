@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r6/payloads/nat-e2e-surfboards-691c476815f8.json",
+      "case_sha256": "de90011733ae9837fcbec484ae5e65d2784d88f42e68d26cf90b1c6997696c29",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-verdict-e2e-r6/source.tar.gz",
+      "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+      "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+      "typesafe_key_file": "source-runs/jev-verdict-e2e-r6/private-secrets/jev-t58k4n5u.key",
+      "verification_engine": "jev",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r6/task-bundle/nat-e2e-surfboards-691c476815f8"
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-surfboards-natural-b",
+  "trials_dir": "source-runs/jev-verdict-e2e-r6/u7r0/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

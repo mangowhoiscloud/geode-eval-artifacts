@@ -1,0 +1,6638 @@
+{
+  "admission": {
+    "decision": "supported",
+    "denominator": 80,
+    "name": "intent_panel_admission_admitted_ratio",
+    "numerator": 80,
+    "reasons": [],
+    "unit": "ratio",
+    "value": 1.0
+  },
+  "analysis_provenance": {
+    "admission_prerequisite": {
+      "admitted": 8,
+      "analysis_sha256": "af3cda2ded7a69a8e03227ba42306a7f05bd9e3bf2b65f113087725acb903521",
+      "planned_calls": 8,
+      "results_sha256": "700951a50f67206e332e72cf1de442136422fa02eaba5827cac934b65090adbf",
+      "run_id": "geode-jev-choice-intent-panel-admission-20260927-r2",
+      "run_spec_sha256": "951aaf04f0a68741edd2310b2102611a78d6c12c2fe4b540f8b0ad19521b3204"
+    },
+    "analysis_entry_sha256": "980740fb0436bd7f53b378c73318200d0eda495c90ad0194f776590f84ad2459",
+    "block_receipt_sha256": "e7799833a6d780a1c429a91479c1d4218890157bcae559f84802c85120ac4cdc",
+    "dispatch_summary_sha256": "54351904f88a3d427beae38fb47ba37775c7949e9287f105abcef1100f7a661f",
+    "execution_receipt_sha256": "c2adb3754cda0448fe6691aab550aaaf88cf355df3d215f9b49021a2450639c0",
+    "freeze_sha256": "cdfa955159a3a2a644ea2b3cdb1b21bdce89a8a6662881130736ce109d4a6cf1",
+    "meta_sha256": "916df4dfd79472f534845f04c63abdc325a0e60bc59f3bd5aa0e1cb7ff70b59e",
+    "panel_sha256": "fe37db5c9f6a82227a497be99cbf6df589d568f060832edf0672835cc7c8046a",
+    "privacy_basis": "Pinned driver exit zero after its finally privacy check; not public-release approval",
+    "receipt_check_owner_sha256": "d354360090573a80a2208de90f1a8db6c2c1f731c9192a2e5c4747d3c941bc77",
+    "run_spec_sha256": "92a1772170ef6781107b2ae495f4bfd516a4906bdd48ed1bfdb4961846dc426d",
+    "source_attempts_sha256": "1a9413ccb57fb2d5dede13fbc8461b6fc1f20cf99ae29a9a39cdde2b161524f9",
+    "source_revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace",
+    "strict_jev_sum_tolerance": 1e-05
+  },
+  "contract": "analyze_request-inbox",
+  "decision_rule": "supported: CI lower bound above -0.05; not-supported: CI upper bound below -0.05; mixed otherwise",
+  "engines": {
+    "jev": {
+      "helper_admitted": {
+        "denominator": 40,
+        "numerator": 40,
+        "value": 1.0
+      },
+      "helper_calls": {
+        "admitted": 40
+      },
+      "intent_accuracy": {
+        "denominator": 220,
+        "numerator": 216,
+        "value": 0.9818181818181818
+      },
+      "joint_accuracy": {
+        "denominator": 220,
+        "numerator": 216,
+        "value": 0.9818181818181818
+      },
+      "target_accuracy": {
+        "denominator": 220,
+        "numerator": 220,
+        "value": 1.0
+      }
+    },
+    "llm": {
+      "helper_admitted": {
+        "denominator": 40,
+        "numerator": 40,
+        "value": 1.0
+      },
+      "helper_calls": {
+        "admitted": 40
+      },
+      "intent_accuracy": {
+        "denominator": 220,
+        "numerator": 220,
+        "value": 1.0
+      },
+      "joint_accuracy": {
+        "denominator": 220,
+        "numerator": 220,
+        "value": 1.0
+      },
+      "target_accuracy": {
+        "denominator": 220,
+        "numerator": 220,
+        "value": 1.0
+      }
+    }
+  },
+  "items": [
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "A-596",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-596",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-596",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "D-707",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-707",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-707",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "F-781",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-781",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-781",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "G-818",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-818",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-818",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-028",
+      "family_id": "ip-028",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "H-855",
+      "item_id": "q6",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-855",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-855",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "status_only",
+      "gold_target": "P-189",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-189",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-189",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "other",
+      "gold_target": "Q-226",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-226",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-226",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "cancel",
+      "gold_target": "R-263",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-263",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-263",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "status_only",
+      "gold_target": "S-300",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-300",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-300",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "cancel",
+      "gold_target": "T-337",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-337",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-337",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-026",
+      "family_id": "ip-026",
+      "family_language": "mixed",
+      "gold_intent": "status_only",
+      "gold_target": "V-411",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-411",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-411",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-029",
+      "family_id": "ip-029",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "K-966",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-966",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-966",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-029",
+      "family_id": "ip-029",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "L-103",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-103",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-103",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-029",
+      "family_id": "ip-029",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "M-140",
+      "item_id": "q3",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-140",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-140",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-029",
+      "family_id": "ip-029",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "O-214",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-214",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-214",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-029",
+      "family_id": "ip-029",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "P-251",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-251",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-251",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "J-681",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-681",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-681",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "K-718",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-718",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-718",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "L-755",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-755",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-755",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "O-866",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-866",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-866",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "P-903",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-903",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-903",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-014",
+      "family_id": "ip-014",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "Q-940",
+      "item_id": "q6",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-940",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-940",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-009",
+      "family_id": "ip-009",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "C-360",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-360",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-360",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-009",
+      "family_id": "ip-009",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": false,
+        "joint_correct": false,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-009",
+      "family_id": "ip-009",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "D-397",
+      "item_id": "q3",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-397",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-397",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-009",
+      "family_id": "ip-009",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "E-434",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-434",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-434",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-009",
+      "family_id": "ip-009",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "F-471",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-471",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-471",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "Q-288",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-288",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-288",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "R-325",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-325",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-325",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "S-362",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-362",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-362",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "U-436",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-436",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-436",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "V-473",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-473",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-473",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-030",
+      "family_id": "ip-030",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "W-510",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-510",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-510",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "V-101",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-101",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-101",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "W-138",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-138",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-138",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "X-175",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-175",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-175",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "Y-212",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-212",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-212",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "A-286",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-286",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-286",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-008",
+      "family_id": "ip-008",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "B-323",
+      "item_id": "q6",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-323",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-323",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-025",
+      "family_id": "ip-025",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "H-793",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-793",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-793",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-025",
+      "family_id": "ip-025",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "I-830",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-830",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-830",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-025",
+      "family_id": "ip-025",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "L-941",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-941",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-941",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-025",
+      "family_id": "ip-025",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "M-978",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-978",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-978",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-025",
+      "family_id": "ip-025",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "N-115",
+      "item_id": "q5",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-115",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-115",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "I-582",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-582",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-582",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "K-656",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-656",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-656",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "L-693",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-693",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-693",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "M-730",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-730",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-730",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-010",
+      "family_id": "ip-010",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "P-841",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-841",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-841",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-013",
+      "family_id": "ip-013",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "C-422",
+      "item_id": "q1",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-422",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-422",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-013",
+      "family_id": "ip-013",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "D-459",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-459",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-459",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-013",
+      "family_id": "ip-013",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "E-496",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-496",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-496",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-013",
+      "family_id": "ip-013",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": false,
+        "joint_correct": false,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-013",
+      "family_id": "ip-013",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "H-607",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-607",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-607",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-033",
+      "family_id": "ip-033",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "L-165",
+      "item_id": "q1",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-165",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-165",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-033",
+      "family_id": "ip-033",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "N-239",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-239",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-239",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-033",
+      "family_id": "ip-033",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "O-276",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-276",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-276",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-033",
+      "family_id": "ip-033",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "P-313",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-313",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-313",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-033",
+      "family_id": "ip-033",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Q-350",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-350",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-350",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "N-953",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-953",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-953",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "O-990",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-990",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-990",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Q-164",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-164",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-164",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "R-201",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-201",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-201",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "S-238",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-238",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-238",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-022",
+      "family_id": "ip-022",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "T-275",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-275",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-275",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "F-409",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-409",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-409",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "G-446",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-446",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-446",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "J-557",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-557",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-557",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "L-631",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-631",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-631",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-006",
+      "family_id": "ip-006",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "M-668",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-668",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-668",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-021",
+      "family_id": "ip-021",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "F-657",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-657",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-657",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-021",
+      "family_id": "ip-021",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "H-731",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-731",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-731",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-021",
+      "family_id": "ip-021",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "I-768",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-768",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-768",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-021",
+      "family_id": "ip-021",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "J-805",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-805",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-805",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-021",
+      "family_id": "ip-021",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "M-916",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-916",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-916",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "Z-435",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-435",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-435",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "A-472",
+      "item_id": "q3",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-472",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-472",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "B-509",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-509",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-509",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "C-546",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-546",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-546",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-020",
+      "family_id": "ip-020",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "K-780",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-780",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-780",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "N-891",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-891",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-891",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "O-928",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-928",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-928",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "P-965",
+      "item_id": "q4",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-965",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-965",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "R-139",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-139",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-139",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-018",
+      "family_id": "ip-018",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "S-176",
+      "item_id": "q6",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-176",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-176",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-031",
+      "family_id": "ip-031",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-031",
+      "family_id": "ip-031",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "X-547",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-547",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-547",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-031",
+      "family_id": "ip-031",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "Y-584",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-584",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-584",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-031",
+      "family_id": "ip-031",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "Z-621",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-621",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-621",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-031",
+      "family_id": "ip-031",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "R-387",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-387",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-387",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "T-461",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-461",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-461",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "U-498",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-498",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-498",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "V-535",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-535",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-535",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-034",
+      "family_id": "ip-034",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "W-572",
+      "item_id": "q6",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-572",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-572",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "H-141",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": false,
+        "joint_correct": false,
+        "status": "admitted",
+        "target": "H-141",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-141",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "I-178",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-178",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-178",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "J-215",
+      "item_id": "q3",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-215",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-215",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "L-289",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-289",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-289",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "M-326",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-326",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-326",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-040",
+      "family_id": "ip-040",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "N-363",
+      "item_id": "q6",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-363",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-363",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "F-347",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-347",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-347",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "G-384",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-384",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-384",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "H-421",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-421",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-421",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-002",
+      "family_id": "ip-002",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "K-532",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-532",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-532",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "E-868",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-868",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-868",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "F-905",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-905",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-905",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "I-116",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-116",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-116",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "J-153",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-153",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-153",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "K-190",
+      "item_id": "q5",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-190",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-190",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-036",
+      "family_id": "ip-036",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "M-264",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-264",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-264",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "Z-497",
+      "item_id": "q1",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-497",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-497",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "A-534",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-534",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-534",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "B-571",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-571",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-571",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "E-682",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-682",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-682",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-024",
+      "family_id": "ip-024",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "G-756",
+      "item_id": "q6",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-756",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-756",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-037",
+      "family_id": "ip-037",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "N-301",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-301",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-301",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-037",
+      "family_id": "ip-037",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "O-338",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-338",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-338",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-037",
+      "family_id": "ip-037",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "P-375",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-375",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-375",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-037",
+      "family_id": "ip-037",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "Q-412",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-412",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-412",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-037",
+      "family_id": "ip-037",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "S-486",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-486",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-486",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-015",
+      "family_id": "ip-015",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "S-114",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-114",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-114",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-015",
+      "family_id": "ip-015",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "T-151",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-151",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-151",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-015",
+      "family_id": "ip-015",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "U-188",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-188",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-188",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-015",
+      "family_id": "ip-015",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "V-225",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-225",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-225",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-015",
+      "family_id": "ip-015",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "W-262",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-262",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-262",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-005",
+      "family_id": "ip-005",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "B-261",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-261",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-261",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-005",
+      "family_id": "ip-005",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "C-298",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-298",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-298",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-005",
+      "family_id": "ip-005",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "D-335",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-335",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-335",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-005",
+      "family_id": "ip-005",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-005",
+      "family_id": "ip-005",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "E-372",
+      "item_id": "q5",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-372",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-372",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-039",
+      "family_id": "ip-039",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-039",
+      "family_id": "ip-039",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "A-782",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-782",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-782",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-039",
+      "family_id": "ip-039",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "C-856",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-856",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-856",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-039",
+      "family_id": "ip-039",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "D-893",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-893",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-893",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-039",
+      "family_id": "ip-039",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "E-930",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-930",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-930",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "C-732",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-732",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-732",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "E-806",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-806",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-806",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "F-843",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-843",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-843",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "G-880",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-880",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-880",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "J-991",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-991",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-991",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-032",
+      "family_id": "ip-032",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "K-128",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-128",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "K-128",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "T-523",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-523",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-523",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "U-560",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-560",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-560",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "V-597",
+      "item_id": "q4",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-597",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-597",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "W-634",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-634",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-634",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-038",
+      "family_id": "ip-038",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "X-671",
+      "item_id": "q6",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-671",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-671",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-017",
+      "family_id": "ip-017",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "D-521",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-521",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-521",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-017",
+      "family_id": "ip-017",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-017",
+      "family_id": "ip-017",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "G-632",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-632",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-632",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-017",
+      "family_id": "ip-017",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "I-706",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-706",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-706",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-017",
+      "family_id": "ip-017",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "J-743",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-743",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "J-743",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Y-336",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-336",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-336",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "Z-373",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-373",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-373",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "A-410",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-410",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-410",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "B-447",
+      "item_id": "q5",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-447",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-447",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-016",
+      "family_id": "ip-016",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "C-484",
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-484",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-484",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-007",
+      "family_id": "ip-007",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "N-705",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-705",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-705",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-007",
+      "family_id": "ip-007",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Q-816",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-816",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-816",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-007",
+      "family_id": "ip-007",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "R-853",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-853",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-853",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-007",
+      "family_id": "ip-007",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "S-890",
+      "item_id": "q4",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-890",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-890",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-007",
+      "family_id": "ip-007",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "U-964",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-964",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-964",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-003",
+      "family_id": "ip-003",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "M-606",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-606",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "M-606",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-003",
+      "family_id": "ip-003",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "N-643",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-643",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-643",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-003",
+      "family_id": "ip-003",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "O-680",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-680",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-680",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-003",
+      "family_id": "ip-003",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "R-791",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-791",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-791",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-003",
+      "family_id": "ip-003",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "S-828",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-828",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-828",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-023",
+      "family_id": "ip-023",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "U-312",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-312",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-312",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-023",
+      "family_id": "ip-023",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "W-386",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-386",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-386",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-023",
+      "family_id": "ip-023",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "X-423",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-423",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-423",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-023",
+      "family_id": "ip-023",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Y-460",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-460",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-460",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-023",
+      "family_id": "ip-023",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": false,
+        "joint_correct": false,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "refund",
+      "gold_target": "T-865",
+      "item_id": "q1",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-865",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-865",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "V-939",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-939",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-939",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "W-976",
+      "item_id": "q3",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-976",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-976",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "X-113",
+      "item_id": "q4",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-113",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-113",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Y-150",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-150",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-150",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-004",
+      "family_id": "ip-004",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "Z-187",
+      "item_id": "q6",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-187",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-187",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-001",
+      "family_id": "ip-001",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "Z-125",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-125",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-125",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-001",
+      "family_id": "ip-001",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "A-162",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-162",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-162",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-001",
+      "family_id": "ip-001",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "C-236",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-236",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "C-236",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-001",
+      "family_id": "ip-001",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "D-273",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-273",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-273",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-001",
+      "family_id": "ip-001",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "E-310",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-310",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-310",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "W-200",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-200",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-200",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "X-237",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-237",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-237",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "Z-311",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-311",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-311",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "A-348",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-348",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-348",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "B-385",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-385",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-385",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-012",
+      "family_id": "ip-012",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q6",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-011",
+      "family_id": "ip-011",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "Q-878",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-878",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Q-878",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-011",
+      "family_id": "ip-011",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "R-915",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-915",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "R-915",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-011",
+      "family_id": "ip-011",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "T-989",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-989",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-989",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-011",
+      "family_id": "ip-011",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "U-126",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-126",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-126",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-011",
+      "family_id": "ip-011",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "V-163",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-163",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-163",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-027",
+      "family_id": "ip-027",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "W-448",
+      "item_id": "q1",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-448",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-448",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-027",
+      "family_id": "ip-027",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "X-485",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-485",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-485",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-027",
+      "family_id": "ip-027",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-027",
+      "family_id": "ip-027",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "Y-522",
+      "item_id": "q4",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-522",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-522",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-027",
+      "family_id": "ip-027",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "Z-559",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-559",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Z-559",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-035",
+      "family_id": "ip-035",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "X-609",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-609",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-609",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-035",
+      "family_id": "ip-035",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "Y-646",
+      "item_id": "q2",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-646",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-646",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-035",
+      "family_id": "ip-035",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-035",
+      "family_id": "ip-035",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "B-757",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-757",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-757",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-035",
+      "family_id": "ip-035",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "D-831",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-831",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-831",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-019",
+      "family_id": "ip-019",
+      "family_language": "mixed",
+      "gold_intent": "cancel",
+      "gold_target": "T-213",
+      "item_id": "q1",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-213",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-213",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-019",
+      "family_id": "ip-019",
+      "family_language": "mixed",
+      "gold_intent": "status_only",
+      "gold_target": "U-250",
+      "item_id": "q2",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-250",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-250",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-019",
+      "family_id": "ip-019",
+      "family_language": "mixed",
+      "gold_intent": "cancel",
+      "gold_target": "V-287",
+      "item_id": "q3",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-287",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "V-287",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-019",
+      "family_id": "ip-019",
+      "family_language": "mixed",
+      "gold_intent": "status_only",
+      "gold_target": "X-361",
+      "item_id": "q4",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-361",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-361",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-019",
+      "family_id": "ip-019",
+      "family_language": "mixed",
+      "gold_intent": "other",
+      "gold_target": "Y-398",
+      "item_id": "q5",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-398",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-398",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    }
+  ],
+  "judgment": "intent",
+  "panel_sha256": "fe37db5c9f6a82227a497be99cbf6df589d568f060832edf0672835cc7c8046a",
+  "planned_families": 40,
+  "planned_items": 220,
+  "primary": {
+    "decision": "supported",
+    "denominator": 220,
+    "interval": {
+      "clusters": 40,
+      "confidence": 0.95,
+      "estimate": -0.01818181818181818,
+      "lower": -0.0365296803652968,
+      "measurable_replicates": 2000,
+      "method": "source-cluster percentile bootstrap",
+      "replicates": 2000,
+      "seed": 8533798282943546148,
+      "upper": -0.004464285714285714
+    },
+    "name": "intent_joint_accuracy_delta",
+    "numerator": -4,
+    "reasons": [],
+    "unit": "ratio",
+    "value": -0.01818181818181818
+  },
+  "schema_id": "geode.jev-intent-panel@1",
+  "scoring_rule": "joint: admitted intent equals the label and the admitted target is the labelled source span (none when no single order); a rejected helper output makes its whole family wrong",
+  "strata": {
+    "family_language": {
+      "en": {
+        "items": 122,
+        "jev": {
+          "denominator": 122,
+          "numerator": 118,
+          "value": 0.9672131147540983
+        },
+        "joint_accuracy_delta": -0.03278688524590164,
+        "llm": {
+          "denominator": 122,
+          "numerator": 122,
+          "value": 1.0
+        }
+      },
+      "ko": {
+        "items": 87,
+        "jev": {
+          "denominator": 87,
+          "numerator": 87,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 87,
+          "numerator": 87,
+          "value": 1.0
+        }
+      },
+      "mixed": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      }
+    },
+    "language": {
+      "en": {
+        "items": 128,
+        "jev": {
+          "denominator": 128,
+          "numerator": 124,
+          "value": 0.96875
+        },
+        "joint_accuracy_delta": -0.03125,
+        "llm": {
+          "denominator": 128,
+          "numerator": 128,
+          "value": 1.0
+        }
+      },
+      "ko": {
+        "items": 92,
+        "jev": {
+          "denominator": 92,
+          "numerator": 92,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 92,
+          "numerator": 92,
+          "value": 1.0
+        }
+      }
+    },
+    "n_candidates": {
+      "0": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 9,
+          "value": 0.8181818181818182
+        },
+        "joint_accuracy_delta": -0.18181818181818182,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "1": {
+        "items": 154,
+        "jev": {
+          "denominator": 154,
+          "numerator": 154,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 154,
+          "numerator": 154,
+          "value": 1.0
+        }
+      },
+      "2": {
+        "items": 44,
+        "jev": {
+          "denominator": 44,
+          "numerator": 43,
+          "value": 0.9772727272727273
+        },
+        "joint_accuracy_delta": -0.022727272727272728,
+        "llm": {
+          "denominator": 44,
+          "numerator": 44,
+          "value": 1.0
+        }
+      },
+      "3": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 10,
+          "value": 0.9090909090909091
+        },
+        "joint_accuracy_delta": -0.09090909090909091,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      }
+    },
+    "phenomenon": {
+      "correction_cancel": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "correction_status": {
+        "items": 22,
+        "jev": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        }
+      },
+      "explicit_cancel": {
+        "items": 22,
+        "jev": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        }
+      },
+      "explicit_refund": {
+        "items": 22,
+        "jev": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        }
+      },
+      "explicit_status": {
+        "items": 33,
+        "jev": {
+          "denominator": 33,
+          "numerator": 33,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 33,
+          "numerator": 33,
+          "value": 1.0
+        }
+      },
+      "multi_target_status": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 10,
+          "value": 0.9090909090909091
+        },
+        "joint_accuracy_delta": -0.09090909090909091,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "negated_action": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "no_mention": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 9,
+          "value": 0.8181818181818182
+        },
+        "joint_accuracy_delta": -0.18181818181818182,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "policy_question": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "quoted_old_command": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "third_party_quote": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "three_way_correction": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 10,
+          "value": 0.9090909090909091
+        },
+        "joint_accuracy_delta": -0.09090909090909091,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      },
+      "undecided_action": {
+        "items": 22,
+        "jev": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        }
+      },
+      "unrelated_info": {
+        "items": 11,
+        "jev": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 11,
+          "numerator": 11,
+          "value": 1.0
+        }
+      }
+    },
+    "target": {
+      "none": {
+        "items": 22,
+        "jev": {
+          "denominator": 22,
+          "numerator": 19,
+          "value": 0.8636363636363636
+        },
+        "joint_accuracy_delta": -0.13636363636363635,
+        "llm": {
+          "denominator": 22,
+          "numerator": 22,
+          "value": 1.0
+        }
+      },
+      "order": {
+        "items": 198,
+        "jev": {
+          "denominator": 198,
+          "numerator": 197,
+          "value": 0.9949494949494949
+        },
+        "joint_accuracy_delta": -0.005050505050505051,
+        "llm": {
+          "denominator": 198,
+          "numerator": 198,
+          "value": 1.0
+        }
+      }
+    }
+  }
+}

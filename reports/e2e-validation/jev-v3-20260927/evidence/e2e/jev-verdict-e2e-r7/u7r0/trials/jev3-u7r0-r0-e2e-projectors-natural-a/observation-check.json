@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 10723,
+        "total": 10723
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1158,
+        "total": 1158
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "cd6a24c0b51d26101967474315cb8ef34892f517a3c5b056f05c9f2f96babeba",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "f9012aa88fae20a15cf40dec12dfa48f6ebf81c013bf605628a642f46cbcddd2",
+    "agent/geode-trajectory.json": "9ea0e277a73d9f3a9f72b1bac4a3fd1c32621c20d83d38d17927405396a0f68c",
+    "agent/geode-trajectory.private.json": "7325c4aaa46a95d40f594232da2d8ef0d781bef633f743e41e23997f31dd2d3b",
+    "agent/handoff-result.json": "ad113d36b57cc3c1e6f813fed7fd3366ce1895c0545e9ceb9b054e3fbcb7cc29",
+    "agent/handoff.json": "3a40f80d50a2eaff37719cd94fddc39b546cc84e8d67ab2f4faf1841ab3c9f01",
+    "agent/recording.cast": "726cf4e532a14b86a4ee1a4d1bf78e8c0221c08019828117fd9b6e80d3e61d1a",
+    "agent/recording.receipt.json": "3ceee83532c71ff7bf22dad2af0ceaf072b5dd8dbb1e145578cfe230fd2ac140",
+    "agent/runtime-contract.json": "e0ee381df4cbc91bd96410d0332cf06a3b4e295a91ea1b8dc25163ac4c0d98f8",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "c4a9243a6fb3437e33a52cc2b3ee085269baacf6b30bf1358cf98b1c7933490e",
+    "agent/trajectory.json": "d7ea27676c188283fbf44e42e3ff3bca4bed4a05e4ba76eea16aba66012b4fb0",
+    "agent/verification.json": "67f382c2c58bc2c966ca67b09198ee94ddf9b150c7304037dae6d8a6bf7a095e",
+    "result.json": "f176b4be5a8355f1e7bf8c78714c39edcad1fda85ee76b0e159a6ed65e440dfb"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "d98902a0ba6a11ccaefdf7b28c7b20a5cf9c1a798d630c1ca84832c61a54848b",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "f9012aa88fae20a15cf40dec12dfa48f6ebf81c013bf605628a642f46cbcddd2",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "179c20558be72afa414b19530e5ed3a07fe956b274544c5ac9859a2b7addb3c4",
+  "task_name": "nat-e2e-projectors-72b7c4f044f2",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-projectors-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

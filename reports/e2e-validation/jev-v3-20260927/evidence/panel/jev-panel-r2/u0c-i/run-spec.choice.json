@@ -1,0 +1,93 @@
+{
+  "schema_id": "geode.eval-run-spec@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-choice-intent-panel-admission-20260927-r2",
+  "created_at": "2026-09-26T21:12:08.428358+00:00",
+  "preregistration": {
+    "mode": "prospective",
+    "status": "frozen",
+    "frozen_at": "2026-09-26T21:12:08.428358+00:00",
+    "live_test_approved": true,
+    "operator": "User authorized account switch and remaining U execution 2026-09-27; acct [account-withheld]/pro; prior quota refusal preserved"
+  },
+  "study": {
+    "research_question": "Do intent-panel admission families return admissible Astra and Jev helper answers on the frozen routes?",
+    "research_gap": "Earlier cohorts used label-only verdicts, three authored tasks and serial arms; calibration, reliability and load-matched comparison were not measured.",
+    "hypothesis": "All 8 admission calls are admitted on the frozen routes.",
+    "primary_metric": {
+      "name": "intent_panel_admission_admitted_ratio",
+      "unit": "ratio",
+      "direction": "maximize",
+      "aggregation": "admitted helper answers / 8 planned calls (4 I-panel admission families x Astra, Jev)",
+      "denominator": 8
+    },
+    "decision_rule": "Admission only; excluded from U6a. U6a is frozen only after all 8 calls are admitted.",
+    "invalidation_rule": "Judgment-output invalid (schema, label, non-finite probability, Jev Choice sum beyond strict 1e-5, verdict not an argmax label, refusal, unexpected stop reason) is a valid attempt with a wrong answer: it stays in accuracy denominators and is excluded from probability metrics. Infrastructure invalid (no response, timeout, missing capture or receipt, harness error, quota exhaustion) is validity=invalid, outcome=unknown. Preregistered panel exception: a transport failure without any response is kept as an unselected invalid attempt and replaced exactly once by a child attempt on the same input; a failed replacement stays selected, makes the primary not measurable and stops the unit; replacements above 2% of planned calls stop the unit. Quota exhaustion, harness errors and route violations (non-subscription Astra, model, effort or provider drift, global Jev) are selected invalid attempts and stop the unit. Pin #2 (0028): non-quota HTTP 429 is rate_limited; wait Retry-After (seconds or HTTP-date, default 30 s, clipped to 0-120 s) then exactly one replacement under the same 2% ceiling. retry_wait_s is excluded from measured latency. quota, billing, usage_limit, usage_not_included and plan_limit codes, HTTP 402 and BillingError are quota_exhausted: stop without replacement.",
+    "analysis_plan": "05 v2.2 §3 (definitions, cluster bootstrap 2,000, seed from split manifest), §3.5 reliability (U7 only), §3.6 within-pair latency interpretation, §1.5 design-leak rules. selection-freeze sha256: n/a. Workload order per 05 v2.2 §8.1. Analysis: python -m evals.benchmarks.verdict_panel_runner intent --run-spec U0c-i --run-dir CHOICE_RUN_DIR --panel i-panel.admission.json --meta i-panel-meta.jsonl --record. Admission only: all 8 helper calls must be admitted; no hypothesis promotion. Account transition: [account-withheld]/pro; predecessor geode-jev-choice-intent-panel-admission-20260927 retained; no old-account model results pooled. P-r1 startup failed before calls (empty adapter registry); P-r2 initializes existing built-ins with EMPTY_POLICY_SOURCES before dispatch. i-panel meta sha256:916df4dfd79472f534845f04c63abdc325a0e60bc59f3bd5aa0e1cb7ff70b59e; U0c-i analysis entry sha256:d354360090573a80a2208de90f1a8db6c2c1f731c9192a2e5c4747d3c941bc77"
+  },
+  "reproduction": {
+    "geode": {
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace",
+      "branch": "claude/jev-experiment-build-20260926",
+      "dirty": false
+    },
+    "harness": {
+      "name": "GEODE intent panel harness",
+      "source": "evals/benchmarks/verdict_panel_runner.py intent via InboxDecisionAdapter (0029) at 2f2b494d605c9306dcf1d94a2394e7576e959ace; Run driver sha256 d365dcf0fa4676bcf3cca7723a33ec05cfae4048c45492a15dc426e7a3c161b7",
+      "revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace"
+    },
+    "model": {
+      "provider": "openai",
+      "label": "gpt-6-astra",
+      "route": "subscription",
+      "reasoning": "xhigh"
+    },
+    "environment": {
+      "platform": "macOS 15.3.1 (Darwin 24.3.0), Apple silicon",
+      "architecture": "arm64",
+      "reset_strategy": "InboxDecisionAdapter calls the same E2E analyze_request-inbox helper; one family per call, public items (id, request, candidates) only; labels and order state are never sent, no cross-state input; no Harbor, root loop or tools; panel and E2E never overlap (global execution lock); Codex subscription account fp [account-withheld] is shared with a user-approved video session (external usage unknown).",
+      "initial_state_ref": "i-panel admission sha256:2dc1d7560b24cca5400dcd4d9749e43bf5485f7ad082e9b9dc964af073021bcf"
+    },
+    "execution": {
+      "command_redacted": "panel_driver.py --unit U0c-i --states I_PANEL_JSON; PanelRunner(PanelUnit(judgment=intent, run_ids choice only, mode=paired-latency, max_concurrency=2, pacing_s=1.0, heartbeat_s=5.0, timeouts llm 180 s and jev 60 s)); intent_panel_rows projects public items only; one family per call through InboxDecisionAdapter, A and B simultaneously, Jev Choice sum tolerance strict 1e-5; Codex file auth and the TypeSafe key are loaded at run time and never printed",
+      "ordered_workload_ids": [
+        "ip-a02",
+        "ip-a01",
+        "ip-a04",
+        "ip-a03"
+      ],
+      "workload_ids_sha256": "f2f5166cbe08dd82e5970393244616952f4eb1c25145c6d16a7a59253b28f3f1",
+      "repetitions": 1,
+      "seed_schedule": [
+        "unseeded-provider-inference-repeat-0"
+      ],
+      "max_concurrency": 2,
+      "timeout_seconds": 180,
+      "budget": {
+        "kind": "combined",
+        "limit": 5,
+        "unit": "astra-xhigh-calls; jev-usd-program-cap-1.00"
+      }
+    },
+    "comparison": {
+      "claim_class": "diagnostic",
+      "comparator": "A: Astra typed helper (labels only); B: direct jev-1.13.0 helper; same families",
+      "comparability": "direct",
+      "promotion_authority": "none"
+    }
+  },
+  "artifacts": {
+    "native_results": "choice/intent-results.json",
+    "measurement_results": null,
+    "trajectory": null,
+    "verifier_receipts": null,
+    "outcome_receipts": null,
+    "attempts": "choice/attempts.jsonl",
+    "analysis": "choice/analysis.json",
+    "publication_manifest": null
+  },
+  "privacy": {
+    "classification": "internal",
+    "redaction_boundary": "All prompts, provider receipts, databases, IDs, account fingerprint, auth expiry and host paths are withheld-private pending exact-byte review; key contents are never persisted; actual charges stay unknown."
+  }
+}

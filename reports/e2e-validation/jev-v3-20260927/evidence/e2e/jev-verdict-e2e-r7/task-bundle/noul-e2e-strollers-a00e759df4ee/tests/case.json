@@ -1,0 +1,116 @@
+{
+  "id": "noul-e2e-strollers-a00e759df4ee",
+  "items": [
+    {
+      "candidates": [
+        "Y-615"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Y-615",
+        "status": "shipped"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Y-615",
+      "id": "msg1",
+      "request": "Y-615 유모차 배송 상태 확인해 주세요."
+    },
+    {
+      "candidates": [
+        "Y-238"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "Y-238",
+        "status": null
+      },
+      "expected_intent": "refund",
+      "expected_order": "Y-238",
+      "id": "msg2",
+      "request": "Y-238 받았는데 바퀴가 흔들려요. 환불 부탁드립니다."
+    },
+    {
+      "candidates": [
+        "Y-904"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Y-904",
+        "status": "processing"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Y-904",
+      "id": "msg3",
+      "request": "Y-904는 취소하지 말아 주세요. 언제 오는지만 알고 싶어요."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "needs_clarification",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "status_only",
+      "expected_order": null,
+      "id": "msg4",
+      "request": "유모차 방풍 커버 주문번호를 몰라요. 배송 시작됐나요?"
+    },
+    {
+      "candidates": [
+        "Y-371"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Y-371",
+        "status": "out_for_delivery"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Y-371",
+      "id": "msg5",
+      "request": "Y-371 어디쯤 왔어요?"
+    },
+    {
+      "candidates": [
+        "Y-752"
+      ],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": "Y-752",
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": "Y-752",
+      "id": "msg6",
+      "request": "Y-752 배송지를 친정집으로 바꿔 주세요."
+    },
+    {
+      "candidates": [
+        "Y-186",
+        "Y-543"
+      ],
+      "expected_answer": {
+        "disposition": "answered",
+        "order_id": "Y-543",
+        "status": "delivered"
+      },
+      "expected_intent": "status_only",
+      "expected_order": "Y-543",
+      "id": "msg7",
+      "request": "Y-186 대신 Y-543을 조회해 주세요. 앞의 번호는 잘못 적었어요."
+    },
+    {
+      "candidates": [],
+      "expected_answer": {
+        "disposition": "unsupported",
+        "order_id": null,
+        "status": null
+      },
+      "expected_intent": "other",
+      "expected_order": null,
+      "id": "msg8",
+      "request": "쌍둥이용 유모차도 파나요?"
+    }
+  ],
+  "profile": "inbox",
+  "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;Y-615 유모차 배송 상태 확인해 주세요.&quot;, &quot;candidates&quot;: [&quot;Y-615&quot;]}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;Y-238 받았는데 바퀴가 흔들려요. 환불 부탁드립니다.&quot;, &quot;candidates&quot;: [&quot;Y-238&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;Y-904는 취소하지 말아 주세요. 언제 오는지만 알고 싶어요.&quot;, &quot;candidates&quot;: [&quot;Y-904&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;유모차 방풍 커버 주문번호를 몰라요. 배송 시작됐나요?&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;Y-371 어디쯤 왔어요?&quot;, &quot;candidates&quot;: [&quot;Y-371&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;Y-752 배송지를 친정집으로 바꿔 주세요.&quot;, &quot;candidates&quot;: [&quot;Y-752&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;Y-186 대신 Y-543을 조회해 주세요. 앞의 번호는 잘못 적었어요.&quot;, &quot;candidates&quot;: [&quot;Y-186&quot;, &quot;Y-543&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;쌍둥이용 유모차도 파나요?&quot;, &quot;candidates&quot;: []}]</inbox>"
+}

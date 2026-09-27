@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r8/payloads/noul-e2e-badminton-8ebea726e4a4.json",
+      "case_sha256": "d1b2ab5099e2c47d6ba32a0f32b14d2ec04f0761a8183b080d63e9dab8b78322",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-verdict-e2e-r8/source.tar.gz",
+      "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+      "source_sha256": "40c9b0ab082ab4ec212cd7b1ff38a17a268b4b2445093238568d662855f6447a",
+      "verification_engine": "llm",
+      "verification_primitive": "noul",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r8/task-bundle/noul-e2e-badminton-8ebea726e4a4"
+  },
+  "trial_name": "jev3-u8n-r0-e2e-badminton-c0m1-a",
+  "trials_dir": "source-runs/jev-verdict-e2e-r8/u8n/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 10063,
+        "total": 10063
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1031,
+        "total": 1031
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "6a0ab26f23de397524de974d9940a2a7bec82b77d992dff0f39dac5ebfdce9fb",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "8dc076a8181248145cb23872b9365b9fd3f9dfbed92110bc040d6fde62bbff31",
+    "agent/geode-trajectory.json": "61e1a636b38e4c181c81ddcb5dc6931cf2514806ba0d891c861c2b43c79af2d8",
+    "agent/geode-trajectory.private.json": "482306d625aa46c2b98b458c7cda5e774113487278d9d690fac3c16c56eda61d",
+    "agent/handoff-result.json": "32ea7c0e86a2d6ff019ede3b2cb7249d8fb39fad4a923a6bd926f092c1f90261",
+    "agent/handoff.json": "c9c074338024bd98b68612f0f8219b0921cd68cdf5ca6cad57c81dcbd9de7078",
+    "agent/recording.cast": "8bfc81bb15047f97be7337b9d4ab020fa4e779767589e3cda5a2fb95873abbaf",
+    "agent/recording.receipt.json": "d056d283451fa3ef466218a04699b2dffa199bb7898d1c9df83930ba0633edbc",
+    "agent/runtime-contract.json": "b60f9e1aff028379c6df6519857d598ff5701938e1810afaa4a35f8470ccc96b",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "026c021173a5326bcd829e007d712cb5342112c198211054d0175a37e8239a19",
+    "agent/trajectory.json": "7b2957d2b3b19fa5e14503fd305d65dc0c8e786ac4d7bd93f672b19b27842790",
+    "agent/verification.json": "f50b210f056afea202c5f968647ee08f6ec0635f64ae98d0cd450961b43a893e",
+    "result.json": "12aa7529ac52a94ebc7410add98dae92fabb0d40864c7600d7c3d8d57c5c91ed"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "f9bff2bb5e4b7efdf5d48f33cf7acbfe91ecf7fab1bb0d34f2876d2eb074d7bf",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "8dc076a8181248145cb23872b9365b9fd3f9dfbed92110bc040d6fde62bbff31",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "46e3b8be982815e9c225fd9224401bbc78cec2bb9e5e22f4243c3c8a443933c2",
+  "task_name": "nat-e2e-dumbbells-61faa9e30784",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-dumbbells-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

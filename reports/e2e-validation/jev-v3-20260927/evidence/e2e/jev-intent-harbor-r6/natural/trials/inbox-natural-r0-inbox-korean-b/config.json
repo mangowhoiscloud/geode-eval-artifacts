@@ -1,0 +1,33 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "b",
+      "case_file": "source-runs/jev-intent-harbor-r6/payloads/inbox-korean.json",
+      "case_sha256": "5bb30f6fa813c4b7b8af3ef21e4d34e997c3bc5f93b1dc6d9c1d821c9d40a08f",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-intent-harbor-r6/source.tar.gz",
+      "source_revision": "1236ce96c8c5a79699d98f5c960b7a699c1f228a",
+      "source_sha256": "40c9b0ab082ab4ec212cd7b1ff38a17a268b4b2445093238568d662855f6447a",
+      "typesafe_key_file": "source-runs/jev-intent-harbor-r6/private-secrets/jev-vl7ltaps.key",
+      "verify_mode": "rule_based"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-intent-harbor-r6/task-bundle/inbox-korean"
+  },
+  "trial_name": "inbox-natural-r0-inbox-korean-b",
+  "trials_dir": "source-runs/jev-intent-harbor-r6/natural/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

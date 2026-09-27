@@ -1,0 +1,236 @@
+{
+  "schema": "jev-numeric-boundary-independent-review@1",
+  "reviewed_at_utc": "2026-09-27T07:45:18.761157+00:00",
+  "reviewer": "Codex independent AI reviewer; no model-based external reviewer calls",
+  "worktree": "[local-path-withheld]",
+  "base_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "reviewed_file_sha256": {
+    "core/llm/adapters/typesafe.py": "de6dab0f7e9c4bf2c4593cf95284eae07ec48c19a0e1a8ca43d1ab873edce941",
+    "evals/benchmarks/decision_verification.py": "131cef5e9f789f401989e528859f385723f0ba618e264d079a1be3fa6b93ccd5",
+    "tests/core/llm/adapters/test_typesafe.py": "2a36c55ec02651397d61e3c64d6aefab00f1117c9831d08501571370a9e6f1b4",
+    "tests/evals/benchmarks/test_decision_verification.py": "219b2220c8d0791dc4cd9d000c2322ec0cf4d6ed9084e3139cdc71aadf98592e",
+    "tests/evals/benchmarks/test_score_selection.py": "c68f93ce094ec67ceff57bb820e2d3c736164d7e6018ba659a4c7e85855cf263",
+    "CHANGELOG.md": "7df935577bb83cd2cb16c58e866fc29f0d9358b1c8982bfc4dfa7dc78cc937fc",
+    "site/src/data/geode/changelog.ts": "cb487f3550e33913e5a477c78c37631607e73d3d57d7450b7ecfda51edaf7459"
+  },
+  "conclusion": "clear",
+  "critical": 0,
+  "major": 0,
+  "unresolved_findings": [],
+  "resolved_finding": {
+    "id": "matched-choice-probability-sum-parity",
+    "severity_before_fix": "major",
+    "trigger": {
+      "probabilities": {
+        "supported": 0.6,
+        "contradicted": 0.175,
+        "insufficient_evidence": 0.2
+      },
+      "sum_tolerance": 0.025
+    },
+    "before": "patched SystemOne accepted; unchanged matched LLM rejected invalid decision distribution",
+    "after": "both matched engines use exact rational arithmetic over validated numbers decimal representations; boundary accepted and adjacent excess refused",
+    "implementation": "evals/benchmarks/decision_verification.py:341-344",
+    "regression": "tests/evals/benchmarks/test_decision_verification.py:test_matched_choice_engines_share_decimal_sum_boundary"
+  },
+  "contract_assessment": {
+    "threshold_values_unchanged": true,
+    "inclusive_absolute_tolerance_unchanged": true,
+    "relative_slack_added": false,
+    "rounded_or_normalized_probabilities_added": false,
+    "output_types_or_values_changed": false,
+    "finite_bool_schema_range_guards_preserved": true,
+    "pointwise_argmax_tie_rule_unchanged": true,
+    "noul_threshold_or_rule_changed": false,
+    "llm_score_numeric_contract_changed": false,
+    "sum_and_expected_score_formula_unchanged": true,
+    "scope_caveat": "Exactness applies after existing JSON/strict-float normalization; this does not claim exact preservation of arbitrary wire decimal lexemes. Behavior intentionally changes at binary floating-point tolerance boundaries."
+  },
+  "call_path_review": [
+    {
+      "path": "core/llm/adapters/typesafe.py:131-162",
+      "role": "direct TypeSafe/OpenRouter transport JSON -> normalized numeric response text; unchanged"
+    },
+    {
+      "path": "core/llm/adapters/typesafe.py:203-265",
+      "role": "strict finite typed schema -> exact decimal sum/expectation comparison -> unchanged model_dump"
+    },
+    {
+      "path": "evals/benchmarks/score_selection.py:876-885 -> evals/benchmarks/decision_candidate.py:330-339",
+      "role": "explicit recorded sum/Score tolerances -> common parser"
+    },
+    {
+      "path": "evals/benchmarks/decision_candidate.py:71-77, 367-370",
+      "role": "secondary strict admission also consumes same parser defaults"
+    },
+    {
+      "path": "core/llm/adapters/typesafe.py:268-280 -> core/agent/loop/_reflection.py:542; core/agent/verify.py:890; evals/benchmarks/decision_handoff.py:253",
+      "role": "Choice consumers retain strict default and upstream output/error handling"
+    },
+    {
+      "path": "evals/benchmarks/decision_verification.py:321-347, 369-389, 429+",
+      "role": "matched Astra and Jev Choice share decimal boundary; strict classification same; Noul independent booleans unchanged"
+    }
+  ],
+  "independent_validation": {
+    "adversarial_parser_cases": 42,
+    "adversarial_parser_receipt": {
+      "path": "[local-path-withheld]",
+      "sha256": "d77080e4593162be111ba699f65da1c3fcc24556ec283660a8adb68e9e4d38b9"
+    },
+    "post_fix_direct_matched_cases": 16,
+    "post_fix_matched_results": [
+      {
+        "middle_probability": 0.175,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": false
+          }
+        }
+      },
+      {
+        "middle_probability": 0.225,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": false
+          }
+        }
+      },
+      {
+        "middle_probability": 0.17499999999999996,
+        "outcomes": {
+          "llm": {
+            "accepted": false,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": false,
+            "strict_admitted": false
+          }
+        }
+      },
+      {
+        "middle_probability": 0.22500000000000003,
+        "outcomes": {
+          "llm": {
+            "accepted": false,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": false,
+            "strict_admitted": false
+          }
+        }
+      },
+      {
+        "middle_probability": 0.19999,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": true
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": true
+          }
+        }
+      },
+      {
+        "middle_probability": 0.20001,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": true
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": true
+          }
+        }
+      },
+      {
+        "middle_probability": 0.19998999999999997,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": false
+          }
+        }
+      },
+      {
+        "middle_probability": 0.20001000000000002,
+        "outcomes": {
+          "llm": {
+            "accepted": true,
+            "strict_admitted": false
+          },
+          "jev": {
+            "accepted": true,
+            "strict_admitted": false
+          }
+        }
+      }
+    ],
+    "targeted_pytest": {
+      "nodes": [
+        "tests/core/llm/adapters/test_typesafe.py::test_score_tolerance_includes_decimal_boundary_without_extra_slack",
+        "tests/core/llm/adapters/test_typesafe.py::test_probability_sum_tolerance_includes_decimal_boundary_without_extra_slack",
+        "tests/evals/benchmarks/test_decision_verification.py::test_matched_choice_engines_share_decimal_sum_boundary",
+        "tests/evals/benchmarks/test_score_selection.py::test_jev_score_tolerance_reuses_the_v1_parser_bound_and_is_recorded"
+      ],
+      "exit_code": 0,
+      "passed": 31,
+      "elapsed_s_reported": 0.65,
+      "flags": "-o addopts='' -q -p no:cacheprovider --basetemp [local-path-withheld]",
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "git_diff_check_passed": true,
+    "full_ci_claim": false
+  },
+  "owner_shadow_binding": {
+    "path": "[local-path-withheld]",
+    "sha256": "ebf4f839c43124be320f4e45cd9eb4fa8b871d2a0b5a44dc80e4cd138c00643f",
+    "parser_hash_matches_reviewed_file": true,
+    "scope": "Owner-authored read-only shadow receipt inspected and digest-bound, not independently rerun; original analyses remain unchanged."
+  },
+  "source5_preservation": {
+    "pin": "[local-path-withheld]",
+    "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+    "source_files": {
+      "core/llm/adapters/typesafe.py": {
+        "sha256": "face5d9ae15569843ac71ed15324bee8ae75a85fcb3788e7d91fd19685f5c343",
+        "equals_pinned_git_blob": true
+      },
+      "evals/benchmarks/decision_verification.py": {
+        "sha256": "cd6bfd09cf645fdb68cbaeb446485dd19994cf35abe467cf12639014522e4354",
+        "equals_pinned_git_blob": true
+      }
+    }
+  },
+  "execution_boundaries": {
+    "network_calls": 0,
+    "model_calls": 0,
+    "docker_calls": 0,
+    "original_results_modified": false,
+    "statistics_refit_or_rescoring": false,
+    "source_code_modified_by_reviewer": false,
+    "publication_authorized": false,
+    "merge_or_ci_gate_granted_by_review": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "agent": {
+    "import_path": "evals.platforms.harbor_handoff:GeodeHandoffHarborAgent",
+    "kwargs": {
+      "agent_timeout_sec": 540,
+      "arm": "a0",
+      "case_file": "source-runs/jev-verdict-e2e-r5/payloads/noul-e2e-strollers-bfbc7be4997c.json",
+      "case_sha256": "2bc5ed3e5047c37198720ba39c062666b53607a2f544df37b3252df0fd353089",
+      "effort": "xhigh",
+      "provider": "openai",
+      "source": "subscription",
+      "source_bundle": "source-runs/jev-verdict-e2e-r5/source.tar.gz",
+      "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+      "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+      "typesafe_key_file": "source-runs/jev-verdict-e2e-r5/private-secrets/jev-0x0x_k3b.key",
+      "verification_engine": "jev",
+      "verify_mode": "llm_judge"
+    },
+    "model_name": "gpt-6-astra",
+    "override_setup_timeout_sec": 600.0,
+    "override_timeout_sec": 570.0
+  },
+  "environment": {
+    "import_path": "runner:ObservedDockerEnvironment"
+  },
+  "task": {
+    "path": "source-runs/jev-verdict-e2e-r5/task-bundle/noul-e2e-strollers-bfbc7be4997c"
+  },
+  "trial_name": "jev3-u8c-r0-e2e-strollers-c0m1-b",
+  "trials_dir": "source-runs/jev-verdict-e2e-r5/u8c/trials",
+  "verifier": {
+    "override_timeout_sec": 30.0
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema_id": "geode.eval-analysis@1",
+  "schema_version": 1,
+  "run_id": "geode-jev-score-bestof-admission-20260927-r3",
+  "analyzed_at": "2026-09-26T22:04:50.128726+00:00",
+  "run_spec_sha256": "674c48eac1982d3ac5909c7f15d2fc98042016a7bd4560764403d47112e8b39a",
+  "attempts_sha256": "829b80b6d4bcaf940c203673bd41b66153c42eb4ed43fab9c6c12bf5f02c3588",
+  "selected_attempt_ids": [
+    "geode-jev-score-bestof-admission-20260927-r3-admission-analysis"
+  ],
+  "answer": "U0b selector contracts admitted 18/18 outputs.",
+  "metrics": [
+    {
+      "name": "score_admission_valid_selection_ratio",
+      "value": 1.0,
+      "numerator": 18,
+      "denominator": 18,
+      "unit": "ratio",
+      "source_ref": "results.json",
+      "source_locator": {
+        "value": "/primary_metric/value",
+        "numerator": "/primary_metric/numerator",
+        "denominator": "/primary_metric/denominator"
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "diagnostic-only",
+    "hypothesis_status": "supported",
+    "rationale": "Apply the frozen 18-output admission; no correctness or model superiority claim."
+  },
+  "limitations": [
+    "Controlled test grades remain sealed; oracle-best selection is not measured.",
+    "The single natural pool is only a discriminativeness diagnostic.",
+    "Aggregate attempt timing is analysis-only; original dispatch timing stays in native evidence.",
+    "Admission pass and sufficient Score deviation coverage are separately reported."
+  ],
+  "evidence_refs": [
+    {
+      "kind": "native-result",
+      "path": "results.json",
+      "sha256": "00333252d6ad7f9249d51a38b7a9ac59caa6498f878273d086b573eddd3a9cad"
+    },
+    {
+      "kind": "other",
+      "path": "freeze.json",
+      "sha256": "f30fd811915af2d2ee0787160f94028a0f3b5ad5029e54cefe41490e0337433f"
+    },
+    {
+      "kind": "other",
+      "path": "dispatch-records.jsonl",
+      "sha256": "7856e405f1e5ea732cb481b8ab0079f71b4100f3e965e91b521c43d79f5c4f75"
+    },
+    {
+      "kind": "other",
+      "path": "timings.json",
+      "sha256": "4afb5f89a1d3d4b7b6dd0e14c8f87c7e647992bfd9cead94637c1af3457a487a"
+    },
+    {
+      "kind": "other",
+      "path": "tolerance-check.json",
+      "sha256": "e85e62e713bf16441fd0ae6fc6e212bd774698938baf02d13c55236f148f9916"
+    },
+    {
+      "kind": "other",
+      "path": "private-receipts/geode-jev-score-bestof-admission-20260927-r3-block.json",
+      "sha256": "b4ef8ab496d253c7eef2eff8c06283347d40daf0c67d178746a0c4eb50e715c5"
+    },
+    {
+      "kind": "other",
+      "path": "execution-receipt.json",
+      "sha256": "ecb30ffd89f317a7cc16d1927f9ffde55a638ec24dac22126c17321dc3dfae1f"
+    }
+  ]
+}

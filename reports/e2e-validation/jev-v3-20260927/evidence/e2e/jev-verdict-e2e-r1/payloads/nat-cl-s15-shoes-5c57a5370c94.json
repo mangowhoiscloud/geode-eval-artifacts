@@ -1,0 +1,134 @@
+{
+  "case": {
+    "id": "nat-cl-s15-shoes-5c57a5370c94",
+    "items": [
+      {
+        "candidates": [],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg1",
+        "request": "운동화 주문 어디쯤 왔나요? 주문번호는 모르겠어요."
+      },
+      {
+        "candidates": [
+          "N-326"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "N-326",
+          "status": null
+        },
+        "expected_intent": "other",
+        "expected_order": "N-326",
+        "id": "msg2",
+        "request": "N-326 선물 포장해 주실 수 있나요?"
+      },
+      {
+        "candidates": [
+          "N-338"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "N-338",
+          "status": "out_for_delivery"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "N-338",
+        "id": "msg3",
+        "request": "N-338 주문 지금 어디쯤인가요?"
+      },
+      {
+        "candidates": [
+          "N-215"
+        ],
+        "expected_answer": {
+          "disposition": "unsupported",
+          "order_id": "N-215",
+          "status": null
+        },
+        "expected_intent": "cancel",
+        "expected_order": "N-215",
+        "id": "msg4",
+        "request": "N-215 주문 취소해 주세요."
+      },
+      {
+        "candidates": [
+          "N-782",
+          "N-671"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "N-671",
+          "status": "shipped"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "N-671",
+        "id": "msg5",
+        "request": "N-782 말고 N-671요. 그 주문 상태 알려 주세요."
+      },
+      {
+        "candidates": [
+          "N-893",
+          "N-104"
+        ],
+        "expected_answer": {
+          "disposition": "needs_clarification",
+          "order_id": null,
+          "status": null
+        },
+        "expected_intent": "status_only",
+        "expected_order": null,
+        "id": "msg6",
+        "request": "N-893 아니면 N-104 중 하나예요. 어디쯤 왔나요?"
+      },
+      {
+        "candidates": [
+          "N-449"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "N-449",
+          "status": "on_hold"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "N-449",
+        "id": "msg7",
+        "request": "N-449 현재 상태가 궁금합니다."
+      },
+      {
+        "candidates": [
+          "N-560"
+        ],
+        "expected_answer": {
+          "disposition": "answered",
+          "order_id": "N-560",
+          "status": "backordered"
+        },
+        "expected_intent": "status_only",
+        "expected_order": "N-560",
+        "id": "msg8",
+        "request": "N-560 환불 요청 아니에요. 상태만 확인해 주세요."
+      }
+    ],
+    "profile": "inbox",
+    "request": "Process every inbox item.\n<inbox>[{&quot;id&quot;: &quot;msg1&quot;, &quot;request&quot;: &quot;운동화 주문 어디쯤 왔나요? 주문번호는 모르겠어요.&quot;, &quot;candidates&quot;: []}, {&quot;id&quot;: &quot;msg2&quot;, &quot;request&quot;: &quot;N-326 선물 포장해 주실 수 있나요?&quot;, &quot;candidates&quot;: [&quot;N-326&quot;]}, {&quot;id&quot;: &quot;msg3&quot;, &quot;request&quot;: &quot;N-338 주문 지금 어디쯤인가요?&quot;, &quot;candidates&quot;: [&quot;N-338&quot;]}, {&quot;id&quot;: &quot;msg4&quot;, &quot;request&quot;: &quot;N-215 주문 취소해 주세요.&quot;, &quot;candidates&quot;: [&quot;N-215&quot;]}, {&quot;id&quot;: &quot;msg5&quot;, &quot;request&quot;: &quot;N-782 말고 N-671요. 그 주문 상태 알려 주세요.&quot;, &quot;candidates&quot;: [&quot;N-782&quot;, &quot;N-671&quot;]}, {&quot;id&quot;: &quot;msg6&quot;, &quot;request&quot;: &quot;N-893 아니면 N-104 중 하나예요. 어디쯤 왔나요?&quot;, &quot;candidates&quot;: [&quot;N-893&quot;, &quot;N-104&quot;]}, {&quot;id&quot;: &quot;msg7&quot;, &quot;request&quot;: &quot;N-449 현재 상태가 궁금합니다.&quot;, &quot;candidates&quot;: [&quot;N-449&quot;]}, {&quot;id&quot;: &quot;msg8&quot;, &quot;request&quot;: &quot;N-560 환불 요청 아니에요. 상태만 확인해 주세요.&quot;, &quot;candidates&quot;: [&quot;N-560&quot;]}]</inbox>"
+  },
+  "intervention": null,
+  "orders": {
+    "N-104": "cancelled",
+    "N-215": "backordered",
+    "N-326": "on_hold",
+    "N-338": "out_for_delivery",
+    "N-449": "on_hold",
+    "N-548": "cancelled",
+    "N-560": "backordered",
+    "N-671": "shipped",
+    "N-782": "processing",
+    "N-893": "delivered"
+  }
+}

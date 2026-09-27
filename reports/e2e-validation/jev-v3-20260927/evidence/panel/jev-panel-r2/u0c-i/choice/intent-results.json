@@ -1,0 +1,1015 @@
+{
+  "admission": {
+    "decision": "supported",
+    "denominator": 8,
+    "name": "intent_panel_admission_admitted_ratio",
+    "numerator": 8,
+    "reasons": [],
+    "unit": "ratio",
+    "value": 1.0
+  },
+  "admission_provenance": {
+    "analysis_entry_sha256": "d354360090573a80a2208de90f1a8db6c2c1f731c9192a2e5c4747d3c941bc77",
+    "block_receipt_sha256": "842a6317e7a19affc0dad8bd739d54dc3da087fc72b39ca091c1232b54ef7c92",
+    "dispatch_summary_sha256": "8fb17db9e9dd3ebad672347cee284c084aeb09040a3734d73a296ced65dd7d99",
+    "execution_receipt_sha256": "3bcef3e1809bcb2bb146e7e87d4e80a486af83e96efa243ed07ab367585bb75c",
+    "freeze_sha256": "9957bc20d90b7eccdb63c9b0598c414751ec37f5174911a69a948b0eb451f59c",
+    "meta_sha256": "916df4dfd79472f534845f04c63abdc325a0e60bc59f3bd5aa0e1cb7ff70b59e",
+    "panel_sha256": "2dc1d7560b24cca5400dcd4d9749e43bf5485f7ad082e9b9dc964af073021bcf",
+    "privacy_basis": "Pinned driver exit zero after its finally privacy check; not public-release approval",
+    "run_spec_sha256": "951aaf04f0a68741edd2310b2102611a78d6c12c2fe4b540f8b0ad19521b3204",
+    "source_attempts_sha256": "b0192e4d0715f2ab0c729fca5c2a392b6a09670e182f55913072bb981238a2ce",
+    "source_revision": "2f2b494d605c9306dcf1d94a2394e7576e959ace",
+    "strict_jev_sum_tolerance": 1e-05
+  },
+  "contract": "analyze_request-inbox",
+  "decision_rule": "supported: CI lower bound above -0.05; not-supported: CI upper bound below -0.05; mixed otherwise",
+  "engines": {
+    "jev": {
+      "helper_admitted": {
+        "denominator": 4,
+        "numerator": 4,
+        "value": 1.0
+      },
+      "helper_calls": {
+        "admitted": 4
+      },
+      "intent_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      },
+      "joint_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      },
+      "target_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      }
+    },
+    "llm": {
+      "helper_admitted": {
+        "denominator": 4,
+        "numerator": 4,
+        "value": 1.0
+      },
+      "helper_calls": {
+        "admitted": 4
+      },
+      "intent_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      },
+      "joint_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      },
+      "target_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "value": 1.0
+      }
+    }
+  },
+  "items": [
+    {
+      "cluster_id": "ip-a02",
+      "family_id": "ip-a02",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 0,
+      "phenomenon": "no_mention",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-a02",
+      "family_id": "ip-a02",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "G-322",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-322",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "G-322",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a02",
+      "family_id": "ip-a02",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "H-359",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-359",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "H-359",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "quoted_old_command",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a02",
+      "family_id": "ip-a02",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "I-396",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-396",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "I-396",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "unrelated_info",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a02",
+      "family_id": "ip-a02",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": null,
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": null,
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "multi_target_status",
+      "target": "none"
+    },
+    {
+      "cluster_id": "ip-a01",
+      "family_id": "ip-a01",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "A-100",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-100",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "A-100",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a01",
+      "family_id": "ip-a01",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "B-137",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-137",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "B-137",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a01",
+      "family_id": "ip-a01",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "D-211",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-211",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "D-211",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a01",
+      "family_id": "ip-a01",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "E-248",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-248",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "E-248",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a01",
+      "family_id": "ip-a01",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "F-285",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-285",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "F-285",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "negated_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a04",
+      "family_id": "ip-a04",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "T-803",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-803",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "T-803",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a04",
+      "family_id": "ip-a04",
+      "family_language": "ko",
+      "gold_intent": "refund",
+      "gold_target": "U-840",
+      "item_id": "q2",
+      "jev": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-840",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "refund",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "U-840",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_refund",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a04",
+      "family_id": "ip-a04",
+      "family_language": "ko",
+      "gold_intent": "status_only",
+      "gold_target": "W-914",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-914",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "W-914",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a04",
+      "family_id": "ip-a04",
+      "family_language": "ko",
+      "gold_intent": "other",
+      "gold_target": "X-951",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-951",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "X-951",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "undecided_action",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a04",
+      "family_id": "ip-a04",
+      "family_language": "ko",
+      "gold_intent": "cancel",
+      "gold_target": "Y-988",
+      "item_id": "q5",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-988",
+        "target_correct": true
+      },
+      "language": "ko",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "Y-988",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a03",
+      "family_id": "ip-a03",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "L-507",
+      "item_id": "q1",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-507",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "L-507",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "explicit_status",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a03",
+      "family_id": "ip-a03",
+      "family_language": "en",
+      "gold_intent": "cancel",
+      "gold_target": "N-581",
+      "item_id": "q2",
+      "jev": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-581",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "cancel",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "N-581",
+        "target_correct": true
+      },
+      "n_candidates": 2,
+      "phenomenon": "correction_cancel",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a03",
+      "family_id": "ip-a03",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "O-618",
+      "item_id": "q3",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-618",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "O-618",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "third_party_quote",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a03",
+      "family_id": "ip-a03",
+      "family_language": "en",
+      "gold_intent": "other",
+      "gold_target": "P-655",
+      "item_id": "q4",
+      "jev": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-655",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "other",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "P-655",
+        "target_correct": true
+      },
+      "n_candidates": 1,
+      "phenomenon": "policy_question",
+      "target": "order"
+    },
+    {
+      "cluster_id": "ip-a03",
+      "family_id": "ip-a03",
+      "family_language": "en",
+      "gold_intent": "status_only",
+      "gold_target": "S-766",
+      "item_id": "q5",
+      "jev": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-766",
+        "target_correct": true
+      },
+      "language": "en",
+      "llm": {
+        "intent": "status_only",
+        "intent_correct": true,
+        "joint_correct": true,
+        "status": "admitted",
+        "target": "S-766",
+        "target_correct": true
+      },
+      "n_candidates": 3,
+      "phenomenon": "three_way_correction",
+      "target": "order"
+    }
+  ],
+  "judgment": "intent",
+  "panel_sha256": "2dc1d7560b24cca5400dcd4d9749e43bf5485f7ad082e9b9dc964af073021bcf",
+  "planned_families": 4,
+  "planned_items": 20,
+  "primary": {
+    "decision": "mixed",
+    "denominator": 20,
+    "interval": {
+      "clusters": 4,
+      "confidence": 0.95,
+      "estimate": 0.0,
+      "lower": null,
+      "measurable_replicates": 0,
+      "method": "source-cluster percentile bootstrap",
+      "replicates": 2000,
+      "seed": 13061047245178507781,
+      "upper": null
+    },
+    "name": "intent_joint_accuracy_delta",
+    "numerator": 0,
+    "reasons": [],
+    "unit": "ratio",
+    "value": 0.0
+  },
+  "schema_id": "geode.jev-intent-panel@1",
+  "scoring_rule": "joint: admitted intent equals the label and the admitted target is the labelled source span (none when no single order); a rejected helper output makes its whole family wrong",
+  "strata": {
+    "family_language": {
+      "en": {
+        "items": 10,
+        "jev": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        }
+      },
+      "ko": {
+        "items": 10,
+        "jev": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        }
+      }
+    },
+    "language": {
+      "en": {
+        "items": 10,
+        "jev": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        }
+      },
+      "ko": {
+        "items": 10,
+        "jev": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 10,
+          "numerator": 10,
+          "value": 1.0
+        }
+      }
+    },
+    "n_candidates": {
+      "0": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "1": {
+        "items": 14,
+        "jev": {
+          "denominator": 14,
+          "numerator": 14,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 14,
+          "numerator": 14,
+          "value": 1.0
+        }
+      },
+      "2": {
+        "items": 4,
+        "jev": {
+          "denominator": 4,
+          "numerator": 4,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 4,
+          "numerator": 4,
+          "value": 1.0
+        }
+      },
+      "3": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      }
+    },
+    "phenomenon": {
+      "correction_cancel": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "correction_status": {
+        "items": 2,
+        "jev": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        }
+      },
+      "explicit_cancel": {
+        "items": 2,
+        "jev": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        }
+      },
+      "explicit_refund": {
+        "items": 2,
+        "jev": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        }
+      },
+      "explicit_status": {
+        "items": 3,
+        "jev": {
+          "denominator": 3,
+          "numerator": 3,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 3,
+          "numerator": 3,
+          "value": 1.0
+        }
+      },
+      "multi_target_status": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "negated_action": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "no_mention": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "policy_question": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "quoted_old_command": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "third_party_quote": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "three_way_correction": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      },
+      "undecided_action": {
+        "items": 2,
+        "jev": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        }
+      },
+      "unrelated_info": {
+        "items": 1,
+        "jev": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 1,
+          "numerator": 1,
+          "value": 1.0
+        }
+      }
+    },
+    "target": {
+      "none": {
+        "items": 2,
+        "jev": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 2,
+          "numerator": 2,
+          "value": 1.0
+        }
+      },
+      "order": {
+        "items": 18,
+        "jev": {
+          "denominator": 18,
+          "numerator": 18,
+          "value": 1.0
+        },
+        "joint_accuracy_delta": 0.0,
+        "llm": {
+          "denominator": 18,
+          "numerator": 18,
+          "value": 1.0
+        }
+      }
+    }
+  }
+}

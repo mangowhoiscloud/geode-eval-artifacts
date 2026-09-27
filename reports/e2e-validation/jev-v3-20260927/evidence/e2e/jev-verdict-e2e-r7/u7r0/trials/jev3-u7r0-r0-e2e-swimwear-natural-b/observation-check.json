@@ -1,0 +1,107 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 1,
+        "observed_sum": 0,
+        "total": null
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 1,
+        "observed_sum": 0,
+        "total": null
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 10941,
+        "total": 10941
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1131,
+        "total": 1131
+      }
+    },
+    "observed_efforts": {
+      "none": 1,
+      "xhigh": 3
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": false,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "ea13596b94b78d52d0efa7520dc2845df0adbe8ffe0a64849a6ef46af316fb6b",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "14c311ab5aa55663b4882df13f9e813d179b47a9f10497c962ea4d815d74572e",
+    "agent/geode-trajectory.json": "a18eafd63eee1548417c288c8ac8a2a1278789ba2e0035f8bbd5c1f1c16270e1",
+    "agent/geode-trajectory.private.json": "bee4abe91f439ddd81197f9f8b8db707594f2224be6a8d22fa8d2639174d208b",
+    "agent/handoff-result.json": "fded0b7926f541ee3c0b7641e5bc2898cdf5030d44e472dd7513b68731e03099",
+    "agent/handoff.json": "dff2ef509178d03d919d9c00f4032d072d3e97ad6cd09c243b690571ec5482d6",
+    "agent/recording.cast": "e0ff300f76a101b37c7ada454263b7f51c395c1cfad6e563fce34ba2c9ce4351",
+    "agent/recording.receipt.json": "8215e141784541d2d8a5a1ffc2ba68e488d984ff05b6f7127fd479b414cd5a10",
+    "agent/runtime-contract.json": "5d26c13cf9d7ae9afad66aa79aa6104a9809217bb721f5a4273dfe0d3bce756b",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "8dd2b59c560784eac5a84fbdadddf373061fc76badd549888b45f1cb3d691095",
+    "agent/trajectory.json": "2acb5743b9ddb67c34b7ebbc749a8fd1665ab210e8b0273dba87e4ddafb5d5e8",
+    "agent/verification.json": "e53b44dc2d2fb1580db3664d55834af39e846c05e8692d010286e33c249d3140",
+    "result.json": "af9170536f634fe2cab755842ad68b337706c2bd48309836b193a6b3c7e52b92"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established",
+    "provider counter coverage incomplete"
+  ],
+  "cache_complete": false,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "c67369e7d539cef0c4c33b3d5af7aabff2fb25b06f48ad2845c1f64d5f1f9b6c",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "14c311ab5aa55663b4882df13f9e813d179b47a9f10497c962ea4d815d74572e",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "e8c434efb76d30d862bf52bc36350ee5d0400494b77c89f558e7896331819260",
+  "task_name": "nat-e2e-swimwear-5dd3e712ab99",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-swimwear-natural-b",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}

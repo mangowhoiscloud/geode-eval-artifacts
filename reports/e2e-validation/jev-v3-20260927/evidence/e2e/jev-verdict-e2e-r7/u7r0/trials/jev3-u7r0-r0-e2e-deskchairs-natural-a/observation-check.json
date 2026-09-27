@@ -1,0 +1,105 @@
+{
+  "accounting": {
+    "attempts": 4,
+    "counters": {
+      "cache_write_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "cached_input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 0,
+        "total": 0
+      },
+      "input_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 10738,
+        "total": 10738
+      },
+      "output_tokens": {
+        "missing_attempts": 0,
+        "observed_sum": 1014,
+        "total": 1014
+      }
+    },
+    "observed_efforts": {
+      "xhigh": 4
+    },
+    "purposes": {
+      "agentic_loop": 2,
+      "cognitive_reflection": 1,
+      "turn_verification": 1
+    },
+    "uniform_requested_effort": true,
+    "unknown_metadata_attempts": 0
+  },
+  "artifact_sha256": {
+    "agent/call-events.json": "09162883b95247c384f2501e0fa6619da7036a8fcffdb1be76267eeea452e610",
+    "agent/geode-home/projects/-workspace/sessions/sessions.db": "75de32d5f4acd838493f4229dfc6155f78b0a14eb3c1c621f0d62f3b0ec9a11a",
+    "agent/geode-trajectory.json": "7a8c61c10228fe6a37c4082b60f2683cd02f2adeefef232e7edaf85c19e53a8c",
+    "agent/geode-trajectory.private.json": "e9539c106d6a36ebb966b67dc851ffd2e7e4d52f59ef40f34ee83079bfef406f",
+    "agent/handoff-result.json": "d8df64ac108007427247ed46e00af67499b009baa73c31eec95b2fcafe71be1a",
+    "agent/handoff.json": "5be22ed492ffa7a188473e45417997a57b50752f43dc9d765e5c806b11695919",
+    "agent/recording.cast": "b602c1052408aaa5aec1f5925476370450e86eabe0a51b3b41ddb608df34318e",
+    "agent/recording.receipt.json": "396c5dfad92d2aac983b0626f573cfd2501d3ac6b7226ae9ad7919ec19dcf9a3",
+    "agent/runtime-contract.json": "e044ca7d05ea9e91644c5cc4588932fe4c28f0c5f631da9879b4833c86ca2e53",
+    "agent/runtime-finalized.json": "efd972bab202301d1ff1ea50b48ca8807b0c641d2819b5a3dab9721a4097f482",
+    "agent/runtime-result.json": "f970d29cd11093b68d0d48f12243d4fc0effc7b68ea5d55b47fc76d38ab8fb1a",
+    "agent/trajectory.json": "6c7b3a2fc86bc82080e50d1ebdd45f7a3ceb3712fcd5576c2ddef3891dbb5491",
+    "agent/verification.json": "a02394297489e827bbb1da9f62a7bcfabfb713097fcc37a2e7cd48082641b65b",
+    "result.json": "9d7bf89ffd99c74188c12f9b314021779871d27585b9c6900eaf24b465ae4793"
+  },
+  "blockers": [
+    "whole-runtime producer coverage not established"
+  ],
+  "cache_complete": true,
+  "final_verification": {
+    "effective_verify_mode": "llm_judge",
+    "judge_attempts": 1,
+    "native_passed": true,
+    "native_verdicts": 1,
+    "requested_verify_mode": "llm_judge",
+    "task_passed": true
+  },
+  "full_runtime_expansion_ready": false,
+  "handoff_arm": "a0",
+  "handoff_case_sha256": "9447373ca814413063c4f001d9cb34bd77132c4cfdcc0301cc1ac4833d14481e",
+  "limits": [
+    "physical dispatch coverage is not independently verified",
+    "matched native answers are checked inside the digest-bound private receipt; the durable database does not independently retain their response text",
+    "matched diagnostics reject repeated logical calls and errored attempts; this does not disable runtime retry functionality",
+    "semantic reward does not authorize retries, execution, or publication",
+    "resource/time limits, concurrency, retries and auth need separate frozen preflight",
+    "caller must bind expected trial/task/bundle identities to its frozen plan",
+    "response-reported model identity does not independently verify backend execution"
+  ],
+  "observation_valid": true,
+  "replay_status": "tool-actions-observed",
+  "run_id": "geode-jev-verdict-e2e-natural-r0-20260927-r7",
+  "run_spec_sha256": "e4034ea9e7c64d71f1ab67f83a52cf67c5e1c47b25366ff56fbb7650b5dfbfad",
+  "source_reconciliation": {
+    "database_sha256": "75de32d5f4acd838493f4229dfc6155f78b0a14eb3c1c621f0d62f3b0ec9a11a",
+    "hook_rows": 37,
+    "reconciled": true,
+    "scope": "retained-source-rows-to-export; not physical dispatch coverage",
+    "session_count": 1,
+    "session_rows": 10
+  },
+  "source_revision": "1f6553431932040336cadcddb26893e30ebbb706",
+  "source_sha256": "6786db502ad95647d7cee2fd4f160518dc2b6589a0c13298dc4f72df5e37f913",
+  "task_checksum": "32da52ac7efb7cf4e0a8018515c6813209b4ba1c651961727ee5a56643304b78",
+  "task_name": "nat-e2e-deskchairs-a253e2d82c78",
+  "timing": {
+    "clamped_timestamp_count": 0,
+    "event_count": 5,
+    "step_count": 3,
+    "synthetic_timestamp_count": 0
+  },
+  "trial_name": "jev3-u7r0-r0-e2e-deskchairs-natural-a",
+  "verification": {
+    "completed_judgments": 1,
+    "omitted_native_answers": 0
+  },
+  "whole_runtime_complete": false
+}
