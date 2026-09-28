@@ -89,4 +89,4 @@ The 120-pair U3 latency result supports faster judgment responses: median paired
 - [E8 U8n observed-pair analysis](analyses/u8n-observed-pairs-20260928/README.md), [original E8 U8n result](evidence/e2e/jev-verdict-e2e-r8/u8n/results.json), and [additive E8 disclosure map](evidence/e2e-source-map-e8.json). Candidate diagnostics and native completion remain separate.
 - [Numeric-boundary code validation](study/audits/numeric-tolerance-fix/validation.json), separate from the measured correction.
 
-Publication is still in staging. This report interprets retained analyses and the explicitly labeled correction; it is not an exhaustive semantic revalidation of raw gold.
+The packet was merged into `main` by [PR #46](https://github.com/mangowhoiscloud/geode-eval-artifacts/pull/46) (merge commit `3bcf4044`) and is publicly readable on GitHub. This report interprets retained analyses and the explicitly labeled correction; it is not an exhaustive semantic revalidation of raw gold.

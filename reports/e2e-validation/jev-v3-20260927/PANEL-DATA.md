@@ -4,7 +4,10 @@ This is a retrospective publication of the original panel/Score experiment
 records, including preparations, blocked starts and incomplete predecessors.
 It makes no new model calls and does not replace the frozen native analyses.
 The public files are **projections**, not byte-identical native run bundles.
-Repository publication and remote read-back are performed separately.
+Repository publication and remote read-back are separate from this export.
+The packet was merged into `main` by
+[PR #46](https://github.com/mangowhoiscloud/geode-eval-artifacts/pull/46)
+(merge commit `3bcf4044`) and is publicly readable on GitHub.
 
 Start with [the source/public map](evidence/panel-source-map.json), then the
 run-specific `analysis.json` and its `results.json` references. The map lists
