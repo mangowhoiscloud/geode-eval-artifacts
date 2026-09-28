@@ -127,4 +127,4 @@ U3의 120개 동일 상태 쌍에서 Jev−Astra 판정 지연 차이의 중앙�
 - [E8 U8n 완성쌍 사후 분석](analyses/u8n-observed-pairs-20260928/README.md), [E8 U8n 원 결과](evidence/e2e/jev-verdict-e2e-r8/u8n/results.json), [E8 추가 공개 지도](evidence/e2e-source-map-e8.json): 후보 진단과 최종 전달의 원 점수를 구분한다.
 - [수치 경계 수정 검증](study/audits/numeric-tolerance-fix/validation.json): 코드 회귀와 실제 교정 분석은 별도 근거다.
 
-이 패키지는 아직 공개 준비(staging) 상태다. 이 문서는 보존된 결과와 명시된 사후 교정 분석을 해석하며, 원시 정답의 의미를 전수 재검증한 보고서는 아니다.
+이 패키지는 [PR #46](https://github.com/mangowhoiscloud/geode-eval-artifacts/pull/46)의 병합 커밋 `3bcf4044`로 `main`에 반영되어 GitHub에서 누구나 열람할 수 있다. 이 문서는 보존된 결과와 명시된 사후 교정 분석을 해석하며, 원시 정답의 의미를 전수 재검증한 보고서는 아니다.
