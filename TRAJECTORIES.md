@@ -6,11 +6,15 @@ ordered sequence of state transitions or actions and enough provenance to
 interpret the outcome. Aggregate counts and hashes can prove that a source
 existed without making that source a trajectory.
 
-The current source inventory is published as both a human-readable report and
-a machine-readable manifest:
+The historical 2026-07-21 source inventory is published as both a
+human-readable report and a machine-readable manifest:
 
 - [`reports/trajectory-inventory/2026-07-21.md`](reports/trajectory-inventory/2026-07-21.md)
 - [`reports/trajectory-inventory/2026-07-21.json`](reports/trajectory-inventory/2026-07-21.json)
+
+For newer research packets and their evidence maps, start with the
+[research index](reports/e2e-validation/README.md). A dated inventory is a
+snapshot of its stated scope, not a live census of this repository.
 
 ## Record classes
 
@@ -116,7 +120,7 @@ native source. The trajectory and producer snapshot retain the verified raw
 source digest; the publication record separately reports the public-copy
 digest and the applied redactions.
 
-A current public release directory contains exactly:
+A normalized trajectory release directory contains exactly:
 
 - one or more allowlisted `geode.trajectory@1` JSON files;
 - one `geode.trajectory-release@1` `manifest.json`.
@@ -130,6 +134,15 @@ counts, scope/replay completeness, privacy review, secret-scan counts, and
 source-digest verification. Its directory suffix is the first 12 characters
 of the manifest SHA-256. Remote consumers should pin the full manifest digest,
 not merely trust a self-consistent directory.
+
+Research packets under `reports/e2e-validation/` are separate publication
+units, not implicitly `geode.trajectory-release@1` releases. For example,
+[Jev v3](reports/e2e-validation/jev-v3-20260927/README.md) binds public
+projections, original-source digests, analyses and reproduction inputs with its
+own publication manifest. Its original results and post-hoc analyses remain
+separate. The frozen manifest records preparation; later merge/read-back
+establishes public availability. Verify it at the packet's pinned publication
+commit, since current explanatory Markdown may have been updated.
 
 ## Availability labels
 

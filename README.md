@@ -11,6 +11,26 @@ Published benchmark pages: [Tau2](https://mangowhoiscloud.github.io/geode/docs/b
 stable publication, redaction, admission, and retirement rules live in
 [`TRAJECTORIES.md`](TRAJECTORIES.md).
 
+## Latest research: Jev / Astra (September 2026)
+
+Start with the [Jev v3 study](reports/e2e-validation/jev-v3-20260927/README.md)
+([한국어 해석](reports/e2e-validation/jev-v3-20260927/INTERPRETATION.ko.md)). It
+covers bounded judgment, candidate selection, judgment latency and actual task
+completion as separate measurements. In the E2E comparisons, Astra performs
+execution and repair across the E2E conditions; the judgment policy changes.
+
+Read [scoring](reports/e2e-validation/jev-v3-20260927/SCORING.md) before
+interpreting the results, then use [model-free reproduction](reports/e2e-validation/jev-v3-20260927/REPRODUCE.md)
+and [the unit index](reports/e2e-validation/jev-v3-20260927/units.json) to trace a
+claim to its inputs, denominator and execution lineage. The
+[research index](reports/e2e-validation/README.md) separates the earlier pilot,
+main study, measured parser correction and interrupted-run analysis.
+
+The original public packet is pinned at
+[`3bcf4044`](https://github.com/mangowhoiscloud/geode-eval-artifacts/tree/3bcf4044eb5c2411dd48122d672aef72a83fb30e/reports/e2e-validation/jev-v3-20260927).
+Use that revision for the frozen publication manifest; navigation and status
+prose on `main` can be newer than the files it hashes.
+
 ## Evidence contract
 
 | Layer | What it answers | Authority and limit |
@@ -67,7 +87,7 @@ information asymmetry.
 |---|---|
 | What is the trajectory schema and what may be published? | [`TRAJECTORIES.md`](TRAJECTORIES.md) |
 | What changed when GEODE's final verdict used Astra or Jev? | [Natural rollouts, same-snapshot judgments and controlled repair](reports/e2e-validation/jev-verdict-20260924/README.md) — separate diagnostics, accounting and invalid-attempt lineage |
-| Which Jev judgments supported delegation, and what did verifier defects change? | [Jev v3 main study](reports/e2e-validation/jev-v3-20260927/README.md) — functional results, independent failure lineages and reproduction boundaries |
+| Which Jev judgments supported delegation, and how did candidate correctness differ from delivery? | [Jev v3 main study](reports/e2e-validation/jev-v3-20260927/README.md) — functional results, independent failure lineages and reproduction boundaries |
 | How do example, rollout, trajectory, and reward join? | [`learning-views/v2/DATA-MODEL.md`](learning-views/v2/DATA-MODEL.md) |
 | Does a task-scoped skill help under a frozen paired protocol? | [Repeated analysis](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) · [native results](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/native-results.json) |
 | Can GEODE use GPT-6 Astra through the current subscription route to finish a real container task? | [Astra E2E smoke](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) · [canonical result](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json) |
@@ -78,8 +98,11 @@ information asymmetry.
 
 ## Current focused datasets
 
-| Date | Dataset | Native outcome | What it supports |
+| Date | Dataset | Recorded outcome / analysis | What it supports |
 |---|---|---|---|
+| 2026-09-27–28 | [Jev v3 main study](reports/e2e-validation/jev-v3-20260927/README.md) · [scoring](reports/e2e-validation/jev-v3-20260927/SCORING.md) | Separate functional results; measured post-hoc numeric-parser correction: U4 Jev 59/80 vs Astra 79/80; X2 196/240 vs 226/240 | Bounded judgment and selection evidence. U4 includes selection and test pools; X2 is converted text candidate selection, not browser-task success. No combined model win rate. |
+| 2026-09-28 | [U8n interrupted-run analysis](reports/e2e-validation/jev-v3-20260927/analyses/u8n-observed-pairs-20260928/README.md) | All 11 complete valid pairs from four source tasks: Astra-judged strict recoveries 11/11, Jev-judged 0/11; both arms' last candidates passed the task oracle 11/11 | Descriptive post-hoc evidence of withheld delivery despite correct candidates. Original 36-cell plan stopped at 24 observed (23 valid, one invalid), with 12 unstarted and a null primary result; no confidence interval, non-inferiority or causal claim. |
+| 2026-09-24 | [Jev final-verdict pilot](reports/e2e-validation/jev-verdict-20260924/README.md) | Each arm: natural tasks 6/6; controlled recoveries 2/2; separate same-state judgment diagnostic | Small authored diagnostics with Astra execution/repair and different final judges. Pilot denominators remain separate from v3. |
 | 2026-09-05 | [GPT-6 Astra subscription E2E smoke](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) | Terminal-Bench 2.1 `openssl-selfsigned-cert`: 1/1 reward; 6/6 verifier checks; no retry or fallback | Account-scoped route access and successful GEODE/Harbor execution for one canonical task. It does not estimate suite accuracy, rank, or general availability. |
 | 2026-09-04 | [Terminal-Bench 2.1 result-first evidence film v6](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v6-ko-en.mp4) · [figure provenance](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/figures-v6/provenance.json) | Exact common cells: GEODE 339/429, native Codex 331/429; task-balanced mean delta +1.26 pp, task-cluster bootstrap 95% interval −5.40 to +8.05 pp | A modest observed local edge whose sign varies by task, plus the measurement, failure, and publication workflow. It does not establish general harness superiority; the frozen full-suite primary remains not measurable. |
 | 2026-09-04 | [Terminal-Bench 2.1 task-family explainer v5](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v5-ko-en.mp4) · [Korean slide source](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v5-ko.html) | KO→EN static explainer; slide 05 places eight transparent source-preserving icons beside the corresponding analyst-defined task families | Presentation and procedure evidence only. Benchmark artifacts and scores are unchanged; Harbor result plus verifier receipt remain the score authority. |
@@ -102,7 +125,7 @@ treated as a useful memory or skill effect.
 | Path | Content | Producing harness |
 |---|---|---|
 | `TRAJECTORIES.md` | Stable `geode.trajectory@1` / `geode.trajectory-release@1` publication contract, legacy migration, redaction, validation, and deletion gates | repository policy |
-| `reports/trajectory-inventory/` | Dated human- and machine-readable source inventories; current snapshot: [2026-07-21](reports/trajectory-inventory/2026-07-21.md) | cross-source audit |
+| `reports/trajectory-inventory/` | Dated human- and machine-readable source inventories; historical snapshot: [2026-07-21](reports/trajectory-inventory/2026-07-21.md) | cross-source audit |
 | `mcpmark/results-geode-agentworld/` | MCPMark run directories. Per task: `meta.json` (route, timing, tokens, verifier result), `messages.json` (final answer or empty placeholder), `execution.log` when produced (ordered MCP actions/results), `summary.json` per run | `eval-sys/mcpmark@cd45b7f` + GEODE `BaseMCPAgent` adapter |
 | `mcpmark/logs/`, `mcpmark/logs-cycle/` | Pipeline stdout logs (state duplication, verification, cleanup stages) | same |
 | `tau2/simulations/` | tau2-bench simulation JSONs for GEODE-owned runs (`geode-*`, `crucible-*`, smoke variants) | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`) + GEODE participant adapter |
@@ -112,7 +135,7 @@ treated as a useful memory or skill effect.
 | `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, visible auditor/target/judge transcripts): the SIL fitness measurements. New public copies remove hidden reasoning and local paths. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
 | `sil/petri-dish/` | Sanitized Petri Dish audits of production agent scaffolds; kept separate from model-level GEODE Petri runs because the scaffold owns the prompt and native tool surface | Petri Dish over Inspect SWE / native ACP |
 | `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`) and delta charts (`.png`). The live `eval-logs/` manifest ledger and code-referenced docs stay in the main repo | GEODE `plugins/petri_audit` over Inspect |
-| `reports/e2e-validation/` | Dated end-to-end feature-validation records (formerly `docs/e2e/` in the main repo) | manual validation sessions |
+| [`reports/e2e-validation/`](reports/e2e-validation/README.md) | Jev research packets and dated feature-validation records, with separate specifications, scoring, results, corrections and reproduction limits | Run-specific GEODE evaluation drivers and validation sessions |
 | `trajectories/` | Immutable normalized trajectory releases per the `TRAJECTORIES.md` contract: `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>/` holding `trajectory.json` + `manifest.json` | per-release producing harness (named in each manifest) |
 | `learning-views/` | Versioned `example -> rollout -> trajectory -> reward` projections with digest-bound native evaluator values; v2 keeps retry lineage and zero rewards explicit | GEODE evaluation data projector |
 | `terminalbench/results-smoke/` | Preregistered single-arm Terminal-Bench route and execution smokes with canonical verifier receipts, reviewed trajectories, and explicit non-leaderboard limits | Harbor / GEODE |
@@ -139,7 +162,8 @@ command.
 | Terminal-Bench paired diagnostic | Frozen model, harness, task, budget, arm, and limitation fields in the [run spec](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/run-spec.json) |
 | Skill-attribution repeated diagnostic | Frozen case matrix, skill arms, repetitions, verifier, and non-promotion scope in the [run spec](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/run-spec.json) |
 | Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 records use `gpt-5.6-sol` / subscription / `high`; the 2026-08-02 smoke and 2026-08-03 three-domain full cycle use `gpt-5.4` / subscription / `high` for both the agent and GEODE user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13 also used `gpt-5.4` but remain separately contract-scoped. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
-| Verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks. No GEODE-authored judges |
+| MCPMark / tau2 verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks; these historical benchmark scores do not use GEODE-authored judges |
+| Jev v3 producing stack | Direct TypeSafe Jev 1.13.0 and GPT-6 Astra / Codex subscription / xhigh; runtime completion judgments, fixed panel grades and separate task verifiers have different roles. See [scoring and producer boundaries](reports/e2e-validation/jev-v3-20260927/SCORING.md) and the selected unit's pinned specification |
 
 ## Run naming
 
@@ -483,6 +507,14 @@ github 19/23 as of 2026-07-04).
 
 ## How to read a run
 
+**Jev**, by study unit and execution lineage: start with
+[scoring](reports/e2e-validation/jev-v3-20260927/SCORING.md), then
+[units.json](reports/e2e-validation/jev-v3-20260927/units.json) and the linked
+specification, result and analysis. The [research index](reports/e2e-validation/README.md)
+links public panel/E2E maps and the separate correction and U8n analyses.
+Candidate correctness, runtime acceptance and strict task success are distinct
+outcomes. A missing measurement stays unknown, not zero.
+
 **MCPMark**, per task directory
 (`<exp>/<model>__<service>/run-<k>/<task>/`):
 
@@ -524,19 +556,20 @@ machine-readable outcome.
 
 ## Provenance contract
 
-- Model route for GEODE runs: as named in each run id, provider
-  `openai-codex`, source `subscription` unless the id says PAYG.
-- Run interpretation lives in the GEODE repo, not here:
-  `docs/eval/frontier-agentic-tool-use-benchmark-cases.md` (evidence ledger),
-  `docs/eval/mcpmark-agentworld-comparison-runbook.md` (Agent-World comparison
-  protocol), and the published run-record pages under
-  `/docs/benchmarks/` on the docs site.
-- Directories are append-only snapshots of local
-  `artifacts/eval/harnesses/**` and `artifacts/eval/runs/crucible/**`
-  (mapped to `crucible/runs/**`; the gate provenance files are generated
-  into the GEODE repo's transient `tmp/crucible_*.json` and published here
-  under the durable name `crucible/gate-provenance/`) at publish time. Nothing is rewritten after
-  upload; corrections happen as new run directories.
+- Model, provider, account route and effort are owned by each run's frozen
+  specification and call records. Historical Codex subscription runs and
+  direct Jev calls are different routes; neither recorded usage nor a tariff
+  estimate establishes an actual invoice charge.
+- Run-local interpretations live beside their evidence here. GEODE's
+  [evaluation guide](https://mangowhoiscloud.github.io/geode/docs/verification/evaluation/),
+  evidence ledger and benchmark pages provide broader project context;
+  they do not replace native results or the study's analysis contract.
+- Published evidence snapshots remain addressable at their original commits.
+  Corrections and subsequent runs retain separate records and lineage;
+  current navigation and publication-status prose may be updated. For a
+  frozen manifest, use its publication commit rather than assuming `main`
+  still contains every hashed document verbatim. Jev v3's original packet is
+  [`3bcf4044`](https://github.com/mangowhoiscloud/geode-eval-artifacts/tree/3bcf4044eb5c2411dd48122d672aef72a83fb30e/reports/e2e-validation/jev-v3-20260927).
 - Infrastructure-invalid attempts, including quota exhaustion, stay outside
   the semantic-failure denominator and retain attempt lineage. Historical
   MCPMark scratch-directory deletion was a resume workaround, not permission
@@ -565,6 +598,14 @@ machine-readable outcome.
   included.
 
 ## Reproduction
+
+For Jev v3, use the [reproduction guide](reports/e2e-validation/jev-v3-20260927/REPRODUCE.md)
+for the supported public-input, no-model calculations, and follow the separate
+[numeric correction](reports/e2e-validation/jev-v3-20260927/corrections/numeric-parser-20260928/README.md)
+and [U8n candidate analysis](reports/e2e-validation/jev-v3-20260927/analyses/u8n-observed-pairs-20260928/README.md)
+for those later analyses. Recomputing retained outputs and running a new hosted
+experiment are different activities; private inputs are not reconstructed by
+their hashes.
 
 Start with the selected run's frozen specification and producing revisions;
 installing today's GEODE does not reproduce a historical environment by itself.
