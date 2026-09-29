@@ -144,6 +144,12 @@ separate. The frozen manifest records preparation; later merge/read-back
 establishes public availability. Verify it at the packet's pinned publication
 commit, since current explanatory Markdown may have been updated.
 
+Placement: single-benchmark runs belong under
+`<benchmark>/results-<kind>/<run-id>/` (Terminal-Bench 2.1 uses
+`terminal-bench/`); multi-harness research packets belong under
+`reports/e2e-validation/<study>/`. Paths already bound by a frozen publication
+manifest are not moved; README [Layout](README.md#layout) lists them.
+
 ## Availability labels
 
 - `published`: already present in this public repository and usable within

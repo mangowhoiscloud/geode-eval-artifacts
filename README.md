@@ -90,9 +90,9 @@ information asymmetry.
 | Which Jev judgments supported delegation, and how did candidate correctness differ from delivery? | [Jev v3 main study](reports/e2e-validation/jev-v3-20260927/README.md) — functional results, independent failure lineages and reproduction boundaries |
 | How do example, rollout, trajectory, and reward join? | [`learning-views/v2/DATA-MODEL.md`](learning-views/v2/DATA-MODEL.md) |
 | Does a task-scoped skill help under a frozen paired protocol? | [Repeated analysis](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) · [native results](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/native-results.json) |
-| Can GEODE use GPT-6 Astra through the current subscription route to finish a real container task? | [Astra E2E smoke](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) · [canonical result](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json) |
-| How did GEODE and native Codex compare on the same Terminal-Bench tasks? | [paired analysis](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) · [native results](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/native-results.json) |
-| Can a small native evaluation be consumed as a learning view? | [Terminal-Bench fast-3](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) · [Tau2 three-domain](learning-views/v2/tau2-1.0.1-geode-gpt-5.6-terra-max-3domain-20260825/README.md) |
+| Can GEODE use GPT-6 Astra through the current subscription route to finish a real container task? | [Astra E2E smoke](terminal-bench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) · [canonical result](terminal-bench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/raw/harbor/terminalbench21-astra-high-openssl-smoke-20260904t202725z/result.json) |
+| How did GEODE and native Codex compare on the same Terminal-Bench 2.1 tasks? | [paired analysis](terminal-bench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) · [native results](terminal-bench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/native-results.json) |
+| Can a small native evaluation be consumed as a learning view? | [Terminal-Bench 2.1 fast-3](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) · [Tau2 three-domain](learning-views/v2/tau2-1.0.1-geode-gpt-5.6-terra-max-3domain-20260825/README.md) |
 | Which mutation attempts were rejected or invalidated, and why? | [`crucible/runs/campaigns/`](crucible/runs/campaigns/) · [`crucible/gate-provenance/`](crucible/gate-provenance/) |
 | What visible safety behavior was audited across roles? | [`sil/petri-audits/`](sil/petri-audits/) · [`sil/petri-dish/`](sil/petri-dish/) |
 
@@ -103,16 +103,16 @@ information asymmetry.
 | 2026-09-27–28 | [Jev v3 main study](reports/e2e-validation/jev-v3-20260927/README.md) · [scoring](reports/e2e-validation/jev-v3-20260927/SCORING.md) | Separate functional results; measured post-hoc numeric-parser correction: U4 Jev 59/80 vs Astra 79/80; X2 196/240 vs 226/240 | Bounded judgment and selection evidence. U4 includes selection and test pools; X2 is converted text candidate selection, not browser-task success. No combined model win rate. |
 | 2026-09-28 | [U8n interrupted-run analysis](reports/e2e-validation/jev-v3-20260927/analyses/u8n-observed-pairs-20260928/README.md) | All 11 complete valid pairs from four source tasks: Astra-judged strict recoveries 11/11, Jev-judged 0/11; both arms' last candidates passed the task oracle 11/11 | Descriptive post-hoc evidence of withheld delivery despite correct candidates. Original 36-cell plan stopped at 24 observed (23 valid, one invalid), with 12 unstarted and a null primary result; no confidence interval, non-inferiority or causal claim. |
 | 2026-09-24 | [Jev final-verdict pilot](reports/e2e-validation/jev-verdict-20260924/README.md) | Each arm: natural tasks 6/6; controlled recoveries 2/2; separate same-state judgment diagnostic | Small authored diagnostics with Astra execution/repair and different final judges. Pilot denominators remain separate from v3. |
-| 2026-09-05 | [GPT-6 Astra subscription E2E smoke](terminalbench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) | Terminal-Bench 2.1 `openssl-selfsigned-cert`: 1/1 reward; 6/6 verifier checks; no retry or fallback | Account-scoped route access and successful GEODE/Harbor execution for one canonical task. It does not estimate suite accuracy, rank, or general availability. |
+| 2026-09-05 | [GPT-6 Astra subscription E2E smoke](terminal-bench/results-smoke/terminalbench21-astra-high-openssl-smoke-20260904t202725z/README.md) | Terminal-Bench 2.1 `openssl-selfsigned-cert`: 1/1 reward; 6/6 verifier checks; no retry or fallback | Account-scoped route access and successful GEODE/Harbor execution for one canonical task. It does not estimate suite accuracy, rank, or general availability. |
 | 2026-09-04 | [Terminal-Bench 2.1 result-first evidence film v6](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v6-ko-en.mp4) · [figure provenance](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/figures-v6/provenance.json) | Exact common cells: GEODE 339/429, native Codex 331/429; task-balanced mean delta +1.26 pp, task-cluster bootstrap 95% interval −5.40 to +8.05 pp | A modest observed local edge whose sign varies by task, plus the measurement, failure, and publication workflow. It does not establish general harness superiority; the frozen full-suite primary remains not measurable. |
 | 2026-09-04 | [Terminal-Bench 2.1 task-family explainer v5](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v5-ko-en.mp4) · [Korean slide source](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v5-ko.html) | KO→EN static explainer; slide 05 places eight transparent source-preserving icons beside the corresponding analyst-defined task families | Presentation and procedure evidence only. Benchmark artifacts and scores are unchanged; Harbor result plus verifier receipt remain the score authority. |
 | 2026-09-04 | [Terminal-Bench 2.1 static evidence film v4](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v4-ko-en.mp4) · [editorial and evidence rules](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/video-instruction-and-evaluation-design-v4.md) | KO→EN static engineering explainer; exact common-cell secondary: GEODE 339/429, native Codex 331/429 | Procedure/behavior explainer only. The full-suite primary remains not measurable, and Harbor result plus verifier receipt remain the score authority. |
 | 2026-09-03 | [Terminal-Bench 2.1 evidence workflow v3](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v3-ko-en.mp4) · [instruction and narrative](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/video-instruction-and-evaluation-design-v3.md) | KO→EN contents-first explainer and 890-cell replay coverage | Procedure/behavior explainer only; scoring authority and secondary results are unchanged from the canonical Harbor result and verifier receipts. |
 | 2026-09-03 | [Terminal-Bench 2.1 full-suite evidence](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/analysis.json) · [KO→EN explainer](terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/recording/public/terminalbench21-geode-vs-native-evidence-v2-ko-en.mp4) | Frozen primary not measurable; exact common-cell secondary: GEODE 339/429, native Codex 331/429 | Same-model local paired-runtime evidence across 87 runnable tasks. Two tasks were symmetrically excluded as infrastructure-unavailable; this is not an official leaderboard result. |
-| 2026-08-26 | [Terminal-Bench 2.1 paired diagnostic](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) | GEODE 3/3; native Codex 3/3 | Same-model, same three-task local harness comparison only; 3 of 89 tasks, k=1, no leaderboard authority. |
+| 2026-08-26 | [Terminal-Bench 2.1 paired diagnostic](terminal-bench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/analysis.json) | GEODE 3/3; native Codex 3/3 | Same-model, same three-task local harness comparison only; 3 of 89 tasks, k=1, no leaderboard authority. |
 | 2026-08-26 | [Skill-attribution paired pilot](skill-attribution/results-paired/skill-attribution-sol-max-paired-20260826t113400z/artifacts/analysis.json) | Signed pass delta +4 across 12 pairs (+0.333) | A preregistered synthetic pilot; diagnostic only. |
 | 2026-08-26 | [Skill-attribution repeated diagnostic](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/artifacts/analysis.json) | Signed pass delta 0 across 36 pairs (0.000) | The pilot lift did not reproduce across three repetitions; skill effects must be remeasured, not assumed. |
-| 2026-08-25 | [Terminal-Bench fast-3 learning view](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) | GEODE 3/3 | Three digest-bound example/rollout/reward joins; not an official score. |
+| 2026-08-25 | [Terminal-Bench 2.1 fast-3 learning view](learning-views/v2/terminal-bench-2.1-geode-gpt-5.6-terra-max-fast3-20260825/README.md) | GEODE 3/3 | Three digest-bound example/rollout/reward joins; not an official score. |
 | 2026-08-25 | [Tau2 three-domain learning view](learning-views/v2/tau2-1.0.1-geode-gpt-5.6-terra-max-3domain-20260825/README.md) | Native mean reward 1/3 | Selected valid runs plus explicit infrastructure-invalid retry lineage. |
 
 The skill-attribution pair is intentionally useful as a negative result: an
@@ -121,6 +121,35 @@ must be repeated under the target agent and task conditions before being
 treated as a useful memory or skill effect.
 
 ## Layout
+
+Placement rules, applied to new publications:
+
+- Benchmark runs go to `<benchmark>/results-<kind>/<run-id>/` (for example
+  `terminal-bench/results-paired/`, `mcpmark/results-paired/`,
+  `skill-attribution/results-paired/`). The canonical directory for
+  Terminal-Bench 2.1 is `terminal-bench/`; run ids keep their historical
+  `terminalbench21-*` prefix.
+- Multi-harness research packets (one question answered across several
+  harnesses, with their own specification, scoring and publication manifest)
+  go to `reports/e2e-validation/<study>/`. Jev lives there because each Jev
+  packet is a separate publication unit rather than one benchmark's run; see
+  [TRAJECTORIES.md](TRAJECTORIES.md#storage-authority-and-public-bundle).
+- Normalized trajectory releases go to `trajectories/`, learning projections to
+  `learning-views/v<N>/`.
+
+Frozen exceptions, kept in place because their publication manifests bind the
+current paths byte for byte:
+
+- `terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/`
+  sits directly under `terminal-bench/` (no `results-<kind>/` level); its
+  `publication*.json` manifests record `remote_path` / `destination_prefix`
+  under that path.
+- `reports/e2e-validation/jev-verdict-20260924/` and
+  `reports/e2e-validation/jev-v3-20260927/`: their publication manifests bind
+  the member paths.
+- Older `mcpmark/logs/`, `mcpmark/logs-cycle/`, `mcpmark/results-geode-agentworld/`,
+  `tau2/simulations/`, `crucible/` and `sil/` predate the rule and are indexed
+  by `scripts/stats.py`; they are not renamed.
 
 | Path | Content | Producing harness |
 |---|---|---|
@@ -138,8 +167,9 @@ treated as a useful memory or skill effect.
 | [`reports/e2e-validation/`](reports/e2e-validation/README.md) | Jev research packets and dated feature-validation records, with separate specifications, scoring, results, corrections and reproduction limits | Run-specific GEODE evaluation drivers and validation sessions |
 | `trajectories/` | Immutable normalized trajectory releases per the `TRAJECTORIES.md` contract: `<source>-<scope>-<published-utc>-<manifest-sha256-prefix>/` holding `trajectory.json` + `manifest.json` | per-release producing harness (named in each manifest) |
 | `learning-views/` | Versioned `example -> rollout -> trajectory -> reward` projections with digest-bound native evaluator values; v2 keeps retry lineage and zero rewards explicit | GEODE evaluation data projector |
-| `terminalbench/results-smoke/` | Preregistered single-arm Terminal-Bench route and execution smokes with canonical verifier receipts, reviewed trajectories, and explicit non-leaderboard limits | Harbor / GEODE |
-| `terminalbench/results-paired/` | Preregistered GEODE/native-Codex paired diagnostics with native results, verifier receipts, normalized trajectories, and explicit non-leaderboard limits | Harbor / Terminal-Bench 2.1 |
+| `terminal-bench/results-smoke/` | Preregistered single-arm Terminal-Bench 2.1 route and execution smokes with canonical verifier receipts, reviewed trajectories, and explicit non-leaderboard limits | Harbor / GEODE |
+| `terminal-bench/results-paired/` | Preregistered GEODE/native-Codex paired diagnostics with native results, verifier receipts, normalized trajectories, and explicit non-leaderboard limits | Harbor / Terminal-Bench 2.1 |
+| `terminal-bench/terminalbench21-sol-max-fullsuite-paired-20260827t190300z/` | Full-suite GEODE/native-Codex paired Terminal-Bench 2.1 run with recordings; frozen at this path by its publication manifests | Harbor / Terminal-Bench 2.1 |
 | `skill-attribution/results-paired/` | Paired and repeated skill-on/skill-off diagnostics with attempt, rollout, reward, verifier, privacy, and analysis records | GEODE skill-attribution runner |
 | `reports/checkpoint-retirement/` | Sanitized forensic receipts for retired local checkpoint stores; records integrity, aggregate schema statistics, runtime-consumer evidence, and disposition without publishing opaque state payloads | GEODE runtime-maintenance audit |
 | `crucible/campaign-records/` | The G0-G7 era campaign record (EN/KO, formerly `docs/architecture/crucible.md` in the main repo): telecom v1-v72 measurement narrative, weakness band, S5 trial runs. Superseded as an architecture contract by `docs/architecture/crucible-kernel.md`; preserved here as the historical run record | GEODE Crucible harness over tau2-bench |
@@ -159,7 +189,7 @@ command.
 | GEODE entry point | `plugins/benchmark_harness/run_mcpmark.py` in the GEODE repo: registers the `geode` agent (a `BaseMCPAgent` wrapping GEODE's `AgenticLoop`) before `pipeline.main()` |
 | MCP servers (MCPMark) | GitHub: `ghcr.io/github/github-mcp-server:v0.15.0` (Docker stdio) · Postgres: `postgres-mcp==0.3.0` via pipx · Playwright: `@playwright/mcp@0.0.68` (headless chromium) · Notion: `@notionhq/notion-mcp-server` (stdio) · Filesystem: upstream MCPMark default |
 | tau2 harness | `sierra-research/tau2-bench@1901a30` (`tau2==1.0.0`), GEODE agent + GEODE user-simulator adapters; native `user_simulator` comparator runs labeled separately |
-| Terminal-Bench paired diagnostic | Frozen model, harness, task, budget, arm, and limitation fields in the [run spec](terminalbench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/run-spec.json) |
+| Terminal-Bench 2.1 paired diagnostic | Frozen model, harness, task, budget, arm, and limitation fields in the [run spec](terminal-bench/results-paired/terminalbench21-sol-max-paired-main-20260826t092455z/run-spec.json) |
 | Skill-attribution repeated diagnostic | Frozen case matrix, skill arms, repetitions, verifier, and non-promotion scope in the [run spec](skill-attribution/results-paired/skill-attribution-sol-max-paired-r3-20260826t130119z/run-spec.json) |
 | Model routes | Primary historical route: `gpt-5.5`, provider `openai-codex`, source `subscription` (effort in run id: `xhigh`/`high`). The 2026-07-31 records use `gpt-5.6-sol` / subscription / `high`; the 2026-08-02 smoke and 2026-08-03 three-domain full cycle use `gpt-5.4` / subscription / `high` for both the agent and GEODE user. Comparators: `gpt-5.2` (subscription and PAYG, labeled in run id). Crucible train campaigns of 2026-07-11 through 2026-07-13 also used `gpt-5.4` but remain separately contract-scoped. Decoding parameters are not controllable on the subscription route; treat cross-paper comparisons as directional |
 | MCPMark / tau2 verifiers | Upstream per-task verify scripts (MCPMark) and tau2 reward/DB-state checks; these historical benchmark scores do not use GEODE-authored judges |
