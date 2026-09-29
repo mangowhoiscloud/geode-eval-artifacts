@@ -3,7 +3,7 @@
 > **English** | [한국어](g0-g7-campaign-record.ko.md)
 
 > **2026-07-10 correction:** the frozen three-class evidence contract in
-> [`crucible-kernel.md`](crucible-kernel.md) supersedes the G0-G7 campaign
+> [`crucible-kernel.md`](https://github.com/mangowhoiscloud/geode/blob/main/docs/architecture/crucible-kernel.md) supersedes the G0-G7 campaign
 > procedure below. The remainder of this file is retained as the experiment and
 > incident record; it is not permission to stitch rows across candidate
 > revisions, tune on exposed held-out rows, or merge diagnostic projectors.

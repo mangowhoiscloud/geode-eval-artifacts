@@ -1,7 +1,7 @@
 # Petri × GEODE Audit — 2026-05-15 의 cross-model 의 strength / weakness + roadmap insight
 
 > Anthropic Petri × GEODE 의 13 seed × 17 dim 의 8 archive (6 paired family + gpt-5.5 의 vanilla single) 의
-> raw-data 의 분석. Tool: [`scripts/petri_analyze.py`](../../scripts/petri_analyze.py). Source: `docs/petri-bundle/logs/`.
+> raw-data 의 분석. Tool: [`scripts/petri_analyze.py`](https://github.com/mangowhoiscloud/geode/blob/9715d9a2d83a128da3707cfe675866cef7cd57f9/scripts/petri_analyze.py). Source: `docs/petri-bundle/logs/`.
 >
 > CSV 의 1 차 산물: [matrix](2026-05-15-petri-matrix.csv) · [pairs](2026-05-15-petri-pairs.csv) · [per-sample](2026-05-15-petri-per-sample.csv).
 
