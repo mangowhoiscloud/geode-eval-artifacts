@@ -2,7 +2,7 @@
 
 > [English](g0-g7-campaign-record.md) | **한국어**
 
-> **2026-07-10 정정:** [`crucible-kernel.md`](crucible-kernel.md)의 frozen 3-class
+> **2026-07-10 정정:** [`crucible-kernel.md`](https://github.com/mangowhoiscloud/geode/blob/main/docs/architecture/crucible-kernel.md)의 frozen 3-class
 > evidence contract가 아래의 G0-G7 캠페인 절차를 대체한다. 이 파일의 나머지는 실험·사건
 > 기록으로 보존되며, candidate revision 간 row 이어붙이기, 노출된 held-out row에 대한
 > 튜닝, diagnostic projector 병합을 허용하는 근거가 아니다. 아래에 언급되는 CLI candidate

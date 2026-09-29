@@ -148,8 +148,10 @@ current paths byte for byte:
   `reports/e2e-validation/jev-v3-20260927/`: their publication manifests bind
   the member paths.
 - Older `mcpmark/logs/`, `mcpmark/logs-cycle/`, `mcpmark/results-geode-agentworld/`,
-  `tau2/simulations/`, `crucible/` and `sil/` predate the rule and are indexed
-  by `scripts/stats.py`; they are not renamed.
+  `tau2/simulations/`, `crucible/` and `sil/` predate the rule and keep their
+  paths. `scripts/stats.py` aggregates `mcpmark/results-geode-agentworld/`,
+  `tau2/simulations/`, `crucible/runs/campaigns/` and `sil/petri-audits/` by
+  these paths, and the historical sections below cite them by path.
 
 | Path | Content | Producing harness |
 |---|---|---|
