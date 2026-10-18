@@ -1,0 +1,51 @@
+{
+  "schema_id": "geode.eval-task-manifest@1",
+  "run_id": "terminalbench21-sol-max-reflexion-ratchet-r3-20260913",
+  "dataset": {
+    "name": "terminal-bench/terminal-bench-2-1",
+    "digest": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "task_count": 89
+  },
+  "tasks": [
+    {
+      "id": "terminal-bench/gcode-to-text",
+      "digest": "sha256:7dd2af04820e71ecaba96bc493cbffa16317e96816c6c8003385c034adf6c23b",
+      "selection_hash": "204c2082caa7ca5e38f70549f1e07a50f086f9e5b39fde45dedb7f090163ae5c",
+      "task_config_sha256": "3aa7a504fe5b3c6eaab16881b0e6dbbe8ac6d4f59084fa49b1e98ad9c71ea00c",
+      "agent_timeout_sec": 900,
+      "verifier_timeout_sec": 900,
+      "environment_build_timeout_sec": 600,
+      "resources": {
+        "cpus": 1,
+        "memory_mb": 2048,
+        "storage_mb": 10240,
+        "gpus": 0
+      },
+      "allow_internet": true,
+      "docker_image": "alexgshaw/gcode-to-text:20251031"
+    }
+  ],
+  "repetitions_per_task_per_arm": 5,
+  "selection": {
+    "method": "prospective development ratchet; not held-out",
+    "exclusions": [],
+    "frozen_before_execution": true
+  },
+  "canary": {
+    "enabled": false,
+    "selected_for_analysis": false,
+    "agent_seconds": 0,
+    "fixture_purpose": "No-model install/oracle preflight only"
+  },
+  "resources": {
+    "agent_seconds": 900,
+    "verifier_seconds": 900,
+    "build_seconds": 600,
+    "cpus": 1,
+    "memory_mb": 2048,
+    "storage_mb": 10240,
+    "gpus": 0
+  },
+  "concurrency": 1,
+  "automatic_retries": 0
+}

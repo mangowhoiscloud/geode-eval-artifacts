@@ -1,0 +1,154 @@
+{
+    "id": "b011fdea-b8a7-4ceb-9ec2-cf693dcafc43",
+    "task_name": "terminal-bench/gcode-to-text",
+    "trial_name": "gcode-to-text__un6A9Y6",
+    "trial_uri": "redacted://harbor-trial/gcode-to-text__un6A9Y6",
+    "task_id": {
+        "path": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/dataset-freeze/gcode-to-text"
+    },
+    "source": null,
+    "task_checksum": "0ce9e2f5430d6cad157437ae0fc23f581c3f6ce3ee3eb9233484a554011557ed",
+    "config": {
+        "task": {
+            "path": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/dataset-freeze/gcode-to-text",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "gcode-to-text__un6A9Y6",
+        "trials_dir": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/raw/live/candidate-r4",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "evals.platforms.harbor_runtime:GeodeRuntimeHarborAgent",
+            "import_path": null,
+            "model_name": "gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "source_bundle": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/preflight/5d5a0e424699d3c114aa511a113db6b7231cfb400c064c6e6efed3892948b66d.tar.gz",
+                "source_sha256": "5d5a0e424699d3c114aa511a113db6b7231cfb400c064c6e6efed3892948b66d",
+                "source_revision": "815f75950af580b42cbd52dcc78b0b3ea0017a8f",
+                "provider": "openai",
+                "source": "subscription",
+                "effort": "max",
+                "verify_mode": "reflexion",
+                "agent_timeout_sec": 900
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "0ebcbbe8-bb59-4420-b217-8f8928220a8f",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "geode-runtime",
+        "version": "815f75950af580b42cbd52dcc78b0b3ea0017a8f",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "geode_session_id": "s-99bce4534975",
+            "termination_reason": "natural",
+            "error_type": null,
+            "source_revision": "815f75950af580b42cbd52dcc78b0b3ea0017a8f",
+            "verify_mode": "reflexion",
+            "usage": {
+                "scope": "recorded-agentic-loop-attempts-only",
+                "whole_runtime_complete": false,
+                "limitation": "reflection, judging, hosted search and text calls are not fully observed",
+                "call_events": 17,
+                "started_events": 17,
+                "usage_events": 17,
+                "attempt_pairing_complete": true,
+                "input_tokens": 436121,
+                "input_tokens_observed_sum": 436121,
+                "input_tokens_missing_events": 0,
+                "output_tokens": 11123,
+                "output_tokens_observed_sum": 11123,
+                "output_tokens_missing_events": 0,
+                "cached_input_tokens": 248448,
+                "cached_input_tokens_observed_sum": 248448,
+                "cached_input_tokens_missing_events": 0,
+                "cache_write_tokens": 0,
+                "cache_write_tokens_observed_sum": 0,
+                "cache_write_tokens_missing_events": 0
+            },
+            "score_authority": "Harbor task verifier, not this runtime receipt"
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-09-13T10:30:51.134133Z",
+    "finished_at": "2026-09-13T10:39:44.307621Z",
+    "environment_setup": {
+        "started_at": "2026-09-13T10:30:51.157344Z",
+        "finished_at": "2026-09-13T10:30:52.298064Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-13T10:30:52.298163Z",
+        "finished_at": "2026-09-13T10:32:17.755657Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-13T10:32:17.756129Z",
+        "finished_at": "2026-09-13T10:39:31.565280Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-13T10:39:32.365801Z",
+        "finished_at": "2026-09-13T10:39:42.107307Z"
+    },
+    "step_results": null
+}
