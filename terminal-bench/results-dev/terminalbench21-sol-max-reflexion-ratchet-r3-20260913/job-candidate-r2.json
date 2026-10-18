@@ -1,0 +1,30 @@
+{
+  "job_name": "candidate-r2",
+  "jobs_dir": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/raw/live",
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "retry": {
+    "max_retries": 0
+  },
+  "agents": [
+    {
+      "name": "evals.platforms.harbor_runtime:GeodeRuntimeHarborAgent",
+      "model_name": "gpt-5.6-sol",
+      "kwargs": {
+        "source_bundle": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/preflight/5d5a0e424699d3c114aa511a113db6b7231cfb400c064c6e6efed3892948b66d.tar.gz",
+        "source_sha256": "5d5a0e424699d3c114aa511a113db6b7231cfb400c064c6e6efed3892948b66d",
+        "source_revision": "815f75950af580b42cbd52dcc78b0b3ea0017a8f",
+        "provider": "openai",
+        "source": "subscription",
+        "effort": "max",
+        "verify_mode": "reflexion",
+        "agent_timeout_sec": 900
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "path": "artifacts/eval/runs/terminalbench21-sol-max-reflexion-ratchet-r3-20260913/dataset-freeze/gcode-to-text"
+    }
+  ]
+}

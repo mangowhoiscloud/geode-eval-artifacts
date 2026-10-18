@@ -1,0 +1,71 @@
+{
+  "source_revision": "815f75950af580b42cbd52dcc78b0b3ea0017a8f",
+  "passed": true,
+  "model_calls": 0,
+  "scope": "Listed source-bound local checks only; full rerun and required PR CI are separate gates.",
+  "checks": {
+    "lint-format": {
+      "command": "uv run --offline ruff check core/ evals/ evolve/ tests/ scripts/ && uv run --offline ruff format --check core/ evals/ evolve/ tests/ scripts/",
+      "exit_code": 0,
+      "log_path": "preflight/lint-format-final.log"
+    },
+    "type-check": {
+      "command": "uv run --offline mypy core/ evals/ evolve/",
+      "exit_code": 0,
+      "log_path": "preflight/type-check.log"
+    },
+    "targeted-tests": {
+      "command": "uv run --offline pytest tests/core/agent/test_model_split.py tests/core/agent/test_verification_budget.py tests/core/agent/test_subagent_agent_dispatch.py tests/core/agent/test_subagent_roles.py tests/core/agent/test_subagent_cap_and_worker_wiring.py tests/core/agent/test_subagent_lineage_subprocess.py tests/core/agent/test_worker.py tests/core/agent/test_m2_agent_contract_slot.py tests/core/llm/adapters/test_codex_oauth_backend_invariants.py tests/core/llm/test_model_failover.py tests/core/llm/test_h11_constant_reload.py tests/core/hooks/test_hook_persistence.py tests/core/hooks/test_activity_mirror.py tests/core/observability/test_activity_schema.py tests/core/skills/test_agents_ext.py tests/evals/seed_generation/test_json_schemas_wire.py tests/evals/seed_generation/test_orchestrator.py tests/core/llm/adapters/test_registry.py -m 'not live' -o addopts='' -q",
+      "exit_code": 0,
+      "log_path": "preflight/targeted-tests.log"
+    },
+    "schema-pin-regression": {
+      "command": "uv run --offline pytest tests/core/hooks/test_hook_taxonomy.py -q -o addopts=''",
+      "exit_code": 0,
+      "log_path": "preflight/schema-pin-regression.log"
+    },
+    "import-contracts": {
+      "command": "uv run --offline lint-imports",
+      "exit_code": 0,
+      "log_path": "preflight/import-contracts.log"
+    },
+    "site-build": {
+      "command": "npm --prefix site run lint && npm --prefix site run build",
+      "exit_code": 0,
+      "log_path": "preflight/site-build.log"
+    },
+    "fast-gates": {
+      "command": "bash scripts/preflight.sh --fast",
+      "exit_code": 0,
+      "log_path": "preflight/fast-gates.log"
+    }
+  },
+  "evidence_hashes": {
+    "preflight/lint-format-final.log": "0096ce625073b1fa9c1d7b55fe0d2c7c4f17709f4aa28994216c93921dc2a884",
+    "preflight/type-check.log": "ffc005dfacf8b43100398df8d55c2b1bcbecffef38ef376e33250a5acbbc8f5b",
+    "preflight/targeted-tests.log": "c0c3fb53dc98387804deb0540a67c344ba244fbb05e4f1f44e830ae91e8c3622",
+    "preflight/schema-pin-regression.log": "8dd47cf53d9b9da3df708afeadc07c0848f60831fda46cdc9539d92fd43b188d",
+    "preflight/import-contracts.log": "3c482229b237b932d67f38be929335ee695bd72554d89c2e1f31f1a6bdbc61e2",
+    "preflight/site-build.log": "dc3bf9b007a7026ff3bde0ca68490fc7eb80918ac6b15dfb413f333042748566",
+    "preflight/fast-gates.log": "f4d64b1be04d95244aff6065970c4c9a0aad58ae4cbf19bb7a0b500c2855ffa5",
+    "preflight/full-tests.log": "1d6e9770b461458fe24f7eb587287c99797e85c99f2c3dbc057de9bd9a9e7082"
+  },
+  "prior_full_suite": {
+    "command": "uv run --offline pytest tests/ -m 'not live' -q",
+    "exit_code": 1,
+    "log_path": "preflight/full-tests.log",
+    "failure": "Only test_activity_and_hook_store_schema_versions_are_pinned expected old activity version 4; production intentionally emits v5. Test pin updated, 22 taxonomy checks passed.",
+    "resolution": "Test expectation correction only; no production code changed after this full run."
+  },
+  "full_rerun": {
+    "status": "running",
+    "command": "uv run --offline pytest tests/ -m 'not live' -q --ff",
+    "log_path": "preflight/full-tests-final.log",
+    "required_before_model_calls": true
+  },
+  "notes": [
+    "528 targeted tests passed; 22 taxonomy tests passed after updating the schema pin.",
+    "Site lint has existing warnings; build and docs export completed. Fast gate deliberately skips tests and site; separate results above cover those, except the full rerun is still running.",
+    "No CI result or G-code success is asserted."
+  ]
+}
