@@ -22,6 +22,12 @@ def mcpmark() -> None:
         t["output_tokens"] += tu.get("output_tokens") or 0
         t["agent_seconds"] += d.get("agent_execution_time") or 0
     print("mcpmark:", t)
+    logs = glob.glob("mcpmark/results-geode-agentworld/*/*/run-*/*/execution.log")
+    records = sum(len(json.load(open(f))) for f in logs)
+    print("mcpmark execution.log files:", len(logs), "records:", records)
+    answers = [json.load(open(f)) for f in glob.glob("mcpmark/results-geode-agentworld/*/*/run-*/*/messages.json")]
+    print("mcpmark messages.json final-answer strings:", sum(isinstance(a, str) for a in answers),
+          "empty lists:", sum(a == [] for a in answers))
 
 
 def tau2() -> None:
