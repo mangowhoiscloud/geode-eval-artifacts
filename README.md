@@ -164,7 +164,7 @@ current paths byte for byte:
 | `crucible/runs/campaigns/` | Crucible (self-improving-loop measurement) campaign run state: per-attempt state, evaluations, gate outcomes | GEODE Crucible harness over tau2-bench |
 | `crucible/runs/{row-cache,trajectory-snapshots}/` | Row cache and trajectory snapshots backing the campaign store (the local `gates/` store is currently empty; gate outcomes live inside each campaign's attempt state) | same |
 | `crucible/gate-provenance/` | Gate provenance ledger: the frozen failure manifest, `cheaploop_v1` gate calibration, G1 trace-replay report, G2/G3a task sets | same |
-| `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, visible auditor/target/judge transcripts): the SIL fitness measurements. New public copies remove hidden reasoning and local paths. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
+| `sil/petri-audits/` | Petri adversarial safety-audit logs (Inspect `.eval` format, visible auditor/target/judge transcripts): the SIL fitness measurements. New public copies remove hidden reasoning and local paths; the 408 May–June logs published earlier had the local home directory replaced with `/Users/REDACTED` in every archive member on 2026-11-26. The [self-improving hub](https://mangowhoiscloud.github.io/geode/self-improving/) serves a curated 29-log subset with rendered views; this is the full set | GEODE `plugins/petri_audit` over Inspect |
 | `sil/petri-dish/` | Sanitized Petri Dish audits of production agent scaffolds; kept separate from model-level GEODE Petri runs because the scaffold owns the prompt and native tool surface | Petri Dish over Inspect SWE / native ACP |
 | `sil/audit-reports/` | Dated human-written analysis reports over the Petri audit runs (2026-05-10 onward, formerly `docs/audits/` in the main repo), plus their score matrices (`.csv`/`.json`) and delta charts (`.png`). The live `eval-logs/` manifest ledger and code-referenced docs stay in the main repo | GEODE `plugins/petri_audit` over Inspect |
 | [`reports/e2e-validation/`](reports/e2e-validation/README.md) | Jev research packets and dated feature-validation records, with separate specifications, scoring, results, corrections and reproduction limits | Run-specific GEODE evaluation drivers and validation sessions |
@@ -557,12 +557,12 @@ outcomes. A missing measurement stays unknown, not zero.
   `agent_execution_time` / `task_execution_time`, `turn_count` (GEODE rounds),
   `token_usage` (input/output/cache-read; `cost_usd` is a LiteLLM-style
   estimate, not subscription billing), `reasoning_effort`, `mcp`.
-- `messages.json` is not a full transcript. In this public snapshot, 78 files
+- `messages.json` is not a full transcript. In this public snapshot, 108 files
   contain the serialized final-answer string and 11 aborted/no-output artifacts
   contain an empty list.
-- `execution.log` exists for 78 task artifacts and holds the ordered MCP
-  action/result trace (1,202 records in aggregate). Join it with `meta.json` to
-  analyze tool behavior and verifier outcome; hidden model turns cannot be
+- `execution.log` exists for 108 of the 119 task artifacts and holds the
+  ordered MCP action/result trace (1,398 records in aggregate). Join it with
+  `meta.json` to analyze tool behavior and verifier outcome; hidden model turns cannot be
   reconstructed from the public files.
 - `run-<k>/summary.json` is the per-run aggregate the pipeline prints at the
   end.
