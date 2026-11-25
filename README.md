@@ -483,6 +483,8 @@ retries and superseded first attempts):
 | Runs with `results.json` | 390 |
 | Episodes simulated | 2,977 |
 | Episodes with reward recorded | 2,650 (reward 1.0: 1,694 · below 1.0: 956) |
+| Of those, harness-contaminated (`geode_label_hygiene.validity: invalid`) | 474 (reward 1.0: 1 · below 1.0: 473) |
+| Usable reward labels | 2,176 (reward 1.0: 1,693 · below 1.0: 483) |
 | Episodes without reward | 327 (aborted/diagnostic probes) |
 | Tokens | not recorded in tau2 simulation JSONs; cost fields are zero on the subscription route |
 
@@ -574,7 +576,14 @@ outcomes. A missing measurement stays unknown, not zero.
 simulation JSON: task, full agent/user turn log, reward, and termination
 reason as emitted by the upstream harness. Run ids encode both model routes
 (agent and user simulator), so subscription-only runs are separable from
-comparator runs by name alone.
+comparator runs by name alone. Since 2026-11-26 every simulation also carries
+`geode_label_hygiene`, written by GEODE's `geode.contamination-detector@1`
+(`python -m evals.collection_protocol annotate-tau2`,
+[GEODE PR #3534](https://github.com/mangowhoiscloud/geode/pull/3534)).
+`validity: invalid` means an agent or user-simulator turn holds a relayed
+harness diagnostic (rate limit, auth failure, unexpected error), so the reward
+records the harness failure, not agent behavior. `reward_info` is unchanged;
+filter on `validity` before using a reward as a label.
 
 **Crucible**, per campaign (`crucible/runs/campaigns/<campaign>/state/`):
 `attempts/<seq>-<hash>/` holds one mutation attempt: its candidate,
