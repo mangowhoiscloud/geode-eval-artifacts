@@ -25,7 +25,8 @@ def mcpmark() -> None:
 
 
 def tau2() -> None:
-    t = {"runs": 0, "episodes": 0, "reward_1": 0, "reward_below_1": 0, "no_reward": 0}
+    t = {"runs": 0, "episodes": 0, "reward_1": 0, "reward_below_1": 0, "no_reward": 0,
+         "invalid_reward_1": 0, "invalid_reward_below_1": 0, "no_hygiene_record": 0}
     for f in glob.glob("tau2/simulations/*/results.json"):
         try:
             d = json.load(open(f))
@@ -41,6 +42,13 @@ def tau2() -> None:
                 t["reward_1"] += 1
             else:
                 t["reward_below_1"] += 1
+            # geode_label_hygiene (geode.contamination-detector@1): an invalid
+            # episode's reward records a harness error, not agent behavior.
+            hygiene = s.get("geode_label_hygiene")
+            if hygiene is None:
+                t["no_hygiene_record"] += 1
+            elif r is not None and hygiene.get("validity") == "invalid":
+                t["invalid_reward_1" if r >= 0.999 else "invalid_reward_below_1"] += 1
     t["dirs_without_results"] = len(glob.glob("tau2/simulations/*")) - t["runs"]
     print("tau2:", t)
 
